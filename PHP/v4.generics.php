@@ -1,18 +1,14 @@
 <?php
 
-function get_iphone()
-{
+function get_iphone() {
 	$t = "<!-- The Next Meta is for iPhone... I think... -->\n";
-	$t .= "<meta name=\"viewport\" content=\"width = 600\" />";
+	$t .= "<meta name=\"viewport\" content=\"width = 600\" />\n";
 	
 	return $t;
 }
 
-function getVersion()
-{
-	$version = 4;
-	
-	return $version;
+function getVersion() {
+   return "4.5";
 }
 
 /**
@@ -22,19 +18,15 @@ function twitterParse($in)
 {
 	$pieces = explode(" ", $in);
 	
-	foreach($pieces as &$word)
-	{
-		if($word[0] == "@")
-		{
+	foreach($pieces as &$word) {
+		if($word[0] == "@") {
 			$word = "<a href=\"http://twitter.com/" . ereg_replace("@","",$word) . "/\" >" . $word . "</a>";
-		}
-		else if($word[0] == "h")
-		{
+		} else if($word[0] == "h") {
 			$word = ereg_replace('([[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/])', '<a target=\"_blank\" href="\\1">\\1</a>', $word);
 		}
 	}
 	
-	return implode(" ",$pieces);
+	return implode(" ", $pieces);
 }
 
 ?>
