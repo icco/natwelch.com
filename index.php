@@ -33,27 +33,59 @@ require "PHP/v4.generics.php"; // get_iphone(), twitter parser.
 		<div id="job">Student, Code Designer<br /> &amp; Courageous Knight<sup>*</sup></div>
 	</div>
 	<div id="card-back" style="margin-top: 10px;">
-		<p id="first">My name is <abbr title="Nathaniel Dehn Welch">Nat</abbr>, and I am a &quot;developer&quot; and a &quot;student&quot;.</p>
+		<p id="first">My name is <abbr title="Nathaniel Dehn Welch">Nat</abbr>, and I am a developer and a student.</p>
 		<p>I am currently <?php echo age(); ?> years old and love to create things. I have a passion for design, communication, and technology. You can contact me at <a  class="email" href="mailto:nat@natwelch.com">nat@natwelch.com</a> or at <span class="tel"><span class="type" style="display: none;">cell</span><a href="tel:7077998675" class="value">707.799.8675</a></span>.</p>
 		<p>My persona is scattered across the web in various places, such as: </p>
 		<ul id="melinks">
-			<li class="sortme"><a href="./code/" title="Various Things I have Created" rel="me">My Code &amp; Projects</a> </li> 
-			<li class="sortme"><a href="http://pseudoweb.net" rel="me" title="Nat Welch's Blog"  class="url">My Blog</a></li>
-			<li class="sortme"><a href="http://flickr.com/photos/icco" title="Photos" rel="me"  class="url">My Photos <small>(on Flickr)</small></a></li>
-			<li class="sortme"><a href="resume/" title="Resume in PDF form" rel="me" onclick="javascript:urchinTracker('/resume')">My Resume <small>(PDF)</small></a></li>
-			<li class="sortme"><a href="http://www.linkedin.com/in/natwelch" title="Nathaniel Welch on LinkedIn" rel="me" class="url" >My LinkedIn</a></li>
-			<li class="sortme"><a href="http://twitter.com/icco" title="Nat Welch on Twitter" rel="me" class="url">My Twitter</a></li>
-			<li class="sortme"><a href="http://www.last.fm/user/icco/" title="Nat Welch on Last.FM" rel="me" class="url">My Last.FM</a></li>
-			<li class="sortme"><a href="http://www.facebook.com/natwelch" title="Nat Welch on Facebook" rel="me" class="url">My Facebook</a></li>
-         <li class="sortme"><a href="http://www.delicious.com/calvin166" title="Nat Welch on Delicious" rel="me" class="url">My Del.icio.us</a></li>
-			<li class="sortme"><a id="publicKey" href="key/" title="Nat Welch's PGP Key">My Public Key</a></li>
-			<li class="sortme"><a href="friends.php" title="Nat Welch's Friends">My Friends</a></li>
-         <li class="sortme"><a href="http://www.github.com/icco" title="Nat Welch on Github" rel="me" class="url">My GitHub</a></li>
-         <li class="sortme" style="display: none;"><a href="http://natwelch.com" title="Nat Welch Dot Com" rel="me" class="url">My Website</a></li>
+         <li class="sortme">
+            <a href="./code/" title="Various Things I have Created" rel="me">My Code &amp; Projects</a>
+          </li> 
+         <li class="sortme">
+            <a href="http://pseudoweb.net" rel="me" title="Nat Welch's Blog" class="url">My Blog</a>
+         </li>
+         <li class="sortme">
+            <a href="http://flickr.com/photos/icco" title="Photos" rel="me" class="url">My Photos <small>(on Flickr)</small></a>
+         </li>
+         <li class="sortme">
+            <a href="resume/" title="Resume in PDF form" rel="me" onclick="javascript:urchinTracker('/resume')">My Resume <small>(PDF)</small></a>
+         </li>
+         <li class="sortme">
+            <a href="http://www.linkedin.com/in/natwelch" title="Nathaniel Welch on LinkedIn" rel="me" class="url" >My LinkedIn</a>
+         </li>
+         <li class="sortme">
+            <a href="http://twitter.com/icco" title="Nat Welch on Twitter" rel="me" class="url">My Twitter</a>
+         </li>
+         <li class="sortme">
+            <a href="http://www.last.fm/user/icco/" title="Nat Welch on Last.FM" rel="me" class="url">My Last.FM</a>
+         </li>
+         <li class="sortme">
+            <a href="http://www.facebook.com/natwelch" title="Nat Welch on Facebook" rel="me" class="url">My Facebook</a>
+         </li>
+         <li class="sortme">
+            <a href="http://www.delicious.com/calvin166" title="Nat Welch on Delicious" rel="me" class="url">My Del.icio.us</a>
+         </li>
+         <li class="sortme">
+            <a id="publicKey" href="key/" title="Nat Welch's PGP Key">My Public Key</a>
+         </li>
+         <li class="sortme">
+            <a href="friends.php" title="Nat Welch's Friends">My Friends</a>
+         </li>
+         <li class="sortme">
+            <a href="http://www.github.com/icco" title="Nat Welch on Github" rel="me" class="url">My GitHub</a>
+         </li>
+         <li class="sortme" style="display: none;">
+            <a href="http://natwelch.com" title="Nat Welch Dot Com" rel="me" class="url">My Website</a>
+         </li>
 		</ul>
 		<br clear="all"/>
-		<p>I am a Computer Science major at the California Polytechnic State University in San Luis Obispo, more affectionately known as Cal Poly SLO. Along side my major, I am working to obtain a minor in English. Outside of school I am a Software Developer for <a href="http://ifixit.com">iFixit</a>.</p>
-		<p><small><i>* Knighthood self-proclaimed.</i></small></p>
+      <p>
+         I am a Computer Science student at the California Polytechnic State 
+         University in San Luis Obispo, more affectionately known as Cal Poly 
+         SLO. Along side my major, I am working to obtain a minor in English. 
+         Outside of school I am a Software Developer for <a 
+         href="http://ifixit.com">iFixit</a>.
+      </p>
+		<p><small><em>* Knighthood self-proclaimed.</em></small></p>
 	</div>
 </div>
 		<div id="clicker">More</div>
