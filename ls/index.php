@@ -15,10 +15,6 @@ $delicious = new SimplePie('http://del.icio.us/rss/calvin166');
 $delicious->enable_cache(false);
 $delicious->init();
 
-$wordie = new SimplePie('http://wordie.org/people/feed/icco?wl=8647');
-$wordie->enable_cache(false);
-$wordie->init();
-
 $flickr = new SimplePie('http://api.flickr.com/services/feeds/photos_public.gne?id=42027916@N00&lang=en-us&format=rss_200');
 $flickr->enable_cache(false);
 $flickr->init();
@@ -38,7 +34,7 @@ $pownce->init();
 $gshared = new SimplePie('http://www.google.com/reader/public/atom/user/03039824401098534155/state/com.google/broadcast');
 
 ///Mergation!
-$merged = SimplePie::merge_items(array($pownce, $twitter, $Pw, $delicious, $wordie, $flickr, $lastfm, $upcoming, $gshared));
+$merged = SimplePie::merge_items(array($pownce, $twitter, $Pw, $delicious, $flickr, $lastfm, $upcoming, $gshared));
  
 header('Content-type:text/html; charset=utf-8');
  
@@ -66,8 +62,9 @@ date_default_timezone_set('America/Los_Angeles');
 	<div id="all">
  		<ul>
         <li class="header">
-		<h1>Nat's LifeStream</h1>
-        This is a congregation of some of the digital shards of me scattered across the web. Thanks to web2.0 and all of it's dynamic goodness, I can present it all here for you, and me. This feed currently contains updates from my <a href="http://twitter.com/icco">Twitter</a>, <a href="http://pownce.com/icco">Pownce</a>, <a href="http://www.last.fm/user/icco">Last.FM</a>, <a href="http://del.icio.us/calvin166">Del.icio.us</a>, <a href="http://upcoming.yahoo.com/user/74606/">Upcoming</a>, <a href="http://wordie.org/people/profile/icco">Wordie</a>, and <a href="http://pseudoweb.net">my Blog</a>.        </li>
+           <h1>Nat's LifeStream</h1>
+             This is a congregation of some of the digital shards of me scattered across the web. Thanks to web2.0 and all of it's dynamic goodness, I can present it all here for you, and me. This feed currently contains updates from my <a href="http://twitter.com/icco">Twitter</a>, <a href="http://pownce.com/icco">Pownce</a>, <a href="http://www.last.fm/user/icco">Last.FM</a>, <a href="http://del.icio.us/calvin166">Del.icio.us</a>, <a href="http://upcoming.yahoo.com/user/74606/">Upcoming</a>,  and <a href="http://pseudoweb.net">my Blog</a>.       
+        </li>
  		
 		<?php foreach ($merged as $item): ?>
  			<li>
