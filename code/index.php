@@ -18,20 +18,16 @@
 <div class="box" id="top">
 	<div id="backButton"><a href=".." title="natwelch.com">&lt;&lt; Go Back Home</a></div>
 	<div id="code">
-		<dt><a href="http://www.csc.calpoly.edu/~nwelch/WikiDea">WikiDea</a></dt>
-			<dd>A concept in development. Inspired by my list of cool ideas I keep in my little black book. Soon to be at <a href="http://ideaius.com">ideaius.com</a></dd>
 		<dt><a href="../ls">Life Stream</a></dt>
 			<dd>Inspired by <a href="http://www.manuela-hoffmann.info/stream/">Manuela Hoffmann.</a> My code is <a href="lifestream.phps">here</a>.</dd>
 		<dt><a href="http://www.csc.calpoly.edu/~nwelch/files/twit.sh">Finger Twitter</a></dt>
-			<dd>A little bash script that grabs your twitter status and puts it in the .project file in your home directory. you need to edit the file and put your username and password in it. <a href="http://www.csc.calpoly.edu/~nwelch/files/twit.txt">Source Code</a>.</dd>
+			<dd>A little bash script that grabs your twitter status and puts it in the .project file in your home directory. you need to edit the file and put your username and password in it. <a href="http://gist.github.com/330040">Source Code</a>.</dd>
 		<dt><a href="http://natwelch.com/code/lastfm.php">Last.Fm User Comparison</a></dt>
-			<dd>As my experimentation with PHP continues, I start playing with statistics comparing user listening trends. (Note that this is horribly inefficent code) <a href="lastfm.phps">Source Code.</a></dd>
+			<dd>As my experimentation with PHP continues, I start playing with statistics comparing user listening trends. (Note that this is horribly inefficent code) <a href="http://gist.github.com/330050">Source Code.</a></dd>
 		<dt><a href="http://users.csc.calpoly.edu/~nwelch/files/tw.bash">TW</a></dt>
 			<dd>A simple bash script for submitting to twitter.</dd>
 		<dt><a href="htmlify.phps">Html-ify</a></dt>
 			<dd>A PHP that does regular expression replacement to turn a block of code into simple html.</dd>
-		<dt><a href="stat.phps">Linux Server User Tracking</a></dt>
-			<dd>A mixture of SQLite and PHP that graphs how many unique users are logged into a server. I made this initially for personal use at Cal Poly's Computer Science Department, which can be seen on <a href="http://users.csc.calpoly.edu/~nwelch/vogonStat.php">my Server Stats Page</a></dd>
 		<dt><a href="http://github.com/icco/self-note/">Self-Note</a></dt>
 			<dd>An exploration into note taking software. Written in PHP and SQLite.</dd>
 	</div>
