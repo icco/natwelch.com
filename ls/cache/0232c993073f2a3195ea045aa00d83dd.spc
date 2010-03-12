@@ -1,0 +1,1 @@
+a:3:{s:3:"url";s:25:"http://pseudoweb.net/feed";s:8:"feed_url";s:29:"http://pseudoweb.net/atom.xml";s:5:"build";d:20080315205903;}

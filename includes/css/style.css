@@ -1,0 +1,151 @@
+/**
+ * Nat Welch Dot Com
+ * Version 4 or so
+ */
+
+body {
+	background-color: #282B2B;
+	color: #1f1f1f;
+}
+
+a, a:visited {
+	color: #FEFEFE;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #aaa
+}
+
+#card, #footer, .box, #container {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px; 
+}
+
+#footer {
+	width: 250px;
+}
+
+#card, #container {
+	width: 470px;
+}
+
+#card, #clicker {
+	background-color: #5D5655;
+}
+
+.box {
+	width: 500px;
+}
+
+.card-open {
+	margin-top: 30px;
+}
+
+.card-closed {
+	margin-top: 120px;
+}
+
+#card-front, #photoofme {
+	height: 250px; 
+}
+
+#photoofme {
+	float: right;
+	width: auto;
+}
+
+
+#card-front {
+	height: 250px;
+	overflow: hidden;
+}
+
+small, #card-front {
+	font-family: serif;
+}
+
+#card-back {
+	overflow: inherit;
+	font-family: sans-serif;
+	border-top: dashed 1px #222;
+}
+
+#flip, #fflip {
+	width: 20px;
+	height: 20px;
+	border: 1px solid;
+	border-color: #aaa;
+	color: #aaa;
+	text-align: center;
+	float: left;
+	display: none;
+}
+
+#name, #job {
+	margin-left: 10px;
+}
+
+#name {
+	padding-top: 95px;
+	padding-bottom: 5px;
+	font-weight: 900;
+	font-size: 1.5em;
+}
+
+#job {
+	font-style: oblique;
+}
+
+#melinks li {
+	display: inline;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: circle;
+	margin: 0 0 2px 1%;
+	padding: 2px 0;
+	width: 32%;
+	float: left;
+}
+
+#melinks {
+	padding-left: 0;
+	margin-left: 0;
+	width: 100%;
+}
+
+#clicker {
+	display: none;
+	width: 75px;
+	text-align: center;
+	font-weight: 800;
+	margin: 0 -3px 0 auto;
+	padding: 2px;
+}
+
+#code {
+	background-color: #666;
+	padding: 10px;
+}
+
+dd {
+	margin: 7px;
+}
+
+#backButton, #topButton {
+	font-weight: 900;
+	padding: 5px;
+	width: 30%;
+}
+
+#backButton:hover, #topButton:hover {
+	background-color: orange;
+}
+
+#backButton a:hover, #topButton a:hover {
+	text-decoration: none;
+	color: white;
+}
+

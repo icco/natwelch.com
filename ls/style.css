@@ -1,0 +1,145 @@
+/*
+Theme Name: Chocolate Cream Pie
+Theme URI: http://natwelch.com/ls
+Description: 
+Version: 2.42
+Author: Nat Welch
+Author URI: http://natwelch.com
+Updated: July 27 2007
+*/
+
+#everything {
+	margin: 0 auto 0 auto;
+	width: 750px;
+	
+}
+
+#Timeline {
+	width: 150px;
+	height: 1024px;
+	float: left;
+	display: none;
+}
+
+.header {
+	color: #78B0DA;
+	background-color: #FFF;
+	padding-top: 35px;
+	padding-left: 20px;
+		padding-bottom: 30px;
+}
+
+.header a {
+	padding: 0 !important;
+	margin: 0 !important;
+	display:inline !important;
+	border: none !important;
+	background: none !important;
+	}
+
+h1 {
+
+	color: #78B0DA;
+}
+
+ul, li, ol {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+
+ul {
+	list-style-type: none;
+	list-style-position: outside;
+}
+a {
+	text-decoration: none;
+}
+li a:link, li a:visited {
+	display: block;
+	margin: 0;
+	padding: 10px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #AAA3A1;
+	color: #0000FF;
+}
+p.title {
+	padding-left:20px;
+}
+ a[href ^='http://twitter'], a[href ^='http://twitter']:visited {
+ background: #B1D8FF !important;
+ color: #111 !important;
+}
+ a[href ^='http://www.flickr'] {
+ background: #fff !important;
+ color: #111 !important;
+}
+ a[href ^='http://pownce'], a[href ^='http://pownce']:visited {
+ background: #DAE1C1 !important;
+ color: #111 !important;
+}
+ a[href ^='http://www.last.fm'], a[href ^='http://www.last.fm']:visited {
+ background: #F66 !important;
+ color: #fff !important;
+}
+ a[href ^='http://pseudoweb.net'], a[href ^='pseudoweb.net']:visited {
+ background: #989BBC !important;
+ color: #406EB2 !important;
+}
+ a[href ^='http://wordie.org'], a[href ^='wordie.org']:visited {
+ background: #CCC !important;
+ color: #111 !important;
+}
+a[href ^='http://upcoming.yahoo.com'], a[href ^='http://upcoming.yahoo.com']:visited {
+ background: #F00 !important;
+ color: #fff !important;
+}
+.date {
+	font-size: 75%;
+}
+body {
+	font:14px/1.5em Georgia, "Times New Roman", Times, serif;
+	margin:0;
+	padding:0;
+	color: #DAE1C1;
+	background-color: #333;
+}
+#all {
+	width:600px;
+	border-top-width: thick;
+	border-right-width: thick;
+	border-bottom-width: thick;
+	border-left-width: thick;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #666;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	border-left-color: #666;
+	margin-top: 0;
+	margin-right: 0px;
+	margin-bottom: 0;
+	margin-left: 150px;
+}
+.clearLeft {
+	clear:left;
+}
+.clearRight {
+	clear:right;
+}
+.clearBoth {
+	clear:both;
+}
+.hide {
+	display:none;
+}
+img.favicon {
+	width:16px;
+	height:16px;
+	float: left;
+	border: none;
+	background-color: transparent;
+	margin-right: 5px;
+}

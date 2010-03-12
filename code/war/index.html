@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>War! A Javascript Card Game</title>
+<!-- 
+   Developed by Nat Welch
+   4.2.09
+   nat@natwelch.com
+-->
+<link rel="stylesheet" href="style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="mootools-1.2-core.js"></script>
+<script type="text/javascript" src="mootools-1.2-more.js"></script>
+<script type="text/javascript" src="war.js"></script>
+</head>
+<body onload="init();">
+<div id="alertBox">....</div>
+<div id="cont">
+  <h1>War! <small><span id="toggleHelp">open help?</span></small></h1>
+  <div id="help">
+    <p>This is a javascript version of the card game <a title="Wikipedia Article" href="http://en.wikipedia.org/wiki/War_(card_game)" >War</a> written by <a href="http://natwelch.com" title="Nat's Website">Nat Welch</a>.</p>
+    <p>The game works by splitting the cards evenly among the two players using a <a href="http://en.wikipedia.org/wiki/Fisher-Yates_shuffle" title="Wikipedia Article">Fisher-Yates Shuffle</a>. Then The user drags his card into the middle of the game table. </p>
+    <p>Two cards are then displayed, one for the computer player and one for the user. The higher value card wins. Suit is irrelevent. Aces equal one and kings equal thirteen. </p>
+    <p><a href="." title="REFRESH LIKE YOU'VE NEVER REFRESHED BEFORE!">Refresh</a> the page for a new game.</p>
+    <p>This was built using <a href="http://mootools.net" title="MooTools website">Mootools</a> and <a href="http://www.vim.org/" title="the Vim Website">Vim</a>.</p>
+    <p> <a href="http://validator-test.w3.org/check?uri=referer"><img src="../../images/valid_xhtml11_80x15_2.png" alt="Valid XHTML 1.0!" style="border-width:0; width: 80px; height: 15px" /></a> <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"> <img alt="Creative Commons License" style="border-width:0; width: 80px; height: 15px" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a> <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://natwelch.com"><img src="../../images/valid_css_80x15_2.png" style="border-width:0; width: 80px; height: 15px" alt="Valid CSS" /></a> </p>
+  </div>
+  <div class="side" id="comp">
+    <div class="stat">
+      <h3>Computer</h3>
+      Current Hand: <span id="chand">26</span><br />
+      Cards Played: <span id="Ccnt">0</span><br />
+      Cards Won: <span id="cwcnt">0</span><br />
+      Cards Lost: <span id="clcnt">0</span> </div>
+    <div class="card" id="computer"></div>
+  </div>
+  <div class="side" id="middle">
+    <div class="stat" id="midstat"> Hand Goes to: <span id="winner"></span><br />
+      Hands Won by User: <span id="uwin">0</span><br />
+      Hands Won by Computer: <span id="cwin">0</span><br />
+    </div>
+    <div class="flipped" id="c1"><img src="" width="100px" height="144px" alt="" /><strong>User</strong></div>
+    <div class="flipped" id="c2"><img src="" width="100px" height="144px" alt="" /><strong>Computer</strong></div>
+  </div>
+  <div class="side" id="user">
+    <div class="stat">
+      <h3>User</h3>
+      Current Hand: <span id="uhand">26</span><br />
+      Cards Played: <span id="cnt">0</span><br />
+      Cards Won: <span id="uwcnt">0</span><br />
+      Cards Lost: <span id="ulcnt">0</span> </div>
+    <div class="drag"  id="moveable"></div>
+  </div>
+</div>
+</body>
+</html>

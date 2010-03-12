@@ -1,0 +1,359 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img, a img { border: 0; }
+
+html {
+	font-size: 75%;
+}
+
+html>body {
+	font-size: 12px;
+}
+
+body {
+	text-align: center;
+	background: #2F2A29;
+	color: #DAE1C1;
+}
+
+a:link {
+	color: #111;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #DAE1C1;
+	text-decoration: none;
+}
+
+ul, li, ol {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	font: 1.1em/1.2em Arial, Tahoma, Verdana, sans-serif;
+}
+
+ul {
+	list-style-type: decimal;
+	list-style-position: outside;
+	color: #111;
+}
+
+#main li a:link, #main li a:visited {
+	display: block;
+	margin: 0;
+	width: 730px;
+	padding: 10px 35px;
+	border-top: 1px solid #fff;	
+	border-bottom: 1px solid #AAA3A1;
+	background: #fff url(images/delicious.gif) no-repeat 10px 50%;
+	color: #0000FF;
+}
+
+#lifestream {
+	position: relative;
+	width: 960px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#wrapper {
+	width: 800px;
+	margin: 0 auto;
+	text-align: left;
+	background: #4B4341;
+	overflow: hidden;
+	padding: 30px 0;
+	border-left:  5px solid #242020;
+	border-right:  5px solid #242020;
+}
+
+p {
+	font: 1.1em/1.5em Arial, Tahoma, Verdana, sans-serif;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 0 35px;
+}
+
+h1 {
+	font: 4em/1.3em georgia, palatino, "Times New Roman", serif;
+	padding: 0 0 0 35px;
+	color: #949852;
+	float: left;
+	width:400px;
+	position: relative;
+	z-index: 5;
+}
+
+h2 {
+	font: 1.5em/1em Georgia, "Times New Roman", Times, serif;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+h3 {
+	font: 1.33em/1.13em Georgia, "Times New Roman", Times, serif;
+	margin-top: 1.13em;
+	margin-bottom: 1.13em;
+}
+
+h4 {
+	font: 1.17em/1.29em Georgia, "Times New Roman", Times, serif;
+	margin-top: 1.29em;
+	margin-bottom: 1.29em;
+}
+
+.meme {
+	width: 140px;
+	height: 140px;
+	position: absolute;
+	background: #242020 url(images/manuela-hoffmann.jpg) no-repeat top left;
+	z-index: 1;	
+	overflow: visible;
+	border: 5px solid #242020;
+	top: 30px;
+	left: 5px;
+
+}
+
+#main {
+	clear: both;
+}
+
+#main a[href ^='http://twitter'], #main a[href ^='http://twitter']:visited {
+	background: #B3ECEF url(images/twitter.png) no-repeat 10px 50% !important;
+	color: #111 !important;
+}
+
+#main a[href ^='http://www.flickr'] {
+	background: #fff url(images/flickr.gif) no-repeat 10px 50% !important;
+	color: #111 !important;
+}
+
+#main a[href ^='http://pownce'], #main a[href ^='http://pownce']:visited {
+	background: #DAE1C1 url(images/pownce.png) no-repeat 10px 50% !important;
+	color: #111 !important;
+}
+
+#main a[href ^='http://feeds.feedburner.com/~r/pixelgraphix/'], #main a[href ^='http://feeds.feedburner.com/~r/pixelgraphix/']:visited, #main a[href ^='http://www.pixelgraphix'], #main a[href ^='www.pixelgraphix']:visited {
+	background: #AE0C1A url(images/pixelgraphix.png) no-repeat 10px 50% !important;
+	color: #fff !important;
+}
+
+#main a[href ^='http://feeds.feedburner.com/~r/artnetz/'], #main a[href ^='http://feeds.feedburner.com/~r/artnetz/']:visited {
+	background: #8C1245 url(images/artnetz.png) no-repeat 10px 50% !important;
+	color: #fff !important;
+}
+
+#main a[href ^='http://feeds.feedburner.com/~r/surfgarden/'], #main a[href ^='http://feeds.feedburner.com/~r/surfgarden/']:visited {
+	background: #DBDFE2 url(images/surfgarden.png) no-repeat 10px 50% !important;
+	color: #111 !important;
+}
+
+#main a[href ^='http://feeds.feedburner.com/~r/screenz/'], #main a[href ^='http://feeds.feedburner.com/~r/screenz/']:visited {
+	background: #F0F8FA url(images/screenz.png) no-repeat 10px 50% !important;
+	color: #111 !important;
+}
+
+#main a[href ^='http://feeds.feedburner.com/~r/piktogramme'], #main a[href ^='http://feeds.feedburner.com/~r/piktogramme']:visited {
+	background: #fff url(images/piktogramme.png) no-repeat 10px 50% !important;
+	color: #111 !important;
+}
+
+#main a[href ^='http://feeds.feedburner.com/~r/screencasting-de/'], #main a[href ^='http://feeds.feedburner.com/~r/screencasting-de/']:visited {
+	background: #5C5959 url(images/screencasting.png) no-repeat 10px 50% !important;
+	color: #fff !important;
+}
+
+#main a[href ^='http://www.last.fm'], #main a[href ^='http://www.last.fm']:visited {
+	background: #D12845 url(images/lastfm.png) no-repeat 10px 50% !important;
+	color: #fff !important;
+}
+
+#main a[href ^='http://osx.iusethis'], #main a[href ^='http://osx.iusethis']:visited {
+	background: #EAEAEA url(images/iusethis.png) no-repeat 10px 50% !important;
+	color: #406EB2 !important;
+}
+
+
+#head a:link, #head a:visited, #foot a:link, #foot a:visited {
+	background: transparent !important;
+	color: #DAE1C1;
+}
+
+#head a[href ^='http://www.manuela-hoffmann.info/stream/'], #head a[href ^='http://www.manuela-hoffmann.info/stream/']:visited {
+	background: url(images/iSync-Steve.png) 100% 50% no-repeat !important;
+	color: #fff !important;
+	padding: 0 80px 0 0;
+}
+
+#foot a[href ^='http://twitter'], #foot a[href ^='http://twitter']:visited {
+	background: #B3ECEF url(images/twitter.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color: #111;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://www.flickr'] {
+	background: #fff url(images/flickr.gif) no-repeat 3px 50%  !important;
+	padding:  4px 5px 4px 25px;
+	color:  #111;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://pownce'], #foot a[href ^='http://pownce']:visited {
+	background: #DAE1C1  url(images/pownce.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color:  #111;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://www.pixelgraphix'], #foot a[href ^='http://www.pixelgraphix']:visited {
+	background: #AE0C1A url(images/pixelgraphix.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color:  #fff;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://www.artnetz'], #foot a[href ^='http://www.artnetz']:visited {
+	background: #8C1245 url(images/artnetz.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color:  #fff;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://www.surfgarden'], #foot a[href ^='www.surfgarden']:visited {
+	background: #DBDFE2 url(images/surfgarden.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color:  #111;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='www.screenz'], #foot a[href ^='http://www.screenz']:visited {
+	background: #F0F8FA url(images/screenz.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color: #111;	
+	border: 1px solid #2F2A29;			
+}
+
+#foot a[href ^='http://www.piktogramme'], #foot a[href ^='http://www.piktogramme']:visited {
+	background: #fff url(images/piktogramme.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color: #111;	
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://www.screencasting'], #foot a[href ^='http://www.screencasting']:visited {
+	background: #5C5959 url(images/screencasting.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color:  #111;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://www.last'], #foot a[href ^='http://www.last']:visited {
+	background: #D12845 url(images/lastfm.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color:  #fff;
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://osx.iusethis'], #foot a[href ^='http://osx.iusethis']:visited {
+	background: #EAEAEA url(images/iusethis.png) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color: #406EB2;	
+	border: 1px solid #2F2A29;		
+}
+
+#foot a[href ^='http://del.ici'], #foot a[href ^='http://del.ici']:visited {
+	background: #fff url(images/delicious.gif) no-repeat 3px 50% !important;
+	padding:  4px 5px 4px 25px;
+	color: #111;
+	border: 1px solid #2F2A29;		
+}
+
+
+#head a[href ^='http://www.manuela-hoffmann.info/stream/']:hover {
+	background: url(images/empty.png) 100% 50% no-repeat !important;
+	color: #fff !important;
+	padding: 0 80px 0 0;
+}
+
+#main li a:hover {
+	background: #2F2A29 url(images/go.png) no-repeat  10px 50% !important;
+	color: #fff !important;
+}
+
+.s {
+	font-size: 0.8em;
+	font-style: italic;
+	padding: 0 0 0 10px;
+}
+
+.huge {
+	font-size: 1.5em;
+}
+
+.smaller {
+	font-size: 0.3em;
+	font-weight: normal;
+	letter-spacing: 0.15em;
+	position: relative;
+	top: -40px;
+	left: 0;
+}
+
+#foot ul li {
+	width:  200px;
+	list-style-type: none;
+	margin: 5px 0;
+	background: transparent;
+	float: right;
+	font-size: 0.9em;
+}
+
+#info {
+	width: 300px;
+	padding: 0 0 0 35px;
+	float: left;
+}
+
+#sites {
+	width: 300px;
+	float: right;
+	text-align: right;
+	padding: 0 35px 0 0;
+}
+
+#foot p {
+	padding: 0;
+	margin: 10px 0;
+}
+
+#flickr {
+	width: 300px;
+	float: right;
+}
+
+#flickr ul li {
+	list-style-type: none;
+	float:left;
+	border: none !important;
+	background: transparent;	
+	border: none !important;	
+	margin: 2px;	
+}
+
+#flickr ul li a:link, #flickr ul li a:visited {
+	border: none !important;
+	padding: 0;
+	float: left;
+	background: transparent !important;		
+}
+
+#flickr ul li a img {
+	border:	5px solid #2F2A29;		
+}
+

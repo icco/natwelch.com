@@ -1,0 +1,2 @@
+<?php
+define('ACTIVATION_KEY', '85G30279YC891904K');

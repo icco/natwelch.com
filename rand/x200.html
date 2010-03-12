@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <style type="text/css">
+
+div.fineprint {
+	font-size: x-small;
+}
+-->
+
+div.navigation-menu {
+font-weight:bold;
+font-size:small;
+
+}
+
+div.headings
+{
+font-variant:small-caps;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+font-weight:bold;
+
+}
+  </style><!-- 
+===================================================================== 
+                                                                       
+Linux on Laptops                                                     
+copyright (c) 2006 linux-on-laptops.com
+                                                                                                                                                           
+Please contact linuxonlaptops (at) gmail.com for information concerning 
+the intellectual property in this document.                              
+                                                                      
+ ===================================================================== 
+ -->
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="keywords"
+ content="linux, laptop, laptops, notebook, notebooks, computer, computers, install, mobile, howto, guide, unix">
+  <meta name="description"
+ content="Linux on Laptops -- Since 1995, the definitive resource for documentation about installing and running the Linux operating system on laptop and notebook computer hardware.">
+  <link rel="shortcut icon"
+ href="http://www.linux-on-laptops.com/favicon.ico">
+  <base href="http://www.linux-on-laptops.com/">
+  <title>Linux on Laptops</title>
+</head>
+<body>
+<HR NOSHADE>
+<TABLE ALIGN=CENTER CELLPADDING=0 CELLSPACING=0><TR><TD>
+  <STRONG><FONT SIZE=2>
+    <A HREF="http://www.linux-on-laptops.com/">Linux Laptops Home</A>
+  </FONT></STRONG>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</TD></TR></TABLE>
+<HR NOSHADE>
+<div align="center">
+<h1>Installing Ubuntu 8.10 on Lenovo x200</h1>
+<p>Last updated: 1/11/08</p>
+</div>
+<p>General Hardware Specifications of x200:</p>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <td width="33%">
+      <div class="headings" align="center">Hardware Components</div>
+      </td>
+      <td width="33%">
+      <div class="headings" align="center">Status under Linux</div>
+      </td>
+      <td width="33%">
+      <div class="headings" align="center">Notes</div>
+      </td>
+    </tr>
+    <tr>
+      <td width="33%">Intel Core 2 Duo, 2.2 GHz</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation.</td>
+    </tr>
+    <tr>
+      <td width="33%">12.1 WXGA (1280x800)</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation.</td>
+    </tr>
+    <tr>
+      <td width="33%">Intel Graphics Media Accelerator 4500MHD</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation.</td>
+    </tr>
+    <tr>
+      <td width="33%">2 GB PC3-8500 DDR3 SDRAM 1067MHz SODIMM Memory (1 DIMM)</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation</td>
+    </tr>
+    <tr>
+      <td width="33%">20 GB Ultra ATA Hard Drive</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation</td>
+    </tr>
+    <tr>
+      <td width="33%">Modular CD-Rom Drive</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation</td>
+    </tr>
+    <tr>
+      <td width="33%">Integrated Network Card</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation</td>
+    </tr>
+    <tr>
+      <td width="33%">Intel WiMAX/WiFi Link 5350 (AGN)</td>
+      <td width="33%">Works</td>
+      <td width="33%">In progress - Tested G, and works fine. Haven't tried WiMAX, N or A.</td>
+    </tr>
+    <tr>
+      <td width="33%">24X Max Variable CD-ROM Drive</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedure required during installation</td>
+    </tr>
+    <tr>
+      <td width="33%">9-Cell Battery</td>
+      <td width="33%">Works</td>
+      <td width="33%">No special procedures, but see below to bring battery life to decent levels.</td>
+    </tr>
+  </tbody>
+</table>
+<p>This laptop is operating under Kernel version  2.6.27-9</p>
+<div class="headings">Basic Installation of Ubuntu:</div>
+<ul>
+  <li>Why to use Ubuntu: <p>Because it's easy :p</p></li>
+  <li>Installing
+  <p>The easiest way to install this is to either use an external CD-Rom drive or from a USB Drive formatted with <a href="http://unetbootin.sourceforge.net/">UNetBootin</a>. I've tried both and they we're both successful.</p>
+  </li>
+  <li>Post-Install modifications/tweaks
+  <ul>
+  <li>Delete extra monitors.</li>
+  </ul>
+  </li>
+</ul>
+<div class="headings">Setting up additional features for Ubuntu</div>
+<ul>
+  <li>Enabling scrolling with mouse
+  <ol>
+  <li>Put this in /etc/X11/xorg.conf</li>
+  <li>Run this script</li>
+  </ol>
+  </li>
+  <li>Any other additional features you can think of</li>
+</ul>
+<div class="headings">Unresolved issues</div>
+<ul>
+  <li>Getting Suspend to operate correctly</li>
+  <li>Battery Efficency is still low</li>
+</ul>
+<div class="headings">Configuration Files</div>
+<ul>
+  <li>disablebt.sh</li>
+</ul>
+<div class="headings">Contact Information</div>
+<ul>
+  <li>nat at natwelch dot com </li>
+</ul>
+<div class="headings">Links:</div>
+<ul>
+  <li>Ubuntu x200 Forum Thread</li>
+  <li>Linux Laptops</li>
+  <li>UNetBootin</li>
+</ul>
+
