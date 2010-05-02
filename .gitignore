@@ -1,2 +1,3 @@
 *.swp
 error_log
+cache/*
