@@ -1,6 +1,6 @@
 
 pull:
-	rsync -rvtz --delete familyweb.com:~/public_html/natwelch.com/* .
+	rsync -rvtz --delete welchfamilyweb.com:~/public_html/natwelch.com/* .
 
 fake-pull:
 	rsync -nrvtz welchfamilyweb.com:~/public_html/natwelch.com/* .
