@@ -1,0 +1,28 @@
+@charset "utf-8";
+body {
+	background-image: url(bg.gif);
+}
+
+.content {
+	width: 500px;
+	padding: 5px;
+	background-color: #000000;
+	margin-top: 105px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	height: 667px;
+}
+.inside {
+	margin: auto;
+	padding: 5px;
+	background-image: url(http://www.csc.calpoly.edu/~nwelch/images/fff.gif); 
+}
+
+.picture {
+	background-image: url(smallerbg3.jpg);
+	background-repeat: no-repeat;
+	padding: 5px;
+	padding-top: 75px;
+	height: 662px;
+	}

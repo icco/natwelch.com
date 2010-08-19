@@ -1,0 +1,125 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	background-color: #fff;
+	font: 1em "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+a {
+	color:#0060ff;
+}
+
+#site {
+	margin: 10px auto;
+	width:880px;
+}
+#header {
+	margin-bottom:20px;
+}
+#header img {
+	float:left; padding-right:20px;
+}
+#header span {
+	width:600px; color:#999; float:left; font-size:14px;
+}
+#header span h1 {
+	font-size:30px;color:#000;
+}
+
+#blogposts {
+	float:left; width:500px; margin-right:20px;
+}
+h3.title {
+	display:block; margin-bottom:5px;
+}
+h4.blogtitle {
+	font-size:16px;
+	display:inline;
+}
+
+#info-box {
+	padding:30px 0 10px 0; margin-bottom:20px; background:#fff; color:#999; 
+	border-bottom:1px dashed #eee; float:right; width:360px; text-align:left; font-size:small;
+}
+
+#imagefeed {
+	float:left; width:100px; margin-right:40px;
+}
+span.smalltitle {
+	font-size:10px;
+	font-weight:bold;
+}
+
+#alertfeed {
+	float:left; width:200px;
+}
+h4.feedtitle {
+	display:inline;
+} 
+#bookmarks ul {
+}
+#bookmarks ul li {
+	display:inline; margin-right:10px; list-style:none;
+}
+span.bookmark {font-size:12px;}
+#footer {margin-top:30px;
+	border-top:1px dashed #ccc; text-align:right; padding-top:5px; font-size:small;
+	}
+	
+div.postbox {
+	width: auto;
+	font-size: 0.75em;
+	margin-bottom: 24px;
+	background:url(images/fold.png) no-repeat top left;
+	
+}
+div.imagebox {
+	width: auto;
+	font-size: 0.75em;
+	margin:15px;
+	border:1px solid #ccc;
+}
+div.postbox blockquote {
+	margin: 0px;
+	padding: 5px;
+
+}
+
+div.postbox blockquote p {
+	margin: 10px;
+	margin-bottom:0;
+	padding: 0px;
+}
+
+div.postbox cite {
+	margin: 0px;
+	padding: 0 0px 0px 15px;
+	font-style: normal;
+}
+
+div.plainpostbox {
+	width: auto;
+	font-size: 0.75em;
+	margin-bottom: 24px;
+}
+
+div.plainpostbox blockquote {
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+}
+
+div.plainpostbox blockquote p {
+	margin: 10px;
+	padding: 0px;
+}
+
+div.plainpostbox cite {
+	position: relative;
+	margin: 0px;
+	padding: 7px 0px 0px 15px;
+	top: 6px;
+	font-style: normal;
+}
