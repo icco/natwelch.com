@@ -1,0 +1,35 @@
+/**
+ * NatWelch.com version 7
+ * copyright nat welch 2010
+ */
+
+#nat {
+   width: 397px;
+   height: 640px;
+   background-image: url('../../images/natcplug.jpg');
+   color: #444;
+   padding-top: 80px;
+   padding-left: 30px;
+   background-repeat: no-repeat;
+   float: left;
+}
+
+#name {
+   font-size: 2.5em;
+}
+
+#data {
+   float: right;
+   padding: 0 0 0 10px;
+   width: 350px;
+}
+
+#container {
+   height: 640px;
+   width: 800px;
+   margin: 70px auto 0;
+}
+
+#first {
+   margin-top: 0;
+}
