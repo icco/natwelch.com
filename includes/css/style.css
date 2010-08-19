@@ -3,6 +3,8 @@
  * copyright nat welch 2010
  */
 
+body, select, input, textarea { color:#444; }
+
 #nat {
    width: 397px;
    height: 560px;
@@ -31,15 +33,17 @@
 }
 
 #first {
-   margin-top: 30px;
+   margin-top: 25px;
 }
 
 #knight {
    font-size: 0.8em;
 }
 
-.tel, a, a:visited {
-  color: #657383;
+a, a:visited {
   text-decoration: none;
+  cursor: pointer;
 }
 
+a, a:active, a:visited { color:#607890; }
+a:hover { color:#036; }
