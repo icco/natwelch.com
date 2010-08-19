@@ -1,8 +1,6 @@
 // initial
-Fever.Reader.ui.section	= <?php e($this->prefs['ui']['section']); ?>;
+Fever.Reader.ui.section		= <?php e($this->prefs['ui']['section']); ?>;
 Fever.Reader.ui.previous	= <?php e($this->prefs['ui']['previous']); ?>;
-Fever.Reader.ui.groupId	= <?php e($this->prefs['ui']['group_id']); ?>;
-Fever.Reader.ui.feedId		= <?php e($this->prefs['ui']['feed_id']); ?>;
 Fever.Reader.ui.search		= '<?php e(quote($this->prefs['ui']['search'])); ?>';
 Fever.Reader.ui.hasFocus	= '<?php e($this->prefs['ui']['has_focus']); ?>';
 Fever.Reader.ui.hotStart	= <?php e($this->prefs['ui']['hot_start']); ?>;

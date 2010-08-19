@@ -6,8 +6,8 @@
 <description><?php e($this->vars['description']);?></description>
 <generator>Shaun Inman&#8217;s Fever</generator>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-<?if(!empty($this->vars['items'])):?>
-<?foreach($this->vars['items'] as $item):?>
+<?php if(!empty($this->vars['items'])):?>
+<?php foreach($this->vars['items'] as $item):?>
 <item>
 	<title><![CDATA[<?php e($item['title']);?>]]></title>
 	<description><![CDATA[<?php e($item['description']);?>]]></description>
@@ -15,7 +15,7 @@
 	<guid isPermaLink="false"><?php e($item['guid']);?></guid>
 	<pubDate><?php e($item['pub_date']);?></pubDate>
 </item>
-<?endforeach?>
-<?endif?>
+<?php endforeach?>
+<?php endif?>
 </channel>
 </rss>

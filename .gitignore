@@ -1,3 +1,5 @@
 *.swp
 error_log
 cache/*
+ls/cache/*
+fever

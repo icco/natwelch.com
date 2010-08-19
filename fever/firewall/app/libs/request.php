@@ -59,6 +59,11 @@ function request($method = '', $url = '', $post = '', $headers = array(), $follo
 	}
 	
 	$use_curl		= (in(get_loaded_extensions(), 'curl') && !$REQUEST_SOCKET);
+	// curl installed but disabled
+	if ($use_curl && in(ini_get('disable_functions'), 'curl_'))
+	{
+		$use_curl = false;
+	}
 	$response 		= '';
 	$response_obj	= array();
 	$time_out		= $REQUEST_TIMEOUT;

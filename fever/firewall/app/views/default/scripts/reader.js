@@ -975,7 +975,7 @@ Fever.Reader =
 		}
 		else
 		{
-			alert('TODO: save link');
+			// alert('TODO: save link');
 			return;
 			XHR.get('./?manage=statuses&mark=link&as=' + state + '&id=' + linkId);
 		};
@@ -1200,7 +1200,7 @@ Fever.Reader =
 		{
 			title	= title.replace(/'/, "\\'");
 			url		= url.replace(/'/, "\\'");
-			excerpt	= excerpt.replace(/'/, "\\'");
+			excerpt	= excerpt.replace(/\s+/g, ' ').replace(/'/, "\\'");
 		};
 		
 		template = template.replace(/%t/g, encodeURIComponent(title));
@@ -1211,6 +1211,9 @@ Fever.Reader =
 	sendToService : function(itemId, template)
 	{
 		var url = this.buildUrl(itemId, template);
+		
+		// alert(url);
+		
 		if (!url.match(/^https?:/))
 		{
 			window.location.href = url;
@@ -1441,7 +1444,7 @@ Fever.Reader =
 	},
 	
 	onload : function()
-	{	
+	{
 		document.addEventListener('click', function(e) { Fever.Reader.event = e; }, true); // shame
 		
 		this.onContentLoaded();

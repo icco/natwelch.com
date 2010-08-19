@@ -10,7 +10,7 @@ $curl_options	= '-L -s';
 $refresh_url 	= $this->vars['paths']['full'].'/?refresh';
 if (strpos($refresh_url, 'https') === 0)
 {
-	$curl_options .= ' k';
+	$curl_options .= ' -k';
 }
 $curl_options .= ' '.$refresh_url;
 

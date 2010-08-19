@@ -13,6 +13,7 @@ body
 	color: #333;
 	font: 10px/16px Helvetica, Arial, sans-serif;
 	min-height: 100%;
+	text-rendering: optimizeLegibility;
 }
 
 a

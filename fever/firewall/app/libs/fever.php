@@ -7,7 +7,7 @@ define('VALID_EMAIL', 		'!^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b
 class Fever
 {
 	var $app_name	= 'Fever';
-	var $version 	= 113;
+	var $version 	= 116;
 	var $db			= array
 	(
 		'server' 	=> 'localhost',
@@ -261,6 +261,7 @@ class Fever
 	
 	var $is_silent = false;
 	var $is_mobile = false;
+	var $is_ipad = false;
 	var $page	= 1;
 	
 	var $DateParser;
@@ -339,6 +340,12 @@ class Fever
 			isset($_SERVER['HTTP_USER_AGENT']) && 
 			strpos($_SERVER['HTTP_USER_AGENT'], 'AppleWebKit') && 
 			m('#(iPhone|iPod|Pre|Pixi|Android|webOS)#', $_SERVER['HTTP_USER_AGENT'], $m)
+		);
+		$this->is_ipad = 
+		(
+			isset($_SERVER['HTTP_USER_AGENT']) && 
+			strpos($_SERVER['HTTP_USER_AGENT'], 'AppleWebKit') && 
+			m('#(iPad)#', $_SERVER['HTTP_USER_AGENT'], $m)
 		);
 	}
 	
@@ -846,6 +853,11 @@ class Fever
 			$this->route_rss();
 		}
 		
+		if (isset($_GET['api']))
+		{
+			$this->route_api();
+		}
+		
 		$this->route_auth();
 		
 		/**********************************************************************
@@ -1181,6 +1193,269 @@ class Fever
 			unset($saved_items);
 			$this->render('rss');
 		}
+	}
+	
+	/**************************************************************************
+	 route_api()
+	 **************************************************************************/
+	function route_api()
+	{
+		$data = array
+		(
+			'api_version' => 2, // 0.02
+			'auth' => 0
+		);
+		
+		// auth
+		if (isset($_POST['api_key']) && low($_POST['api_key']) == md5("{$this->cfg['email']}:{$this->cfg['password']}"))
+		{
+			$data['auth'] = 1;
+		}
+		else
+		{
+			// exit without performing API queries
+			$this->render_api($data, $_GET['api']);
+		}
+		
+		// meta
+		$data['last_refreshed_on_time'] = $this->get_col('last_refreshed_on_time', 'feeds', '1 ORDER BY `last_refreshed_on_time` DESC');
+		
+		// TODO: add last_item_id
+		
+		// update read/saved state
+		if (isset($_POST['mark'], $_POST['as'], $_POST['id']))
+		{
+			$before 		= (isset($_POST['before'])) ? $_POST['before'] : null;
+			$method_name 	= "mark_{$_POST['mark']}_as_{$_POST['as']}";
+			if (method_exists($this, $method_name))
+			{
+				$this->{$method_name}($_POST['id'], $before);
+				
+				// trigger the appropriate list of item ids
+				switch($_POST['as'])
+				{
+					case 'read':
+					case 'unread':
+						$_GET['unread_item_ids'] = true;
+					break;
+
+					case 'saved':
+					case 'unsaved':
+						$_GET['saved_item_ids'] = true;
+					break;
+				}
+			}
+		}
+		
+		if (isset($_POST['unread_recently_read']))
+		{
+			$this->unread_recently_read();
+			$_GET['unread_item_ids'] = true;
+		}
+		
+		// groups
+		if (isset($_GET['groups']))
+		{
+			$data['groups'] = array();
+			$groups = $this->get_all('groups');
+			foreach ($groups as $i => $group)
+			{
+				$data['groups'][] = array
+				(
+					'id' 	=> intval($group['id']),
+					'title'	=> $group['title']
+				);
+			}
+			unset($groups);
+		}
+		
+		// feeds
+		if (isset($_GET['feeds']))
+		{
+			$data['feeds'] = array();
+			$feeds = $this->get_all('feeds');
+			foreach ($feeds as $feed)
+			{
+				$data['feeds'][] = array
+				(
+					'id' 					=> intval($feed['id']),
+					'favicon_id'			=> $feed['favicon_id'] ? intval($feed['favicon_id']) : 1,
+					'title'					=> $this->title($feed),
+					'url'					=> $feed['url'],
+					'site_url'				=> $feed['site_url'],
+					'is_spark'				=> $feed['is_spark'] ? 1 : 0,
+					'last_updated_on_time' 	=> intval($feed['last_updated_on_time'])
+				);
+			}
+			unset($feeds);
+		}
+		
+		// feed/group relationships
+		if (isset($_GET['groups']) || isset($_GET['feeds']))
+		{
+			$data['feeds_groups'] = array();
+			
+			$feeds_by_group 	= array();
+			$feeds_to_groups 	= $this->get_all('feeds_groups');
+			foreach($feeds_to_groups as $feed_group)
+			{
+				$feeds_by_group[$feed_group['group_id']][] 	= intval($feed_group['feed_id']);
+			}
+			foreach($feeds_by_group as $group_id => $group_feeds)
+			{
+				$data['feeds_groups'][] = array
+				(
+					'group_id' 	=> intval($group_id),
+					'feed_ids'	=> implode(',', $group_feeds)
+				);
+			}
+			unset($feeds_by_group);
+			unset($feeds_to_groups);
+		}
+
+		// favicons
+		if (isset($_GET['favicons']))
+		{
+			$data['favicons'] = array();
+			$favicons = $this->get_all('favicons', '1 ORDER BY `id` ASC');
+			foreach($favicons as $favicon)
+			{
+				$data['favicons'][] = array
+				(
+					'id' 	=> intval($favicon['id']),
+					'data'	=> $favicon['cache']
+				);
+			}
+		}
+		
+		// items
+		if (isset($_GET['items']))
+		{
+			$data['total_items'] = $this->get_count('items');
+			
+			$data['items'] = array();
+			
+			// can't just dump all items because some servers will run out of memory
+			$item_limit = 50;
+			
+			$where = '';
+			if (isset($_GET['max_id'])) // descending from most recently added
+			{
+				// use the max_id argument to request the previous $item_limit items
+				$max_id = ($_GET['max_id'] > 0) ? $_GET['max_id'] : 0;
+
+				$where .= $max_id ? $this->prepare_sql('`id` < ?', $max_id) : '1';
+				$where .= ' ORDER BY `id` DESC';
+			}
+			else if (isset($_GET['with_ids'])) // selective
+			{
+				$item_ids = explode(',', $_GET['with_ids']);
+				$query	= '`id` IN ('.join(array_fill(0, count($item_ids), '?'), ',').')';
+				$args	= array_merge(array($query), $item_ids);
+				
+				$where .= call_user_func_array(array($this, 'prepare_sql'), $args);
+			}
+			else // ascending from first added
+			{
+				// use the since_id argument to request the next $item_limit items
+				$since_id 	= isset($_GET['since_id']) ? $_GET['since_id'] : 0;
+
+				$where .= $since_id ? $this->prepare_sql('`id` > ?', $since_id) : '1';
+				$where .= ' ORDER BY `id` ASC';
+			}
+			
+			$where .= ' LIMIT '.$item_limit;			
+			$items = $this->get_all('items', $where);
+			
+			foreach ($items as $item)
+			{
+				$data['items'][] = array
+				(
+					'id'				=> intval($item['id']),
+					'feed_id'			=> intval($item['feed_id']),
+					'title'				=> $item['title'],
+					'author'			=> $item['author'],
+					'html'				=> $item['description'],
+					'url'				=> $item['link'],
+					'is_saved'			=> $item['is_saved'] ? 1 : 0,
+					'is_read'			=> $item['read_on_time'] ? 1 : 0,
+					'created_on_time'	=> intval($item['created_on_time'])
+				);
+			}
+			unset($items);
+		}
+		
+		// links
+		if (isset($_GET['links']))
+		{
+			$data['links'] = array();
+			// set temporarily
+			$this->prefs['ui']['hot_start'] = isset($_GET['offset']) ? intval($_GET['offset']) : 0; // now
+			$this->prefs['ui']['hot_range'] = isset($_GET['range'])  ? intval($_GET['range'])  : 7; // week
+			$this->page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+			$this->build_links();
+			
+			$data['use_celsius'] = $this->prefs['use_celsius'] ? 1 : 0;
+			
+			foreach($this->links_by_degrees as $degree => $links)
+			{
+				foreach($links as $link)
+				{	
+					$data['links'][] = array
+					(
+						'id' 				=> intval($link['id']),
+						'feed_id' 			=> intval($link['feed_id']),
+						'item_id' 			=> intval($link['item_id']),
+						'temperature'		=> floatval($degree),
+						'is_item' 			=> $link['is_item'] ? 1 : 0,
+						'is_local' 			=> $link['is_local'] ? 1 : 0,
+						'is_saved'			=> $link['is_saved'] ? 1 : 0,
+						'title' 			=> $link['title'],
+						'url' 				=> $link['url'],
+						'item_ids' 			=> implode(',', $link['item_ids'])
+					);
+				}
+			}
+		}
+		
+		// unread items
+		if (isset($_GET['unread_item_ids']))
+		{
+			$unread_item_ids = $this->get_cols('id', 'items', '`read_on_time`=0');
+			$data['unread_item_ids'] = join(',', $unread_item_ids);
+		}
+		
+		// saved items
+		if (isset($_GET['saved_item_ids']))
+		{
+			$saved_item_ids = $this->get_cols('id', 'items', '`is_saved`=1');
+			$data['saved_item_ids'] = join(',', $saved_item_ids);
+		}
+		
+		$this->render_api($data, $_GET['api']);
+	}
+	
+	/**************************************************************************
+	 render_api()
+	 **************************************************************************/
+	function render_api($data = array(), $output = '')
+	{
+		include(FIREWALL_ROOT.'app/libs/api.php');
+		switch($output)
+		{
+			case 'xml':
+				header('Content-type:text/xml; charset=utf-8');
+				e(array_to_xml($data, 'response'));
+			break;
+			
+			case 'json':
+			default:
+				// header('Content-type:application/json; charset=utf-8');
+				header('Content-type:text/json; charset=utf-8');
+				e(array_to_json($data));
+			break;
+		}
+		exit();
 	}
 	
 	/**************************************************************************
@@ -1915,6 +2190,7 @@ PHP;
 	{
 		$can_update = (
 			empty($_POST) && 
+			// consider adding: !isset($_GET['xhr']) &&
 			!isset($_GET['refresh']) &&
 			!isset($_GET['manage']) &&
 			!isset($_GET['uninstall']) && 
@@ -2138,6 +2414,14 @@ PHP;
 		{
 			$this->prefs['mobile_read_on_scroll'] 		= $data['prefs']['mobile_read_on_scroll'];
 			$this->prefs['mobile_read_on_back_out'] 	= $data['prefs']['mobile_read_on_back_out'];
+		}
+		
+		if ($this->cfg['version'] < 114)
+		{
+			// update default favicon (had a redundant `data:` prefix)
+			$default_favicon = $this->get_one('favicons', '`id` = 1');
+			$default_favicon['cache'] = r('/^data:/', '', $default_favicon['cache']);
+			$this->save_one('favicons', $default_favicon);
 		}
 		
 		// save the update
@@ -2796,7 +3080,7 @@ PHP;
 	 **************************************************************************/
 	function add_default_favicon()
 	{
-		$default_favicon = 'data:image/gif;base64,R0lGODlhAQABAIAAAObm5gAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+		$default_favicon = 'image/gif;base64,R0lGODlhAQABAIAAAObm5gAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 		return $this->add_favicon(array('url' => 'favicon.png', 'cache' => $default_favicon));
 	}
 	
@@ -2985,6 +3269,7 @@ PHP;
 	{
 		// this function is publicly exposed so prevent abuse
 		unset($_GET['force']);
+		unset($_GET['errors']);
 		$this->is_silent = true;
 		$this->refresh();
 	}
@@ -3122,7 +3407,7 @@ HTML;
 		(
 			$request['headers']['response_code'] == 404 ||  // missing
 			empty($request['body']) || 						// empty
-			!m('#<(\?xml|rss)#m', $request['body'], $m)		// not xml or rss
+			!m('#<(\?xml|rss|feed)#m', $request['body'], $m)		// not xml or rss
 		) 
 		{
 			return;
@@ -4648,8 +4933,7 @@ HTML;
 						}
 					}
 				}
-			}			
-			// p(number_format(ms() - $start), 4); // quick bench
+			}
 		}
 	}
 	

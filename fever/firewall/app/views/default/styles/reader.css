@@ -417,6 +417,8 @@ li.target .icon
 
 .search.q #q
 {
+	-webkit-appearance: caret;
+
 	width: 100%;
 	background-color: transparent;
 	border: none;

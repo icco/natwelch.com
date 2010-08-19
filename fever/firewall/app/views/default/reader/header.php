@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Fever&deg;<?php if ($this->prefs['unread_counts'] && $this->total_unread):?> (<?php e($this->total_unread); ?>)<?php endif; ?></title>
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-<link rel="firewall/apple-touch-icon" href="firewall/app/images/webclip.png" />
+<link rel="apple-touch-icon" href="firewall/app/images/webclip<?php e($this->is_ipad ? '-ipad':''); ?>.png" />
 <link rel="shortcut icon" type="image/png" href="firewall/app/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="firewall/app/views/default/styles/reader.css?v=<?php e($this->version);?>" />
 <script type="text/javascript" src="firewall/app/views/default/scripts/fever.js?v=<?php e($this->version);?>"></script>
