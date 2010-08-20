@@ -30,6 +30,12 @@ body, select, input, textarea { color:#444; }
    width: 350px;
 }
 
+#friends {
+   padding: 20px;
+   width: 680px;
+   margin: 0 auto;
+}
+
 #container {
    height: 640px;
    width: 800px;
