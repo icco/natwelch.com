@@ -20,6 +20,6 @@ window.addEvent("domready", function() {
    // Make age accurate
    bday = new Date(1988,1,22,17);
    diff = bday.diff(new Date());
-   $('age').set('text', (diff / 365.4).toFixed(1));
+   $('age').set('text', (diff / 365.4).toFixed(2));
 });
 
