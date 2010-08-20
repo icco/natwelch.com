@@ -2,9 +2,20 @@
  * JS for natwelch.com
  */
 window.addEvent("domready", function() {
-   // Doesn't actually do anything.
-   s = new Fx.Sort($$('ul#melinks li'));
-   s.sort();
+   // Sorts the link list
+   var s = new Fx.Sort($$('ul#melinks li'));
+   var list = $$('ul#melinks li');
+   var text_list = new Array();
+   var idx_list = new Array();
+   list.each(function (x) {
+      text_list.push(x.get('text').trim());
+   });
+   var sort_list = $A(text_list);
+   sort_list.sort();
+   sort_list.each(function (x) {
+      idx_list.push(text_list.indexOf(x));
+   });
+   s.sort(idx_list);
 
    // Make age accurate
    bday = new Date(1988,1,22,17);

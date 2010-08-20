@@ -17,7 +17,11 @@ body, select, input, textarea { color:#444; }
 }
 
 #name {
-   font-size: 2.5em;
+   font-size: 3em;
+}
+
+#job {
+   font-size: 1.2em;
 }
 
 #data {
@@ -29,7 +33,9 @@ body, select, input, textarea { color:#444; }
 #container {
    height: 640px;
    width: 800px;
-   margin: 70px auto 0;
+   margin: 60px auto 30px;
+   border: 10px solid #444444;
+   padding: 5px;
 }
 
 #first {
@@ -47,3 +53,8 @@ a, a:visited {
 
 a, a:active, a:visited { color:#607890; }
 a:hover { color:#036; }
+
+p, ul {
+   padding: 5px 0;
+}
+
