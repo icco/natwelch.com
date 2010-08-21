@@ -69,3 +69,17 @@ p, ul {
    padding: 5px 0;
 }
 
+#link-blog { }
+#link-photos { }
+#link-resume { }
+#link-linkedin { }
+#link-github { }
+#link-twitter { }
+#link-lastfm { }
+#link-delicious { }
+#link-key { }
+#link-friends { }
+#link-homepage {
+   display: none;
+}
+
