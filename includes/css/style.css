@@ -3,7 +3,10 @@
  * copyright nat welch 2010
  */
 
-body, select, input, textarea { color:#444; }
+body, select, input, textarea { 
+   color:#444;
+   font-family: 'Cardo', arial, serif;
+}
 
 #nat {
    width: 397px;
@@ -14,6 +17,7 @@ body, select, input, textarea { color:#444; }
    padding-left: 30px;
    background-repeat: no-repeat;
    float: left;
+   font-family: 'Cardo', arial, serif;
 }
 
 #name {
@@ -25,6 +29,7 @@ body, select, input, textarea { color:#444; }
 }
 
 #data {
+   font-family: 'Droid Sans', sans-serif;
    float: right;
    padding: 0 0 0 10px;
    width: 350px;
