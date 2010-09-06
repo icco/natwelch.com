@@ -63,6 +63,7 @@ window.addEvent("domready", function() {
    konami = new Konami(function(){ Nat.sort(); });
 
    // Keyboard navigation
+   /* Disabling.
    var curid = 1;
    window.addEvent('keypress', function (ev) {
       if (ev.key == 'right') {
@@ -73,5 +74,6 @@ window.addEvent("domready", function() {
          Nat.move(curid);
       }
    });
+   */
 });
 
