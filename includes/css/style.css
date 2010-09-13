@@ -20,6 +20,10 @@ body, select, input, textarea {
    font-family: 'Cardo', arial, serif;
 }
 
+#container {
+   background: #fff;
+}
+
 #name {
    font-size: 3em;
 }

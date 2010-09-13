@@ -41,6 +41,15 @@ var Nat = {
       $('age').set('text', (diff / 365.4).toFixed(2));
    },
 
+   changeBG : function () {
+      document.body.setStyles({
+         backgroundImage: 'url("images/konamipower.gif")'
+      });
+      $('container').setStyles({
+         borderColor: '#992200
+      });
+   },
+
    lastfm : function () {
       // Not working yet
       // API: c8a55898b287950c836a1af12d91ce7d
@@ -60,7 +69,7 @@ var Nat = {
 
 window.addEvent("domready", function() {
    Nat.updateAge();
-   konami = new Konami(function(){ Nat.sort(); });
+   konami = new Konami(function() { Nat.changeBG(); });
 
    // Keyboard navigation
    /* Disabling.
