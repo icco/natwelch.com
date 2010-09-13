@@ -46,7 +46,7 @@ var Nat = {
          backgroundImage: 'url("images/konamipower.gif")'
       });
       $('container').setStyles({
-         borderColor: '#992200
+         borderColor: '#992200'
       });
    },
 
