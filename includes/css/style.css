@@ -70,8 +70,8 @@ a, a:visited {
   cursor: pointer;
 }
 
-a, a:active, a:visited { color:#607890; }
-a:hover { color:#036; }
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
 
 p, ul {
    padding: 5px 0;
