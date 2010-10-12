@@ -5,6 +5,10 @@
 
 body, select, input, textarea { 
    color:#444;
+   font-family: 'Droid Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
    font-family: 'Cardo', arial, serif;
 }
 
