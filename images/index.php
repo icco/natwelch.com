@@ -35,7 +35,7 @@
    print("<ul class=whitelinks>\n");
 
    // loop through the array of files and print them all
-   print("<li>$indexCount files</li><li>---------------------------------------</li>\n");
+   print("<li>$indexCount files</li>\n");
 
    for($index=0; $index < $indexCount; $index++) {
       // don't list hidden files
@@ -43,12 +43,12 @@
        && $dirArray[$index] != "index.php"
        && $dirArray[$index] != "style.css"
       ) {
+         $filemtime = date("F d Y H:i:s", filemtime($dirArray[$index]));
+         $size = filesize($dirArray[$index]);
          print("<li class='item'><a href=\"$dirArray[$index]\">$dirArray[$index]</a>");
-         print("<div class='type'> - ");
-         print(date ("F d Y H:i:s.", filemtime($dirArray[$index])) + "</div>");
-         print("<div class='size'> - ");
-         print(filesize($dirArray[$index]));
-         print("b </div></li>\n");
+         print("<div class='size'> - {$size}b </div>");
+         print("<div class='type'> - {$filemtime} </div>");
+         print("</li>\n");
       }
    }
 
