@@ -1,3 +1,4 @@
+# Fun htaccess stuff for natwelch.com
 
 ErrorDocument 401 /errors/401.html
 ErrorDocument 403 /errors/403.html
