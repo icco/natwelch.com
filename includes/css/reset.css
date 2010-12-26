@@ -144,10 +144,9 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 
 
 /* These selection declarations have to be separate.
-   No text-shadow: twitter.com/miketaylr/status/12228805301 
-   Also: hot pink. */
-::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+   No text-shadow: twitter.com/miketaylr/status/12228805301 */
+::-moz-selection { text-shadow: none; }
+::selection { text-shadow: none; } 
 
 /*  j.mp/webkit-tap-highlight-color */
 a:link { -webkit-tap-highlight-color: #FF5E99; } 
@@ -163,7 +162,6 @@ button {  width: auto; overflow: visible; }
 /* bicubic resizing for non-native sized IMG: 
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
-
 
 
 /* 
