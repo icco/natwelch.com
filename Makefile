@@ -1,4 +1,3 @@
-
 pull:
 	rsync -rvtz --delete welchfamilyweb.com:~/public_html/natwelch.com/* .
 
@@ -10,4 +9,3 @@ deploy:
 
 fake-deploy: 
 	rsync -anrvtz * welchfamilyweb.com:~/public_html/natwelch.com/
-
