@@ -1,11 +1,15 @@
 /**
- * NatWelch.com version 7
- * copyright nat welch 2010
+ * NatWelch.com version 7.1
+ * copyright nat welch 2011
  */
 
 body, select, input, textarea { 
    color:#444;
    font-family: 'Droid Sans', sans-serif;
+}
+
+body {
+   background: url('../../images/grid.png');
 }
 
 h1, h2, h3, h4, h5 {
