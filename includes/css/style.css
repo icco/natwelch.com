@@ -9,7 +9,7 @@ body, select, input, textarea {
 }
 
 body {
-   background: url('../../images/grid.png');
+   background: #778;
 }
 
 h1, h2, h3, h4, h5 {
