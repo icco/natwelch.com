@@ -9,7 +9,7 @@
 		// REQUIRED VALUES ------------------------------------
 		'twitter_screenname' => 'icco', // Your Twitter screen name
 		'timezone'           => 'America/Los_Angeles', // Choose one of these: http://php.net/manual/en/timezones.php
-		'path'               => '', // Where's your twitter installation on your domain? No end slash, please.
+		'path'               => '/tweetnest', // Where's your twitter installation on your domain? No end slash, please.
 		// Database values
 		'db'                 => array(
 			'hostname'       => 'localhost', // The hostname of your database server. Usually 'localhost'
