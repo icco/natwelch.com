@@ -1,7 +1,7 @@
 <?php
 	// TWEET NEST
 	// Config file
-
+	
 	// Change all of these variables as you see fit, to match your likings!
 	// Please note: If there's '' around values, don't remove them. If there aren't, don't add any! :)
 
@@ -16,22 +16,22 @@
 			'username'       => 'dlnwelch_tweet', // The username to log in to your database
 			'password'       => '1hatetwitter', // The password to log in to your database
 			'database'       => 'dlnwelch_tweetnest', // The database name
-			'table_prefix'   => 'tw_'  // The prefix to table names in the database
+			'table_prefix'   => 'tn_'  // The prefix to table names in the database
 		),
-
+		
 		// OPTIONAL -------------------------------------------
 		// If you want to access your maintenance PHP files by HTTP, specify an admin password.
-		'maintenance_http_password' => 'admin',
+		'maintenance_http_password' => 'admin', 
 		// UNLESS YOU HAVE SSL, IT WILL BE SENT IN CLEAR TEXT, SO MAYBE NOT YOUR TWITTER (or anything else) PASSWORD!
-
+		
 		// If you want Twitter @Anywhere hovercards on your archive, put your @Anywhere API key here
-		'anywhere_apikey'    => '',
-
+		'anywhere_apikey'    => 't0mxhHYslPFEpCUaXSkg',
+		
 		'follow_me_button'   => true, // Display 'follow me' button?
 		'smartypants'        => true, // Use SmartyPants to perfect punctuation inside tweets?
-
+		
 		'css' => 'styles/streamlined/styles.css.php', // What CSS file should we use?
-
+		
 		'style' => array(
 			// Style
 			// You can use color values below like in a CSS file; #xxx, rgb(xx,xx,xx), whatever you want.
@@ -48,7 +48,7 @@
 			// Tweet
 			'tweet_border_color' => 'profile', // 'profile' is always #eee
 			'tweet_meta_text_color' => 'profile', // 'profile' is always #999
-
+			
 			// The below styles are styles that cannot be named 'profile' as there's no equivalent Twitter profile color value for them.
 			'page_title_color' => '#000',
 			'link_color_hover' => '#003c70',
@@ -106,7 +106,7 @@
 			'footer_text_color' => '#777',
 			'footer_link_color' => '#444',
 		),
-
+		
 		// For any style, you can also explicitly use one of the below Twitter profile colour values
 		// profile_background_color
 		// profile_text_color
