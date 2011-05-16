@@ -9,3 +9,6 @@ deploy:
 
 fake-deploy: 
 	rsync -anrvtz * welchfamilyweb.com:~/public_html/natwelch.com/
+
+local:
+	python -m SimpleHTTPServer
