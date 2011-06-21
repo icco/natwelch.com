@@ -84,5 +84,14 @@ window.addEvent("domready", function() {
       }
    });
    */
+
+   /* What I used to generate photo.
+   $('natphoto').closePixelate([
+      { shape: 'circle', resolution: 32, size: 6, offset: 8 },
+      { shape: 'circle', resolution: 32, size: 9, offset: 16 },
+      { shape: 'circle', resolution: 32, size: 12, offset: 24 },
+      { shape: 'circle', resolution: 32, size: 9, offset: 0 }
+   ]);
+   */
 });
 
