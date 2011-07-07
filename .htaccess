@@ -19,7 +19,7 @@ AddType video/webm webm
 
 # Proper svg serving. Required for svg webfonts on iPad
 #   twitter.com/FontSquirrel/status/14855840545
-AddType image/svg+xml                 svg svgz 
+AddType image/svg+xml                 svg svgz
 
 # webfonts
 AddType application/vnd.ms-fontobject eot
@@ -33,7 +33,7 @@ AddType text/cache-manifest           manifest
 <IfModule mod_deflate.c>
 
 # html, xml, css, and js:
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript text/javascript application/javascript application/json 
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript text/javascript application/javascript application/json
 
 # webfonts and svg:
   <FilesMatch "\.(ttf|otf|eot|svg)$" >
@@ -48,4 +48,7 @@ FileETag None
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# direct natwelch.com/ip -> natwelch.com/ip.php
+RewriteRule ^(.*)/ip/?$ http://%1/ip.php [R=301,L]
 
