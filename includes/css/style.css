@@ -1,5 +1,5 @@
 /**
- * NatWelch.com version 7.1
+ * NatWelch.com version 9.1
  * copyright Nat Welch 2011
  */
 
@@ -16,6 +16,29 @@ h1, h2, h3, h4, h5 {
    font-family: 'Cardo', arial, serif;
 }
 
+#nav {
+   position: fixed;
+   left: 1090px;
+   top: 200px;
+}
+
+#nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+#nav ul li {
+   background: #444;
+   padding: 10px;
+   margin: 3px;
+}
+
+#nav ul li a {
+   color: #FFF;
+   font-weight: 700;
+}
+
 #nat {
    width: 397px;
    height: 380px;
@@ -26,10 +49,6 @@ h1, h2, h3, h4, h5 {
    background-repeat: no-repeat;
    float: left;
    font-family: 'Cardo', arial, serif;
-}
-
-#container {
-   background: #fff;
 }
 
 #name {
@@ -47,10 +66,6 @@ h1, h2, h3, h4, h5 {
    width: 440px;
 }
 
-#data2, #data3, #data4 {
-   display: none;
-}
-
 #friends {
    padding: 20px;
    width: 680px;
@@ -61,7 +76,8 @@ h1, h2, h3, h4, h5 {
    list-style: none;
 }
 
-#container {
+.container {
+   background: #fff;
    height: 460px;
    width: 900px;
    margin: 60px auto 30px;
@@ -90,7 +106,7 @@ p, ul {
 }
 
 #link-blog { }
-#link-code { }
+#link-code { display: none; }
 #link-delicious { }
 #link-friends { }
 #link-github { display: none; }
@@ -98,7 +114,7 @@ p, ul {
 #link-key { }
 #link-lastfm { }
 #link-linkedin { }
-#link-photos { }
+#link-photos { display: none; }
 #link-resume { }
 #link-twitter { }
 

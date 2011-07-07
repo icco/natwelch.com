@@ -19,10 +19,17 @@
 
       <link rel="shortcut icon" href="/favicon.ico">
       <link rel="stylesheet" href="includes/css/reset.css?v=3">
-      <link rel="stylesheet" href="includes/css/style.css?v=8">
+      <link rel="stylesheet" href="includes/css/style.css?v=9">
    </head>
    <body>
-      <div id="container">
+      <div id="nav">
+         <ul>
+            <li><a href="#top">About</a></li>
+            <li><a href="#middle">Code</a></li>
+            <li><a href="#bottom">Photos</a></li>
+         </ul>
+      </div>
+      <div id="top" class="container">
          <div class="data" id="data1">
             <p id="first">My name is <abbr title="Nathaniel Dehn Welch">Nat</abbr>, and I am a professional software developer.</p>
             <p>I am currently <span id='age'>23</span> years old and love to create things. I have a passion for design, communication, and building communities. You can contact me at <a class="email" href="mailto:nat@natwelch.com">nat@natwelch.com</a> or at <a class="tel">707.799.8675</a>.</p>
@@ -41,7 +48,7 @@
                <li class="sortme" id="link-homepage"> <a href="http://natwelch.com" title="Nat Welch Dot Com" rel="me" class="url">My Website</a> </li>
             </ul>
 
-            <p>I am a Computer Science student at the California Polytechnic State University in San Luis Obispo, more affectionately known as Cal Poly SLO.</p>
+            <p>I am a recent Computer Science graduate from the California Polytechnic State University in San Luis Obispo, more affectionately known as Cal Poly. I am currently employed by <a href="http://getpunchd.com">Punchd Labs Inc.</a></p>
 
             <p><small><em>* Knighthood self-proclaimed.</em></small></p>
          </div>
@@ -51,6 +58,17 @@
          </div>
       </div>
 
+      <div id="middle" class="container">
+         <div id="repos">
+            <ul></ul>
+         </div>
+      </div>
+
+      <div id="bottom" class="container">
+         <!-- Flickr photos will go here... -->
+      </div>
+
+      <!-- TODO: Upgrade / Store locally. -->
       <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js"></script>
       <script src="/includes/js/mootools-1.2.4.4-more.js"></script>
       <!-- https://github.com/desandro/close-pixelate

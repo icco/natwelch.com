@@ -8,13 +8,13 @@ var Nat = {
       var list = $$('ul#melinks li');
       var text_list = new Array();
       var idx_list = new Array();
-      
+
       list.each(function (x) {
          text_list.push(x.get('text').trim());
       });
-      
+
       var sort_list = $A(text_list);
-      
+
       sort_list.sort();
       sort_list.each(function (x) {
          idx_list.push(text_list.indexOf(x));
@@ -45,7 +45,12 @@ var Nat = {
       document.body.setStyles({
          backgroundImage: 'url("images/konamipower.gif")'
       });
-      $('container').setStyles({
+
+      $$('.container').setStyles({
+         borderColor: '#607890'
+      });
+
+      $('nav').setStyles({
          borderColor: '#607890'
       });
    },
@@ -61,10 +66,51 @@ var Nat = {
             console.log(text);
          }
       });
-      req.send({
-         method: 'get'
-      });
-   }
+
+      req.send({ method: 'get' });
+   },
+
+   // TODO: finish porting from jQuery.
+   github : function () {
+       var login = 'icco';
+       $.getJSON('http://github.com/api/v1/json/' + login + '?callback=?', function(data) {
+
+          // The repos I want to feature
+          var myRepos = [
+             'Agent355',
+             'CSC484',
+             'Javascript_Embed',
+             'RainbowDeathSwarm',
+             'Resume',
+             'bloomFilter',
+             'coffee_shop',
+             'dotFiles',
+             'pseudoweb',
+             'thestack',
+          ];
+
+          // No forks plz
+          var repos = $.grep(data.user.repositories, function() { return !this.fork });
+
+          // Sort by last push
+          repos.sort(function(a, b) {
+             var compA = b.pushed_at;
+             var compB = a.pushed_at;
+             return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+          });
+
+          featured_repos = repos.filter(function(x) { return myRepos.indexOf(x.name) >= 0; });
+
+          // Detailed repositories
+          featured_repos.each(function(repo) {
+             hp = '<a href="' + this.homepage + '">#</a>';
+             desc = '<small> - ' + this.description + '</small>';
+             a = '<a href="' + this.url + '">' + this.name + '</a> ';
+             a = this.homepage ? a + hp : a;
+
+             $('#repos > ul').append('<li>' + a + '<br />' + desc + '</li>')
+          });
+      }
 };
 
 window.addEvent("domready", function() {
