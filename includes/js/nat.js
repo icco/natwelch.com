@@ -73,7 +73,7 @@ var Nat = {
    // TODO: finish porting from jQuery.
    github : function () {
        var login = 'icco';
-       new Request.JSON({url: 'http://github.com/api/v1/json/' + login + '?callback=?', onSuccess: function(person){
+       new Request.JSON({url: 'http://github.com/api/v1/json/' + login + '?callback=?', onSuccess: function (data) {
           // The repos I want to feature
           var myRepos = [
              'Agent355',
@@ -88,8 +88,10 @@ var Nat = {
              'thestack',
           ];
 
+          console.log(myRepos);
           // No forks plz
           var repos = $.grep(data.user.repositories, function() { return !this.fork });
+          console.log(repos);
 
           // Sort by last push
           repos.sort(function(a, b) {
@@ -116,7 +118,7 @@ var Nat = {
 window.addEvent("domready", function() {
    Nat.updateAge();
    konami = new Konami(function() { Nat.changeBG(); });
-   //Nat.github();
+   Nat.github();
 
    // Keyboard navigation
    /* Disabling.
