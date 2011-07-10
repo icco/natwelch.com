@@ -50,8 +50,8 @@ var Nat = {
          borderColor: '#607890'
       });
 
-      $('nav').setStyles({
-         borderColor: '#607890'
+      $$('#nav ul li').setStyles({
+         backgroundColor: '#607890'
       });
    },
 
@@ -73,8 +73,7 @@ var Nat = {
    // TODO: finish porting from jQuery.
    github : function () {
        var login = 'icco';
-       $.getJSON('http://github.com/api/v1/json/' + login + '?callback=?', function(data) {
-
+       new Request.JSON({url: 'http://github.com/api/v1/json/' + login + '?callback=?', onSuccess: function(person){
           // The repos I want to feature
           var myRepos = [
              'Agent355',
@@ -110,12 +109,14 @@ var Nat = {
 
              $('#repos > ul').append('<li>' + a + '<br />' + desc + '</li>')
           });
-      }
+       } }).get();
+   }
 };
 
 window.addEvent("domready", function() {
    Nat.updateAge();
    konami = new Konami(function() { Nat.changeBG(); });
+   //Nat.github();
 
    // Keyboard navigation
    /* Disabling.

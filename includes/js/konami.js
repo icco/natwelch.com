@@ -8,9 +8,9 @@ var Konami = new Class({
 	step: 0,
 
 	initialize: function(func1,func2,func3){
-		if($defined(func2))
+		if(func2 != null)
 			this.func2 = func2;
-		if($defined(func3))
+		if(func3 != null)
 			this.func3 = func3;
 		this.func = func1;
 		window.addEvent('keyup',this.keystroke.bind(this));
@@ -20,7 +20,7 @@ var Konami = new Class({
 		ev = new Event(e);
     	
 		if(ev.key == this.code[this.step]){
-			if($defined(this.func2))
+			if(this.func2 != null)
 				this.func2.attempt(this.step);
 			this.step++;
 			if(this.step == this.code.length){
@@ -29,7 +29,7 @@ var Konami = new Class({
 			}
 		} else {
 			this.step = 0;
-			if($defined(this.func3))
+			if(this.func3 != null)
 				this.func3.attempt();
 		}
 	}
