@@ -70,11 +70,10 @@ var Nat = {
       req.send({ method: 'get' });
    },
 
-   // TODO: finish porting from jQuery.
    github : function () {
        var login = 'icco';
 
-       var myJSONP = new Request.JSONP({
+       var gh = new Request.JSONP({
          url: 'http://github.com/api/v1/json/' + login,
          callbackKey: 'callback',
          onComplete: function(data) {
@@ -92,8 +91,6 @@ var Nat = {
                'thestack',
                'themealist',
             ];
-
-            console.log(data);
 
             // Only my repos that I like
             var repos = data.user.repositories.filter(function(item) { return myRepos.indexOf(item.name) >= 0; });
@@ -133,6 +130,30 @@ var Nat = {
             });
          }
       }).send();
+   },
+
+   flickr : function () {
+      var fapi = new Request.JSONP({
+         url: ' http://api.flickr.com/services/rest/',
+         callbackKey: 'jsoncallback',
+         data: {
+            api_key: "77b15b3af569cacfaad39754171617fa",
+            user_id: "42027916@N00",
+            method: "flickr.people.getPublicPhotos",
+            format: "json",
+            extras: "url_sq",
+            per_page: "72",
+         },
+         onComplete: function(data) {
+            data.photos.photo.each(function(photo) {
+               url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
+               img = "<img src=\"" + photo.url_sq + "\" \\>";
+               a = '<a href="' + url + '">' + img + '</a>';
+               var li = new Element('li', { html: a });
+               li.inject($('photos'));
+            });
+         }
+      }).send();
    }
 };
 
@@ -141,6 +162,8 @@ window.addEvent("domready", function() {
    konami = new Konami(function() { Nat.changeBG(); });
 
    Nat.github();
+
+   Nat.flickr();
 
    // Keyboard navigation
    /* Disabling.
