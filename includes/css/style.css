@@ -118,3 +118,58 @@ p, ul {
 #link-resume { }
 #link-twitter { }
 
+#repo_container a {
+   color: #333;
+   font-size: 1.3em;
+   text-decoration: none;
+}
+
+#repo_container a:hover {
+   text-decoration: underline;
+}
+
+#repo_container h1 {
+   font-size: 1.7em;
+   padding: 6px;
+}
+
+#repos {
+   margin: 0;
+   padding: 5px;
+   width: 40%;
+   float: left;
+}
+
+#repos li {
+   margin-left: 15px;
+   list-style-type: none;
+}
+
+#other_repos {
+   list-style: none;
+   text-align: right;
+   padding: 0 13px;
+   width: 45%;
+   float: right;
+}
+
+#other_repos li {
+   display: inline;
+   margin: 5px;
+}
+
+#other_repos li a {
+   text-decoration: none;
+   white-space: nowrap;
+}
+
+#code_bottom_right {
+   font-size: 1em;
+   float: right;
+   width: 45%;
+   margin-top: 35px;
+}
+
+#code_bottom_right a {
+   font-size: 1.0em;
+}

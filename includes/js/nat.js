@@ -73,51 +73,73 @@ var Nat = {
    // TODO: finish porting from jQuery.
    github : function () {
        var login = 'icco';
-       new Request.JSON({url: 'http://github.com/api/v1/json/' + login + '?callback=?', onSuccess: function (data) {
-          // The repos I want to feature
-          var myRepos = [
-             'Agent355',
-             'CSC484',
-             'Javascript_Embed',
-             'RainbowDeathSwarm',
-             'Resume',
-             'bloomFilter',
-             'coffee_shop',
-             'dotFiles',
-             'pseudoweb',
-             'thestack',
-          ];
 
-          console.log(myRepos);
-          // No forks plz
-          var repos = $.grep(data.user.repositories, function() { return !this.fork });
-          console.log(repos);
+       var myJSONP = new Request.JSONP({
+         url: 'http://github.com/api/v1/json/' + login,
+         callbackKey: 'callback',
+         onComplete: function(data) {
+            // The repos I want to feature
+            var myRepos = [
+               'Agent355',
+               'CSC484',
+               'Javascript_Embed',
+               'RainbowDeathSwarm',
+               'Resume',
+               'bloomFilter',
+               'coffee_shop',
+               'dotFiles',
+               'pseudoweb',
+               'thestack',
+               'themealist',
+            ];
 
-          // Sort by last push
-          repos.sort(function(a, b) {
-             var compA = b.pushed_at;
-             var compB = a.pushed_at;
-             return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
-          });
+            console.log(data);
 
-          featured_repos = repos.filter(function(x) { return myRepos.indexOf(x.name) >= 0; });
+            // Only my repos that I like
+            var repos = data.user.repositories.filter(function(item) { return myRepos.indexOf(item.name) >= 0; });
 
-          // Detailed repositories
-          featured_repos.each(function(repo) {
-             hp = '<a href="' + this.homepage + '">#</a>';
-             desc = '<small> - ' + this.description + '</small>';
-             a = '<a href="' + this.url + '">' + this.name + '</a> ';
-             a = this.homepage ? a + hp : a;
+            var other_repos = data.user.repositories.filter(function(item) { return myRepos.indexOf(item.name) < 0 && !item.fork; });
 
-             $('#repos > ul').append('<li>' + a + '<br />' + desc + '</li>')
-          });
-       } }).get();
+            // Sort by last push
+            repos.sort(function(a, b) {
+               var compA = b.pushed_at;
+               var compB = a.pushed_at;
+               return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+            });
+
+            // Sort by name
+            other_repos.sort(function(a, b) {
+               var compA = b.name.toLowerCase();
+               var compB = a.name.toLowerCase();
+               return (compA > compB) ? -1 : (compA < compB) ? 1 : 0;
+            });
+
+            // Detailed repositories
+            repos.each(function(repo) {
+               hp = '<a href="' + repo.homepage + '">#</a>';
+               desc = '<small> - ' + repo.description + '</small>';
+               a = '<a href="' + repo.url + '">' + repo.name + '</a> ';
+               a = repo.homepage ? a + hp : a;
+
+               var li = new Element('li', { html: a + '<br />' + desc });
+               li.inject($('repos'));
+            });
+
+            // others repositories
+            other_repos.each(function(repo) {
+               a = '<a href="' + repo.url + '">' + repo.name + '</a> ';
+               var li = new Element('li', { html: a });
+               li.inject($('other_repos'));
+            });
+         }
+      }).send();
    }
 };
 
 window.addEvent("domready", function() {
    Nat.updateAge();
    konami = new Konami(function() { Nat.changeBG(); });
+
    Nat.github();
 
    // Keyboard navigation
