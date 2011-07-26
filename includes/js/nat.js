@@ -137,7 +137,8 @@ var Nat = {
          url: ' http://api.flickr.com/services/rest/',
          callbackKey: 'jsoncallback',
          data: {
-            api_key: "77b15b3af569cacfaad39754171617fa",
+            api_key: "5c282af934cd475695e1f727dd0404a9",
+            secret: "49b3b77e99947328",
             user_id: "42027916@N00",
             method: "flickr.people.getPublicPhotos",
             format: "json",
@@ -145,6 +146,7 @@ var Nat = {
             per_page: "72",
          },
          onComplete: function(data) {
+
             data.photos.photo.each(function(photo) {
                url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
                img = "<img src=\"" + photo.url_sq + "\" \\>";
