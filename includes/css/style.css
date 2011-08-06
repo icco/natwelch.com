@@ -12,15 +12,12 @@ body {
    background: url("/i/soft.png");
 }
 
-h1, h2, h3, h4, h5 {
-   font-family: 'Cardo', arial, serif;
-}
-
 #box {
    width: 708px;
    background-color: #909090;
    opacity: 0.8;
    margin: 100px auto;
+   -moz-border-radius: 15px;
    border-radius: 15px;
    padding: 15px;
 }
@@ -28,6 +25,7 @@ h1, h2, h3, h4, h5 {
 #innerbox {
    width: 400px;
    background: black;
+   -moz-border-radius: 15px;
    border-radius: 15px;
    padding: 15px;
    color: #EEE;
@@ -46,6 +44,7 @@ h1, h2, h3, h4, h5 {
 
 #rightinnerbox {
    border-radius: 15px;
+   -moz-border-radius: 15px;
    float: right;
    width: 263px;
 }
