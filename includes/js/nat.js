@@ -162,32 +162,5 @@ var Nat = {
 window.addEvent("domready", function() {
    Nat.updateAge();
    konami = new Konami(function() { Nat.changeBG(); });
-
-   Nat.github();
-
-   Nat.flickr();
-
-   // Keyboard navigation
-   /* Disabling.
-   var curid = 1;
-   window.addEvent('keypress', function (ev) {
-      if (ev.key == 'right') {
-         curid = curid >= $$('.data').length ? $$('.data').length : (curid + 1);
-         Nat.move(curid);
-      } else if (ev.key == 'left') {
-         curid = curid <= 1 ? 1 : (curid - 1);
-         Nat.move(curid);
-      }
-   });
-   */
-
-   /* What I used to generate photo.
-   $('natphoto').closePixelate([
-      { shape: 'circle', resolution: 32, size: 6, offset: 8 },
-      { shape: 'circle', resolution: 32, size: 9, offset: 16 },
-      { shape: 'circle', resolution: 32, size: 12, offset: 24 },
-      { shape: 'circle', resolution: 32, size: 9, offset: 0 }
-   ]);
-   */
 });
 

@@ -9,180 +9,47 @@ body, select, input, textarea {
 }
 
 body {
-   background: #AAA;
+   background: url("/i/soft.png");
 }
 
 h1, h2, h3, h4, h5 {
    font-family: 'Cardo', arial, serif;
 }
 
-#nav {
-   position: fixed;
-   left: 1090px;
-   top: 200px;
+#box {
+   width: 708px;
+   background: grey;
+   opacity: 0.7;
+   margin: 90px auto;
+   border-radius: 15px;
+   padding: 15px;
 }
 
-#nav ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
+#innerbox {
+   width: 400px;
+   background: black;
+   border-radius: 15px;
+   padding: 15px;
+   color: #EEE;
 }
 
-#nav ul li {
-   background: #444;
-   padding: 10px;
-   margin: 3px;
+#innerbox a, #innerbox a:visited {
+   color: #CCC;
+   text-decoration: none;
 }
 
-#nav ul li a {
+#innerbox a:hover {
    color: #FFF;
-   font-weight: 700;
+   text-decoration: none;
+   border-bottom: 1px dashed;
 }
 
-#nat {
-   width: 397px;
-   height: 380px;
-   background-image: url('../../images/natcplug.close.jpg');
-   color: #444;
-   padding-top: 80px;
-   padding-left: 30px;
-   background-repeat: no-repeat;
-   float: left;
-   font-family: 'Cardo', arial, serif;
-}
-
-#name {
-   font-size: 3em;
-}
-
-#job {
-   font-size: 1.2em;
-}
-
-.data {
-   font-family: 'Droid Sans', sans-serif;
+#rightinnerbox {
+   border-radius: 15px;
    float: right;
-   padding: 25px 20px 0 10px;
-   width: 440px;
+   width: 263px;
 }
-
-#friends {
-   padding: 20px;
-   width: 680px;
-   margin: 0 auto;
-}
-
-#friends ul {
-   list-style: none;
-}
-
-.container {
-   background: #fff;
-   height: 460px;
-   width: 900px;
-   margin: 60px auto 30px;
-   border: 10px solid #444444;
-   padding: 5px;
-}
-
-#first {
-   margin-top: 25px;
-}
-
-#knight {
-   font-size: 0.8em;
-}
-
-a, a:visited {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
 
 p, ul {
    padding: 5px 0;
-}
-
-#link-blog { }
-#link-code { display: none; }
-#link-delicious { }
-#link-friends { }
-#link-github { display: none; }
-#link-homepage { display: none; }
-#link-key { }
-#link-lastfm { }
-#link-linkedin { }
-#link-photos { display: none; }
-#link-resume { }
-#link-twitter { }
-
-#repo_container a {
-   color: #333;
-   font-size: 1.3em;
-   text-decoration: none;
-}
-
-#repo_container a:hover {
-   text-decoration: underline;
-}
-
-#repo_container h1 {
-   font-size: 1.7em;
-   padding: 6px;
-}
-
-#repos {
-   margin: 0;
-   padding: 5px;
-   width: 40%;
-   float: left;
-}
-
-#repos li {
-   margin-left: 15px;
-   list-style-type: none;
-}
-
-#other_repos {
-   list-style: none;
-   text-align: right;
-   padding: 0 13px;
-   width: 45%;
-   float: right;
-}
-
-#other_repos li {
-   display: inline;
-   margin: 5px;
-}
-
-#other_repos li a {
-   text-decoration: none;
-   white-space: nowrap;
-}
-
-#code_bottom_right {
-   font-size: 1em;
-   float: right;
-   width: 45%;
-   margin-top: 35px;
-}
-
-#code_bottom_right a {
-   font-size: 1.0em;
-}
-
-#photos {
-   list-style: none;
-   text-align: justify;
-   padding: 0;
-   margin: 0;
-}
-
-#photos li {
-   display: inline;
-   margin: 0;
-   padding: 0;
 }
