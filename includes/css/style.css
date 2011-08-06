@@ -5,7 +5,7 @@
 
 body, select, input, textarea {
    color:#444;
-   font-family: 'Droid Sans', sans-serif;
+   font-family: sans-serif;
 }
 
 body {
@@ -43,10 +43,10 @@ body {
 }
 
 #rightinnerbox {
-   border-radius: 15px;
    -moz-border-radius: 15px;
+   border-radius: 15px;
    float: right;
-   width: 263px;
+   height: 350px;
 }
 
 p, ul {
