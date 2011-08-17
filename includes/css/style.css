@@ -29,10 +29,11 @@ body {
    border-radius: 15px;
    padding: 15px;
    color: #EEE;
+   height: 319px;
 }
 
 #innerbox a, #innerbox a:visited {
-   color: #CCC;
+   color: #666;
    text-decoration: none;
 }
 
@@ -53,8 +54,9 @@ p, ul {
    padding: 5px 0;
 }
 
-#melinks {
+ul#melinks {
    list-style: none;
+   margin: 0;
 }
 
 ul#melinks li {
@@ -62,7 +64,6 @@ ul#melinks li {
 }
 
 img.socialicon {
-   width: 100px;
-   height: 100px;
-   border: 1px solid black;
+   width: 53px;
+   height: 53px;
 }
