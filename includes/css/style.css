@@ -66,4 +66,14 @@ ul#melinks li {
 img.socialicon {
    width: 53px;
    height: 53px;
+   opacity: 0.6;
 }
+
+img.socialicon:hover {
+   opacity: 1;
+}
+
+#melinks a:hover {
+   border-bottom: 0;
+}
+
