@@ -52,6 +52,7 @@ body {
 
 p, ul {
    padding: 5px 0;
+   opacity: 1;
 }
 
 ul#melinks {
