@@ -5,7 +5,9 @@
 
 body, select, input, textarea {
    color:#444;
-   font-family: sans-serif;
+   font-family: Arial, sans-serif;
+   font-size: 13px;
+   line-height: 18px;
 }
 
 body {
