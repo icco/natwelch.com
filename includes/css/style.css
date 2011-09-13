@@ -1,96 +1,82 @@
 /**
- * NatWelch.com version 7
- * copyright nat welch 2010
+ * NatWelch.com version 9.1
+ * copyright Nat Welch 2011
  */
 
-body, select, input, textarea { 
+body, select, input, textarea {
    color:#444;
-   font-family: 'Droid Sans', sans-serif;
+   font-family: Arial, sans-serif;
+   font-size: 13px;
+   line-height: 18px;
 }
 
-h1, h2, h3, h4, h5 {
-   font-family: 'Cardo', arial, serif;
+body {
+   background: url("/i/soft.png");
 }
 
-#nat {
-   width: 397px;
-   height: 560px;
-   background-image: url('../../images/natcplug.jpg');
-   color: #444;
-   padding-top: 80px;
-   padding-left: 30px;
-   background-repeat: no-repeat;
-   float: left;
-   font-family: 'Cardo', arial, serif;
+#box {
+   width: 708px;
+   background-color: #909090;
+   opacity: 0.8;
+   margin: 100px auto;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   padding: 15px;
 }
 
-#container {
-   background: #fff;
+#innerbox {
+   width: 400px;
+   background: black;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   padding: 15px;
+   color: #EEE;
+   height: 319px;
 }
 
-#name {
-   font-size: 3em;
+#innerbox a, #innerbox a:visited {
+   color: #666;
+   text-decoration: none;
 }
 
-#job {
-   font-size: 1.2em;
+#innerbox a:hover {
+   color: #FFF;
+   text-decoration: none;
+   border-bottom: 1px dashed;
 }
 
-.data {
-   font-family: 'Droid Sans', sans-serif;
+#rightinnerbox {
+   -moz-border-radius: 15px;
+   border-radius: 15px;
    float: right;
-   padding: 0 0 0 10px;
-   width: 350px;
+   height: 350px;
 }
-
-#data2, #data3, #data4 {
-   display: none;
-}
-
-#friends {
-   padding: 20px;
-   width: 680px;
-   margin: 0 auto;
-}
-
-#container {
-   height: 640px;
-   width: 800px;
-   margin: 60px auto 30px;
-   border: 10px solid #444444;
-   padding: 5px;
-}
-
-#first {
-   margin-top: 25px;
-}
-
-#knight {
-   font-size: 0.8em;
-}
-
-a, a:visited {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
 
 p, ul {
    padding: 5px 0;
+   opacity: 1;
 }
 
-#link-blog { }
-#link-code { }
-#link-delicious { }
-#link-friends { }
-#link-github { display: none; }
-#link-homepage { display: none; }
-#link-key { }
-#link-lastfm { }
-#link-linkedin { }
-#link-photos { }
-#link-resume { }
-#link-twitter { }
+ul#melinks {
+   list-style: none;
+   margin: 0;
+}
+
+ul#melinks li {
+   display: inline;
+}
+
+img.socialicon {
+   width: 53px;
+   height: 53px;
+   opacity: 0.6;
+}
+
+img.socialicon:hover {
+   opacity: 1;
+}
+
+#melinks a:hover {
+   border-bottom: 0;
+}
 
