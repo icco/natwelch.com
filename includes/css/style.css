@@ -1,82 +1,86 @@
 /**
- * NatWelch.com version 9.1
- * copyright Nat Welch 2011
+ * NatWelch.com version 12.0
+ * copyright Nat Welch 2012
  */
 
 body, select, input, textarea {
-   color:#444;
-   font-family: Arial, sans-serif;
-   font-size: 13px;
-   line-height: 18px;
+  color:#444;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 body {
-   background: url("/i/grunge_wall.png");
+  background: url("/i/large_nat.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
 }
 
-#box {
-   width: 708px;
-   background-color: #909090;
-   opacity: 0.8;
-   margin: 100px auto;
-   -moz-border-radius: 15px;
-   border-radius: 15px;
-   padding: 15px;
+#center {
+  padding: 20px;
 }
 
-#innerbox {
-   width: 400px;
-   background: black;
-   -moz-border-radius: 15px;
-   border-radius: 15px;
-   padding: 15px;
-   color: #EEE;
-   height: 319px;
+#more-data, #center {
+  background: #000;
+  opacity: 0.9;
 }
 
-#innerbox a, #innerbox a:visited {
-   color: #666;
-   text-decoration: none;
+#center h1 {
+  font-size: 3em;
+  margin: 6px;
 }
 
-#innerbox a:hover {
-   color: #FFF;
-   text-decoration: none;
-   border-bottom: 1px dashed;
+#center h1, #center h3 {
+  width: 100%;
+  text-align: center;
 }
 
-#rightinnerbox {
-   -moz-border-radius: 15px;
-   border-radius: 15px;
-   float: right;
-   height: 350px;
+a {
+  cursor: pointer;
 }
 
-p, ul {
-   padding: 5px 0;
-   opacity: 1;
+a:hover {
+  color: #444;
+}
+
+#buffer {
+  height: 300px;
+}
+
+#more-data {
+  display: none;
+  padding: 0 25px 25px 25px;
+  color: #EEE;
+}
+
+#more-data div {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#more-data div p {
+  padding: 5px;
+  text-align: justify;
 }
 
 ul#melinks {
-   list-style: none;
-   margin: 0;
+  list-style: none;
+  margin: 0;
 }
 
 ul#melinks li {
-   display: inline;
+  display: inline;
 }
 
 img.socialicon {
-   width: 53px;
-   height: 53px;
-   opacity: 0.6;
+  width: 53px;
+  height: 53px;
+  opacity: 0.6;
 }
 
 img.socialicon:hover {
-   opacity: 1;
+  opacity: 1;
 }
-
-#melinks a:hover {
-   border-bottom: 0;
-}
-
