@@ -12,3 +12,4 @@ Disallow: /old/
 Disallow: /ip/
 Disallow: /images/
 Disallow: /includes/
+Disallow: /tweetnest/
