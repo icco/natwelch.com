@@ -3,6 +3,10 @@
  * copyright Nat Welch 2012
  */
 
+html {
+  overflow: hidden;
+}
+
 body, select, input, textarea {
   color:#444;
   font-family: Arial, sans-serif;
@@ -11,7 +15,7 @@ body, select, input, textarea {
 }
 
 body {
-  background: url("/i/large_nat.jpg") no-repeat center center fixed;
+  background: url("/i/christmasalmanornat.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -47,7 +51,7 @@ a:hover {
 }
 
 #buffer {
-  height: 300px;
+  height: 270px;
 }
 
 #more-data {
