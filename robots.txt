@@ -13,3 +13,4 @@ Disallow: /ip/
 Disallow: /images/
 Disallow: /includes/
 Disallow: /tweetnest/
+Disallow: /code/war/
