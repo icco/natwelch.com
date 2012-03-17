@@ -54,3 +54,6 @@ RewriteRule ^(.*)/ip/?$ http://%1/ip.php [R=301,L]
 
 # direct natwelch.com/where -> natwelch.com/where.html
 RewriteRule ^(.*)/where/?$ http://%1/where.html [R=301,L]
+
+# direct natwelch.com/Resume -> natwelch.com/resume
+RewriteRule ^(.*)/Resume/?$ http://%1/resume/ [R=301,L]
