@@ -1,5 +1,5 @@
 /**
- * NatWelch.com version 12.0
+ * NatWelch.com version 13.0
  * copyright Nat Welch 2012
  */
 
@@ -8,7 +8,7 @@ html {
 }
 
 body, select, input, textarea {
-  color:#444;
+  color: #444;
   font-family: Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -23,23 +23,38 @@ body {
   margin: 0;
 }
 
-#center {
-  padding: 20px;
+.tel {
+  text-decoration: underline;
 }
 
-#more-data, #center {
-  background: #000;
-  opacity: 0.9;
+#buffer {
+  height: 170px;
 }
 
-#center h1 {
-  font-size: 3em;
-  margin: 6px;
+.main {
+  display: block;
+  margin: 7px 0px;
 }
 
-#center h1, #center h3 {
-  width: 100%;
-  text-align: center;
+h1, h2, h3, .melinks {
+  font-family: 'Antic Didone', serif;
+  padding: 3px 10px;
+  background-color: #eee;
+  display: inline-block;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-family: serif;
 }
 
 a {
@@ -48,10 +63,26 @@ a {
 
 a:hover {
   color: #444;
+  cursor: pointer;
 }
 
-#buffer {
-  height: 270px;
+ul.melinks {
+  margin: 0;
+  list-style: none;
+}
+
+ul.melinks li {
+  display: inline;
+}
+
+img.socialicon {
+  width: 53px;
+  height: 53px;
+  opacity: 0.6;
+}
+
+img.socialicon:hover {
+  opacity: 1;
 }
 
 #more-data {
@@ -68,23 +99,4 @@ a:hover {
 #more-data div p {
   padding: 5px;
   text-align: justify;
-}
-
-ul#melinks {
-  list-style: none;
-  margin: 0;
-}
-
-ul#melinks li {
-  display: inline;
-}
-
-img.socialicon {
-  width: 53px;
-  height: 53px;
-  opacity: 0.6;
-}
-
-img.socialicon:hover {
-  opacity: 1;
 }
