@@ -84,19 +84,3 @@ img.socialicon {
 img.socialicon:hover {
   opacity: 1;
 }
-
-#more-data {
-  display: none;
-  padding: 0 25px 25px 25px;
-  color: #EEE;
-}
-
-#more-data div {
-  width: 400px;
-  margin: 0 auto;
-}
-
-#more-data div p {
-  padding: 5px;
-  text-align: justify;
-}
