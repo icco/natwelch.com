@@ -4,7 +4,9 @@ Fever.iPhone =
 {
 	lastCachedOnTime : 0,
 	lastRenderedOnTime	: 0,
-
+	
+	requestId : 0, // used to ignore stale XHR requests
+	
 	screen 		: 0,
 
 	page		: 1,
@@ -42,6 +44,7 @@ Fever.iPhone =
 		
 		readOnScroll 	: 1,
 		readOnBackOut 	: 1,
+		viewInApp		: 1,
 		
 		autoRead	: 1
 	},
@@ -74,6 +77,12 @@ Fever.iPhone =
 			useCurrentScreen 	: false,
 			callback 			: 
 			{
+				beforeInsert	: function(data)
+				{
+					if (m = data.responseText.match(/<!--REQUEST_ID:([0-9]+)-->/)) {
+						if (m[1] != Fever.iPhone.requestId) return false; // cancel insert of stale requests
+					};
+				},
 				afterInsert		: function(data)
 				{
 					Fever.iPhone.onContentLoaded();
@@ -81,7 +90,8 @@ Fever.iPhone =
 				}
 			}
 		};
-		
+		this.cancelLoading();
+				
 		props += ' showRead showFeeds';
 		var mobile	= props.split(/\s+/);
 		for (var i = 0; i < mobile.length; i++)
@@ -94,6 +104,9 @@ Fever.iPhone =
 			};
 			returnObj.url += '&mobile[' + toPHP(prop) + ']=' + this.mobile[prop];
 		};
+		
+		this.requestId++;
+		returnObj.url += '&request_id='+this.requestId;
 		
 		if (returnObj.useCurrentScreen)
 		{
@@ -236,8 +249,10 @@ Fever.iPhone =
 	},
 	loadWebView : function(url)
 	{
+		if (!this.mobile.viewInApp) return true;
+		
 		css(one('#screens-container'), 'display', 'none');
-		one('#viewport').content = 'width=980,user-scalable=yes,minimum-scale=0,maximum-scale=100,initial-scale=0.32,'+ (new Date()).getTime();
+		one('#viewport').content = 'width=980,user-scalable=yes,minimum-scale=0,maximum-scale=100,initial-scale=0.32,date='+ (new Date()).getTime();
 		
 		this.yOffset.push(window.pageYOffset);
 		window.scrollTo(0,0);
@@ -256,7 +271,8 @@ Fever.iPhone =
 	{
 		css(one('#webview'), 'display', 'none');
 		one('#iframe').src = 'about:blank';
-		one('#viewport').content = 'width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,'+ (new Date()).getTime();
+		// removed user-scalable=no but kept maximum- and minimum-scales to allow manual pinch or double-tap to desired scale
+		one('#viewport').content = 'width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,date='+ (new Date()).getTime();
 		
 		var oldYOffset = this.yOffset.pop();
 		window.scrollTo(0, oldYOffset);
@@ -347,10 +363,9 @@ Fever.iPhone =
 		return false;
 	},
 	
-	onContentLoaded : function()
+	cancelLoading : function()
 	{
 		this.pageLoading = false;
-		// alert(this.spinners);
 		while (this.spinners.length)
 		{
 			var selector = this.spinners.pop();
@@ -360,6 +375,10 @@ Fever.iPhone =
 				removeClass(obj, 'spinning');
 			};
 		};
+	},
+	onContentLoaded : function()
+	{
+		this.cancelLoading();
 		this.resizeScreenContainer();
 		this.openInWebView();
 	},
@@ -400,9 +419,9 @@ Fever.iPhone =
 			addClass(title, 'spinning');
 		}
 	},
-
+	
 	nextScreen : function()
-	{	
+	{
 		var thisScreen = one('#screen-' + this.screen);
 		var screens = one('#screens');
 		var screensContainer = one('#screens-container');
@@ -696,6 +715,7 @@ Fever.iPhone =
 		Fever.checkCheckbox('#action-show-read', this.mobile.showRead);
 		Fever.checkCheckbox('#action-read-scroll', this.mobile.readOnScroll);
 		Fever.checkCheckbox('#action-read-back', this.mobile.readOnBackOut);
+		Fever.checkCheckbox('#action-elsewhere', this.mobile.viewInApp);
 	},
 	dismissPreferences : function()
 	{
@@ -704,6 +724,7 @@ Fever.iPhone =
 		url += '&mobile[show_read]='+this.mobile.showRead;
 		url += '&mobile[read_on_scroll]='+this.mobile.readOnScroll;
 		url += '&mobile[read_on_back_out]='+this.mobile.readOnBackOut;
+		url += '&mobile[view_in_app]='+this.mobile.viewInApp;
 		XHR.get(url);
 		Fever.dismissDialog();
 	},
@@ -736,6 +757,11 @@ Fever.iPhone =
 		Fever.toggleCheckbox(elem);
 		this.mobile.readOnBackOut = one('#action-read-back').checked ? 1 : 0;
 	},
+	toggleElsewhere	: function(elem)
+	{
+		Fever.toggleCheckbox(elem);
+		this.mobile.viewInApp = one('#action-elsewhere').checked ? 1 : 0;
+	},
 	unreadRecentlyRead : function()
 	{
 		XHR.get('./?manage=unread-read', null, function(){ Fever.iPhone.reload(); });
@@ -745,8 +771,11 @@ Fever.iPhone =
 	resizeScreenContainer : function()
 	{
 		var thisScreen = one('#screen-' + this.screen);
-		var screensContainer = one('#screens-container');
-		css(screensContainer, 'height', thisScreen.offsetHeight + 'px');
+		if (thisScreen)
+		{
+			var screensContainer = one('#screens-container');
+			css(screensContainer, 'height', thisScreen.offsetHeight + 'px');
+		};
 	},
 	openInWebView : function()
 	{
@@ -754,10 +783,10 @@ Fever.iPhone =
 		
 		for (var i = 0; i < links.length; i++)
 		{
-			links[i].onclick = function()
+			links[i].target 	= '_blank';
+			links[i].onclick 	= function()
 			{
-				Fever.iPhone.loadWebView(this.href);
-				return false;
+				return Fever.iPhone.loadWebView(this.href);
 			};
 		};
 	},
@@ -788,7 +817,7 @@ Fever.iPhone =
 	},
 	onOrientationChange : function()
 	{
-		var is_portrait = (window.innerWidth == 320);
+		var is_portrait = (Math.round(window.innerWidth) == 320);
 		document.body.className = is_portrait ? 'portrait' : 'landscape';
 		
 		css(one('#screens'), 'left', (window.innerWidth * this.screen * -1) + 'px');
@@ -815,8 +844,11 @@ Fever.iPhone =
 				
 				for (var i = 0; i < items.length; i++)
 				{
-					var anItem = items[i]
-					if (getPos(anItem).y + Math.floor(anItem.offsetHeight * 0.75) <= window.previousPageYOffset)
+					var anItem = items[i];
+					var pos = getPos(anItem);
+					var adjY = pos.y + Math.floor(anItem.offsetHeight * 0.75);
+					
+					if (adjY <= window.previousPageYOffset)
 					{
 						var itemId = parseInt(anItem.id.replace(/item-/, ''));
 						itemIds.push(itemId);

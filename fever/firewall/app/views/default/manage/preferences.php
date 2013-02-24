@@ -227,7 +227,7 @@
 			<table>
 				<tr>
 					<th>Email</th>
-					<td><span class="w"><input type="text" name="email" value="<?php echo $this->cfg['email'];?>" autocomplete="off" /></span></td>
+					<td><span class="w"><input type="email" name="email" value="<?php echo $this->cfg['email'];?>" autocomplete="off" /></span></td>
 				</tr>
 				<tr>
 					<th class="proto">Password</th>

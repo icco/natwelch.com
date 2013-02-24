@@ -76,7 +76,7 @@ function r($find = '', $replace = '', $str = '')
  **************************************************************************/
 function m($find = '', $str = '', &$matches)
 {
-	return preg_match($find, $str, &$matches);
+	return preg_match($find, $str, $matches);
 }
 
 /**************************************************************************
@@ -84,7 +84,7 @@ function m($find = '', $str = '', &$matches)
  **************************************************************************/
 function ma($find = '', $str = '', &$matches)
 {
-	return preg_match_all($find, $str, &$matches);
+	return preg_match_all($find, $str, $matches);
 }
 
 /**************************************************************************
@@ -165,7 +165,7 @@ function pluralize($num, $singular_str, $include_num = true)
 /**************************************************************************
  checksum()
  
- A 32/64-bit compatible crc32() function. Returns unsigned regarless.
+ A 32/64-bit compatible crc32() function. Returns unsigned regardless.
  **************************************************************************/
 function checksum($value)
 {
@@ -370,12 +370,13 @@ function in($haystack, $needle, $sensitive = false)
 
 
 /**************************************************************************
- h()								A convenience function for htmlentities
+ h()							A convenience function for htmlspecialchars
  **************************************************************************/
-function h()
+function h($str)
 {
-	$args = func_get_args();
-	return call_user_func_array('htmlspecialchars', $args);
+	return htmlspecialchars($str, ENT_COMPAT, 'ISO-8859-1'); // default charset in 5.4 is UTF-8
+//	$args = func_get_args();
+//	return call_user_func_array('htmlspecialchars', $args);
 }
 
 /**************************************************************************
@@ -397,7 +398,7 @@ function onload($js)
 }
 
 /**************************************************************************
- encode_embedded_cdata()										 DEPRECATED
+ encode_embedded_cdata()						  DEPRECATED/NO LONGER USED
 
  Sniffs out <![CDATA[ ... ]]> blocks and encodes html entites found within.
  **************************************************************************/
@@ -407,6 +408,16 @@ function encode_embedded_cdata($html)
 	$html = r('#<!\[CDATA\[(.*?)]]>#smeu', "stripslashes(htmlentities('$1', ENT_COMPAT, 'UTF-8'))", $html);
 	// p($html);
 	return $html;
+}
+
+/**************************************************************************
+ get_safe_html_translation_table()
+ 
+ Accounts for changes introduced in PHP 5.4.
+ **************************************************************************/
+function get_safe_html_translation_table() {
+	if (defined('ENT_HTML401')) return get_html_translation_table(HTML_ENTITIES, ENT_COMPAT | ENT_HTML401, 'ISO-8859-1');
+	else return get_html_translation_table(HTML_ENTITIES);
 }
 
 /**************************************************************************
@@ -422,7 +433,7 @@ function html_entity_decode_utf8($str)
 	if (!isset($translation_table))
 	{
 		$translation_table = array();
-		foreach (get_html_translation_table(HTML_ENTITIES) as $val=>$key)
+		foreach (get_safe_html_translation_table(HTML_ENTITIES) as $val=>$key)
 		{
 			$translation_table[$key] = utf8_encode($val);
 		}
@@ -549,7 +560,7 @@ function text_for_filename($text)
 function prevent_xss($value)
 {
 	// prevent double encoding of HTML values
-	return r('#&amp;([^\s]+;)#', '&\1', htmlspecialchars(strip_tags_sane($value)));
+	return r('#&amp;([^\s]+;)#', '&\1', h(strip_tags_sane($value)));
 }
 
 /******************************************************************************
@@ -666,7 +677,7 @@ function strip_tags_sane($html, $allowed_html_tags = null)
  further process the value of specific attributes. The callback function 
  has the following signature:
 
-	callback($attr, $value):$value
+	callback($attr, $value)
 
  and should return a(n optionally) modified $value.
  **************************************************************************/

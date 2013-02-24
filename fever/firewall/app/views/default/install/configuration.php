@@ -9,7 +9,7 @@
 		<tr>
 			<th>Email</th>
 			<td><span class="btn help" onmouseover="Fever.displayHelp(this, 'email');"></span></td>
-			<td colspan="2"><span class="w"><input type="text" name="email" /></span></td>
+			<td colspan="2"><span class="w"><input type="email" name="email" /></span></td>
 		</tr>
 		<tr>
 			<th>Password</th>

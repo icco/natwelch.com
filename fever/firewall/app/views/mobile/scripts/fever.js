@@ -1,8 +1,7 @@
 var Fever =
 {
 	iPhone : {},
-	animateId : null,
-	
+
 	checkCheckbox : function(selector, checked)
 	{
 		var checkbox = one(selector);
@@ -101,6 +100,13 @@ var Fever =
 	
 	animate : function(elem, property, value) // callback is optional fourth argument
 	{
+		// prevent conflicting animations
+		if (elem.animateId)
+		{
+			window.clearInterval(elem.animateId);
+			elem.animateId = null;
+		};
+		
 		var callback = (arguments.length == 4) ? arguments[3] : function(){};
 		var animate = function()
 		{
@@ -114,7 +120,7 @@ var Fever =
 			{
 				elem.style[property] = value + 'px';
 				// our work is done
-				window.clearInterval(Fever.animateId);
+				window.clearInterval(elem.animateId);
 				callback();
 			}
 			else
@@ -123,7 +129,7 @@ var Fever =
 			};	
 		};
 		animate();
-		this.animateId = window.setInterval(animate, 50);
+		elem.animateId = window.setInterval(animate, 50);
 	}
 };
 
@@ -595,14 +601,17 @@ var XHR =
 				{
 					if (callback && typeof callback == 'object' && callback.beforeInsert)
 					{
+						var returnValue;
 						if (callback_args)
 						{
-							callback.beforeInsert(request, callback_args);
+							returnValue = callback.beforeInsert(request, callback_args);
 						}
 						else
 						{
-							callback.beforeInsert(request);
+							returnValue = callback.beforeInsert(request);
 						};
+						
+						if (returnValue == false) return;
 					};
 					
 					if (target)
@@ -678,8 +687,13 @@ function getPos(elem)
 			// account for scroll position
 			if (elem.offsetParent)
 			{
+				/** /
+				// while technically correct, following adjustments 
+				// result in undesired values in recent versions 
+				// of MobileSafari
 				pos.x -= elem.offsetParent.scrollLeft;
 				pos.y -= elem.offsetParent.scrollTop;
+				/**/
 			};
 		}
 		while (elem = elem.offsetParent);

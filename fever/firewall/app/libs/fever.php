@@ -7,7 +7,7 @@ define('VALID_EMAIL', 		'!^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b
 class Fever
 {
 	var $app_name	= 'Fever';
-	var $version 	= 116;
+	var $version 	= 127;
 	var $db			= array
 	(
 		'server' 	=> 'localhost',
@@ -74,6 +74,7 @@ class Fever
 		// iPhone-specifc
 		'mobile_read_on_scroll' 	=> true,
 		'mobile_read_on_back_out'	=> true,
+		'mobile_view_in_app'		=> true,
 		
 		'auto_reload'		=> true, // reload after refresh
 		'auto_refresh'		=> 1, // iframe (0:cron)
@@ -118,8 +119,8 @@ class Fever
 		'_config'		=> "
 		(
 			`id` int(10) unsigned NOT NULL auto_increment,
-			`cfg` MEDIUMTEXT NOT NULL,
-			`prefs` MEDIUMTEXT NOT NULL,
+			`cfg` MEDIUMTEXT NOT NULL default '',
+			`prefs` MEDIUMTEXT NOT NULL default '',
 			PRIMARY KEY  (`id`)
 		)",
 		'feeds'			=> "
@@ -127,9 +128,9 @@ class Fever
 			`id` int(11) unsigned NOT NULL auto_increment,
 			`favicon_id` int(11) unsigned default '0',
 			`title` varchar(255) default NULL,
-			`url` varchar(255) NOT NULL,
+			`url` varchar(255) NOT NULL default '',
 			`url_checksum` int(10) unsigned NOT NULL,
-			`site_url` varchar(255) NOT NULL,
+			`site_url` varchar(255) default NULL,
 			`domain` varchar(255) default NULL,
 			`requires_auth` tinyint(1) unsigned default '0',
 			`auth` varchar(255) default NULL,
@@ -139,8 +140,8 @@ class Fever
 			`item_allows` tinyint(1) NOT NULL default '-1',
 			`unread_counts` tinyint(1) NOT NULL default '-1',
 			`sort_order` tinyint(1) NOT NULL default '-1',
-			`last_refreshed_on_time` int(10) unsigned NOT NULL,
-			`last_updated_on_time` int(10) unsigned NOT NULL,
+			`last_refreshed_on_time` int(10) unsigned NOT NULL default '0',
+			`last_updated_on_time` int(10) unsigned NOT NULL default '0',
 			`last_added_on_time` int(10) unsigned NOT NULL default '0',
 			PRIMARY KEY  (`id`),
 			UNIQUE KEY `url_checksum` (`url_checksum`),
@@ -332,6 +333,7 @@ class Fever
 		
 		if ($this->connect())
 		{
+			// $this->query("SET sql_mode='STRICT_ALL_TABLES'");
 			$this->load();
 		}
 		define('REQUEST_UA', 'Fever/'.$this->formatted_version().' (Feed Parser; http://feedafever.com; Allow like Gecko)');
@@ -1029,7 +1031,7 @@ class Fever
 	}
 	
 	/**************************************************************************
-	 route_reset()
+	 route_empty()
 	 **************************************************************************/
 	function route_empty()
 	{
@@ -1185,7 +1187,7 @@ class Fever
 				(
 					'title' 		=> $saved_item['title'],
 					'description'	=> $saved_item['description'],
-					'link'			=> htmlspecialchars($saved_item['link']),
+					'link'			=> h($saved_item['link']),
 					'guid'			=> $saved_item['id'].'@'.$paths['trim'].$paths['dir'],
 					'pub_date'		=> gmdate('D, d M Y H:i:s', $saved_item['created_on_time']).' GMT'
 				);
@@ -1202,7 +1204,7 @@ class Fever
 	{
 		$data = array
 		(
-			'api_version' => 2, // 0.02
+			'api_version' => 3, // 0.03
 			'auth' => 0
 		);
 		
@@ -1269,14 +1271,16 @@ class Fever
 			unset($groups);
 		}
 		
-		// feeds
-		if (isset($_GET['feeds']))
+		// feed/group relationships
+		if (isset($_GET['groups']) || isset($_GET['feeds']))
 		{
-			$data['feeds'] = array();
+			// feeds
+			$data_feeds = array();
+			$spark_feeds = array();
 			$feeds = $this->get_all('feeds');
 			foreach ($feeds as $feed)
 			{
-				$data['feeds'][] = array
+				$data_feeds[] = array
 				(
 					'id' 					=> intval($feed['id']),
 					'favicon_id'			=> $feed['favicon_id'] ? intval($feed['favicon_id']) : 1,
@@ -1286,19 +1290,19 @@ class Fever
 					'is_spark'				=> $feed['is_spark'] ? 1 : 0,
 					'last_updated_on_time' 	=> intval($feed['last_updated_on_time'])
 				);
+				
+				if ($feed['is_spark']) $spark_feeds[] = intval($feed['id']);
 			}
 			unset($feeds);
-		}
-		
-		// feed/group relationships
-		if (isset($_GET['groups']) || isset($_GET['feeds']))
-		{
+			
+			// relationships
 			$data['feeds_groups'] = array();
 			
 			$feeds_by_group 	= array();
 			$feeds_to_groups 	= $this->get_all('feeds_groups');
 			foreach($feeds_to_groups as $feed_group)
 			{
+				if (in_array($feed_group['feed_id'], $spark_feeds)) continue; // ignore spark feeds
 				$feeds_by_group[$feed_group['group_id']][] 	= intval($feed_group['feed_id']);
 			}
 			foreach($feeds_by_group as $group_id => $group_feeds)
@@ -1311,6 +1315,14 @@ class Fever
 			}
 			unset($feeds_by_group);
 			unset($feeds_to_groups);
+			
+			// feeds clean-up
+			if (isset($_GET['feeds']))
+			{
+				$data['feeds'] = $data_feeds;
+				unset($data_feeds);
+				unset($spark_feeds);
+			}
 		}
 
 		// favicons
@@ -1339,16 +1351,53 @@ class Fever
 			$item_limit = 50;
 			
 			$where = '';
+			
+			if (isset($_GET['feed_ids']) || isset($_GET['group_ids'])) // added 0.3
+			{
+				$feed_ids = array();
+				if (isset($_GET['feed_ids']))
+				{
+					$feed_ids = explode(',', $_GET['feed_ids']);
+				}
+				if (isset($_GET['group_ids']))
+				{
+					$group_ids = explode(',', $_GET['group_ids']);
+					
+					$query	= '`group_id` IN ('.join(array_fill(0, count($group_ids), '?'), ',').')';
+					$args	= array_merge(array($query), $group_ids);
+					$feed_ids_where = call_user_func_array(array($this, 'prepare_sql'), $args);
+					$group_feed_ids = $this->get_cols('feed_id','feeds_groups', $feed_ids_where);
+					
+					$feed_ids = array_unique(array_merge($feed_ids, $group_feed_ids));
+				}
+				
+				$query	= '`feed_id` IN ('.join(array_fill(0, count($feed_ids), '?'), ',').')';
+				$args	= array_merge(array($query), $feed_ids);
+				$where .= call_user_func_array(array($this, 'prepare_sql'), $args);
+			}
+			
 			if (isset($_GET['max_id'])) // descending from most recently added
 			{
 				// use the max_id argument to request the previous $item_limit items
 				$max_id = ($_GET['max_id'] > 0) ? $_GET['max_id'] : 0;
-
-				$where .= $max_id ? $this->prepare_sql('`id` < ?', $max_id) : '1';
+				
+				if ($max_id)
+				{
+					if (!empty($where)) $where .= ' AND ';
+					$where .= $this->prepare_sql('`id` < ?', $max_id);
+				}
+				else if (empty($where))
+				{
+					$where .= '1';
+				}
+				
+				// $where .= $max_id ? $this->prepare_sql('`id` < ?', $max_id) : '1';
 				$where .= ' ORDER BY `id` DESC';
 			}
 			else if (isset($_GET['with_ids'])) // selective
 			{
+				if (!empty($where)) $where .= ' AND '; // group_ids & feed_ids don't make sense with this query but just in case
+				
 				$item_ids = explode(',', $_GET['with_ids']);
 				$query	= '`id` IN ('.join(array_fill(0, count($item_ids), '?'), ',').')';
 				$args	= array_merge(array($query), $item_ids);
@@ -1360,11 +1409,21 @@ class Fever
 				// use the since_id argument to request the next $item_limit items
 				$since_id 	= isset($_GET['since_id']) ? $_GET['since_id'] : 0;
 
-				$where .= $since_id ? $this->prepare_sql('`id` > ?', $since_id) : '1';
+				if ($since_id)
+				{
+					if (!empty($where)) $where .= ' AND ';
+					$where .= $this->prepare_sql('`id` > ?', $since_id);
+				}
+				else if (empty($where))
+				{
+					$where .= '1';
+				}
+
+				// $where .= $since_id ? $this->prepare_sql('`id` > ?', $since_id) : '1';
 				$where .= ' ORDER BY `id` ASC';
 			}
 			
-			$where .= ' LIMIT '.$item_limit;			
+			$where .= ' LIMIT '.$item_limit;
 			$items = $this->get_all('items', $where);
 			
 			foreach ($items as $item)
@@ -1486,6 +1545,12 @@ class Fever
 						$this->remind();
 					break;
 				}
+			}
+			if (isset($_GET['feedlet']) && isset($_GET['js']))
+			{
+				header('Content-type:text/javascript');
+				$this->render('feedlet/login');
+				exit();
 			}
 			$this->render('login');
 		}
@@ -1688,6 +1753,10 @@ class Fever
 				case 'edit-sparks':
 					$feed_ids = (!isset($_POST['feed_ids'])) ? array() : $_POST['feed_ids'];
 					$this->mark_feeds_as_sparks($feed_ids);
+				break;
+				
+				case 'delete-sparks':
+					$this->delete_sparks();
 				break;
 			}
 		}
@@ -1892,36 +1961,34 @@ class Fever
 			}
 		}
 		
-		
-		// special cases TODO: beginning to outnumber "normal" cases
-		if (isset($_GET[FEVER_MOBILE]['search']))
+		$mobile_ui = array
+		(
+			'search',
+			'show_feeds',
+			'show_read',
+			'hot_start',
+			'hot_range'
+		);
+		foreach ($mobile_ui as $prop)
 		{
-			$this->prefs['ui']['search'] = $_GET[FEVER_MOBILE]['search'];
-		}
-		if (isset($_GET[FEVER_MOBILE]['show_feeds']))
-		{
-			$this->prefs['ui']['show_feeds'] = $_GET[FEVER_MOBILE]['show_feeds'];
-		}
-		if (isset($_GET[FEVER_MOBILE]['show_read']))
-		{
-			$this->prefs['ui']['show_read'] = $_GET[FEVER_MOBILE]['show_read'];
-		}
-		if (isset($_GET[FEVER_MOBILE]['hot_start']))
-		{
-			$this->prefs['ui']['hot_start'] = $_GET[FEVER_MOBILE]['hot_start'];
-		}
-		if (isset($_GET[FEVER_MOBILE]['hot_range']))
-		{
-			$this->prefs['ui']['hot_range'] = $_GET[FEVER_MOBILE]['hot_range'];
+			if (isset($_GET[FEVER_MOBILE][$prop]))
+			{
+				$this->prefs['ui'][$prop] = $_GET[FEVER_MOBILE][$prop];
+			}
 		}
 		
-		if (isset($_GET[FEVER_MOBILE]['read_on_scroll']))
+		$mobile_custom = array
+		(
+			'read_on_scroll',
+			'read_on_back_out',
+			'view_in_app'
+		);
+		foreach ($mobile_custom as $prop)
 		{
-			$this->prefs['mobile_read_on_scroll'] = $_GET[FEVER_MOBILE]['read_on_scroll'];
-		}
-		if (isset($_GET[FEVER_MOBILE]['read_on_back_out']))
-		{
-			$this->prefs['mobile_read_on_back_out'] = $_GET[FEVER_MOBILE]['read_on_back_out'];
+			if (isset($_GET[FEVER_MOBILE][$prop]))
+			{
+				$this->prefs["mobile_{$prop}"] = $_GET[FEVER_MOBILE][$prop];
+			}
 		}
 	}
 	
@@ -1988,13 +2055,14 @@ class Fever
 		}
 		else
 		{
+			$db_password = r("/'/", "\'", $this->db['password']);
 			$db_php  = '<?php';
 			$db_php .= <<<PHP
 
 define('FEVER_DB_SERVER', 	'{$this->db['server']}');
 define('FEVER_DB_DATABASE', '{$this->db['database']}');
 define('FEVER_DB_USERNAME', '{$this->db['username']}');
-define('FEVER_DB_PASSWORD', '{$this->db['password']}');
+define('FEVER_DB_PASSWORD', '{$db_password}');
 define('FEVER_DB_PREFIX', 	'{$this->db['prefix']}');
 
 PHP;
@@ -2048,7 +2116,6 @@ PHP;
 	 **************************************************************************/
 	function install()
 	{
-		
 		$this->validate_preferences();
 		
 		$this->cfg['activation_key']	= ACTIVATION_KEY;
@@ -2058,10 +2125,14 @@ PHP;
 		$this->cfg['installed_on_time']	= time();
 		
 		$this->prefs['use_celsius']		= $_POST['use_celsius'] ? true : false;
-				
+		
+		$mysqlVersion = mysql_get_client_info();
+		$mysqlVersion = preg_replace('#(^\D*)([0-9.]+).*$#', '\2', $mysqlVersion); // strip extra-version cruft
+		$engine_type = ($mysqlVersion > 4) ? 'ENGINE' : 'TYPE';
+		
 		foreach($this->manifest as $table => $sql)
 		{
-			$this->query("CREATE TABLE `{$this->db['prefix']}{$table}` {$sql} TYPE=MyISAM;");
+			$this->query("CREATE TABLE `{$this->db['prefix']}{$table}` {$sql} {$engine_type}=MyISAM;");
 			$this->query("ALTER TABLE `{$this->db['prefix']}{$table}` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;");
 			$this->drop_error('COLLATE');
 		}
@@ -2250,7 +2321,13 @@ PHP;
 		{
 			$paths		= $this->install_paths();
 			$response 	= $this->gateway_request('Update');
-			if (!isset($response['headers']['X-Apptivator-Verified']) || !$response['headers']['X-Apptivator-Verified'])
+			if (!isset($response['headers']['X-Apptivator-Verified']))
+			{
+				$this->error('Invalid response headers from the gateway ('.prevent_xss(array_to_query($response['headers'])).')');
+				$this->render('errors');
+				exit();
+			}
+			else if (!$response['headers']['X-Apptivator-Verified'])
 			{
 				$this->error('The Activation Key <strong>'.ACTIVATION_KEY.'</strong> is not valid for '.$this->app_name.' on: '.$paths['trim']);
 				$this->render('errors');
@@ -2424,6 +2501,18 @@ PHP;
 			$this->save_one('favicons', $default_favicon);
 		}
 		
+		if ($this->cfg['version'] < 120)
+		{
+			$this->prefs['mobile_view_in_app'] 		= $data['prefs']['mobile_view_in_app'];
+		}
+		
+		if ($this->cfg['version'] < 125)
+		{
+			// add default values for strict servers
+			$this->query("ALTER TABLE  `{$this->db['prefix']}_config` CHANGE  `cfg`  `cfg` MEDIUMTEXT NOT NULL default '', CHANGE  `prefs`  `prefs` MEDIUMTEXT NOT NULL default ''");
+			$this->query("ALTER TABLE `{$this->db['prefix']}feeds` CHANGE `site_url` `site_url` varchar(255) default NULL, CHANGE `last_refreshed_on_time` `last_refreshed_on_time` int(10) unsigned NOT NULL default '0', CHANGE `last_updated_on_time` `last_updated_on_time` int(10) unsigned NOT NULL default '0'");
+		}
+		
 		// save the update
 		$this->cfg['updates']['last_updated_on_time'] = time(); // added v038
 		$this->cfg['version'] = $this->version;
@@ -2465,7 +2554,7 @@ PHP;
 	 authenticate()
 	 **************************************************************************/
 	function authenticate()
-	{
+	{		
 		if (trim($_POST['email']) == $this->cfg['email'] && trim($_POST['password']) == $this->cfg['password']) 
 		{
 			$this->login();
@@ -2511,7 +2600,7 @@ PHP;
 		$paths		= array();
 		$self		= (isset($_SERVER['PHP_SELF']) && !empty($_SERVER['PHP_SELF']))?$_SERVER['PHP_SELF']:((isset($_SERVER['SCRIPT_NAME']) && !empty($_SERVER['SCRIPT_NAME']))?$_SERVER['SCRIPT_NAME']:$_SERVER['SCRIPT_URL']);
 		$domain		= (!empty($_SERVER["HTTP_HOST"]) && $_SERVER["HTTP_HOST"] != $_SERVER['SERVER_NAME'])?$_SERVER["HTTP_HOST"]:$_SERVER['SERVER_NAME'];
-		$protocol 	= ((isset($_SERVER['HTTPS']) && low($_SERVER['HTTPS']) == 'on') || isset($_SERVER['HTTP_HTTPS']) || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? 'https' : 'http';
+		$protocol 	= ((isset($_SERVER['HTTPS']) && low($_SERVER['HTTPS']) == 'on') || (isset($_SERVER['HTTP_HTTPS']) && low($_SERVER['HTTP_HTTPS']) == 'on') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? 'https' : 'http';
 		
 		$paths['dir']		= r('#/+[^/]*$#', '', $self);
 		$paths['domain']	= $domain;
@@ -2895,6 +2984,18 @@ PHP;
 		{
 			$this->prefs['ui']['group_id'] = 0;
 			$this->save();
+		}
+	}
+	
+	/**************************************************************************
+	 delete_sparks()
+	 **************************************************************************/
+	function delete_sparks()
+	{
+		$feed_ids = $this->get_cols('id', 'feeds', '`is_spark`=1');
+		foreach($feed_ids as $feed_id)
+		{
+			$this->delete_feed($feed_id);
 		}
 	}
 	
@@ -3410,6 +3511,7 @@ HTML;
 			!m('#<(\?xml|rss|feed)#m', $request['body'], $m)		// not xml or rss
 		) 
 		{
+			debug('404, empty response or not xml or rss');
 			return;
 		}
 		
@@ -3431,6 +3533,7 @@ HTML;
 			$titles = $DOM->get_nodes_by_name('title');
 			if (!isset($titles[0]))
 			{
+				debug('No titles, deemed not a feed');
 				return;
 			}
 			
@@ -3456,14 +3559,22 @@ HTML;
 			{
 				$parent_node = $link->parent();
 				$parent_node_name = $parent_node->get_attr('_node_name');
+				
 				if ($parent_node_name == 'feed')
 				{
 					$has_href 		= $link->has_attr('href');
 					$has_rel		= $link->has_attr('rel');
 					$has_xml_base 	= $parent_node->has_attr('xml:base');
-					if ($has_href && $has_rel && $link->get_attr('rel') != 'self' && $link->get_attr('rel') != 'license')
+					
+					$href 	= $has_href ? $link->get_attr('href') : '';
+					$rel	= $has_rel ? $link->get_attr('rel') : '';
+					
+					// debug('LINK has_href:'.($has_href?'Y':'N').' has_rel:'.($has_rel?'Y':'N').' href:'.$link->get_attr('href').' rel:'.$link->get_attr('rel'));
+					
+					if ($has_href && (!$has_rel || ($has_rel && $rel != 'self' && $rel != 'license' && !m('#^http#', $rel, $r))))
+					// if ($has_href && $has_rel && $rel != 'self' && $rel != 'license')
 					{
-						$site_url = $link->get_attr('href');
+						$site_url = $href;
 						break;
 					}
 					else if ($has_xml_base)
@@ -4397,9 +4508,27 @@ HTML;
 		}
 	}
 	
+	function mark_items_as_unread($item_ids = array())
+	{
+		if (!empty($item_ids))
+		{
+			$where_in = '`id` IN (?'.str_repeat(',?', count($item_ids) - 1).')';
+			$unprepared_query = "UPDATE `{$this->db['prefix']}items` SET `read_on_time` = 0 WHERE {$where_in}";
+			$unprepared_array = array($unprepared_query);
+			$unprepared_array = array_merge($unprepared_array, $item_ids);
+			$update = call_user_func_array(array($this, 'prepare_sql'), $unprepared_array);
+			$this->query($update);
+		}
+	}
+	
 	function mark_item_as_read($item_id)
 	{
 		$this->mark_items_as_read(array($item_id));
+	}
+	
+	function mark_item_as_unread($item_id)
+	{
+		$this->mark_items_as_unread(array($item_id));
 	}
 	
 	function mark_item_as_saved($item_id)
@@ -4759,10 +4888,10 @@ HTML;
 			foreach($feeds_to_groups as $feed_group)
 			{
 				// while a feed may have been associated with a group previously
-				// it has no affiliations as a spark
+				// it *displays* no affiliations while a spark
 				if ($feeds[$feed_group['feed_id']]['is_spark'])
 				{
-					continue;
+					// continue; // this is breaking group association when saving feed edits within sparks
 				}
 				$groups_by_feed[$feed_group['feed_id']][] 	= $feed_group['group_id'];
 				$feeds_by_group[$feed_group['group_id']][] 	= $feed_group['feed_id'];
@@ -4929,7 +5058,10 @@ HTML;
 						$focused_feed = $this->feeds[$focused_feed_id];
 						if ($focused_feed['unread_count'] == 0)
 						{
-							$this->prefs['ui']['feed_id'] = 0;
+							if (!$this->is_mobile) // prevent displaying group/kindling unread when feed with no unread is selected
+							{
+								$this->prefs['ui']['feed_id'] = 0;
+							}
 						}
 					}
 				}
@@ -5272,7 +5404,7 @@ HTML;
 				$where = 0;
 			}
 		}
-		else
+		else // display kindling
 		{
 			// $where = '(`feed_id` != '.join(' AND `feed_id` != ', $this->sparks_feed_ids).')';
 			$where = '`feed_id` NOT IN ('.join(',', $this->sparks_feed_ids).') ';

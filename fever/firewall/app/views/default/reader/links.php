@@ -84,7 +84,7 @@ if ($this->page == 1)
 }
 else
 {
-	onload("Fever.Reader.pageMaxed=true;");
+	onload("Fever.Reader.onLastPage();");
 }
 e($msg);
 ?>

@@ -129,7 +129,7 @@ else
 		{	
 			if ($link = get_attrs($link_html))
 			{
-				if (isset($link['href'], $link['rel'], $link['type']) && low($link['rel']) == 'alternate' && m('#^application/(rss|atom)\+xml$#i', $link['type'], $format))
+				if (isset($link['href'], $link['rel'], $link['type']) && m('#.*alternate.*#i', $link['rel'], $alt) && m('#^application/(rss|atom)\+xml$#i', $link['type'], $format))
 				{
 					$title 		= (isset($link['title'])) ? $link['title'] : $format[1];
 					$href		= resolve($url, $link['href']);

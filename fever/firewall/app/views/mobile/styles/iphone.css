@@ -181,6 +181,7 @@ ul.source-list li a,
 	-webkit-box-sizing: content-box;
 }
 
+#login form .box fieldset label input[type=email],
 #login form .box fieldset label input[type=text]
 {
 	left: 58px; /* -34 */
@@ -545,7 +546,6 @@ button
 	background-position-y: -17px;
 }
 /**/
-
 
 .btn.logout
 {

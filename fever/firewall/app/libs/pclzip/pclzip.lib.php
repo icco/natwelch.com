@@ -2645,7 +2645,7 @@
       $p_header['mtime'] = $p_filedescr['mtime'];
     }
     else if ($p_filedescr['type'] == 'virtual_file') {
-      $p_header['mtime'] = mktime();
+      $p_header['mtime'] = @mktime();
     }
     else {
       $p_header['mtime'] = filemtime($p_filename);
@@ -4293,7 +4293,7 @@
       $v_day = $p_header['mdate'] & 0x001F;
 
       // ----- Get UNIX date format
-      $p_header['mtime'] = mktime($v_hour, $v_minute, $v_seconde, $v_month, $v_day, $v_year);
+      $p_header['mtime'] = @mktime($v_hour, $v_minute, $v_seconde, $v_month, $v_day, $v_year);
 
       //--(MAGIC-PclTrace)--//PclTraceFctMessage(__FILE__, __LINE__, 3, 'Date : \''.date("d/m/y H:i:s", $p_header['mtime']).'\'');
     }

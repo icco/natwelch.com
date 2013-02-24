@@ -120,6 +120,7 @@ function request($method = '', $url = '', $post = '', $headers = array(), $follo
 			curl_setopt($request, CURLOPT_TIMEOUT, $time_out);
 			curl_setopt($request, CURLOPT_HEADER, true);
 			curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($request, CURLOPT_ENCODING, 1);
 			
 			if ($parsed_url['scheme'] == 'https')
 			{
@@ -232,6 +233,8 @@ function request($method = '', $url = '', $post = '', $headers = array(), $follo
 			}
 		}
 	}
+	
+	debug($response_headers, 'response headers');
 	
 	$response_obj['headers']	= $response_headers;
 	$response_obj['cookies']	= array();

@@ -250,6 +250,35 @@ Fever.Reader =
 		removeClass(one('#fever'), 'loading');
 		this.armLinks();
 	},
+	onLastPage : function()
+	{
+		this.pageMaxed = true;
+	},
+	onItemsLoaded : function()
+	{
+		if (!Fever.isIPad || this.ui.section == 2 || this.ui.section == 4) return;
+		
+		var cc = one('#content-container');
+		var inline = one('#inline-read');
+		
+		if (!inline)
+		{
+			inline = document.createElement('div');
+			inline.id = 'inline-read';
+			inline.onclick = function()
+			{
+				Fever.Reader.markActiveAsRead();
+				window.scrollTo(0,0);
+			};
+			inline.innerHTML = 'Mark '+this.ui.hasFocus.replace(/s$/,'')+' as read<s></s>';
+		}
+		else
+		{
+			cc.removeChild(inline);
+		};
+	
+		cc.appendChild(inline);
+	},
 	
 	padContent : function()
 	{
@@ -384,6 +413,8 @@ Fever.Reader =
 	},
 	redrawFeeds : function()
 	{
+		// if (Fever.isIPad) return; // not in iOS 5
+		
 		// nothing to see here if showFeeds is off or we're on the Hot page
 		if (this.ui.showFeeds && this.ui.section != 0)
 		{
@@ -406,6 +437,8 @@ Fever.Reader =
 	},
 	redrawGroups : function()
 	{
+		if (Fever.isIPad) return;
+	
 		var container 	= one('#groups-container');
 		var scroller	= one('#groups-scroller');
 		
@@ -1214,7 +1247,11 @@ Fever.Reader =
 		
 		// alert(url);
 		
-		if (!url.match(/^https?:/))
+		if (url.match(/^#/)) { // prefix the url with # to load url in background
+			var img = new Image();
+			img.src = url.replace(/^#/, '');
+		}
+		else if (!url.match(/^https?:/))
 		{
 			window.location.href = url;
 		}
@@ -1447,11 +1484,33 @@ Fever.Reader =
 	{
 		document.addEventListener('click', function(e) { Fever.Reader.event = e; }, true); // shame
 		
+		if (Fever.isLion) document.getElementsByTagName('html')[0].className += 'lion'; // fix for skinny/invisible scrollbars problems
+		
 		this.onContentLoaded();
 		this.cacheFavicons();
 		
+		if (Fever.isIPad)
+		{
+			this.zoom = document.documentElement.clientWidth / window.innerWidth;
+			window.addEventListener('resize', function()
+			{                       
+				var zoomNew = document.documentElement.clientWidth / window.innerWidth;
+				if (this.zoom != zoomNew)
+				{
+					this.zoom = zoomNew;
+					if (this.zoom == 1)
+					{
+						removeClass($('#fixed'), 'zoomed');
+					}
+					else
+					{
+						addClass($('#fixed'), 'zoomed');
+					};
+				};
+			}, true);
+		}
 		window.addEventListener('resize', function()
-		{                       
+		{
 			Fever.dismissMenu();
 			Fever.Reader.redraw();
 		}, true);
@@ -1464,7 +1523,12 @@ Fever.Reader =
 			{
 				if
 				(
-					window.pageYOffset > Fever.Reader.pageY && // scrolling down
+					(
+						window.pageYOffset > Fever.Reader.pageY ||  // scrolling down
+						(
+							Fever.isIPad && window.pageYOffset == 0 && Fever.Reader.pageY == 0 // trigger scroll when there's nowhere to scroll to on an iPad
+						)
+					) &&
 					window.pageYOffset >= document.body.scrollHeight - (window.innerHeight * 1.25) && // there's only one (give or take) screen height left to scroll
 					!Fever.Reader.pageLoading // not already loading the next page
 				)
@@ -1501,13 +1565,13 @@ Fever.Reader =
 				Fever.Reader.pageY = window.pageYOffset;
 			};
 		}, true);
-		document.onkeydown = function(e)
+		document.addEventListener('keydown', function(e)
 		{
 			var inDialog 	= css(one('#dialog-container'), 'display') == 'block';
 			var inInput 	= e.target.nodeName == 'INPUT';
 			var inTextarea 	= e.target.nodeName == 'TEXTAREA';
 			var isShortKey	= (e.ctrlKey || e.metaKey);
-			var isWindows	= navigator.platform.indexOf('Win') != -1;
+			var isMac		= navigator.platform.indexOf('Mac') != -1;
 
 			var acted = false;
 			
@@ -1539,6 +1603,36 @@ Fever.Reader =
 				// alert(e.keyCode);
 				switch(e.keyCode)
 				{
+					case 49: // 1, hot
+						if (isShortKey || inInput || inDialog) break;
+						Fever.Reader.loadSection(0);
+						acted = true;
+					break;
+
+					case 50: // 2, kindling
+						if (isShortKey || inInput || inDialog) break;
+						Fever.Reader.loadGroup(0);
+						acted = true;
+					break;
+
+					case 51: // 3, saved
+						if (isShortKey || inInput || inDialog) break;
+						Fever.Reader.loadSection(2);
+						acted = true;
+					break;
+					
+					case 52: // 4, sparks
+						if (isShortKey || inInput || inDialog) break;
+						Fever.Reader.loadSection(3);
+						acted = true;
+					break;
+					
+					case 53: // 4, sparks
+						if (isShortKey || inInput || inDialog) break;
+						Fever.Reader.loadSection(4);
+						acted = true;
+					break;
+					
 					// cancel dialog
 					case 190: // period
 						if (isShortKey && inDialog)
@@ -1632,8 +1726,22 @@ Fever.Reader =
 					case 82: // r
 						if (isShortKey || inInput || inDialog) break;
 
-						Fever.Reader.refresh(1);
-						acted = true;
+						if (e.shiftKey && Fever.Reader.ui.section == 1)
+						{
+							if (Fever.Reader.ui.hasFocus == 'groups') {
+								Fever.Reader.refreshGroup(Fever.Reader.ui.groupId);
+							}
+							else if (Fever.Reader.ui.feedId != 0)
+							{
+								Fever.Reader.refreshFeed(Fever.Reader.ui.feedId);
+							};
+							acted = true;
+						}
+						else
+						{
+							Fever.Reader.refresh(1);
+							acted = true;
+						}
 					break;
 
 					// preferences
@@ -1722,15 +1830,20 @@ Fever.Reader =
 
 					// switch focus
 					case 37: // left
+					case 72: // h:vim
 					case 39: // right
+					case 76: // l:vim
 						if (isShortKey || inInput || inDialog) break;
+					
+						var left 	= e.keyCode==37 || e.keyCode==72;
+						var right	= e.keyCode==39 || e.keyCode==76;
 					
 						var refocus = true;
 						var noFeeds = (Fever.Reader.ui.section == 0 || !Fever.Reader.ui.showFeeds);
 					
 						if (Fever.Reader.ui.hasFocus == 'groups')
 						{
-							if (e.keyCode == 37 || noFeeds) // left
+							if (left || noFeeds) // left
 							{
 								// first *visible* item/link // todo: is a dupe
 								var itemsOrLinks = $('#content-container div.item, #content-container div.link');
@@ -1751,7 +1864,7 @@ Fever.Reader =
 						}
 						else if (Fever.Reader.ui.hasFocus == 'feeds')
 						{
-							if (e.keyCode == 37) // left
+							if (left) // left
 							{
 								Fever.Reader.ui.hasFocus = 'groups';
 							}
@@ -1772,11 +1885,11 @@ Fever.Reader =
 						}
 						else // item/link
 						{
-							if (e.keyCode == 39 || noFeeds) // right
+							if (right || noFeeds) // right
 							{
 								var contributer = one('#content-container div.link.has-focus li.has-focus span.source a');
 								var link = one('#content-container div.item.has-focus h1 a, #content-container div.link.has-focus h1 a');
-								if (e.keyCode == 39 && link)
+								if (right && link)
 								{
 									refocus = false;
 									link = (contributer) ? contributer : link;
@@ -1832,9 +1945,14 @@ Fever.Reader =
 
 					// activate group/feed
 					case 38: // up
+					case 75: // k:vim(up)
 					case 40: // down
+					case 74: // j:vim(down)
 						if (isShortKey || inInput || inDialog) break;
 					
+						var up 		= e.keyCode==38 || e.keyCode==75;
+						var down 	= e.keyCode==40 || e.keyCode==74;
+							
 						if (e.shiftKey)
 						{
 							if (Fever.Reader.ui.section == 0 && Fever.Reader.ui.hasFocus.match(/link-/))
@@ -1845,7 +1963,7 @@ Fever.Reader =
 								if (focussed)
 								{
 									removeClass(focussed, 'has-focus');
-									if (e.keyCode == 38) // up
+									if (up) // up
 									{
 										focussed = previousSibling(focussed);
 									}
@@ -1856,7 +1974,7 @@ Fever.Reader =
 								}
 								else
 								{
-									if (e.keyCode == 38) // up, from bottom
+									if (up) // up, from bottom
 									{
 										focussed = contributers[contributers.length - 1];
 									}
@@ -1892,7 +2010,7 @@ Fever.Reader =
 									if (groupOrFeed.className.indexOf('has-focus') != -1)
 									{
 										removeClass(groupOrFeed, 'has-focus');
-										if (e.keyCode == 38) // up
+										if (up) // up
 										{
 											var prev = (i ? i : groupsOrFeeds.length) - 1;
 											focussed = groupsOrFeeds[prev];
@@ -1936,12 +2054,13 @@ Fever.Reader =
 								};
 							};
 						};
-					break;
+					// break; // pass through to the next command
 				
 					// prev/next item/link
-					case 74: // j
-					case 75: // k
-						if (inInput || inDialog) break;
+					case 74: // j:vim(down)
+					case 75: // k:vim(up)
+						if (e.keyCode == 38 || e.keyCode == 40) break; // escape if passed through from arrow keys
+						if (inInput || inDialog || acted) break;
 						acted = Fever.Reader.keyToPreviousNextItemLink(e.keyCode == 75, true);
 					break;
 				
@@ -1960,7 +2079,7 @@ Fever.Reader =
 					
 					// toggle item content
 					case 18: // option key (for new MacBook Pro)
-						if (isShortKey || inInput || inDialog || isWindows) break;
+						if (isShortKey || inInput || inDialog || !isMac) break;
 						acted = Fever.Reader.keyToToggleItemContent();
 					break;
 					
@@ -1973,7 +2092,7 @@ Fever.Reader =
 			};
 
 			Fever.dismissMenu();
-		};
+		});
 		window.setInterval(function(){ Fever.Reader.syncInterface(); }, 30 * 1000);
 		Fever.Reader.syncInterface();
 	}
@@ -2243,7 +2362,13 @@ Fever.menuControllers =
 				}
 			},
 			{ divider : true },
-			{ text : 'Delete...', disabled : true }
+			{
+				text : 'Delete...',
+				onClick : function()
+				{
+					Fever.addRemoteDialog('./?manage=delete-sparks');
+				}
+			}
 		]
 	},
 	action : 

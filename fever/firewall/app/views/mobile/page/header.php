@@ -4,10 +4,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Fever&deg;</title>
-<meta name="viewport" id="viewport" content="width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
+<meta name="viewport" id="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link rel="apple-touch-icon" href="firewall/app/images/webclip.png" />
+<link rel="apple-touch-icon" href="firewall/app/images/webclip-128.png" />
 <link rel="apple-touch-startup-image" href="firewall/app/views/mobile/styles/images/startup.png" />
 <link href="firewall/app/views/mobile/styles/iphone.css?v=<?php  e($this->version);?>" rel="stylesheet" type="text/css" />
 <script src="firewall/app/views/mobile/scripts/fever.js?v=<?php  e($this->version);?>" type="text/javascript"></script>

@@ -1,5 +1,4 @@
 <?php
-// TODO: get latest utils, omdomdom and request from app-(reviews|sales)
 if (!defined('FIREWALL_ROOT')) { header('Location:../'); }
 header('Content-Type: text/html; charset=utf-8');
 
@@ -14,7 +13,6 @@ include(FIREWALL_ROOT.'app/libs/fever.php');
 include(FIREWALL_ROOT.'config/db.php');
 include(FIREWALL_ROOT.'config/key.php');
 
-$defaults = get_class_vars('Fever');
 $Fever = new Fever();
 include(FIREWALL_ROOT.'app/libs/request.php');
 $Fever->route();

@@ -123,6 +123,7 @@ button
 {
 	background-position: 0 -16px;
 }
+
 .btn:hover i
 {
 	background-position: 100% -16px;
@@ -449,6 +450,7 @@ span.i
 }
 
 span.w input[type=text],
+span.w input[type=email],
 span.w input[type=password],
 span.w select,
 span.w textarea
@@ -944,6 +946,40 @@ ul.errors li
 {
 	font-weight: bold;
 	font-style: normal;
+}
+
+/* for iPad only (ideally) */
+@media only screen and (device-width: 768px)
+{
+	/* prevent iPad MobileSafari from requiring two taps in lists */
+	.box-list #section-0:hover .btn,
+	.box-list li:hover > .btn,
+	.item:hover .meta .btn,
+	.link:hover .meta .btn
+	{
+		display: none;
+	}
+	.box-list #section-0.has-focus .btn,
+	.box-list li.has-focus > .btn,
+	.item.has-focus .meta .btn,
+	.link.has-focus .meta .btn
+	{
+		display: inline-block;
+	}
+	
+	/* prevents iPad MobileSafari from requiring two taps for menus, don't ask me how */
+	.btn:hover
+	{
+		border: 1px solid rgba(0,0,0,0);
+	}
+	
+	/* help is all kinds of wonky, fixed position isn't really supported and some events aren't firing so hide for now */
+	#help-container,
+	#help,
+	#help-dangle
+	{
+		display: none !important;
+	}
 }
 
 /* for Safari only */

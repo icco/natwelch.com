@@ -124,6 +124,7 @@
 		<code>%t</code> with title,
 		<code>%u</code> with url, and
 		<code>%e</code> with excerpt.
+		Prefix the url with <code>#</code> to notify the service in the background.
 	</dd>
 </dl>
 

@@ -352,7 +352,6 @@ li.target .icon
 	background-position: 0 -22px;
 }
 
-
 .icon.hot		{ background-image: url(images/icon-hot.png); }
 .icon.kindling	{ background-image: url(images/icon-kindling.png); }
 .icon.saved		{ background-image: url(images/icon-saved.png); }
@@ -902,8 +901,22 @@ li.target .icon
 	margin-right: -24px;
 }
 
+.lion .scrollable #groups-scroller,
+.lion .scrollable #feeds-scroller
+{
+	margin-right: -9px; /* Lion */
+}
+
+.lion #groups-container.scrollable:hover #groups-scroller-container, 
+.lion #feeds-container.scrollable:hover #feeds-scroller-container 
+{
+	margin-right: -9px;
+}
+
 #groups-container.scrollable:hover #groups-scroller,
-#feeds-container.scrollable:hover #feeds-scroller
+#feeds-container.scrollable:hover #feeds-scroller,
+.lion #groups-container.scrollable:hover #groups-scroller,
+.lion #feeds-container.scrollable:hover #feeds-scroller
 {
 	margin-right: 0;
 }
@@ -1038,6 +1051,55 @@ li.target .icon
 	left: 10px;
 	color: #FFF;
 	background-color: #333;
+}
+
+#inline-read
+{
+	position: relative;
+	line-height: 30px;
+	font-weight: bold;
+	margin-right: 7px;
+	padding: 0 10px;
+}
+
+#inline-read,
+#inline-read s
+{
+	height: 30px;
+	background: url(images/bg-status.png) 0 0 no-repeat;
+}
+
+#inline-read s
+{
+	position: absolute;
+	top: 0;
+	right: -7px;
+	width: 7px;
+	background-position: 100% 0;
+}
+
+/* for iPad only (ideally) */
+@media only screen and (device-width: 768px)
+{
+	.box-list li.has-focus a
+	{
+		padding-right: 56px;
+	}
+	
+	/* iPad iOS 5 supports fixed positioning and therefore two-finger scrolling of condensed groups and feeds */
+	.scrollable #groups-scroller,
+	.scrollable #feeds-scroller,
+	#groups-container.scrollable:hover #groups-scroller-container, 
+	#feeds-container.scrollable:hover #feeds-scroller-container
+	{
+		margin: 0;
+		padding: 0;
+	}
+	
+	#fixed.zoomed
+	{
+		position: absolute;
+	}
 }
 
 /* for Safari only */

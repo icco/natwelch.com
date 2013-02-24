@@ -1,4 +1,5 @@
 // initial
+Fever.isIPad				= <?php e($this->is_ipad ? 1 : 0); ?>;
 Fever.Reader.ui.section		= <?php e($this->prefs['ui']['section']); ?>;
 Fever.Reader.ui.previous	= <?php e($this->prefs['ui']['previous']); ?>;
 Fever.Reader.ui.search		= '<?php e(quote($this->prefs['ui']['search'])); ?>';

@@ -57,6 +57,7 @@ $class .= $item_excerpts ? '' : ' full';
 		<s class="box"><u><u></u></u><i><i></i></i><b><b></b></b></s>
 	</div><!-- .box.item -->
 <?php endforeach;?>
+<?php onload("Fever.Reader.onItemsLoaded();"); ?>
 <?php else:?>
 <?php
 $msg = '';
@@ -112,7 +113,7 @@ if ($this->page == 1)
 }
 else
 {
-	onload("Fever.Reader.pageMaxed=true;");
+	onload("Fever.Reader.onLastPage();");
 }
 e($msg);
 ?>

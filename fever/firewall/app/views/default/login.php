@@ -10,7 +10,7 @@
 	<table>
 		<tr>
 			<th>Email</th>
-			<td colspan="2"><span class="w"><input type="text" id="email" name="email" value="<?php e((isset($_POST['email']))?prevent_xss($_POST['email']):'');?>" /></span></td>
+			<td colspan="2"><span class="w"><input type="email" id="email" name="email" value="<?php e((isset($_POST['email']))?prevent_xss($_POST['email']):'');?>" /></span></td>
 		</tr>
 		<tr>
 			<th class="proto">Password</th>
@@ -34,7 +34,7 @@
 	<table>
 		<tr>
 			<th>Email</th>
-			<td class="proto"><span class="w"><input type="text" id="email-reminder" name="email" value="<?php e((isset($_POST['email']))?prevent_xss($_POST['email']):'');?>" /></span></td>
+			<td class="proto"><span class="w"><input type="email" id="email-reminder" name="email" value="<?php e((isset($_POST['email']))?prevent_xss($_POST['email']):'');?>" /></span></td>
 			<td class="btn-row">
 				<button><span class="btn text default">Send<i></i></span></button>
 				<span class="btn text" id="nevermind">Nevermind<i></i></span>

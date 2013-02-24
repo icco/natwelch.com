@@ -26,7 +26,7 @@ var __feedlet =
 				if (link.href && 
 					link.rel && 
 					link.type &&
-					link.rel.toLowerCase() == 'alternate' &&
+					link.rel.match(/.*alternate.*/i) &&
 					link.type.match(/^application\/(rss|atom)\+xml$/i)
 					)
 				{

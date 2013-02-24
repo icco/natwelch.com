@@ -7,6 +7,28 @@
 		<th>Shortcut</th>
 		<th>Command</th>
 	</tr>
+	
+	<tr>
+		<td>1</td>
+		<td>Go to Hot</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Go to Kindling</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Go to Saved</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Go to Sparks</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Go to Search results</td>
+	</tr>
+	
 	<tr>
 		<td>Z</td>
 		<td>Unread the most recently read items</td>
@@ -22,6 +44,10 @@
 	<tr>
 		<td>R</td>
 		<td>Refresh all feeds</td>
+	</tr>
+	<tr>
+		<td><span class="shift">R</span></td>
+		<td>Refresh current group or feed</td>
 	</tr>
 	<tr>
 		<td>S</td>

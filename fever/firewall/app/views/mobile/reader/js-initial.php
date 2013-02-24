@@ -10,6 +10,7 @@ Fever.iPhone.mobile.showRead	= <?php e($this->prefs['ui']['show_read']); ?>;
 Fever.iPhone.mobile.autoRead	= <?php e(($this->prefs['auto_read']) ? 1 : 0); ?>; // deprecated
 Fever.iPhone.mobile.readOnScroll	= <?php e(($this->prefs['mobile_read_on_scroll']) ? 1 : 0); ?>;
 Fever.iPhone.mobile.readOnBackOut	= <?php e(($this->prefs['mobile_read_on_back_out']) ? 1 : 0); ?>;
+Fever.iPhone.mobile.viewInApp		= <?php e(($this->prefs['mobile_view_in_app']) ? 1 : 0); ?>;
 Fever.iPhone.services 			= [<?php
 $services_js = array();
 foreach($this->prefs['services'] as $service)

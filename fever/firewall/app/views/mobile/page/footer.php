@@ -27,6 +27,12 @@
 				Show feeds
 			</label>
 		</li>
+		<li>
+			<label for="action-elsewhere" class="checkbox" onclick="Fever.iPhone.toggleElsewhere(this);">
+				<input type="checkbox" id="action-elsewhere" value="1" />
+				View external links in app
+			</label>
+		</li>
 	</ul>
 	
 	<h2>Mark as read on</h2>
@@ -45,6 +51,7 @@
 			</label>
 		</li>
 	</ul>
+		
 	<a onclick="Fever.iPhone.unreadRecentlyRead();" class="btn">Unread most recently read</a>
 </div>
 

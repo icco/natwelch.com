@@ -1,5 +1,7 @@
 var Fever =
 {
+	isIPad				: false,
+	isLion				: window.navigator.userAgent.match(/Mac OS X 10_7/), // skinny scrollbars
 	Reader				: {},
 	autoScrolling		: true,
 	scrollers 			: {},
@@ -16,6 +18,17 @@ var Fever =
 			{
 				parent = document.body;
 			};
+			
+			// don't try to scroll window on iPad
+			// disabled now that iPad Safari is more capable
+			// if (this.isIPad && parent == document.body) 
+			// {
+			// 	if (typeof callback == 'function')
+			// 	{
+			// 		callback();
+			// 	};
+			// 	return;
+			// };
 						
 			// add our scrollers, one per unique parent
 			this.scrollers[toSelector(parent)] = [target, parent, callback];
@@ -190,6 +203,13 @@ var Fever =
 			x = ww - w - safety;
 		};
 
+		if (this.isIPad)
+		{
+			// iPad scrolls entire UI (not in iOS 5)
+			// x += window.pageXOffset;
+			// y += window.pageYOffset;
+		};
+
 		css(menu, 'top',  y + 'px');
 		css(menu, 'left', x + 'px');
 	},
@@ -270,8 +290,7 @@ var Fever =
 			document.removeEventListener('mousemove', Fever.dismissHelp, true);
 			
 			// todo: fade
-			var container 	= one('#help-container');
-			css(container, 'display', 'none');
+			css(one('#help-container'), 'display', 'none');
 		};
 	},
 	
