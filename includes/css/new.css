@@ -1,0 +1,86 @@
+/**
+ * NatWelch.com version 13.0
+ * copyright Nat Welch 2012
+ */
+
+html {
+  overflow: hidden;
+}
+
+body, select, input, textarea {
+  color: #444;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+body {
+  background: url("/i/christmasalmanornat.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+
+.tel {
+  text-decoration: underline;
+}
+
+#buffer {
+  height: 170px;
+}
+
+.main {
+  display: block;
+  margin: 7px 0px;
+}
+
+h1, h2, h3, .melinks {
+  font-family: 'Antic Didone', serif;
+  padding: 3px 10px;
+  background-color: #eee;
+  display: inline-block;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-family: serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: #444;
+  cursor: pointer;
+}
+
+ul.melinks {
+  margin: 0;
+  list-style: none;
+}
+
+ul.melinks li {
+  display: inline;
+}
+
+img.socialicon {
+  width: 53px;
+  height: 53px;
+  opacity: 0.6;
+}
+
+img.socialicon:hover {
+  opacity: 1;
+}
