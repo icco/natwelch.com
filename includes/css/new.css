@@ -1,86 +1,24 @@
 /**
- * NatWelch.com version 13.0
- * copyright Nat Welch 2012
+ * NatWelch.com version 15.0
+ * copyright Nat Welch 2013
  */
 
-html {
-  overflow: hidden;
+* { padding: 0; margin: 0; }
+body { background-color: #333; }
+p { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
+#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+#about { width: 360px; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important; }
+@media (max-width: 767px) {
+  #monogram { position: relative; width: auto; padding: 20px; margin: 0; }
+  #about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+  background-image { opacity: 0.2; }
 }
 
-body, select, input, textarea {
-  color: #444;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
-body {
-  background: url("/i/christmasalmanornat.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0;
-}
-
-.tel {
-  text-decoration: underline;
-}
-
-#buffer {
-  height: 170px;
-}
-
-.main {
-  display: block;
-  margin: 7px 0px;
-}
-
-h1, h2, h3, .melinks {
-  font-family: 'Antic Didone', serif;
-  padding: 3px 10px;
-  background-color: #eee;
-  display: inline-block;
-  line-height: 1em;
-}
-
-h1 {
-  font-size: 5em;
-}
-
-h2 {
-  font-size: 4em;
-}
-
-h3 {
-  font-size: 1.1em;
-  font-family: serif;
-}
-
-a {
-  cursor: pointer;
-}
-
-a:hover {
-  color: #444;
-  cursor: pointer;
-}
-
-ul.melinks {
-  margin: 0;
-  list-style: none;
-}
-
-ul.melinks li {
-  display: inline;
-}
-
-img.socialicon {
-  width: 53px;
-  height: 53px;
-  opacity: 0.6;
-}
-
-img.socialicon:hover {
-  opacity: 1;
+.gravatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  margin-right: 9px;
 }
