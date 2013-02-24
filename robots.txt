@@ -14,3 +14,9 @@ Disallow: /images/
 Disallow: /includes/
 Disallow: /tweetnest/
 Disallow: /code/war/
+#Begin Attracta SEO Tools Sitemap. Do not remove
+sitemap: http://cdn.attracta.com/sitemap/922267.xml.gz
+#End Attracta SEO Tools Sitemap. Do not remove
+#Begin Attracta SEO Tools Sitemap. Do not remove
+sitemap: http://cdn.attracta.com/sitemap/922268.xml.gz
+#End Attracta SEO Tools Sitemap. Do not remove
