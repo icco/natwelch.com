@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: #1D3958;
+  color: #607890;
   border-bottom: 1px solid rgba(255,255,255,1);
 }
 
@@ -40,9 +40,14 @@ a:hover {
 }
 
 #about {
-  width: 400px;
+  width: 430px;
   padding: 0 0 0 150px;
   margin: -50px 50px auto -20px !important;
+}
+
+#about p {
+  background-color: #333;
+  padding: 10px;
 }
 
 .gravatar {
