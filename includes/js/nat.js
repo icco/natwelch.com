@@ -21,5 +21,14 @@ var Nat = {
 window.addEvent("domready", function() {
   Nat.updateAge();
   konami = new Konami(function() { Nat.changeBG(); });
+
+  // Big bg
+  $(function() {
+    $(window).resize(function() {
+      if ($(this).width() >= 767) {
+        $.backstretch("/i/christmasalmanornat.jpg", {speed: 150});
+      }
+    }).resize(); //trigger resize on page load
+  });
 });
 
