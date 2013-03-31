@@ -10,15 +10,27 @@
 
 body {
   background-color: #333;
+  color: #fff;
+  font-family: Helvetica;
 }
 
 p {
-  color: #fff;
-  font-family: Helvetica;
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 22px;
   -webkit-font-smoothing: antialiased;
+}
+
+ul.nav {
+  list-style: none;
+  padding: 10px;
+}
+
+ul.nav li {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 a {
@@ -39,13 +51,20 @@ a:hover {
   margin: 0 auto 0 50px;
 }
 
-#about {
-  width: 430px;
-  padding: 0 0 0 150px;
-  margin: -50px 50px auto -20px !important;
+#nav {
+  margin: -43px 50px auto -20px !important;
 }
 
-#about p {
+#about {
+  margin: 0 50px auto -20px !important;
+}
+
+.block {
+  width: 430px;
+  padding: 0 0 0 150px;
+}
+
+.block p {
   background-color: #333;
   padding: 10px;
 }
@@ -65,7 +84,7 @@ a:hover {
     margin: 0;
   }
 
-  #about {
+  .block {
     position: relative;
     width: auto;
     padding: 20px;

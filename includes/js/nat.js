@@ -16,6 +16,5 @@ $(function() {
     }
   }).resize(); //trigger resize on page load
 
-
   Nat.updateAge();
 });
