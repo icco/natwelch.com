@@ -32,13 +32,15 @@
   <body>
 
     <div id="monogram">
-      <img src="http://www.gravatar.com/avatar/229e3746f6f5100c1d7d5d7a8a5b82d5.jpg" class="gravatar" />
+      <div id="fixed">
+        <img src="http://www.gravatar.com/avatar/229e3746f6f5100c1d7d5d7a8a5b82d5.jpg" class="gravatar" />
+      </div>
     </div>
 
     <div class="block" id="nav">
       <ul class="nav">
         <li>About</li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#projects" onclick="$('#button').click(function() { $('html, body').animate({ scrollTop: $(self.href).offset().top }, 2000); });">Projects</a></li>
       </ul>
     </div>
 
@@ -54,7 +56,7 @@
       <p style="display: none">He is <span id='age'>25</span> old.</p>
     </div>
 
-    <div class="block" id="projects" style="display: none;">
+    <div class="block" id="projects">
       <p>Some projects Nat has been working on lately include <a href="http://code.natwelch.com" title="http://code.natwelch.com">code</a>, <a href="http://walls.natwelch.com" title="http://walls.natwelch.com">wallpapers</a>, <a href="http://nabdash.me" title="http://nabdash.me">nabdash</a> and <a href="http://github.com/icco/tumble" title="http://github.com/icco/tumble">tumble</a>.</p>
     </div>
 

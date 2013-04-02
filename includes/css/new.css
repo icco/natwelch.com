@@ -52,16 +52,21 @@ a:hover {
 }
 
 #nav {
-  margin: -43px 50px auto -20px !important;
+  margin-top: -43px;
 }
 
 #about {
-  margin: 0 50px auto -20px !important;
+}
+
+#projects {
 }
 
 .block {
   width: 430px;
   padding: 0 0 0 150px;
+  margin-right: 50px;
+  margin-bottom: auto;
+  margin-left: -20px;
 }
 
 .block p {
@@ -74,6 +79,12 @@ a:hover {
   width: 36px;
   border-radius: 18px;
   margin-right: 9px;
+}
+
+#fixed {
+  position: fixed;
+  top: 14px;
+  left: 70px;
 }
 
 @media (max-width: 767px) {
