@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #myytplayer {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ytapiplayer">
+      You need Flash player 8+ and JavaScript enabled to view this video.
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2/swfobject.js"></script>
+    <script type="text/javascript">
+      function onYouTubePlayerReady(playerId) {
+        ytplayer = document.getElementById("myytplayer");
+        ytplayer.setLoop(true);
+        ytplayer.setShuffle(true);
+      }
+
+      var params = { allowScriptAccess: "always" };
+      var atts = { id: "myytplayer" };
+
+      swfobject.embedSWF(
+          "//www.youtube.com/v/wd4YgudTcnM?enablejsapi=1&playerapiid=ytplayer&version=3&enablejsapi=1&playerapiid=ytplayer&&autoplay=1&modestbranding=1",
+          "ytapiplayer", "853", "480", "8", null, null, params, atts);
+    </script>
+  </body>
+</html>
