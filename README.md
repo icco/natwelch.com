@@ -15,3 +15,4 @@ Next Version: 15
  * All posts originate here
    * Then external sites republish (tumble for links, flickr for photos, twitter for commentary)
    * no more pseudoweb.net or tumble.io?
+ * Index with http://letteringjs.com/
