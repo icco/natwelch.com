@@ -1,0 +1,17 @@
+[
+{
+  type: "Point",
+  coordinates: [
+  -122.391248,
+  37.782267
+  ],
+  properties: {
+    marker-size: "large",
+    marker-symbol: "star",
+    What: "Passion Projects",
+    Venue: "GitHub HQ",
+    Address: "88 Colin P. Kelly Junior Street, San Francisco, CA, 94107",
+    When: "Thursday, September 26th at 7:00pm"
+  }
+}
+]
