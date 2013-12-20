@@ -156,6 +156,18 @@
         "type": "Point",
         "coordinates": [ -122.39017, 37.78944 ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "Belgrave House, 76 Buckingham Palace Rd, London SW1W 9TQ, United Kingdom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -0.146364, 51.494966 ]
+      }
     }
   ]
 }
