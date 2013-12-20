@@ -4,8 +4,8 @@ This is my personal website code. No idea what's entirely in here. My site is a 
 
 This is my site. Feel free to be inspired or disgusted, but don't steal. You are a creative individual, do it yourself.
 
-Current Version: 14
-Next Version: 15
+Current Version: 15
+Next Version: 16
 
 ## Ideas for next version
 
