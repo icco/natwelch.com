@@ -17,7 +17,7 @@
       "type": "Feature",
       "properties": {
         "marker-symbol": "industrial",
-        "marker-color": "2F8DB2"
+        "marker-color": "2F8DB2",
         "Address": "81 Higuera St, San Luis Obispo, CA 93401"
       },
       "geometry": {
@@ -29,7 +29,7 @@
       "type": "Feature",
       "properties": {
         "marker-symbol": "building",
-        "marker-color": "2F8DB2"
+        "marker-color": "2F8DB2",
         "Address": "2456 Santa Clara St, San Luis Obispo, CA 93401"
       },
       "geometry": {
@@ -37,108 +37,112 @@
         "coordinates": [35.26899,-120.64809]
       }
     },
-// 35.29601,-120.653079,"1 Grand Ave, San Luis Obispo, CA 93401","1 Grand Ave, San Luis Obispo, San Luis Obispo County, CA, US",,MapQuest,address
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "college",
+        "marker-color": "2F8DB2",
+        "Address": "1 Grand Ave, San Luis Obispo, CA 93401"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [35.29601,-120.653079]
       }
     },
-// 35.29606,-120.65561,"1591 Slack St, San Luis Obispo, CA 93405","1591 Slack St, San Luis Obispo, San Luis Obispo County, CA, US",,MapQuest,address
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "1591 Slack St, San Luis Obispo, CA 93405"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [35.29606,-120.65561]
       }
     },
-// 37.23108,-121.95309,"16201 Shannon Rd, Los Gatos, CA","16201 Shannon Rd, Los Gatos, Santa Clara County, CA, US"
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "16201 Shannon Rd, Los Gatos, CA"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [37.23108,-121.95309]
       }
     },
-// 37.34154,-122.07895,"1227 St Matthew Way, Los Altos, CA","1227 St Matthew Way, Los Altos, Santa Clara County, CA, US",,MapQuest,address
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "1227 St Matthew Way, Los Altos, CA"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [37.34154,-122.07895]
       }
     },
-// 37.34913,-122.08088,"1190 Brucito Ave, Los Altos, CA 94024","1190 Brucito Ave, Los Altos, Santa Clara County, CA, US",,MapQuest,address
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "1190 Brucito Ave, Los Altos, CA 94024"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [37.34913,-122.08088]
       }
     },
-// 37.423839,-122.090126,"2025 Garcia Ave, Mountain View, CA","2025 Garcia Ave, Mountain View, Santa Clara County, CA, US",,MapQuest,address
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "2025 Garcia Ave, Mountain View, CA"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [37.423839,-122.090126]
       }
     },
-// 37.775002,-122.418297,"2434 26th Ave, SF, CA","San Francisco, San Francisco County, CA, US"
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "2434 26th Ave, San Francisco, CA 94116"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [37.775002,-122.418297]
       }
     },
-// 37.775002,-122.418297,"345 Spear St., SF, CA","San Francisco, San Francisco County, CA, US",,MapQuest,city/town
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "",
-        "marker-color": "2F8DB2"
-        "Address": 
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "3711 Skyfarm Dr, Santa Rosa, CA 95403"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [38.491854,-122.718733]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "345 Spear St, San Francisco, CA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.775002,-122.418297]
       }
     }
   ]
