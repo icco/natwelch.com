@@ -68,6 +68,7 @@ h1 {
   text-align: justify;
   border-radius: 13px;
   margin-top: 15px;
+  width: 45%;
 }
 
 h1.name-plate {
@@ -98,6 +99,10 @@ h1.name-plate span.char4, h1.name-plate span.char4:hover {
 @media (max-width: 1000px) {
   .content {
     width: 80%;
+  }
+
+  .text {
+    width: 100%;
   }
 }
 
