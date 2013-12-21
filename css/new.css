@@ -35,6 +35,25 @@ a:hover {
   border-bottom: 1px solid rgba(255,255,255,1);
 }
 
+.content {
+  width: 50%;
+  margin: 10px auto;
+  background-color: deepskyblue;
+  padding: 20px;
+  opacity: 0.95;
+  border-radius: 13px;
+}
+
+h1 {
+  text-align: center;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.text {
+  opacity: 1;
+}
+
 h1.name-plate {
   font-family: 'Montserrat', sans-serif;
   font-size: 3em;
