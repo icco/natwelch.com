@@ -14,7 +14,9 @@ $(function() {
     if ($(this).width() >= 767) {
       $.backstretch("/i/christmasalmanornat.jpg", {speed: 150});
     }
-  }).resize(); //trigger resize on page load
+  }).resize(); // trigger resize on page load
+
+  $('h1.name-plate').lettering();
 
   Nat.updateAge();
 });
