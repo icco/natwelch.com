@@ -18,5 +18,5 @@ $(function() {
 
   $('h1.name-plate').lettering();
 
-  Nat.updateAge();
+  // Nat.updateAge();
 });
