@@ -96,6 +96,28 @@ h1.name-plate span.char4, h1.name-plate span.char4:hover {
   animation-name: none;
 }
 
+ul.sentence {
+  display: inline;
+  list-style: none;
+}
+
+ul.sentence li {
+  display: inline;
+  margin: 0;
+}
+
+ul.sentence li:after {
+  content: ", ";
+}
+
+ul.sentence li:last-child:after {
+  content: "";
+}
+
+ul.sentence li:nth-last-child(2):after {
+  content: " & ";
+}
+
 @media (max-width: 1000px) {
   .content {
     width: 80%;
