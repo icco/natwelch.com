@@ -12,7 +12,7 @@ var Nat = {
 $(function() {
   $(window).resize(function() {
     if ($(this).width() >= 767) {
-      $.backstretch("/i/christmasalmanornat.jpg", {speed: 150});
+      $.backstretch("/i/coffeeshopmode.jpg", {speed: 150});
     }
   }).resize(); // trigger resize on page load
 
