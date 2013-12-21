@@ -12,6 +12,7 @@
 
 body {
   background-color: #333;
+  color: ghostwhite;
 }
 
 p {
@@ -36,7 +37,7 @@ a:hover {
 }
 
 .content {
-  width: 50%;
+  width: 60%;
   margin: 45px auto;
   background-color: deepskyblue;
   padding: 20px;
@@ -45,13 +46,16 @@ a:hover {
 }
 
 h1 {
-  text-align: center;
   opacity: 1;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .text {
   opacity: 1;
+  background-color: #808080;
+  padding: 15px;
+  text-align: justify;
+  border-radius: 13px;
 }
 
 h1.name-plate {
@@ -77,6 +81,12 @@ h1.name-plate span.char4, h1.name-plate span.char4:hover {
   display: inline;
   -webkit-animation-name: none;
   animation-name: none;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    width: 80%;
+  }
 }
 
 @-webkit-keyframes bounce {
