@@ -37,10 +37,10 @@ a:hover {
 
 .content {
   width: 50%;
-  margin: 10px auto;
+  margin: 45px auto;
   background-color: deepskyblue;
   padding: 20px;
-  opacity: 0.95;
+  opacity: 0.9;
   border-radius: 13px;
 }
 
