@@ -1,0 +1,166 @@
+/**
+ * NatWelch.com version 15.0
+ * copyright Nat Welch 2013
+ */
+
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #333;
+  color: ghostwhite;
+}
+
+h1 {
+  color: #896060;
+}
+
+.text {
+  background-color: #896060;
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+a:hover {
+  border-bottom: 1px solid rgba(255,255,255,1);
+}
+
+p, .text {
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 1.4em;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0.3em 0 0 1em;
+}
+
+.content {
+  width: 60%;
+  margin: 45px auto;
+  padding: 20px;
+  opacity: 0.9;
+  border-radius: 13px;
+}
+
+h1 {
+  opacity: 1;
+  margin: 10px;
+}
+
+.text {
+  opacity: 1;
+  padding: 15px;
+  text-align: justify;
+  border-radius: 13px;
+  margin-top: 15px;
+  width: 45%;
+}
+
+h1.name-plate {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+}
+
+h1.name-plate span {
+  cursor: default;
+  display: inline-block;
+}
+
+h1.name-plate span:hover {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+h1.name-plate span.char4, h1.name-plate span.char4:hover {
+  display: inline;
+  -webkit-animation-name: none;
+  animation-name: none;
+}
+
+ul.sentence {
+  display: inline;
+  list-style: none;
+}
+
+ul.sentence li {
+  display: inline;
+  margin: 0;
+}
+
+ul.sentence li:after {
+  content: ", ";
+}
+
+ul.sentence li:last-child:after {
+  content: "";
+}
+
+ul.sentence li:nth-last-child(2):after {
+  content: " & ";
+}
+
+@media (max-width: 1000px) {
+  .content {
+    width: 80%;
+  }
+
+  .text {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
