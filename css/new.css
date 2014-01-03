@@ -74,26 +74,7 @@ h1 {
 h1.name-plate {
   font-family: 'Montserrat', sans-serif;
   font-size: 3em;
-}
-
-h1.name-plate span {
-  cursor: default;
-  display: inline-block;
-}
-
-h1.name-plate span:hover {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-}
-
-h1.name-plate span.char4, h1.name-plate span.char4:hover {
-  display: inline;
-  -webkit-animation-name: none;
-  animation-name: none;
+  margin: 0;
 }
 
 ul.sentence {

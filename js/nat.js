@@ -16,7 +16,5 @@ $(function() {
     }
   }).resize(); // trigger resize on page load
 
-  $('h1.name-plate').lettering();
-
   // Nat.updateAge();
 });
