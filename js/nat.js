@@ -13,6 +13,8 @@ $(function() {
   $(window).resize(function() {
     if ($(this).width() >= 767) {
       $.backstretch("/i/coffeeshopmode.jpg", {speed: 150});
+    } else {
+      $.backstretch("/i/verticalsunset.jpg", {speed: 150});
     }
   }).resize(); // trigger resize on page load
 
