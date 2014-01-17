@@ -115,4 +115,8 @@ ul.sentence li:nth-last-child(2):after {
   .text {
     width: auto;
   }
+
+  .gravatar {
+    float: right;
+  }
 }
