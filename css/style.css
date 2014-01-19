@@ -12,26 +12,34 @@
 
 body {
   background-color: #333;
-  color: #D6E6F2;
+}
+
+a, body {
+  color: #0F0E0C;
 }
 
 h1 {
-  color: #41678D;
+  color: #D6E6F2;
+  text-shadow:
+   -1px -1px 0 #0F0E0C,  
+    1px -1px 0 #0F0E0C,
+    -1px 1px 0 #0F0E0C,
+     1px 1px 0 #0F0E0C;
 }
 
 .text {
-  background-color: #41678D;
+  background-color: #D6E6F2;
+}
+
+
+a:hover {
+  border-bottom: 1px solid #0F0E0C;
 }
 
 a {
-  color: #D6E6F2;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-}
-
-a:hover {
-  border-bottom: 1px solid #D6E6F2;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
 p, .text {
