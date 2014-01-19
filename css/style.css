@@ -20,7 +20,7 @@ a, body {
 
 h1.name-plate {
   color: #D6E6F2;
-  text-shadow: 4px 4px 8px #0F0E0C;
+  text-shadow: 4px 4px 7px rgba(0,0,0,0.6);
 }
 
 .text {
