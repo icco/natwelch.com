@@ -18,13 +18,9 @@ a, body {
   color: #0F0E0C;
 }
 
-h1 {
+h1.name-plate {
   color: #D6E6F2;
-  text-shadow:
-   -1px -1px 0 #0F0E0C,  
-    1px -1px 0 #0F0E0C,
-    -1px 1px 0 #0F0E0C,
-     1px 1px 0 #0F0E0C;
+  text-shadow: 4px 4px 8px #0F0E0C;
 }
 
 .text {
