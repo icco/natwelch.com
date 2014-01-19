@@ -12,26 +12,26 @@
 
 body {
   background-color: #333;
-  color: ghostwhite;
+  color: #D6E6F2;
 }
 
 h1 {
-  color: #896060;
+  color: #41678D;
 }
 
 .text {
-  background-color: #896060;
+  background-color: #41678D;
 }
 
 a {
-  color: #fff;
+  color: #D6E6F2;
   font-weight: bold;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 a:hover {
-  border-bottom: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid #D6E6F2;
 }
 
 p, .text {
