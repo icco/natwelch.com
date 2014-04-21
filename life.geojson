@@ -168,6 +168,18 @@
         "type": "Point",
         "coordinates": [ -0.146364, 51.494966 ]
       }
+    },
+     {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "Matisse Court, 18 Featherstone St., London EC1Y 8SL, United Kingdom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -0.089098, 51.524436 ]
+      }
     }
   ]
 }
