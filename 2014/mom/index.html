@@ -1,31 +1,57 @@
 <html>
   <head>
     <title>Happy Mothers Day / Happy Birthday 2014</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <style>
-      body {
-        margin: 0;
+      div {
+        margin: 1em;
+        display: block;
+        padding: 5px;
       }
 
-      #myytplayer {
-        width: 100%;
-        height: 100%;
+      p {
+        font-weight: 800;
+        font-size: 2em;
+        color: purple;
+        background: whitesmoke;
+        box-shadow: 10px 0 0 whitesmoke, -10px 0 0 whitesmoke;
+        width: 60%;
+        opacity: 0.6;
+        display: inline;
       }
     </style>
   </head>
   <body>
     <div id="text">
-    <p>
-    Hey Mom,
-    </p>
+      <div>
+      <p>
+      Hey Mom,
+      </p>
+      </div>
 
-    <p>
-    I just wanted to wish you a happy birthday and happy Mother's Day from the other side of the world. I know I will see you soon, but just know that I wouldn't be the person I am today without your love, kindness, support, creativity and encouragement.
-    </p>
+      <div>
+      <p>
+      I just wanted to wish you a happy birthday and happy Mother's Day from the other side of the world. I know I will see you soon, but just know that I wouldn't be the person I am today without your love, kindness, support, creativity and encouragement.
+      </p>
+      </div>
 
-    <p>
-    Lots of Love,<br>
-    Nat
-    </p>
-  </div>
-</body>
+      <div>
+      <p>
+      Lots of Love,<br>
+      Nat
+      </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/js/jquery.1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(window).resize(function() {
+          $.backstretch("http://www.youtube.com/gif?v=JGuA1p55kUE&g=FiyGPLdUtYw", {speed: 150});
+        }).resize(); // trigger resize on page load
+      });
+    </script>
+  </body>
 </html>
