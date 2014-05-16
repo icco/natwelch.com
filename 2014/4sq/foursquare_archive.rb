@@ -22,14 +22,6 @@ L.formatter = proc do |severity, datetime, progname, msg|
   "#{datetime} (#{severity[0].colorize(colors[severity.to_sym])}): #{msg}\n"
 end
 
-# For each item in the list, get all entries, translate to geojson and write
-# out to key.json.
-foursq = Foursquare2::Client.new(
-  :api_version => '20140405',
-  :client_id => 'OZIOM5KOFU4VKXI1G45JK15H4JAEKL0AGW3OBMWXCIGL2O0Z',
-  :client_secret => 'E5JK41TYFPG2YMPHG30WMMR0M3R4NMTPWEOSHOPVQONMED3E',
-)
-
 cal_file = File.open("JB2YG3WJSXZH0I3WHY2CNALAXYL4YWEX.ics")
 
 # Parser returns an array of calendars because a single file

@@ -2,18 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     colorize (0.7.2)
-    faraday (0.9.0)
-      multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.9.1)
-      faraday (>= 0.7.4, < 0.10)
-    foursquare2 (1.9.8)
-      faraday (~> 0.8)
-      faraday_middleware (>= 0.8)
-      hashie (>= 1.0, < 3.0.0)
     georuby (2.2.1)
-    hashie (2.1.1)
     icalendar (2.0.1)
-    multipart-post (2.0.0)
     oj (2.9.3)
 
 PLATFORMS
@@ -21,7 +11,6 @@ PLATFORMS
 
 DEPENDENCIES
   colorize
-  foursquare2
   georuby
   icalendar
   oj
