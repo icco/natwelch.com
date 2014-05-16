@@ -1,11 +1,13 @@
+#! /usr/bin/env ruby
 # Takes an array of Foursquare Lists and generates a geojson file for each.
 
-require 'rubygems' unless defined?(Gem)
+require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default)
 
 # Needed so we can output geojson
 require 'geo_ruby/geojson'
+require 'logger'
 
 L = Logger.new(STDOUT)
 # Change level to DEBUG to get more debugging output.
@@ -20,8 +22,6 @@ L.formatter = proc do |severity, datetime, progname, msg|
   "#{datetime} (#{severity[0].colorize(colors[severity.to_sym])}): #{msg}\n"
 end
 
-USER_ID = "1006792"
-
 # For each item in the list, get all entries, translate to geojson and write
 # out to key.json.
 foursq = Foursquare2::Client.new(
@@ -30,7 +30,7 @@ foursq = Foursquare2::Client.new(
   :client_secret => 'E5JK41TYFPG2YMPHG30WMMR0M3R4NMTPWEOSHOPVQONMED3E',
 )
 
-check_ins = foursq.user_checkins(USER_ID)
+check_ins = foursq.user_checkins({})
 L.info("Began parsing #{check_ins.canonicalUrl}")
 
 # Begin going through the data.
