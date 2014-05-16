@@ -12,6 +12,7 @@ GEM
       hashie (>= 1.0, < 3.0.0)
     georuby (2.2.1)
     hashie (2.1.1)
+    icalendar (2.0.1)
     multipart-post (2.0.0)
     oj (2.9.3)
 
@@ -22,4 +23,5 @@ DEPENDENCIES
   colorize
   foursquare2
   georuby
+  icalendar
   oj
