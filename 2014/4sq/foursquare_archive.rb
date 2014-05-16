@@ -35,7 +35,7 @@ simplified_data = {}
 cal.events.each do |event|
   # NOTE: We don't use from_latlong becuase that expects formats like 22`34
   # 23.45N while we get stuff like 51.5168466460692 from 4sq.
-  simplified_data[event.location] = GeoRuby::SimpleFeatures::Point.from_lon_lat(event.geo[0], event.geo[1])
+  simplified_data[event.location] = GeoRuby::SimpleFeatures::Point.from_lon_lat(event.geo[1], event.geo[0])
 end
 
 # Now we make the hash look like geojson.
