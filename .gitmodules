@@ -1,3 +1,3 @@
 [submodule "talks"]
 	path = talks
-	url = git://github.com/icco/talks.git
+	url = https://github.com/icco/talks.git
