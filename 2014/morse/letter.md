@@ -1,3 +1,5 @@
+Dear Reed and Sara,
+
 E.L. Doctorow once said that "Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way." As such, please bear with me as I ramble through this letter.
 
 Hofstadter's Law says that "It always takes longer than you expect, even when you take into account Hofstadter's Law." In my mind, this quote could easily be applied to Sara's time in Davis, many of Reed's side projects, the time Reed spent in Sunnyvale, the drive to the Playa or any other timed event. But I don't want to lecture you on the struggles of your past, but rather a recently started endeavor. Two people, who I think are incredibly well matched, intelligent, creative and beautiful, are joining into what will be a very long and happy endeavor, and hopefully lasts far longer than anyone predicts.
@@ -6,5 +8,5 @@ Somewhat related, Daniel Burnham has this quote I have always loved: "Make no li
 
 Anyways, let me end on a variation of The Serenity Prayer. Grant us the strength to accept the things that we cannot change, the courage to change the things we can and the wisdom to know the difference.
 
-Congratulations and lots of love, your friend,
+Congratulations and lots of love, your friend,  
 Nathaniel Welch
