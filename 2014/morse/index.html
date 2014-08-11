@@ -4,21 +4,32 @@
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <style>
+      body {
+        background: #999;
+      }
+
       div {
         margin: 1em;
         display: block;
         padding: 5px;
       }
 
-      p {
-        font-weight: 800;
-        font-size: 2em;
-        color: purple;
+      #text {
+        height: 90%;
+        width: 40%;
+        overflow: scroll;
         background: whitesmoke;
-        box-shadow: 10px 0 0 whitesmoke, -10px 0 0 whitesmoke;
-        width: 60%;
-        opacity: 0.6;
-        display: inline;
+        text-align: justify;
+        padding: 10px;
+      }
+
+      p {
+        font-size: 1.1em;
+        color: #03a9f4;
+      }
+
+      p:first {
+        margin-top: 0;
       }
     </style>
   </head>
