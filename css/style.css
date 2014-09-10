@@ -1,126 +1,19 @@
 /**
- * NatWelch.com version 15.0
- * copyright Nat Welch 2013
+ * NatWelch.com Version 16.0
+ * copyright Nat Welch 2014
  */
 
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: #333;
-}
-
-a, body {
-  color: #0F0E0C;
-}
-
-h1.name-plate {
-  color: #D6E6F2;
-  text-shadow: 4px 4px 7px rgba(0,0,0,0.6);
-}
-
-.text {
-  background-color: #D6E6F2;
-}
-
-
-a:hover {
-  border-bottom: 1px solid #0F0E0C;
-}
-
-a {
-  font-weight: bold;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-}
-
-p, .text {
-  font-family: Helvetica;
-  font-size: 16px;
-  line-height: 1.4em;
-  -webkit-font-smoothing: antialiased;
-}
-
-ul {
-  list-style: none;
-  text-align: left;
-}
-
-li {
-  margin: 0.3em 0 0 1em;
-}
-
-.content {
-  width: 60%;
-  margin: 45px auto;
-  opacity: 0.9;
-  border-radius: 13px;
-}
-
-h1 {
-  opacity: 1;
-  margin: 10px;
-}
-
-.text {
-  opacity: 1;
-  padding: 15px;
-  text-align: justify;
-  border-radius: 13px;
-  margin-top: 15px;
-  width: 45%;
-}
-
-.gravatar {
-  margin: 12px auto 0 -60px;
-  float: left;
-  clear: both;
-  height: 36px;  width: 36px;
-  border-radius: 18px;
-}
-
-h1.name-plate {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
-  margin: 0;
-}
-
-ul.sentence {
-  display: inline;
-  list-style: none;
-}
-
-ul.sentence li {
-  display: inline;
-  margin: 0;
-}
-
-ul.sentence li:after {
-  content: ", ";
-}
-
-ul.sentence li:last-child:after {
-  content: "";
-}
-
-ul.sentence li:nth-last-child(2):after {
-  content: " & ";
-}
-
-@media (max-width: 1000px) {
-  .content {
-    width: 80%;
-  }
-
-  .text {
-    width: auto;
-  }
-
-  .gravatar {
-    float: right;
-  }
+.tinted-image {
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    /* bottom, image */
+    url(/i/cock.jpg);
+  width: 1440px;
+  height: 600px;
 }
