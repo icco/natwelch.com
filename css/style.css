@@ -6,14 +6,20 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .tinted-image {
-  background: 
-    /* top, transparent red, faked with gradient */ 
+  background:
+    /* top, transparent red, faked with gradient #6b90c5 */
     linear-gradient(
-      rgba(255, 0, 0, 0.45), 
-      rgba(255, 0, 0, 0.45)
+      rgba(107, 144, 197, 0.45),
+      rgba(107, 144, 197, 0.5),
+      rgba(107, 144, 197, 0.6),
+      rgba(107, 144, 197, 1.45)
     ),
     /* bottom, image */
     url(/i/cock.jpg);
   width: 1440px;
   height: 600px;
+}
+
+body {
+  background-color: #6b90c5;
 }
