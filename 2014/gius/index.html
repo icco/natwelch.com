@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title></title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <style>
+      div {
+        margin: 1em;
+        display: block;
+        padding: 5px;
+      }
+
+      p {
+        font-weight: 800;
+        font-size: 2em;
+        color: purple;
+        background: whitesmoke;
+        box-shadow: 10px 0 0 whitesmoke, -10px 0 0 whitesmoke;
+        width: 60%;
+        opacity: 0.6;
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text">
+      <div>
+      <p>
+      Hey ,
+      </p>
+      </div>
+
+      <div>
+      <p>
+      </p>
+      </div>
+
+      <div>
+      <p>
+      Lots of Love,<br>
+      Nat
+      </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/js/jquery.1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(window).resize(function() {
+          $.backstretch("wave.gif", {speed: 150});
+        }).resize(); // trigger resize on page load
+      });
+    </script>
+  </body>
+</html>
