@@ -7,12 +7,12 @@
 
 .tinted-image {
   background:
-    /* top, transparent red, faked with gradient #6b90c5 */
+    /* top, transparent red, faked with gradient #F2F6ED */
     linear-gradient(
-      rgba(107, 144, 197, 0.45),
-      rgba(107, 144, 197, 0.5),
-      rgba(107, 144, 197, 0.6),
-      rgba(107, 144, 197, 1.45)
+      rgba(242, 246, 237, 0.45),
+      rgba(242, 246, 237, 0.5),
+      rgba(242, 246, 237, 0.6),
+      rgba(242, 246, 237, 1.45)
     ),
     /* bottom, image */
     url(/i/cock.jpg);
@@ -21,5 +21,5 @@
 }
 
 body {
-  background-color: #6b90c5;
+  background-color: #F2F6ED;
 }
