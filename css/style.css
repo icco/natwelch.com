@@ -46,3 +46,12 @@ ul.sentence li:last-child:after {
 ul.sentence li:nth-last-child(2):after {
   content: " & ";
 }
+
+a {
+  text-decoration: none;
+  color: #4A4E4A;
+}
+
+a:hover {
+  color: #08A8E6;
+}
