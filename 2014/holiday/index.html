@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Nat's 2014 Holiday Letter</title>
-
     <meta charset="utf-8">
     <meta name="format" content="complete">
-    <style type="text/css"> </style>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="byword.css">
   </head>
   <body>
     <div id="wrapper">
@@ -21,5 +22,14 @@
         /Nat</p>
       </div>
     </div> <!-- End wrapper -->
+    <script type="text/javascript" src="/js/jquery.1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(window).resize(function() {
+          $.backstretch("bg.jpg", {speed: 150});
+        }).resize(); // trigger resize on page load
+      });
+    </script>
   </body>
 </html>
