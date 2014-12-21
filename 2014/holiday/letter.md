@@ -4,5 +4,5 @@ I just wanted to wish you all happy holidays and a wonderful new year. Thanks to
 
 ![nat in london](nat.jpg)
 
-Lots of love,
+Lots of love,  
 /Nat
