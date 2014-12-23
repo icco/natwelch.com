@@ -5,6 +5,16 @@
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="byword.css">
     <style>
+      .axis text {
+        font: 10px sans-serif;
+        stroke: #fff;
+      }
+
+      .axis path, .axis line {
+        fill: none;
+        stroke: #fff;
+        shape-rendering: crispEdges;
+      }
     </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   </head>
@@ -20,6 +30,35 @@
         </div> <!-- end about -->
       </div>
     </div> <!-- End wrapper -->
+    <script>
+      var margin = {top: 20, right: 100, bottom: 20, left: 100};
+      var width = 400 - margin.left - margin.right;
+      var height = 1200 - margin.top - margin.bottom;
+
+      d3.json("cities.json", function(error, data) {
+        if (error) { console.error(error); exit; }
+
+        console.log(data);
+
+        var y = d3.scale.linear()
+            .rangeRound([0, height])
+            .domain([-90, 90]);
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .ticks(19)
+            .orient("left");
+
+        var svg = d3.select("#content").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+      });
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
