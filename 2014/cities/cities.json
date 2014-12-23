@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Tokyo",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "San Francisco",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Seattle",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "New York",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Los Angeles",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Paris",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "London",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "São Paulo",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Moscow",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Shanghai",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Beijing",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Sydney",
+    "lon": 0,
+    "lat": 0
+  },
+  {
+    "name": "Mexico City",
+    "lon": 0,
+    "lat": 0
+  }
+]
