@@ -6,62 +6,62 @@
   },
   {
     "lat": 37.783333,
-    "lon": 122.416667,
+    "lon": -122.416667,
     "name": "San Francisco"
   },
   {
     "lat": 47.616667,
-    "lon": 122.333333,
+    "lon": -122.333333,
     "name": "Seattle"
   },
   {
     "lat": 40.666667,
-    "lon": 73.933333,
+    "lon": -73.933333,
     "name": "New York"
   },
   {
     "lat": 34.05,
-    "lon": 118.25,
+    "lon": -118.25,
     "name": "Los Angeles"
   },
   {
-    "name": "Paris",
-    "lon": 0,
-    "lat": 0
+    "lat": 48.85,
+    "lon": 2.35,
+    "name": "Paris"
   },
   {
-    "name": "London",
-    "lon": 0,
-    "lat": 0
+    "lat": 51.5,
+    "lon": -0.133333,
+    "name": "London"
   },
   {
-    "name": "São Paulo",
-    "lon": 0,
-    "lat": 0
+    "lat": -23.55,
+    "lon": -46.633333,
+    "name": "São Paulo"
   },
   {
-    "name": "Moscow",
-    "lon": 0,
-    "lat": 0
+    "lat": 55.75,
+    "lon": 37.616667,
+    "name": "Moscow"
   },
   {
-    "name": "Shanghai",
-    "lon": 0,
-    "lat": 0
+    "lat": 31.2,
+    "lon": 121.5,
+    "name": "Shanghai"
   },
   {
-    "name": "Beijing",
-    "lon": 0,
-    "lat": 0
+    "lat": 39.9,
+    "lon": 116.4,
+    "name": "Beijing"
   },
   {
-    "name": "Sydney",
-    "lon": 0,
-    "lat": 0
+    "lat": -33.866667,
+    "lon": 151.216667,
+    "name": "Sydney"
   },
   {
-    "name": "Mexico City",
-    "lon": 0,
-    "lat": 0
+    "lat": 19.433333,
+    "lon": -99.133333,
+    "name": "Mexico City"
   }
 ]

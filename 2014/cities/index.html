@@ -39,7 +39,6 @@
       </div>
     </div> <!-- End wrapper -->
     <script>
-      // http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html
       var margin = {top: 20, right: 100, bottom: 20, left: 100};
       var width = 400 - margin.left - margin.right;
       var height = 1200 - margin.top - margin.bottom;
@@ -58,6 +57,9 @@
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+      // For data:
+      // https://en.wikipedia.org/wiki/List_of_cities_by_latitude
+      // http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html
       d3.json("cities.json", function(error, data) {
         if (error) { console.error(error); exit; }
 
