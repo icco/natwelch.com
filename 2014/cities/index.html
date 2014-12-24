@@ -82,9 +82,8 @@
             return d.name;
           })
           .attr("x", 10)
-          .attr("y", function(d) {
-            return y(d.lat);
-          });
+          .attr("y", function(d) { return y(d.lat); })
+          .attr("transform", "translate(5,5)");
 
         svg.append("g")
             .attr("class", "y axis")
