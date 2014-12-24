@@ -1,28 +1,28 @@
 [
   {
-    "name": "Tokyo",
+    "lat": 35.683333,
     "lon": 139.7,
-    "lat": 35.683333
+    "name": "Tokyo"
   },
   {
-    "name": "San Francisco",
-    "lon": 0,
-    "lat": 0
+    "lat": 37.783333,
+    "lon": 122.416667,
+    "name": "San Francisco"
   },
   {
-    "name": "Seattle",
-    "lon": 0,
-    "lat": 0
+    "lat": 47.616667,
+    "lon": 122.333333,
+    "name": "Seattle"
   },
   {
-    "name": "New York",
-    "lon": 0,
-    "lat": 0
+    "lat": 40.666667,
+    "lon": 73.933333,
+    "name": "New York"
   },
   {
-    "name": "Los Angeles",
-    "lon": 0,
-    "lat": 0
+    "lat": 34.05,
+    "lon": 118.25,
+    "name": "Los Angeles"
   },
   {
     "name": "Paris",
