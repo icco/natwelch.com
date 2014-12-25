@@ -41,11 +41,11 @@
     <script>
       var margin = {top: 20, right: 100, bottom: 20, left: 100};
       var width = 400 - margin.left - margin.right;
-      var height = 1200 - margin.top - margin.bottom;
+      var height = 1400 - margin.top - margin.bottom;
 
       var y = d3.scale.linear()
           .rangeRound([0, height])
-          .domain([-90, 90]);
+          .domain([90, -90]);
       var yAxis = d3.svg.axis()
           .scale(y)
           .ticks(19)
