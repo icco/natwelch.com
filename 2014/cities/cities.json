@@ -63,5 +63,10 @@
     "lat": 19.433333,
     "lon": -99.133333,
     "name": "Mexico City"
+  },
+  {
+    "lat": 59.333333,
+    "lon": 18.066667,
+    "name": "Stockholm"
   }
 ]
