@@ -1,6 +1,10 @@
-all:
+all: local
+
+.PHONY: update
+update:
 	git submodule init
 	git submodule update
 
-local:
+.PHONY: local
+local: update
 	python -m SimpleHTTPServer
