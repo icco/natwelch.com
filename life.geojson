@@ -169,7 +169,7 @@
         "coordinates": [ -0.146364, 51.494966 ]
       }
     },
-     {
+    {
       "type": "Feature",
       "properties": {
         "marker-symbol": "building",
@@ -179,6 +179,18 @@
       "geometry": {
         "type": "Point",
         "coordinates": [ -0.089098, 51.524436 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "125 Green St, Brooklyn, NY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 40.733660, -73.956634 ]
       }
     }
   ]
