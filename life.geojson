@@ -160,7 +160,7 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-symbol": "building",
+        "marker-symbol": "commercial",
         "marker-color": "2F8DB2",
         "Address": "St George Wharf, London SW8 2FH United Kingdom"
       },
@@ -227,6 +227,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [ -74.001119, 40.720780 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "campsite",
+        "marker-color": "2F8DB2",
+        "Address": "Camp Oljato"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -119.177290, 37.235525 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "campsite",
+        "marker-color": "2F8DB2",
+        "Address": "816 Timber Ridge Rd, Westwood, CA 96137"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -121.144571, 40.254915 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "campsite",
+        "marker-color": "2F8DB2",
+        "Address": "836 Lassen View Dr, Westwood, CA 96137"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -121.153650, 40.252598 ]
       }
     }
   ]
