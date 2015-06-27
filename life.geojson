@@ -162,6 +162,18 @@
       "properties": {
         "marker-symbol": "commercial",
         "marker-color": "2F8DB2",
+        "Address": "300 Roy St Seattle, WA 98109"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.350840, 47.625676 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "commercial",
+        "marker-color": "2F8DB2",
         "Address": "St George Wharf, London SW8 2FH United Kingdom"
       },
       "geometry": {
