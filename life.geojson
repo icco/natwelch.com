@@ -192,6 +192,30 @@
         "type": "Point",
         "coordinates": [ -73.956634, 40.733660 ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "122 Bay 38th Street, Brooklyn, NY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -73.990711, 40.596030 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "455 Broadway, New York, NY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -74.001119, 40.720780 ]
+      }
     }
   ]
 }
