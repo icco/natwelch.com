@@ -190,7 +190,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [ 40.733660, -73.956634 ]
+        "coordinates": [ -73.956634, 40.733660 ]
       }
     }
   ]
