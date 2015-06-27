@@ -160,6 +160,18 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "St George Wharf, London SW8 2FH United Kingdom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -0.126085, 51.485605 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-symbol": "industrial",
         "marker-color": "2F8DB2",
         "Address": "Belgrave House, 76 Buckingham Palace Rd, London SW1W 9TQ, United Kingdom"
