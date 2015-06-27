@@ -150,6 +150,18 @@
       "properties": {
         "marker-symbol": "industrial",
         "marker-color": "2F8DB2",
+        "Address": "601 Townsend St, San Francisco, CA 94103"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.401662, 37.771206 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
         "Address": "345 Spear St, San Francisco, CA 94105"
       },
       "geometry": {
