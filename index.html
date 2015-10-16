@@ -66,6 +66,14 @@
         transition: color .3s;
         color: #007BE6;
       }
+
+      #one {
+        display: block;
+      }
+
+      #two, #three {
+        display: none;
+      }
     </style>
 
     <!-- Webmention -->
@@ -77,7 +85,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="mw7 h-card sans-serif">
+    <div class="mw7 h-card bodoni">
       <header class="pvm phl">
       <div class="dt">
         <div class="dtc w3 prn">
@@ -89,31 +97,34 @@
       </div>
       </header>
       <main class="phl ptn pbl lh-copy">
+      <section id="one">
       <p>Nat currently works at <a href="http://littlebits.cc">LittleBits</a>. While his official title there is &#8220;Technical Lead&#8221;, Nat prefers to go by the title &#8220;Software Reconnaissance Engineer&#8221;.</p>
 
       <p>In the past, Nat attended the <a href="https://www.recurse.com/">Recuse Center</a> in NYC, worked at Google in three offices (Mountain View, San Francisco and London), and built websites for <a href="https://www.ifixit.com/">iFixit</a> and <a href="http://getpunchd.com/">Punchd</a> in San Luis Obispo. He also has had other jobs at places like <a href="https://www.adobe.com/">Adobe</a>, <a href="https://en.wikipedia.org/wiki/Pacific_Skyline_Council#Camps">Oljato</a> and <a href="http://www.sonoma-county.org/isd/">Sonoma County</a>.</p>
 
       <p>At work and while at play, Nat loves to explore the interaction between art, communication, technology and design using software. When he is not coding, Nat tends to be listening to music and wandering a city looking for a coffee shop to read and write in.</p>
+      </section>
 
-      <!-- NOTE: Maybe move these into seperate tabbed things? -->
-
+      <section id="two">
       <div>
-      <p>Nat is scattered across the internet:</p>
-      <ul>
-        <li>nat@natwelch.com</li>
-        <li>icco on <a href="http://github.com/icco" rel="me">Github</a>, <a href="irc://chat.freenode.net/#devcloud">Freenode</a> &amp; <a href="http://twitter.com/icco" rel="me">Twitter</a></li>
-        <li>Nat W on <a href="http://www.flickr.com/photos/icco/" rel="me">Flickr</a></li>
-      </ul>
+        <p>Nat is scattered across the internet:</p>
+        <ul>
+          <li>nat@natwelch.com</li>
+          <li>icco on <a href="http://github.com/icco" rel="me">Github</a>, <a href="irc://chat.freenode.net/#devcloud">Freenode</a> &amp; <a href="http://twitter.com/icco" rel="me">Twitter</a></li>
+          <li>Nat W on <a href="http://www.flickr.com/photos/icco/" rel="me">Flickr</a></li>
+        </ul>
       </div>
 
       <div>
-      <p>You can support his projects:</p>
-      <ul>
-        <li><a href="https://gratipay.com/~icco/" rel="me">gratipay/icco</a></li>
-        <li>BTC: <a class="coinbase-button" data-code="dc772242021f52447d3d5ceba5559e2a" data-button-style="custom_small" href="https://www.coinbase.com/checkouts/dc772242021f52447d3d5ceba5559e2a">1DLPvAutrvdEjnmne&shy;HoYcP6o5yDCtx9u6k</a>
-      </ul>
+        <p>You can support his projects:</p>
+        <ul>
+          <li><a href="https://gratipay.com/~icco/" rel="me">gratipay/icco</a></li>
+          <li>BTC: <a class="coinbase-button" data-code="dc772242021f52447d3d5ceba5559e2a" data-button-style="custom_small" href="https://www.coinbase.com/checkouts/dc772242021f52447d3d5ceba5559e2a">1DLPvAutrvdEjnmne&shy;HoYcP6o5yDCtx9u6k</a>
+        </ul>
       </div>
+      </section>
 
+      <section id="three">
       <div class="mvm">
         <p class="di">Some projects Nat has worked on include</p>
         <ul class="sentence">
@@ -144,6 +155,7 @@
           <li><a href="https://github.com/icco/twomonths">Two Months</a></li>
         </ul>
       </div>
+      </section>
       </main>
     </div>
 
@@ -155,7 +167,6 @@
 
       ga('create', 'UA-333449-2', 'auto');
       ga('send', 'pageview');
-
     </script>
     <!-- Copyright Nat Welch 2003 - 2015 -->
   </body>
