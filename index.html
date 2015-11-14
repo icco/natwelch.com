@@ -67,6 +67,11 @@
         color: #007BE6;
       }
 
+      a.btn {
+        cursor: pointer;
+      }
+
+      /* Starting layou */
       #one {
         display: block;
       }
@@ -85,7 +90,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="mw7 h-card bodoni">
+    <div class="mw6 h-card bodoni center tj">
       <header class="pvm phl">
       <div class="dt">
         <div class="dtc w3 prn">
@@ -156,13 +161,13 @@
         </ul>
       </div>
       </section>
-      <div>
-        <ul>
-          <li><a onclick="one()">One</a></li>
-          <li><a onclick="two()">Two</a></li>
-          <li><a onclick="three()">Three</a></li>
+      <section>
+        <ul class="list phn w-100">
+          <li class="dib tc fl w-33"><a class="btn" onclick="one()">About</a></li>
+          <li class="dib tc fl w-33"><a class="btn" onclick="two()">Links</a></li>
+          <li class="dib tc fl w-33"><a class="btn" onclick="three()">Projects</a></li>
         </ul>
-      </div>
+      </section>
       </main>
     </div>
 
