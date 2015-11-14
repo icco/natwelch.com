@@ -7,7 +7,7 @@
     <title>Nat Welch dot com</title>
 
     <!-- Meta SEO Shit -->
-    <meta name="description" content="The homepage of Nathaniel 'Nat' Welch." />
+    <meta name="description" content="Nathaniel 'Nat' Welch, Software Reconnaissance Engineer extrordinair." />
     <meta name="keywords" content="Nat, welch, natwelch, nathaniel, nathanielwelch, dehn, code, student, developer, software" />
     <meta name="author" content="Nat Welch">
 
@@ -21,7 +21,7 @@
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/tachyons.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/tachyons.min.css?date=20151014">
     <style>
       img {
         display: block;
@@ -66,6 +66,19 @@
         transition: color .3s;
         color: #007BE6;
       }
+
+      a.btn {
+        cursor: pointer;
+      }
+
+      /* Starting layout */
+      #one {
+        display: block;
+      }
+
+      #two, #three {
+        display: none;
+      }
     </style>
 
     <!-- Webmention -->
@@ -77,42 +90,51 @@
     <![endif]-->
   </head>
   <body>
-    <div class="mw7 h-card sans-serif">
-      <header class="pvm phl">
-      <div class="dt">
-        <div class="dtc w3 prn">
-          <img src="/i/natwelchlogo2.png" class="" alt="Nat? Nat. Nat!">
-        </div>
-        <div class="dtc v-mid w-100 plm">
-          <h1 class="f2 ttu lh-title mvn">Nat</h1>
-          <h1 class="f2 ttu lh-title mvn">Welch</h1>
-        </div>
+    <div class="mw6 h-card bodoni center tj">
+      <header class="pvm phl mtm">
+      <div class="db center tc lh-title book">
+        <img src="/i/natwelchlogo2.png" class="v-mid mhn di phn w3" alt="Nat? Nat. Nat!">
       </div>
+
+      <nav class="">
+      <ul class="list phn w-100">
+        <li class="pvs mvm dib tc fl w-33"><a class="btn" onclick="one()">About</a></li>
+        <li class="pvs mvm dib tc fl w-33"><a class="btn" onclick="two()">Links</a></li>
+        <li class="pvs mvm dib tc fl w-33"><a class="btn" onclick="three()">Projects</a></li>
+      </ul>
+      </nav>
       </header>
+
       <main class="phl ptn pbl lh-copy">
-      <p>Nat currently works at <a href="http://littlebits.cc">LittleBits</a>. While his official title there is &#8220;Technical Lead&#8221;, Nat prefers to go by the title &#8220;Software Reconnaissance Engineer&#8221;.</p>
+      <section id="one">
+      <p>Nat Welch currently works at <a href="http://littlebits.cc">littleBits</a>. While his official title there is &#8220;Technical Lead&#8221;, Nat prefers to go by the title &#8220;Software Reconnaissance Engineer&#8221;.</p>
 
       <p>In the past, Nat attended the <a href="https://www.recurse.com/">Recuse Center</a> in NYC, worked at Google in three offices (Mountain View, San Francisco and London), and built websites for <a href="https://www.ifixit.com/">iFixit</a> and <a href="http://getpunchd.com/">Punchd</a> in San Luis Obispo. He also has had other jobs at places like <a href="https://www.adobe.com/">Adobe</a>, <a href="https://en.wikipedia.org/wiki/Pacific_Skyline_Council#Camps">Oljato</a> and <a href="http://www.sonoma-county.org/isd/">Sonoma County</a>.</p>
 
       <p>At work and while at play, Nat loves to explore the interaction between art, communication, technology and design using software. When he is not coding, Nat tends to be listening to music and wandering a city looking for a coffee shop to read and write in.</p>
+      </section>
 
+      <section id="two">
       <div>
-      <p>Nat is scattered across the internet:</p>
-      <ul>
-        <li>nat@natwelch.com</li>
-        <li>icco on <a href="http://github.com/icco" rel="me">Github</a>, <a href="irc://chat.freenode.net/#devcloud">Freenode</a> &amp; <a href="http://twitter.com/icco" rel="me">Twitter</a></li>
-        <li>Nat W on <a href="http://www.flickr.com/photos/icco/" rel="me">Flickr</a></li>
-      </ul>
+        <p>Nat is scattered across the internet:</p>
+        <ul>
+          <li>nat@natwelch.com</li>
+          <li>icco on <a href="http://github.com/icco" rel="me">Github</a>, <a href="irc://chat.freenode.net/#devcloud">Freenode</a> &amp; <a href="http://twitter.com/icco" rel="me">Twitter</a></li>
+          <li>Nat W on <a href="http://www.flickr.com/photos/icco/" rel="me">Flickr</a></li>
+        </ul>
       </div>
 
       <div>
-      <p>You can support his projects:</p>
-      <ul>
-        <li><a href="https://gratipay.com/~icco/" rel="me">gratipay/icco</a></li>
-        <li>BTC: <a class="coinbase-button" data-code="dc772242021f52447d3d5ceba5559e2a" data-button-style="custom_small" href="https://www.coinbase.com/checkouts/dc772242021f52447d3d5ceba5559e2a">1DLPvAutrvdEjnmne&shy;HoYcP6o5yDCtx9u6k</a>
-      </ul>
+        <p>You can support his projects:</p>
+        <ul>
+          <li><a href="https://gratipay.com/~icco/" rel="me">gratipay/icco</a></li>
+          <li><a href="https://cash.me/$icco" rel="me">cash.me/$icco</a></li>
+          <li><a class="coinbase-button" data-code="dc772242021f52447d3d5ceba5559e2a" data-button-style="custom_small" href="https://www.coinbase.com/checkouts/dc772242021f52447d3d5ceba5559e2a">Bitcoin</a>
+        </ul>
       </div>
+      </section>
 
+      <section id="three">
       <div class="mvm">
         <p class="di">Some projects Nat has worked on include</p>
         <ul class="sentence">
@@ -143,9 +165,30 @@
           <li><a href="https://github.com/icco/twomonths">Two Months</a></li>
         </ul>
       </div>
+      </section>
       </main>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      function one() {
+        $('#two').hide();
+        $('#three').hide();
+        $('#one').show();
+      }
+
+      function two() {
+        $('#one').hide();
+        $('#three').hide();
+        $('#two').show();
+      }
+
+      function three() {
+        $('#one').hide();
+        $('#two').hide();
+        $('#three').show();
+      }
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -154,7 +197,6 @@
 
       ga('create', 'UA-333449-2', 'auto');
       ga('send', 'pageview');
-
     </script>
     <!-- Copyright Nat Welch 2003 - 2015 -->
   </body>
