@@ -256,6 +256,18 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "362 15th Street, Brooklyn, NY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -73.9865907, 40.66308 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-symbol": "campsite",
         "marker-color": "2F8DB2",
         "Address": "Camp Oljato"
