@@ -41,7 +41,7 @@
         .range([height, 0]);
 
       var xFn = function(d) { return d; };
-      var yFn = function(d) { return (10000 / (d * 8760)) * 100; };
+      var yFn = function(d) { return +((10000 / (d * 8760)) * 100); };
 
       var xAxis = d3.svg.axis()
         .scale(x)
