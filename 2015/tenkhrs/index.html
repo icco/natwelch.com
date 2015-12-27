@@ -28,26 +28,19 @@
   <body>
     <script src="d3.min.js"></script>
     <script>
-      function range(start, count) {
-        return Array.apply(0, Array(count))
-        .map(function (element, index) { 
-          return index + start;  
-        });
-      }
-
       var margin = {top: 20, right: 20, bottom: 30, left: 50},
       width = 960 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
       var parseDate = d3.time.format("%d-%m-%Y").parse;
 
-      var x = d3.time.scale()
+      var x = d3.scale.linear()
         .range([0, width]);
 
       var y = d3.scale.linear()
         .range([height, 0]);
 
-      var xFn = function(d) { return parseDate("01-01-" + (1988 + d)); };
+      var xFn = function(d) { return d; };
       var yFn = function(d) { return (10000 / (d * 8760)) * 100; };
 
       var xAxis = d3.svg.axis()
@@ -68,7 +61,10 @@
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      var data = range(5, 95);
+      var data = Array.apply(0, Array(95))
+        .map(function (element, index) { 
+          return index + 5;  
+        });
 
       x.domain(d3.extent(data, xFn));
       y.domain(d3.extent(data, yFn));
