@@ -300,6 +300,18 @@
         "type": "Point",
         "coordinates": [ -121.153650, 40.252598 ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "601 W 26th St, New York, NY 10001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -74.006420, 40.751536 ]
+      }
     }
   ]
 }
