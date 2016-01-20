@@ -17,7 +17,7 @@ var Nat = {
 };
 
 $(function() {
-  window.setInterval(function(){ Nat.updateAge(); }, 500);
+  window.setInterval(function(){ Nat.updateAge(); }, 50);
 });
 
 // Google Anal
