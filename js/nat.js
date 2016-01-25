@@ -16,8 +16,25 @@ var Nat = {
   },
 };
 
-$(function() {
+$(document).ready(function() {
   window.setInterval(function(){ Nat.updateAge(); }, 50);
+
+  $.getJSON('https://writing.natwelch.com/posts.json').success(function(data) {
+    for (var i = 0; i < 14; i++) {
+      console.log(data[i]);
+      var li = $('<li>');
+      var dt = $('<time>');
+      dt.attr('datetime', data[i].date);
+      dt.text(moment(data[i].date).fromNow());
+      var a = $('<a>');
+      a.attr('href', "https://writing.natwelch.com/post/" + data[i].id);
+      a.text(data[i].title);
+      li.append(dt);
+      li.append(": ");
+      li.append(a);
+      $('#posts').append(li);
+    }
+  });
 });
 
 // Google Anal
