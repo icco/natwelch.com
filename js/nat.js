@@ -20,7 +20,7 @@ $(document).ready(function() {
   window.setInterval(function(){ Nat.updateAge(); }, 50);
 
   $.getJSON('https://writing.natwelch.com/posts.json').success(function(data) {
-    for (var i = 0; i < 14; i++) {
+    for (var i = 0; i < 6; i++) {
       console.log(data[i]);
       var li = $('<li>');
       var dt = $('<time>');
