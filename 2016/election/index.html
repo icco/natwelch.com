@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Time till 2016 Election is Done</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="tachyons.min.css?date=20160602">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script>
+      function update() {
+        day = new Date(2016,10,08,06);
+
+        var now = new Date();
+        var duration = day - now;
+        var years = duration / 86400000;
+
+        var majorMinor = years.toFixed(5).toString();
+
+        $('#time').text(majorMinor);
+      };
+
+      $(document).ready(function() {
+        window.setInterval(function(){ update(); }, 50);
+      });
+    </script>
+  </head>
+  <body class="sans-serif">
+    <section class="cf">
+    <div class="f3 lh-copy ml4">
+        <p class="mb0" id="time">158</p>
+        <p class="mv0">
+        days until the 2016 preseidential election.
+        </p>
+      </div>
+    </div>
+    </section>
+    <!-- Copyright Nat Welch 2003 - 2016 -->
+  </body>
+</html>
