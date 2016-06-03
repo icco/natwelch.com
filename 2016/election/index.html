@@ -20,10 +20,11 @@
         var majorMinor = years.toFixed(5).toString();
 
         $('#time').text(majorMinor);
+        window.setTimeout(update, 50);
       };
 
       $(document).ready(function() {
-        window.setInterval(function(){ update(); }, 50);
+         update();
       });
     </script>
   </head>
