@@ -14,9 +14,7 @@ We started by looking for a quote. Something that expressed the relationship you
  
 Speaking of which, we are both impressed by all you have done in your life. Your success, perseverance, calm and professionalism in the workplace is inspiring. Now that you're retired, we're excited to see our wonderful parents relaxing. It's funny though, you're ability to shut off when you were not at work was always impressive, so seeing you relaxed now isn't surprising or unusual. You've always had that calm demeanor.
 
-Anyways, we'd like to leave you with some photos.
-
-
+So thanks for everything! Happy Father's day! Know that you have two sons that love and miss you very much.
 
 Lots of love,
 Nathaniel & Travis
