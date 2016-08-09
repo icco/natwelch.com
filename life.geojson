@@ -304,6 +304,18 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-symbol": "campsite",
+        "marker-color": "2F8DB2",
+        "Address": "482 University Ave, Los Altos Hills, CA 94022"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.119248, 37.374006 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-symbol": "industrial",
         "marker-color": "2F8DB2",
         "Address": "601 W 26th St, New York, NY 10001"
