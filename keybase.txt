@@ -1,0 +1,71 @@
+==================================================================
+https://keybase.io/icco
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://natwelch.com
+  * I am icco (https://keybase.io/icco) on keybase.
+  * I have a public key with fingerprint 27E1 EC35 A2C3 8223 7909  4DB5 A931 B605 C4EE F77F
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01013274937fe11baa2f69ede3b0e7ffdc583e3fb75b272efe30f8dff67d1c7102760a",
+            "fingerprint": "27e1ec35a2c3822379094db5a931b605c4eef77f",
+            "host": "keybase.io",
+            "key_id": "a931b605c4eef77f",
+            "kid": "01013274937fe11baa2f69ede3b0e7ffdc583e3fb75b272efe30f8dff67d1c7102760a",
+            "uid": "7a4460896fedb79f48863581045c3f19",
+            "username": "icco"
+        },
+        "service": {
+            "hostname": "natwelch.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471248694,
+    "expire_in": 157680000,
+    "prev": "be0417916562aa6113961fd522ec6ff48b584612299e0991678deae5c4dc6203",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.55
+Comment: https://keybase.io/crypto
+
+yMK6AnicrVJtbBRFGL5yFqShllQ+gmkMbkig5go7s7szu2dtFSvEsyRWIKUQPPZj
+5m7tcbve7fVaGmwRtLahPYqmEhTh0gTaWOUr5dR4BEpBCL+E1KSWqCQQaTTaNrSN
+rYnONvjPn86fybzv8zzzPG/ewXyvJy+nF1zIHfx9uinn5uUPEp7qsw2okdMso4Hz
+N3K1ZO4iEYPEnWCtaXB+jgc8ECAWFQFTAoCmqpAihRhE0HiCKTV0SRaIQDUsaRBD
+QonAU9mgFGED6BjwECNe5XwcNaMhErNjZtRhshATQHRBUqEuyBAKWOEV0dAkVRGA
+hnhJFwmhGFNGDFtxl8HMaWqcrDUtVmOP4Jy9/8D/z74Tc3JYFUXEywqixNCwQkVZ
+RoIkA16UdIECxQXGSSyq7iYMbeq6xe31caxSZ+rEHaqb4lE3qjpJEtHDa3VrN+PZ
+McuxdCvCOmHHseN+l+k02C40SbTgI5GgZkYNNkPGqCOxuGlFOT9gSN0xXVUgYgBF
+GSmijyP1thkjQdNFSBjJPDvuP6SOSWqEFwFWAJIQVFUEgKAgQA0JQqIjyoJpkiwi
+AKGiEF5hOCwbRCVswoaOIC9wbqy3ohbnx8ymGmKScTPEMiVihNs7cOnOY56cPM/8
+3HnubnnyFi7+d+PWTC3ypLzXpcnJip0/BJ5Mn3zwwtldx1Yue9vpK/1FXnR39dMD
+n/wprxysmVh9pHey9dLxz8/QFaWtyYmiQFvjb98FaOpU2l+cSG57ZWP3+1eXF6kz
++zpvb8h/blXl/vT5N7KRJZOz1XZw+n6g6++qru9zfz5Z0fnNCmv/r+OrcoqNzt5N
+m86d89Walr6uN/POZ6VIK2hJfVRdMf+pofqZgp4r4UAmWRPaurBvXz9dnkq3tN0I
+ZvK1wsrEwdNHxYfD2S+y4dc3e+5Ij7eNv3Rt7N717ERT9asNXzVtvfnMrfb+vlR7
+xYJQfPZCqmi0ZORH8uECkR8t9MpbmsvH/B/PRA75dvx068DhxR1l5QcEsQxvy25/
+Yovn/g7bnlJH53XfLhn59I/3XnZ6rlYdLHpwZaTjr5qmgXDLVPGywkav+Gbz9qWV
+3afX8EPjrXdLQnm5Bd8Op9NLjvWMO89P2+uT/kzzxcxr/SXvDkGt7OuNG2b3PDzc
+7i2/8aKy+VDXPevZ4+svjlV9uae+48TwP/ZAffk=
+=6CuI
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/icco
+
+==================================================================
