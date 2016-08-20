@@ -73,31 +73,33 @@
     </article>
     <footer>
       <style>
-        .count-text {
-          display: block;
-          font-size: 12vw;
-          font-weight: 600;
-        }
-        .count-text > span {
-          min-width: 25%;
-          text-align: right;
-          display: inline-block;
-          font-weight: 700;
-        }
         .count-text:not(:last-of-type):after {
           content: ',';
         }
-        .subtext {
-          margin-left: 10%;
-          font-size: 2.8vw;
-        }
-        @media screen and (min-aspect-ratio: 1/1) {
+        @media screen and (max-width: 1000px) {
           .count-text {
-            font-size: 11vh;
+            display: block;
+            font-size: 12vw;
+            font-weight: 600;
+          }
+          .count-text > span {
+            min-width: 25%;
+            text-align: right;
+            display: inline-block;
+            font-weight: 700;
           }
           .subtext {
-            margin-left: 15%;
-            font-size: 2.8vh;
+            margin-left: 10%;
+            font-size: 2.8vw;
+          }
+          @media screen and (min-aspect-ratio: 1/1) {
+            .count-text {
+              font-size: 11vh;
+            }
+            .subtext {
+              margin-left: 15%;
+              font-size: 2.8vh;
+            }
           }
         }
       </style>
