@@ -3,13 +3,50 @@
   <head>
     <title>2016 Election</title>
     <link rel="stylesheet" type="text/css" href="tachyons.min.css?date=20160818">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <meta http-equiv="refresh" content="600">
 
     <style>
+      body {
+        font-family: 'Comfortaa', cursive;
+        color: #357EDD;
+        background-color: #111111;
+      }
+
       @media screen and (min-width: 30em) {
         .f-headline-ns {
           font-size: 10rem;
+        }
+      }
+
+      .count-text:after {
+          content: ", ";
+      }
+
+      .count-text:last-child:after {
+          content: "";
+      }
+
+      .count-text:nth-last-child(2):after {
+          content: " and ";
+      }
+
+      @media screen and (max-width: 1000px) {
+        .count-text {
+          display: block;
+          font-size: 12vw;
+          font-weight: 600;
+        }
+        .count-text > span {
+          min-width: 25%;
+          text-align: right;
+          display: inline-block;
+          font-weight: 700;
+        }
+        .subtext {
+          margin-left: 10%;
+          font-size: 2.8vw;
         }
       }
     </style>
@@ -49,8 +86,7 @@
                 weeks: $counter.find('#weeks > span'),
                 days: $counter.find('#days > span'),
                 hours: $counter.find('#hours > span'),
-                minutes: $counter.find('#minutes > span'),
-                seconds: $counter.find('#seconds > span')
+                minutes: $counter.find('#minutes > span')
               };
           window.hfaGlobals = hfaGlobals;
           update();
@@ -58,7 +94,7 @@
       );
     </script>
   </head>
-  <body class="sans-serif" style="color:#FFFFFF; background-color:#00449E;">
+  <body>
     <article class="pa3 pa5-ns">
       <h1 class="f1 f-headline-ns mb4">
         <span id="counter">
@@ -66,43 +102,9 @@
           <span id="days" class="count-text"><span>00</span> days</span>
           <span id="hours" class="count-text"><span>00</span> hours</span>
           <span id="minutes" class="count-text"><span>00</span> minutes</span>
-          <span id="seconds" class="count-text"><span>00</span> seconds</span>
         </span>
       </h1>
       <p class="f4 mb4 ttu tracked subtext">until the 2016 presidential election.</p>
     </article>
-    <footer>
-      <style>
-        .count-text:not(:last-of-type):after {
-          content: ',';
-        }
-        @media screen and (max-width: 1000px) {
-          .count-text {
-            display: block;
-            font-size: 12vw;
-            font-weight: 600;
-          }
-          .count-text > span {
-            min-width: 25%;
-            text-align: right;
-            display: inline-block;
-            font-weight: 700;
-          }
-          .subtext {
-            margin-left: 10%;
-            font-size: 2.8vw;
-          }
-          @media screen and (min-aspect-ratio: 1/1) {
-            .count-text {
-              font-size: 11vh;
-            }
-            .subtext {
-              margin-left: 15%;
-              font-size: 2.8vh;
-            }
-          }
-        }
-      </style>
-    </footer>
   </body>
 </html>
