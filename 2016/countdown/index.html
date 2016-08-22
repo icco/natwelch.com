@@ -16,33 +16,93 @@
 
     <script>
       function update() {
-        day = new Date(2016,10,08,22);
-        var now = new Date();
-        var t = day - now;
+        var day = new Date(2016,10,08,22),
+            now = new Date(),
+            t = day - now,
+            seconds = Math.floor((t/1000) % 60),
+            minutes = Math.floor((t/1000/60) % 60),
+            hours = Math.floor((t/(1000*60*60)) % 24),
+            days = Math.floor((t/(1000*60*60*24)) % 7),
+            weeks = Math.floor(t/(1000*60*60*24*7)),
 
-        var seconds = Math.floor((t/1000) % 60);
-        var minutes = Math.floor((t/1000/60) % 60);
-        var hours = Math.floor((t/(1000*60*60)) % 24);
-        var days = Math.floor((t/(1000*60*60*24)) % 7);
-        var weeks = Math.floor(t/(1000*60*60*24*7));
+            weeks_str = weeks.toString(),
+            days_str = days.toString(),
+            hours_str = hours.toString(),
+            minutes_str = minutes.toString();
+            seconds_str = seconds.toString();
 
-        var weeks_str = weeks.toString();
-        var days_str = days.toString();
-        var hours_str = hours.toString();
-        var minutes_str = minutes.toString();
-
-        // "00 weeks, 0 days, 00 hours and 00 minutes"
-        $('#counter').text(weeks_str + " weeks, " + days_str + " days, " + hours_str + " hours and " + minutes_str + " minutes");
+        // set each text value
+        window.hfaGlobals.weeks.text(weeks_str);
+        window.hfaGlobals.days.text(days_str);
+        window.hfaGlobals.hours.text(hours_str);
+        window.hfaGlobals.minutes.text(minutes_str);
+        window.hfaGlobals.seconds.text(seconds_str);
         window.setTimeout(update, 50);
       };
 
-      $(document).ready(function() { update(); });
+      $(document).ready(
+        function() {
+          // i'm an idiot and forget how to scope these elems to allow
+          // update() to see them, so hackathon ftw...
+          var $counter = $('#counter'),
+              hfaGlobals = {
+                weeks: $counter.find('#weeks > span'),
+                days: $counter.find('#days > span'),
+                hours: $counter.find('#hours > span'),
+                minutes: $counter.find('#minutes > span'),
+                seconds: $counter.find('#seconds > span')
+              };
+          window.hfaGlobals = hfaGlobals;
+          update();
+        }
+      );
     </script>
   </head>
   <body class="sans-serif" style="color:#FFFFFF; background-color:#00449E;">
     <article class="pa3 pa5-ns">
-      <h1 class="f1 f-headline-ns mb4"><span id="counter">00 weeks, 0 days, 00 hours and 00 minutes</span></h1>
-      <p class="f4 mb4 ttu tracked">until the 2016 presidential election.</p>
+      <h1 class="f1 f-headline-ns mb4">
+        <span id="counter">
+          <span id="weeks" class="count-text"><span>00</span> weeks</span>
+          <span id="days" class="count-text"><span>00</span> days</span>
+          <span id="hours" class="count-text"><span>00</span> hours</span>
+          <span id="minutes" class="count-text"><span>00</span> minutes</span>
+          <span id="seconds" class="count-text"><span>00</span> seconds</span>
+        </span>
+      </h1>
+      <p class="f4 mb4 ttu tracked subtext">until the 2016 presidential election.</p>
     </article>
+    <footer>
+      <style>
+        .count-text:not(:last-of-type):after {
+          content: ',';
+        }
+        @media screen and (max-width: 1000px) {
+          .count-text {
+            display: block;
+            font-size: 12vw;
+            font-weight: 600;
+          }
+          .count-text > span {
+            min-width: 25%;
+            text-align: right;
+            display: inline-block;
+            font-weight: 700;
+          }
+          .subtext {
+            margin-left: 10%;
+            font-size: 2.8vw;
+          }
+          @media screen and (min-aspect-ratio: 1/1) {
+            .count-text {
+              font-size: 11vh;
+            }
+            .subtext {
+              margin-left: 15%;
+              font-size: 2.8vh;
+            }
+          }
+        }
+      </style>
+    </footer>
   </body>
 </html>
