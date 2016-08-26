@@ -67,7 +67,6 @@
             seconds_str = seconds.toString();
 
         // set each text value
-        window.hfaGlobals.weeks.text(weeks_str);
         window.hfaGlobals.days.text(days_str);
         window.hfaGlobals.hours.text(hours_str);
         window.hfaGlobals.minutes.text(minutes_str);
@@ -81,7 +80,6 @@
           // update() to see them, so hackathon ftw...
           var $counter = $('#counter'),
               hfaGlobals = {
-                weeks: $counter.find('#weeks > span'),
                 days: $counter.find('#days > span'),
                 hours: $counter.find('#hours > span'),
                 minutes: $counter.find('#minutes > span')
