@@ -53,16 +53,14 @@
 
     <script>
       function update() {
-        var day = new Date(2016,10,08,22),
+        var day = new Date(2016,08,23,22),
             now = new Date(),
             t = day - now,
             seconds = Math.floor((t/1000) % 60),
             minutes = Math.floor((t/1000/60) % 60),
             hours = Math.floor((t/(1000*60*60)) % 24),
-            days = Math.floor((t/(1000*60*60*24)) % 7),
-            weeks = Math.floor(t/(1000*60*60*24*7)),
+            days = Math.floor((t/(1000*60*60*24))),
 
-            weeks_str = weeks.toString(),
             days_str = days.toString(),
             hours_str = hours.toString(),
             minutes_str = minutes.toString();
@@ -98,13 +96,12 @@
     <article class="pa3 pa5-ns">
       <h1 class="f1 f-headline-ns mb4">
         <span id="counter">
-          <span id="weeks" class="count-text"><span>00</span> weeks</span>
           <span id="days" class="count-text"><span>00</span> days</span>
           <span id="hours" class="count-text"><span>00</span> hours</span>
           <span id="minutes" class="count-text"><span>00</span> minutes</span>
         </span>
       </h1>
-      <p class="f4 mb4 ttu tracked subtext">until the 2016 presidential election.</p>
+      <p class="f4 mb4 ttu tracked subtext">until early voting starts for the 2016 general election.</p>
     </article>
   </body>
 </html>
