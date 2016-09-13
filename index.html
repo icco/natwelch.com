@@ -21,12 +21,9 @@
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/tachyons.min.css?date=20151014">
-    <style>
-      body {
-        font-size: 1.35rem;
-      }
+    <link rel="stylesheet" href="/css/tachyons.min.css?v=4.3.1"/>
 
+    <style>
       img {
         display: block;
       }
@@ -60,6 +57,7 @@
       a, a:link, a:visited {
         transition: color .4s;
         color: #265C83;
+        cursor: pointer;
       }
 
       a:hover {
@@ -70,115 +68,90 @@
         transition: color .3s;
         color: #007BE6;
       }
-
-      a.btn {
-        cursor: pointer;
-      }
-
-      /* Starting layout */
-      #one {
-        display: block;
-      }
-
-      #two, #three {
-        display: none;
-      }
     </style>
 
     <!-- Webmention -->
     <!-- https://writing.natwelch.com/ -->
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body class="sans-serif">
-    <header class="pvx phm pal-m paxl-l oh pos-rel">
-    <div class="dt wi-100">
-      <div class="dtc wi-50 v-mid">
-        <img src="/i/dots.png" class="v-mid mhn dib-ns phn w4-ns dn" alt="Nat? Nat. Nat!">
-        <div class="dib v-mid pan">
-          <h1 class="normal measure lh-copy man">Nat Welch</h1>
-          <h2 class="normal ttu f4 man">Software Reconnaissance Engineer</h2>
+    <header class="pv0 ph3 pa4-m pa5-l oh pos-rel mt0-ns mt4">
+      <div class="dt wi-100">
+        <div class="dtc wi-50 v-mid">
+          <img src="/i/dots.png" class="v-mid mh0-ns dib-ns center ph0 w4" alt="Nat? Nat. Nat!">
+          <div class="dib v-mid pa0">
+            <h1 class="mb2 tracked tl-ns tc w-100">Nat Welch</h1>
+            <h2 class="fw2 mt0 tracked tl-ns tc w-100">Software Reconnaissance Engineer</h2>
+          </div>
         </div>
       </div>
-    </div>
     </header>
 
     <main>
+    <section class="cf lh-copy">
+      <div class="fl-l wi-50-l ph3 pv4 pa3-m pa5-l">
+        <h1 class="fw1 tracked">What</h1>
 
-    <section class="cf">
-    <div class="fl-xl wi-50-xl phm pvl pal-m paxl-l plxl-xl">
-      <div>
-        <h1 class="small ttu fw4">What</h1>
-        <p class="f3 f2-m f1-l f2-xl measure lh-copy mw8-xl mtm">
+        <p class="f3 f2-l measure w8-l mt3">
         Promoting communication, creativity and sharing on the Internet.
         </p>
-        <p class="f5 f2-ns mw8 measure lh-copy">
+        <p class="f3 f2-l measure w8-l mt3">
         Automating things and building software tools to make maintaining the internet easier.
         </p>
-        <p class="f5 f2-ns mw7 measure lh-copy">
+        <p class="f3 f2-l measure w8-l mt3">
         Advocating for transparency, remix culture and open source software.
         </p>
       </div>
-    </div>
     </section>
 
-    <section class="cf">
-    <div class="fl-xl wi-50-xl phm pvl pal-m paxl-l plxl-xl">
-      <div>
-        <h1 class="small ttu fw4">Who</h1>
-        <p class="f3 f2-m f1-l f2-xl measure lh-copy mw8-xl mtm">
+    <section class="cf lh-copy">
+      <div class="fl-l wi-50-l ph3 pv4 pa3-m pa5-l">
+        <h1 class="fw1 tracked">Who</h1>
+        <p class="f3 f2-l measure w8-l mt3">
         A <span id="age">28</span> year old from the San Francisco Bay Area, now living in Brooklyn and working for <a href="https://hillaryclinton.com">Hillary For America</a>.
         </p>
       </div>
-    </div>
     </section>
 
-    <section class="cf">
-    <div class="fl-xl wi-50-xl phm pvl pal-m paxl-l plxl-xl">
-      <div>
-        <h1 class="small ttu fw4">Writing</h1>
-        <p class="f3 f2-m f1-l f2-xl measure lh-copy mw8-xl mtm">
+    <section class="cf lh-copy">
+      <div class="fl-l wi-50-l ph3 pv4 pa3-m pa5-l">
+        <h1 class="fw1 tracked">Writing</h1>
+        <p class="f3 f2-l measure w8-l mt3">
         I write once or twice a week at <a href="https://writing.natwelch.com" rel="me">writing.natwelch.com</a>.
         </p>
 
-        <ul id="posts" class="f5 f2-ns mw7 measure lh-copy">
+        <ul id="posts" class="f3 f2-l measure w8-l mt3">
         </ul>
       </div>
-    </div>
     </section>
 
-    <section class="cf">
-    <div class="fl-xl wi-50-xl phm pvl pal-m paxl-l plxl-xl">
-      <div>
-        <h1 class="small ttu fw4">Projects</h1>
-        <p class="f5 f2-ns mw7 measure lh-copy">
+    <section class="cf lh-copy">
+      <div class="fl-l wi-50-l ph3 pv4 pa3-m pa5-l">
+        <h1 class="fw1 tracked">Projects</h1>
+
+        <p class="f3 f2-l measure w8-l mt3">
         I post photos with varying consistency on <a href="https://www.flickr.com/photos/icco/">Flickr</a>.
         </p>
 
-        <p class="f5 f2-ns mw7 measure lh-copy">
+        <p class="f3 f2-l measure w8-l mt3">
         I try to be randomly clever on <a href="https://twitter.com/icco">Twitter</a>.
         </p>
 
-        <p class="f5 f2-ns mw7 measure lh-copy">
+        <p class="f3 f2-l measure w8-l mt3">
         I publish code on <a href="https://github.com/icco">Github</a>.
         </p>
 
-        <p class="f5 f2-ns mw7 measure lh-copy">
+        <p class="f3 f2-l measure w8-l mt3">
         My most well known creations are <a href="http://mood.natwelch.com/">mood.natwelch.com</a>, <a href="http://www.sadnat.com/">sadnat.com</a> and <a href="https://github.com/fog/fog-google">fog-google</a>.
         </p>
 
-        <p class="f5 f2-ns mw7 measure lh-copy">
-        I've documented my professional work on <a href="http://resume.natwelch.com">my resume</a>.
+        <p class="f3 f2-l measure w8-l mt3">
+        I have documented my professional work on <a href="http://resume.natwelch.com">my resume</a>.
         </p>
       </div>
-    </div>
     </section>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="/js/jquery.min.js?v=2.2.0"></script>
     <script src="/js/moment.min.js?v=2.11.1"></script>
     <script src="/js/nat.js?v=2016-02-03"></script>
 
