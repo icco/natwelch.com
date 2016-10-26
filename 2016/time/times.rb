@@ -1,7 +1,8 @@
 #! /usr/bin/env ruby
 
-require "active_support/time"
-require "chronic"
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require(:default)
 
 start = Chronic.parse("Jan 18 2016, 15:00").in_time_zone('US/Eastern')
 end_of_campaign = Chronic.parse("Nov 08 2016, 23:00").in_time_zone('US/Eastern')
