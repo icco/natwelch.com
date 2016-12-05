@@ -9,4 +9,4 @@ Thanks to you, I feel like a far better engineer, and a much more paranoid perso
 Cheers,
 /Nat
 
-![timandnat]()
+![timandnat](us.jpg)
