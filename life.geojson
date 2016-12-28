@@ -306,7 +306,8 @@
       "properties": {
         "marker-symbol": "campsite",
         "marker-color": "2F8DB2",
-        "Address": "482 University Ave, Los Altos Hills, CA 94022"
+        "Address": "482 University Ave, Los Altos Hills, CA 94022",
+        "Name": "Redwood Grove"
       },
       "geometry": {
         "type": "Point",
@@ -336,5 +337,6 @@
         "type": "Point",
         "coordinates": [ -73.991437, 40.695102 ]
       }
+    }
   ]
 }
