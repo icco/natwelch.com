@@ -430,6 +430,22 @@
           40.695102
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Address": "601 N 34th St, Seattle, WA 98103",
+        "marker-color": "2F8DB2",
+        "marker-symbol": "industrial",
+        "Name": "Google Seattle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.35053330659868,
+          47.649501630759104
+        ]
+      }
     }
   ]
 }
