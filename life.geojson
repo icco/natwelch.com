@@ -324,6 +324,17 @@
         "type": "Point",
         "coordinates": [ -74.006420, 40.751536 ]
       }
-    }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "300 Cadman Plaza W, Brooklyn, NY 11201"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -73.991437, 40.695102 ]
+      }
   ]
 }
