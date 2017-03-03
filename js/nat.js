@@ -10,7 +10,7 @@ var Nat = {
     var duration = now - bday;
     var years = duration / 31556900000;
 
-    var majorMinor = years.toFixed(9).toString();
+    var majorMinor = years.toFixed(7).toString();
 
     $('#age').text(majorMinor);
   },
