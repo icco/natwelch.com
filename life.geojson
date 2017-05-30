@@ -434,6 +434,22 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "114 5th Ave, New York, NY 10011",
+        "Name": "First Look Media"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.992781,
+          40.737920
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "Address": "601 N 34th St, Seattle, WA 98103",
         "marker-color": "2F8DB2",
         "marker-symbol": "industrial",
