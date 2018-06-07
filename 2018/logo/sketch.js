@@ -2,7 +2,11 @@ let t = 0; // time variable
 let rand = []
 
 function setup() {
-  createCanvas(400, 400);
+  var cnv = createCanvas(200, 200);
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+
   noStroke();
   fill(51);
   rand = [
