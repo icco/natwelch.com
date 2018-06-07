@@ -1,33 +1,44 @@
 let t = 0; // time variable
+let rand = []
 
 function setup() {
   createCanvas(400, 400);
   noStroke();
+  fill(51);
+  rand = [
+    random(50),
+    random(50),
+    random(50),
+    random(50)
+  ]
 }
 
 function draw() {
-  background(10, 10); // translucent background (creates trails)
+  if (!(round(t) % 3)) {
+    background(256, 60);
+  }
 
   [
-    [ 50, 50 ],
-    [ 150, 50 ],
-    [ 50, 150 ],
+    [  50,  50 ],
+    [ 150,  50 ],
+    [  50, 150 ],
     [ 150, 150 ]
-  ].forEach(function(arr) {
+  ].forEach(function(arr, i) {
     let x = arr[0]
     let y = arr[1]
-    // starting point of each circle depends on mouse position
-    let xAngle = map(mouseX, 0, width, -4 * PI, 4 * PI, true);
-    let yAngle = map(mouseY, 0, height, -4 * PI, 4 * PI, true);
-    // and also varies based on the particle's location
-    let angle = xAngle * (x / width) + yAngle * (y / height);
+    let r = rand[i]
 
     // each particle moves in a circle
-    let myX = x + 20 * cos(2 * PI * t + angle);
-    let myY = y + 20 * sin(2 * PI * t + angle);
+    let myX = x + 30 * cos(2 * PI * t + r);
+    let myY = y + 30 * sin(2 * PI * t + r);
 
-    ellipse(myX, myY, 10); // draw particle
+    ellipse(myX, myY, 8); // draw particle
   })
 
+
   t = t + 0.01; // update time
+}
+
+function round(x) {
+  return Number.parseFloat(x).toFixed(4);
 }
