@@ -16,27 +16,6 @@ var Nat = {
   },
 };
 
-$(document).ready(function() {
-  window.setInterval(function(){ Nat.updateAge(); }, 50);
-
-  $.getJSON('https://writing.natwelch.com/summary.json').success(function(data) {
-    for (var i = 0; i < 6; i++) {
-      console.log(data[i]);
-      var li = $('<li>');
-      var dt = $('<time>');
-      dt.attr('datetime', data[i].date);
-      dt.text(moment(data[i].date).fromNow());
-      var a = $('<a>');
-      a.attr('href', "https://writing.natwelch.com/post/" + data[i].id);
-      a.text(data[i].title);
-      li.append(dt);
-      li.append(": ");
-      li.append(a);
-      $('#posts').append(li);
-    }
-  });
-});
-
 // Google Anal
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -46,8 +25,8 @@ $(document).ready(function() {
 ga('create', 'UA-333449-2', 'auto');
 ga('send', 'pageview');
 
-
-let t = 0; // time variable
+// Add spinning logo
+let t = 0
 let rand = []
 
 function setup() {
