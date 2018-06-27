@@ -42,3 +42,8 @@ a:active {
   transition: color .3s;
   color: #007BE6;
 }
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
