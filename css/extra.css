@@ -1,0 +1,44 @@
+img {
+  display: block;
+}
+
+ul.sentence {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline;
+  list-style: none;
+}
+
+ul.sentence li {
+  display: inline;
+  margin: 0;
+}
+
+ul.sentence li:after {
+  content: ", ";
+}
+
+ul.sentence li:last-child:after {
+  content: ".";
+}
+
+ul.sentence li:nth-last-child(2):after {
+  content: " & ";
+}
+
+/* Based on http://mrmrs.io/links/ */
+a, a:link, a:visited {
+  transition: color .4s;
+  color: #265C83;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #7FDBFF;
+}
+
+a:active {
+  transition: color .3s;
+  color: #007BE6;
+}
