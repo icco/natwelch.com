@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: natwelch.com
+Token: e636c7755471fd8aee7769fdc955e51bbfdf3ae70e28458d6ba861f33bba3fc0
