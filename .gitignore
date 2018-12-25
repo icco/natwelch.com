@@ -3,3 +3,4 @@ error_log
 cache/*
 ls/cache/*
 .DS_Store
+node_modules

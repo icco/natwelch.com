@@ -1,0 +1,23 @@
+{
+  "name": "natwelch.com",
+  "version": "1.0.0",
+  "description": "This is my personal website code. No idea what's entirely in here. My site is a constantly changing beast. My biggest inspiration comes from sites listed on <http://pinboard.in/u:icco/t:personal/>.",
+  "main": "index.js",
+    "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icco/natwelch.com.git"
+  },
+  "author": "Nat Welch <nat@natwelch.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icco/natwelch.com/issues"
+  },
+  "homepage": "https://github.com/icco/natwelch.com#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "serve-static": "^1.13.2"
+  }
+}
