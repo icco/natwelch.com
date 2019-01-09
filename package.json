@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is my personal website code. No idea what's entirely in here. My site is a constantly changing beast. My biggest inspiration comes from sites listed on <http://pinboard.in/u:icco/t:personal/>.",
   "main": "index.js",
-    "scripts": {
+  "scripts": {
     "start": "node index.js"
   },
   "repository": {
