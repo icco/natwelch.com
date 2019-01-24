@@ -1,20 +1,6 @@
 /**
  * JS for natwelch.com
  */
-var Nat = {
-  updateAge : function () {
-    // Make age accurate
-    bday = new Date(1988,1,22,17);
-
-    var now = new Date;
-    var duration = now - bday;
-    var years = duration / 31556900000;
-
-    var majorMinor = years.toFixed(7).toString();
-
-    $('#age').text(majorMinor);
-  },
-};
 
 // Add spinning logo
 let t = 0

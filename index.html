@@ -132,10 +132,10 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-333449-2"></script>
     <script src="/js/jquery.min.js?v=2.2.0"></script>
-    <script src="/js/moment.min.js?v=2.11.1"></script>
+    <script src="/js/moment.min.js?v=2.24.0"></script>
     <script src="/js/p5.min.js"></script>
     <script src="/js/p5.dom.min.js"></script>
-    <script src="/js/nat.js?v=2018-06-27"></script>
+    <script src="/js/nat.js?v=2019-01-24"></script>
     <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
     <script>
         (function(f, a, t, h, o, m){
@@ -151,6 +151,27 @@
         fathom('trackPageview');
     </script>
     <!-- / Fathom -->
+    <script>
+      var Nat = {
+        updateAge: (el) => {
+          // Make age accurate
+          bday = moment("1988-02-22");
+
+          var now = new Date;
+          var duration = now - bday;
+          var years = duration / 31556900000;
+
+          var majorMinor = years.toFixed(7).toString();
+
+          el.text(majorMinor);
+        },
+      };
+
+      (function runForever(){
+        Nat.updateAge($("#age"));
+        setTimeout(runForever, 2000)
+      })()
+    </script>
 
     <!-- Copyright Nat Welch 2003 - 2019 -->
   </body>
