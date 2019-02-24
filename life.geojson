@@ -447,6 +447,22 @@
         ]
       }
     },
+        {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "industrial",
+        "marker-color": "2F8DB2",
+        "Address": "111 8th Ave, New York, NY 10011",
+        "Name": "Google New York"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.973370,
+          40.672340
+        ]
+      }
+    },
     {
       "type": "Feature",
       "properties": {
