@@ -1,3 +1,0 @@
-3072R/C4EEF77F 2013-12-01 [expires: 2016-02-22]
-Key fingerprint = 27E1 EC35 A2C3 8223 7909  4DB5 A931 B605 C4EE F77F
-Nat Welch <nat@natwelch.com>
