@@ -2,7 +2,11 @@
   "name": "natwelch.com",
   "version": "2.0.0",
   "description": "Nat's personal site.",
-  "scripts": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/icco/natwelch.com.git"
