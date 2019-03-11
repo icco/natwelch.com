@@ -22,5 +22,11 @@
     "next": "^8.0.3",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.1"
+  },
+  "prettier": {
+    "trailingComma": "es5"
   }
 }
