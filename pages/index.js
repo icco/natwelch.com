@@ -26,7 +26,9 @@ export default () => (
         </Link>
       </h2>
       <p className={p_class}>
-        Promoting communication, creativity and sharing on the Internet.
+        Nat likes giving talks. His favorite talks to give focus on improving
+        reliability, and promoting communication, creativity and sharing on the
+        Internet.
       </p>
 
       <h2 className={h2_class}>
@@ -35,8 +37,8 @@ export default () => (
         </Link>
       </h2>
       <p className={p_class}>
-        Automating things and building software tools to make maintaining the
-        internet easier.
+        Nat loves building websites, automating things and designing tools to
+        make maintaining the internet easier.
       </p>
 
       <h2 className={h2_class}>
@@ -45,7 +47,9 @@ export default () => (
         </Link>
       </h2>
       <p className={p_class}>
-        Advocating for transparency, remix culture and open source software.
+        Nat spends a lot of time writing. He writes about all sorts of things,
+        because he believes that sharing information is one of the most
+        important aspects of humanity.
       </p>
     </div>
   </section>
