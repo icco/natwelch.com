@@ -28,6 +28,25 @@ class Header extends React.Component {
 
     if (this.props.noLogo) {
       head = <></>;
+      nav = (
+        <>
+          <Link href="/about">
+            <a className="f6 link dib dim mr3 black mr4-ns">About</a>
+          </Link>
+
+          <Link href="/projects">
+            <a className="f6 link dib dim mr3 black mr4-ns">Projects</a>
+          </Link>
+
+          <Link href="/writing">
+            <a className="f6 link dib dim mr3 black mr4-ns">Writing</a>
+          </Link>
+
+          <Link href="/talks">
+            <a className="f6 link dib dim mr3 black mr4-ns">Talks</a>
+          </Link>
+        </>
+      );
       prefix = (
         <Link href="/">
           <a className="link dark-gray dim">Nat Welch</a>
