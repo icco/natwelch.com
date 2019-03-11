@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 import Age from "../components/Age.js";
 import Header from "../components/Header.js";
@@ -10,7 +11,12 @@ const link_class = "black link";
 
 export default () => (
   <>
+    <Head>
+      <title>Nat Welch</title>
+    </Head>
+
     <Header />
+
     <section className="cf lh-copy">
       <div className="fl-l wi-50-l ph3 pv4 pa3-m pa5-l">
         <h2 className={h2_class}>
