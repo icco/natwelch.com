@@ -2,6 +2,7 @@
   "name": "natwelch.com",
   "version": "2.0.0",
   "description": "Nat's personal site.",
+  "license": "MIT",
   "scripts": {
     "dev": "next",
     "build": "next build",
