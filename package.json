@@ -17,6 +17,7 @@
   },
   "homepage": "https://natwelch.com",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "express": "^4.16.4",
     "next": "^8.0.3",
     "react": "^16.8.3",
