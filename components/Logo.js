@@ -53,7 +53,7 @@ function round(x) {
 }
 
 const Link = params => (
-  <div className={params.className}>
+  <div className={params.className} style={{ width: "200px", height: "200px" }}>
     <P5Wrapper sketch={sketch} />
   </div>
 );
