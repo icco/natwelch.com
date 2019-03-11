@@ -24,7 +24,9 @@
     "next": "^8.0.3",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-moment": "^0.8.4"
+    "react-moment": "^0.8.4",
+    "react-p5-wrapper": "^0.0.4",
+    "webpack": "^4.29.6"
   },
   "devDependencies": {
     "prettier": "^1.16.1"

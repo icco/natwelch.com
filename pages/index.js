@@ -1,12 +1,15 @@
 import Link from "next/link";
 
 import Age from "../components/Age.js";
+import Header from "../components/Header.js";
 
 const h2_class = "lh-title f2-l f3 fw1 tracked pa3 ma0 near-black bg-moon-gray";
 const p_class = "f4 f3-l measure w8-l mt3 mr0 ph3 near-black";
 const link_class = "black link";
 
 export default () => (
+  <>
+  <Header />
   <section className="cf lh-copy">
     <div className="fl-l wi-50-l ph3 pv4 pa3-m pa5-l">
       <h2 className={h2_class}>
@@ -53,4 +56,5 @@ export default () => (
       </p>
     </div>
   </section>
+  </>
 );
