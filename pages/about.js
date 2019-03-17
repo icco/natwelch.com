@@ -21,7 +21,7 @@ export default () => (
         </p>
       </article>
 
-      <article class="pa3 pa5-ns">
+      <article class="ph3 ph5-ns">
         <h1 class="f3 f2-m f1-l">Nat around the world</h1>
         <p class="measure lh-copy">
           I have lived in San Francisco, London, New York and a few other
@@ -33,18 +33,24 @@ export default () => (
 
         <ul>
           <li>
-            <a className="link" href="https://writing.natwelch.com/post/526">
+            <a
+              className="link blue"
+              href="https://writing.natwelch.com/post/526"
+            >
               London
             </a>
           </li>
           <li>
-            <a className="link" href="https://writing.natwelch.com/post/522">
+            <a
+              className="link blue"
+              href="https://writing.natwelch.com/post/522"
+            >
               SF
             </a>
           </li>
           <li>
             <a
-              className="link"
+              className="link blue"
               href="https://foursquare.com/icco/list/places-i-love-in-seattle"
             >
               Seattle
@@ -52,7 +58,7 @@ export default () => (
           </li>
           <li>
             <a
-              className="link"
+              className="link blue"
               href="https://foursquare.com/icco/list/my-favorite-foods-in-slo"
             >
               San Luis Obispo
