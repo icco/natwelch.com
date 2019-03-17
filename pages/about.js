@@ -8,9 +8,9 @@ export default () => (
     </Head>
     <Header noLogo />
     <section className="cf lh-copy">
-      <article class="pa3 pa5-ns">
-        <h1 class="f3 f2-m f1-l">Speaker Bio</h1>
-        <p class="measure lh-copy">
+      <article className="pa3 pa5-ns">
+        <h1 className="f3 f2-m f1-l">Speaker Bio</h1>
+        <p className="measure lh-copy">
           Nat Welch is an Site Reliability Engineer based in Brooklyn, NY, and
           the author of "Real World SRE" from Packt Publishing. He has been
           professionally building and running software on the internet since
@@ -21,9 +21,9 @@ export default () => (
         </p>
       </article>
 
-      <article class="ph3 ph5-ns">
-        <h1 class="f3 f2-m f1-l">Nat around the world</h1>
-        <p class="measure lh-copy">
+      <article className="ph3 ph5-ns">
+        <h1 className="f3 f2-m f1-l">Nat around the world</h1>
+        <p className="measure lh-copy">
           I have lived in San Francisco, London, New York and a few other
           places. When I move, I try to create a blog post of my favorite places
           in a city right before I leave. I then don't update them. As such,
