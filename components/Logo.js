@@ -38,10 +38,10 @@ function sketch(size) {
           let r = rand[i];
 
           // each particle moves in a circle
-          let myX = x + (0.15 * p.width) * p.cos(2 * p.PI * t + r);
-          let myY = y + (0.15 * p.width) * p.sin(2 * p.PI * t + r);
+          let myX = x + 0.15 * p.width * p.cos(2 * p.PI * t + r);
+          let myY = y + 0.15 * p.width * p.sin(2 * p.PI * t + r);
 
-          p.ellipse(myX, myY, (0.04 * p.width)); // draw particle
+          p.ellipse(myX, myY, 0.04 * p.width); // draw particle
         }
       );
 
