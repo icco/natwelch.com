@@ -22,6 +22,11 @@ export default () => (
         </p>
 
         <p className="measure lh-copy">
+          You can see <a href="https://resume.natwelch.com">my resume</a> for
+          indepth work history.
+        </p>
+
+        <p className="measure lh-copy">
           I have some core beliefs that are the basis for most things that I do.
         </p>
 
