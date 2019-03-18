@@ -10,12 +10,11 @@ export default () => (
     </Head>
     <Header noLogo />
     <section className="cf lh-copy pa3 pa5-ns">
-      <TextHeader level="1">Projects</h1>
+      <TextHeader level="1">Projects</TextHeader>
 
       <article className="">
-        
-      <TextHeader level="2">GraphQL</h1>
-  </article>
+        <TextHeader level="2">GraphQL</TextHeader>
+      </article>
     </section>
   </>
 );

@@ -1,5 +1,7 @@
-import Header from "../components/Header.js";
 import Head from "next/head";
+
+import Header from "../components/Header.js";
+import TextHeader from "../components/TextHeader.js";
 
 export default () => (
   <>
@@ -8,8 +10,9 @@ export default () => (
     </Head>
     <Header noLogo />
     <section className="cf lh-copy">
+      <TextHeader level="1">About</TextHeader>
       <article className="pa3 pa5-ns">
-        <h1 className="f3 f2-m f1-l">Speaker Bio</h1>
+        <TextHeader level="2">Speaker Bio</TextHeader>
         <p className="measure lh-copy">
           Nat Welch is an Site Reliability Engineer based in Brooklyn, NY, and
           the author of "Real World SRE" from Packt Publishing. He has been
@@ -22,7 +25,7 @@ export default () => (
       </article>
 
       <article className="ph3 ph5-ns">
-        <h1 className="f3 f2-m f1-l">Nat around the world</h1>
+        <TextHeader level="2">Nat around the world</TextHeader>
         <p className="measure lh-copy">
           I have lived in San Francisco, London, New York and a few other
           places. When I move, I try to create a blog post of my favorite places
