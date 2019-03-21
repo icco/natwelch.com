@@ -12,6 +12,16 @@ export default () => (
     <section className="cf lh-copy pa3 pa5-ns">
       <TextHeader level="1">Projects</TextHeader>
 
+      <p class="measure">
+        I post photos with varying consistency on{" "}
+        <a href="https://www.flickr.com/photos/icco/">Flickr</a> &amp;{" "}
+        <a href="https://www.instagram.com/probablynatwelch/">Instagram</a>. I
+        try to be randomly clever on{" "}
+        <a href="https://twitter.com/icco">Twitter</a>. I publish code on{" "}
+        <a href="https://github.com/icco">Github</a>. Below are some of my
+        favorite projects that I have or am working on.
+      </p>
+
       <article className="">
         <TextHeader level="2">GraphQL</TextHeader>
       </article>
