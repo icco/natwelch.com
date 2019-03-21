@@ -31,19 +31,19 @@ class Header extends React.Component {
       nav = (
         <>
           <Link href="/about">
-            <a className="black link f6 dib mr3 mr4-ns">About</a>
+            <a className="link f6 dib mr3 mr4-ns" style={{color: "#000000"}}>About</a>
           </Link>
 
           <Link href="/projects">
-            <a className="black link f6 dib mr3 mr4-ns">Projects</a>
+            <a className="link f6 dib mr3 mr4-ns" style={{color: "#000000"}}>Projects</a>
           </Link>
 
           <Link href="/writing">
-            <a className="black link f6 dib mr3 mr4-ns">Writing</a>
+            <a className="link f6 dib mr3 mr4-ns" style={{color: "#000000"}}>Writing</a>
           </Link>
 
           <Link href="/talks">
-            <a className="black link f6 dib mr3 mr4-ns">Talks</a>
+            <a className="link f6 dib mr3 mr4-ns" style={{color: "#000000"}}>Talks</a>
           </Link>
         </>
       );
