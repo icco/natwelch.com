@@ -4,7 +4,7 @@ import Head from "next/head";
 import Header from "../components/Header.js";
 
 const h2_class = "link dim gray fw2 f2 f3-ns dib ma3";
-const link_class = "black link pointer";
+const link_class = "black link";
 
 export default () => (
   <>

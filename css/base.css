@@ -18,3 +18,20 @@ h4,
 p {
   line-height: 1.5;
 }
+
+a,
+a:link,
+a:visited {
+  transition: color 0.4s;
+  color: #9fb5cc;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #c6d2d2;
+}
+
+a:active {
+  transition: color 0.3s;
+  color: #c6d2d2;
+}
