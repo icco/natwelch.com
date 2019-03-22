@@ -12,7 +12,7 @@ export default () => (
     <section className="cf lh-copy pa3 pa5-ns">
       <TextHeader level="1">Projects</TextHeader>
 
-      <p class="measure">
+      <p className="measure">
         I post photos with varying consistency on{" "}
         <a href="https://www.flickr.com/photos/icco/">Flickr</a> &amp;{" "}
         <a href="https://www.instagram.com/probablynatwelch/">Instagram</a>. I

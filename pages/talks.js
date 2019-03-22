@@ -12,12 +12,12 @@ export default () => (
     <section className="cf lh-copy pa3 pa5-ns">
       <TextHeader level="1">Talks</TextHeader>
 
-      <p class="f3 f2-l measure w8-l mt3">
+      <p className="f3 f2-l measure w8-l mt3">
         I have given a variety of talks. Here are some that I am particularly
         proud of.
       </p>
 
-      <ul class="f3 f2-l measure w8-l mt3">
+      <ul className="f3 f2-l measure w8-l mt3">
         <li>
           StrangeLoop 2017 -{" "}
           <a href="https://writing.natwelch.com/post/673">
