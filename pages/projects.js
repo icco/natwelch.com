@@ -1,6 +1,8 @@
 import Head from "next/head";
 
 import Header from "../components/Header.js";
+import ProjectData from "../components/ProjectData.js";
+import ProjectLogo from "../components/ProjectLogo.js";
 import TextHeader from "../components/TextHeader.js";
 
 export default () => (
@@ -24,6 +26,12 @@ export default () => (
 
       <article className="">
         <TextHeader level="2">GraphQL</TextHeader>
+        <ProjectLogo name="graphql" />
+
+        <p className="measure">
+  GraphQL is my my server for storing data for use in my projects. It's hosted at <a href="https://graphql.natwelch.com">graphql.natwelch.com</a> and the code is at <a href="https://github.com/icco/graphql">.</p>
+
+      <ProjectData owner="icco" repo="graphql" />
       </article>
 
       <article className="">
