@@ -5,7 +5,7 @@ import ProjectData from "../components/ProjectData.js";
 import ProjectLogo from "../components/ProjectLogo.js";
 import TextHeader from "../components/TextHeader.js";
 
-let article_class = "cf mw7 bg-white br3 pv1 ph3 pv2-ns mv3 ba b--black-10";
+let article_class = "cf mw7 bg-white br3 pv1 ph3 pv2-ns mv3 ba b--black-10 ";
 
 export default () => (
   <>
@@ -16,7 +16,7 @@ export default () => (
     <section className="cf lh-copy pa3 pa5-ns">
       <TextHeader level="1">Projects</TextHeader>
 
-      <p className="measure">
+      <p className="measure-wide">
         I post photos with varying consistency on{" "}
         <a href="https://www.flickr.com/photos/icco/">Flickr</a> &amp;{" "}
         <a href="https://www.instagram.com/probablynatwelch/">Instagram</a>. I
@@ -30,8 +30,8 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           GraphQL
         </TextHeader>
-        <ProjectLogo name="graphql" className="db fr-ns" />
-        <p className="lh-copy measure f6 black-70">
+
+        <p className="measure-wide f6">
           GraphQL is my my server for storing data for use in my projects. It's
           hosted at{" "}
           <a href="https://graphql.natwelch.com">graphql.natwelch.com</a> and
@@ -46,8 +46,11 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Google Cloud Status
         </TextHeader>
-        <ProjectLogo name="" className="db fr-ns" />
-        <p className="lh-copy measure f6 black-70" />
+
+        <p className="measure-wide f6">
+          I wrote the original version status.cloud.google.com. It serves as the
+          public communication channel for Google Cloud Platform to users.
+        </p>
 
         <ProjectData owner="" repo="" />
       </article>
@@ -56,8 +59,12 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           sadnat.com
         </TextHeader>
-        <ProjectLogo name="sadnat" className="db fr-ns" />
-        <p className="lh-copy measure f6 black-70" />
+
+        <p className="measure-wide f6">
+          sadnat.com is a project I started years ago and was updated
+          semi-regularly for years. It chronicled events that made me sad as
+          observed by other people.
+        </p>
 
         <ProjectData owner="icco" repo="sadnat.com" />
       </article>
@@ -66,7 +73,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Giftionary
         </TextHeader>
-        <ProjectLogo name="giftionary" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="giftionary" />
@@ -76,7 +82,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Inspiration
         </TextHeader>
-        <ProjectLogo name="inspiration" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="inspiration" />
@@ -86,7 +91,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Fog
         </TextHeader>
-        <ProjectLogo name="fog" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="fog" repo="fog" />
@@ -96,7 +100,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           GoTak
         </TextHeader>
-        <ProjectLogo name="gotak" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="gotak" />
@@ -106,7 +109,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Time
         </TextHeader>
-        <ProjectLogo name="time" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="time" />
@@ -116,7 +118,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Onesie
         </TextHeader>
-        <ProjectLogo name="onesie" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="onesie" />
@@ -126,7 +127,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           new_job
         </TextHeader>
-        <ProjectLogo name="newjob" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="new_job" />
@@ -136,7 +136,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           bloomFilter
         </TextHeader>
-        <ProjectLogo name="bloomfilter" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="bloomfilter" />
@@ -146,7 +145,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Coffee Shop
         </TextHeader>
-        <ProjectLogo name="" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="coffee_shop" />
@@ -156,7 +154,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           three-things
         </TextHeader>
-        <ProjectLogo name="" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="three-things" />
@@ -166,7 +163,6 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           instagram-continued
         </TextHeader>
-        <ProjectLogo name="" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
         <ProjectData owner="icco" repo="instagram-continued" />
