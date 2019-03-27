@@ -65,25 +65,25 @@ export default params => {
           return (
             <div className={params.className}>
               <div className="cf">
-                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                <dl className="fl fn-ns w-50 dib-ns w-auto-ns lh-title mr5-ns">
                   <dd className="f6 fw4 ml0">Last Commit</dd>
                   <dd className="f3 fw6 ml0">
                     <Datetime>{data.repository.updatedAt}</Datetime>
                   </dd>
                 </dl>
-                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                <dl className="fl fn-ns w-50 dib-ns w-auto-ns lh-title mr5-ns">
                   <dd className="f6 fw4 ml0">Watchers</dd>
                   <dd className="f3 fw6 ml0">
                     {data.repository.watchers.totalCount}
                   </dd>
                 </dl>
-                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                <dl className="fl fn-ns w-50 dib-ns w-auto-ns lh-title mr5-ns">
                   <dd className="f6 fw4 ml0">Stars</dd>
                   <dd className="f3 fw6 ml0">
                     {data.repository.stargazers.totalCount}
                   </dd>
                 </dl>
-                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                <dl className="fl fn-ns w-50 dib-ns w-auto-ns lh-title mr5-ns">
                   <dd className="f6 fw4 ml0">Forks</dd>
                   <dd className="f3 fw6 ml0">{data.repository.forkCount}</dd>
                 </dl>
