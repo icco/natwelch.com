@@ -1,22 +1,27 @@
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
+import { ApolloProvider } from "react-apollo";
+const fetch = require("isomorphic-unfetch");
+const { ApolloClient } = require("apollo-client");
+const { InMemoryCache } = require("apollo-cache-inmemory");
+const { createHttpLink } = require("apollo-link-http");
+const { setContext } = require("apollo-link-context");
+
 import Datetime from "./Datetime";
 
-const ProjectQuery = `
-query {
-  repository(owner: "icco", name:"graphql") {
-    stargazers {
-      totalCount
+const ProjectQuery = gql`
+  query repo($Owner: String!, $Repo: String!) {
+    repository(owner: $Owner, name: $Repo) {
+      stargazers {
+        totalCount
+      }
+      watchers {
+        totalCount
+      }
+      forkCount
+      updatedAt
     }
-    watchers {
-      totalCount
-    }
-    forkCount
-    updatedAt
   }
-}
-https://api.github.com/graphql
-{
-  "authorization": "bearer 28b1423ce7d34b3b660ae38029f9b6910fd9268d"
-}
 `;
 
 export default params => {
@@ -24,28 +29,69 @@ export default params => {
     return <div className={params.className}>&nbsp;</div>;
   }
 
+  const link = createHttpLink({ uri: "https://api.github.com/graphql" });
+  const authLink = setContext((_, { headers }) => {
+    const token = process.env.GITHUB_TOKEN;
+
+    // return the headers to the context so httpLink can read them
+    return {
+      headers: {
+        ...headers,
+        authorization: token ? `Bearer ${token}` : "",
+      },
+    };
+  });
+
+  const client = new ApolloClient({
+    connectToDevTools: process.browser,
+    ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
+    link: authLink.concat(link),
+    cache: new InMemoryCache().restore({}),
+  });
+
   return (
-    <div className={params.className}>
-      <div className="cf">
-        <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
-          <dd className="f6 fw4 ml0">Last Commit</dd>
-          <dd className="f3 fw6 ml0">
-            <Datetime>2019-03-17T03:58:10Z</Datetime>
-          </dd>
-        </dl>
-        <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
-          <dd className="f6 fw4 ml0">Watchers</dd>
-          <dd className="f3 fw6 ml0">3</dd>
-        </dl>
-        <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
-          <dd className="f6 fw4 ml0">Stars</dd>
-          <dd className="f3 fw6 ml0">22</dd>
-        </dl>
-        <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
-          <dd className="f6 fw4 ml0">Forks</dd>
-          <dd className="f3 fw6 ml0">4</dd>
-        </dl>
-      </div>
-    </div>
+    <ApolloProvider client={client}>
+      <Query
+        query={ProjectQuery}
+        variables={{
+          Owner: params.owner,
+          Repo: params.repo,
+        }}
+      >
+        {({ loading, error, data }) => {
+          if (loading) return "Loading...";
+          if (error) return `Error! ${error.message}`;
+
+          return (
+            <div className={params.className}>
+              <div className="cf">
+                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                  <dd className="f6 fw4 ml0">Last Commit</dd>
+                  <dd className="f3 fw6 ml0">
+                    <Datetime>{data.repository.updatedAt}</Datetime>
+                  </dd>
+                </dl>
+                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                  <dd className="f6 fw4 ml0">Watchers</dd>
+                  <dd className="f3 fw6 ml0">
+                    {data.repository.watchers.totalCount}
+                  </dd>
+                </dl>
+                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                  <dd className="f6 fw4 ml0">Stars</dd>
+                  <dd className="f3 fw6 ml0">
+                    {data.repository.stargazers.totalCount}
+                  </dd>
+                </dl>
+                <dl className="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+                  <dd className="f6 fw4 ml0">Forks</dd>
+                  <dd className="f3 fw6 ml0">{data.repository.forkCount}</dd>
+                </dl>
+              </div>
+            </div>
+          );
+        }}
+      </Query>
+    </ApolloProvider>
   );
 };

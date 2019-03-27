@@ -49,7 +49,7 @@ export default () => (
         <ProjectLogo name="" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
-        <ProjectData owner="icco" repo="" />
+        <ProjectData owner="" repo="" />
       </article>
 
       <article className={article_class}>
@@ -119,7 +119,7 @@ export default () => (
         <ProjectLogo name="onesie" className="db fr-ns" />
         <p className="lh-copy measure f6 black-70" />
 
-        <ProjectData owner="icco" repo="onesie-be" />
+        <ProjectData owner="icco" repo="onesie" />
       </article>
 
       <article className={article_class}>
