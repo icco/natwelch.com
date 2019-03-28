@@ -21,7 +21,7 @@ export default () => (
         <li className="ml2 mv4">
           SRECon 2019 Americas -{" "}
           <a href="https://www.usenix.org/conference/srecon19americas/presentation/welch">
-  Intro to GraphQL 
+            Intro to GraphQL
           </a>
         </li>
         <li className="ml2 mv4">
@@ -36,7 +36,9 @@ export default () => (
             SRE and Presidential Campaigns
           </a>
         </li>
-        <li className="ml2 mv4">Recurse Center, 2016 - Tech and the US Presidential Campaign</li>
+        <li className="ml2 mv4">
+          Recurse Center, 2016 - Tech and the US Presidential Campaign
+        </li>
         <li className="ml2 mv4">
           LinuxCon 2014 -{" "}
           <a href="https://lccoelce14.sched.com/event/1yFaOlK/build-scalable-cloud-applications-on-google-compute-engine-using-kubernetes-and-mesos-bernd-mathiske-mesosphere-nat-welch-google?iframe=no">
