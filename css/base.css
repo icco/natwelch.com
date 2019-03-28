@@ -22,16 +22,39 @@ p {
 a,
 a:link,
 a:visited {
+  text-decoration: none;
   transition: color 0.4s;
   color: #9fb5cc;
   cursor: pointer;
 }
 
 a:hover {
+  text-decoration: none;
   color: #c6d2d2;
 }
 
 a:active {
+  text-decoration: none;
+  transition: color 0.3s;
+  color: #c6d2d2;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+  text-decoration: none;
+  transition: color 0.4s;
+  color: #000000;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #c6d2d2;
+}
+
+nav a:active {
+  text-decoration: none;
   transition: color 0.3s;
   color: #c6d2d2;
 }
