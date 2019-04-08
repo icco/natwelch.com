@@ -13,7 +13,7 @@ export default () => (
       <TextHeader level="1">Writing</TextHeader>
 
       <p className="f5 f4-ns measure w8-ns mt3">
-        I write once or twice a week at writing.natwelch.com.
+        I write once or twice a month at <a href="https://writing.natwelch.com">writing.natwelch.com</a>.
       </p>
 
       <p className="f5 f4-ns measure w8-ns mt3">
