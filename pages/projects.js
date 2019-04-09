@@ -6,7 +6,7 @@ import ProjectLogo from "../components/ProjectLogo.js";
 import TextHeader from "../components/TextHeader.js";
 
 let article_class = "cf pv1 ph3 pv2-ns mv3";
-let p_class = "margin-wide f6";
+let p_class = "margin-wide f5";
 
 export default () => (
   <>
@@ -25,7 +25,7 @@ export default () => (
           try to be randomly clever on{" "}
           <a href="https://twitter.com/icco">Twitter</a>. I publish code on{" "}
           <a href="https://github.com/icco">Github</a>. Below are some of my
-          favorite projects that I have or am working on.
+          favorite projects that I have or am working on. This list does not include any projects which are not open source. Please see my <a href="https://resume.natwelch.com/">resume</a> for work projects I have been a part of.
         </p>
       </article>
 
@@ -47,19 +47,6 @@ export default () => (
 
       <article className={article_class}>
         <TextHeader level="2" className="dib mt1 mb2">
-          Google Cloud Status
-        </TextHeader>
-
-        <p className={p_class}>
-          I wrote the original version status.cloud.google.com. It serves as the
-          public communication channel for Google Cloud Platform to users.
-        </p>
-
-        <ProjectData owner="" repo="" />
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
           sadnat.com
         </TextHeader>
 
@@ -76,7 +63,8 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Giftionary
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>Giftionary was a website for hosting and sharing Gifs. It started as a tool to find the best gifs on Tumblr, and then transformed into a personal Gif Dictionary.
+  </p>
 
         <ProjectData owner="icco" repo="giftionary" />
       </article>
@@ -85,7 +73,9 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Inspiration
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>
+          <a href="https://mood.natwelch.com">Inspiration</a> is a somewhat defunct project to generate a dynamic mood board based off of my personal interests. It still works but most of the datasources are no longer generating fresh content.
+  </p>
 
         <ProjectData owner="icco" repo="inspiration" />
       </article>
@@ -94,7 +84,7 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Fog
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>I am a core contributor to Fog, a ruby library for talking to various cloud libraries in a consistent manor.</p>
 
         <ProjectData owner="fog" repo="fog" />
       </article>
@@ -103,7 +93,8 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           GoTak
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}><a href="https://gotak.app">GoTak</a> is an application written in Go for playing <a href="https://boardgamegeek.com/boardgame/197405/tak">Tak</a> online. It provides an api for games, moves, and a library for parsing <a href="https://www.reddit.com/r/Tak/wiki/portable%20tak%20notation">PTN</a>.
+  </p>
 
         <ProjectData owner="icco" repo="gotak" />
       </article>
@@ -112,7 +103,7 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Time
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>Time is an attempt to implement the NTP spec in Go.</p>
 
         <ProjectData owner="icco" repo="time" />
       </article>
@@ -121,7 +112,7 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           Onesie
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>Onesie was a service for hosting static websites quickly and efficiently.</p>
 
         <ProjectData owner="icco" repo="onesie" />
       </article>
@@ -130,7 +121,7 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           new_job
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>new_job is a script I run to generate a document of previous work to submit to jobs when I sign new contracts.</p>
 
         <ProjectData owner="icco" repo="new_job" />
       </article>
