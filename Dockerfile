@@ -10,4 +10,6 @@ COPY . .
 ENV PORT 8080
 EXPOSE $PORT
 
+RUN yarn run build
+
 CMD [ "yarn", "run", "start" ]
