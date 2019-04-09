@@ -12,12 +12,12 @@ export default () => (
     <section className="cf lh-copy pa3 pa5-ns">
       <TextHeader level="1">Talks</TextHeader>
 
-      <p className="f5 f4-ns measure w8-ns mt3">
+      <p className="f5 f4-ns measure-wide w8-ns mt3">
         I have given a variety of talks. Here are some that I am particularly
         proud of.
       </p>
 
-      <ul className="list f5 f4-ns mw8 mt3 pl0">
+      <ul className="list f5 f4-ns measure-wide mt3 pl0">
         <li className="ml2 mv4">
           SRECon 2019 Americas -{" "}
           <a href="https://www.usenix.org/conference/srecon19americas/presentation/welch">

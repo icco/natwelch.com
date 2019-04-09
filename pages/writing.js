@@ -12,15 +12,16 @@ export default () => (
     <section className="cf lh-copy pa3 pa5-ns">
       <TextHeader level="1">Writing</TextHeader>
 
-      <p className="f5 f4-ns measure w8-ns mt3">
-        I write once or twice a month at <a href="https://writing.natwelch.com">writing.natwelch.com</a>.
+      <p className="f5 f4-ns measure-wise mt3">
+        I write once or twice a month at{" "}
+        <a href="https://writing.natwelch.com">writing.natwelch.com</a>.
       </p>
 
-      <p className="f5 f4-ns measure w8-ns mt3">
+      <p className="f5 f4-ns measure-wide mt3">
         I have also written for other places:
       </p>
 
-      <ul className="list f5 f4-ns mw8 mt3 pl0">
+      <ul className="list f5 f4-ns wide mt3 pl0">
         <li className="ml2 mv4">
           <a href="https://www.packtpub.com/web-development/real-world-sre">
             Real World SRE
