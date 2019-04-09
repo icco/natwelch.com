@@ -9,7 +9,6 @@ COPY . .
 
 ENV PORT 8080
 EXPOSE $PORT
-ENV GITHUB_TOKEN
 
 RUN yarn run build
 
