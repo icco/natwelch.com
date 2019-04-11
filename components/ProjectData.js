@@ -6,9 +6,12 @@ const { ApolloClient } = require("apollo-client");
 const { InMemoryCache } = require("apollo-cache-inmemory");
 const { createHttpLink } = require("apollo-link-http");
 const { setContext } = require("apollo-link-context");
+import getConfig from 'next/config'
 
 import Datetime from "./Datetime";
 
+const { publicRuntimeConfig } = getConfig()
+const { GITHUB_TOKEN } = publicRuntimeConfig
 const ProjectQuery = gql`
   query repo($Owner: String!, $Repo: String!) {
     repository(owner: $Owner, name: $Repo) {
@@ -31,13 +34,11 @@ export default params => {
 
   const link = createHttpLink({ uri: "https://api.github.com/graphql" });
   const authLink = setContext((_, { headers }) => {
-    const token = process.env.GITHUB_TOKEN;
-
     // return the headers to the context so httpLink can read them
     return {
       headers: {
         ...headers,
-        authorization: token ? `Bearer ${token}` : "",
+        authorization: GITHUB_TOKEN ? `Bearer ${GITHUB_TOKEN}` : "",
       },
     };
   });

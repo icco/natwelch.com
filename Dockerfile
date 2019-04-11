@@ -1,9 +1,10 @@
 FROM node:10-alpine
 
 WORKDIR /usr/src/app
+RUN apk add --no-cache git
 
 COPY package.json yarn.lock ./
-RUN yarn install
+RUN yarn install --non-interactive --frozen-lockfile
 
 COPY . .
 
