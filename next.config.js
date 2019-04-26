@@ -6,6 +6,6 @@ module.exports = withCSS({
   },
   publicRuntimeConfig: {
     // Will be available on both server and client
-    GITHUB_TOKEN: process.env.GITHUB_TOKEN
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
 });

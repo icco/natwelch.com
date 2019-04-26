@@ -6,12 +6,12 @@ const { ApolloClient } = require("apollo-client");
 const { InMemoryCache } = require("apollo-cache-inmemory");
 const { createHttpLink } = require("apollo-link-http");
 const { setContext } = require("apollo-link-context");
-import getConfig from 'next/config'
+import getConfig from "next/config";
 
 import Datetime from "./Datetime";
 
-const { publicRuntimeConfig } = getConfig()
-const { GITHUB_TOKEN } = publicRuntimeConfig
+const { publicRuntimeConfig } = getConfig();
+const { GITHUB_TOKEN } = publicRuntimeConfig;
 const ProjectQuery = gql`
   query repo($Owner: String!, $Repo: String!) {
     repository(owner: $Owner, name: $Repo) {
