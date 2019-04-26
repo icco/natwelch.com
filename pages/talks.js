@@ -19,6 +19,9 @@ export default () => (
 
       <ul className="list f5 f4-ns measure-wide mt3 pl0">
         <li className="ml2 mv4">
+          Google Cloud Next '19 San Francisco - Prometheus and SLO Alerting
+        </li>
+        <li className="ml2 mv4">
           SRECon 2019 Americas -{" "}
           <a href="https://www.usenix.org/conference/srecon19americas/presentation/welch">
             Intro to GraphQL
