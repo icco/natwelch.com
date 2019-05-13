@@ -13,9 +13,6 @@
     "url": "git+https://github.com/icco/natwelch.com.git"
   },
   "author": "Nat Welch <nat@natwelch.com>",
-  "bugs": {
-    "url": "https://github.com/icco/natwelch.com/issues"
-  },
   "homepage": "https://natwelch.com",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
