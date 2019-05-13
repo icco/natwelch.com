@@ -22,20 +22,20 @@ export default () => (
       </p>
 
       <ul className="list f5 f4-ns wide mt3 pl0">
-        <li className="ml2 mv4">
+        <li className="ml4 mv4">
           <a href="https://www.packtpub.com/web-development/real-world-sre">
             Real World SRE
           </a>{" "}
           from Packt Publishing.
         </li>
-        <li className="ml2 mv4">
+        <li className="ml4 mv4">
           Git Out The Vote:{" "}
           <a href="https://medium.com/git-out-the-vote/chatops-198f0b62c601">
             #chatops
           </a>
         </li>
 
-        <li className="ml2 mv4">
+        <li className="ml4 mv4">
           Code Words:{" "}
           <a href="https://codewords.recurse.com/issues/six/promoting-reliability-in-web-software-companies">
             Promoting reliability in web software companies
