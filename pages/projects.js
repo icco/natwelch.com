@@ -132,51 +132,23 @@ export default () => (
 
       <article className={article_class}>
         <TextHeader level="2" className="dib mt1 mb2">
-          Onesie
+          Etu
         </TextHeader>
         <p className={p_class}>
-          Onesie was a service for hosting static websites quickly and
-          efficiently.
+          Etu is an attempt to implement a time tracker.
         </p>
 
-        <ProjectData owner="icco" repo="onesie" />
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
-          new_job
-        </TextHeader>
-        <p className={p_class}>
-          new_job is a script I run to generate a document of previous work to
-          submit to jobs when I sign new contracts.
-        </p>
-
-        <ProjectData owner="icco" repo="new_job" />
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
-          bloomFilter
-        </TextHeader>
-        <p className={p_class} />
-
-        <ProjectData owner="icco" repo="bloomfilter" />
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
-          Coffee Shop
-        </TextHeader>
-        <p className={p_class} />
-
-        <ProjectData owner="icco" repo="coffee_shop" />
+        <ProjectData owner="icco" repo="etu" />
       </article>
 
       <article className={article_class}>
         <TextHeader level="2" className="dib mt1 mb2">
           three-things
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>
+          A very simple library that implements RED metrics and forwards them to
+          Datadog or Statsd.
+        </p>
 
         <ProjectData owner="icco" repo="three-things" />
       </article>
@@ -185,7 +157,11 @@ export default () => (
         <TextHeader level="2" className="dib mt1 mb2">
           instagram-continued
         </TextHeader>
-        <p className={p_class} />
+        <p className={p_class}>
+          This gem is an attempt to keep a ruby library working against the
+          Instagram API, despite Facebook's constant shutting down of APIs and
+          requiring business backing to access existing ones.
+        </p>
 
         <ProjectData owner="icco" repo="instagram-continued" />
       </article>
