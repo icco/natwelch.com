@@ -1,10 +1,11 @@
 import Head from "next/head";
 
+import App from "../components/App";
 import Header from "../components/Header.js";
 import TextHeader from "../components/TextHeader.js";
 
 export default () => (
-  <>
+  <App>
     <Head>
       <title>Nat Welch | Writing</title>
     </Head>
@@ -48,5 +49,5 @@ export default () => (
         </li>
       </ul>
     </section>
-  </>
+  </App>
 );

@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import App from "../components/App";
 import Header from "../components/Header.js";
 import ProjectData from "../components/ProjectData.js";
 import ProjectLogo from "../components/ProjectLogo.js";
@@ -9,7 +10,7 @@ let article_class = "cf pv1 ph3 pv2-ns mv3";
 let p_class = "measure-wide f5 f4-ns";
 
 export default () => (
-  <>
+  <App>
     <Head>
       <title>Nat Welch | Projects</title>
     </Head>
@@ -166,5 +167,5 @@ export default () => (
         <ProjectData owner="icco" repo="instagram-continued" />
       </article>
     </section>
-  </>
+  </App>
 );

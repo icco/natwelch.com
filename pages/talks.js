@@ -1,10 +1,11 @@
 import Head from "next/head";
 
+import App from "../components/App";
 import Header from "../components/Header.js";
 import TextHeader from "../components/TextHeader.js";
 
 export default () => (
-  <>
+  <App>
     <Head>
       <title>Nat Welch | Talks</title>
     </Head>
@@ -57,5 +58,5 @@ export default () => (
         <li className="ml4-ns mv4">Cal Poly, 2011 - Punchd &amp; Google</li>
       </ul>
     </section>
-  </>
+  </App>
 );

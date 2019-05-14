@@ -1,13 +1,14 @@
-import Link from "next/link";
 import Head from "next/head";
+import Link from "next/link";
 
+import App from "../components/App";
 import Header from "../components/Header.js";
 
 const h2_class = "link dim gray fw2 f2 f3-ns dib ma3";
 const link_class = "link";
 
 export default () => (
-  <>
+  <App>
     <Head>
       <title>Nat Welch</title>
     </Head>
@@ -45,5 +46,5 @@ export default () => (
         </nav>
       </div>
     </div>
-  </>
+  </App>
 );
