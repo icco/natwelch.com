@@ -15,36 +15,33 @@ export default () => (
 
     <div className="pb3 mw8 center">
       <Header />
-
-      <div className="flex flex-wrap justify-center ttc">
-        <nav>
-          <Link href="/about">
-            <h2 className={h2_class}>
-              <a className={link_class}>About</a>
-            </h2>
-          </Link>
-          <Link href="/projects">
-            <h2 className={h2_class}>
-              <a className={link_class}>Projects</a>
-            </h2>
-          </Link>
-          <Link href="/writing">
-            <h2 className={h2_class}>
-              <a className={link_class}>Writing</a>
-            </h2>
-          </Link>
-          <Link href="/talks">
-            <h2 className={h2_class}>
-              <a className={link_class}>Talks</a>
-            </h2>
-          </Link>
+      <nav className="flex flex-wrap items-center justify-center ttc">
+        <Link href="/about">
           <h2 className={h2_class}>
-            <a className={link_class} href="https://resume.natwelch.com">
-              Resume
-            </a>
+            <a className={link_class}>About</a>
           </h2>
-        </nav>
-      </div>
+        </Link>
+        <Link href="/projects">
+          <h2 className={h2_class}>
+            <a className={link_class}>Projects</a>
+          </h2>
+        </Link>
+        <Link href="/writing">
+          <h2 className={h2_class}>
+            <a className={link_class}>Writing</a>
+          </h2>
+        </Link>
+        <Link href="/talks">
+          <h2 className={h2_class}>
+            <a className={link_class}>Talks</a>
+          </h2>
+        </Link>
+        <h2 className={h2_class}>
+          <a className={link_class} href="https://resume.natwelch.com">
+            Resume
+          </a>
+        </h2>
+      </nav>
     </div>
   </App>
 );
