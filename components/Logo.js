@@ -1,73 +1,49 @@
-import dynamic from "next/dynamic";
+import React from "react";
+import SVG from "svg.js";
 
-const P5Wrapper = dynamic(import("react-p5-wrapper"), {
-  loading: () => "",
-  ssr: false,
-});
+function buildSVG(size, el) {
+  console.log(el);
+  let canvas = SVG(el).size(size, size);
+  let k = size / 4;
+  [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(
+    function(arr, i) {
+      // Set the radius
+      let c = canvas.circle(size / 4.0 + size / 10.0);
 
-// spinning logo
-function sketch(size) {
-  return p => {
-    let t = 0;
-    let rand = [];
+      // Put it where we want to
+      c.cx(arr[0]);
+      c.cy(arr[1]);
 
-    p.setup = function() {
-      p.createCanvas(size, size);
+      // Style it
+      c.fill({ color: "#fff", opacity: 0.0 });
+      c.stroke({
+        width: 0.04 * size,
+        color: "#000",
+      });
+    }
+  );
 
-      p.noStroke();
-      p.fill(51);
-      rand = [
-        p.random(-180, 180),
-        p.random(-180, 180),
-        p.random(-180, 180),
-        p.random(-180, 180),
-      ];
-    };
-
-    p.draw = function() {
-      if (!(round(t) % 12)) {
-        p.background(256, 60);
-      }
-
-      var k = p.width / 4;
-
-      [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(
-        function(arr, i) {
-          let x = arr[0];
-          let y = arr[1];
-          let r = rand[i];
-
-          // each particle moves in a circle
-          let myX = x + 0.15 * p.width * p.cos(2 * p.PI * t + r);
-          let myY = y + 0.15 * p.width * p.sin(2 * p.PI * t + r);
-
-          p.ellipse(myX, myY, 0.04 * p.width); // draw particle
-        }
-      );
-
-      t = t + 0.01; // update time
-    };
-  };
+  //new Vivus('drawing', { duration: 200 }, myCallback);
+  return el;
 }
 
-function round(x) {
-  return Number.parseFloat(x).toFixed(4);
-}
-
-const Link = params => {
-  let size = 200;
-  if (params.size) {
-    size = params.size;
+class Logo extends React.Component {
+  componentDidMount() {
+    const { size } = this.props;
+    buildSVG(size, this.refs.svg);
   }
 
-  return (
-    <div
-      className={params.className}
-      style={{ width: `${size}px`, height: `${size}px` }}
-    >
-      <P5Wrapper sketch={sketch(size)} />
-    </div>
-  );
-};
+  render() {
+    const { size } = this.props;
 
-export default Link;
+    return (
+      <div
+        style={{ width: `${size}px`, height: `${size}px` }}
+        className={this.props.className}
+        ref="svg"
+      />
+    );
+  }
+}
+
+export default Logo;
