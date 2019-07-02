@@ -709,6 +709,18 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@svgdotjs/svg.js@^3.0.10":
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/@svgdotjs/svg.js/-/svg.js-3.0.13.tgz#0afb2213fe98c0d951e0f0a9f6053e1f32056843"
+  integrity sha512-Ix3dobG2DvdK5f2SHtZdiiLwi+G0RDuDfwA4tZ1eqTGoiopia8JIfeWGeA0h2frFHcLDXnYvNiVGtW4y6cSDig==
+
+"@svgdotjs/svg.topath.js@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@svgdotjs/svg.topath.js/-/svg.topath.js-2.0.3.tgz#c03e2a939acb8ef083befa9dd74dadd26f97e5c5"
+  integrity sha512-vZG+4DpzjhkjCT9LJqg+cMCekJIGSUTpOEfbQN/wueSaiP7N04JFXYW4X3lj1MlZDNU9IcE1GsWEuwdhLJJGuA==
+  dependencies:
+    "@svgdotjs/svg.js" "^3.0.10"
+
 "@types/zen-observable@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.8.0.tgz#8b63ab7f1aa5321248aad5ac890a485656dcea4d"
@@ -5157,10 +5169,17 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-svg.js@^2.7.1:
+svg.js@^2.4.0, svg.js@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/svg.js/-/svg.js-2.7.1.tgz#eb977ed4737001eab859949b4a398ee1bb79948d"
   integrity sha512-ycbxpizEQktk3FYvn/8BH+6/EuWXg7ZpQREJvgacqn46gIddG24tNNe4Son6omdXCnSOaApnpZw6MPCBA1dODA==
+
+svg.pathmorphing.js@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/svg.pathmorphing.js/-/svg.pathmorphing.js-0.1.3.tgz#c25718a1cc7c36e852ecabc380e758ac09bb2b65"
+  integrity sha512-49HWI9X4XQR/JG1qXkSDV8xViuTLIWm/B/7YuQELV5KMOPtXjiwH4XPJvr/ghEDibmLQ9Oc22dpWpG0vUDDNww==
+  dependencies:
+    svg.js "^2.4.0"
 
 symbol-observable@^1.0.2:
   version "1.2.0"
@@ -5484,6 +5503,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+vivus@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/vivus/-/vivus-0.4.4.tgz#34363eb833d5f6fe0b63a92cfccff14ad099ba44"
+  integrity sha1-NDY+uDPV9v4LY6ks/M/xStCZukQ=
 
 vlq@^0.2.2:
   version "0.2.3"
