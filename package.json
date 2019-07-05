@@ -15,8 +15,8 @@
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
   "dependencies": {
-    "@svgdotjs/svg.topath.js": "^2.0.3",
     "@svgdotjs/svg.js": "^3.0.1",
+    "@svgdotjs/svg.topath.js": "^2.0.3",
     "@zeit/next-css": "^1.0.1",
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "^2.5.1",
