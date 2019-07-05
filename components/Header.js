@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { withRouter } from "next/router";
 import React from "react";
-
-import Logo from "./Logo";
+import { Logo } from "@icco/react-common";
 
 class Header extends React.Component {
   render() {
