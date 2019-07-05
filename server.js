@@ -13,7 +13,25 @@ app.prepare().then(() => {
   server.use(helmet());
 
   server.get("*", (req, res) => {
-    return handle(req, res);
+    const parsedUrl = parse(req.url, true);
+    let path = join(__dirname, "static", parsedUrl.pathname);
+    if (fs.existsSync(path)) {
+      let stat = fs.lstatSync(path);
+      if (stat.isFile()) {
+        app.serveStatic(req, res, path);
+        return;
+      }
+
+      if (stat.isDirectory()) {
+        let index = join(path, "index.html");
+        if (fs.existsSync(index)) {
+          app.serveStatic(req, res, path);
+          return;
+        }
+      }
+    }
+
+    return handle(req, res, parsedUrl);
   });
 
   server.listen(port, err => {
