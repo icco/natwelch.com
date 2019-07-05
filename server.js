@@ -1,16 +1,20 @@
+const express = require("express");
 const fs = require("fs");
-const { createServer } = require("http");
-const { parse } = require("url");
+const helmet = require("helmet");
 const next = require("next");
+const { parse } = require("url");
 const { join } = require("path");
 
-const port = parseInt(process.env.PORT, 10) || 8080;
 const dev = process.env.NODE_ENV !== "production";
+const port = parseInt(process.env.PORT, 10) || 3000;
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  createServer((req, res) => {
+  const server = express();
+  server.use(helmet());
+
+  server.get("*", (req, res) => {
     const parsedUrl = parse(req.url, true);
     let path = join(__dirname, "static", parsedUrl.pathname);
     if (fs.existsSync(path)) {
@@ -29,8 +33,10 @@ app.prepare().then(() => {
       }
     }
 
-    handle(req, res, parsedUrl);
-  }).listen(port, err => {
+    return handle(req, res, parsedUrl);
+  });
+
+  server.listen(port, err => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });
