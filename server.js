@@ -4,7 +4,7 @@ const helmet = require("helmet");
 const next = require("next");
 const { parse } = require("url");
 const { join } = require("path");
-const sslRedirect = require('heroku-ssl-redirect');
+const sslRedirect = require("heroku-ssl-redirect");
 
 const dev = process.env.NODE_ENV !== "production";
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -14,7 +14,12 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
   server.use(helmet());
-  server.use(sslRedirect());
+
+  server.use(function(req, res, next) {
+    if (req.path != "/healthz") {
+      sslRedirect(req, res, next);
+    }
+  });
 
   server.get("*", (req, res) => {
     const parsedUrl = parse(req.url, true);
