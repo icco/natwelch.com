@@ -42,7 +42,7 @@ export default () => (
           </li>
 
           <li className="mv3 pl3 bl bw2 b--blue">
-            Nature is wonderful and must be preserved.
+            Nature is beautiful and must be preserved.
           </li>
 
           <li className="mv3 pl3 bl bw2 b--blue">
