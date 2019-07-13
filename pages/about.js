@@ -42,8 +42,7 @@ export default () => (
           </li>
 
           <li className="mv3 pl3 bl bw2 b--blue">
-            Writing software is like writing English (or whatever language you
-            prefer).
+            Nature is wonderful and must be preserved.
           </li>
 
           <li className="mv3 pl3 bl bw2 b--blue">
@@ -51,6 +50,13 @@ export default () => (
             them well is important.
           </li>
         </ul>
+
+        <p>
+          I expand on these in depth on my blog:{" "}
+          <a href="https://writing.natwelch.com/post/703">
+            Nat Welch Manifesto
+          </a>
+        </p>
       </article>
 
       <TextHeader level="2">Nat around the world</TextHeader>
