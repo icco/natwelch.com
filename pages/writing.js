@@ -23,20 +23,20 @@ export default () => (
       </p>
 
       <ul className="list f5 f4-ns wide mt3 pl0">
-        <li className="ml4-ns mv4">
+        <li className="mv3 pl3 bl bw2 b--blue">
           <a href="https://www.packtpub.com/web-development/real-world-sre">
             Real World SRE
           </a>{" "}
           from Packt Publishing.
         </li>
-        <li className="ml4-ns mv4">
+        <li className="mv3 pl3 bl bw2 b--blue">
           Git Out The Vote:{" "}
           <a href="https://medium.com/git-out-the-vote/chatops-198f0b62c601">
             #chatops
           </a>
         </li>
 
-        <li className="ml4-ns mv4">
+        <li className="mv3 pl3 bl bw2 b--blue">
           Code Words:{" "}
           <a href="https://codewords.recurse.com/issues/six/promoting-reliability-in-web-software-companies">
             Promoting reliability in web software companies
@@ -48,6 +48,12 @@ export default () => (
           .
         </li>
       </ul>
+
+      <p className="f5 f4-ns measure-wide mt3">
+        I love writing and talking about writing. If you have a topic you would
+        like me to write about, or would like to discuss writing, shoot{" "}
+        <a href="mailto:nat@natwelch.com">me an email</a>.
+      </p>
     </section>
   </App>
 );
