@@ -44,7 +44,10 @@ export default () => (
         </h2>
       </nav>
 
-      <Social className="items-center justify-center" linkClassName="ma3 gray"/>
+      <Social
+        className="items-center justify-center"
+        linkClassName="ma3 gray"
+      />
     </div>
   </App>
 );

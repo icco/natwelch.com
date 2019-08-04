@@ -62,8 +62,8 @@ export default () => (
 
       <TextHeader level="2">Social</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
-  <Social className="" linkClassName="mv3 mr3 gray"/>
-  </article>
+        <Social className="" linkClassName="mv3 mr3 gray" />
+      </article>
 
       <TextHeader level="2">Nat around the world</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
