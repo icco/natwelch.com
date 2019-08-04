@@ -3,6 +3,7 @@ import Head from "next/head";
 import Age from "../components/Age.js";
 import App from "../components/App";
 import Header from "../components/Header.js";
+import Social from "../components/Social.js";
 import TextHeader from "../components/TextHeader.js";
 
 export default () => (
@@ -57,6 +58,11 @@ export default () => (
             Nat Welch Manifesto
           </a>
         </p>
+      </article>
+
+      <TextHeader level="2">Social</TextHeader>
+      <article className="lh-copy f4-ns f5 measure-wide">
+        <Social className="" linkClassName="mv3 mr3 gray" />
       </article>
 
       <TextHeader level="2">Nat around the world</TextHeader>

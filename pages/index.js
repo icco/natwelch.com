@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import App from "../components/App";
 import Header from "../components/Header.js";
+import Social from "../components/Social.js";
 
 const h2_class = "link dim gray fw2 f2 f3-ns dib ma3";
 const link_class = "link";
@@ -42,6 +43,11 @@ export default () => (
           </a>
         </h2>
       </nav>
+
+      <Social
+        className="items-center justify-center"
+        linkClassName="ma3 gray"
+      />
     </div>
   </App>
 );
