@@ -17,17 +17,32 @@ export default () => (
       <TextHeader level="2">What</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
         <p className="">
-I would like to be your colleague, friend and/or acquaintance. Why? Because, my career has been particularly weird, and talking to others has helped me be somewhat successful in surviving some transitions. I've jumped to and from startups, big business, politics, writing, and many other situations. I failed out of college briefly, and have lived in ~five cities. If you think this experience would be useful to you, I would love to chat.
+          I would like to be your colleague, friend and/or acquaintance. Why?
+          Because, my career has been particularly weird, and talking to others
+          has helped me be somewhat successful in surviving some transitions.
+          I've jumped to and from startups, big business, politics, writing, and
+          many other situations. I failed out of college briefly, and have lived
+          in ~five cities. If you think this experience would be useful to you,
+          I would love to chat.
         </p>
       </article>
       <TextHeader level="2">How To</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
         <p className="">
-  There are a few options to get in touch!
-  <ul>
-  <li>You can book time to chat on <a href="https://calendly.com/icco/chat-with-nat">Calendly</a></li>
-  <li>You can email me nat+mentoring@natwelch.com</a></li>
-  <li>You can ping me on Keybase chat <a href="https://keybase.io/icco">@icco</a>.</li>
-  </ul>
+          There are a few options to get in touch!
+          <ul>
+            <li>
+              You can book time to chat on{" "}
+              <a href="https://calendly.com/icco/chat-with-nat">Calendly</a>
+            </li>
+            <li>You can email me nat+mentoring@natwelch.com</li>
+            <li>
+              You can ping me on Keybase chat{" "}
+              <a href="https://keybase.io/icco">@icco</a>.
+            </li>
+          </ul>
         </p>
       </article>
+    </section>
+  </App>
+);
