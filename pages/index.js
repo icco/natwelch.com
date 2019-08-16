@@ -22,6 +22,11 @@ export default () => (
             <a className={link_class}>About</a>
           </h2>
         </Link>
+        <Link href="/mentoring">
+          <h2 className={h2_class}>
+            <a className={link_class}>Mentoring</a>
+          </h2>
+        </Link>
         <Link href="/projects">
           <h2 className={h2_class}>
             <a className={link_class}>Projects</a>
