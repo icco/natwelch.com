@@ -14,7 +14,7 @@ export default () => (
       <title>Nat Welch</title>
     </Head>
 
-    <div className="pb3 mw8 center">
+    <div className="pb3 mw8 center mt5 mt0-ns">
       <Header />
       <nav className="flex flex-wrap items-center justify-center ttc">
         <Link href="/about">
@@ -50,7 +50,7 @@ export default () => (
       </nav>
 
       <Social
-        className="items-center justify-center"
+        className="items-center justify-center mt5 w4 w-100-ns center"
         linkClassName="ma3 gray"
       />
     </div>
