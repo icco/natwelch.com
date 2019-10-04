@@ -4,7 +4,7 @@ const helmet = require("helmet");
 const next = require("next");
 const { parse } = require("url");
 const { join } = require("path");
-const { SSLMiddleware } = require("@icco/react-common");
+const { SSLMiddleware, NELMiddleware, ReportToMiddleware } = require("@icco/react-common");
 
 const dev = process.env.NODE_ENV !== "production";
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -16,6 +16,8 @@ app.prepare().then(() => {
   server.use(helmet());
   server.set("trust proxy", true);
   server.use(SSLMiddleware());
+  server.use(NELMiddleware());
+  server.use(ReportToMiddleware("natwelch"));
 
   server.get("*", (req, res) => {
     const parsedUrl = parse(req.url, true);
