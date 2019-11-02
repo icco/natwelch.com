@@ -4,7 +4,11 @@ const helmet = require("helmet");
 const next = require("next");
 const { parse } = require("url");
 const { join } = require("path");
-const { SSLMiddleware, NELMiddleware, ReportToMiddleware } = require("@icco/react-common");
+const {
+  SSLMiddleware,
+  NELMiddleware,
+  ReportToMiddleware,
+} = require("@icco/react-common");
 
 const dev = process.env.NODE_ENV !== "production";
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -20,13 +24,13 @@ app.prepare().then(() => {
   server.use(ReportToMiddleware("natwelch"));
 
   server.use(function(req, res, next) {
-      var host = req.header("host");
-      if (host == "www.natwelch.com") {
-        next();
-      } else {
-        res.redirect(301, "https://natwelch.com" + req.url);
-      }
-    });
+    var host = req.header("host");
+    if (host == "www.natwelch.com") {
+      next();
+    } else {
+      res.redirect(301, "https://natwelch.com" + req.url);
+    }
+  });
 
   server.get("*", (req, res) => {
     const parsedUrl = parse(req.url, true);
