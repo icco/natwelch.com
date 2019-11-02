@@ -19,6 +19,15 @@ app.prepare().then(() => {
   server.use(NELMiddleware());
   server.use(ReportToMiddleware("natwelch"));
 
+  server.use(function(req, res, next) {
+      var host = req.header("host");
+      if (host == "www.natwelch.com") {
+        next();
+      } else {
+        res.redirect(301, "https://natwelch.com" + req.url);
+      }
+    });
+
   server.get("*", (req, res) => {
     const parsedUrl = parse(req.url, true);
     let path = join(__dirname, "static", parsedUrl.pathname);
