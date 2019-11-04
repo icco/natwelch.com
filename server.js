@@ -26,9 +26,9 @@ app.prepare().then(() => {
   server.use(function(req, res, next) {
     var host = req.header("host");
     if (host == "www.natwelch.com") {
-      next();
+      res.redirect(302, "https://natwelch.com" + req.url);
     } else {
-      res.redirect(301, "https://natwelch.com" + req.url);
+      next();
     }
   });
 
