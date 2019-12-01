@@ -64,3 +64,7 @@ nav a:active {
 .bg--beige {
   background-color: #d5d2d1;
 }
+
+.ba--beige {
+  border-color: #d5d2d1;
+}
