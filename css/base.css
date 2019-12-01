@@ -60,3 +60,7 @@ nav a:active {
   transition: color 0.3s;
   color: #c6d2d2;
 }
+
+.bg--beige {
+  background-color: #d5d2d1;
+}

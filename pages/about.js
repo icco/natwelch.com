@@ -33,20 +33,20 @@ export default () => (
         </p>
 
         <ul className="list pa0">
-          <li className="mv3 pl3 bl bw2 b--blue">
+          <li className="mv3 pl3 bl bw2 b--beige">
             Sharing information is the most important action in human society.
           </li>
 
-          <li className="mv3 pl3 bl bw2 b--blue">
+          <li className="mv3 pl3 bl bw2 b--beige">
             I love automating things and building software tools to make
             maintaining the internet easier.
           </li>
 
-          <li className="mv3 pl3 bl bw2 b--blue">
+          <li className="mv3 pl3 bl bw2 b--beige">
             Nature is beautiful and must be preserved.
           </li>
 
-          <li className="mv3 pl3 bl bw2 b--blue">
+          <li className="mv3 pl3 bl bw2 b--beige">
             Humans are inherently good and hilarious, and communicating with
             them well is important.
           </li>
