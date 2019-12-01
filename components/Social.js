@@ -114,6 +114,37 @@ export default params => {
           />
         </svg>
       </a>
+
+      <a
+        className={link_class + " h2 w2"}
+        title="Webring"
+        href="https://webring.xxiivv.com/#random"
+        target="_blank"
+      >
+        {/* Source is at https://webring.xxiivv.com/icon.black.svg */}
+        <svg
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="30 30 300 300"
+          style={{
+            stroke: "currentColor",
+            strokeLinecap: "square",
+            strokeWidth: "28px",
+          }}
+        >
+          <g transform="translate(0,30)">
+            <g transform="translate(150,150),rotate(120,0,0)">
+              <path d="M0,-60 a60,60 0 1,0 0,120 l100,0"></path>
+            </g>
+            <g transform="translate(150,150),rotate(240,0,0)">
+              <path d="M0,-60 a60,60 0 1,0 0,120 l100,0"></path>
+            </g>
+            <g transform="translate(150,150),rotate(0,0,0)">
+              <path d="M0,-60 a60,60 0 1,0 0,120 l100,0"></path>
+            </g>
+          </g>
+        </svg>
+      </a>
     </nav>
   );
 };
