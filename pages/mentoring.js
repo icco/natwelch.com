@@ -35,7 +35,7 @@ export default () => (
               You can book time to chat on{" "}
               <a href="https://calendly.com/icco/chat-with-nat">Calendly</a>.
             </li>
-            <li>You can email me nat+mentoring@natwelch.com.</li>
+            <li>You can email me nat@natwelch.com.</li>
             <li>
               You can ping me on Keybase chat{" "}
               <a href="https://keybase.io/icco">@icco</a>.
