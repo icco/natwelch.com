@@ -32,6 +32,10 @@ app.prepare().then(() => {
     }
   });
 
+  server.get("/resume", (req, res) => {
+    res.redirect(302, "https://resume.natwelch.com");
+  });
+
   server.get("*", (req, res) => {
     const parsedUrl = parse(req.url, true);
     let path = join(__dirname, "static", parsedUrl.pathname);
