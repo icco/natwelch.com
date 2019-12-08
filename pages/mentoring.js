@@ -30,6 +30,7 @@ export default () => (
       <article className="lh-copy f4-ns f5 measure-wide">
         <p className="">
           There are a few options to get in touch!
+  </p>
           <ul>
             <li>
               You can book time to chat on{" "}
@@ -41,7 +42,6 @@ export default () => (
               <a href="https://keybase.io/icco">@icco</a>.
             </li>
           </ul>
-        </p>
       </article>
     </section>
   </App>
