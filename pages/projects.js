@@ -55,7 +55,25 @@ export default () => (
         </TextHeader>
 
         <p className={p_class}>
-  ReportD is a service to send <a href="https://developers.google.com/web/updates/2018/09/reportingapi">report-to</a> reports to. If you use <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">CSP</a>, <a href="https://www.w3.org/TR/network-error-logging/">NEL</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins">HPKP</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">Expect-CT</a> or other tools that support the <a href="https://www.w3.org/TR/reporting/">Web Reporting API</a>, you can use this as a target.
+          ReportD is a service to send{" "}
+          <a href="https://developers.google.com/web/updates/2018/09/reportingapi">
+            report-to
+          </a>{" "}
+          reports to. If you use{" "}
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">
+            CSP
+          </a>
+          , <a href="https://www.w3.org/TR/network-error-logging/">NEL</a>,{" "}
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins">
+            HPKP
+          </a>
+          ,{" "}
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">
+            Expect-CT
+          </a>{" "}
+          or other tools that support the{" "}
+          <a href="https://www.w3.org/TR/reporting/">Web Reporting API</a>, you
+          can use this as a target.
         </p>
 
         <ProjectData owner="icco" repo="reportd" />
