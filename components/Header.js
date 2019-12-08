@@ -66,7 +66,7 @@ class Header extends React.Component {
       <div>
         <nav className="flex justify-between ttc">
           <div className="flex items-center pa3">{prefix}</div>
-          <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml5 ml0-ns flex items-center">
+          <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
             {nav}
           </div>
         </nav>
