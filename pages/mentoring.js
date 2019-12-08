@@ -28,20 +28,18 @@ export default () => (
       </article>
       <TextHeader level="2">How To</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
-        <p className="">
-          There are a few options to get in touch!
-          <ul>
-            <li>
-              You can book time to chat on{" "}
-              <a href="https://calendly.com/icco/chat-with-nat">Calendly</a>.
-            </li>
-            <li>You can email me nat@natwelch.com.</li>
-            <li>
-              You can ping me on Keybase chat{" "}
-              <a href="https://keybase.io/icco">@icco</a>.
-            </li>
-          </ul>
-        </p>
+        <p className="">There are a few options to get in touch!</p>
+        <ul>
+          <li>
+            You can book time to chat on{" "}
+            <a href="https://calendly.com/icco/chat-with-nat">Calendly</a>.
+          </li>
+          <li>You can email me nat@natwelch.com.</li>
+          <li>
+            You can ping me on Keybase chat{" "}
+            <a href="https://keybase.io/icco">@icco</a>.
+          </li>
+        </ul>
       </article>
     </section>
   </App>

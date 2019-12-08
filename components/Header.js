@@ -33,23 +33,23 @@ class Header extends React.Component {
       nav = (
         <>
           <Link href="/about">
-            <a className="f6 dib mr3 mr4-ns">About</a>
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">About</a>
           </Link>
 
           <Link href="/mentoring">
-            <a className="f6 dib mr3 mr4-ns">Mentoring</a>
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Mentoring</a>
           </Link>
 
           <Link href="/projects">
-            <a className="f6 dib mr3 mr4-ns">Projects</a>
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Projects</a>
           </Link>
 
           <Link href="/writing">
-            <a className="f6 dib mr3 mr4-ns">Writing</a>
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Writing</a>
           </Link>
 
           <Link href="/talks">
-            <a className="f6 dib mr3 mr4-ns">Talks</a>
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Talks</a>
           </Link>
         </>
       );
@@ -66,7 +66,7 @@ class Header extends React.Component {
       <div>
         <nav className="flex justify-between ttc">
           <div className="flex items-center pa3">{prefix}</div>
-          <div className="flex-grow flex-wrap pv3 ph3-ns pl5 pr3 flex items-center">
+          <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
             {nav}
           </div>
         </nav>
