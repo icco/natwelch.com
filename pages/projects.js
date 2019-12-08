@@ -98,8 +98,8 @@ export default () => (
           Fog
         </TextHeader>
         <p className={p_class}>
-          I am a core contributor to Fog, a ruby library for talking to various
-          cloud libraries in a consistent manor.
+          I am a core contributor to <a href="http://fog.io">Fog</a>, a ruby
+          library for talking to various cloud libraries in a consistent manor.
         </p>
 
         <ProjectData owner="fog" repo="fog" />
