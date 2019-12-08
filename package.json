@@ -15,7 +15,7 @@
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
   "dependencies": {
-    "@icco/react-common": "^2019.10.4-1",
+    "@icco/react-common": "^2019.12.8-4",
     "@zeit/next-css": "^1.0.1",
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "^2.5.1",

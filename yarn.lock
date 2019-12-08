@@ -716,31 +716,17 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@icco/react-common@^2019.10.4-1":
-  version "2019.10.4-1"
-  resolved "https://registry.yarnpkg.com/@icco/react-common/-/react-common-2019.10.4-1.tgz#cffb462f5c1136e4c4b173651c3b131d2fff9c56"
-  integrity sha512-sVDJ4IYgwfCFUQQMo2wMXAnGVdnS9PkAyFigVTIpCLOoGNrDMN4z+lMkR5JNiIdgre8QdNK9cyn/UXZEwEOMQg==
+"@icco/react-common@^2019.12.8-4":
+  version "2019.12.8-4"
+  resolved "https://registry.yarnpkg.com/@icco/react-common/-/react-common-2019.12.8-4.tgz#408740ad89bcc9d4fa619eebd24371273afdedb7"
+  integrity sha512-S2AzgN4j/mdxTJrtEY501NyZbF/MCeCl+PWI10a86folm9/kIhHVvOQZK//ZbdTXo63wGutjdnvhXsWpcw7EyA==
   dependencies:
-    "@svgdotjs/svg.js" "^3.0.1"
-    "@svgdotjs/svg.topath.js" "^2.0.3"
     prop-types "^15.7"
-    react "^16.8"
-    react-dom "^16.8"
+    react "^16.12.0"
+    react-dom "^16.12.0"
     react-loading "^2.0"
-    vivus "^0.4.4"
+    vivus "^0.4.5"
     webpack "^4.35.0"
-
-"@svgdotjs/svg.js@^3.0.1", "@svgdotjs/svg.js@^3.0.10":
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/@svgdotjs/svg.js/-/svg.js-3.0.16.tgz#7044754e45daf62c8e2b115c45ca33ca5b967aff"
-  integrity sha512-yZ4jfP/SeLHEnCi9PIrzienKCrA4vW9+jm5uUV3N5DG2e9zgXLY5FgywK2u8/gMFIeKO0HuqTLFFfWJj+MfMLA==
-
-"@svgdotjs/svg.topath.js@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@svgdotjs/svg.topath.js/-/svg.topath.js-2.0.3.tgz#c03e2a939acb8ef083befa9dd74dadd26f97e5c5"
-  integrity sha512-vZG+4DpzjhkjCT9LJqg+cMCekJIGSUTpOEfbQN/wueSaiP7N04JFXYW4X3lj1MlZDNU9IcE1GsWEuwdhLJJGuA==
-  dependencies:
-    "@svgdotjs/svg.js" "^3.0.10"
 
 "@types/node@>=6":
   version "12.12.14"
@@ -3861,9 +3847,9 @@ normalize-path@^3.0.0:
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
 npm-bundled@^1.0.1:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.6.tgz#e7ba9aadcef962bb61248f91721cd932b3fe6bdd"
-  integrity sha512-8/JCaftHwbd//k6y2rEWp6k1wxVfpFzB6t1p825+cUb7Ym2XQfhwIC5KwhrvzZRJu+LtDE585zVaS32+CGtf0g==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.1.0.tgz#2e8fdb7e69eff2df963937b696243316537c284b"
+  integrity sha512-ez6dcKBFNo4FvlMqscBEFUum6M2FTLW5grqm3DyBKB5XOyKVCeeWvAuoZtbmW/5Cv8EM2bQUOA6ufxa/TKVN0g==
 
 npm-packlist@^1.1.6:
   version "1.4.6"
@@ -4478,7 +4464,7 @@ react-apollo@^2.5.3:
     ts-invariant "^0.4.2"
     tslib "^1.9.3"
 
-react-dom@^16.8, react-dom@^16.8.3:
+react-dom@^16.12.0, react-dom@^16.8.3:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
   integrity sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw==
@@ -4520,7 +4506,7 @@ react-ssr-prepass@1.0.2:
   dependencies:
     object-is "^1.0.1"
 
-react@^16.8, react@^16.8.3:
+react@^16.12.0, react@^16.8.3:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
@@ -5486,7 +5472,7 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vivus@^0.4.4:
+vivus@^0.4.5:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/vivus/-/vivus-0.4.5.tgz#61d18c2ac8f48cab5d250fc3df1badfcb32d669a"
   integrity sha512-dBM5QDcO0JUnoeGUROhMYVBW4Qry637iQ1o6vLDaEVzu0TAQ3tVlzeQlLGYPjegCxcY1nC8FtyTjsZ8rqXVL4Q==
