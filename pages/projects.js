@@ -51,29 +51,14 @@ export default () => (
 
       <article className={article_class}>
         <TextHeader level="2" className="dib mt1 mb2">
-          sadnat.com
+          ReportD
         </TextHeader>
 
         <p className={p_class}>
-          sadnat.com is a project I started years ago and was updated
-          semi-regularly for years. It chronicled events that made me sad as
-          observed by other people.
+  ReportD is a service to send <a href="https://developers.google.com/web/updates/2018/09/reportingapi">report-to</a> reports to. If you use <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">CSP</a>, <a href="https://www.w3.org/TR/network-error-logging/">NEL</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Public-Key-Pins">HPKP</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">Expect-CT</a> or other tools that support the <a href="https://www.w3.org/TR/reporting/">Web Reporting API</a>, you can use this as a target.
         </p>
 
-        <ProjectData owner="icco" repo="sadnat.com" />
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
-          Giftionary
-        </TextHeader>
-        <p className={p_class}>
-          Giftionary was a website for hosting and sharing Gifs. It started as a
-          tool to find the best gifs on Tumblr, and then transformed into a
-          personal Gif Dictionary.
-        </p>
-
-        <ProjectData owner="icco" repo="giftionary" />
+        <ProjectData owner="icco" repo="reportd" />
       </article>
 
       <article className={article_class}>
@@ -118,28 +103,6 @@ export default () => (
         </p>
 
         <ProjectData owner="icco" repo="gotak" />
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
-          Time
-        </TextHeader>
-        <p className={p_class}>
-          Time is an attempt to implement the NTP spec in Go.
-        </p>
-
-        <ProjectData owner="icco" repo="time" />
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
-          Etu
-        </TextHeader>
-        <p className={p_class}>
-          Etu is an attempt to implement a time tracker.
-        </p>
-
-        <ProjectData owner="icco" repo="etu" />
       </article>
 
       <article className={article_class}>
