@@ -7,7 +7,7 @@ export default params => {
         className={link_class + " h2 w2"}
         href="https://github.com/icco"
         title="GitHub"
-    rel="me"
+        rel="me"
       >
         <svg
           fill="currentColor"
@@ -26,7 +26,7 @@ export default params => {
         className={link_class + " h2 w2"}
         href="https://instagram.com/probablynatwelch"
         title="Instagram"
-    rel="me"
+        rel="me"
       >
         <svg
           fill="currentColor"
@@ -45,7 +45,7 @@ export default params => {
         className={link_class + " h2 w2"}
         href="https://keybase.io/icco"
         title="Keybase"
-    rel="me"
+        rel="me"
       >
         <svg
           fill="currentColor"
@@ -65,7 +65,7 @@ export default params => {
         className={link_class + " h2 w2"}
         href="https://linkedin.com/in/natwelch"
         title="LinkedIn"
-    rel="me"
+        rel="me"
       >
         <svg
           fill="currentColor"
@@ -87,7 +87,7 @@ export default params => {
         className={link_class + " h2 w2"}
         href="https://www.goodreads.com/author/show/18143346.Nat_Welch"
         title="Goodreads"
-    rel="me"
+        rel="me"
       >
         <svg
           fill="currentColor"
@@ -107,7 +107,7 @@ export default params => {
         className={link_class + " h2 w2"}
         href="https://twitter.com/icco"
         title="Twitter"
-    rel="me"
+        rel="me"
       >
         <svg
           fill="currentColor"
@@ -130,7 +130,7 @@ export default params => {
         title="Webring"
         href="https://webring.xxiivv.com/#random"
         target="_blank"
-    rel="me"
+        rel="me"
       >
         {/* Source is at https://webring.xxiivv.com/icon.black.svg */}
         <svg
@@ -152,15 +152,14 @@ export default params => {
         </svg>
       </a>
 
-
       <a
         className={link_class + " h2 w2"}
         title="Mastodon / merveilles.town"
-href="https://merveilles.town/@icco"
+        href="https://merveilles.town/@icco"
         target="_blank"
-    rel="me"
+        rel="me"
       >
-    <a >Mastodon</a>
+        <a>Mastodon</a>
         {/* Source is at https://wiki.xxiivv.com/ */}
         <svg
           clipRule="evenodd"
@@ -174,8 +173,8 @@ href="https://merveilles.town/@icco"
           width="32"
           xmlns="http://www.w3.org/2000/svg"
         >
-    <path d='M185,65 A60,60 0 0,0 125,125 L185,125 Z M125,245 A60,60 0 0,0 185,185 L125,185 Z M95,125 A30,30 0 0,1 125,155 A30,30 0 0,1 95,185 A30,30 0 0,1 65,155 A30,30 0 0,1 95,125 Z M155,125 A30,30 0 0,1 185,155 A30,30 0 0,1 155,185 A30,30 0 0,1 125,155 A30,30 0 0,1 155,125 Z M215,125 A30,30 0 0,1 245,155 A30,30 0 0,1 215,185 A30,30 0 0,1 185,155 A30,30 0 0,1 215,125 '></path>
-    <path d='M125,65 A60,60 0 0,1 185,125 L125,125 Z M185,245 A60,60 0 0,1 125,185 L185,185 Z M65,65 A60,60 0 0,1 125,125 L65,125 Z M65,245 A60,60 0 0,0 125,185 L65,185 Z M245,65 A60,60 0 0,0 185,125 L245,125 Z M245,245 A60,60 0 0,1 185,185 L245,185 Z'></path>
+          <path d="M185,65 A60,60 0 0,0 125,125 L185,125 Z M125,245 A60,60 0 0,0 185,185 L125,185 Z M95,125 A30,30 0 0,1 125,155 A30,30 0 0,1 95,185 A30,30 0 0,1 65,155 A30,30 0 0,1 95,125 Z M155,125 A30,30 0 0,1 185,155 A30,30 0 0,1 155,185 A30,30 0 0,1 125,155 A30,30 0 0,1 155,125 Z M215,125 A30,30 0 0,1 245,155 A30,30 0 0,1 215,185 A30,30 0 0,1 185,155 A30,30 0 0,1 215,125 "></path>
+          <path d="M125,65 A60,60 0 0,1 185,125 L125,125 Z M185,245 A60,60 0 0,1 125,185 L185,185 Z M65,65 A60,60 0 0,1 125,125 L65,125 Z M65,245 A60,60 0 0,0 125,185 L65,185 Z M245,65 A60,60 0 0,0 185,125 L245,125 Z M245,245 A60,60 0 0,1 185,185 L245,185 Z"></path>
         </svg>
       </a>
     </nav>
