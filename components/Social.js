@@ -159,8 +159,7 @@ export default params => {
         target="_blank"
         rel="me"
       >
-        <a>Mastodon</a>
-        {/* Source is at https://wiki.xxiivv.com/ */}
+        {/* Source is at https://somni.us/assets/images/merveilles-to-edge-white.svg */}
         <svg
           clipRule="evenodd"
           fill="currentColor"
@@ -169,12 +168,21 @@ export default params => {
           stroke="currentColor"
           strokeLinejoin="round"
           strokeMiterlimit="1.414"
-          viewBox="0 0 236 212"
+          viewBox="0 0 310 310"
           width="32"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M185,65 A60,60 0 0,0 125,125 L185,125 Z M125,245 A60,60 0 0,0 185,185 L125,185 Z M95,125 A30,30 0 0,1 125,155 A30,30 0 0,1 95,185 A30,30 0 0,1 65,155 A30,30 0 0,1 95,125 Z M155,125 A30,30 0 0,1 185,155 A30,30 0 0,1 155,185 A30,30 0 0,1 125,155 A30,30 0 0,1 155,125 Z M215,125 A30,30 0 0,1 245,155 A30,30 0 0,1 215,185 A30,30 0 0,1 185,155 A30,30 0 0,1 215,125 "></path>
-          <path d="M125,65 A60,60 0 0,1 185,125 L125,125 Z M185,245 A60,60 0 0,1 125,185 L185,185 Z M65,65 A60,60 0 0,1 125,125 L65,125 Z M65,245 A60,60 0 0,0 125,185 L65,185 Z M245,65 A60,60 0 0,0 185,125 L245,125 Z M245,245 A60,60 0 0,1 185,185 L245,185 Z"></path>
+<g>
+	<circle class="st0" cx="51.7" cy="155" r="51.7"/>
+	<circle class="st0" cx="155" cy="155" r="51.7"/>
+	<circle class="st0" cx="258.3" cy="155" r="51.7"/>
+	<path class="st0" d="M0,0v103.3h51.7h51.7C103.3,46.3,57,0,0,0z"/>
+	<path class="st0" d="M310,310V206.7h-51.7h-51.7C206.7,263.7,253,310,310,310z"/>
+	<path class="st0" d="M310,0c-57,0-103.3,46.3-103.3,103.3h51.7H310V0z"/>
+	<path class="st0" d="M0,206.7V310c57,0,103.3-46.3,103.3-103.3H51.7H0z"/>
+	<path class="st0" d="M103.3,206.7V310c18.8,0,36.5-5,51.7-13.8c15.2,8.8,32.9,13.8,51.7,13.8V206.7H155H103.3z"/>
+	<path class="st0" d="M206.7,103.3V0c-18.8,0-36.5,5-51.7,13.8C139.8,5,122.1,0,103.3,0v103.3H155H206.7z"/>
+</g>
         </svg>
       </a>
     </nav>
