@@ -22,7 +22,7 @@
     "apollo-link-context": "^1.0.17",
     "apollo-link-http": "^1.5.14",
     "express": "^4.17.1",
-    "graphql": "^14.2.0",
+    "graphql": "^15.0.0",
     "graphql-tag": "^2.10.1",
     "helmet": "^3.18.0",
     "isomorphic-unfetch": "^3.0.0",
