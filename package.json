@@ -37,7 +37,7 @@
     "webpack": "^4.29.6"
   },
   "devDependencies": {
-    "prettier": "^1.16.1"
+    "prettier": "^2"
   },
   "prettier": {
     "trailingComma": "es5"
