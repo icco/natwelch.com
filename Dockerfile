@@ -3,7 +3,7 @@ FROM node:12-alpine
 WORKDIR /usr/src/app
 RUN apk add --no-cache git
 
-COPY package.json yarn.lock ./
+COPY .snyk package.json yarn.lock ./
 RUN yarn install --non-interactive --frozen-lockfile
 
 COPY . .
