@@ -1,4 +1,4 @@
-export default params => {
+export default (params) => {
   let link_class = "link " + params.linkClassName;
 
   return (
