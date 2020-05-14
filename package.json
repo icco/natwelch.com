@@ -40,7 +40,7 @@
     "snyk": "^1.320.5"
   },
   "devDependencies": {
-    "prettier": "^1.16.1"
+    "prettier": "^2"
   },
   "prettier": {
     "trailingComma": "es5"
