@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -34,12 +36,14 @@
     "react-apollo": "^2.5.3",
     "react-dom": "^16.12.0",
     "react-moment": "^0.8.4",
-    "webpack": "^4.29.6"
+    "webpack": "^4.29.6",
+    "snyk": "^1.320.5"
   },
   "devDependencies": {
     "prettier": "^1.16.1"
   },
   "prettier": {
     "trailingComma": "es5"
-  }
+  },
+  "snyk": true
 }
