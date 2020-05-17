@@ -15,10 +15,10 @@ export default () => (
       <title>Nat Welch | Projects</title>
     </Head>
     <Header noLogo />
-    <section className="cf lh-copy pa3 pa5-ns mw7">
-      <article className={article_class}>
-        <TextHeader level="1">Projects</TextHeader>
+    <section className="cf lh-copy pa3 pa5-ns">
+      <TextHeader level="1">Projects</TextHeader>
 
+      <article className={article_class}>
         <p className={p_class}>
           I post photos with varying consistency on{" "}
           <a href="https://www.flickr.com/photos/icco/">Flickr</a> &amp;{" "}
