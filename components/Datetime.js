@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 
-const Datetime = props => {
+const Datetime = (props) => {
   let time = DateTime.fromISO(props.children).toUTC();
 
   return (

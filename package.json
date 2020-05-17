@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,18 +30,20 @@
     "isomorphic-unfetch": "^3.0.0",
     "luxon": "^1.12.0",
     "moment": "^2.24.0",
-    "next": "^9.1.6",
+    "next": "^9.3.5",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-apollo": "^2.5.3",
     "react-dom": "^16.12.0",
     "react-moment": "^0.8.4",
+    "snyk": "^1.320.5",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
-    "prettier": "^1.16.1"
+    "prettier": "^2"
   },
   "prettier": {
     "trailingComma": "es5"
-  }
+  },
+  "snyk": true
 }

@@ -23,7 +23,7 @@ app.prepare().then(() => {
   server.use(NELMiddleware());
   server.use(ReportToMiddleware("natwelch"));
 
-  server.use(function(req, res, next) {
+  server.use(function (req, res, next) {
     var host = req.header("host");
     if (host == "www.natwelch.com") {
       res.redirect(302, "https://natwelch.com" + req.url);
@@ -58,7 +58,7 @@ app.prepare().then(() => {
     return handle(req, res, parsedUrl);
   });
 
-  server.listen(port, err => {
+  server.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });

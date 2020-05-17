@@ -27,7 +27,7 @@ const ProjectQuery = gql`
   }
 `;
 
-export default params => {
+export default (params) => {
   if (params.owner == "" || params.repo == "") {
     return <div className={params.className}>&nbsp;</div>;
   }
