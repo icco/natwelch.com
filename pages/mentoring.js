@@ -35,10 +35,6 @@ export default () => (
             <a href="https://calendly.com/icco/chat-with-nat">Calendly</a>.
           </li>
           <li>You can email me nat@natwelch.com.</li>
-          <li>
-            You can ping me on Keybase chat{" "}
-            <a href="https://keybase.io/icco">@icco</a>.
-          </li>
         </ul>
       </article>
     </section>
