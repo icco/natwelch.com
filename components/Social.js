@@ -1,4 +1,4 @@
-const Social = params => {
+const Social = (params) => {
   let link_class = "link " + params.linkClassName;
 
   return (

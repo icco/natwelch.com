@@ -27,7 +27,7 @@ const ProjectQuery = gql`
   }
 `;
 
-const ProjectData = params => {
+const ProjectData = (params) => {
   if (params.owner == "" || params.repo == "") {
     return <div className={params.className}>&nbsp;</div>;
   }
