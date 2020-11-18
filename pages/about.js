@@ -21,21 +21,20 @@ const About = () => (
           Hi there! I'm Nat. I was born in the San Francisco Bay Area, <Age />{" "}
           ago. I currently live in Beacon, NY with my wife Melissa and our cat
           Beasley. During the day I work as the Lead Cloud Platform Engineer for{" "}
-          <a href="https://timebyping.com">Time by Ping</a>. See{" "}
-          <Link href="/privacy">
-            <a>my Privacy Policy</a>
-          </Link>{" "}
-          for what data I keep when you visit this site and others I maintain.
-          See{" "}
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>{" "}
-          for a list of my current side projects.
+          <a href="https://timebyping.com">Time by Ping</a>.
         </p>
 
         <p className="">
           You can see <a href="https://resume.natwelch.com">my resume</a> for my
           indepth work history.
+        </p>
+
+        <p className="">
+          See my <Link href="/privacy"><a>Privacy Policy</a></Link> for what data I keep when you visit this site and others I maintain.
+        </p>
+
+        <p className="">
+          See <Link href="/projects"><a>Projects</a></Link> for a list of my current side projects.
         </p>
 
         <p className="">
