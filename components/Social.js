@@ -1,4 +1,4 @@
-export default (params) => {
+const Social = params => {
   let link_class = "link " + params.linkClassName;
 
   return (
@@ -168,3 +168,5 @@ export default (params) => {
     </nav>
   );
 };
+
+export default Social;

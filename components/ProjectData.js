@@ -27,7 +27,7 @@ const ProjectQuery = gql`
   }
 `;
 
-export default (params) => {
+const ProjectData = params => {
   if (params.owner == "" || params.repo == "") {
     return <div className={params.className}>&nbsp;</div>;
   }
@@ -96,3 +96,5 @@ export default (params) => {
     </ApolloProvider>
   );
 };
+
+export default ProjectData;

@@ -6,4 +6,6 @@ Router.onRouteChangeComplete = (url) => {
   fathom.pageview(url);
 };
 
-export default ({ children }) => <main>{children}</main>;
+const App = ({ children }) => <main>{children}</main>;
+
+export default App;
