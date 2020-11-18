@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import Age from "../components/Age.js";
 import App from "../components/App";
@@ -17,15 +18,12 @@ const About = () => (
       <TextHeader level="2">Nat Welch</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
         <p className="">
-          Hi there! I'm Nat. I was born in the San Francisco Bay Area, <Age />{" "}
-          ago. I currently live in Brooklyn with my wife Melissa and our cat
-          Beasley. During the day I work as a Site Reliability Engineer for
-          Google's Customer Reliability Engineering team.
-        </p>
+          Hi there! I'm Nat. I was born in the San Francisco Bay Area, <Age /> ago. I currently live in Beacon, NY with my wife Melissa and our cat Beasley. During the day I work as the Lead Cloud Platform Engineer for <a href="https://timebyping.com">Time by Ping</a>. See <Link href="/privacy"><a>my Privacy Policy</a></Link> for what data I keep when you visit this site and others I maintain. See <Link href="/projects"><a>Projects</a></Link> for a list of my current side projects.
+  </p>
 
         <p className="">
           You can see <a href="https://resume.natwelch.com">my resume</a> for
-          indepth work history.
+          my indepth work history.
         </p>
 
         <p className="">
