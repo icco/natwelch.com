@@ -14,8 +14,8 @@ function WWW({ Component, pageProps }) {
           key="viewport"
         />
       </Head>
-              <Component {...pageProps} />
-</>
+      <Component {...pageProps} />
+    </>
   );
 }
 
