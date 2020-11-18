@@ -30,11 +30,19 @@ const About = () => (
         </p>
 
         <p className="">
-          See my <Link href="/privacy"><a>Privacy Policy</a></Link> for what data I keep when you visit this site and others I maintain.
+          See my{" "}
+          <Link href="/privacy">
+            <a>Privacy Policy</a>
+          </Link>{" "}
+          for what data I keep when you visit this site and others I maintain.
         </p>
 
         <p className="">
-          See <Link href="/projects"><a>Projects</a></Link> for a list of my current side projects.
+          See{" "}
+          <Link href="/projects">
+            <a>Projects</a>
+          </Link>{" "}
+          for a list of my current side projects.
         </p>
 
         <p className="">
