@@ -22,50 +22,43 @@ app.prepare().then(() => {
   server.use(NELMiddleware());
   server.use(ReportToMiddleware("natwelch"));
 
-      server.use(helmet.dnsPrefetchControl());
-      server.use(helmet.expectCt());
-      server.use(helmet.frameguard());
-      server.use(helmet.hidePoweredBy());
-      server.use(helmet.hsts());
-      server.use(helmet.ieNoOpen());
-      server.use(helmet.noSniff());
-      server.use(helmet.permittedCrossDomainPolicies());
-      server.use(helmet.xssFilter());
+  server.use(helmet.dnsPrefetchControl());
+  server.use(helmet.expectCt());
+  server.use(helmet.frameguard());
+  server.use(helmet.hidePoweredBy());
+  server.use(helmet.hsts());
+  server.use(helmet.ieNoOpen());
+  server.use(helmet.noSniff());
+  server.use(helmet.permittedCrossDomainPolicies());
+  server.use(helmet.xssFilter());
 
-      server.use(
-        helmet.referrerPolicy({ policy: "strict-origin-when-cross-origin" })
-      );
+  server.use(
+    helmet.referrerPolicy({ policy: "strict-origin-when-cross-origin" })
+  );
 
-      let directives = {
-        upgradeInsecureRequests: [],
-        defaultSrc: [
-          "'self'",
-          "https://icco.auth0.com/",
-        ],
-        styleSrc: [
-          "'self'",
-          "'unsafe-inline'",
-          "https://fonts.googleapis.com/",
-        ],
-        fontSrc: ["https://fonts.gstatic.com"],
-        imgSrc: [
-          "'self'",
-          "blob:",
-          "data:",
-          "https://a.natwelch.com",
-          "https://icco.imgix.net",
-        ],
-        scriptSrc: [
-          "'self'",
-          "blob:",
-          "'unsafe-inline'",
-          "'unsafe-eval'",
-          "https://a.natwelch.com/tracker.js",
-        ],
-        objectSrc: ["'none'"],
-        reportUri: "https://reportd.natwelch.com/report/writing",
-        reportTo: "default",
-      };
+  let directives = {
+    upgradeInsecureRequests: [],
+    defaultSrc: ["'self'", "https://icco.auth0.com/"],
+    styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com/"],
+    fontSrc: ["https://fonts.gstatic.com"],
+    imgSrc: [
+      "'self'",
+      "blob:",
+      "data:",
+      "https://a.natwelch.com",
+      "https://icco.imgix.net",
+    ],
+    scriptSrc: [
+      "'self'",
+      "blob:",
+      "'unsafe-inline'",
+      "'unsafe-eval'",
+      "https://a.natwelch.com/tracker.js",
+    ],
+    objectSrc: ["'none'"],
+    reportUri: "https://reportd.natwelch.com/report/writing",
+    reportTo: "default",
+  };
 
   server.use(function (req, res, next) {
     var host = req.header("host");
