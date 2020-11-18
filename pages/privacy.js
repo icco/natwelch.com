@@ -28,6 +28,11 @@ const Privacy = () => (
           others.
         </p>
       </article>
+
+      <TextHeader level="2">Tab Archive</TextHeader>
+      <article className="lh-copy f4-ns f5 measure-wide">
+        <p>For Tab Archive's privacy policy, please see <a href="https://tab-archive.app">tab-archive.app</a>.</p>
+      </article>
     </section>
   </App>
 );
