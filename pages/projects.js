@@ -2,7 +2,6 @@ import Head from "next/head";
 
 import App from "../components/App";
 import Header from "../components/Header.js";
-import ProjectData from "../components/ProjectData.js";
 import ProjectLogo from "../components/ProjectLogo.js";
 import TextHeader from "../components/TextHeader.js";
 
@@ -45,8 +44,6 @@ const Projects = () => (
           the code is at{" "}
           <a href="https://github.com/icco/graphql">github.com/icco/graphql</a>.
         </p>
-
-        <ProjectData owner="icco" repo="graphql" />
       </article>
 
       <article className={article_class}>
@@ -75,8 +72,6 @@ const Projects = () => (
           <a href="https://www.w3.org/TR/reporting/">Web Reporting API</a>, you
           can use this as a target.
         </p>
-
-        <ProjectData owner="icco" repo="reportd" />
       </article>
 
       <article className={article_class}>
@@ -89,8 +84,6 @@ const Projects = () => (
           personal interests. It still works but most of the datasources are no
           longer generating fresh content.
         </p>
-
-        <ProjectData owner="icco" repo="inspiration" />
       </article>
 
       <article className={article_class}>
@@ -101,8 +94,6 @@ const Projects = () => (
           I am a core contributor to <a href="http://fog.io">Fog</a>, a ruby
           library for talking to various cloud libraries in a consistent manor.
         </p>
-
-        <ProjectData owner="fog" repo="fog" />
       </article>
 
       <article className={article_class}>
@@ -119,8 +110,6 @@ const Projects = () => (
           </a>
           .
         </p>
-
-        <ProjectData owner="icco" repo="gotak" />
       </article>
 
       <article className={article_class}>
@@ -131,8 +120,6 @@ const Projects = () => (
           A very simple library that implements RED metrics and forwards them to
           Datadog or Statsd.
         </p>
-
-        <ProjectData owner="icco" repo="three-things" />
       </article>
 
       <article className={article_class}>
@@ -144,8 +131,6 @@ const Projects = () => (
           Instagram API, despite Facebook's constant shutting down of APIs and
           requiring business backing to access existing ones.
         </p>
-
-        <ProjectData owner="icco" repo="instagram-continued" />
       </article>
     </section>
   </App>
