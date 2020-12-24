@@ -114,22 +114,11 @@ const Projects = () => (
 
       <article className={article_class}>
         <TextHeader level="2" className="dib mt1 mb2">
-          three-things
+          Tab Archive
         </TextHeader>
         <p className={p_class}>
-          A very simple library that implements RED metrics and forwards them to
-          Datadog or Statsd.
-        </p>
-      </article>
-
-      <article className={article_class}>
-        <TextHeader level="2" className="dib mt1 mb2">
-          instagram-continued
-        </TextHeader>
-        <p className={p_class}>
-          This gem is an attempt to keep a ruby library working against the
-          Instagram API, despite Facebook's constant shutting down of APIs and
-          requiring business backing to access existing ones.
+          <a href="https://tab-archive.app">Tab Archive</a> is a browser
+          extension for closing and archiving your tabs.
         </p>
       </article>
     </section>
