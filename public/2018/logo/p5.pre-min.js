@@ -6000,98 +6000,99 @@
                 Table.call(
                   this,
                   "scriptListTable",
-                  recordList("scriptRecord", scriptListTable, function (
-                    scriptRecord,
-                    i
-                  ) {
-                    var script = scriptRecord.script;
-                    var defaultLangSys = script.defaultLangSys;
-                    check.assert(
-                      !!defaultLangSys,
-                      "Unable to write GSUB: script " +
-                        scriptRecord.tag +
-                        " has no default language system."
-                    );
-                    return [
-                      {
-                        name: "scriptTag" + i,
-                        type: "TAG",
-                        value: scriptRecord.tag,
-                      },
-                      {
-                        name: "script" + i,
-                        type: "TABLE",
-                        value: new Table(
-                          "scriptTable",
-                          [
-                            {
-                              name: "defaultLangSys",
-                              type: "TABLE",
-                              value: new Table(
-                                "defaultLangSys",
-                                [
-                                  {
-                                    name: "lookupOrder",
-                                    type: "USHORT",
-                                    value: 0,
-                                  },
-                                  {
-                                    name: "reqFeatureIndex",
-                                    type: "USHORT",
-                                    value: defaultLangSys.reqFeatureIndex,
-                                  },
-                                ].concat(
-                                  ushortList(
-                                    "featureIndex",
-                                    defaultLangSys.featureIndexes
+                  recordList(
+                    "scriptRecord",
+                    scriptListTable,
+                    function (scriptRecord, i) {
+                      var script = scriptRecord.script;
+                      var defaultLangSys = script.defaultLangSys;
+                      check.assert(
+                        !!defaultLangSys,
+                        "Unable to write GSUB: script " +
+                          scriptRecord.tag +
+                          " has no default language system."
+                      );
+                      return [
+                        {
+                          name: "scriptTag" + i,
+                          type: "TAG",
+                          value: scriptRecord.tag,
+                        },
+                        {
+                          name: "script" + i,
+                          type: "TABLE",
+                          value: new Table(
+                            "scriptTable",
+                            [
+                              {
+                                name: "defaultLangSys",
+                                type: "TABLE",
+                                value: new Table(
+                                  "defaultLangSys",
+                                  [
+                                    {
+                                      name: "lookupOrder",
+                                      type: "USHORT",
+                                      value: 0,
+                                    },
+                                    {
+                                      name: "reqFeatureIndex",
+                                      type: "USHORT",
+                                      value: defaultLangSys.reqFeatureIndex,
+                                    },
+                                  ].concat(
+                                    ushortList(
+                                      "featureIndex",
+                                      defaultLangSys.featureIndexes
+                                    )
                                   )
-                                )
-                              ),
-                            },
-                          ].concat(
-                            recordList(
-                              "langSys",
-                              script.langSysRecords,
-                              function (langSysRecord, i) {
-                                var langSys = langSysRecord.langSys;
-                                return [
-                                  {
-                                    name: "langSysTag" + i,
-                                    type: "TAG",
-                                    value: langSysRecord.tag,
-                                  },
-                                  {
-                                    name: "langSys" + i,
-                                    type: "TABLE",
-                                    value: new Table(
-                                      "langSys",
-                                      [
-                                        {
-                                          name: "lookupOrder",
-                                          type: "USHORT",
-                                          value: 0,
-                                        },
-                                        {
-                                          name: "reqFeatureIndex",
-                                          type: "USHORT",
-                                          value: langSys.reqFeatureIndex,
-                                        },
-                                      ].concat(
-                                        ushortList(
-                                          "featureIndex",
-                                          langSys.featureIndexes
+                                ),
+                              },
+                            ].concat(
+                              recordList(
+                                "langSys",
+                                script.langSysRecords,
+                                function (langSysRecord, i) {
+                                  var langSys = langSysRecord.langSys;
+                                  return [
+                                    {
+                                      name: "langSysTag" + i,
+                                      type: "TAG",
+                                      value: langSysRecord.tag,
+                                    },
+                                    {
+                                      name: "langSys" + i,
+                                      type: "TABLE",
+                                      value: new Table(
+                                        "langSys",
+                                        [
+                                          {
+                                            name: "lookupOrder",
+                                            type: "USHORT",
+                                            value: 0,
+                                          },
+                                          {
+                                            name: "reqFeatureIndex",
+                                            type: "USHORT",
+                                            value: langSys.reqFeatureIndex,
+                                          },
+                                        ].concat(
+                                          ushortList(
+                                            "featureIndex",
+                                            langSys.featureIndexes
+                                          )
                                         )
-                                      )
-                                    ),
-                                  },
-                                ];
-                              }
+                                      ),
+                                    },
+                                  ];
+                                }
+                              )
                             )
-                          )
-                        ),
-                      },
-                    ];
-                  })
+                          ),
+                        },
+                      ];
+                    }
+                  )
                 );
               }
               ScriptList.prototype = Object.create(Table.prototype);
@@ -6108,38 +6109,39 @@
                 Table.call(
                   this,
                   "featureListTable",
-                  recordList("featureRecord", featureListTable, function (
-                    featureRecord,
-                    i
-                  ) {
-                    var feature = featureRecord.feature;
-                    return [
-                      {
-                        name: "featureTag" + i,
-                        type: "TAG",
-                        value: featureRecord.tag,
-                      },
-                      {
-                        name: "feature" + i,
-                        type: "TABLE",
-                        value: new Table(
-                          "featureTable",
-                          [
-                            {
-                              name: "featureParams",
-                              type: "USHORT",
-                              value: feature.featureParams,
-                            },
-                          ].concat(
-                            ushortList(
-                              "lookupListIndex",
-                              feature.lookupListIndexes
+                  recordList(
+                    "featureRecord",
+                    featureListTable,
+                    function (featureRecord, i) {
+                      var feature = featureRecord.feature;
+                      return [
+                        {
+                          name: "featureTag" + i,
+                          type: "TAG",
+                          value: featureRecord.tag,
+                        },
+                        {
+                          name: "feature" + i,
+                          type: "TABLE",
+                          value: new Table(
+                            "featureTable",
+                            [
+                              {
+                                name: "featureParams",
+                                type: "USHORT",
+                                value: feature.featureParams,
+                              },
+                            ].concat(
+                              ushortList(
+                                "lookupListIndex",
+                                feature.lookupListIndexes
+                              )
                             )
-                          )
-                        ),
-                      },
-                    ];
-                  })
+                          ),
+                        },
+                      ];
+                    }
+                  )
                 );
               }
               FeatureList.prototype = Object.create(Table.prototype);
@@ -12570,14 +12572,16 @@
                       value: new table.Coverage(subtable.coverage),
                     },
                   ].concat(
-                    table.tableList("altSet", subtable.alternateSets, function (
-                      alternateSet
-                    ) {
-                      return new table.Table(
-                        "alternateSetTable",
-                        table.ushortList("alternate", alternateSet)
-                      );
-                    })
+                    table.tableList(
+                      "altSet",
+                      subtable.alternateSets,
+                      function (alternateSet) {
+                        return new table.Table(
+                          "alternateSetTable",
+                          table.ushortList("alternate", alternateSet)
+                        );
+                      }
+                    )
                   )
                 );
               };
@@ -12597,33 +12601,37 @@
                       value: new table.Coverage(subtable.coverage),
                     },
                   ].concat(
-                    table.tableList("ligSet", subtable.ligatureSets, function (
-                      ligatureSet
-                    ) {
-                      return new table.Table(
-                        "ligatureSetTable",
-                        table.tableList("ligature", ligatureSet, function (
-                          ligature
-                        ) {
-                          return new table.Table(
-                            "ligatureTable",
-                            [
-                              {
-                                name: "ligGlyph",
-                                type: "USHORT",
-                                value: ligature.ligGlyph,
-                              },
-                            ].concat(
-                              table.ushortList(
-                                "component",
-                                ligature.components,
-                                ligature.components.length + 1
-                              )
-                            )
-                          );
-                        })
-                      );
-                    })
+                    table.tableList(
+                      "ligSet",
+                      subtable.ligatureSets,
+                      function (ligatureSet) {
+                        return new table.Table(
+                          "ligatureSetTable",
+                          table.tableList(
+                            "ligature",
+                            ligatureSet,
+                            function (ligature) {
+                              return new table.Table(
+                                "ligatureTable",
+                                [
+                                  {
+                                    name: "ligGlyph",
+                                    type: "USHORT",
+                                    value: ligature.ligGlyph,
+                                  },
+                                ].concat(
+                                  table.ushortList(
+                                    "component",
+                                    ligature.components,
+                                    ligature.components.length + 1
+                                  )
+                                )
+                              );
+                            }
+                          )
+                        );
+                      }
+                    )
                   )
                 );
               };
@@ -17667,21 +17675,23 @@ vim: set ts=4 sw=4 expandtab:
                 options
               ) {
                 var fullPath = new Path();
-                this.forEachGlyph(text, x, y, fontSize, options, function (
-                  glyph,
-                  gX,
-                  gY,
-                  gFontSize
-                ) {
-                  var glyphPath = glyph.getPath(
-                    gX,
-                    gY,
-                    gFontSize,
-                    options,
-                    this
-                  );
-                  fullPath.extend(glyphPath);
-                });
+                this.forEachGlyph(
+                  text,
+                  x,
+                  y,
+                  fontSize,
+                  options,
+                  function (glyph, gX, gY, gFontSize) {
+                    var glyphPath = glyph.getPath(
+                      gX,
+                      gY,
+                      gFontSize,
+                      options,
+                      this
+                    );
+                    fullPath.extend(glyphPath);
+                  }
+                );
                 return fullPath;
               };
 
@@ -17702,21 +17712,23 @@ vim: set ts=4 sw=4 expandtab:
                 options
               ) {
                 var glyphPaths = [];
-                this.forEachGlyph(text, x, y, fontSize, options, function (
-                  glyph,
-                  gX,
-                  gY,
-                  gFontSize
-                ) {
-                  var glyphPath = glyph.getPath(
-                    gX,
-                    gY,
-                    gFontSize,
-                    options,
-                    this
-                  );
-                  glyphPaths.push(glyphPath);
-                });
+                this.forEachGlyph(
+                  text,
+                  x,
+                  y,
+                  fontSize,
+                  options,
+                  function (glyph, gX, gY, gFontSize) {
+                    var glyphPath = glyph.getPath(
+                      gX,
+                      gY,
+                      gFontSize,
+                      options,
+                      this
+                    );
+                    glyphPaths.push(glyphPath);
+                  }
+                );
 
                 return glyphPaths;
               };
@@ -17789,14 +17801,16 @@ vim: set ts=4 sw=4 expandtab:
                 fontSize,
                 options
               ) {
-                this.forEachGlyph(text, x, y, fontSize, options, function (
-                  glyph,
-                  gX,
-                  gY,
-                  gFontSize
-                ) {
-                  glyph.drawPoints(ctx, gX, gY, gFontSize);
-                });
+                this.forEachGlyph(
+                  text,
+                  x,
+                  y,
+                  fontSize,
+                  options,
+                  function (glyph, gX, gY, gFontSize) {
+                    glyph.drawPoints(ctx, gX, gY, gFontSize);
+                  }
+                );
               };
 
               /**
@@ -17819,14 +17833,16 @@ vim: set ts=4 sw=4 expandtab:
                 fontSize,
                 options
               ) {
-                this.forEachGlyph(text, x, y, fontSize, options, function (
-                  glyph,
-                  gX,
-                  gY,
-                  gFontSize
-                ) {
-                  glyph.drawMetrics(ctx, gX, gY, gFontSize);
-                });
+                this.forEachGlyph(
+                  text,
+                  x,
+                  y,
+                  fontSize,
+                  options,
+                  function (glyph, gX, gY, gFontSize) {
+                    glyph.drawMetrics(ctx, gX, gY, gFontSize);
+                  }
+                );
               };
 
               /**
@@ -17923,26 +17939,28 @@ vim: set ts=4 sw=4 expandtab:
                     window.TEMPORARY,
                     arrayBuffer.byteLength,
                     function (fs) {
-                      fs.root.getFile(fileName, { create: true }, function (
-                        fileEntry
-                      ) {
-                        fileEntry.createWriter(function (writer) {
-                          var dataView = new DataView(arrayBuffer);
-                          var blob = new Blob([dataView], {
-                            type: "font/opentype",
-                          });
-                          writer.write(blob);
+                      fs.root.getFile(
+                        fileName,
+                        { create: true },
+                        function (fileEntry) {
+                          fileEntry.createWriter(function (writer) {
+                            var dataView = new DataView(arrayBuffer);
+                            var blob = new Blob([dataView], {
+                              type: "font/opentype",
+                            });
+                            writer.write(blob);
 
-                          writer.addEventListener(
-                            "writeend",
-                            function () {
-                              // Navigating to the file will download it.
-                              location.href = fileEntry.toURL();
-                            },
-                            false
-                          );
-                        });
-                      });
+                            writer.addEventListener(
+                              "writeend",
+                              function () {
+                                // Navigating to the file will download it.
+                                location.href = fileEntry.toURL();
+                              },
+                              false
+                            );
+                          });
+                        }
+                      );
                     },
                     function (err) {
                       throw new Error(err.name + ": " + err.message);
@@ -46158,18 +46176,20 @@ vim: set ts=4 sw=4 expandtab:
                 yCoords = [],
                 scale = this._scale(fontSize);
 
-              this.font.forEachGlyph(str, x, y, fontSize, options, function (
-                glyph,
-                gX,
-                gY,
-                gFontSize
-              ) {
-                var gm = glyph.getMetrics();
-                xCoords.push(gX + gm.xMin * scale);
-                xCoords.push(gX + gm.xMax * scale);
-                yCoords.push(gY + -gm.yMin * scale);
-                yCoords.push(gY + -gm.yMax * scale);
-              });
+              this.font.forEachGlyph(
+                str,
+                x,
+                y,
+                fontSize,
+                options,
+                function (glyph, gX, gY, gFontSize) {
+                  var gm = glyph.getMetrics();
+                  xCoords.push(gX + gm.xMin * scale);
+                  xCoords.push(gX + gm.xMax * scale);
+                  yCoords.push(gY + -gm.yMin * scale);
+                  yCoords.push(gY + -gm.yMax * scale);
+                }
+              );
 
               minX = Math.min.apply(null, xCoords);
               minY = Math.min.apply(null, yCoords);
