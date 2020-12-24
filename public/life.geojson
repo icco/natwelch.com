@@ -363,6 +363,43 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "1059 Bergen St., Brooklyn, NY 11216"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.951189,40.676273]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "building",
+        "marker-color": "2F8DB2",
+        "Address": "29 School St., Beacon, NY 12508"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.976806,41.503008]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Address": "111 8th Ave, New York, NY 10011",
+        "marker-color": "2F8DB2",
+        "marker-symbol": "industrial",
+        "Name": "Google New York"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.001966,40.740836]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "Address": "601 N 34th St, Seattle, WA 98103",
         "marker-color": "2F8DB2",
         "marker-symbol": "industrial",

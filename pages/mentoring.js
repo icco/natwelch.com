@@ -35,6 +35,7 @@ const Mentoring = () => (
             <a href="https://calendly.com/icco/chat-with-nat">Calendly</a>.
           </li>
           <li>You can email me nat@natwelch.com.</li>
+  <li>Join <a href="https://www.outofofficehours.com/">Out of Office Hours</a>, a community I participate in.</li>
         </ul>
       </article>
     </section>
