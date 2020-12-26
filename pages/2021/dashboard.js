@@ -5,9 +5,12 @@ import { DateTime } from "luxon";
 import App from "components/App";
 import Header from "components/Header.js";
 
+
 const Dashboard = () => {
   const [data, setData] = useState([]);
+  const [day, setDay] = useState("Today")
   useEffect(async () => {
+function getData() {
     fetch("https://graphql.natwelch.com/graphql", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -28,6 +31,17 @@ const Dashboard = () => {
       .catch((error) => {
         console.error("Error:", error);
       });
+
+  setDay(DateTime.local().toISODate())
+}
+
+getData()
+    const interval=setInterval(()=>{
+      getData()
+     },10000)
+
+
+     return()=>clearInterval(interval)
   });
 
   return (
@@ -35,7 +49,7 @@ const Dashboard = () => {
       <Head>
         <title>Nat Welch | Dashboard</title>
       </Head>
-      <Header noLogo navtext={DateTime.local().toISODate()} />
+      <Header noLogo navtext={day} />
 
       <article class="pa3" data-name="slab-stat-large">
         <div class="cf">
