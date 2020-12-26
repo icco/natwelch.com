@@ -67,7 +67,7 @@ class Header extends React.Component {
     if (this.props.navtext) {
       nav = (
         <>
-          <TextHeader className="center">{this.props.navtext}</TextHeader>
+          <TextHeader className="pr3">{this.props.navtext}</TextHeader>
         </>
       );
     }
