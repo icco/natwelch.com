@@ -33,7 +33,7 @@ class Header extends React.Component {
     if (this.props.noLogo) {
       head = <></>;
       nav = (
-          <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
+        <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
           <Link href="/about">
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">About</a>
           </Link>
@@ -67,9 +67,9 @@ class Header extends React.Component {
     if (this.props.navtext) {
       nav = (
         <>
-        <TextHeader className="center">{this.props.navtext}</TextHeader>
+          <TextHeader className="center">{this.props.navtext}</TextHeader>
         </>
-      )
+      );
     }
 
     return (

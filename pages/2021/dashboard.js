@@ -10,8 +10,7 @@ const Dashboard = () => (
       <title>Nat Welch | Dashboard</title>
     </Head>
     <Header noLogo navtext={DateTime.local().toISODate()} />
-    <section className="cf lh-copy pa3 pa5-ns">
-    </section>
+    <section className="cf lh-copy pa3 pa5-ns"></section>
   </App>
 );
 
