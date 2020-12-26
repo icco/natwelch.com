@@ -70,7 +70,7 @@ const Dashboard = () => {
 const Stat = ({ keyString, value }) => (
   <dl className="db dib-l w-auto-l lh-title">
     <dd className="f6 fw4 ml0">{keyString}</dd>
-    <dd className="f2 f-subheadline-l fw6 ml0">{value}</dd>
+    <dd className="f2 f-subheadline-l fw6 ml0">{value.toLocaleString()}</dd>
   </dl>
 );
 
