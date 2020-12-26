@@ -18,9 +18,7 @@ const Dashboard = () => {
         body: JSON.stringify({
           query: "query {\nstats(count: 25) {\nkey\nvalue\n}\n}",
         }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
+      }).then((response) => response.json()).then((data) => {
           if (data.errors) {
             console.error(data.errors);
           } else {
