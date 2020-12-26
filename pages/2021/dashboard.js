@@ -5,43 +5,41 @@ import { DateTime } from "luxon";
 import App from "components/App";
 import Header from "components/Header.js";
 
-
 const Dashboard = () => {
   const [data, setData] = useState([]);
-  const [day, setDay] = useState("Today")
+  const [day, setDay] = useState("Today");
   useEffect(async () => {
-function getData() {
-    fetch("https://graphql.natwelch.com/graphql", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      redirect: "follow",
-      referrerPolicy: "no-referrer",
-      body: JSON.stringify({
-        query: "query {\nstats(count: 25) {\nkey\nvalue\n}\n}",
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.errors) {
-          console.error(data.errors);
-        } else {
-          setData(data.data.stats);
-        }
+    function getData() {
+      fetch("https://graphql.natwelch.com/graphql", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify({
+          query: "query {\nstats(count: 25) {\nkey\nvalue\n}\n}",
+        }),
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.errors) {
+            console.error(data.errors);
+          } else {
+            setData(data.data.stats);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 
-  setDay(DateTime.local().toISODate())
-}
+      setDay(DateTime.local().toISODate());
+    }
 
-getData()
-    const interval=setInterval(()=>{
-      getData()
-     },10000)
+    getData();
+    const interval = setInterval(() => {
+      getData();
+    }, 10000);
 
-
-     return()=>clearInterval(interval)
+    return () => clearInterval(interval);
   });
 
   return (
