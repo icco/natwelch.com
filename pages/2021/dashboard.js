@@ -56,7 +56,7 @@ const Dashboard = () => {
       </Head>
       <Header noLogo navtext={day} />
 
-      <article className="pa3" data-name="slab-stat-large">
+      <article className="ma3" data-name="slab-stat-large">
         <div className="cf">
           {data.map(({ key, value }) => (
             <Stat key={key} keyString={key} value={value} />
@@ -68,9 +68,9 @@ const Dashboard = () => {
 };
 
 const Stat = ({ keyString, value }) => (
-  <dl className="db dib-l w-auto-l lh-title">
-    <dd className="f6 fw4 ml0">{keyString}</dd>
-    <dd className="f2 f-subheadline-l fw6 ml0">{value.toLocaleString()}</dd>
+  <dl className="dib mr5">
+    <dd className="f6 f5-ns b ml0">{keyString}</dd>
+    <dd className="f3 f2-ns b ml0">{value.toLocaleString()}</dd>
   </dl>
 );
 
