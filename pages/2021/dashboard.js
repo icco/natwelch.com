@@ -9,7 +9,8 @@ const Dashboard = () => {
   const [data, setData] = useState([]);
   const [day, setDay] = useState("Today");
   useEffect(async () => {
-    function getData() {
+    let isMounted = true;
+    const getData = () => {
       fetch("https://graphql.natwelch.com/graphql", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -18,27 +19,35 @@ const Dashboard = () => {
         body: JSON.stringify({
           query: "query {\nstats(count: 25) {\nkey\nvalue\n}\n}",
         }),
-      }).then((response) => response.json()).then((data) => {
-          if (data.errors) {
-            console.error(data.errors);
-          } else {
-            setData(data.data.stats);
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (isMounted) {
+            if (data.errors) {
+              console.error(data.errors);
+            } else {
+              setData(data.data.stats);
+              setDay(DateTime.local().toISODate());
+            }
           }
         })
         .catch((error) => {
-          console.error("Error:", error);
+          if (isMounted) {
+            console.error("Error:", error);
+          }
         });
-
-      setDay(DateTime.local().toISODate());
-    }
+    };
 
     getData();
     const interval = setInterval(() => {
       getData();
     }, 10000);
 
-    return () => clearInterval(interval);
-  });
+    return () => {
+      clearInterval(interval);
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <App>
@@ -47,10 +56,10 @@ const Dashboard = () => {
       </Head>
       <Header noLogo navtext={day} />
 
-      <article class="pa3" data-name="slab-stat-large">
-        <div class="cf">
+      <article className="pa3" data-name="slab-stat-large">
+        <div className="cf">
           {data.map(({ key, value }) => (
-            <Stat keyString={key} value={value} />
+            <Stat key={key} keyString={key} value={value} />
           ))}
         </div>
       </article>
