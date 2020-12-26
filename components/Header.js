@@ -3,6 +3,8 @@ import { withRouter } from "next/router";
 import React from "react";
 import { Logo } from "@icco/react-common";
 
+import TextHeader from "components/TextHeader.js";
+
 class Header extends React.Component {
   render() {
     let prefix = <></>;
@@ -31,7 +33,7 @@ class Header extends React.Component {
     if (this.props.noLogo) {
       head = <></>;
       nav = (
-        <>
+          <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
           <Link href="/about">
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">About</a>
           </Link>
@@ -51,7 +53,7 @@ class Header extends React.Component {
           <Link href="/talks">
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Talks</a>
           </Link>
-        </>
+        </div>
       );
       prefix = (
         <Link href="/">
@@ -62,13 +64,19 @@ class Header extends React.Component {
       );
     }
 
+    if (this.props.navtext) {
+      nav = (
+        <>
+        <TextHeader className="center">{this.props.navtext}</TextHeader>
+        </>
+      )
+    }
+
     return (
       <div>
         <nav className="flex justify-between ttc">
           <div className="flex items-center pa3">{prefix}</div>
-          <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
-            {nav}
-          </div>
+          {nav}
         </nav>
         {head}
       </div>
