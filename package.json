@@ -4,9 +4,9 @@
   "description": "Nat's personal site.",
   "license": "MIT",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "node server.js",
+    "start": "next -p $PORT",
     "snyk-protect": "snyk protect",
     "prepare": "yarn run snyk-protect"
   },
