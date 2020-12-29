@@ -8,7 +8,7 @@ const { createHttpLink } = require("apollo-link-http");
 const { setContext } = require("apollo-link-context");
 import getConfig from "next/config";
 
-import Datetime from "./Datetime";
+import Datetime from "components/Datetime";
 
 const { publicRuntimeConfig } = getConfig();
 const { GITHUB_TOKEN } = publicRuntimeConfig;

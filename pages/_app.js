@@ -1,7 +1,7 @@
 import Router from "next/router";
 import Head from "next/head";
 
-import "../style.css";
+import "style.css";
 
 function WWW({ Component, pageProps }) {
   return (
