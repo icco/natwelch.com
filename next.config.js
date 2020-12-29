@@ -29,7 +29,11 @@ module.exports = {
         headers: createSecureHeaders({
           contentSecurityPolicy: {
             directives: {
-              defaultSrc: ["'self'", "https://icco.auth0.com/"],
+              defaultSrc: [
+                "'self'",
+                "https://icco.auth0.com/",
+                "https://graphql.natwelch.com/graphql",
+              ],
               styleSrc: [
                 "'self'",
                 "'unsafe-inline'",
