@@ -38,7 +38,7 @@ const Projects = () => (
         </TextHeader>
 
         <p className={p_class}>
-          GraphQL is my my server for storing data for use in my projects. It's
+          GraphQL is my server for storing data for use in my projects. It's
           hosted at{" "}
           <a href="https://graphql.natwelch.com">graphql.natwelch.com</a> and
           the code is at{" "}
@@ -105,7 +105,7 @@ const Projects = () => (
           for playing{" "}
           <a href="https://boardgamegeek.com/boardgame/197405/tak">Tak</a>{" "}
           online. It provides an api for games, moves, and a library for parsing{" "}
-          <a href="https://www.reddit.com/r/Tak/wiki/portable%20tak%20notation">
+          <a href="https://web.archive.org/web/20190508064910/https://www.reddit.com/r/Tak/wiki/portable_tak_notation">
             PTN
           </a>
           .
