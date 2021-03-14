@@ -13,7 +13,10 @@ function WWW({ Component, pageProps }) {
           content="initial-scale=1.0, width=device-width"
           key="viewport"
         />
-        <link rel="webmention" href="https://webmention.io/natwelch.com/webmention" />
+        <link
+          rel="webmention"
+          href="https://webmention.io/natwelch.com/webmention"
+        />
         <link rel="pingback" href="https://webmention.io/natwelch.com/xmlrpc" />
       </Head>
       <Component {...pageProps} />

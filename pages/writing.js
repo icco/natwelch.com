@@ -24,10 +24,8 @@ const Writing = () => (
 
       <ul className="list f5 f4-ns wide mt3 pl0">
         <li className="mv3 pl3 bl bw2 b--beige">
-          <a href="https://realworldsre.com/">
-            Real-World SRE
-          </a>{" "}
-          from Packt Publishing.
+          <a href="https://realworldsre.com/">Real-World SRE</a> from Packt
+          Publishing.
         </li>
         <li className="mv3 pl3 bl bw2 b--beige">
           Git Out The Vote:{" "}
