@@ -32,6 +32,11 @@ const Index = () => (
             <a className={link_class}>Projects</a>
           </h2>
         </Link>
+        <Link href="/support">
+          <h2 className={h2_class}>
+            <a className={link_class}>Support</a>
+          </h2>
+        </Link>
         <Link href="/writing">
           <h2 className={h2_class}>
             <a className={link_class}>Writing</a>

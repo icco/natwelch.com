@@ -46,12 +46,20 @@ class Header extends React.Component {
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Projects</a>
           </Link>
 
+          <Link href="/support">
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Support</a>
+          </Link>
+
           <Link href="/writing">
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Writing</a>
           </Link>
 
           <Link href="/talks">
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Talks</a>
+          </Link>
+
+          <Link href="https://resume.natwelch.com">
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Resume</a>
           </Link>
         </div>
       );
