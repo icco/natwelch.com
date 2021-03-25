@@ -23,11 +23,11 @@ const Support = () => (
           Buy my book <a href="https://realworldsre.com/">Real-World SRE</a>.
         </li>
         <li className="mv3 pl3 bl bw2 b--beige">
-        Buy my book{" "}
-        <a href="https://www.newline.co/courses/reliable-webservers-with-go/">
-          Reliable Webservers with Go
-        </a>
-        .
+          Buy my book{" "}
+          <a href="https://www.newline.co/courses/reliable-webservers-with-go/">
+            Reliable Webservers with Go
+          </a>
+          .
         </li>
         <li className="mv3 pl3 bl bw2 b--beige">
           Support me montly on{" "}
