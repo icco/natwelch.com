@@ -57,6 +57,10 @@ class Header extends React.Component {
           <Link href="/talks">
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Talks</a>
           </Link>
+
+          <Link href="https://resume.natwelch.com">
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Resume</a>
+          </Link>
         </div>
       );
       prefix = (
