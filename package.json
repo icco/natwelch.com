@@ -16,6 +16,7 @@
   },
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
+  "private": true,
   "dependencies": {
     "@icco/react-common": "^2020.11.4-1",
     "isomorphic-unfetch": "^3.0.0",
