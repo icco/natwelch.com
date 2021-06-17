@@ -17,7 +17,7 @@ const Dashboard = () => {
         redirect: "follow",
         referrerPolicy: "no-referrer",
         body: JSON.stringify({
-          query: "query {\nstats(count: 25) {\nkey\nvalue\n}\n}",
+          query: "query {\nstats(count: 50) {\nkey\nvalue\n}\n}",
         }),
       })
         .then((response) => response.json())
@@ -68,7 +68,7 @@ const Dashboard = () => {
 };
 
 const Stat = ({ keyString, value }) => (
-  <dl className="dib w-50-m mr5-l">
+  <dl className="dib mr5">
     <dd className="f6 f5-ns b ml0">{keyString}</dd>
     <dd className="f3 f2-ns b ml0">{value.toLocaleString()}</dd>
   </dl>
