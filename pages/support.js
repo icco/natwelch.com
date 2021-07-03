@@ -30,7 +30,7 @@ const Support = () => (
           .
         </li>
         <li className="mv3 pl3 bl bw2 b--beige">
-          Support me montly on{" "}
+          Support me monthly on{" "}
           <a href="https://github.com/sponsors/icco">Github</a>.
         </li>
       </ul>
