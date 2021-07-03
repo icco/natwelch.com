@@ -1,86 +1,61 @@
-;; 
-;; Domain:     natwelch.com
-;; Exported:   2016-02-13 03:00:14
-;; 
-;; This file is intended for use for informational and archival
-;; purposes ONLY and MUST be edited before use on a production
-;; DNS server.  In particular, you must:
-;;   -- update the SOA record with the correct authoritative name server
-;;   -- update the SOA record with the contact e-mail address information
-;;   -- update the NS record(s) with the authoritative name servers for this domain.
-;; 
-;; For further information, please consult the BIND documentation
-;; located on the following website:
-;; 
-;; http://www.isc.org/
-;; 
-;; And RFC 1035:
-;; 
-;; http://www.ietf.org/rfc/rfc1035.txt
-;; 
-;; Please note that we do NOT offer technical support for any use
-;; of this zone data, the BIND name server, or any other third-party
-;; DNS software.
-;; 
-;;     Use at your own risk.
-$ORIGIN .
-@	3600	IN	SOA	natwelch.com.	root.natwelch.com.	(
-		2020699901	; serial
-		7200		; refresh
-		3600		; retry
-		86400		; expire
-		3600)		; minimum
-
-
-
-;; NS Records (YOU MUST CHANGE THIS)
-natwelch.com.	300	IN	NS	repace&me$with^your@nameserver.
-
-;; MX Records
-natwelch.com.	300	IN	MX	30	aspmx4.googlemail.com.
-natwelch.com.	300	IN	MX	30	aspmx5.googlemail.com.
-natwelch.com.	300	IN	MX	30	aspmx2.googlemail.com.
-natwelch.com.	300	IN	MX	10	aspmx.l.google.com.
-natwelch.com.	300	IN	MX	20	alt1.aspmx.l.google.com.
-natwelch.com.	300	IN	MX	30	aspmx3.googlemail.com.
-natwelch.com.	300	IN	MX	20	alt2.aspmx.l.google.com.
-
-;; TXT Records
-natwelch.com.	300	IN	TXT	"v=spf1 ip4:184.173.239.119 a mx include:websitewelcome.com ~all"
-natwelch.com.	300	IN	TXT	"v=spf1 ip4:184.173.239.119 a mx include:websitewelcome.com ~all"
-natwelch.com.	300	IN	TXT	"%form%"
-natwelch.com.	300	IN	TXT	"%form%"
-natwelch.com.	300	IN	TXT	"google-site-verification=R7j7plnhfXzRMiR-ZIUMp97mQann8TkGuzb2csBjVWc"
-natwelch.com.	300	IN	TXT	"google-site-verification=R7j7plnhfXzRMiR-ZIUMp97mQann8TkGuzb2csBjVWc"
-
-;; SRV Records (Service locator)
-_xmpp-server._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server4.l.google.com.
-_xmpp-server._tcp.natwelch.com.	300	IN	SRV	5			0	5269	xmpp-server.l.google.com.
-_xmpp-server._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server3.l.google.com.
-_xmpp-server._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server2.l.google.com.
-_xmpp-server._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server1.l.google.com.
-_jabber._tcp.natwelch.com.	300	IN	SRV	5			0	5269	xmpp-server.l.google.com.
-_jabber._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server3.l.google.com.
-_jabber._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server2.l.google.com.
-_jabber._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server4.l.google.com.
-_jabber._tcp.natwelch.com.	300	IN	SRV	20			0	5269	xmpp-server1.l.google.com.
-
-;; CNAME Records
-calendar.natwelch.com.	300	IN	CNAME	ghs.googlehosted.com.
-www.natwelch.com.	300	IN	CNAME	natwelch.com.
-docs.natwelch.com.	300	IN	CNAME	ghs.googlehosted.com.
-writing.natwelch.com.	300	IN	CNAME	ghs.googlehosted.com.
-life.natwelch.com.	300	IN	CNAME	icco.github.io.
-mail.natwelch.com.	300	IN	CNAME	ghs.googlehosted.com.
-money.natwelch.com.	300	IN	CNAME	money-natwelch.herokuapp.com.
-resume.natwelch.com.	300	IN	CNAME	icco.github.io.
-walls.natwelch.com.	300	IN	CNAME	iccowalls.herokuapp.com.
-sites.natwelch.com.	300	IN	CNAME	ghs.googlehosted.com.
-code.natwelch.com.	300	IN	CNAME	codenatwelch.herokuapp.com.
-quotes.natwelch.com.	300	IN	CNAME	iccoquotes.herokuapp.com.
-mood.natwelch.com.	300	IN	CNAME	icco-mood.herokuapp.com.
-books.natwelch.com.	300	IN	CNAME	iccobooks.herokuapp.com.
-
-;; A Records (IPv4 addresses)
-natwelch.com.	300	IN	A	192.30.252.154
-natwelch.com.	300	IN	A	192.30.252.153
+natwelch.com. 300 IN A 34.98.94.208
+natwelch.com. 300 IN MX 20 alt1.aspmx.l.google.com.
+natwelch.com. 300 IN MX 20 alt2.aspmx.l.google.com.
+natwelch.com. 300 IN MX 30 aspmx2.googlemail.com.
+natwelch.com. 300 IN MX 30 aspmx5.googlemail.com.
+natwelch.com. 300 IN MX 30 aspmx3.googlemail.com.
+natwelch.com. 300 IN MX 10 aspmx.l.google.com.
+natwelch.com. 300 IN MX 30 aspmx4.googlemail.com.
+natwelch.com. 21600 IN NS ns-cloud-d1.googledomains.com.
+natwelch.com. 21600 IN NS ns-cloud-d2.googledomains.com.
+natwelch.com. 21600 IN NS ns-cloud-d3.googledomains.com.
+natwelch.com. 21600 IN NS ns-cloud-d4.googledomains.com.
+natwelch.com. 21600 IN SOA ns-cloud-d1.googledomains.com. cloud-dns-hostmaster.google.com. 2 21600 3600 259200 300
+natwelch.com. 300 IN TXT "v=spf1 ip4:184.173.239.119 a mx include:websitewelcome.com ~all"
+natwelch.com. 300 IN TXT "google-site-verification=R7j7plnhfXzRMiR-ZIUMp97mQann8TkGuzb2csBjVWc"
+natwelch.com. 300 IN TXT "%form%"
+natwelch.com. 300 IN TXT "keybase-site-verification=NOrvYwIvp0981rATEBYA3ud_Yslt0SJgmzgiUEAqUM8"
+_jabber._tcp.natwelch.com. 300 IN SRV 5 0 5269 xmpp-server.l.google.com.
+_jabber._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server4.l.google.com.
+_jabber._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server3.l.google.com.
+_jabber._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server2.l.google.com.
+_jabber._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server1.l.google.com.
+_xmpp-server._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server3.l.google.com.
+_xmpp-server._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server2.l.google.com.
+_xmpp-server._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server1.l.google.com.
+_xmpp-server._tcp.natwelch.com. 300 IN SRV 20 0 5269 xmpp-server4.l.google.com.
+_xmpp-server._tcp.natwelch.com. 300 IN SRV 5 0 5269 xmpp-server.l.google.com.
+a.natwelch.com. 300 IN A 35.201.96.70
+aniplaxt.natwelch.com. 300 IN A 35.201.96.70
+archive.natwelch.com. 300 IN A 35.201.96.70
+books.natwelch.com. 300 IN CNAME iccobooks.herokuapp.com.
+cacophony.natwelch.com. 300 IN A 35.201.96.70
+calendar.natwelch.com. 300 IN CNAME ghs.googlehosted.com.
+code.natwelch.com. 300 IN A 35.201.96.70
+cron.natwelch.com. 300 IN A 35.201.96.70
+docs.natwelch.com. 300 IN CNAME ghs.googlehosted.com.
+etu.natwelch.com. 300 IN A 35.201.96.70
+food.natwelch.com. 300 IN A 35.201.96.70
+goals.natwelch.com. 300 IN A 35.201.96.70
+graphql.natwelch.com. 300 IN A 35.201.96.70
+hello.natwelch.com. 300 IN A 35.201.96.70
+inspiration.natwelch.com. 300 IN A 35.201.96.70
+interview.natwelch.com. 300 IN A 35.201.96.70
+life.natwelch.com. 300 IN A 34.98.94.208
+mail.natwelch.com. 300 IN CNAME ghs.googlehosted.com.
+money.natwelch.com. 300 IN CNAME money.natwelch.com.herokudns.com.
+monitor.natwelch.com. 300 IN CNAME creepermon.herokuapp.com.
+mood.natwelch.com. 300 IN A 34.98.94.208
+numbers.natwelch.com. 300 IN A 34.98.94.208
+photos.natwelch.com. 300 IN A 34.98.94.208
+quotes.natwelch.com. 300 IN A 34.98.94.208
+relay.natwelch.com. 300 IN A 34.98.94.208
+reportd.natwelch.com. 300 IN A 34.98.94.208
+resume.natwelch.com. 300 IN A 34.98.94.208
+sites.natwelch.com. 300 IN CNAME ghs.googlehosted.com.
+travel.natwelch.com. 300 IN A 104.198.128.22
+travel.natwelch.com. 300 IN A 104.154.142.2
+validator.natwelch.com. 300 IN A 34.98.94.208
+walls.natwelch.com. 300 IN A 34.98.94.208
+writing.natwelch.com. 300 IN A 34.98.94.208
+www.natwelch.com. 300 IN A 34.98.94.208
