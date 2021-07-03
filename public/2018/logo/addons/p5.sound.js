@@ -7572,9 +7572,8 @@
           self.stream = stream;
           self.enabled = true;
           // Wrap a MediaStreamSourceNode around the live input
-          self.mediaStream = p5sound.audiocontext.createMediaStreamSource(
-            stream
-          );
+          self.mediaStream =
+            p5sound.audiocontext.createMediaStreamSource(stream);
           self.mediaStream.connect(self.output);
           // only send to the Amplitude reader, so we can see it but not hear it.
           self.amplitude.setInput(self.output);
@@ -7873,16 +7872,16 @@
   Tone_signal_Abs = (function (Tone) {
     "use strict";
     Tone.Abs = function () {
-      this._abs = this.input = this.output = new Tone.WaveShaper(function (
-        val
-      ) {
-        if (val === 0) {
-          return 0;
-        } else {
-          return Math.abs(val);
-        }
-      },
-      127);
+      this._abs =
+        this.input =
+        this.output =
+          new Tone.WaveShaper(function (val) {
+            if (val === 0) {
+              return 0;
+            } else {
+              return Math.abs(val);
+            }
+          }, 127);
     };
     Tone.extend(Tone.Abs, Tone.SignalBase);
     Tone.Abs.prototype.dispose = function () {
@@ -7945,10 +7944,10 @@
     "use strict";
     Tone.Pow = function (exp) {
       this._exp = this.defaultArg(exp, 1);
-      this._expScaler = this.input = this.output = new Tone.WaveShaper(
-        this._expFunc(this._exp),
-        8192
-      );
+      this._expScaler =
+        this.input =
+        this.output =
+          new Tone.WaveShaper(this._expFunc(this._exp), 8192);
     };
     Tone.extend(Tone.Pow, Tone.SignalBase);
     Object.defineProperty(Tone.Pow.prototype, "value", {
@@ -7978,9 +7977,12 @@
   Tone_signal_AudioToGain = (function (Tone) {
     "use strict";
     Tone.AudioToGain = function () {
-      this._norm = this.input = this.output = new Tone.WaveShaper(function (x) {
-        return (x + 1) / 2;
-      });
+      this._norm =
+        this.input =
+        this.output =
+          new Tone.WaveShaper(function (x) {
+            return (x + 1) / 2;
+          });
     };
     Tone.extend(Tone.AudioToGain, Tone.SignalBase);
     Tone.AudioToGain.prototype.dispose = function () {
@@ -8352,16 +8354,19 @@
   Tone_signal_EqualPowerGain = (function (Tone) {
     "use strict";
     Tone.EqualPowerGain = function () {
-      this._eqPower = this.input = this.output = new Tone.WaveShaper(
-        function (val) {
-          if (Math.abs(val) < 0.001) {
-            return 0;
-          } else {
-            return this.equalPowerScale(val);
-          }
-        }.bind(this),
-        4096
-      );
+      this._eqPower =
+        this.input =
+        this.output =
+          new Tone.WaveShaper(
+            function (val) {
+              if (Math.abs(val) < 0.001) {
+                return 0;
+              } else {
+                return this.equalPowerScale(val);
+              }
+            }.bind(this),
+            4096
+          );
     };
     Tone.extend(Tone.EqualPowerGain, Tone.SignalBase);
     Tone.EqualPowerGain.prototype.dispose = function () {

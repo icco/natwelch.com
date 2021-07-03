@@ -2080,8 +2080,7 @@
                 example: [
                   "\n<div>\n<code>\nvar v1 = createVector(40, 50);\nvar v2 = createVector(40, 50);\n\nellipse(v1.x, v1.y, 50, 50);\nellipse(v2.x, v2.y, 50, 50);\nv1.add(v2);\nellipse(v1.x, v1.y, 50, 50);\n</code>\n</div>",
                 ],
-                alt:
-                  "2 white ellipses. One center-left the other bottom right and off canvas",
+                alt: "2 white ellipses. One center-left the other bottom right and off canvas",
               },
               "p5.Font": {
                 name: "p5.Font",
@@ -3350,8 +3349,7 @@
                 example: [
                   "\n<div>\n<code>\nnoStroke();\nvar c = color(0, 126, 255, 102);\nfill(c);\nrect(15, 15, 35, 70);\nvar value = alpha(c); // Sets 'value' to 102\nfill(value);\nrect(50, 15, 35, 70);\n</code>\n</div>",
                 ],
-                alt:
-                  "Left half of canvas light blue and right half light charcoal grey.\nLeft half of canvas light purple and right half a royal blue.\nLeft half of canvas salmon pink and the right half white.\nYellow rect in middle right of canvas, with 55 pixel width and height.\nYellow ellipse in top left canvas, black ellipse in bottom right,both 80x80.\nBright fuschia rect in middle of canvas, 60 pixel width and height.\nTwo bright green rects on opposite sides of the canvas, both 45x80.\nFour blue rects in each corner of the canvas, each are 35x35.\nBright sea green rect on left and darker rect on right of canvas, both 45x80.\nDark green rect on left and light green rect on right of canvas, both 45x80.\nDark blue rect on left and light teal rect on right of canvas, both 45x80.\nblue rect on left and green on right, both with black outlines & 35x60.\nsalmon pink rect on left and black on right, both 35x60.\n4 rects, tan, brown, brownish purple and purple, with white outlines & 20x60.\nlight pastel green rect on left and dark grey rect on right, both 35x60.\nyellow rect on left and red rect on right, both with black outlines & 35x60.\ngrey canvas\ndeep pink rect on left and grey rect on right, both 35x60.",
+                alt: "Left half of canvas light blue and right half light charcoal grey.\nLeft half of canvas light purple and right half a royal blue.\nLeft half of canvas salmon pink and the right half white.\nYellow rect in middle right of canvas, with 55 pixel width and height.\nYellow ellipse in top left canvas, black ellipse in bottom right,both 80x80.\nBright fuschia rect in middle of canvas, 60 pixel width and height.\nTwo bright green rects on opposite sides of the canvas, both 45x80.\nFour blue rects in each corner of the canvas, each are 35x35.\nBright sea green rect on left and darker rect on right of canvas, both 45x80.\nDark green rect on left and light green rect on right of canvas, both 45x80.\nDark blue rect on left and light teal rect on right of canvas, both 45x80.\nblue rect on left and green on right, both with black outlines & 35x60.\nsalmon pink rect on left and black on right, both 35x60.\n4 rects, tan, brown, brownish purple and purple, with white outlines & 20x60.\nlight pastel green rect on left and dark grey rect on right, both 35x60.\nyellow rect on left and red rect on right, both with black outlines & 35x60.\ngrey canvas\ndeep pink rect on left and grey rect on right, both 35x60.",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3378,8 +3376,7 @@
                 example: [
                   "\n<div>\n<code>\nvar c = color(175, 100, 220); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nrect(15, 20, 35, 60); // Draw left rectangle\n\nvar blueValue = blue(c); // Get blue in 'c'\nprint(blueValue); // Prints \"220.0\"\nfill(0, 0, blueValue); // Use 'blueValue' in new fill\nrect(50, 20, 35, 60); // Draw right rectangle\n</code>\n</div>",
                 ],
-                alt:
-                  "Left half of canvas light purple and right half a royal blue.",
+                alt: "Left half of canvas light purple and right half a royal blue.",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3406,8 +3403,7 @@
                 example: [
                   "\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 255);\nvar c = color(0, 126, 255);\nfill(c);\nrect(15, 20, 35, 60);\nvar value = brightness(c); // Sets 'value' to 255\nfill(value);\nrect(50, 20, 35, 60);\n</code>\n</div>",
                 ],
-                alt:
-                  "Left half of canvas salmon pink and the right half white.",
+                alt: "Left half of canvas salmon pink and the right half white.",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3426,8 +3422,7 @@
                 example: [
                   "\n<div>\n<code>\nvar c = color(255, 204, 0); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nrect(30, 20, 55, 55); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nvar c = color(255, 204, 0); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80); // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nc = color(65); // Update 'c' with grayscale value\nfill(c); // Use updated 'c' as fill color\nellipse(75, 75, 80, 80); // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG & CSS colors may be used,\nvar c = color('magenta');\nfill(c); // Use 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nrect(20, 20, 60, 60); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// as can hex color codes:\nnoStroke(); // Don't draw a stroke around shapes\nvar c = color('#0f0');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('#00ff00');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// RGB and RGBA color strings are also supported:\n// these all set to the same color (solid blue)\nvar c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('rgb(0,0,255)');\nfill(c); // Use 'c' as fill color\nrect(10, 10, 35, 35); // Draw rectangle\n\nc = color('rgb(0%, 0%, 100%)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 35, 35); // Draw rectangle\n\nc = color('rgba(0, 0, 255, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(10, 55, 35, 35); // Draw rectangle\n\nc = color('rgba(0%, 0%, 100%, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 55, 35, 35); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSL color is also supported and can be specified\n// by value\nvar c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('hsl(160, 100%, 50%)');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('hsla(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSB color is also supported and can be specified\n// by value\nvar c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('hsb(160, 100%, 50%)');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('hsba(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nvar c; // Declare color 'c'\nnoStroke(); // Don't draw a stroke around shapes\n\n// If no colorMode is specified, then the\n// default of RGB with scale of 0-255 is used.\nc = color(50, 55, 100); // Create a color for 'c'\nfill(c); // Use color variable 'c' as fill color\nrect(0, 10, 45, 80); // Draw left rect\n\ncolorMode(HSB, 100); // Use HSB with scale of 0-100\nc = color(50, 55, 100); // Update 'c' with new color\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw right rect\n</code>\n</div>",
                 ],
-                alt:
-                  "Yellow rect in middle right of canvas, with 55 pixel width and height.\nYellow ellipse in top left of canvas, black ellipse in bottom right,both 80x80.\nBright fuschia rect in middle of canvas, 60 pixel width and height.\nTwo bright green rects on opposite sides of the canvas, both 45x80.\nFour blue rects in each corner of the canvas, each are 35x35.\nBright sea green rect on left and darker rect on right of canvas, both 45x80.\nDark green rect on left and lighter green rect on right of canvas, both 45x80.\nDark blue rect on left and light teal rect on right of canvas, both 45x80.",
+                alt: "Yellow rect in middle right of canvas, with 55 pixel width and height.\nYellow ellipse in top left of canvas, black ellipse in bottom right,both 80x80.\nBright fuschia rect in middle of canvas, 60 pixel width and height.\nTwo bright green rects on opposite sides of the canvas, both 45x80.\nFour blue rects in each corner of the canvas, each are 35x35.\nBright sea green rect on left and darker rect on right of canvas, both 45x80.\nDark green rect on left and lighter green rect on right of canvas, both 45x80.\nDark blue rect on left and light teal rect on right of canvas, both 45x80.",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3554,8 +3549,7 @@
                 example: [
                   "\n<div>\n<code>\nvar c = color(20, 75, 200); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nrect(15, 20, 35, 60); // Draw left rectangle\n\nvar greenValue = green(c); // Get green in 'c'\nprint(greenValue); // Print \"75.0\"\nfill(0, greenValue, 0); // Use 'greenValue' in new fill\nrect(50, 20, 35, 60); // Draw right rectangle\n</code>\n</div>",
                 ],
-                alt:
-                  "blue rect on left and green on right, both with black outlines & 35x60.",
+                alt: "blue rect on left and green on right, both with black outlines & 35x60.",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3618,8 +3612,7 @@
                 example: [
                   "\n<div>\n<code>\ncolorMode(RGB);\nstroke(255);\nbackground(51);\nvar from = color(218, 165, 32);\nvar to = color(72, 61, 139);\ncolorMode(RGB); // Try changing to HSB.\nvar interA = lerpColor(from, to, 0.33);\nvar interB = lerpColor(from, to, 0.66);\nfill(from);\nrect(10, 20, 20, 60);\nfill(interA);\nrect(30, 20, 20, 60);\nfill(interB);\nrect(50, 20, 20, 60);\nfill(to);\nrect(70, 20, 20, 60);\n</code>\n</div>",
                 ],
-                alt:
-                  "4 rects one tan, brown, brownish purple, purple, with white outlines & 20x60",
+                alt: "4 rects one tan, brown, brownish purple, purple, with white outlines & 20x60",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3646,8 +3639,7 @@
                 example: [
                   "\n<div>\n<code>\nnoStroke();\ncolorMode(HSL);\nvar c = color(156, 100, 50, 1);\nfill(c);\nrect(15, 20, 35, 60);\nvar value = lightness(c); // Sets 'value' to 50\nfill(value);\nrect(50, 20, 35, 60);\n</code>\n</div>",
                 ],
-                alt:
-                  "light pastel green rect on left and dark grey rect on right, both 35x60.",
+                alt: "light pastel green rect on left and dark grey rect on right, both 35x60.",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3674,8 +3666,7 @@
                 example: [
                   "\n<div>\n<code>\nvar c = color(255, 204, 0); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nrect(15, 20, 35, 60); // Draw left rectangle\n\nvar redValue = red(c); // Get red in 'c'\nprint(redValue); // Print \"255.0\"\nfill(redValue, 0, 0); // Use 'redValue' in new fill\nrect(50, 20, 35, 60); // Draw right rectangle\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\ncolorMode(RGB, 1);\nvar myColor = red(c);\nprint(myColor);\n</code>\n</div>",
                 ],
-                alt:
-                  "yellow rect on left and red rect on right, both with black outlines and 35x60.\ngrey canvas",
+                alt: "yellow rect on left and red rect on right, both with black outlines and 35x60.\ngrey canvas",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3702,8 +3693,7 @@
                 example: [
                   "\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 255);\nvar c = color(0, 126, 255);\nfill(c);\nrect(15, 20, 35, 60);\nvar value = saturation(c); // Sets 'value' to 126\nfill(value);\nrect(50, 20, 35, 60);\n</code>\n</div>",
                 ],
-                alt:
-                  "deep pink rect on left and grey rect on right, both 35x60.",
+                alt: "deep pink rect on left and grey rect on right, both 35x60.",
                 class: "p5",
                 module: "Color",
                 submodule: "Creating & Reading",
@@ -3880,8 +3870,7 @@
                 example: [
                   "\n<div>\n<code>\n// Grayscale integer value\nbackground(51);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nbackground(255, 204, 0);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nbackground(255, 204, 100);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nbackground('red');\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nbackground('#fae');\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nbackground('#222222');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nbackground('rgb(0,255,0)');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nbackground('rgba(0,255,0, 0.25)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nbackground('rgb(100%,0%,10%)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nbackground('rgba(100%,0%,100%,0.5)');\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nbackground(color(0, 0, 255));\n</code>\n</div>",
                 ],
-                alt:
-                  "canvas with darkest charcoal grey background.\ncanvas with yellow background.\ncanvas with royal blue background.\ncanvas with red background.\ncanvas with pink background.\ncanvas with black background.\ncanvas with bright green background.\ncanvas with soft green background.\ncanvas with red background.\ncanvas with light purple background.\ncanvas with blue background.",
+                alt: "canvas with darkest charcoal grey background.\ncanvas with yellow background.\ncanvas with royal blue background.\ncanvas with red background.\ncanvas with pink background.\ncanvas with black background.\ncanvas with bright green background.\ncanvas with soft green background.\ncanvas with red background.\ncanvas with light purple background.\ncanvas with blue background.",
                 class: "p5",
                 module: "Color",
                 submodule: "Setting",
@@ -4008,8 +3997,7 @@
                 example: [
                   "\n<div>\n<code>\n// Clear the screen on mouse press.\nfunction setup() {\n  createCanvas(100, 100);\n}\n\nfunction draw() {\n  ellipse(mouseX, mouseY, 20, 20);\n}\n\nfunction mousePressed() {\n  clear();\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "20x20 white ellipses are continually drawn at mouse x and y coordinates.",
+                alt: "20x20 white ellipses are continually drawn at mouse x and y coordinates.",
                 class: "p5",
                 module: "Color",
                 submodule: "Setting",
@@ -4025,8 +4013,7 @@
                 example: [
                   "\n<div>\n<code>\nnoStroke();\ncolorMode(RGB, 100);\nfor (var i = 0; i < 100; i++) {\n  for (var j = 0; j < 100; j++) {\n    stroke(i, j, 0);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 100);\nfor (var i = 0; i < 100; i++) {\n  for (var j = 0; j < 100; j++) {\n    stroke(i, j, 100);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\n\ncolorMode(RGB, 1);\nvar myColor = c._getRed();\ntext(myColor, 10, 10, 80, 80);\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\ncolorMode(RGB, 255, 255, 255, 1);\nbackground(255);\n\nstrokeWeight(4);\nstroke(255, 0, 10, 0.3);\nellipse(40, 40, 50, 50);\nellipse(50, 50, 40, 40);\n</code>\n</div>",
                 ],
-                alt:
-                  "Green to red gradient from bottom L to top R. shading originates from top left.\nRainbow gradient from left to right. Brightness increasing to white at top.\nunknown image.\n50x50 ellipse at middle L & 40x40 ellipse at center. Transluscent pink outlines.",
+                alt: "Green to red gradient from bottom L to top R. shading originates from top left.\nRainbow gradient from left to right. Brightness increasing to white at top.\nunknown image.\n50x50 ellipse at middle L & 40x40 ellipse at center. Transluscent pink outlines.",
                 class: "p5",
                 module: "Color",
                 submodule: "Setting",
@@ -4097,8 +4084,7 @@
                 example: [
                   "\n<div>\n<code>\n// Grayscale integer value\nfill(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nfill(255, 204, 0);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nfill(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nfill('red');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nfill('#fae');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nfill('#222222');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nfill('rgb(0,255,0)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nfill('rgba(0,255,0, 0.25)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nfill('rgb(100%,0%,10%)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nfill('rgba(100%,0%,100%,0.5)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nfill(color(0, 0, 255));\nrect(20, 20, 60, 60);\n</code>\n</div>",
                 ],
-                alt:
-                  "60x60 dark charcoal grey rect with black outline in center of canvas.\n60x60 yellow rect with black outline in center of canvas.\n60x60 royal blue rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.\n60x60 pink rect with black outline in center of canvas.\n60x60 black rect with black outline in center of canvas.\n60x60 light green rect with black outline in center of canvas.\n60x60 soft green rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.\n60x60 dark fushcia rect with black outline in center of canvas.\n60x60 blue rect with black outline in center of canvas.",
+                alt: "60x60 dark charcoal grey rect with black outline in center of canvas.\n60x60 yellow rect with black outline in center of canvas.\n60x60 royal blue rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.\n60x60 pink rect with black outline in center of canvas.\n60x60 black rect with black outline in center of canvas.\n60x60 light green rect with black outline in center of canvas.\n60x60 soft green rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.\n60x60 dark fushcia rect with black outline in center of canvas.\n60x60 blue rect with black outline in center of canvas.",
                 class: "p5",
                 module: "Color",
                 submodule: "Setting",
@@ -4197,8 +4183,7 @@
                 example: [
                   "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div modernizr='webgl'>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(0);\n  noFill();\n  stroke(100, 100, 240);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(45, 45, 45);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "white rect top middle and noFill rect center. Both 60x60 with black outlines.\nblack canvas with purple cube wireframe spinning",
+                alt: "white rect top middle and noFill rect center. Both 60x60 with black outlines.\nblack canvas with purple cube wireframe spinning",
                 class: "p5",
                 module: "Color",
                 submodule: "Setting",
@@ -4214,8 +4199,7 @@
                 example: [
                   "\n<div>\n<code>\nnoStroke();\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div modernizr='webgl'>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(0);\n  noStroke();\n  fill(240, 150, 150);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(45, 45, 45);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "60x60 white rect at center. no outline.\nblack canvas with pink cube spinning",
+                alt: "60x60 white rect at center. no outline.\nblack canvas with pink cube spinning",
                 class: "p5",
                 module: "Color",
                 submodule: "Setting",
@@ -4231,8 +4215,7 @@
                 example: [
                   "\n<div>\n<code>\n// Grayscale integer value\nstrokeWeight(4);\nstroke(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nstroke(255, 204, 0);\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nstrokeWeight(4);\nstroke(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nstroke('red');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nstroke('#fae');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nstroke('#222222');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nstroke('rgb(0,255,0)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nstroke('rgba(0,255,0,0.25)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nstroke('rgb(100%,0%,10%)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nstroke('rgba(100%,0%,100%,0.5)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nstroke(color(0, 0, 255));\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>",
                 ],
-                alt:
-                  "60x60 white rect at center. Dark charcoal grey outline.\n60x60 white rect at center. Yellow outline.\n60x60 white rect at center. Royal blue outline.\n60x60 white rect at center. Red outline.\n60x60 white rect at center. Pink outline.\n60x60 white rect at center. Black outline.\n60x60 white rect at center. Bright green outline.\n60x60 white rect at center. Soft green outline.\n60x60 white rect at center. Red outline.\n60x60 white rect at center. Dark fushcia outline.\n60x60 white rect at center. Blue outline.",
+                alt: "60x60 white rect at center. Dark charcoal grey outline.\n60x60 white rect at center. Yellow outline.\n60x60 white rect at center. Royal blue outline.\n60x60 white rect at center. Red outline.\n60x60 white rect at center. Pink outline.\n60x60 white rect at center. Black outline.\n60x60 white rect at center. Bright green outline.\n60x60 white rect at center. Soft green outline.\n60x60 white rect at center. Red outline.\n60x60 white rect at center. Dark fushcia outline.\n60x60 white rect at center. Blue outline.",
                 class: "p5",
                 module: "Color",
                 submodule: "Setting",
@@ -4376,8 +4359,7 @@
                 example: [
                   "\n<div>\n<code>\narc(50, 55, 50, 50, 0, HALF_PI);\nnoFill();\narc(50, 55, 60, 60, HALF_PI, PI);\narc(50, 55, 70, 70, PI, PI + QUARTER_PI);\narc(50, 55, 80, 80, PI + QUARTER_PI, TWO_PI);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI, OPEN);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI, CHORD);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI, PIE);\n</code>\n</div>",
                 ],
-                alt:
-                  "shattered outline of an ellipse with a quarter of a white circle bottom-right.\nwhite ellipse with top right quarter missing.\nwhite ellipse with black outline with top right missing.\nwhite ellipse with top right missing with black outline around shape.\nwhite ellipse with top right quarter missing with black outline around the shape.",
+                alt: "shattered outline of an ellipse with a quarter of a white circle bottom-right.\nwhite ellipse with top right quarter missing.\nwhite ellipse with black outline with top right missing.\nwhite ellipse with top right missing with black outline around shape.\nwhite ellipse with top right quarter missing with black outline around the shape.",
                 class: "p5",
                 module: "Shape",
                 submodule: "2D Primitives",
@@ -4393,8 +4375,7 @@
                 example: [
                   "\n<div>\n<code>\nellipse(56, 46, 55, 55);\n</code>\n</div>",
                 ],
-                alt:
-                  "white ellipse with black outline in middle-right of canvas that is 55x55.",
+                alt: "white ellipse with black outline in middle-right of canvas that is 55x55.",
                 class: "p5",
                 module: "Shape",
                 submodule: "2D Primitives",
@@ -4470,8 +4451,7 @@
                 example: [
                   "\n<div>\n<code>\nline(30, 20, 85, 75);\n</code>\n</div>\n\n<div>\n<code>\nline(30, 20, 85, 20);\nstroke(126);\nline(85, 20, 85, 75);\nstroke(255);\nline(85, 75, 30, 75);\n</code>\n</div>",
                 ],
-                alt:
-                  "line 78 pixels long running from mid-top to bottom-right of canvas.\n3 lines of various stroke sizes. Form top, bottom and right sides of a square.",
+                alt: "line 78 pixels long running from mid-top to bottom-right of canvas.\n3 lines of various stroke sizes. Form top, bottom and right sides of a square.",
                 class: "p5",
                 module: "Shape",
                 submodule: "2D Primitives",
@@ -4591,8 +4571,7 @@
                 example: [
                   "\n<div>\n<code>\nquad(38, 31, 86, 20, 69, 63, 30, 76);\n</code>\n</div>",
                 ],
-                alt:
-                  "irregular white quadrilateral shape with black outline mid-right of canvas.",
+                alt: "irregular white quadrilateral shape with black outline mid-right of canvas.",
                 class: "p5",
                 module: "Shape",
                 submodule: "2D Primitives",
@@ -4730,8 +4709,7 @@
                 example: [
                   "\n<div>\n<code>\n// Draw a rectangle at location (30, 20) with a width and height of 55.\nrect(30, 20, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners, each having a radius of 20.\nrect(30, 20, 55, 55, 20);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners having the following radii:\n// top-left = 20, top-right = 15, bottom-right = 10, bottom-left = 5.\nrect(30, 20, 55, 55, 20, 15, 10, 5);\n</code>\n</div>",
                 ],
-                alt:
-                  "55x55 white rect with black outline in mid-right of canvas.\n55x55 white rect with black outline and rounded edges in mid-right of canvas.\n55x55 white rect with black outline and rounded edges of different radii.",
+                alt: "55x55 white rect with black outline in mid-right of canvas.\n55x55 white rect with black outline and rounded edges in mid-right of canvas.\n55x55 white rect with black outline and rounded edges of different radii.",
                 class: "p5",
                 module: "Shape",
                 submodule: "2D Primitives",
@@ -4875,8 +4853,7 @@
                 example: [
                   "\n<div>\n<code>\ntriangle(30, 75, 58, 20, 86, 75);\n</code>\n</div>",
                 ],
-                alt:
-                  "white triangle with black outline in mid-right of canvas.",
+                alt: "white triangle with black outline in mid-right of canvas.",
                 class: "p5",
                 module: "Shape",
                 submodule: "2D Primitives",
@@ -4900,8 +4877,7 @@
                 example: [
                   "\n<div>\n<code>\nellipseMode(RADIUS); // Set ellipseMode to RADIUS\nfill(255); // Set fill to white\nellipse(50, 50, 30, 30); // Draw white ellipse using RADIUS mode\n\nellipseMode(CENTER); // Set ellipseMode to CENTER\nfill(100); // Set fill to gray\nellipse(50, 50, 30, 30); // Draw gray ellipse using CENTER mode\n</code>\n</div>\n\n<div>\n<code>\nellipseMode(CORNER); // Set ellipseMode is CORNER\nfill(255); // Set fill to white\nellipse(25, 25, 50, 50); // Draw white ellipse using CORNER mode\n\nellipseMode(CORNERS); // Set ellipseMode to CORNERS\nfill(100); // Set fill to gray\nellipse(25, 25, 50, 50); // Draw gray ellipse using CORNERS mode\n</code>\n</div>",
                 ],
-                alt:
-                  "60x60 white ellipse and 30x30 grey ellipse with black outlines at center.\n60x60 white ellipse @center and 30x30 grey ellipse top-right, black outlines.",
+                alt: "60x60 white ellipse and 30x30 grey ellipse with black outlines at center.\n60x60 white ellipse @center and 30x30 grey ellipse top-right, black outlines.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Attributes",
@@ -4917,8 +4893,7 @@
                 example: [
                   "\n<div>\n<code>\nbackground(0);\nnoStroke();\nsmooth();\nellipse(30, 48, 36, 36);\nnoSmooth();\nellipse(70, 48, 36, 36);\n</code>\n</div>",
                 ],
-                alt:
-                  "2 pixelated 36x36 white ellipses to left & right of center, black background",
+                alt: "2 pixelated 36x36 white ellipses to left & right of center, black background",
                 class: "p5",
                 module: "Shape",
                 submodule: "Attributes",
@@ -4942,8 +4917,7 @@
                 example: [
                   "\n<div>\n<code>\nrectMode(CORNER); // Default rectMode is CORNER\nfill(255); // Set fill to white\nrect(25, 25, 50, 50); // Draw white rect using CORNER mode\n\nrectMode(CORNERS); // Set rectMode to CORNERS\nfill(100); // Set fill to gray\nrect(25, 25, 50, 50); // Draw gray rect using CORNERS mode\n</code>\n</div>\n\n<div>\n<code>\nrectMode(RADIUS); // Set rectMode to RADIUS\nfill(255); // Set fill to white\nrect(50, 50, 30, 30); // Draw white rect using RADIUS mode\n\nrectMode(CENTER); // Set rectMode to CENTER\nfill(100); // Set fill to gray\nrect(50, 50, 30, 30); // Draw gray rect using CENTER mode\n</code>\n</div>",
                 ],
-                alt:
-                  "50x50 white rect at center and 25x25 grey rect in the top left of the other.\n50x50 white rect at center and 25x25 grey rect in the center of the other.",
+                alt: "50x50 white rect at center and 25x25 grey rect in the top left of the other.\n50x50 white rect at center and 25x25 grey rect in the center of the other.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Attributes",
@@ -4959,8 +4933,7 @@
                 example: [
                   "\n<div>\n<code>\nbackground(0);\nnoStroke();\nsmooth();\nellipse(30, 48, 36, 36);\nnoSmooth();\nellipse(70, 48, 36, 36);\n</code>\n</div>",
                 ],
-                alt:
-                  "2 pixelated 36x36 white ellipses one left one right of center. On black.",
+                alt: "2 pixelated 36x36 white ellipses one left one right of center. On black.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Attributes",
@@ -4983,8 +4956,7 @@
                 example: [
                   "\n<div>\n<code>\nstrokeWeight(12.0);\nstrokeCap(ROUND);\nline(20, 30, 80, 30);\nstrokeCap(SQUARE);\nline(20, 50, 80, 50);\nstrokeCap(PROJECT);\nline(20, 70, 80, 70);\n</code>\n</div>",
                 ],
-                alt:
-                  "3 lines. Top line: rounded ends, mid: squared, bottom:longer squared ends.",
+                alt: "3 lines. Top line: rounded ends, mid: squared, bottom:longer squared ends.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Attributes",
@@ -5007,8 +4979,7 @@
                 example: [
                   "\n<div>\n<code>\nnoFill();\nstrokeWeight(10.0);\nstrokeJoin(MITER);\nbeginShape();\nvertex(35, 20);\nvertex(65, 50);\nvertex(35, 80);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nstrokeWeight(10.0);\nstrokeJoin(BEVEL);\nbeginShape();\nvertex(35, 20);\nvertex(65, 50);\nvertex(35, 80);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nstrokeWeight(10.0);\nstrokeJoin(ROUND);\nbeginShape();\nvertex(35, 20);\nvertex(65, 50);\nvertex(35, 80);\nendShape();\n</code>\n</div>",
                 ],
-                alt:
-                  "Right-facing arrowhead shape with pointed tip in center of canvas.\nRight-facing arrowhead shape with flat tip in center of canvas.\nRight-facing arrowhead shape with rounded tip in center of canvas.",
+                alt: "Right-facing arrowhead shape with pointed tip in center of canvas.\nRight-facing arrowhead shape with flat tip in center of canvas.\nRight-facing arrowhead shape with rounded tip in center of canvas.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Attributes",
@@ -5032,8 +5003,7 @@
                 example: [
                   "\n<div>\n<code>\nstrokeWeight(1); // Default\nline(20, 20, 80, 20);\nstrokeWeight(4); // Thicker\nline(20, 40, 80, 40);\nstrokeWeight(10); // Beastly\nline(20, 70, 80, 70);\n</code>\n</div>",
                 ],
-                alt:
-                  "3 horizontal black lines. Top line: thin, mid: medium, bottom:thick.",
+                alt: "3 horizontal black lines. Top line: thin, mid: medium, bottom:thick.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Attributes",
@@ -5079,8 +5049,7 @@
                 example: [
                   "\n<div><code>\narc(50, 50, 80, 80, 0, HALF_PI);\n</code></div>",
                 ],
-                alt:
-                  "80x80 white quarter-circle with curve toward bottom right of canvas.",
+                alt: "80x80 white quarter-circle with curve toward bottom right of canvas.",
                 class: "p5",
                 module: "Constants",
                 submodule: "Constants",
@@ -5114,8 +5083,7 @@
                 example: [
                   "\n<div><code>\narc(50, 50, 80, 80, 0, QUARTER_PI);\n</code></div>",
                 ],
-                alt:
-                  "white eighth-circle rotated about 40 degrees with curve bottom right canvas.",
+                alt: "white eighth-circle rotated about 40 degrees with curve bottom right canvas.",
                 class: "p5",
                 module: "Constants",
                 submodule: "Constants",
@@ -5901,8 +5869,7 @@
                 example: [
                   "\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\nline(85, 20, 10, 10);\nline(90, 90, 15, 80);\nstroke(0, 0, 0);\nbezier(85, 20, 10, 10, 90, 90, 15, 80);\n</code>\n</div>\n\n<div>\n<code>\nbackground(0, 0, 0);\nnoFill();\nstroke(255);\nbezier(250, 250, 0, 100, 100, 0, 100, 0, 0, 0, 100, 0);\n</code>\n</div>",
                 ],
-                alt:
-                  "stretched black s-shape in center with orange lines extending from end points.\nstretched black s-shape with 10 5x5 white ellipses along the shape.\nstretched black s-shape with 7 5x5 ellipses and orange lines along the shape.\nstretched black s-shape with 17 small orange lines extending from under shape.\nhorseshoe shape with orange ends facing left and black curved center.\nhorseshoe shape with orange ends facing left and black curved center.\nLine shaped like right-facing arrow,points move with mouse-x and warp shape.\nhorizontal line that hooks downward on the right and 13 5x5 ellipses along it.\nright curving line mid-right of canvas with 7 short lines radiating from it.",
+                alt: "stretched black s-shape in center with orange lines extending from end points.\nstretched black s-shape with 10 5x5 white ellipses along the shape.\nstretched black s-shape with 7 5x5 ellipses and orange lines along the shape.\nstretched black s-shape with 17 small orange lines extending from under shape.\nhorseshoe shape with orange ends facing left and black curved center.\nhorseshoe shape with orange ends facing left and black curved center.\nLine shaped like right-facing arrow,points move with mouse-x and warp shape.\nhorizontal line that hooks downward on the right and 13 5x5 ellipses along it.\nright curving line mid-right of canvas with 7 short lines radiating from it.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Curves",
@@ -6051,8 +6018,7 @@
                 example: [
                   "\n<div modernizr='webgl'>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  noFill();\n\n  bezierDetail(5);\n}\n\nfunction draw() {\n  background(200);\n\n  // prettier-ignore\n  bezier(-40, -40, 0,\n          90, -40, 0,\n         -90,  40, 0,\n          40,  40, 0);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "stretched black s-shape with a low level of bezier detail",
+                alt: "stretched black s-shape with a low level of bezier detail",
                 class: "p5",
                 module: "Shape",
                 submodule: "Curves",
@@ -6100,8 +6066,7 @@
                 example: [
                   "\n<div>\n<code>\nnoFill();\nvar x1 = 85,\n x2 = 10,\n x3 = 90,\n x4 = 15;\nvar y1 = 20,\n y2 = 10,\n y3 = 90,\n y4 = 80;\nbezier(x1, y1, x2, y2, x3, y3, x4, y4);\nfill(255);\nvar steps = 10;\nfor (var i = 0; i <= steps; i++) {\n  var t = i / steps;\n  var x = bezierPoint(x1, x2, x3, x4, t);\n  var y = bezierPoint(y1, y2, y3, y4, t);\n  ellipse(x, y, 5, 5);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "stretched black s-shape with 17 small orange lines extending from under shape.",
+                alt: "stretched black s-shape with 17 small orange lines extending from under shape.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Curves",
@@ -6149,8 +6114,7 @@
                 example: [
                   "\n<div>\n<code>\nnoFill();\nbezier(85, 20, 10, 10, 90, 90, 15, 80);\nvar steps = 6;\nfill(255);\nfor (var i = 0; i <= steps; i++) {\n  var t = i / steps;\n  // Get the location of the point\n  var x = bezierPoint(85, 10, 90, 15, t);\n  var y = bezierPoint(20, 10, 90, 80, t);\n  // Get the tangent points\n  var tx = bezierTangent(85, 10, 90, 15, t);\n  var ty = bezierTangent(20, 10, 90, 80, t);\n  // Calculate an angle from the tangent points\n  var a = atan2(ty, tx);\n  a += PI;\n  stroke(255, 102, 0);\n  line(x, y, cos(a) * 30 + x, sin(a) * 30 + y);\n  // The following line of code makes a line\n  // inverse of the above line\n  //line(x, y, cos(a)*-30 + x, sin(a)*-30 + y);\n  stroke(0);\n  ellipse(x, y, 5, 5);\n}\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbezier(85, 20, 10, 10, 90, 90, 15, 80);\nstroke(255, 102, 0);\nvar steps = 16;\nfor (var i = 0; i <= steps; i++) {\n  var t = i / steps;\n  var x = bezierPoint(85, 10, 90, 15, t);\n  var y = bezierPoint(20, 10, 90, 80, t);\n  var tx = bezierTangent(85, 10, 90, 15, t);\n  var ty = bezierTangent(20, 10, 90, 80, t);\n  var a = atan2(ty, tx);\n  a -= HALF_PI;\n  line(x, y, cos(a) * 8 + x, sin(a) * 8 + y);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "s-shaped line with 17 short orange lines extending from underside of shape",
+                alt: "s-shaped line with 17 short orange lines extending from underside of shape",
                 class: "p5",
                 module: "Shape",
                 submodule: "Curves",
@@ -6166,8 +6130,7 @@
                 example: [
                   "\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\ncurve(5, 26, 5, 26, 73, 24, 73, 61);\nstroke(0);\ncurve(5, 26, 73, 24, 73, 61, 15, 65);\nstroke(255, 102, 0);\ncurve(73, 24, 73, 61, 15, 65, 15, 65);\n</code>\n</div>\n<div>\n<code>\n// Define the curve points as JavaScript objects\nvar p1 = { x: 5, y: 26 },\n p2 = { x: 73, y: 24 };\nvar p3 = { x: 73, y: 61 },\n p4 = { x: 15, y: 65 };\nnoFill();\nstroke(255, 102, 0);\ncurve(p1.x, p1.y, p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);\nstroke(0);\ncurve(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y);\nstroke(255, 102, 0);\ncurve(p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p4.x, p4.y);\n</code>\n</div>\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\ncurve(5, 26, 0, 5, 26, 0, 73, 24, 0, 73, 61, 0);\nstroke(0);\ncurve(5, 26, 0, 73, 24, 0, 73, 61, 0, 15, 65, 0);\nstroke(255, 102, 0);\ncurve(73, 24, 0, 73, 61, 0, 15, 65, 0, 15, 65, 0);\n</code>\n</div>",
                 ],
-                alt:
-                  "horseshoe shape with orange ends facing left and black curved center.\nhorseshoe shape with orange ends facing left and black curved center.\ncurving black and orange lines.",
+                alt: "horseshoe shape with orange ends facing left and black curved center.\nhorseshoe shape with orange ends facing left and black curved center.\ncurving black and orange lines.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Curves",
@@ -6340,8 +6303,7 @@
                 example: [
                   "\n<div>\n<code>\n// Move the mouse left and right to see the curve change\n\nfunction setup() {\n  createCanvas(100, 100);\n  noFill();\n}\n\nfunction draw() {\n  background(204);\n  var t = map(mouseX, 0, width, -5, 5);\n  curveTightness(t);\n  beginShape();\n  curveVertex(10, 26);\n  curveVertex(10, 26);\n  curveVertex(83, 24);\n  curveVertex(83, 61);\n  curveVertex(25, 65);\n  curveVertex(25, 65);\n  endShape();\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "Line shaped like right-facing arrow,points move with mouse-x and warp shape.",
+                alt: "Line shaped like right-facing arrow,points move with mouse-x and warp shape.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Curves",
@@ -6436,8 +6398,7 @@
                 example: [
                   "\n<div>\n<code>\nnoFill();\ncurve(5, 26, 73, 24, 73, 61, 15, 65);\nvar steps = 6;\nfor (var i = 0; i <= steps; i++) {\n  var t = i / steps;\n  var x = curvePoint(5, 73, 73, 15, t);\n  var y = curvePoint(26, 24, 61, 65, t);\n  //ellipse(x, y, 5, 5);\n  var tx = curveTangent(5, 73, 73, 15, t);\n  var ty = curveTangent(26, 24, 61, 65, t);\n  var a = atan2(ty, tx);\n  a -= PI / 2.0;\n  line(x, y, cos(a) * 8 + x, sin(a) * 8 + y);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "right curving line mid-right of canvas with 7 short lines radiating from it.",
+                alt: "right curving line mid-right of canvas with 7 short lines radiating from it.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Curves",
@@ -6477,8 +6438,7 @@
                 example: [
                   "\n  <div><code>\nfunction setup() {\n  frameRate(30);\n  textSize(20);\n  textSize(30);\n  textAlign(CENTER);\n}\n\nfunction draw() {\n  background(200);\n  text(frameCount, width / 2, height / 2);\n}\n</code></div>",
                 ],
-                alt:
-                  "numbers rapidly counting upward with frame count set to 30.",
+                alt: "numbers rapidly counting upward with frame count set to 30.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6495,8 +6455,7 @@
                 example: [
                   '\n<div><code>\n// To demonstrate, put two windows side by side.\n// Click on the window that the p5 sketch isn\'t in!\nfunction draw() {\n  background(200);\n  noStroke();\n  fill(0, 200, 0);\n  ellipse(25, 25, 50, 50);\n\n  if (!focused) {\n   // or "if (focused === false)"\n    stroke(200, 0, 0);\n    line(0, 0, 100, 100);\n    line(100, 0, 0, 100);\n  }\n}\n</code></div>',
                 ],
-                alt:
-                  "green 50x50 ellipse at top left. Red X covers canvas when page focus changes",
+                alt: "green 50x50 ellipse at top left. Red X covers canvas when page focus changes",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6533,8 +6492,7 @@
                 example: [
                   "\n<div><code>\n// Move the mouse left and right across the image\n// to see the cursor change from a cross to a hand\nfunction draw() {\n  line(width / 2, 0, width / 2, height);\n  if (mouseX < 50) {\n    cursor(CROSS);\n  } else {\n    cursor(HAND);\n  }\n}\n</code></div>",
                 ],
-                alt:
-                  "horizontal line divides canvas. cursor on left is a cross, right is hand.",
+                alt: "horizontal line divides canvas. cursor on left is a cross, right is hand.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6550,8 +6508,7 @@
                 example: [
                   "\n\n<div><code>\nvar rectX = 0;\nvar fr = 30; //starting FPS\nvar clr;\n\nfunction setup() {\n  background(200);\n  frameRate(fr); // Attempt to refresh at starting FPS\n  clr = color(255, 0, 0);\n}\n\nfunction draw() {\n  background(200);\n  rectX = rectX += 1; // Move Rectangle\n\n  if (rectX >= width) {\n   // If you go off screen.\n    if (fr === 30) {\n      clr = color(0, 0, 255);\n      fr = 10;\n      frameRate(fr); // make frameRate 10 FPS\n    } else {\n      clr = color(255, 0, 0);\n      fr = 30;\n      frameRate(fr); // make frameRate 30 FPS\n    }\n    rectX = 0;\n  }\n  fill(clr);\n  rect(rectX, 40, 20, 20);\n}\n</code></div>",
                 ],
-                alt:
-                  "blue rect moves left to right, followed by red rect moving faster. Loops.",
+                alt: "blue rect moves left to right, followed by red rect moving faster. Loops.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6587,8 +6544,7 @@
                 example: [
                   "\n<div><code>\nfunction setup() {\n  noCursor();\n}\n\nfunction draw() {\n  background(200);\n  ellipse(mouseX, mouseY, 10, 10);\n}\n</code></div>",
                 ],
-                alt:
-                  "cursor becomes 10x 10 white ellipse the moves with mouse x and y.",
+                alt: "cursor becomes 10x 10 white ellipse the moves with mouse x and y.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6605,8 +6561,7 @@
                 example: [
                   '\n<div class="norender"><code>\ncreateCanvas(displayWidth, displayHeight);\n</code></div>',
                 ],
-                alt:
-                  "cursor becomes 10x 10 white ellipse the moves with mouse x and y.",
+                alt: "cursor becomes 10x 10 white ellipse the moves with mouse x and y.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6754,8 +6709,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  pixelDensity(1);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width / 2, height / 2, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  pixelDensity(3.0);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width / 2, height / 2, 50, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "fuzzy 50x50 white ellipse with black outline in center of canvas.\nsharp 50x50 white ellipse with black outline in center of canvas.",
+                alt: "fuzzy 50x50 white ellipse with black outline in center of canvas.\nsharp 50x50 white ellipse with black outline in center of canvas.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6774,8 +6728,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  var density = displayDensity();\n  pixelDensity(density);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width / 2, height / 2, 50, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "50x50 white ellipse with black outline in center of canvas.",
+                alt: "50x50 white ellipse with black outline in center of canvas.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -6793,8 +6746,7 @@
                 example: [
                   "\n<div>\n<code>\nvar url;\nvar x = 100;\n\nfunction setup() {\n  fill(0);\n  noStroke();\n  url = getURL();\n}\n\nfunction draw() {\n  background(200);\n  text(url, x, height / 2);\n  x--;\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "current url (http://p5js.org/reference/#/p5/getURL) moves right to left.",
+                alt: "current url (http://p5js.org/reference/#/p5/getURL) moves right to left.",
                 class: "p5",
                 module: "Environment",
                 submodule: "Environment",
@@ -7176,8 +7128,7 @@
                 example: [
                   "\n<div><code>\nvar sel;\n\nfunction setup() {\n  textAlign(CENTER);\n  background(200);\n  sel = createSelect();\n  sel.position(10, 10);\n  sel.option('pear');\n  sel.option('kiwi');\n  sel.option('grape');\n  sel.changed(mySelectEvent);\n}\n\nfunction mySelectEvent() {\n  var item = sel.value();\n  background(200);\n  text(\"it's a \" + item + '!', 50, 50);\n}\n</code></div>\n<div><code>\nvar checkbox;\nvar cnv;\n\nfunction setup() {\n  checkbox = createCheckbox(' fill');\n  checkbox.changed(changeFill);\n  cnv = createCanvas(100, 100);\n  cnv.position(0, 30);\n  noFill();\n}\n\nfunction draw() {\n  background(200);\n  ellipse(50, 50, 50, 50);\n}\n\nfunction changeFill() {\n  if (checkbox.checked()) {\n    fill(0);\n  } else {\n    noFill();\n  }\n}\n</code></div>",
                 ],
-                alt:
-                  'dropdown: pear, kiwi, grape. When selected text "its a" + selection shown.',
+                alt: 'dropdown: pear, kiwi, grape. When selected text "its a" + selection shown.',
                 class: "p5.Element",
                 module: "DOM",
                 submodule: "DOM",
@@ -7375,8 +7326,7 @@
                 example: [
                   "\n<div><code>\nfunction setup() {\n  var c = createCanvas(100, 100);\n  background(200);\n  textAlign(CENTER);\n  text('drop image', width / 2, height / 2);\n  c.drop(gotFile);\n}\n\nfunction gotFile(file) {\n  var img = createImg(file.data).hide();\n  // Draw the image onto the canvas\n  image(img, 0, 0, width, height);\n}\n</code></div>",
                 ],
-                alt:
-                  "Canvas turns into whatever image is dragged/dropped onto it.",
+                alt: "Canvas turns into whatever image is dragged/dropped onto it.",
                 class: "p5.Element",
                 module: "DOM",
                 submodule: "DOM",
@@ -7399,8 +7349,7 @@
                 example: [
                   "\n<div class='norender'><code>\nvar bg;\nfunction setup() {\n  bg = createCanvas(100, 100);\n  bg.background(0);\n  image(bg, 0, 0);\n  bg.remove();\n}\n</code></div>\n\n<div><code>\nvar bg;\nfunction setup() {\n  pixelDensity(1);\n  createCanvas(100, 100);\n  stroke(255);\n  fill(0);\n\n  // create and draw the background image\n  bg = createGraphics(100, 100);\n  bg.background(200);\n  bg.ellipse(50, 50, 80, 80);\n}\nfunction draw() {\n  var t = millis() / 1000;\n  // draw the background\n  if (bg) {\n    image(bg, frameCount % 100, 0);\n    image(bg, frameCount % 100 - 100, 0);\n  }\n  // draw the foreground\n  var p = p5.Vector.fromAngle(t, 35).add(50, 50);\n  ellipse(p.x, p.y, 30);\n}\nfunction mouseClicked() {\n  // remove the background\n  if (bg) {\n    bg.remove();\n    bg = null;\n  }\n}\n</code></div>",
                 ],
-                alt:
-                  "no image\na multi-colored circle moving back and forth over a scrolling background.",
+                alt: "no image\na multi-colored circle moving back and forth over a scrolling background.",
                 class: "p5.Graphics",
                 module: "Rendering",
                 submodule: "Rendering",
@@ -7479,8 +7428,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 50);\n  background(153);\n  line(0, 0, width, height);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "Black line extending from top-left of canvas to bottom right.",
+                alt: "Black line extending from top-left of canvas to bottom right.",
                 class: "p5",
                 module: "Rendering",
                 submodule: "Rendering",
@@ -7569,8 +7517,7 @@
                 example: [
                   "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(100, 100);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width / 2, pg.height / 2, 50, 50);\n  image(pg, 50, 50);\n  image(pg, 0, 0, 50, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "4 grey squares alternating light and dark grey. White quarter circle mid-left.",
+                alt: "4 grey squares alternating light and dark grey. White quarter circle mid-left.",
                 class: "p5",
                 module: "Rendering",
                 submodule: "Rendering",
@@ -7593,8 +7540,7 @@
                 example: [
                   "\n<div>\n<code>\nblendMode(LIGHTEST);\nstrokeWeight(30);\nstroke(80, 150, 255);\nline(25, 25, 75, 75);\nstroke(255, 50, 50);\nline(75, 25, 25, 75);\n</code>\n</div>\n<div>\n<code>\nblendMode(MULTIPLY);\nstrokeWeight(30);\nstroke(80, 150, 255);\nline(25, 25, 75, 75);\nstroke(255, 50, 50);\nline(75, 25, 25, 75);\n</code>\n</div>",
                 ],
-                alt:
-                  "translucent image thick red & blue diagonal rounded lines intersecting center\nThick red & blue diagonal rounded lines intersecting center. dark at overlap",
+                alt: "translucent image thick red & blue diagonal rounded lines intersecting center\nThick red & blue diagonal rounded lines intersecting center. dark at overlap",
                 class: "p5",
                 module: "Rendering",
                 submodule: "Rendering",
@@ -7617,8 +7563,7 @@
                 example: [
                   "\n<div><code>\nfunction setup() {\n  createCanvas(100, 100);\n  background(200);\n  noLoop();\n}\n\nfunction draw() {\n  line(10, 10, 90, 90);\n}\n</code></div>\n\n<div><code>\nvar x = 0;\nfunction setup() {\n  createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(204);\n  x = x + 0.1;\n  if (x > width) {\n    x = 0;\n  }\n  line(x, 0, x, height);\n}\n\nfunction mousePressed() {\n  noLoop();\n}\n\nfunction mouseReleased() {\n  loop();\n}\n</code></div>",
                 ],
-                alt:
-                  "113 pixel long line extending from top-left to bottom right of canvas.\nhorizontal line moves slowly from left. Loops but stops on mouse press.",
+                alt: "113 pixel long line extending from top-left to bottom right of canvas.\nhorizontal line moves slowly from left. Loops but stops on mouse press.",
                 class: "p5",
                 module: "Structure",
                 submodule: "Structure",
@@ -7633,8 +7578,7 @@
                 example: [
                   "\n<div><code>\nvar x = 0;\nfunction setup() {\n  createCanvas(100, 100);\n  noLoop();\n}\n\nfunction draw() {\n  background(204);\n  x = x + 0.1;\n  if (x > width) {\n    x = 0;\n  }\n  line(x, 0, x, height);\n}\n\nfunction mousePressed() {\n  loop();\n}\n\nfunction mouseReleased() {\n  noLoop();\n}\n</code></div>",
                 ],
-                alt:
-                  "horizontal line moves slowly from left. Loops but stops on mouse press.",
+                alt: "horizontal line moves slowly from left. Loops but stops on mouse press.",
                 class: "p5",
                 module: "Structure",
                 submodule: "Structure",
@@ -7649,8 +7593,7 @@
                 example: [
                   "\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\ntranslate(50, 0);\nellipse(0, 50, 33, 33); // Middle circle\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33); // Left-middle circle\n\npush(); // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33); // Right-middle circle\npop(); // Restore previous state\n\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>",
                 ],
-                alt:
-                  "Gold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.",
+                alt: "Gold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.",
                 class: "p5",
                 module: "Structure",
                 submodule: "Structure",
@@ -7665,8 +7608,7 @@
                 example: [
                   "\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\ntranslate(50, 0);\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(0, 50, 33, 33); // Middle circle\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33); // Left-middle circle\n\npush(); // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33); // Right-middle circle\npop(); // Restore previous state\n\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>",
                 ],
-                alt:
-                  "Gold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.",
+                alt: "Gold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.",
                 class: "p5",
                 module: "Structure",
                 submodule: "Structure",
@@ -7690,8 +7632,7 @@
                 example: [
                   "\n <div><code>\n var x = 0;\nfunction setup() {\n   createCanvas(100, 100);\n   noLoop();\n }\nfunction draw() {\n   background(204);\n   line(x, 0, x, height);\n }\nfunction mousePressed() {\n   x += 1;\n   redraw();\n }\n </code></div>\n<div class='norender'><code>\n var x = 0;\nfunction setup() {\n   createCanvas(100, 100);\n   noLoop();\n }\nfunction draw() {\n   background(204);\n   x += 1;\n   line(x, 0, x, height);\n }\nfunction mousePressed() {\n   redraw(5);\n }\n </code></div>",
                 ],
-                alt:
-                  "black line on far left of canvas\n black line on far left of canvas",
+                alt: "black line on far left of canvas\n black line on far left of canvas",
                 class: "p5",
                 module: "Structure",
                 submodule: "Structure",
@@ -7745,8 +7686,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  frameRate(10);\n  rectMode(CENTER);\n}\n\nfunction draw() {\n  var step = frameCount % 20;\n  background(200);\n  // Equivalent to translate(x, y);\n  applyMatrix(1, 0, 0, 1, 40 + step, 50);\n  rect(0, 0, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  frameRate(10);\n  rectMode(CENTER);\n}\n\nfunction draw() {\n  var step = frameCount % 20;\n  background(200);\n  translate(50, 50);\n  // Equivalent to scale(x, y);\n  applyMatrix(1 / step, 0, 0, 1 / step, 0, 0);\n  rect(0, 0, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  frameRate(10);\n  rectMode(CENTER);\n}\n\nfunction draw() {\n  var step = frameCount % 20;\n  var angle = map(step, 0, 20, 0, TWO_PI);\n  var cos_a = cos(angle);\n  var sin_a = sin(angle);\n  background(200);\n  translate(50, 50);\n  // Equivalent to rotate(angle);\n  applyMatrix(cos_a, sin_a, -sin_a, cos_a, 0, 0);\n  rect(0, 0, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  frameRate(10);\n  rectMode(CENTER);\n}\n\nfunction draw() {\n  var step = frameCount % 20;\n  var angle = map(step, 0, 20, -PI / 4, PI / 4);\n  background(200);\n  translate(50, 50);\n  // equivalent to shearX(angle);\n  var shear_factor = 1 / tan(PI / 2 - angle);\n  applyMatrix(1, 0, shear_factor, 1, 0, 0);\n  rect(0, 0, 50, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "A rectangle translating to the right\nA rectangle shrinking to the center\nA rectangle rotating clockwise about the center\nA rectangle shearing",
+                alt: "A rectangle translating to the right\nA rectangle shrinking to the center\nA rectangle rotating clockwise about the center\nA rectangle shearing",
                 class: "p5",
                 module: "Transform",
                 submodule: "Transform",
@@ -7762,8 +7702,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(50, 50);\napplyMatrix(0.5, 0.5, -0.5, 0.5, 0, 0);\nrect(0, 0, 20, 20);\n// Note that the translate is also reset.\nresetMatrix();\nrect(0, 0, 20, 20);\n</code>\n</div>",
                 ],
-                alt:
-                  "A rotated retangle in the center with another at the top left corner",
+                alt: "A rotated retangle in the center with another at the top left corner",
                 class: "p5",
                 module: "Transform",
                 submodule: "Transform",
@@ -7793,8 +7732,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(width / 2, height / 2);\nrotate(PI / 3.0);\nrect(-26, -26, 52, 52);\n</code>\n</div>",
                 ],
-                alt:
-                  "white 52x52 rect with black outline at center rotated counter 45 degrees",
+                alt: "white 52x52 rect with black outline at center rotated counter 45 degrees",
                 class: "p5",
                 module: "Transform",
                 submodule: "Transform",
@@ -7879,8 +7817,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(width / 2, height / 2);\nrotate(PI / 3.0);\nrect(-26, -26, 52, 52);\n</code>\n</div>\n\n<div>\n<code>\nrect(30, 20, 50, 50);\nscale(0.5, 1.3);\nrect(30, 20, 50, 50);\n</code>\n</div>",
                 ],
-                alt:
-                  "white 52x52 rect with black outline at center rotated counter 45 degrees\n2 white rects with black outline- 1 50x50 at center. other 25x65 bottom left",
+                alt: "white 52x52 rect with black outline at center rotated counter 45 degrees\n2 white rects with black outline- 1 50x50 at center. other 25x65 bottom left",
                 class: "p5",
                 module: "Transform",
                 submodule: "Transform",
@@ -7944,8 +7881,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(width / 4, height / 4);\nshearX(PI / 4.0);\nrect(0, 0, 30, 30);\n</code>\n</div>",
                 ],
-                alt:
-                  "white irregular quadrilateral with black outline at top middle.",
+                alt: "white irregular quadrilateral with black outline at top middle.",
                 class: "p5",
                 module: "Transform",
                 submodule: "Transform",
@@ -7969,8 +7905,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(width / 4, height / 4);\nshearY(PI / 4.0);\nrect(0, 0, 30, 30);\n</code>\n</div>",
                 ],
-                alt:
-                  "white irregular quadrilateral with black outline at middle bottom.",
+                alt: "white irregular quadrilateral with black outline at middle bottom.",
                 class: "p5",
                 module: "Transform",
                 submodule: "Transform",
@@ -7986,8 +7921,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(30, 20);\nrect(0, 0, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\nrect(0, 0, 55, 55); // Draw rect at original 0,0\ntranslate(30, 20);\nrect(0, 0, 55, 55); // Draw rect at new 0,0\ntranslate(14, 14);\nrect(0, 0, 55, 55); // Draw rect at new 0,0\n</code>\n</div>\n\n\n<div>\n<code>\nfunction draw() {\n  background(200);\n  rectMode(CENTER);\n  translate(width / 2, height / 2);\n  translate(p5.Vector.fromAngle(millis() / 1000, 40));\n  rect(0, 0, 20, 20);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "white 55x55 rect with black outline at center right.\n3 white 55x55 rects with black outlines at top-l, center-r and bottom-r.\na 20x20 white rect moving in a circle around the canvas",
+                alt: "white 55x55 rect with black outline at center right.\n3 white 55x55 rects with black outlines at top-l, center-r and bottom-r.\na 20x20 white rect moving in a circle around the canvas",
                 class: "p5",
                 module: "Transform",
                 submodule: "Transform",
@@ -8039,8 +7973,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(50, 50);\nstroke(255, 0, 0);\nbeginShape();\n// Exterior part of shape, clockwise winding\nvertex(-40, -40);\nvertex(40, -40);\nvertex(40, 40);\nvertex(-40, 40);\n// Interior part of shape, counter-clockwise winding\nbeginContour();\nvertex(-20, -20);\nvertex(-20, 20);\nvertex(20, 20);\nvertex(20, -20);\nendContour();\nendShape(CLOSE);\n</code>\n</div>",
                 ],
-                alt:
-                  "white rect and smaller grey rect with red outlines in center of canvas.",
+                alt: "white rect and smaller grey rect with red outlines in center of canvas.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Vertex",
@@ -8065,8 +7998,7 @@
                 example: [
                   "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15);\nvertex(92, 50);\nvertex(57.5, 85);\nvertex(22, 50);\nvertex(57.5, 15);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUAD_STRIP);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 20);\nvertex(85, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>",
                 ],
-                alt:
-                  "white square-shape with black outline in middle-right of canvas.\n4 black points in a square shape in middle-right of canvas.\n2 horizontal black lines. In the top-right and bottom-right of canvas.\n3 line shape with horizontal on top, vertical in middle and horizontal bottom.\nsquare line shape in middle-right of canvas.\n2 white triangle shapes mid-right canvas. left one pointing up and right down.\n5 horizontal interlocking and alternating white triangles in mid-right canvas.\n4 interlocking white triangles in 45 degree rotated square-shape.\n2 white rectangle shapes in mid-right canvas. Both 20x55.\n3 side-by-side white rectangles center rect is smaller in mid-right canvas.\nThick white l-shape with black outline mid-top-left of canvas.",
+                alt: "white square-shape with black outline in middle-right of canvas.\n4 black points in a square shape in middle-right of canvas.\n2 horizontal black lines. In the top-right and bottom-right of canvas.\n3 line shape with horizontal on top, vertical in middle and horizontal bottom.\nsquare line shape in middle-right of canvas.\n2 white triangle shapes mid-right canvas. left one pointing up and right down.\n5 horizontal interlocking and alternating white triangles in mid-right canvas.\n4 interlocking white triangles in 45 degree rotated square-shape.\n2 white rectangle shapes in mid-right canvas. Both 20x55.\n3 side-by-side white rectangles center rect is smaller in mid-right canvas.\nThick white l-shape with black outline mid-top-left of canvas.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Vertex",
@@ -8118,8 +8050,7 @@
                 example: [
                   "\n<div>\n<code>\nstrokeWeight(5);\npoint(30, 20);\npoint(80, 20);\npoint(80, 75);\npoint(30, 75);\n\nstrokeWeight(1);\nnoFill();\nbeginShape();\nvertex(30, 20);\nbezierVertex(80, 20, 80, 75, 30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nstrokeWeight(5);\npoint(30, 20);\npoint(80, 20);\npoint(80, 75);\npoint(30, 75);\n\nstroke(244, 122, 158);\npoint(50, 80);\npoint(60, 25);\npoint(30, 20);\n\nstroke(0);\nstrokeWeight(1);\nbeginShape();\nvertex(30, 20);\nbezierVertex(80, 20, 80, 75, 30, 75);\nbezierVertex(50, 80, 60, 25, 30, 20);\nendShape();\n</code>\n</div>",
                 ],
-                alt:
-                  "crescent-shaped line in middle of canvas. Points facing left.\nwhite crescent shape in middle of canvas. Points facing left.",
+                alt: "crescent-shaped line in middle of canvas. Points facing left.\nwhite crescent shape in middle of canvas. Points facing left.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Vertex",
@@ -8147,8 +8078,7 @@
                 example: [
                   "\n<div>\n<code>\nstrokeWeight(5);\npoint(84, 91);\npoint(68, 19);\npoint(21, 17);\npoint(32, 91);\nstrokeWeight(1);\n\nnoFill();\nbeginShape();\ncurveVertex(84, 91);\ncurveVertex(84, 91);\ncurveVertex(68, 19);\ncurveVertex(21, 17);\ncurveVertex(32, 91);\ncurveVertex(32, 91);\nendShape();\n</code>\n</div>",
                 ],
-                alt:
-                  "Upside-down u-shape line, mid canvas. left point extends beyond canvas view.",
+                alt: "Upside-down u-shape line, mid canvas. left point extends beyond canvas view.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Vertex",
@@ -8164,8 +8094,7 @@
                 example: [
                   "\n<div>\n<code>\ntranslate(50, 50);\nstroke(255, 0, 0);\nbeginShape();\n// Exterior part of shape, clockwise winding\nvertex(-40, -40);\nvertex(40, -40);\nvertex(40, 40);\nvertex(-40, 40);\n// Interior part of shape, counter-clockwise winding\nbeginContour();\nvertex(-20, -20);\nvertex(-20, 20);\nvertex(20, 20);\nvertex(20, -20);\nendContour();\nendShape(CLOSE);\n</code>\n</div>",
                 ],
-                alt:
-                  "white rect and smaller grey rect with red outlines in center of canvas.",
+                alt: "white rect and smaller grey rect with red outlines in center of canvas.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Vertex",
@@ -8189,8 +8118,7 @@
                 example: [
                   "\n<div>\n<code>\nnoFill();\n\nbeginShape();\nvertex(20, 20);\nvertex(45, 20);\nvertex(45, 80);\nendShape(CLOSE);\n\nbeginShape();\nvertex(50, 20);\nvertex(75, 20);\nvertex(75, 80);\nendShape();\n</code>\n</div>",
                 ],
-                alt:
-                  "Triangle line shape with smallest interior angle on bottom and upside-down L.",
+                alt: "Triangle line shape with smallest interior angle on bottom and upside-down L.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Vertex",
@@ -8228,8 +8156,7 @@
                 example: [
                   "\n<div>\n<code>\nstrokeWeight(5);\npoint(20, 20);\npoint(80, 20);\npoint(50, 50);\n\nnoFill();\nstrokeWeight(1);\nbeginShape();\nvertex(20, 20);\nquadraticVertex(80, 20, 50, 50);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nstrokeWeight(5);\npoint(20, 20);\npoint(80, 20);\npoint(50, 50);\n\npoint(20, 80);\npoint(80, 80);\npoint(80, 60);\n\nnoFill();\nstrokeWeight(1);\nbeginShape();\nvertex(20, 20);\nquadraticVertex(80, 20, 50, 50);\nquadraticVertex(20, 80, 80, 80);\nvertex(80, 60);\nendShape();\n</code>\n</div>",
                 ],
-                alt:
-                  "arched-shaped black line with 4 pixel thick stroke weight.\nbackwards s-shaped black line with 4 pixel thick stroke weight.",
+                alt: "arched-shaped black line with 4 pixel thick stroke weight.\nbackwards s-shaped black line with 4 pixel thick stroke weight.",
                 class: "p5",
                 module: "Shape",
                 submodule: "Vertex",
@@ -8941,8 +8868,7 @@
                 name: "rotationX",
                 type: "Number",
                 readonly: "",
-                alt:
-                  "red horizontal line right, green vertical line bottom. black background.",
+                alt: "red horizontal line right, green vertical line bottom. black background.",
                 class: "p5",
                 module: "Events",
                 submodule: "Acceleration",
@@ -8959,8 +8885,7 @@
                 name: "rotationY",
                 type: "Number",
                 readonly: "",
-                alt:
-                  "red horizontal line right, green vertical line bottom. black background.",
+                alt: "red horizontal line right, green vertical line bottom. black background.",
                 class: "p5",
                 module: "Events",
                 submodule: "Acceleration",
@@ -8977,8 +8902,7 @@
                 name: "rotationZ",
                 type: "Number",
                 readonly: "",
-                alt:
-                  "red horizontal line right, green vertical line bottom. black background.",
+                alt: "red horizontal line right, green vertical line bottom. black background.",
                 class: "p5",
                 module: "Events",
                 submodule: "Acceleration",
@@ -9091,8 +9015,7 @@
                 example: [
                   '\n<div class="norender">\n<code>\n// Run this example on a mobile device\n// Move the device around\n// to change the value.\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction deviceMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "50x50 black rect in center of canvas. turns white on mobile when device moves",
+                alt: "50x50 black rect in center of canvas. turns white on mobile when device moves",
                 class: "p5",
                 module: "Events",
                 submodule: "Acceleration",
@@ -9107,8 +9030,7 @@
                 example: [
                   "\n<div class=\"norender\">\n<code>\n// Run this example on a mobile device\n// Rotate the device by 90 degrees\n// to change the value.\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction deviceTurned() {\n  if (value === 0) {\n    value = 255;\n  } else if (value === 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n<div>\n<code>\n// Run this example on a mobile device\n// Rotate the device by 90 degrees in the\n// X-axis to change the value.\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction deviceTurned() {\n  if (turnAxis === 'X') {\n    if (value === 0) {\n      value = 255;\n    } else if (value === 255) {\n      value = 0;\n    }\n  }\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "50x50 black rect in center of canvas. turns white on mobile when device turns\n50x50 black rect in center of canvas. turns white on mobile when x-axis turns",
+                alt: "50x50 black rect in center of canvas. turns white on mobile when device turns\n50x50 black rect in center of canvas. turns white on mobile when x-axis turns",
                 class: "p5",
                 module: "Events",
                 submodule: "Acceleration",
@@ -9123,8 +9045,7 @@
                 example: [
                   '\n<div class="norender">\n<code>\n// Run this example on a mobile device\n// Shake the device to change the value.\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction deviceShaken() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "50x50 black rect in center of canvas. turns white on mobile when device shakes",
+                alt: "50x50 black rect in center of canvas. turns white on mobile when device shakes",
                 class: "p5",
                 module: "Events",
                 submodule: "Acceleration",
@@ -9158,8 +9079,7 @@
                 example: [
                   "\n<div><code>\n// Click any key to display it!\n// (Not Guaranteed to be Case Sensitive)\nfunction setup() {\n  fill(245, 123, 158);\n  textSize(50);\n}\n\nfunction draw() {\n  background(200);\n  text(key, 33, 65); // Display last key pressed.\n}\n</code></div>",
                 ],
-                alt:
-                  "canvas displays any key value that is pressed in pink font.",
+                alt: "canvas displays any key value that is pressed in pink font.",
                 class: "p5",
                 module: "Events",
                 submodule: "Keyboard",
@@ -9176,8 +9096,7 @@
                 example: [
                   "\n<div><code>\nvar fillVal = 126;\nfunction draw() {\n  fill(fillVal);\n  rect(25, 25, 50, 50);\n}\n\nfunction keyPressed() {\n  if (keyCode === UP_ARROW) {\n    fillVal = 255;\n  } else if (keyCode === DOWN_ARROW) {\n    fillVal = 0;\n  }\n  return false; // prevent default\n}\n</code></div>",
                 ],
-                alt:
-                  "Grey rect center. turns white when up arrow pressed and black when down",
+                alt: "Grey rect center. turns white when up arrow pressed and black when down",
                 class: "p5",
                 module: "Events",
                 submodule: "Keyboard",
@@ -9192,8 +9111,7 @@
                 example: [
                   '\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (keyCode === LEFT_ARROW) {\n    value = 255;\n  } else if (keyCode === RIGHT_ARROW) {\n    value = 0;\n  }\n}\n</code>\n</div>\n<div class="norender">\n<code>\nfunction keyPressed() {\n  // Do something\n  return false; // prevent any default behaviour\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "black rect center. turns white when key pressed and black when released\nblack rect center. turns white when left arrow pressed and black when right.",
+                alt: "black rect center. turns white when key pressed and black when released\nblack rect center. turns white when left arrow pressed and black when right.",
                 class: "p5",
                 module: "Events",
                 submodule: "Keyboard",
@@ -9208,8 +9126,7 @@
                 example: [
                   "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyReleased() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n  return false; // prevent any default behavior\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "black rect center. turns white when key pressed and black when pressed again",
+                alt: "black rect center. turns white when key pressed and black when pressed again",
                 class: "p5",
                 module: "Events",
                 submodule: "Keyboard",
@@ -9224,8 +9141,7 @@
                 example: [
                   "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyTyped() {\n  if (key === 'a') {\n    value = 255;\n  } else if (key === 'b') {\n    value = 0;\n  }\n  // uncomment to prevent any default behavior\n  // return false;\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "black rect center. turns white when 'a' key typed and black when 'b' pressed",
+                alt: "black rect center. turns white when 'a' key typed and black when 'b' pressed",
                 class: "p5",
                 module: "Events",
                 submodule: "Keyboard",
@@ -9260,8 +9176,7 @@
                 example: [
                   "\n<div><code>\nvar x = 100;\nvar y = 100;\n\nfunction setup() {\n  createCanvas(512, 512);\n}\n\nfunction draw() {\n  if (keyIsDown(LEFT_ARROW)) {\n    x -= 5;\n  }\n\n  if (keyIsDown(RIGHT_ARROW)) {\n    x += 5;\n  }\n\n  if (keyIsDown(UP_ARROW)) {\n    y -= 5;\n  }\n\n  if (keyIsDown(DOWN_ARROW)) {\n    y += 5;\n  }\n\n  clear();\n  fill(255, 0, 0);\n  ellipse(x, y, 50, 50);\n}\n</code></div>",
                 ],
-                alt:
-                  "50x50 red ellipse moves left, right, up and down with arrow presses.",
+                alt: "50x50 red ellipse moves left, right, up and down with arrow presses.",
                 class: "p5",
                 module: "Events",
                 submodule: "Keyboard",
@@ -9278,8 +9193,7 @@
                 example: [
                   "\n<div>\n<code>\n// Move the mouse across the canvas\nfunction draw() {\n  background(244, 248, 252);\n  line(mouseX, 0, mouseX, 100);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "horizontal black line moves left and right with mouse x-position",
+                alt: "horizontal black line moves left and right with mouse x-position",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9296,8 +9210,7 @@
                 example: [
                   "\n<div>\n<code>\n// Move the mouse across the canvas\nfunction draw() {\n  background(244, 248, 252);\n  line(0, mouseY, 100, mouseY);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "vertical black line moves up and down with mouse y-position",
+                alt: "vertical black line moves up and down with mouse y-position",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9314,8 +9227,7 @@
                 example: [
                   "\n<div>\n<code>\n// Move the mouse across the canvas to leave a trail\nfunction setup() {\n  //slow down the frameRate to make it more visible\n  frameRate(10);\n}\n\nfunction draw() {\n  background(244, 248, 252);\n  line(mouseX, mouseY, pmouseX, pmouseY);\n  print(pmouseX + ' -> ' + mouseX);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "line trail is created from cursor movements. faster movement make longer line.",
+                alt: "line trail is created from cursor movements. faster movement make longer line.",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9332,8 +9244,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  //draw a square only if the mouse is not moving\n  if (mouseY === pmouseY && mouseX === pmouseX) {\n    rect(20, 20, 60, 60);\n  }\n\n  print(pmouseY + ' -> ' + mouseY);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "60x60 black rect center, fuschia background. rect flickers on mouse movement",
+                alt: "60x60 black rect center, fuschia background. rect flickers on mouse movement",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9350,8 +9261,7 @@
                 example: [
                   "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the horizontal mouse position\n  //rela                    tive to the window\n  myCanvas.position(winMouseX + 1, windowHeight / 2);\n\n  //the y of the square is relative to the canvas\n  rect(20, mouseY, 60, 60);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "60x60 black rect y moves with mouse y and fuschia canvas moves with mouse x",
+                alt: "60x60 black rect y moves with mouse y and fuschia canvas moves with mouse x",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9368,8 +9278,7 @@
                 example: [
                   "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the vertical mouse position\n  //rel                    ative to the window\n  myCanvas.position(windowWidth / 2, winMouseY + 1);\n\n  //the x of the square is relative to the canvas\n  rect(mouseX, 20, 60, 60);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "60x60 black rect x moves with mouse x and fuschia canvas y moves with mouse y",
+                alt: "60x60 black rect x moves with mouse x and fuschia canvas y moves with mouse y",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9386,8 +9295,7 @@
                 example: [
                   "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current x position is the horizontal mouse speed\n  var speed = abs(winMouseX - pwinMouseX);\n  //change the size of the circle\n  //according to the horizontal speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "fuschia ellipse moves with mouse x and y. Grows and shrinks with mouse speed",
+                alt: "fuschia ellipse moves with mouse x and y. Grows and shrinks with mouse speed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9404,8 +9312,7 @@
                 example: [
                   "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current y position is the vertical mouse speed\n  var speed = abs(winMouseY - pwinMouseY);\n  //change the size of the circle\n  //according to the vertical speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "fuschia ellipse moves with mouse x and y. Grows and shrinks with mouse speed",
+                alt: "fuschia ellipse moves with mouse x and y. Grows and shrinks with mouse speed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9422,8 +9329,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed) {\n    if (mouseButton === LEFT) {\n      ellipse(50, 50, 50, 50);\n    }\n    if (mouseButton === RIGHT) {\n      rect(25, 25, 50, 50);\n    }\n    if (mouseButton === CENTER) {\n      triangle(23, 75, 50, 20, 78, 75);\n    }\n  }\n\n  print(mouseButton);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "50x50 black ellipse appears on center of fuschia canvas on mouse click/press.",
+                alt: "50x50 black ellipse appears on center of fuschia canvas on mouse click/press.",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9440,8 +9346,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed) {\n    ellipse(50, 50, 50, 50);\n  } else {\n    rect(25, 25, 50, 50);\n  }\n\n  print(mouseIsPressed);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "black 50x50 rect becomes ellipse with mouse click/press. fuschia background.",
+                alt: "black 50x50 rect becomes ellipse with mouse click/press. fuschia background.",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9456,8 +9361,7 @@
                 example: [
                   '\n<div>\n<code>\n// Move the mouse across the page\n// to change its value\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction mouseMoved() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "black 50x50 rect becomes lighter with mouse movements until white then resets\nno image displayed",
+                alt: "black 50x50 rect becomes lighter with mouse movements until white then resets\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9472,8 +9376,7 @@
                 example: [
                   '\n<div>\n<code>\n// Drag the mouse across the page\n// to change its value\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseDragged() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction mouseDragged() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "black 50x50 rect turns lighter with mouse click and drag until white, resets\nno image displayed",
+                alt: "black 50x50 rect turns lighter with mouse click and drag until white, resets\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9488,8 +9391,7 @@
                 example: [
                   '\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mousePressed() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction mousePressed() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "black 50x50 rect turns white with mouse click/press.\nno image displayed",
+                alt: "black 50x50 rect turns white with mouse click/press.\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9504,8 +9406,7 @@
                 example: [
                   '\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\n// after the mouse has been clicked\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseReleased() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction mouseReleased() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "black 50x50 rect turns white with mouse click/press.\nno image displayed",
+                alt: "black 50x50 rect turns white with mouse click/press.\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9520,8 +9421,7 @@
                 example: [
                   '\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\n// after the mouse has been clicked\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\n\nfunction mouseClicked() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction mouseClicked() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "black 50x50 rect turns white with mouse click/press.\nno image displayed",
+                alt: "black 50x50 rect turns white with mouse click/press.\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9536,8 +9436,7 @@
                 example: [
                   '\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\n// after the mouse has been double clicked\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\n\nfunction doubleClicked() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction doubleClicked() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "black 50x50 rect turns white with mouse doubleClick/press.\nno image displayed",
+                alt: "black 50x50 rect turns white with mouse doubleClick/press.\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9552,8 +9451,7 @@
                 example: [
                   "\n<div>\n<code>\nvar pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  print(event.delta);\n  //move the square according to the vertical scroll amount\n  pos += event.delta;\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "black 50x50 rect moves up and down with vertical scroll. fuschia background",
+                alt: "black 50x50 rect moves up and down with vertical scroll. fuschia background",
                 class: "p5",
                 module: "Events",
                 submodule: "Mouse",
@@ -9581,8 +9479,7 @@
                 example: [
                   '\n<div>\n<code>\n// Touch within the image to change\n// the value of the rectangle\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction touchStarted() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction touchStarted() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "50x50 black rect turns white with touch event.\nno image displayed",
+                alt: "50x50 black rect turns white with touch event.\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Touch",
@@ -9597,8 +9494,7 @@
                 example: [
                   '\n<div>\n<code>\n// Move your finger across the page\n// to change its value\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction touchMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction touchMoved() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "50x50 black rect turns lighter with touch until white. resets\nno image displayed",
+                alt: "50x50 black rect turns lighter with touch until white. resets\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Touch",
@@ -9613,8 +9509,7 @@
                 example: [
                   '\n<div>\n<code>\n// Release touch within the image to\n// change the value of the rectangle\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction touchEnded() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class="norender">\n<code>\nfunction touchEnded() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>',
                 ],
-                alt:
-                  "50x50 black rect turns white with touch.\nno image displayed",
+                alt: "50x50 black rect turns white with touch.\nno image displayed",
                 class: "p5",
                 module: "Events",
                 submodule: "Touch",
@@ -9662,8 +9557,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img = createImage(66, 66);\nimg.loadPixels();\nfor (var i = 0; i < img.width; i++) {\n  for (var j = 0; j < img.height; j++) {\n    img.set(i, j, color(0, 90, 102));\n  }\n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>\n\n<div>\n<code>\nvar img = createImage(66, 66);\nimg.loadPixels();\nfor (var i = 0; i < img.width; i++) {\n  for (var j = 0; j < img.height; j++) {\n    img.set(i, j, color(0, 90, 102, (i % img.width) * 2));\n  }\n}\nimg.updatePixels();\nimage(img, 17, 17);\nimage(img, 34, 34);\n</code>\n</div>\n\n<div>\n<code>\nvar pink = color(255, 102, 204);\nvar img = createImage(66, 66);\nimg.loadPixels();\nvar d = pixelDensity();\nvar halfImage = 4 * (width * d) * (height / 2 * d);\nfor (var i = 0; i < halfImage; i += 4) {\n  img.pixels[i] = red(pink);\n  img.pixels[i + 1] = green(pink);\n  img.pixels[i + 2] = blue(pink);\n  img.pixels[i + 3] = alpha(pink);\n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>",
                 ],
-                alt:
-                  "66x66 dark turquoise rect in center of canvas.\n2 gradated dark turquoise rects fade left. 1 center 1 bottom right of canvas\nno image displayed",
+                alt: "66x66 dark turquoise rect in center of canvas.\n2 gradated dark turquoise rects fade left. 1 center 1 bottom right of canvas\nno image displayed",
                 class: "p5",
                 module: "Image",
                 submodule: "Image",
@@ -9678,8 +9572,7 @@
                 example: [
                   "\n <div class='norender notest'><code>\n function setup() {\n var c = createCanvas(100, 100);\n background(255, 0, 0);\n saveCanvas(c, 'myCanvas', 'jpg');\n }\n </code></div>\n <div class='norender notest'><code>\n // note that this example has the same result as above\n // if no canvas is specified, defaults to main canvas\n function setup() {\n var c = createCanvas(100, 100);\n background(255, 0, 0);\n saveCanvas('myCanvas', 'jpg');\n\n // all of the following are valid\n saveCanvas(c, 'myCanvas', 'jpg');\n saveCanvas(c, 'myCanvas.jpg');\n saveCanvas(c, 'myCanvas');\n saveCanvas(c);\n saveCanvas('myCanvas', 'png');\n saveCanvas('myCanvas');\n saveCanvas();\n }\n </code></div>",
                 ],
-                alt:
-                  "no image displayed\n no image displayed\n no image displayed",
+                alt: "no image displayed\n no image displayed\n no image displayed",
                 class: "p5",
                 module: "Image",
                 submodule: "Image",
@@ -9806,8 +9699,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/laDefense.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  // here we use a callback to display the image after loading\n  loadImage('assets/laDefense.jpg', function(img) {\n    image(img, 0, 0);\n  });\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "image of the underside of a white umbrella and grided ceililng above\nimage of the underside of a white umbrella and grided ceililng above",
+                alt: "image of the underside of a white umbrella and grided ceililng above\nimage of the underside of a white umbrella and grided ceililng above",
                 class: "p5",
                 module: "Image",
                 submodule: "Loading & Displaying",
@@ -9822,8 +9714,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/laDefense.jpg');\n}\nfunction setup() {\n  // Top-left corner of the img is at (0, 0)\n  // Width and height are the img's original width and height\n  image(img, 0, 0);\n}\n</code>\n</div>\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/laDefense.jpg');\n}\nfunction setup() {\n  background(50);\n  // Top-left corner of the img is at (10, 10)\n  // Width and height are 50 x 50\n  image(img, 10, 10, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  // Here, we use a callback to display the image after loading\n  loadImage('assets/laDefense.jpg', function(img) {\n    image(img, 0, 0);\n  });\n}\n</code>\n</div>\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/gradient.png');\n}\nfunction setup() {\n  // 1. Background image\n  // Top-left corner of the img is at (0, 0)\n  // Width and height are the img's original width and height, 100 x 100\n  image(img, 0, 0);\n  // 2. Top right image\n  // Top-left corner of destination rectangle is at (50, 0)\n  // Destination rectangle width and height are 40 x 20\n  // The next parameters are relative to the source image:\n  // - Starting at position (50, 50) on the source image, capture a 50 x 50\n  // subsection\n  // - Draw this subsection to fill the dimensions of the destination rectangle\n  image(img, 50, 0, 40, 20, 50, 50, 50, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "image of the underside of a white umbrella and gridded ceiling above\nimage of the underside of a white umbrella and gridded ceiling above",
+                alt: "image of the underside of a white umbrella and gridded ceiling above\nimage of the underside of a white umbrella and gridded ceiling above",
                 class: "p5",
                 module: "Image",
                 submodule: "Loading & Displaying",
@@ -9934,8 +9825,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/laDefense.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  tint(0, 153, 204); // Tint blue\n  image(img, 50, 0);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/laDefense.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  tint(0, 153, 204, 126); // Tint blue and set transparency\n  image(img, 50, 0);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/laDefense.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  tint(255, 126); // Apply transparency without changing color\n  image(img, 50, 0);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "2 side by side images of umbrella and ceiling, one image with blue tint\nImages of umbrella and ceiling, one half of image with blue tint\n2 side by side images of umbrella and ceiling, one image translucent",
+                alt: "2 side by side images of umbrella and ceiling, one image with blue tint\nImages of umbrella and ceiling, one half of image with blue tint\n2 side by side images of umbrella and ceiling, one image translucent",
                 class: "p5",
                 module: "Image",
                 submodule: "Loading & Displaying",
@@ -10028,8 +9918,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  tint(0, 153, 204); // Tint blue\n  image(img, 0, 0);\n  noTint(); // Disable tint\n  image(img, 50, 0);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "2 side by side images of bricks, left image with blue tint",
+                alt: "2 side by side images of bricks, left image with blue tint",
                 class: "p5",
                 module: "Image",
                 submodule: "Loading & Displaying",
@@ -10051,8 +9940,7 @@
                 example: [
                   "\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  imageMode(CORNER);\n  image(img, 10, 10, 50, 50);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  imageMode(CORNERS);\n  image(img, 10, 10, 90, 40);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  imageMode(CENTER);\n  image(img, 50, 50, 80, 80);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "small square image of bricks\nhorizontal rectangle image of bricks\nlarge square image of bricks",
+                alt: "small square image of bricks\nhorizontal rectangle image of bricks\nlarge square image of bricks",
                 class: "p5",
                 module: "Image",
                 submodule: "Loading & Displaying",
@@ -10077,8 +9965,7 @@
                 example: [
                   "\n<div><code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\n\nfunction setup() {\n  createCanvas(100, 100);\n  image(img, 0, 0);\n  for (var i = 0; i < img.width; i++) {\n    var c = img.get(i, img.height / 2);\n    stroke(c);\n    line(i, height / 2, i, height);\n  }\n}\n</code></div>",
                 ],
-                alt:
-                  "rocky mountains in top and horizontal lines in corresponding colors in bottom.",
+                alt: "rocky mountains in top and horizontal lines in corresponding colors in bottom.",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10094,8 +9981,7 @@
                 example: [
                   "\n<div><code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\n\nfunction setup() {\n  createCanvas(100, 100);\n  image(img, 0, 0);\n  for (var i = 0; i < img.height; i++) {\n    var c = img.get(img.width / 2, i);\n    stroke(c);\n    line(0, i, width / 2, i);\n  }\n}\n</code></div>",
                 ],
-                alt:
-                  "rocky mountains on right and vertical lines in corresponding colors on left.",
+                alt: "rocky mountains on right and vertical lines in corresponding colors on left.",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10111,8 +9997,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img = createImage(66, 66);\nimg.loadPixels();\nfor (var i = 0; i < img.width; i++) {\n  for (var j = 0; j < img.height; j++) {\n    img.set(i, j, color(0, 90, 102));\n  }\n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>\n<div>\n<code>\nvar pink = color(255, 102, 204);\nvar img = createImage(66, 66);\nimg.loadPixels();\nfor (var i = 0; i < 4 * (width * height / 2); i += 4) {\n  img.pixels[i] = red(pink);\n  img.pixels[i + 1] = green(pink);\n  img.pixels[i + 2] = blue(pink);\n  img.pixels[i + 3] = alpha(pink);\n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>",
                 ],
-                alt:
-                  "66x66 turquoise rect in center of canvas\n66x66 pink rect in center of canvas",
+                alt: "66x66 turquoise rect in center of canvas\n66x66 pink rect in center of canvas",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10264,8 +10149,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img = createImage(66, 66);\nimg.loadPixels();\nfor (var i = 0; i < img.width; i++) {\n  for (var j = 0; j < img.height; j++) {\n    img.set(i, j, color(0, 90, 102, (i % img.width) * 2));\n  }\n}\nimg.updatePixels();\nimage(img, 17, 17);\nimage(img, 34, 34);\n</code>\n</div>",
                 ],
-                alt:
-                  "2 gradated dark turquoise rects fade left. 1 center 1 bottom right of canvas",
+                alt: "2 gradated dark turquoise rects fade left. 1 center 1 bottom right of canvas",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10307,8 +10191,7 @@
                 example: [
                   "\n<div><code>\nvar photo;\nvar bricks;\nvar x;\nvar y;\n\nfunction preload() {\n  photo = loadImage('assets/rockies.jpg');\n  bricks = loadImage('assets/bricks.jpg');\n}\n\nfunction setup() {\n  x = bricks.width / 2;\n  y = bricks.height / 2;\n  photo.copy(bricks, 0, 0, x, y, 0, 0, x, y);\n  image(photo, 0, 0);\n}\n</code></div>",
                 ],
-                alt:
-                  "image of rocky mountains and smaller image on top of bricks at top left",
+                alt: "image of rocky mountains and smaller image on top of bricks at top left",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10431,8 +10314,7 @@
                 example: [
                   "\n<div><code>\nvar photo, maskImage;\nfunction preload() {\n  photo = loadImage('assets/rockies.jpg');\n  maskImage = loadImage('assets/mask2.png');\n}\n\nfunction setup() {\n  createCanvas(100, 100);\n  photo.mask(maskImage);\n  image(photo, 0, 0);\n}\n</code></div>",
                 ],
-                alt:
-                  "image of rocky mountains with white at right\n\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
+                alt: "image of rocky mountains with white at right\n\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10461,8 +10343,7 @@
                 example: [
                   "\n<div><code>\nvar photo1;\nvar photo2;\n\nfunction preload() {\n  photo1 = loadImage('assets/rockies.jpg');\n  photo2 = loadImage('assets/rockies.jpg');\n}\n\nfunction setup() {\n  photo2.filter('gray');\n  image(photo1, 0, 0);\n  image(photo2, width / 2, 0);\n}\n</code></div>",
                 ],
-                alt:
-                  "2 images of rocky mountains left one in color, right in black and white",
+                alt: "2 images of rocky mountains left one in color, right in black and white",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10477,8 +10358,7 @@
                 example: [
                   "\n<div><code>\nvar mountains;\nvar bricks;\n\nfunction preload() {\n  mountains = loadImage('assets/rockies.jpg');\n  bricks = loadImage('assets/bricks_third.jpg');\n}\n\nfunction setup() {\n  mountains.blend(bricks, 0, 0, 33, 100, 67, 0, 33, 100, ADD);\n  image(mountains, 0, 0);\n  image(bricks, 0, 0);\n}\n</code></div>\n<div><code>\nvar mountains;\nvar bricks;\n\nfunction preload() {\n  mountains = loadImage('assets/rockies.jpg');\n  bricks = loadImage('assets/bricks_third.jpg');\n}\n\nfunction setup() {\n  mountains.blend(bricks, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST);\n  image(mountains, 0, 0);\n  image(bricks, 0, 0);\n}\n</code></div>\n<div><code>\nvar mountains;\nvar bricks;\n\nfunction preload() {\n  mountains = loadImage('assets/rockies.jpg');\n  bricks = loadImage('assets/bricks_third.jpg');\n}\n\nfunction setup() {\n  mountains.blend(bricks, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST);\n  image(mountains, 0, 0);\n  image(bricks, 0, 0);\n}\n</code></div>",
                 ],
-                alt:
-                  "image of rocky mountains. Brick images on left and right. Right overexposed\nimage of rockies. Brickwall images on left and right. Right mortar transparent\nimage of rockies. Brickwall images on left and right. Right translucent",
+                alt: "image of rocky mountains. Brick images on left and right. Right overexposed\nimage of rockies. Brickwall images on left and right. Right mortar transparent\nimage of rockies. Brickwall images on left and right. Right translucent",
                 class: "p5.Image",
                 module: "Image",
                 submodule: "Image",
@@ -10648,8 +10528,7 @@
                 example: [
                   "\n<div><code>\nvar img0;\nvar img1;\n\nfunction preload() {\n  img0 = loadImage('assets/rockies.jpg');\n  img1 = loadImage('assets/bricks_third.jpg');\n}\n\nfunction setup() {\n  background(img0);\n  image(img1, 0, 0);\n  blend(img1, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST);\n}\n</code></div>\n<div><code>\nvar img0;\nvar img1;\n\nfunction preload() {\n  img0 = loadImage('assets/rockies.jpg');\n  img1 = loadImage('assets/bricks_third.jpg');\n}\n\nfunction setup() {\n  background(img0);\n  image(img1, 0, 0);\n  blend(img1, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST);\n}\n</code></div>\n<div><code>\nvar img0;\nvar img1;\n\nfunction preload() {\n  img0 = loadImage('assets/rockies.jpg');\n  img1 = loadImage('assets/bricks_third.jpg');\n}\n\nfunction setup() {\n  background(img0);\n  image(img1, 0, 0);\n  blend(img1, 0, 0, 33, 100, 67, 0, 33, 100, ADD);\n}\n</code></div>",
                 ],
-                alt:
-                  "image of rocky mountains. Brick images on left and right. Right overexposed\nimage of rockies. Brickwall images on left and right. Right mortar transparent\nimage of rockies. Brickwall images on left and right. Right translucent",
+                alt: "image of rocky mountains. Brick images on left and right. Right overexposed\nimage of rockies. Brickwall images on left and right. Right mortar transparent\nimage of rockies. Brickwall images on left and right. Right translucent",
                 class: "p5",
                 module: "Image",
                 submodule: "Pixels",
@@ -10776,8 +10655,7 @@
                 example: [
                   "\n<div><code>\nvar img;\n\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\n\nfunction setup() {\n  background(img);\n  copy(img, 7, 22, 10, 10, 35, 25, 50, 50);\n  stroke(255);\n  noFill();\n  // Rectangle shows area being copied\n  rect(7, 22, 10, 10);\n}\n</code></div>",
                 ],
-                alt:
-                  "image of rocky mountains. Brick images on left and right. Right overexposed\nimage of rockies. Brickwall images on left and right. Right mortar transparent\nimage of rockies. Brickwall images on left and right. Right translucent",
+                alt: "image of rocky mountains. Brick images on left and right. Right overexposed\nimage of rockies. Brickwall images on left and right. Right mortar transparent\nimage of rockies. Brickwall images on left and right. Right translucent",
                 class: "p5",
                 module: "Image",
                 submodule: "Pixels",
@@ -10908,8 +10786,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(THRESHOLD);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(GRAY);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(OPAQUE);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(INVERT);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(POSTERIZE, 3);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(DILATE);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(BLUR, 3);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/bricks.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  filter(ERODE);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "black and white image of a brick wall.\ngreyscale image of a brickwall\nimage of a brickwall\njade colored image of a brickwall\nred and pink image of a brickwall\nimage of a brickwall\nblurry image of a brickwall\nimage of a brickwall\nimage of a brickwall with less detail",
+                alt: "black and white image of a brick wall.\ngreyscale image of a brickwall\nimage of a brickwall\njade colored image of a brickwall\nred and pink image of a brickwall\nimage of a brickwall\nblurry image of a brickwall\nimage of a brickwall\nimage of a brickwall with less detail",
                 class: "p5",
                 module: "Image",
                 submodule: "Pixels",
@@ -10955,8 +10832,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  var c = get();\n  image(c, width / 2, 0);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\nfunction setup() {\n  image(img, 0, 0);\n  var c = get(50, 90);\n  fill(c);\n  noStroke();\n  rect(25, 25, 50, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "2 images of the rocky mountains, side-by-side\nImage of the rocky mountains with 50x50 green rect in center of canvas",
+                alt: "2 images of the rocky mountains, side-by-side\nImage of the rocky mountains with 50x50 green rect in center of canvas",
                 class: "p5",
                 module: "Image",
                 submodule: "Pixels",
@@ -10971,8 +10847,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\n\nfunction setup() {\n  image(img, 0, 0);\n  var d = pixelDensity();\n  var halfImage = 4 * (img.width * d) * (img.height * d / 2);\n  loadPixels();\n  for (var i = 0; i < halfImage; i++) {\n    pixels[i + halfImage] = pixels[i];\n  }\n  updatePixels();\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "two images of the rocky mountains. one on top, one on bottom of canvas.",
+                alt: "two images of the rocky mountains. one on top, one on bottom of canvas.",
                 class: "p5",
                 module: "Image",
                 submodule: "Pixels",
@@ -11005,8 +10880,7 @@
                 example: [
                   "\n<div>\n<code>\nvar black = color(0);\nset(30, 20, black);\nset(85, 20, black);\nset(85, 75, black);\nset(30, 75, black);\nupdatePixels();\n</code>\n</div>\n\n<div>\n<code>\nfor (var i = 30; i < width - 15; i++) {\n  for (var j = 20; j < height - 25; j++) {\n    var c = color(204 - j, 153 - i, 0);\n    set(i, j, c);\n  }\n}\nupdatePixels();\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\n\nfunction setup() {\n  set(0, 0, img);\n  updatePixels();\n  line(0, 0, width, height);\n  line(0, height, width, 0);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "4 black points in the shape of a square middle-right of canvas.\nsquare with orangey-brown gradient lightening at bottom right.\nimage of the rocky mountains. with lines like an 'x' through the center.",
+                alt: "4 black points in the shape of a square middle-right of canvas.\nsquare with orangey-brown gradient lightening at bottom right.\nimage of the rocky mountains. with lines like an 'x' through the center.",
                 class: "p5",
                 module: "Image",
                 submodule: "Pixels",
@@ -11049,8 +10923,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/rockies.jpg');\n}\n\nfunction setup() {\n  image(img, 0, 0);\n  var d = pixelDensity();\n  var halfImage = 4 * (img.width * d) * (img.height * d / 2);\n  loadPixels();\n  for (var i = 0; i < halfImage; i++) {\n    pixels[i + halfImage] = pixels[i];\n  }\n  updatePixels();\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "two images of the rocky mountains. one on top, one on bottom of canvas.",
+                alt: "two images of the rocky mountains. one on top, one on bottom of canvas.",
                 class: "p5",
                 module: "Image",
                 submodule: "Pixels",
@@ -11069,8 +10942,7 @@
                 example: [
                   "\n\n<p>Calling loadJSON() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\n// Examples use USGS Earthquake API:\n//   https://earthquake.usgs.gov/fdsnws/event/1/#methods\nvar earthquakes;\nfunction preload() {\n  // Get the most recent earthquake in the database\n  var url =\n   'https://earthquake.usgs.gov/earthquakes/feed/v1.0/' +\n    'summary/all_day.geojson';\n  earthquakes = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // Get the magnitude and name of the earthquake out of the loaded JSON\n  var earthquakeMag = earthquakes.features[0].properties.mag;\n  var earthquakeName = earthquakes.features[0].properties.place;\n  ellipse(width / 2, height / 2, earthquakeMag * 10, earthquakeMag * 10);\n  textAlign(CENTER);\n  text(earthquakeName, 0, height - 30, width, 30);\n}\n</code></div>\n\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n<div><code>\nfunction setup() {\n  noLoop();\n  var url =\n   'https://earthquake.usgs.gov/earthquakes/feed/v1.0/' +\n    'summary/all_day.geojson';\n  loadJSON(url, drawEarthquake);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawEarthquake(earthquakes) {\n  // Get the magnitude and name of the earthquake out of the loaded JSON\n  var earthquakeMag = earthquakes.features[0].properties.mag;\n  var earthquakeName = earthquakes.features[0].properties.place;\n  ellipse(width / 2, height / 2, earthquakeMag * 10, earthquakeMag * 10);\n  textAlign(CENTER);\n  text(earthquakeName, 0, height - 30, width, 30);\n}\n</code></div>",
                 ],
-                alt:
-                  "50x50 ellipse that changes from black to white depending on the current humidity\n50x50 ellipse that changes from black to white depending on the current humidity",
+                alt: "50x50 ellipse that changes from black to white depending on the current humidity\n50x50 ellipse that changes from black to white depending on the current humidity",
                 class: "p5",
                 module: "IO",
                 submodule: "Input",
@@ -11210,8 +11082,7 @@
                 example: [
                   "\n\n<p>Calling loadStrings() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar result;\nfunction preload() {\n  result = loadStrings('assets/test.txt');\n}\n\nfunction setup() {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadStrings('assets/test.txt', pickString);\n}\n\nfunction pickString(result) {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>",
                 ],
-                alt:
-                  'randomly generated text from a file, for example "i smell like butter"\nrandomly generated text from a file, for example "i have three feet"',
+                alt: 'randomly generated text from a file, for example "i smell like butter"\nrandomly generated text from a file, for example "i have three feet"',
                 class: "p5",
                 module: "IO",
                 submodule: "Input",
@@ -11230,8 +11101,7 @@
                 example: [
                   '\n<div class="norender">\n<code>\n// Given the following CSV file called "mammals.csv"\n// located in the project\'s "assets" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value "csv"\n  //and has a header specifying the columns labels\n  table = loadTable(\'assets/mammals.csv\', \'csv\', \'header\');\n  //the file can be remote\n  //table = loadTable("http://p5js.org/reference/assets/mammals.csv",\n  //                  "csv", "header");\n}\n\nfunction setup() {\n  //count the columns\n  print(table.getRowCount() + \' total rows in table\');\n  print(table.getColumnCount() + \' total columns in table\');\n\n  print(table.getColumn(\'name\'));\n  //["Goat", "Leopard", "Zebra"]\n\n  //cycle through the table\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++) {\n      print(table.getString(r, c));\n    }\n}\n</code>\n</div>',
                 ],
-                alt:
-                  'randomly generated text from a file, for example "i smell like butter"\nrandomly generated text from a file, for example "i have three feet"',
+                alt: 'randomly generated text from a file, for example "i smell like butter"\nrandomly generated text from a file, for example "i have three feet"',
                 class: "p5",
                 module: "IO",
                 submodule: "Input",
@@ -13185,8 +13055,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n  // map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the ceiling of the mapped number.\n  var bx = ceil(map(mouseX, 0, 100, 0, 5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2), ax, ay - 5);\n  text(nfc(bx, 1), bx, by - 5);\n}\n</code></div>",
                 ],
-                alt:
-                  "2 horizontal lines & number sets. increase with mouse x. bottom to 2 decimals",
+                alt: "2 horizontal lines & number sets. increase with mouse x. bottom to 2 decimals",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13222,8 +13091,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n\n  var leftWall = 25;\n  var rightWall = 75;\n\n  // xm is just the mouseX, while\n  // xc is the mouseX, but constrained\n  // between the leftWall and rightWall!\n  var xm = mouseX;\n  var xc = constrain(mouseX, leftWall, rightWall);\n\n  // Draw the walls.\n  stroke(150);\n  line(leftWall, 0, leftWall, height);\n  line(rightWall, 0, rightWall, height);\n\n  // Draw xm and xc as circles.\n  noStroke();\n  fill(150);\n  ellipse(xm, 33, 9, 9); // Not Constrained\n  fill(0);\n  ellipse(xc, 66, 9, 9); // Constrained\n}\n</code></div>",
                 ],
-                alt:
-                  "2 vertical lines. 2 ellipses move with mouse X 1 does not move passed lines",
+                alt: "2 vertical lines. 2 ellipses move with mouse X 1 does not move passed lines",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13242,8 +13110,7 @@
                 example: [
                   "\n<div><code>\n// Move your mouse inside the canvas to see the\n// change in distance between two points!\nfunction draw() {\n  background(200);\n  fill(0);\n\n  var x1 = 10;\n  var y1 = 90;\n  var x2 = mouseX;\n  var y2 = mouseY;\n\n  line(x1, y1, x2, y2);\n  ellipse(x1, y1, 7, 7);\n  ellipse(x2, y2, 7, 7);\n\n  // d is the length of the line\n  // the distance from point 1 to point 2.\n  var d = int(dist(x1, y1, x2, y2));\n\n  // Let's write d along the line we are drawing!\n  push();\n  translate((x1 + x2) / 2, (y1 + y2) / 2);\n  rotate(atan2(y2 - y1, x2 - x1));\n  text(nfc(d, 1), 0, -5);\n  pop();\n  // Fancy!\n}\n</code></div>",
                 ],
-                alt:
-                  "2 ellipses joined by line. 1 ellipse moves with mouse X&Y. Distance displayed.",
+                alt: "2 ellipses joined by line. 1 ellipse moves with mouse X&Y. Distance displayed.",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13368,8 +13235,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the floor of the mapped number.\n  var bx = floor(map(mouseX, 0, 100, 0, 5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2), ax, ay - 5);\n  text(nfc(bx, 1), bx, by - 5);\n}\n</code></div>",
                 ],
-                alt:
-                  "2 horizontal lines & number sets. increase with mouse x. bottom to 2 decimals",
+                alt: "2 horizontal lines & number sets. increase with mouse x. bottom to 2 decimals",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13405,8 +13271,7 @@
                 example: [
                   "\n<div><code>\nfunction setup() {\n  background(200);\n  var a = 20;\n  var b = 80;\n  var c = lerp(a, b, 0.2);\n  var d = lerp(a, b, 0.5);\n  var e = lerp(a, b, 0.8);\n\n  var y = 50;\n\n  strokeWeight(5);\n  stroke(0); // Draw the original points in black\n  point(a, y);\n  point(b, y);\n\n  stroke(100); // Draw the lerp points in gray\n  point(c, y);\n  point(d, y);\n  point(e, y);\n}\n</code></div>",
                 ],
-                alt:
-                  "5 points horizontally staggered mid-canvas. mid 3 are grey, outer black",
+                alt: "5 points horizontally staggered mid-canvas. mid 3 are grey, outer black",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13432,8 +13297,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n  var maxX = 2.8;\n  var maxY = 1.5;\n\n  // Compute the natural log of a value between 0 and maxX\n  var xValue = map(mouseX, 0, width, 0, maxX);\n  if (xValue > 0) {\n   // Cannot take the log of a negative number.\n    var yValue = log(xValue);\n    var y = map(yValue, -maxY, maxY, height, 0);\n\n    // Display the calculation occurring.\n    var legend = 'log(' + nf(xValue, 1, 2) + ')\\n= ' + nf(yValue, 1, 3);\n    stroke(150);\n    line(mouseX, y, mouseX, height);\n    fill(0);\n    text(legend, 5, 15);\n    noStroke();\n    ellipse(mouseX, y, 7, 7);\n  }\n\n  // Draw the log(x) curve,\n  // over the domain of x from 0 to maxX\n  noFill();\n  stroke(0);\n  beginShape();\n  for (var x = 0; x < width; x++) {\n    xValue = map(x, 0, width, 0, maxX);\n    yValue = log(xValue);\n    y = map(yValue, -maxY, maxY, height, 0);\n    vertex(x, y);\n  }\n  endShape();\n  line(0, 0, 0, height);\n  line(0, height / 2, width, height / 2);\n}\n</code></div>",
                 ],
-                alt:
-                  "ellipse moves along a curve with mouse x. natural logarithm of n displayed.",
+                alt: "ellipse moves along a curve with mouse x. natural logarithm of n displayed.",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13464,8 +13328,7 @@
                 example: [
                   '\n<div><code>\nfunction setup() {\n  var x1 = 20;\n  var x2 = 80;\n  var y1 = 30;\n  var y2 = 70;\n\n  line(0, 0, x1, y1);\n  print(mag(x1, y1)); // Prints "36.05551275463989"\n  line(0, 0, x2, y1);\n  print(mag(x2, y1)); // Prints "85.44003745317531"\n  line(0, 0, x1, y2);\n  print(mag(x1, y2)); // Prints "72.80109889280519"\n  line(0, 0, x2, y2);\n  print(mag(x2, y2)); // Prints "106.3014581273465"\n}\n</code></div>',
                 ],
-                alt:
-                  "4 lines of different length radiate from top left of canvas.",
+                alt: "4 lines of different length radiate from top left of canvas.",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13522,8 +13385,7 @@
                 example: [
                   "\n  <div><code>\nvar value = 25;\nvar m = map(value, 0, 100, 0, width);\nellipse(m, 50, 10, 10);\n</code></div>\n\n  <div><code>\nfunction setup() {\n  noStroke();\n}\n\nfunction draw() {\n  background(204);\n  var x1 = map(mouseX, 0, width, 25, 75);\n  ellipse(x1, 25, 25, 25);\n  //This ellipse is constrained to the 0-100 range\n  //after setting withinBounds to true\n  var x2 = map(mouseX, 0, width, 0, 100, true);\n  ellipse(x2, 75, 25, 25);\n}\n</code></div>",
                 ],
-                alt:
-                  "10 by 10 white ellipse with in mid left canvas\n2 25 by 25 white ellipses move with mouse x. Bottom has more range from X",
+                alt: "10 by 10 white ellipse with in mid left canvas\n2 25 by 25 white ellipses move with mouse x. Bottom has more range from X",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13542,8 +13404,7 @@
                 example: [
                   "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how max() works!\n  var numArray = [2, 1, 5, 4, 8, 9];\n  fill(0);\n  noStroke();\n  text('Array Elements', 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15;\n  var elemsY = 25;\n  for (var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  var maxX = 33;\n  var maxY = 80;\n  // Draw the Maximum value in the array.\n  textSize(32);\n  text(max(numArray), maxX, maxY);\n}\n</code></div>",
                 ],
-                alt:
-                  "Small text at top reads: Array Elements 2 1 5 4 8 9. Large text at center: 9",
+                alt: "Small text at top reads: Array Elements 2 1 5 4 8 9. Large text at center: 9",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13597,8 +13458,7 @@
                 example: [
                   "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how min() works!\n  var numArray = [2, 1, 5, 4, 8, 9];\n  fill(0);\n  noStroke();\n  text('Array Elements', 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15;\n  var elemsY = 25;\n  for (var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  var maxX = 33;\n  var maxY = 80;\n  // Draw the Minimum value in the array.\n  textSize(32);\n  text(min(numArray), maxX, maxY);\n}\n</code></div>",
                 ],
-                alt:
-                  "Small text at top reads: Array Elements 2 1 5 4 8 9. Large text at center: 1",
+                alt: "Small text at top reads: Array Elements 2 1 5 4 8 9. Large text at center: 1",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13671,8 +13531,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n  var currentNum = mouseX;\n  var lowerBound = 0;\n  var upperBound = width; //100;\n  var normalized = norm(currentNum, lowerBound, upperBound);\n  var lineY = 70;\n  line(0, lineY, width, lineY);\n  //Draw an ellipse mapped to the non-normalized value.\n  noStroke();\n  fill(50);\n  var s = 7; // ellipse size\n  ellipse(currentNum, lineY, s, s);\n\n  // Draw the guide\n  var guideY = lineY + 15;\n  text('0', 0, guideY);\n  textAlign(RIGHT);\n  text('100', width, guideY);\n\n  // Draw the normalized value\n  textAlign(LEFT);\n  fill(0);\n  textSize(32);\n  var normalY = 40;\n  var normalX = 20;\n  text(normalized, normalX, normalY);\n}\n</code></div>",
                 ],
-                alt:
-                  "ellipse moves with mouse. 0 shown left & 100 right and updating values center",
+                alt: "ellipse moves with mouse. 0 shown left & 100 right and updating values center",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13703,8 +13562,7 @@
                 example: [
                   "\n<div><code>\nfunction setup() {\n  //Exponentially increase the size of an ellipse.\n  var eSize = 3; // Original Size\n  var eLoc = 10; // Original Location\n\n  ellipse(eLoc, eLoc, eSize, eSize);\n\n  ellipse(eLoc * 2, eLoc * 2, pow(eSize, 2), pow(eSize, 2));\n\n  ellipse(eLoc * 4, eLoc * 4, pow(eSize, 3), pow(eSize, 3));\n\n  ellipse(eLoc * 8, eLoc * 8, pow(eSize, 4), pow(eSize, 4));\n}\n</code></div>",
                 ],
-                alt:
-                  "small to large ellipses radiating from top left of canvas",
+                alt: "small to large ellipses radiating from top left of canvas",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13730,8 +13588,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  // Round the mapped number.\n  var bx = round(map(mouseX, 0, 100, 0, 5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2), ax, ay - 5);\n  text(nfc(bx, 1), bx, by - 5);\n}\n</code></div>",
                 ],
-                alt:
-                  "horizontal center line squared values displayed on top and regular on bottom.",
+                alt: "horizontal center line squared values displayed on top and regular on bottom.",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13757,8 +13614,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n  var eSize = 7;\n  var x1 = map(mouseX, 0, width, 0, 10);\n  var y1 = 80;\n  var x2 = sq(x1);\n  var y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100);\n  line(0, height / 2, width, height / 2);\n\n  // Draw text.\n  var spacing = 15;\n  noStroke();\n  fill(0);\n  text('x = ' + x1, 0, y1 + spacing);\n  text('sq(x) = ' + x2, 0, y2 + spacing);\n}\n</code></div>",
                 ],
-                alt:
-                  "horizontal center line squared values displayed on top and regular on bottom.",
+                alt: "horizontal center line squared values displayed on top and regular on bottom.",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13784,8 +13640,7 @@
                 example: [
                   "\n<div><code>\nfunction draw() {\n  background(200);\n  var eSize = 7;\n  var x1 = mouseX;\n  var y1 = 80;\n  var x2 = sqrt(x1);\n  var y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100);\n  line(0, height / 2, width, height / 2);\n\n  // Draw text.\n  noStroke();\n  fill(0);\n  var spacing = 15;\n  text('x = ' + x1, 0, y1 + spacing);\n  text('sqrt(x) = ' + x2, 0, y2 + spacing);\n}\n</code></div>",
                 ],
-                alt:
-                  "horizontal center line squareroot values displayed on top and regular on bottom.",
+                alt: "horizontal center line squareroot values displayed on top and regular on bottom.",
                 class: "p5",
                 module: "Math",
                 submodule: "Calculation",
@@ -13824,8 +13679,7 @@
                 example: [
                   "\n<div modernizr='webgl'><code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  noStroke();\n  fill(255, 102, 204);\n}\n\nfunction draw() {\n  background(255);\n  pointLight(color(255), createVector(sin(millis() / 1000) * 20, -40, -10));\n  scale(0.75);\n  sphere();\n}\n</code></div>",
                 ],
-                alt:
-                  "a purple sphere lit by a point light oscillating horizontally",
+                alt: "a purple sphere lit by a point light oscillating horizontally",
                 class: "p5",
                 module: "Math",
                 submodule: "Math",
@@ -13864,8 +13718,7 @@
                 example: [
                   "\n<div>\n<code>\nvar xoff = 0.0;\n\nfunction draw() {\n  background(204);\n  xoff = xoff + 0.01;\n  var n = noise(xoff) * width;\n  line(n, 0, n, height);\n}\n</code>\n</div>\n<div>\n<code>var noiseScale=0.02;\n\nfunction draw() {\n  background(0);\n  for (var x=0; x < width; x++) {\n    var noiseVal = noise((mouseX+x)*noiseScale, mouseY*noiseScale);\n    stroke(noiseVal*255);\n    line(x, mouseY+noiseVal*80, x, height);\n  }\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "vertical line moves left to right with updating noise values.\nhorizontal wave pattern effected by mouse x-position & updating noise values.",
+                alt: "vertical line moves left to right with updating noise values.\nhorizontal wave pattern effected by mouse x-position & updating noise values.",
                 class: "p5",
                 module: "Math",
                 submodule: "Noise",
@@ -13893,8 +13746,7 @@
                 example: [
                   "\n <div>\n <code>\n var noiseVal;\n var noiseScale = 0.02;\nfunction setup() {\n   createCanvas(100, 100);\n }\nfunction draw() {\n   background(0);\n   for (var y = 0; y < height; y++) {\n     for (var x = 0; x < width / 2; x++) {\n       noiseDetail(2, 0.2);\n       noiseVal = noise((mouseX + x) * noiseScale, (mouseY + y) * noiseScale);\n       stroke(noiseVal * 255);\n       point(x, y);\n       noiseDetail(8, 0.65);\n       noiseVal = noise(\n         (mouseX + x + width / 2) * noiseScale,\n         (mouseY + y) * noiseScale\n       );\n       stroke(noiseVal * 255);\n       point(x + width / 2, y);\n     }\n   }\n }\n </code>\n </div>",
                 ],
-                alt:
-                  "2 vertical grey smokey patterns affected my mouse x-position and noise.",
+                alt: "2 vertical grey smokey patterns affected my mouse x-position and noise.",
                 class: "p5",
                 module: "Math",
                 submodule: "Noise",
@@ -13916,8 +13768,7 @@
                 example: [
                   "\n<div>\n<code>var xoff = 0.0;\n\nfunction setup() {\n  noiseSeed(99);\n  stroke(0, 10);\n}\n\nfunction draw() {\n  xoff = xoff + .01;\n  var n = noise(xoff) * width;\n  line(n, 0, n, height);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "vertical grey lines drawing in pattern affected by noise.",
+                alt: "vertical grey lines drawing in pattern affected by noise.",
                 class: "p5",
                 module: "Math",
                 submodule: "Noise",
@@ -15147,8 +14998,7 @@
                 example: [
                   "\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(50);\n  stroke(r * 5);\n  line(50, i, 50 + r, i);\n}\n</code>\n</div>\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(-50, 50);\n  line(50, i, 50 + r, i);\n}\n</code>\n</div>\n<div>\n<code>\n// Get a random element from an array using the random(Array) syntax\nvar words = ['apple', 'bear', 'cat', 'dog'];\nvar word = random(words); // select random word\ntext(word, 10, 50); // draw the word\n</code>\n</div>",
                 ],
-                alt:
-                  "100 horizontal lines from center canvas to right. size+fill change each time\n100 horizontal lines from center of canvas. height & side change each render\nword displayed at random. Either apple, bear, cat, or dog",
+                alt: "100 horizontal lines from center canvas to right. size+fill change each time\n100 horizontal lines from center of canvas. height & side change each render\nword displayed at random. Either apple, bear, cat, or dog",
                 class: "p5",
                 module: "Math",
                 submodule: "Random",
@@ -15216,8 +15066,7 @@
                 example: [
                   "\n <div>\n <code>\n for (var y = 0; y < 100; y++) {\n   var x = randomGaussian(50, 15);\n   line(50, y, x, y);\n }\n </code>\n </div>\n <div>\n <code>\n var distribution = new Array(360);\nfunction setup() {\n   createCanvas(100, 100);\n   for (var i = 0; i < distribution.length; i++) {\n     distribution[i] = floor(randomGaussian(0, 15));\n   }\n }\nfunction draw() {\n   background(204);\n  translate(width / 2, width / 2);\n  for (var i = 0; i < distribution.length; i++) {\n     rotate(TWO_PI / distribution.length);\n     stroke(0);\n     var dist = abs(distribution[i]);\n     line(0, 0, dist, 0);\n   }\n }\n </code>\n </div>",
                 ],
-                alt:
-                  "100 horizontal lines from center of canvas. height & side change each render\n black lines radiate from center of canvas. size determined each render",
+                alt: "100 horizontal lines from center of canvas. height & side change each render\n black lines radiate from center of canvas. size determined each render",
                 class: "p5",
                 module: "Math",
                 submodule: "Random",
@@ -15326,8 +15175,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction draw() {\n  background(204);\n  translate(width / 2, height / 2);\n  var a = atan2(mouseY - height / 2, mouseX - width / 2);\n  rotate(a);\n  rect(-30, -5, 60, 10);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "60 by 10 rect at center of canvas rotates with mouse movements",
+                alt: "60 by 10 rect at center of canvas rotates with mouse movements",
                 class: "p5",
                 module: "Math",
                 submodule: "Trigonometry",
@@ -15353,8 +15201,7 @@
                 example: [
                   "\n<div>\n<code>\nvar a = 0.0;\nvar inc = TWO_PI / 25.0;\nfor (var i = 0; i < 25; i++) {\n  line(i * 4, 50, i * 4, 50 + cos(a) * 40.0);\n  a = a + inc;\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "vertical black lines form wave patterns, extend-down on left and right side",
+                alt: "vertical black lines form wave patterns, extend-down on left and right side",
                 class: "p5",
                 module: "Math",
                 submodule: "Trigonometry",
@@ -15380,8 +15227,7 @@
                 example: [
                   "\n<div>\n<code>\nvar a = 0.0;\nvar inc = TWO_PI / 25.0;\nfor (var i = 0; i < 25; i++) {\n  line(i * 4, 50, i * 4, 50 + sin(a) * 40.0);\n  a = a + inc;\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "vertical black lines extend down and up from center to form wave pattern",
+                alt: "vertical black lines extend down and up from center to form wave pattern",
                 class: "p5",
                 module: "Math",
                 submodule: "Trigonometry",
@@ -15407,8 +15253,7 @@
                 example: [
                   "\n<div>\n<code>\nvar a = 0.0;\nvar inc = TWO_PI / 50.0;\nfor (var i = 0; i < 100; i = i + 2) {\n  line(i, 50, i, 50 + tan(a) * 2.0);\n  a = a + inc;\n}\n</code>",
                 ],
-                alt:
-                  "vertical black lines end down and up from center to form spike pattern",
+                alt: "vertical black lines end down and up from center to form spike pattern",
                 class: "p5",
                 module: "Math",
                 submodule: "Trigonometry",
@@ -15482,8 +15327,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction draw() {\n  background(204);\n  angleMode(DEGREES); // Change the mode to DEGREES\n  var a = atan2(mouseY - height / 2, mouseX - width / 2);\n  translate(width / 2, height / 2);\n  push();\n  rotate(a);\n  rect(-20, -5, 40, 10); // Larger rectangle is rotating in degrees\n  pop();\n  angleMode(RADIANS); // Change the mode to RADIANS\n  rotate(a); // var a stays the same\n  rect(-40, -5, 20, 10); // Smaller rectangle is rotating in radians\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "40 by 10 rect in center rotates with mouse moves. 20 by 10 rect moves faster.",
+                alt: "40 by 10 rect in center rotates with mouse moves. 20 by 10 rect moves faster.",
                 class: "p5",
                 module: "Math",
                 submodule: "Trigonometry",
@@ -15499,8 +15343,7 @@
                 example: [
                   "\n<div>\n<code>\ntextSize(16);\ntextAlign(RIGHT);\ntext('ABCD', 50, 30);\ntextAlign(CENTER);\ntext('EFGH', 50, 50);\ntextAlign(LEFT);\ntext('IJKL', 50, 70);\n</code>\n</div>",
                 ],
-                alt:
-                  "Letters ABCD displayed at top right, EFGH at center and IJKL at bottom left.",
+                alt: "Letters ABCD displayed at top right, EFGH at center and IJKL at bottom left.",
                 class: "p5",
                 module: "Typography",
                 submodule: "Attributes",
@@ -15545,8 +15388,7 @@
                 example: [
                   '\n<div>\n<code>\n// Text to display. The "\\n" is a "new line" character\nvar lines = \'L1\\nL2\\nL3\';\ntextSize(12);\n\ntextLeading(10); // Set leading to 10\ntext(lines, 10, 25);\n\ntextLeading(20); // Set leading to 20\ntext(lines, 40, 25);\n\ntextLeading(30); // Set leading to 30\ntext(lines, 70, 25);\n</code>\n</div>',
                 ],
-                alt:
-                  "set L1 L2 & L3 displayed vertically 3 times. spacing increases for each set",
+                alt: "set L1 L2 & L3 displayed vertically 3 times. spacing increases for each set",
                 class: "p5",
                 module: "Typography",
                 submodule: "Attributes",
@@ -15584,8 +15426,7 @@
                 example: [
                   "\n<div>\n<code>\ntextSize(12);\ntext('Font Size 12', 10, 30);\ntextSize(14);\ntext('Font Size 14', 10, 60);\ntextSize(16);\ntext('Font Size 16', 10, 90);\n</code>\n</div>",
                 ],
-                alt:
-                  "Font Size 12 displayed small, Font Size 14 medium & Font Size 16 large",
+                alt: "Font Size 12 displayed small, Font Size 14 medium & Font Size 16 large",
                 class: "p5",
                 module: "Typography",
                 submodule: "Attributes",
@@ -15623,8 +15464,7 @@
                 example: [
                   "\n<div>\n<code>\nstrokeWeight(0);\ntextSize(12);\ntextStyle(NORMAL);\ntext('Font Style Normal', 10, 30);\ntextStyle(ITALIC);\ntext('Font Style Italic', 10, 60);\ntextStyle(BOLD);\ntext('Font Style Bold', 10, 90);\n</code>\n</div>",
                 ],
-                alt:
-                  "words Font Style Normal displayed normally, Italic in italic and bold in bold",
+                alt: "words Font Style Normal displayed normally, Italic in italic and bold in bold",
                 class: "p5",
                 module: "Typography",
                 submodule: "Attributes",
@@ -15672,8 +15512,7 @@
                 example: [
                   "\n<div>\n<code>\ntextSize(28);\n\nvar aChar = 'P';\nvar cWidth = textWidth(aChar);\ntext(aChar, 0, 40);\nline(cWidth, 0, cWidth, 50);\n\nvar aString = 'p5.js';\nvar sWidth = textWidth(aString);\ntext(aString, 0, 85);\nline(sWidth, 50, sWidth, 100);\n</code>\n</div>",
                 ],
-                alt:
-                  "Letter P and p5.js are displayed with vertical lines at end. P is wide",
+                alt: "Letter P and p5.js are displayed with vertical lines at end. P is wide",
                 class: "p5",
                 module: "Typography",
                 submodule: "Attributes",
@@ -15758,8 +15597,7 @@
                 example: [
                   "\n\n<p>Calling loadFont() inside preload() guarantees that the load\noperation will have completed before setup() and draw() are called.</p>\n\n<div><code>\nvar myFont;\nfunction preload() {\n  myFont = loadFont('assets/AvenirNextLTPro-Demi.otf');\n}\n\nfunction setup() {\n  fill('#ED225D');\n  textFont(myFont);\n  textSize(36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\nOutside of preload(), you may supply a callback function to handle the\nobject:\n\n<div><code>\nfunction setup() {\n  loadFont('assets/AvenirNextLTPro-Demi.otf', drawText);\n}\n\nfunction drawText(font) {\n  fill('#ED225D');\n  textFont(font, 36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\n<p>You can also use the string name of the font to style other HTML\nelements.</p>\n\n<div><code>\nfunction preload() {\n  loadFont('assets/Avenir.otf');\n}\n\nfunction setup() {\n  var myDiv = createDiv('hello there');\n  myDiv.style('font-family', 'Avenir');\n}\n</code></div>",
                 ],
-                alt:
-                  "p5*js in p5's theme dark pink\np5*js in p5's theme dark pink",
+                alt: "p5*js in p5's theme dark pink\np5*js in p5's theme dark pink",
                 class: "p5",
                 module: "Typography",
                 submodule: "Loading & Displaying",
@@ -15807,8 +15645,7 @@
                 example: [
                   "\n<div>\n<code>\ntextSize(32);\ntext('word', 10, 30);\nfill(0, 102, 153);\ntext('word', 10, 60);\nfill(0, 102, 153, 51);\ntext('word', 10, 90);\n</code>\n</div>\n<div>\n<code>\nvar s = 'The quick brown fox jumped over the lazy dog.';\nfill(50);\ntext(s, 10, 10, 70, 80); // Text wraps within text box\n</code>\n</div>",
                 ],
-                alt:
-                  "'word' displayed 3 times going from black, blue to translucent blue\nThe quick brown fox jumped over the lazy dog.",
+                alt: "'word' displayed 3 times going from black, blue to translucent blue\nThe quick brown fox jumped over the lazy dog.",
                 class: "p5",
                 module: "Typography",
                 submodule: "Loading & Displaying",
@@ -15827,8 +15664,7 @@
                 example: [
                   "\n<div>\n<code>\nfill(0);\ntextSize(12);\ntextFont('Georgia');\ntext('Georgia', 12, 30);\ntextFont('Helvetica');\ntext('Helvetica', 12, 60);\n</code>\n</div>\n<div>\n<code>\nvar fontRegular, fontItalic, fontBold;\nfunction preload() {\n  fontRegular = loadFont('assets/Regular.otf');\n  fontItalic = loadFont('assets/Italic.ttf');\n  fontBold = loadFont('assets/Bold.ttf');\n}\nfunction setup() {\n  background(210);\n  fill(0)\n   .strokeWeight(0)\n   .textSize(10);\n  textFont(fontRegular);\n  text('Font Style Normal', 10, 30);\n  textFont(fontItalic);\n  text('Font Style Italic', 10, 50);\n  textFont(fontBold);\n  text('Font Style Bold', 10, 70);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "words Font Style Normal displayed normally, Italic in italic and bold in bold",
+                alt: "words Font Style Normal displayed normally, Italic in italic and bold in bold",
                 class: "p5",
                 module: "Typography",
                 submodule: "Loading & Displaying",
@@ -15914,8 +15750,7 @@
                 example: [
                   "\n<div>\n<code>\nvar font;\nvar textString = 'Lorem ipsum dolor sit amet.';\nfunction preload() {\n  font = loadFont('./assets/Regular.otf');\n}\nfunction setup() {\n  background(210);\n\n  var bbox = font.textBounds(textString, 10, 30, 12);\n  fill(255);\n  stroke(0);\n  rect(bbox.x, bbox.y, bbox.w, bbox.h);\n  fill(0);\n  noStroke();\n\n  textFont(font);\n  textSize(12);\n  text(textString, 10, 30);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "words Lorem ipsum dol go off canvas and contained by white bounding box",
+                alt: "words Lorem ipsum dol go off canvas and contained by white bounding box",
                 class: "p5.Font",
                 module: "Typography",
                 submodule: "Font",
@@ -16785,8 +16620,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num = 112.53106115;\n\n  noStroke();\n  fill(0);\n  textSize(14);\n  // Draw formatted numbers\n  text(nf(num, 5, 2), 10, 20);\n\n  text(nf(num, 4, 3), 10, 55);\n\n  text(nf(num, 3, 6), 10, 85);\n\n  // Draw dividing lines\n  stroke(120);\n  line(0, 30, width, 30);\n  line(0, 65, width, 65);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  '"0011253" top left, "0112.531" mid left, "112.531061" bottom left canvas',
+                alt: '"0011253" top left, "0112.531" mid left, "112.531061" bottom left canvas',
                 class: "p5",
                 module: "Data",
                 submodule: "String Functions",
@@ -16861,8 +16695,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num = 11253106.115;\n  var numArr = [1, 1, 2];\n\n  noStroke();\n  fill(0);\n  textSize(12);\n\n  // Draw formatted numbers\n  text(nfc(num, 4), 10, 30);\n  text(nfc(numArr, 2), 10, 80);\n\n  // Draw dividing line\n  stroke(120);\n  line(0, 50, width, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  '"11,253,106.115" top middle and "1.00,1.00,2.00" displayed bottom mid',
+                alt: '"11,253,106.115" top middle and "1.00,1.00,2.00" displayed bottom mid',
                 class: "p5",
                 module: "Data",
                 submodule: "String Functions",
@@ -16924,8 +16757,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num1 = 11253106.115;\n  var num2 = -11253106.115;\n\n  noStroke();\n  fill(0);\n  textSize(12);\n\n  // Draw formatted numbers\n  text(nfp(num1, 4, 2), 10, 30);\n  text(nfp(num2, 4, 2), 10, 80);\n\n  // Draw dividing line\n  stroke(120);\n  line(0, 50, width, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  '"+11253106.11" top middle and "-11253106.11" displayed bottom middle',
+                alt: '"+11253106.11" top middle and "-11253106.11" displayed bottom middle',
                 class: "p5",
                 module: "Data",
                 submodule: "String Functions",
@@ -17000,8 +16832,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num1 = 11253106.115;\n  var num2 = -11253106.115;\n\n  noStroke();\n  fill(0);\n  textSize(12);\n  // Draw formatted numbers\n  text(nfs(num1, 4, 2), 10, 30);\n\n  text(nfs(num2, 4, 2), 10, 80);\n\n  // Draw dividing line\n  stroke(120);\n  line(0, 50, width, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  '"11253106.11" top middle and "-11253106.11" displayed bottom middle',
+                alt: '"11253106.11" top middle and "-11253106.11" displayed bottom middle',
                 class: "p5",
                 module: "Data",
                 submodule: "String Functions",
@@ -17089,8 +16920,7 @@
                 example: [
                   "\n<div>\n<code>\nvar names = 'Pat,Xio,Alex';\nvar splitString = split(names, ',');\ntext(splitString[0], 5, 30);\ntext(splitString[1], 5, 50);\ntext(splitString[2], 5, 70);\n</code>\n</div>",
                 ],
-                alt:
-                  '"pat" top left, "Xio" mid left and "Alex" displayed bottom left',
+                alt: '"pat" top left, "Xio" mid left and "Alex" displayed bottom left',
                 class: "p5",
                 module: "Data",
                 submodule: "String Functions",
@@ -17249,8 +17079,7 @@
                 example: [
                   "\n<div>\n<code>\nvar millisecond = millis();\ntext('Milliseconds \\nrunning: \\n' + millisecond, 5, 40);\n</code>\n</div>",
                 ],
-                alt:
-                  "number of milliseconds since program has started displayed",
+                alt: "number of milliseconds since program has started displayed",
                 class: "p5",
                 module: "IO",
                 submodule: "Time & Date",
@@ -17385,8 +17214,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw() {\n  //move the camera away from the plane by a sin wave\n  camera(0, 0, sin(frameCount * 0.01) * 100, 0, 0, 0, 0, 1, 0);\n  plane(120, 120);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "blue square shrinks in size grows to fill canvas. disappears then loops.",
+                alt: "blue square shrinks in size grows to fill canvas. disappears then loops.",
                 class: "p5",
                 module: "Lights, Camera",
                 submodule: "Camera",
@@ -17482,8 +17310,7 @@
                 example: [
                   "\n<div>\n<code>\n//drag mouse to toggle the world!\n//there's no vanish point\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  ortho(-width / 2, width / 2, height / 2, -height / 2, 0, 500);\n}\nfunction draw() {\n  background(200);\n  orbitControl();\n  strokeWeight(0.1);\n  for (var i = -1; i < 2; i++) {\n    for (var j = -2; j < 3; j++) {\n      push();\n      translate(i * 160, 0, j * 160);\n      box(40, 40, 40);\n      pop();\n    }\n  }\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "3 3d boxes, reveal several more boxes on 3d plane when mouse used to toggle",
+                alt: "3 3d boxes, reveal several more boxes on 3d plane when mouse used to toggle",
                 class: "p5",
                 module: "Lights, Camera",
                 submodule: "Camera",
@@ -17497,8 +17324,7 @@
                 example: [
                   "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(50);\n  // Orbit control allows the camera to orbit around a target.\n  orbitControl();\n  box(30, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "Camera orbits around box when mouse is hold-clicked & then moved.",
+                alt: "Camera orbits around box when mouse is hold-clicked & then moved.",
                 class: "p5",
                 module: "Lights, Camera",
               },
@@ -17862,8 +17688,7 @@
                 example: [
                   "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction preload() {\n  teapot = loadModel('assets/teapot.obj');\n}\n\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "Vertically rotating 3-d teapot with red, green and blue gradient.",
+                alt: "Vertically rotating 3-d teapot with red, green and blue gradient.",
                 class: "p5",
                 module: "Shape",
                 submodule: "3D Models",
@@ -17955,8 +17780,7 @@
                 example: [
                   "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction preload() {\n  teapot = loadModel('assets/teapot.obj');\n}\n\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "Vertically rotating 3-d teapot with red, green and blue gradient.",
+                alt: "Vertically rotating 3-d teapot with red, green and blue gradient.",
                 class: "p5",
                 module: "Shape",
                 submodule: "3D Models",
@@ -18018,8 +17842,7 @@
                 example: [
                   "\n<div modernizr='webgl'>\n<code>\n// the 'varying's are shared between both vertex & fragment shaders\nvar varying = 'precision highp float; varying vec2 vPos;';\n\n// the vertex shader is called for each vertex\nvar vs =\n  varying +\n  'attribute vec3 aPosition;' +\n  'void main() { vPos = (gl_Position = vec4(aPosition,1.0)).xy; }';\n\n// the fragment shader is called for each pixel\nvar fs =\n  varying +\n  'uniform vec2 p;' +\n  'uniform float r;' +\n  'const int I = 500;' +\n  'void main() {' +\n  '  vec2 c = p + vPos * r, z = c;' +\n  '  float n = 0.0;' +\n  '  for (int i = I; i > 0; i --) {' +\n  '    if(z.x*z.x+z.y*z.y > 4.0) {' +\n  '      n = float(i)/float(I);' +\n  '      break;' +\n  '    }' +\n  '    z = vec2(z.x*z.x-z.y*z.y, 2.0*z.x*z.y) + c;' +\n  '  }' +\n  '  gl_FragColor = vec4(0.5-cos(n*17.0)/2.0,0.5-cos(n*13.0)/2.0,0.5-cos(n*23.0)/2.0,1.0);' +\n  '}';\n\nvar mandel;\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n\n  // create and initialize the shader\n  mandel = createShader(vs, fs);\n  shader(mandel);\n  noStroke();\n\n  // 'p' is the center point of the Mandelbrot image\n  mandel.setUniform('p', [-0.74364388703, 0.13182590421]);\n}\n\nfunction draw() {\n  // 'r' is the size of the image in Mandelbrot-space\n  mandel.setUniform('r', 1.5 * exp(-6.5 * (1 + sin(millis() / 2000))));\n  quad(-1, -1, 1, -1, 1, 1, -1, 1);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "zooming Mandelbrot set. a colorful, infinitely detailed fractal.",
+                alt: "zooming Mandelbrot set. a colorful, infinitely detailed fractal.",
                 class: "p5",
                 module: "Lights, Camera",
                 submodule: "Material",
@@ -18080,8 +17903,7 @@
                 example: [
                   "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage('assets/laDefense.jpg');\n}\n\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(0);\n  rotateZ(frameCount * 0.01);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  //pass image as texture\n  texture(img);\n  box(200, 200, 200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  pg = createGraphics(200, 200);\n  pg.textSize(100);\n}\n\nfunction draw() {\n  background(0);\n  pg.background(255);\n  pg.text('hello!', 0, 100);\n  //pass image as texture\n  texture(pg);\n  plane(200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar vid;\nfunction preload() {\n  vid = createVideo('assets/fingers.mov');\n  vid.hide();\n  vid.loop();\n}\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(0);\n  //pass video frame as texture\n  texture(vid);\n  plane(200);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "Rotating view of many images umbrella and grid roof on a 3d plane\nblack canvas\nblack canvas",
+                alt: "Rotating view of many images umbrella and grid roof on a 3d plane\nblack canvas\nblack canvas",
                 class: "p5",
                 module: "Lights, Camera",
                 submodule: "Material",
@@ -18366,8 +18188,7 @@
                 example: [
                   "\n<div>\n<code>\n//draw a plane with width 50 and height 50\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw() {\n  background(200);\n  plane(50, 50);\n}\n</code>\n</div>",
                 ],
-                alt:
-                  "Nothing displayed on canvas\nRotating interior view of a box with sides that change color.\n3d red and green gradient.\nRotating interior view of a cylinder with sides that change color.\nRotating view of a cylinder with sides that change color.\n3d red and green gradient.\nrotating view of a multi-colored cylinder with concave sides.",
+                alt: "Nothing displayed on canvas\nRotating interior view of a box with sides that change color.\n3d red and green gradient.\nRotating interior view of a cylinder with sides that change color.\nRotating view of a cylinder with sides that change color.\n3d red and green gradient.\nrotating view of a multi-colored cylinder with concave sides.",
                 class: "p5",
                 module: "Shape",
                 submodule: "3D Primitives",
@@ -31143,7 +30964,14 @@
               FS_proto.WRITING = 1;
               FS_proto.DONE = 2;
 
-              FS_proto.error = FS_proto.onwritestart = FS_proto.onprogress = FS_proto.onwrite = FS_proto.onabort = FS_proto.onerror = FS_proto.onwriteend = null;
+              FS_proto.error =
+                FS_proto.onwritestart =
+                FS_proto.onprogress =
+                FS_proto.onwrite =
+                FS_proto.onabort =
+                FS_proto.onerror =
+                FS_proto.onwriteend =
+                  null;
 
               return saveAs;
             })(
@@ -31344,24 +31172,7 @@
 
               /* special ordering of code length codes */
               var clcidx = new Uint8Array([
-                16,
-                17,
-                18,
-                0,
-                8,
-                7,
-                9,
-                6,
-                10,
-                5,
-                11,
-                4,
-                12,
-                3,
-                13,
-                2,
-                14,
-                1,
+                16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1,
                 15,
               ]);
 
@@ -32037,20 +31848,16 @@
                * @param  {number} x - x of path point
                * @param  {number} y - y of path point
                */
-              Path.prototype.quadTo = Path.prototype.quadraticCurveTo = function (
-                x1,
-                y1,
-                x,
-                y
-              ) {
-                this.commands.push({
-                  type: "Q",
-                  x1: x1,
-                  y1: y1,
-                  x: x,
-                  y: y,
-                });
-              };
+              Path.prototype.quadTo = Path.prototype.quadraticCurveTo =
+                function (x1, y1, x, y) {
+                  this.commands.push({
+                    type: "Q",
+                    x1: x1,
+                    y1: y1,
+                    x: x,
+                    y: y,
+                  });
+                };
 
               /**
                * Closes the path
@@ -33927,23 +33734,22 @@
 
               // Parse a list of 16 bit unsigned integers. The length of the list can be read on the stream
               // or provided as an argument.
-              Parser.prototype.parseOffset16List = Parser.prototype.parseUShortList = function (
-                count
-              ) {
-                if (count === undefined) {
-                  count = this.parseUShort();
-                }
-                var offsets = new Array(count);
-                var dataView = this.data;
-                var offset = this.offset + this.relativeOffset;
-                for (var i = 0; i < count; i++) {
-                  offsets[i] = dataView.getUint16(offset);
-                  offset += 2;
-                }
+              Parser.prototype.parseOffset16List =
+                Parser.prototype.parseUShortList = function (count) {
+                  if (count === undefined) {
+                    count = this.parseUShort();
+                  }
+                  var offsets = new Array(count);
+                  var dataView = this.data;
+                  var offset = this.offset + this.relativeOffset;
+                  for (var i = 0; i < count; i++) {
+                    offsets[i] = dataView.getUint16(offset);
+                    offset += 2;
+                  }
 
-                this.relativeOffset += count * 2;
-                return offsets;
-              };
+                  this.relativeOffset += count * 2;
+                  return offsets;
+                };
 
               // Parses a list of 16 bit signed integers.
               Parser.prototype.parseShortList = function (count) {
@@ -39993,9 +39799,8 @@
                 return {
                   substFormat: 1,
                   lookupType: extensionLookupType,
-                  extension: subtableParsers[extensionLookupType].call(
-                    extensionParser
-                  ),
+                  extension:
+                    subtableParsers[extensionLookupType].call(extensionParser),
                 };
               };
 
@@ -40746,9 +40551,8 @@
                 getTable: function (create) {
                   var layout = this.font.tables[this.tableName];
                   if (!layout && create) {
-                    layout = this.font.tables[
-                      this.tableName
-                    ] = this.createDefaultTable();
+                    layout = this.font.tables[this.tableName] =
+                      this.createDefaultTable();
                   }
                   return layout;
                 },
@@ -51650,9 +51454,8 @@ vim: set ts=4 sw=4 expandtab:
             );
             for (var i = 0; i < methods.length; i++) {
               var prop = methods[i];
-              this._registeredMethods[prop] = p5.prototype._registeredMethods[
-                prop
-              ].slice();
+              this._registeredMethods[prop] =
+                p5.prototype._registeredMethods[prop].slice();
             }
 
             if (window.DeviceOrientationEvent) {
@@ -53609,7 +53412,8 @@ vim: set ts=4 sw=4 expandtab:
                         constant = mapConstants[format.name];
                       } else {
                         // parse possible constant values from description
-                        var myRe = /either\s+(?:[A-Z0-9_]+\s*,?\s*(?:or)?\s*)+/g;
+                        var myRe =
+                          /either\s+(?:[A-Z0-9_]+\s*,?\s*(?:or)?\s*)+/g;
                         var values = {};
                         var names = [];
 
@@ -53809,7 +53613,8 @@ vim: set ts=4 sw=4 expandtab:
 
               if (message) {
                 try {
-                  var re = /Function\.validateParameters.*[\r\n].*[\r\n].*\(([^)]*)/;
+                  var re =
+                    /Function\.validateParameters.*[\r\n].*[\r\n].*\(([^)]*)/;
                   var location = re.exec(new Error().stack)[1];
                   if (location) {
                     message += " at " + location;
@@ -54013,7 +53818,8 @@ vim: set ts=4 sw=4 expandtab:
           };
 
           // Exposing this primarily for unit testing.
-          p5.prototype._helpForMisusedAtTopLevelCode = helpForMisusedAtTopLevelCode;
+          p5.prototype._helpForMisusedAtTopLevelCode =
+            helpForMisusedAtTopLevelCode;
 
           if (document.readyState !== "complete") {
             window.addEventListener(
@@ -55850,8 +55656,12 @@ vim: set ts=4 sw=4 expandtab:
             var sx = x * pd;
             var sy = y * pd;
             if (w === 1 && h === 1 && !(this instanceof p5.RendererGL)) {
-              var imageData = this.drawingContext.getImageData(sx, sy, 1, 1)
-                .data;
+              var imageData = this.drawingContext.getImageData(
+                sx,
+                sy,
+                1,
+                1
+              ).data;
               //imageData = [0,0,0,0];
               return [imageData[0], imageData[1], imageData[2], imageData[3]];
             } else {
@@ -55987,33 +55797,31 @@ vim: set ts=4 sw=4 expandtab:
            *
            * See www.joecridge.me/bezier.pdf for an explanation of the method.
            */
-          p5.Renderer2D.prototype._acuteArcToBezier = function _acuteArcToBezier(
-            start,
-            size
-          ) {
-            // Evauate constants.
-            var alpha = size / 2.0,
-              cos_alpha = Math.cos(alpha),
-              sin_alpha = Math.sin(alpha),
-              cot_alpha = 1.0 / Math.tan(alpha),
-              phi = start + alpha, // This is how far the arc needs to be rotated.
-              cos_phi = Math.cos(phi),
-              sin_phi = Math.sin(phi),
-              lambda = (4.0 - cos_alpha) / 3.0,
-              mu = sin_alpha + (cos_alpha - lambda) * cot_alpha;
+          p5.Renderer2D.prototype._acuteArcToBezier =
+            function _acuteArcToBezier(start, size) {
+              // Evauate constants.
+              var alpha = size / 2.0,
+                cos_alpha = Math.cos(alpha),
+                sin_alpha = Math.sin(alpha),
+                cot_alpha = 1.0 / Math.tan(alpha),
+                phi = start + alpha, // This is how far the arc needs to be rotated.
+                cos_phi = Math.cos(phi),
+                sin_phi = Math.sin(phi),
+                lambda = (4.0 - cos_alpha) / 3.0,
+                mu = sin_alpha + (cos_alpha - lambda) * cot_alpha;
 
-            // Return rotated waypoints.
-            return {
-              ax: Math.cos(start),
-              ay: Math.sin(start),
-              bx: lambda * cos_phi + mu * sin_phi,
-              by: lambda * sin_phi - mu * cos_phi,
-              cx: lambda * cos_phi - mu * sin_phi,
-              cy: lambda * sin_phi + mu * cos_phi,
-              dx: Math.cos(start + size),
-              dy: Math.sin(start + size),
+              // Return rotated waypoints.
+              return {
+                ax: Math.cos(start),
+                ay: Math.sin(start),
+                bx: lambda * cos_phi + mu * sin_phi,
+                by: lambda * sin_phi - mu * cos_phi,
+                cx: lambda * cos_phi - mu * sin_phi,
+                cy: lambda * sin_phi + mu * cos_phi,
+                dx: Math.cos(start + size),
+                dy: Math.sin(start + size),
+              };
             };
-          };
 
           p5.Renderer2D.prototype.arc = function (
             x,
@@ -62487,8 +62295,10 @@ vim: set ts=4 sw=4 expandtab:
               var bm, bmi;
 
               for (var i = 1, radiusi = radius - 1; i < radius; i++) {
-                blurKernel[radius + i] = blurKernel[radiusi] = bki =
-                  radiusi * radiusi;
+                blurKernel[radius + i] =
+                  blurKernel[radiusi] =
+                  bki =
+                    radiusi * radiusi;
                 bm = blurMult[radius + i];
                 bmi = blurMult[radiusi--];
                 for (var j = 0; j < 256; j++) {
@@ -74832,34 +74642,14 @@ vim: set ts=4 sw=4 expandtab:
             var z2 = z / 2;
             var n = 12;
             var Tvalues = [
-              -0.1252,
-              0.1252,
-              -0.3678,
-              0.3678,
-              -0.5873,
-              0.5873,
-              -0.7699,
-              0.7699,
-              -0.9041,
-              0.9041,
-              -0.9816,
-              0.9816,
+              -0.1252, 0.1252, -0.3678, 0.3678, -0.5873, 0.5873, -0.7699,
+              0.7699, -0.9041, 0.9041, -0.9816, 0.9816,
             ];
 
             var sum = 0;
             var Cvalues = [
-              0.2491,
-              0.2491,
-              0.2335,
-              0.2335,
-              0.2032,
-              0.2032,
-              0.1601,
-              0.1601,
-              0.1069,
-              0.1069,
-              0.0472,
-              0.0472,
+              0.2491, 0.2491, 0.2335, 0.2335, 0.2032, 0.2032, 0.1601, 0.1601,
+              0.1069, 0.1069, 0.0472, 0.0472,
             ];
 
             for (var i = 0; i < n; i++) {
@@ -78067,22 +77857,7 @@ vim: set ts=4 sw=4 expandtab:
               this.mat4 = Array.isArray(args[0])
                 ? args[0]
                 : new GLMAT_ARRAY_TYPE([
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
+                    1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1,
                   ]);
             }
             return this;

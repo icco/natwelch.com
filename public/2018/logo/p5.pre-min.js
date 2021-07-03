@@ -3628,7 +3628,14 @@
               FS_proto.WRITING = 1;
               FS_proto.DONE = 2;
 
-              FS_proto.error = FS_proto.onwritestart = FS_proto.onprogress = FS_proto.onwrite = FS_proto.onabort = FS_proto.onerror = FS_proto.onwriteend = null;
+              FS_proto.error =
+                FS_proto.onwritestart =
+                FS_proto.onprogress =
+                FS_proto.onwrite =
+                FS_proto.onabort =
+                FS_proto.onerror =
+                FS_proto.onwriteend =
+                  null;
 
               return saveAs;
             })(
@@ -3829,24 +3836,7 @@
 
               /* special ordering of code length codes */
               var clcidx = new Uint8Array([
-                16,
-                17,
-                18,
-                0,
-                8,
-                7,
-                9,
-                6,
-                10,
-                5,
-                11,
-                4,
-                12,
-                3,
-                13,
-                2,
-                14,
-                1,
+                16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1,
                 15,
               ]);
 
@@ -4522,20 +4512,16 @@
                * @param  {number} x - x of path point
                * @param  {number} y - y of path point
                */
-              Path.prototype.quadTo = Path.prototype.quadraticCurveTo = function (
-                x1,
-                y1,
-                x,
-                y
-              ) {
-                this.commands.push({
-                  type: "Q",
-                  x1: x1,
-                  y1: y1,
-                  x: x,
-                  y: y,
-                });
-              };
+              Path.prototype.quadTo = Path.prototype.quadraticCurveTo =
+                function (x1, y1, x, y) {
+                  this.commands.push({
+                    type: "Q",
+                    x1: x1,
+                    y1: y1,
+                    x: x,
+                    y: y,
+                  });
+                };
 
               /**
                * Closes the path
@@ -6412,23 +6398,22 @@
 
               // Parse a list of 16 bit unsigned integers. The length of the list can be read on the stream
               // or provided as an argument.
-              Parser.prototype.parseOffset16List = Parser.prototype.parseUShortList = function (
-                count
-              ) {
-                if (count === undefined) {
-                  count = this.parseUShort();
-                }
-                var offsets = new Array(count);
-                var dataView = this.data;
-                var offset = this.offset + this.relativeOffset;
-                for (var i = 0; i < count; i++) {
-                  offsets[i] = dataView.getUint16(offset);
-                  offset += 2;
-                }
+              Parser.prototype.parseOffset16List =
+                Parser.prototype.parseUShortList = function (count) {
+                  if (count === undefined) {
+                    count = this.parseUShort();
+                  }
+                  var offsets = new Array(count);
+                  var dataView = this.data;
+                  var offset = this.offset + this.relativeOffset;
+                  for (var i = 0; i < count; i++) {
+                    offsets[i] = dataView.getUint16(offset);
+                    offset += 2;
+                  }
 
-                this.relativeOffset += count * 2;
-                return offsets;
-              };
+                  this.relativeOffset += count * 2;
+                  return offsets;
+                };
 
               // Parses a list of 16 bit signed integers.
               Parser.prototype.parseShortList = function (count) {
@@ -12478,9 +12463,8 @@
                 return {
                   substFormat: 1,
                   lookupType: extensionLookupType,
-                  extension: subtableParsers[extensionLookupType].call(
-                    extensionParser
-                  ),
+                  extension:
+                    subtableParsers[extensionLookupType].call(extensionParser),
                 };
               };
 
@@ -13231,9 +13215,8 @@
                 getTable: function (create) {
                   var layout = this.font.tables[this.tableName];
                   if (!layout && create) {
-                    layout = this.font.tables[
-                      this.tableName
-                    ] = this.createDefaultTable();
+                    layout = this.font.tables[this.tableName] =
+                      this.createDefaultTable();
                   }
                   return layout;
                 },
@@ -24135,9 +24118,8 @@ vim: set ts=4 sw=4 expandtab:
             );
             for (var i = 0; i < methods.length; i++) {
               var prop = methods[i];
-              this._registeredMethods[prop] = p5.prototype._registeredMethods[
-                prop
-              ].slice();
+              this._registeredMethods[prop] =
+                p5.prototype._registeredMethods[prop].slice();
             }
 
             if (window.DeviceOrientationEvent) {
@@ -26094,7 +26076,8 @@ vim: set ts=4 sw=4 expandtab:
                         constant = mapConstants[format.name];
                       } else {
                         // parse possible constant values from description
-                        var myRe = /either\s+(?:[A-Z0-9_]+\s*,?\s*(?:or)?\s*)+/g;
+                        var myRe =
+                          /either\s+(?:[A-Z0-9_]+\s*,?\s*(?:or)?\s*)+/g;
                         var values = {};
                         var names = [];
 
@@ -26294,7 +26277,8 @@ vim: set ts=4 sw=4 expandtab:
 
               if (message) {
                 try {
-                  var re = /Function\.validateParameters.*[\r\n].*[\r\n].*\(([^)]*)/;
+                  var re =
+                    /Function\.validateParameters.*[\r\n].*[\r\n].*\(([^)]*)/;
                   var location = re.exec(new Error().stack)[1];
                   if (location) {
                     message += " at " + location;
@@ -26498,7 +26482,8 @@ vim: set ts=4 sw=4 expandtab:
           };
 
           // Exposing this primarily for unit testing.
-          p5.prototype._helpForMisusedAtTopLevelCode = helpForMisusedAtTopLevelCode;
+          p5.prototype._helpForMisusedAtTopLevelCode =
+            helpForMisusedAtTopLevelCode;
 
           if (document.readyState !== "complete") {
             window.addEventListener(
@@ -28335,8 +28320,12 @@ vim: set ts=4 sw=4 expandtab:
             var sx = x * pd;
             var sy = y * pd;
             if (w === 1 && h === 1 && !(this instanceof p5.RendererGL)) {
-              var imageData = this.drawingContext.getImageData(sx, sy, 1, 1)
-                .data;
+              var imageData = this.drawingContext.getImageData(
+                sx,
+                sy,
+                1,
+                1
+              ).data;
               //imageData = [0,0,0,0];
               return [imageData[0], imageData[1], imageData[2], imageData[3]];
             } else {
@@ -28472,33 +28461,31 @@ vim: set ts=4 sw=4 expandtab:
            *
            * See www.joecridge.me/bezier.pdf for an explanation of the method.
            */
-          p5.Renderer2D.prototype._acuteArcToBezier = function _acuteArcToBezier(
-            start,
-            size
-          ) {
-            // Evauate constants.
-            var alpha = size / 2.0,
-              cos_alpha = Math.cos(alpha),
-              sin_alpha = Math.sin(alpha),
-              cot_alpha = 1.0 / Math.tan(alpha),
-              phi = start + alpha, // This is how far the arc needs to be rotated.
-              cos_phi = Math.cos(phi),
-              sin_phi = Math.sin(phi),
-              lambda = (4.0 - cos_alpha) / 3.0,
-              mu = sin_alpha + (cos_alpha - lambda) * cot_alpha;
+          p5.Renderer2D.prototype._acuteArcToBezier =
+            function _acuteArcToBezier(start, size) {
+              // Evauate constants.
+              var alpha = size / 2.0,
+                cos_alpha = Math.cos(alpha),
+                sin_alpha = Math.sin(alpha),
+                cot_alpha = 1.0 / Math.tan(alpha),
+                phi = start + alpha, // This is how far the arc needs to be rotated.
+                cos_phi = Math.cos(phi),
+                sin_phi = Math.sin(phi),
+                lambda = (4.0 - cos_alpha) / 3.0,
+                mu = sin_alpha + (cos_alpha - lambda) * cot_alpha;
 
-            // Return rotated waypoints.
-            return {
-              ax: Math.cos(start),
-              ay: Math.sin(start),
-              bx: lambda * cos_phi + mu * sin_phi,
-              by: lambda * sin_phi - mu * cos_phi,
-              cx: lambda * cos_phi - mu * sin_phi,
-              cy: lambda * sin_phi + mu * cos_phi,
-              dx: Math.cos(start + size),
-              dy: Math.sin(start + size),
+              // Return rotated waypoints.
+              return {
+                ax: Math.cos(start),
+                ay: Math.sin(start),
+                bx: lambda * cos_phi + mu * sin_phi,
+                by: lambda * sin_phi - mu * cos_phi,
+                cx: lambda * cos_phi - mu * sin_phi,
+                cy: lambda * sin_phi + mu * cos_phi,
+                dx: Math.cos(start + size),
+                dy: Math.sin(start + size),
+              };
             };
-          };
 
           p5.Renderer2D.prototype.arc = function (
             x,
@@ -34972,8 +34959,10 @@ vim: set ts=4 sw=4 expandtab:
               var bm, bmi;
 
               for (var i = 1, radiusi = radius - 1; i < radius; i++) {
-                blurKernel[radius + i] = blurKernel[radiusi] = bki =
-                  radiusi * radiusi;
+                blurKernel[radius + i] =
+                  blurKernel[radiusi] =
+                  bki =
+                    radiusi * radiusi;
                 bm = blurMult[radius + i];
                 bmi = blurMult[radiusi--];
                 for (var j = 0; j < 256; j++) {
@@ -47317,34 +47306,14 @@ vim: set ts=4 sw=4 expandtab:
             var z2 = z / 2;
             var n = 12;
             var Tvalues = [
-              -0.1252,
-              0.1252,
-              -0.3678,
-              0.3678,
-              -0.5873,
-              0.5873,
-              -0.7699,
-              0.7699,
-              -0.9041,
-              0.9041,
-              -0.9816,
-              0.9816,
+              -0.1252, 0.1252, -0.3678, 0.3678, -0.5873, 0.5873, -0.7699,
+              0.7699, -0.9041, 0.9041, -0.9816, 0.9816,
             ];
 
             var sum = 0;
             var Cvalues = [
-              0.2491,
-              0.2491,
-              0.2335,
-              0.2335,
-              0.2032,
-              0.2032,
-              0.1601,
-              0.1601,
-              0.1069,
-              0.1069,
-              0.0472,
-              0.0472,
+              0.2491, 0.2491, 0.2335, 0.2335, 0.2032, 0.2032, 0.1601, 0.1601,
+              0.1069, 0.1069, 0.0472, 0.0472,
             ];
 
             for (var i = 0; i < n; i++) {
@@ -50552,22 +50521,7 @@ vim: set ts=4 sw=4 expandtab:
               this.mat4 = Array.isArray(args[0])
                 ? args[0]
                 : new GLMAT_ARRAY_TYPE([
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
+                    1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1,
                   ]);
             }
             return this;
