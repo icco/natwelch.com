@@ -58,6 +58,18 @@ const Writing = () => (
         like me to write about, or would like to discuss writing, shoot{" "}
         <a href="mailto:nat@natwelch.com">me an email</a>.
       </p>
+
+      <TextHeader level="2">Press</TextHeader>
+      <p className="f5 f4-ns measure-wide mt3">
+        It is rare that someone writes about me, but it has happened.
+      </p>
+      <ul className="list f5 f4-ns wide mt3 pl0">
+        <li className="mv3 pl3 bl bw2 b--beige">
+          <a href="https://medium.com/time-review/hello-nat-welch-lead-cloud-platform-engineer-at-time-by-ping-49e6107758f5">
+            Time Review: Nat Welch
+          </a>
+        </li>
+      </ul>
     </section>
   </App>
 );
