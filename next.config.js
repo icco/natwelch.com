@@ -1,6 +1,7 @@
 const { createSecureHeaders } = require("next-secure-headers");
 const port = process.env.PORT || 8080;
 module.exports = {
+  swcMinify: true,
   poweredByHeader: false,
   reactStrictMode: true,
   trailingSlash: false,
