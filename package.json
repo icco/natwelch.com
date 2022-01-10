@@ -3,12 +3,11 @@
   "version": "2.0.0",
   "description": "Nat's personal site.",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
+    "start": "next start -p $PORT"
   },
   "repository": {
     "type": "git",
@@ -16,7 +15,6 @@
   },
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
-  "private": true,
   "dependencies": {
     "@icco/react-common": "^2020.11.4-1",
     "isomorphic-unfetch": "^3.0.0",
@@ -28,7 +26,6 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-moment": "^1.0.0",
-    "snyk": "^1.430.0",
     "webpack": "^5.6.0"
   },
   "devDependencies": {
@@ -37,6 +34,5 @@
   },
   "prettier": {
     "trailingComma": "es5"
-  },
-  "snyk": true
+  }
 }
