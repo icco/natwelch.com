@@ -1,6 +1,6 @@
 import App from "components/App";
-import Header from "components/Header.js";
-import TextHeader from "components/TextHeader.js";
+import Header from "components/Header";
+import TextHeader from "components/TextHeader";
 import Head from "next/head";
 
 const Writing = () => (

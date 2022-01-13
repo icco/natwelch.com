@@ -1,5 +1,5 @@
 import App from "components/App";
-import Header from "components/Header.js";
+import Header from "components/Header";
 import Head from "next/head";
 import React from "react";
 

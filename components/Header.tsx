@@ -1,10 +1,9 @@
 import { Logo } from "@icco/react-common";
-import TextHeader from "components/TextHeader.js";
+import TextHeader from "components/TextHeader";
 import Link from "next/link";
-import { withRouter } from "next/router";
 import React from "react";
 
-class Header extends React.Component {
+class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
   render() {
     let prefix = <></>;
     let nav = <></>;
@@ -91,4 +90,4 @@ class Header extends React.Component {
   }
 }
 
-export default withRouter(Header);
+export default Header;

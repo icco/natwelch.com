@@ -1,6 +1,6 @@
 import App from "components/App";
-import Header from "components/Header.js";
-import Social from "components/Social.js";
+import Header from "components/Header";
+import Social from "components/Social";
 import Head from "next/head";
 import Link from "next/link";
 

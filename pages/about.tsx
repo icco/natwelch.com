@@ -1,8 +1,8 @@
-import Age from "components/Age.js";
+import Age from "components/Age";
 import App from "components/App";
-import Header from "components/Header.js";
-import Social from "components/Social.js";
-import TextHeader from "components/TextHeader.js";
+import Header from "components/Header";
+import Social from "components/Social";
+import TextHeader from "components/TextHeader";
 import Head from "next/head";
 import Link from "next/link";
 

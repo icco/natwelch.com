@@ -1,4 +1,4 @@
-const Named = (params) => {
+const TextHeader = (params) => {
   const headers = {
     1: (
       <h1 className={"f3 f2-m f1-l " + params.className}>{params.children}</h1>
@@ -18,4 +18,4 @@ const Named = (params) => {
 
   return headers[level];
 };
-export default Named;
+export default TextHeader;
