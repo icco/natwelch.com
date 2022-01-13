@@ -1,8 +1,7 @@
-import React from "react";
-import Head from "next/head";
-
 import App from "components/App";
 import Header from "components/Header.js";
+import Head from "next/head";
+import React from "react";
 
 const Bandwidth = () => {
   return (

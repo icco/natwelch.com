@@ -1,10 +1,9 @@
-import Head from "next/head";
-
 import Age from "components/Age.js";
 import App from "components/App";
 import Header from "components/Header.js";
 import Social from "components/Social.js";
 import TextHeader from "components/TextHeader.js";
+import Head from "next/head";
 
 const Mentoring = () => (
   <App>

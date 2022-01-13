@@ -1,8 +1,7 @@
-import Head from "next/head";
-
 import App from "components/App";
 import Header from "components/Header.js";
 import TextHeader from "components/TextHeader.js";
+import Head from "next/head";
 
 const Talks = () => (
   <App>

@@ -1,9 +1,8 @@
-import Head from "next/head";
-import Link from "next/link";
-
 import App from "components/App";
 import Header from "components/Header.js";
 import Social from "components/Social.js";
+import Head from "next/head";
+import Link from "next/link";
 
 const h2_class = "link dim gray fw2 f2 f3-ns dib ma3";
 const link_class = "link";
