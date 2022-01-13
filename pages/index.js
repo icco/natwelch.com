@@ -16,32 +16,32 @@ const Index = () => (
     <div className="pb3 mw8 center mt5 mt0-ns">
       <Header />
       <nav className="flex flex-wrap items-center justify-center ttc">
-        <Link href="/about">
+        <Link href="/about" passHref>
           <h2 className={h2_class}>
             <a className={link_class}>About</a>
           </h2>
         </Link>
-        <Link href="/mentoring">
+        <Link href="/mentoring" passHref>
           <h2 className={h2_class}>
             <a className={link_class}>Mentoring</a>
           </h2>
         </Link>
-        <Link href="/projects">
+        <Link href="/projects" passHref>
           <h2 className={h2_class}>
             <a className={link_class}>Projects</a>
           </h2>
         </Link>
-        <Link href="/support">
+        <Link href="/support" passHref>
           <h2 className={h2_class}>
             <a className={link_class}>Support</a>
           </h2>
         </Link>
-        <Link href="/writing">
+        <Link href="/writing" passHref>
           <h2 className={h2_class}>
             <a className={link_class}>Writing</a>
           </h2>
         </Link>
-        <Link href="/talks">
+        <Link href="/talks" passHref>
           <h2 className={h2_class}>
             <a className={link_class}>Talks</a>
           </h2>

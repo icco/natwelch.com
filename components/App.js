@@ -1,4 +1,3 @@
-import Router from "next/router";
 import React from "react";
 
 const App = ({ children }) => <main>{children}</main>;

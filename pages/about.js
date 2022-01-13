@@ -17,7 +17,7 @@ const About = () => (
       <TextHeader level="2">Nat Welch</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
         <p className="">
-          Hi there! I'm Nat. I was born in the San Francisco Bay Area, <Age />{" "}
+          Hi there! I am Nat. I was born in the San Francisco Bay Area, <Age />{" "}
           ago. I currently live in Beacon, NY with my wife Melissa and our cat
           Beasley. During the day I work as the Lead Cloud Platform Engineer for{" "}
           <a href="https://timebyping.com">Time by Ping</a>.
@@ -86,7 +86,7 @@ const About = () => (
         <p className="">
           I have lived in San Francisco, London, New York and a few other
           places. When I move, I try to create a blog post of my favorite places
-          in a city right before I leave. I then don't update them. As such,
+          in a city right before I leave. I then do not update them. As such,
           they are very out of date. That being said, I enjoy looking at them
           and sharing with friends traveling.
         </p>
@@ -115,10 +115,10 @@ const About = () => (
       <article className="lh-copy f4-ns f5 measure-wide">
         <p className="">
           Nat Welch is an Site Reliability Engineer based in Brooklyn, NY, and
-          the author of "Real World SRE" from Packt Publishing. He has been
-          professionally building and running software on the internet since
-          2005, and loves making tools and promoting conversation online. He
-          currently works for Google on the Customer Reliability Engineering
+          the author of &quot;Real World SRE&quot; from Packt Publishing. He has
+          been professionally building and running software on the internet
+          since 2005, and loves making tools and promoting conversation online.
+          He currently works for Google on the Customer Reliability Engineering
           team. In the past, he has worked for First Look Media, Hillary for
           America, iFixit, and others.
         </p>

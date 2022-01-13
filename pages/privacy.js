@@ -1,4 +1,3 @@
-import Age from "components/Age.js";
 import App from "components/App";
 import Header from "components/Header.js";
 import TextHeader from "components/TextHeader.js";
@@ -31,7 +30,7 @@ const Privacy = () => (
       <TextHeader level="2">Tab Archive</TextHeader>
       <article className="lh-copy f4-ns f5 measure-wide">
         <p>
-          For Tab Archive's privacy policy, please see{" "}
+          For Tab Archive&apos;s privacy policy, please see{" "}
           <a href="https://tab-archive.app">tab-archive.app</a>.
         </p>
       </article>

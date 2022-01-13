@@ -7,45 +7,48 @@ import React, { useEffect, useState } from "react";
 const Dashboard = () => {
   const [data, setData] = useState([]);
   const [day, setDay] = useState("Today");
-  useEffect(async () => {
-    let isMounted = true;
-    const getData = () => {
-      fetch("https://graphql.natwelch.com/graphql", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        redirect: "follow",
-        referrerPolicy: "no-referrer",
-        body: JSON.stringify({
-          query: "query {\nstats(count: 50) {\nkey\nvalue\n}\n}",
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (isMounted) {
-            if (data.errors) {
-              console.error(data.errors);
-            } else {
-              setData(data.data.stats);
-              setDay(DateTime.local().toISODate());
-            }
-          }
+  useEffect(() => {
+    async function fetchData() {
+      let isMounted = true;
+      const getData = () => {
+        fetch("https://graphql.natwelch.com/graphql", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          redirect: "follow",
+          referrerPolicy: "no-referrer",
+          body: JSON.stringify({
+            query: "query {\nstats(count: 50) {\nkey\nvalue\n}\n}",
+          }),
         })
-        .catch((error) => {
-          if (isMounted) {
-            console.error("Error:", error);
-          }
-        });
-    };
+          .then((response) => response.json())
+          .then((data) => {
+            if (isMounted) {
+              if (data.errors) {
+                console.error(data.errors);
+              } else {
+                setData(data.data.stats);
+                setDay(DateTime.local().toISODate());
+              }
+            }
+          })
+          .catch((error) => {
+            if (isMounted) {
+              console.error("Error:", error);
+            }
+          });
+      };
 
-    getData();
-    const interval = setInterval(() => {
       getData();
-    }, 10000);
+      const interval = setInterval(() => {
+        getData();
+      }, 10000);
 
-    return () => {
-      clearInterval(interval);
-      isMounted = false;
-    };
+      return () => {
+        clearInterval(interval);
+        isMounted = false;
+      };
+    }
+    fetchData();
   }, []);
 
   return (

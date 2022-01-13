@@ -1,7 +1,6 @@
 import "style.css";
 
 import Head from "next/head";
-import Router from "next/router";
 
 function WWW({ Component, pageProps }) {
   return (
@@ -26,8 +25,15 @@ function WWW({ Component, pageProps }) {
 
 // Will be called once for every metric that has to be reported.
 export function reportWebVitals(metric) {
-  // These metrics can be sent to any analytics service
-  console.log(metric);
+  const body = JSON.stringify(metric);
+  const url = "https://reportd.natwelch.com/analytics/natwelch.com";
+
+  // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(url, body);
+  } else {
+    fetch(url, { body, method: "POST", keepalive: true });
+  }
 }
 
 export default WWW;

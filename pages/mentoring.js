@@ -1,7 +1,5 @@
-import Age from "components/Age.js";
 import App from "components/App";
 import Header from "components/Header.js";
-import Social from "components/Social.js";
 import TextHeader from "components/TextHeader.js";
 import Head from "next/head";
 
@@ -18,8 +16,8 @@ const Mentoring = () => (
         <p className="">
           I would like to be your colleague, friend and/or acquaintance. Why?
           Because, my career has been particularly weird, and talking to others
-          has helped me be somewhat successful in surviving some transitions.
-          I've jumped to and from startups, big business, politics, writing, and
+          has helped me be somewhat successful in surviving some transitions. I
+          have jumped to and from startups, big business, politics, writing, and
           many other situations. I failed out of college briefly, and have lived
           in ~five cities. If you think this experience would be useful to you,
           I would love to chat.
@@ -34,11 +32,6 @@ const Mentoring = () => (
             <a href="https://calendly.com/icco/chat-with-nat">Calendly</a>.
           </li>
           <li>You can email me nat@natwelch.com.</li>
-          <li>
-            Join{" "}
-            <a href="https://www.outofofficehours.com/">Out of Office Hours</a>,
-            a community I participate in.
-          </li>
         </ul>
       </article>
     </section>
