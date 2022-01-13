@@ -29,6 +29,10 @@ const Support = () => (
           .
         </li>
         <li className="mv3 pl3 bl bw2 b--beige">
+          Back my kickstarter{" "}
+          <a href="http://kck.st/3Ft2AHf"> locative.garden </a> .
+        </li>
+        <li className="mv3 pl3 bl bw2 b--beige">
           Support me monthly on{" "}
           <a href="https://github.com/sponsors/icco">Github</a>.
         </li>
