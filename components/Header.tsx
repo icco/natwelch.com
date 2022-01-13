@@ -1,5 +1,5 @@
 import { Logo } from "@icco/react-common";
-import TextHeader from "components/TextHeader.js";
+import TextHeader from "components/TextHeader";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import React from "react";

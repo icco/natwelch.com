@@ -1,5 +1,5 @@
 const Social = (params) => {
-  let link_class = "link " + params.linkClassName;
+  const link_class = "link " + params.linkClassName;
 
   return (
     <nav className={params.className + " flex flex-wrap ttc"}>
