@@ -1,8 +1,7 @@
+import App from "components/App";
+import Header from "components/Header";
+import TextHeader from "components/TextHeader";
 import Head from "next/head";
-
-import App from "../components/App";
-import Header from "../components/Header.js";
-import TextHeader from "../components/TextHeader.js";
 
 const article_class = "cf pv1 ph3 pv2-ns mv3";
 const p_class = "measure-wide f5 f4-ns";

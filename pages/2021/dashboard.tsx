@@ -1,5 +1,5 @@
 import App from "components/App";
-import Header from "components/Header.js";
+import Header from "components/Header";
 import { DateTime } from "luxon";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
