@@ -1,8 +1,7 @@
-import Head from "next/head";
-
 import App from "components/App";
 import Header from "components/Header.js";
 import TextHeader from "components/TextHeader.js";
+import Head from "next/head";
 
 const Talks = () => (
   <App>
@@ -20,7 +19,7 @@ const Talks = () => (
 
       <ul className="list f5 f4-ns measure-wide mt3 pl0">
         <li className="ml4-ns mv4">
-          Google Cloud Next '19 San Francisco - Prometheus and SLO Alerting
+          Google Cloud Next 2019 San Francisco - Prometheus and SLO Alerting
         </li>
         <li className="ml4-ns mv4">
           SRECon 2019 Americas -{" "}

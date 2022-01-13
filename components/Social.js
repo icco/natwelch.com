@@ -110,7 +110,7 @@ const Social = (params) => {
         title="Webring"
         href="https://webring.xxiivv.com/#random"
         target="_blank"
-        rel="me"
+        rel="me noreferrer"
       >
         {/* Source is at https://webring.xxiivv.com/icon.black.svg */}
         <svg
@@ -137,7 +137,7 @@ const Social = (params) => {
         title="Mastodon / merveilles.town"
         href="https://merveilles.town/@icco"
         target="_blank"
-        rel="me"
+        rel="me noreferrer"
       >
         {/* Source is at https://somni.us/assets/images/merveilles-to-edge-white.svg */}
         <svg

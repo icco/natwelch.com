@@ -2,7 +2,6 @@ import Head from "next/head";
 
 import App from "../components/App";
 import Header from "../components/Header.js";
-import ProjectLogo from "../components/ProjectLogo.js";
 import TextHeader from "../components/TextHeader.js";
 
 let article_class = "cf pv1 ph3 pv2-ns mv3";
@@ -38,7 +37,7 @@ const Projects = () => (
         </TextHeader>
 
         <p className={p_class}>
-          GraphQL is my server for storing data for use in my projects. It's
+          GraphQL is my server for storing data for use in my projects. It is
           hosted at{" "}
           <a href="https://graphql.natwelch.com">graphql.natwelch.com</a> and
           the code is at{" "}
