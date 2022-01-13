@@ -1,3 +1,30 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "import",
+    "simple-import-sort"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error"
+  },
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:mdx/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "settings": {
+    "mdx/code-blocks": true
+  }
 }
