@@ -26,7 +26,7 @@ function WWW({ Component, pageProps }) {
 // Will be called once for every metric that has to be reported.
 export function reportWebVitals(metric) {
   const body = JSON.stringify(metric);
-  const url = "https://reportd.natwelch.com/analytics/natwelch.com";
+  const url = "https://reportd.natwelch.com/analytics/natwelch";
 
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
   if (navigator.sendBeacon) {
