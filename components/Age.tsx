@@ -1,14 +1,14 @@
+import { DateTime } from "luxon";
 import React from "react";
-import Moment from "react-moment";
 
 export default class Age extends React.Component {
   render() {
-    return (
-      <Moment
-        date="Mon, 22 Feb 1988 17:00:00 PST"
-        durationFromNow
-        interval={0}
-      />
+    const birth = DateTime.fromObject(
+      { year: 1988, month: 2, day: 22, hour: 17 },
+      { zone: "America/Los_Angeles" }
     );
+    const now = DateTime.now();
+    const diff = now.diff(birth, "years", { conversionAccuracy: "longterm" });
+    return <time dateTime={birth.toISO()}>{diff.toHuman()} ago</time>;
   }
 }

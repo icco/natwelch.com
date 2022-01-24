@@ -25,7 +25,6 @@
     "gray-matter": "^4.0.3",
     "isomorphic-unfetch": "^3.0.0",
     "luxon": "^2.3.0",
-    "moment": "^2.24.0",
     "next": "^12.0.0",
     "next-mdx-remote": "^3.0.8",
     "next-secure-headers": "^2.1.0",
@@ -33,7 +32,6 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-moment": "^1.0.0",
     "theme-ui": "^0.13.1"
   },
   "devDependencies": {

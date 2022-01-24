@@ -1,3 +1,4 @@
+import Age from "components/Age";
 import Layout from "components/Layout";
 import Social from "components/Social";
 import TextHeader, {
@@ -21,6 +22,7 @@ const components = {
   h1: TextHeaderOne,
   h2: TextHeaderTwo,
   h3: TextHeaderThree,
+  Age,
   TextHeader,
   Head,
   Social,
