@@ -36,24 +36,8 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">About</a>
           </Link>
 
-          <Link href="/mentoring">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Mentoring</a>
-          </Link>
-
-          <Link href="/projects">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Projects</a>
-          </Link>
-
-          <Link href="/support">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Support</a>
-          </Link>
-
-          <Link href="/writing">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Writing</a>
-          </Link>
-
-          <Link href="/talks">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Talks</a>
+          <Link href="/wiki">
+            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Wiki</a>
           </Link>
 
           <Link href="https://resume.natwelch.com">
