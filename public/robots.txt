@@ -1,8 +1,10 @@
-﻿User-agent: *
-Disallow: /cgi-bin/
-Disallow: /2013/
-Disallow: /2014/
-Disallow: /2015/
-Disallow: /2016/
-Disallow: /2017/
-Disallow: /2018/
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://natwelch.com
+
+# Sitemaps
+Sitemap: https://natwelch.com/sitemap.xml
+Sitemap: https://natwelch.com/sitemap-0.xml
