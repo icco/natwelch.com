@@ -1,4 +1,5 @@
 import Layout from "components/Layout";
+import Social from "components/Social";
 import TextHeader, {
   TextHeaderOne,
   TextHeaderThree,
@@ -24,6 +25,7 @@ const components = {
   h3: TextHeaderThree,
   TextHeader,
   Head,
+  Social,
 };
 
 export default function PostPage({ source, frontMatter }) {
