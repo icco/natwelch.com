@@ -9,7 +9,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import { postFilePaths, POSTS_PATH } from "lib/mdx";
 import Head from "next/head";
-import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
@@ -19,7 +18,6 @@ import path from "path";
 // to handle import statements. Instead, you must include components in scope
 // here.
 const components = {
-  a: Link,
   h1: TextHeaderOne,
   h2: TextHeaderTwo,
   h3: TextHeaderThree,

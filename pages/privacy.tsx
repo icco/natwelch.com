@@ -1,10 +1,9 @@
-import App from "components/App";
 import Header from "components/Header";
 import TextHeader from "components/TextHeader";
 import Head from "next/head";
 
 const Privacy = () => (
-  <App>
+  <main>
     <Head>
       <title>Nat Welch | Privacy Policy</title>
     </Head>
@@ -35,7 +34,7 @@ const Privacy = () => (
         </p>
       </article>
     </section>
-  </App>
+  </main>
 );
 
 export default Privacy;

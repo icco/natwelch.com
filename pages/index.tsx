@@ -15,7 +15,7 @@ const Index = () => (
     <div className="pb3 mw8 center mt5 mt0-ns">
       <Header />
       <nav className="flex flex-wrap items-center justify-center ttc">
-        <Link href="/about" passHref>
+        <Link href="/wiki/about" passHref>
           <h2 className={h2_class}>
             <a className={link_class}>About</a>
           </h2>

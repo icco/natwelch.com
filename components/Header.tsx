@@ -32,7 +32,7 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
       head = <></>;
       nav = (
         <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
-          <Link href="/about">
+          <Link href="/wiki/about">
             <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">About</a>
           </Link>
 

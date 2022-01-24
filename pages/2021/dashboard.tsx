@@ -1,4 +1,3 @@
-import App from "components/App";
 import Header from "components/Header";
 import { DateTime } from "luxon";
 import Head from "next/head";
@@ -52,7 +51,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <App>
+    <main>
       <Head>
         <title>Nat Welch | Dashboard</title>
       </Head>
@@ -65,7 +64,7 @@ const Dashboard = () => {
           ))}
         </div>
       </article>
-    </App>
+    </main>
   );
 };
 
