@@ -12,20 +12,23 @@ import { postFilePaths, POSTS_PATH } from "lib/mdx";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import dynamic from 'next/dynamic'
 import path from "path";
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
+// Custom components/renderers to pass to MDX. Since the MDX files aren't
+// loaded by webpack, they have no knowledge of how to handle import
+// statements. Instead, you must include components in scope here.
+//
+// It also works with dynamically-imported components, which is especially
+// useful for conditionally loading components for certain routes.
 const components = {
+  Age: dynamic(() => import('components/Age')),
+  Head,
+  Social: dynamic(() => import('components/Social')),
+  TextHeader,
   h1: TextHeaderOne,
   h2: TextHeaderTwo,
   h3: TextHeaderThree,
-  Age,
-  TextHeader,
-  Head,
-  Social,
 };
 
 export default function PostPage({ source, frontMatter }) {
