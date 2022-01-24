@@ -35,6 +35,10 @@ module.exports = {
                 "https://icco.auth0.com/",
                 "https://graphql.natwelch.com/graphql",
               ],
+              connectSrc: [
+                "'self'",
+                "https://reportd.natwelch.com/",
+              ],
               styleSrc: [
                 "'self'",
                 "'unsafe-inline'",
