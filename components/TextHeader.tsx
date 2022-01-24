@@ -18,4 +18,17 @@ const TextHeader = (params) => {
 
   return headers[level];
 };
+
+export const TextHeaderOne = (params) => {
+  return <TextHeader level="1" {...params}></TextHeader>;
+};
+
+export const TextHeaderTwo = (params) => {
+  return <TextHeader level="2" {...params}></TextHeader>;
+};
+
+export const TextHeaderThree = (params) => {
+  return <TextHeader level="3" {...params}></TextHeader>;
+};
+
 export default TextHeader;
