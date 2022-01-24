@@ -21,29 +21,9 @@ const Index = () => (
             <a className={link_class}>About</a>
           </h2>
         </Link>
-        <Link href="/mentoring" passHref>
+        <Link href="/wiki" passHref>
           <h2 className={h2_class}>
-            <a className={link_class}>Mentoring</a>
-          </h2>
-        </Link>
-        <Link href="/projects" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Projects</a>
-          </h2>
-        </Link>
-        <Link href="/support" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Support</a>
-          </h2>
-        </Link>
-        <Link href="/writing" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Writing</a>
-          </h2>
-        </Link>
-        <Link href="/talks" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Talks</a>
+            <a className={link_class}>Wiki</a>
           </h2>
         </Link>
         <h2 className={h2_class}>
