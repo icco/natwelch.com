@@ -1,6 +1,4 @@
-import Age from "components/Age";
 import Layout from "components/Layout";
-import Social from "components/Social";
 import TextHeader, {
   TextHeaderOne,
   TextHeaderThree,
@@ -9,10 +7,10 @@ import TextHeader, {
 import fs from "fs";
 import matter from "gray-matter";
 import { postFilePaths, POSTS_PATH } from "lib/mdx";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import dynamic from 'next/dynamic'
 import path from "path";
 
 // Custom components/renderers to pass to MDX. Since the MDX files aren't
@@ -22,9 +20,9 @@ import path from "path";
 // It also works with dynamically-imported components, which is especially
 // useful for conditionally loading components for certain routes.
 const components = {
-  Age: dynamic(() => import('components/Age')),
+  Age: dynamic(() => import("components/Age")),
   Head,
-  Social: dynamic(() => import('components/Social')),
+  Social: dynamic(() => import("components/Social")),
   TextHeader,
   h1: TextHeaderOne,
   h2: TextHeaderTwo,

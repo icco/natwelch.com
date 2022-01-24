@@ -11,7 +11,7 @@ export default function Layout(
   return (
     <>
       <Header noLogo />
-      <main {...props}></main>;
+      <main {...props}></main>
       <Footer />
     </>
   );
