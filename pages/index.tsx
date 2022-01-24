@@ -1,4 +1,3 @@
-import App from "components/App";
 import Header from "components/Header";
 import Social from "components/Social";
 import Head from "next/head";
@@ -8,7 +7,7 @@ const h2_class = "link dim gray fw2 f2 f3-ns dib ma3";
 const link_class = "link";
 
 const Index = () => (
-  <App>
+  <main>
     <Head>
       <title>Nat Welch</title>
     </Head>
@@ -38,7 +37,7 @@ const Index = () => (
         linkClassName="ma3 gray"
       />
     </div>
-  </App>
+  </main>
 );
 
 export default Index;
