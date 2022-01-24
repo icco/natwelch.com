@@ -2,12 +2,12 @@ import Layout from "components/Layout";
 import TextHeader from "components/TextHeader";
 import fs from "fs";
 import matter from "gray-matter";
+import { postFilePaths, POSTS_PATH } from "lib/mdx";
 import Head from "next/head";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
-import { postFilePaths, POSTS_PATH } from "lib/mdx";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
