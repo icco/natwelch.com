@@ -7,8 +7,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
-
-import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import { postFilePaths, POSTS_PATH } from "lib/mdx";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
