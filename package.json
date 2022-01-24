@@ -18,7 +18,7 @@
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
   "dependencies": {
-    "@icco/react-common": "^2020.11.4-1",
+    "@icco/react-common": ">= 2022.1.18-3",
     "isomorphic-unfetch": "^3.0.0",
     "luxon": "^2.0.0",
     "moment": "^2.24.0",
