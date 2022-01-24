@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next lint --fix && next dev -p 8080",
-    "lint": "next lint",
+    "lint": "next lint --fix",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start -p $PORT"
