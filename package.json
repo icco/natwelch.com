@@ -18,7 +18,10 @@
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@icco/react-common": ">= 2022.1.18-3",
+    "@mdx-js/react": "^1.6.22",
     "gray-matter": "^4.0.3",
     "isomorphic-unfetch": "^3.0.0",
     "luxon": "^2.3.0",
@@ -30,7 +33,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-moment": "^1.0.0"
+    "react-moment": "^1.0.0",
+    "theme-ui": "^0.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
