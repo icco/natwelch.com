@@ -42,7 +42,7 @@ export default function PostPage({ source, frontMatter }) {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
+  const postFilePath = `${path.join(POSTS_PATH, ...params.slug)}.mdx`;
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);
@@ -76,7 +76,7 @@ export const getStaticPaths = async () => {
     }
 
     if (/\.mdx?$/.test(pathname)) {
-      const filename = pathname.replace(/\.mdx?$/, "");
+      const filename = pathname.replace(/\.mdx?$/, "").replace(POSTS_PATH, "");
       paths.push(filename);
     }
   });
