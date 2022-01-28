@@ -12,19 +12,12 @@ const root = {
   },
 
   colors: {
-    text: Nord.nord3,
-    background: "#fff",
-    primary: Nord.nord4,
-    secondary: Nord.nord1,
-    link: Nord.nord10,
+    text: Nord.nord6,
+    background: Nord.nord0,
+    primary: Nord.nord1,
+    secondary: Nord.nord4,
+    link: Nord.nord9,
     modes: {
-      dark: {
-        text: Nord.nord6,
-        background: Nord.nord0,
-        primary: Nord.nord1,
-        secondary: Nord.nord4,
-        link: Nord.nord9,
-      },
       print: {
         background: "#fff",
         text: "#000",
