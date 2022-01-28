@@ -1,14 +1,15 @@
-const Social = (params) => {
-  const link_class = "link " + params.linkClassName;
-
+const Social = () => {
   return (
-    <nav className={params.className + " flex flex-wrap ttc"}>
-      <a
-        className={link_class + " h2 w2"}
-        href="https://github.com/icco"
-        title="GitHub"
-        rel="me"
-      >
+    <nav
+      sx={{
+        display: "flex",
+        a: {
+          height: "2em",
+          width: "2em",
+        },
+      }}
+    >
+      <a href="https://github.com/icco" title="GitHub" rel="me">
         <svg
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,6 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         href="https://instagram.com/probablynatwelch"
         title="Instagram"
         rel="me"
@@ -41,12 +41,7 @@ const Social = (params) => {
         </svg>
       </a>
 
-      <a
-        className={link_class + " h2 w2"}
-        href="https://linkedin.com/in/natwelch"
-        title="LinkedIn"
-        rel="me"
-      >
+      <a href="https://linkedin.com/in/natwelch" title="LinkedIn" rel="me">
         <svg
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +59,6 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         href="https://www.goodreads.com/author/show/18143346.Nat_Welch"
         title="Goodreads"
         rel="me"
@@ -83,12 +77,7 @@ const Social = (params) => {
         </svg>
       </a>
 
-      <a
-        className={link_class + " h2 w2"}
-        href="https://twitter.com/icco"
-        title="Twitter"
-        rel="me"
-      >
+      <a href="https://twitter.com/icco" title="Twitter" rel="me">
         <svg
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +95,6 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         title="Webring"
         href="https://webring.xxiivv.com/#random"
         target="_blank"
@@ -133,7 +121,6 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         title="Mastodon / merveilles.town"
         href="https://merveilles.town/@icco"
         target="_blank"
