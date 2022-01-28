@@ -416,10 +416,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@icco/react-common@>= 2022.1.18-3":
-  version "2022.1.18-3"
-  resolved "https://registry.yarnpkg.com/@icco/react-common/-/react-common-2022.1.18-3.tgz#2152bf7d03b88436718fafef16ed4af0d9153e87"
-  integrity sha512-oIDQ7Y+lxLvbyujq9x5QikaNW7WzIO8uIABLwXL9POZdk+NVD/81TdK2avBa/mEJB9EBNCTs4Ad9LFvuZcatcg==
+"@icco/react-common@^2022.1.28-1":
+  version "2022.1.28-1"
+  resolved "https://registry.yarnpkg.com/@icco/react-common/-/react-common-2022.1.28-1.tgz#a218fce86732a2749c417abca0d38ee6d53358cf"
+  integrity sha512-/qqetxihLqRcKVq0FLt4eUTOcFXeeCj2Q84NSL9t1qxy4akrQ08jemEe9V1jj15eQ/haOn3yAZuZYAGhcv0SWw==
   dependencies:
     prop-types "^15.7"
     react-loading "^2.0"
@@ -1499,9 +1499,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 electron-to-chromium@^1.4.17:
-  version "1.4.55"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.55.tgz#a7fa3b49b2c4cb0ae68505cf304a9666fdd8fd9f"
-  integrity sha512-AoCDEVElLY8mwe4TuDDkr1jxvSh/Ih5PFlEXCpmwFkq9JOXn4K58CScgBl+R1ghFW9cPJ7VeWo30nAHSRCe6rw==
+  version "1.4.56"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.56.tgz#f660fd2c6739b341d8922fe3a441a5a2804911a1"
+  integrity sha512-0k/S0FQqRRpJbX7YUjwCcLZ8D42RqGKtaiq90adXBOYgTIWwLA/g3toO8k9yEpqU8iC4QyaWYYWSTBIna8WV4g==
 
 emoji-regex@^9.2.2:
   version "9.2.2"
