@@ -1,5 +1,5 @@
-import path from "path";
 import { walk } from "@root/walk";
+import path from "path";
 
 // POSTS_PATH is useful when you want to get the path to a specific file
 export const POSTS_PATH = path.join(process.cwd(), "wiki/");
@@ -21,5 +21,5 @@ export async function getPaths() {
     }
   });
 
-  return paths
+  return paths;
 }

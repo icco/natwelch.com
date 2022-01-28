@@ -6,7 +6,7 @@ import TextHeader, {
 } from "components/TextHeader";
 import fs from "fs";
 import matter from "gray-matter";
-import { POSTS_PATH } from "lib/mdx";
+import { getPaths, POSTS_PATH } from "lib/mdx";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
