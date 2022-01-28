@@ -21,7 +21,6 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
             >
               <Logo
                 size={200}
-                className="logo"
                 sx={{
                   verticalAlign: "middle",
                   py: 0,
