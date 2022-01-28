@@ -65,8 +65,8 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  let paths = [];
-  const walkFunc = async (err, pathname, dirent) => {
+  const paths: string[] = [];
+  await walk(POSTS_PATH, async (err, pathname, dirent): Promise<boolean> => {
     if (err) {
       throw err;
     }
@@ -75,15 +75,14 @@ export const getStaticPaths = async () => {
       return false;
     }
 
-    if (/\.mdx?$/.test(path)) {
+    if (/\.mdx?$/.test(pathname)) {
       const filename = pathname.replace(/\.mdx?$/, "");
-      paths = paths.push(filename);
+      paths.push(filename);
     }
-  };
-  await walk(POSTS_PATH, walkFunc);
+  });
 
   return {
-    paths: paths.map((slug) => ({ params: { slug } })),
+    paths: paths.map((slug) => ({ params: { slug: slug.split("/") } })),
     fallback: false,
   };
 };
