@@ -1,9 +1,9 @@
-import { Nord } from "@icco/react-common"
-import { toTheme } from "@theme-ui/typography"
-import merge from "lodash.merge"
-import fairyGates from "typography-theme-fairy-gates"
+import { Nord } from "@icco/react-common";
+import { toTheme } from "@theme-ui/typography";
+import merge from "lodash.merge";
+import fairyGates from "typography-theme-fairy-gates";
 
-const typography = toTheme(fairyGates)
+const typography = toTheme(fairyGates);
 const root = {
   config: {
     initialColorModeName: "light",
@@ -57,8 +57,8 @@ const root = {
     p: 0,
     width: "100%",
   },
-}
+};
 
-const theme = merge(typography, root)
+const theme = merge(typography, root);
 
-export default theme
+export default theme;
