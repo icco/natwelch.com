@@ -20,7 +20,7 @@
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "@icco/react-common": "^2022.1.28-1",
+    "@icco/react-common": "^2022.1.28-2",
     "@mdx-js/react": "^1.6.22",
     "@root/walk": "^1.1.0",
     "@theme-ui/typography": "^0.13.1",

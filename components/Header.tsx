@@ -27,6 +27,7 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
                   my: [null, 1],
                   display: "inline-block",
                   textAlign: "center",
+                  stroke: "primary",
                 }}
               />
               <div
@@ -93,8 +94,19 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
       );
       prefix = (
         <Link href="/">
-          <a className="link dark-gray dim">
-            <Logo size={50} className="v-mid mh0-ns dib-ns center ph0 logo" />
+          <a>
+            <Logo
+              size={50}
+              sx={{
+                verticalAlign: "middle",
+                py: 0,
+                my: [null, 1],
+                display: "inline-block",
+                textAlign: "center",
+                stroke: "text",
+              }}
+              className="logo"
+            />
           </a>
         </Link>
       );
@@ -109,13 +121,13 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
     }
 
     return (
-      <div>
+      <header>
         <Flex as="nav">
           <Flex>{prefix}</Flex>
           {nav}
         </Flex>
         {head}
-      </div>
+      </header>
     );
   }
 }
