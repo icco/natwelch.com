@@ -1,6 +1,5 @@
-import Header from "components/Header";
+import Header, { Size } from "components/Header";
 import Head from "next/head";
-import React from "react";
 
 const Bandwidth = () => {
   return (
@@ -8,7 +7,7 @@ const Bandwidth = () => {
       <Head>
         <title>Nat Welch | Bandwidth Calculator</title>
       </Head>
-      <Header noLogo />
+      <Header size={Size.Medium} navtext="Bandwidth" />
     </main>
   );
 };
