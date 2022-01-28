@@ -16,6 +16,7 @@ export function SmallHeader() {
         display: "flex",
         alignItems: "center",
         variant: "styles.header",
+        pb: 3,
       }}
     >
       <Link href="/">
@@ -61,6 +62,7 @@ export function SmallHeaderWithText({ navtext }) {
         display: "flex",
         alignItems: "center",
         variant: "styles.header",
+        pb: 2,
       }}
     >
       <Link href="/">
