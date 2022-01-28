@@ -33,7 +33,9 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "theme-ui": "^0.13.1"
+    "theme-ui": "^0.13.1",
+    "typography": "^0.16.21",
+    "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
