@@ -1,7 +1,7 @@
 import { ClassAttributes, HTMLAttributes } from "react";
 
 import Footer from "./Footer";
-import Header from "./Header";
+import Header, { Size } from "./Header";
 
 export default function Layout(
   props: JSX.IntrinsicAttributes &
@@ -10,7 +10,7 @@ export default function Layout(
 ) {
   return (
     <>
-      <Header noLogo />
+      <Header size={Size.Small} />
       <main {...props}></main>
       <Footer />
     </>

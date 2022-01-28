@@ -104,7 +104,7 @@ export function LargeHeader() {
               my: [null, 1],
               display: "inline-block",
               textAlign: "center",
-              stroke: "primary",
+              stroke: "text",
             }}
           />
           <div
@@ -116,6 +116,22 @@ export function LargeHeader() {
           >
             <TextHeaderOne>Nat Welch</TextHeaderOne>
             <TextHeaderTwo>Software Reconnaissance Engineer</TextHeaderTwo>
+            {links.map(([name, link]) => {
+              return (
+                <Link key={name} href={link} passHref>
+                  <TextHeaderTwo>
+                    <a
+                      sx={{
+                        variant: "styles.navlink",
+                        p: 2,
+                      }}
+                    >
+                      {name}
+                    </a>
+                  </TextHeaderTwo>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
