@@ -1,4 +1,3 @@
-import { walk } from "@root/walk";
 import Layout from "components/Layout";
 import TextHeader, {
   TextHeaderOne,
@@ -65,21 +64,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths: string[] = [];
-  await walk(POSTS_PATH, async (err, pathname, dirent): Promise<boolean> => {
-    if (err) {
-      throw err;
-    }
-
-    if (dirent.isDirectory() && dirent.name.startsWith(".")) {
-      return false;
-    }
-
-    if (/\.mdx?$/.test(pathname)) {
-      const filename = pathname.replace(/\.mdx?$/, "").replace(POSTS_PATH, "");
-      paths.push(filename);
-    }
-  });
+  const paths = await getPaths();
 
   return {
     paths: paths.map((slug) => ({ params: { slug: slug.split("/") } })),
