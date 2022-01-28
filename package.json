@@ -23,6 +23,7 @@
     "@icco/react-common": ">= 2022.1.18-3",
     "@mdx-js/react": "^1.6.22",
     "@root/walk": "^1.1.0",
+    "@theme-ui/typography": "^0.13.1",
     "gray-matter": "^4.0.3",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.21",
