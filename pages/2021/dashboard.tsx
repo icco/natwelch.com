@@ -1,7 +1,7 @@
-import Header from "components/Header";
+import Header, { Size } from "components/Header";
 import { DateTime } from "luxon";
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
@@ -55,7 +55,7 @@ const Dashboard = () => {
       <Head>
         <title>Nat Welch | Dashboard</title>
       </Head>
-      <Header noLogo navtext={day} />
+      <Header size={Size.Medium} navtext={day} />
 
       <article className="ma3" data-name="slab-stat-large">
         <div className="cf flex flex-wrap">
