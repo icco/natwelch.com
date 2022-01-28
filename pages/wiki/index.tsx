@@ -17,7 +17,9 @@ function Wiki({ paths }) {
         {paths.map((element: string) => {
           return (
             <li key={element}>
-              <Link href={`/wiki/${element}`}>{element}</Link>
+              <Link href={`/wiki/${element}`}>
+                <a>{element}</a>
+              </Link>
             </li>
           );
         })}

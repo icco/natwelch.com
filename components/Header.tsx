@@ -1,7 +1,8 @@
 import { Logo } from "@icco/react-common";
-import TextHeader from "components/TextHeader";
+import { TextHeaderOne, TextHeaderTwo } from "components/TextHeader";
 import Link from "next/link";
 import React from "react";
+import { Flex } from "theme-ui";
 
 class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
   render() {
@@ -9,18 +10,35 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
     let nav = <></>;
     let head = (
       <>
-        <header className="pv0 ph3 ph4-m ph5-l oh pos-rel mt5">
-          <div className="dt wi-100">
-            <div className="dtc wi-50 v-mid">
+        <header sx={{ py: 0, px: [3, 4, 5], mt: 5 }}>
+          <div sx={{ display: "table", w: "100%" }}>
+            <div
+              sx={{
+                display: "table-cell",
+                width: "50%",
+                verticalAlign: "middle",
+              }}
+            >
               <Logo
                 size={200}
-                className="v-mid mh0-ns dib-ns center ph0 logo"
+                className="logo"
+                sx={{
+                  verticalAlign: "middle",
+                  py: 0,
+                  my: [null, 1],
+                  display: "inline-block",
+                  textAlign: "center",
+                }}
               />
-              <div className="dib v-mid pa0 pa3-ns">
-                <h1 className="mb2 tracked tl-ns tc w-100">Nat Welch</h1>
-                <h2 className="fw2 mt0 tracked tl-ns tc w-100">
-                  Software Reconnaissance Engineer
-                </h2>
+              <div
+                sx={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  p: [0, 3],
+                }}
+              >
+                <TextHeaderOne>Nat Welch</TextHeaderOne>
+                <TextHeaderTwo>Software Reconnaissance Engineer</TextHeaderTwo>
               </div>
             </div>
           </div>
@@ -31,17 +49,46 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
     if (this.props.noLogo) {
       head = <></>;
       nav = (
-        <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
+        <div
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            variant: "styles.header",
+          }}
+        >
+          <div sx={{ mx: "auto" }} />
+
           <Link href="/wiki/about">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">About</a>
+            <a
+              sx={{
+                variant: "styles.navlink",
+                p: 2,
+              }}
+            >
+              About
+            </a>
           </Link>
 
           <Link href="/wiki">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Wiki</a>
+            <a
+              sx={{
+                variant: "styles.navlink",
+                p: 2,
+              }}
+            >
+              Wiki
+            </a>
           </Link>
 
           <Link href="https://resume.natwelch.com">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Resume</a>
+            <a
+              sx={{
+                variant: "styles.navlink",
+                p: 2,
+              }}
+            >
+              Resume
+            </a>
           </Link>
         </div>
       );
@@ -57,17 +104,17 @@ class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
     if (this.props.navtext) {
       nav = (
         <>
-          <TextHeader className="mr4">{this.props.navtext}</TextHeader>
+          <TextHeaderOne sx={{ mr: 4 }}>{this.props.navtext}</TextHeaderOne>
         </>
       );
     }
 
     return (
       <div>
-        <nav className="flex justify-between ttc">
-          <div className="flex items-center pa3">{prefix}</div>
+        <Flex as="nav">
+          <Flex>{prefix}</Flex>
           {nav}
-        </nav>
+        </Flex>
         {head}
       </div>
     );
