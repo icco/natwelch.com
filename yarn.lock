@@ -569,6 +569,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@root/walk@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@root/walk/-/walk-1.1.0.tgz#784d81e8b8d3fb3bedbb0e18952e4ea577e3796a"
+  integrity sha512-FfXPAta9u2dBuaXhPRawBcijNC9rmKVApmbi6lIZyg36VR/7L02ytxoY5K/14PJlHqiBUoYII73cTlekdKTUOw==
+
 "@rushstack/eslint-patch@^1.0.8":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
