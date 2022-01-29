@@ -35,6 +35,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "rehype-slug": "^5.0.1",
+    "remark-gfm": "^3.0.1",
     "theme-ui": "^0.13.1",
     "typography": "^0.16.21",
     "typography-theme-fairy-gates": "^0.16.19"

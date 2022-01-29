@@ -14,6 +14,8 @@ import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
+import slug from "rehype-slug";
+import gfm from "remark-gfm";
 import { Divider, Paragraph } from "theme-ui";
 
 // Custom components/renderers to pass to MDX. Since the MDX files aren't
@@ -53,7 +55,7 @@ export const getStaticProps = async ({ params }) => {
   const postFilePath = `${path.join(POSTS_PATH, ...params.slug)}.mdx`;
 
   if (!fs.existsSync(postFilePath)) {
-    return { notFound: true }
+    return { notFound: true };
   }
 
   const source = fs.readFileSync(postFilePath);
@@ -63,8 +65,8 @@ export const getStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [],
+      remarkPlugins: [gfm],
+      rehypePlugins: [slug],
     },
     scope: data,
   });
