@@ -9,6 +9,17 @@ const Index = () => (
       mx: [0, "auto"],
       width: "100%",
       flex: "1 1 auto",
+
+      a: {
+        cursor: "pointer",
+        color: "link",
+        textDecoration: "none",
+        ":link,:any-link,:visited": { color: "link" },
+        ":focus,:active,:hover": {
+          color: "secondary",
+          textDecoration: "underline",
+        },
+      },
     }}
   >
     <Head>
