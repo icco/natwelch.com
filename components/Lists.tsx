@@ -14,7 +14,7 @@ const UnorderedList = (params) => {
 
 const OrderedList = (params) => {
   return (
-    <ul
+    <ol
       sx={{
         boxSizing: "border-box",
         my: "1rem",
@@ -22,7 +22,7 @@ const OrderedList = (params) => {
         pr: 0,
       }}
       {...params}
-    ></ul>
+    ></ol>
   );
 };
 
