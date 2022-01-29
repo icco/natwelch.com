@@ -37,9 +37,9 @@ const Index = () => (
 
       <div
         sx={{
-          width: "50%",
-          my: "2em",
-          mx: "auto",
+          px: [3, 4, 5],
+          py: 0,
+          mt: 0,
         }}
       >
         <Social />

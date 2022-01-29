@@ -4,15 +4,22 @@ const Social = () => {
       sx={{
         display: "flex",
         a: {
-          height: "2em",
-          width: "2em",
-        },
-        "a + a": {
-          marginLeft: "2%",
+          color: "link",
+          textDecoration: "none",
+          ":link,:any-link,:visited": { color: "link" },
+          ":focus,:active,:hover": {
+            color: "secondary",
+            textDecoration: "underline",
+          },
+          mx: "10px",
         },
         svg: {
-          fill: "text",
+          fill: "currentColor",
+          height: "32px",
+          width: "32px",
         },
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <a href="https://github.com/icco" title="GitHub" rel="me">

@@ -93,9 +93,12 @@ export function LargeHeader() {
       sx={{
         display: "flex",
         width: "100%",
+        flexDirection: "column",
+        alignItems: "center",
         py: 0,
         px: [3, 4, 5],
         mt: 5,
+        textAlign: "center",
       }}
     >
       <div
@@ -119,14 +122,14 @@ export function LargeHeader() {
           justifyContent: "space-between",
           flexDirection: "column",
           flexGrow: 1,
-          m: "2em",
+          m: "1.5em",
         }}
       >
-        <TextHeaderOne sx={{ my: 0 }}>Nat Welch</TextHeaderOne>
-        <TextHeaderTwo sx={{ my: 0 }}>
+        <TextHeaderOne sx={{ mt: 0, mb: "0.75em" }}>Nat Welch</TextHeaderOne>
+        <TextHeaderTwo sx={{ my: "0.75em" }}>
           Software Reconnaissance Engineer
         </TextHeaderTwo>
-        <div>
+        <div sx={{ mt: "0.75em", mb: 0 }}>
           {links.map(([name, link]) => {
             return (
               <Link key={name} href={link} passHref>
@@ -134,7 +137,8 @@ export function LargeHeader() {
                   <a
                     sx={{
                       variant: "styles.navlink",
-                      pr: 2,
+                      px: 2,
+                      my: 0,
                     }}
                   >
                     {name}
