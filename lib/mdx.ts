@@ -21,5 +21,5 @@ export async function getPaths() {
     }
   });
 
-  return paths;
+  return paths.sort();
 }

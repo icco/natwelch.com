@@ -18,7 +18,9 @@ function Wiki({ paths }) {
           return (
             <li key={element}>
               <Link href={`/wiki/${element}`}>
-                <a>{element}</a>
+                <a sx={{ textTransform: "capitalize", cursor: "pointer" }}>
+                  {element}
+                </a>
               </Link>
             </li>
           );
