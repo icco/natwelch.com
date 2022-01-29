@@ -19,7 +19,7 @@ function Wiki({ paths }) {
             <li key={element}>
               <Link href={`/wiki/${element}`}>
                 <a sx={{ textTransform: "capitalize", cursor: "pointer" }}>
-                  {element}
+                  {element.replaceAll("-", " ")}
                 </a>
               </Link>
             </li>
