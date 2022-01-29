@@ -3,7 +3,14 @@ import Social from "components/Social";
 import Head from "next/head";
 
 const Index = () => (
-  <main>
+  <main
+    sx={{
+      maxWidth: 768,
+      mx: [0, "auto"],
+      width: "100%",
+      flex: "1 1 auto",
+    }}
+  >
     <Head>
       <title>Nat Welch</title>
     </Head>

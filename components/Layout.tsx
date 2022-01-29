@@ -11,7 +11,25 @@ export default function Layout(
   return (
     <>
       <Header size={Size.Small} />
-      <main {...props}></main>
+      <main
+        sx={{
+          maxWidth: 768,
+          mx: [0, "auto"],
+          width: "100%",
+          flex: "1 1 auto",
+
+          a: {
+            color: "link",
+            textDecoration: "none",
+            ":link,:any-link,:visited": { color: "link" },
+            ":focus,:active,:hover": {
+              color: "secondary",
+              textDecoration: "underline",
+            },
+          },
+        }}
+        {...props}
+      ></main>
       <Footer />
     </>
   );
