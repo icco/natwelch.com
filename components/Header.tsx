@@ -17,6 +17,15 @@ export function SmallHeader() {
         alignItems: "center",
         variant: "styles.header",
         pb: 3,
+        a: {
+          color: "text",
+          cursor: "pointer",
+          textDecoration: "none",
+          ":link,:any-link,:visited": { color: "text" },
+          ":focus,:active,:hover": {
+            color: "link",
+          },
+        },
       }}
     >
       <Link href="/">
