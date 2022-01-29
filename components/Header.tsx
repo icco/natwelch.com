@@ -89,52 +89,58 @@ export function SmallHeaderWithText({ navtext }) {
 
 export function LargeHeader() {
   return (
-    <header sx={{ py: 0, px: [3, 4, 5], mt: 5 }}>
-      <div sx={{ display: "table", w: "100%" }}>
-        <div
+    <header
+      sx={{
+        display: "flex",
+        width: "100%",
+        py: 0,
+        px: [3, 4, 5],
+        mt: 5,
+      }}
+    >
+      <div
+        sx={{
+          width: "200px",
+          verticalAlign: "middle",
+        }}
+      >
+        <Logo
+          size={200}
           sx={{
-            display: "table-cell",
-            width: "50%",
-            verticalAlign: "middle",
+            py: 0,
+            my: [null, 1],
+            stroke: "text",
           }}
-        >
-          <Logo
-            size={200}
-            sx={{
-              verticalAlign: "middle",
-              py: 0,
-              my: [null, 1],
-              display: "inline-block",
-              textAlign: "center",
-              stroke: "text",
-            }}
-          />
-          <div
-            sx={{
-              display: "inline-block",
-              verticalAlign: "middle",
-              p: [0, 3],
-            }}
-          >
-            <TextHeaderOne>Nat Welch</TextHeaderOne>
-            <TextHeaderTwo>Software Reconnaissance Engineer</TextHeaderTwo>
-            {links.map(([name, link]) => {
-              return (
-                <Link key={name} href={link} passHref>
-                  <TextHeaderTwo>
-                    <a
-                      sx={{
-                        variant: "styles.navlink",
-                        p: 2,
-                      }}
-                    >
-                      {name}
-                    </a>
-                  </TextHeaderTwo>
-                </Link>
-              );
-            })}
-          </div>
+        />
+      </div>
+      <div
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: "column",
+          flexGrow: 1,
+          m: "2em",
+        }}
+      >
+        <TextHeaderOne>Nat Welch</TextHeaderOne>
+        <TextHeaderTwo>Software Reconnaissance Engineer</TextHeaderTwo>
+        <div>
+          {links.map(([name, link]) => {
+            return (
+              <Link key={name} href={link} passHref>
+                <TextHeaderTwo sx={{ display: "inline-block" }}>
+                  <a
+                    sx={{
+                      variant: "styles.navlink",
+                      pr: 2,
+                    }}
+                  >
+                    {name}
+                  </a>
+                </TextHeaderTwo>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </header>

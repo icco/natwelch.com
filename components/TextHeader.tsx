@@ -2,9 +2,9 @@ import { Heading } from "theme-ui";
 
 const TextHeader = (params) => {
   const headers = {
-    1: <Heading as="h1">{params.children}</Heading>,
-    2: <Heading as="h2">{params.children}</Heading>,
-    3: <Heading as="h3">{params.children}</Heading>,
+    1: <Heading as="h1" {...params}></Heading>,
+    2: <Heading as="h2" {...params}></Heading>,
+    3: <Heading as="h3" {...params}></Heading>,
   };
 
   let level = "1";

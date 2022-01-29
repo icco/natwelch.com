@@ -10,7 +10,6 @@ const Index = () => (
 
     <div
       sx={{
-        maxWidth: 8,
         alignContent: "center",
         pb: 3,
         mt: [5, 0],
@@ -20,7 +19,6 @@ const Index = () => (
 
       <Social
         className="items-center justify-center mt5 w4 w-100-ns center"
-        linkClassName="ma3 gray"
       />
     </div>
   </main>
