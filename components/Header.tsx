@@ -122,13 +122,15 @@ export function LargeHeader() {
           m: "2em",
         }}
       >
-        <TextHeaderOne>Nat Welch</TextHeaderOne>
-        <TextHeaderTwo>Software Reconnaissance Engineer</TextHeaderTwo>
+        <TextHeaderOne sx={{ my: 0 }}>Nat Welch</TextHeaderOne>
+        <TextHeaderTwo sx={{ my: 0 }}>
+          Software Reconnaissance Engineer
+        </TextHeaderTwo>
         <div>
           {links.map(([name, link]) => {
             return (
               <Link key={name} href={link} passHref>
-                <TextHeaderTwo sx={{ display: "inline-block" }}>
+                <TextHeaderTwo sx={{ display: "inline-block", my: 0 }}>
                   <a
                     sx={{
                       variant: "styles.navlink",
