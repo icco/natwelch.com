@@ -15,6 +15,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import slug from "rehype-slug";
+import { remarkDefinitionList } from "remark-definition-list";
 import gfm from "remark-gfm";
 import { Divider, Paragraph } from "theme-ui";
 
@@ -65,7 +66,7 @@ export const getStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [gfm],
+      remarkPlugins: [gfm, remarkDefinitionList],
       rehypePlugins: [slug],
     },
     scope: data,
