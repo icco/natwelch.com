@@ -1,4 +1,6 @@
+import Blockquote from "components/Blockquote";
 import Layout from "components/Layout";
+import { ListItem, OrderedList, UnorderedList } from "components/Lists";
 import TextHeader, {
   TextHeaderOne,
   TextHeaderThree,
@@ -12,8 +14,7 @@ import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
-import Blockquote from "components/Blockquote";
-import { Paragraph } from "theme-ui";
+import { Divider, Paragraph } from "theme-ui";
 
 // Custom components/renderers to pass to MDX. Since the MDX files aren't
 // loaded by webpack, they have no knowledge of how to handle import
@@ -31,6 +32,10 @@ const components = {
   h3: TextHeaderThree,
   blockquote: Blockquote,
   p: Paragraph,
+  hr: Divider,
+  ul: UnorderedList,
+  ol: OrderedList,
+  li: ListItem,
 };
 
 export default function PostPage({ source, frontMatter }) {

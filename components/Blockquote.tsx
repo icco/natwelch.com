@@ -5,8 +5,9 @@ const Blockquote = (params) => {
         borderWidth: "0.25rem",
         paddingLeft: "1rem",
         my: "1rem",
+        ml: 0,
         borderLeftStyle: "solid",
-        borderColor: "secondary",
+        borderColor: "border",
       }}
       {...params}
     ></blockquote>

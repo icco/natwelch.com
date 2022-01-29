@@ -27,6 +27,8 @@ export default function Layout(
               textDecoration: "underline",
             },
           },
+
+          li: {},
         }}
         {...props}
       ></main>
