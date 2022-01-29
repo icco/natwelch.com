@@ -17,9 +17,15 @@ const Index = () => (
     >
       <Header size={Size.Large} />
 
-      <Social
-        className="items-center justify-center mt5 w4 w-100-ns center"
-      />
+      <div
+        sx={{
+          width: "50%",
+          my: "2em",
+          mx: "auto",
+        }}
+      >
+        <Social />
+      </div>
     </div>
   </main>
 );

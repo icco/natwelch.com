@@ -7,11 +7,16 @@ const Social = () => {
           height: "2em",
           width: "2em",
         },
+        "a + a": {
+          marginLeft: "2%",
+        },
+        svg: {
+          fill: "text",
+        },
       }}
     >
       <a href="https://github.com/icco" title="GitHub" rel="me">
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -29,7 +34,6 @@ const Social = () => {
         rel="me"
       >
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -43,7 +47,6 @@ const Social = () => {
 
       <a href="https://linkedin.com/in/natwelch" title="LinkedIn" rel="me">
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -64,7 +67,6 @@ const Social = () => {
         rel="me"
       >
         <svg
-          fill="currentColor"
           fillRule="evenodd"
           clipRule="evenodd"
           strokeLinejoin="round"
@@ -79,7 +81,6 @@ const Social = () => {
 
       <a href="https://twitter.com/icco" title="Twitter" rel="me">
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -103,10 +104,8 @@ const Social = () => {
         {/* Source is at https://webring.xxiivv.com/icon.black.svg */}
         <svg
           clipRule="evenodd"
-          fill="currentColor"
           fillRule="evenodd"
           height="32"
-          stroke="currentColor"
           strokeLinejoin="round"
           strokeMiterlimit="1.414"
           viewBox="0 0 236 212"
@@ -129,10 +128,8 @@ const Social = () => {
         {/* Source is at https://somni.us/assets/images/merveilles-to-edge-white.svg */}
         <svg
           clipRule="evenodd"
-          fill="currentColor"
           fillRule="evenodd"
           height="32"
-          stroke="currentColor"
           strokeLinejoin="round"
           strokeMiterlimit="1.414"
           viewBox="0 0 310 310"
