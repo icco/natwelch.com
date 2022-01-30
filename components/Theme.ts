@@ -25,6 +25,7 @@ const root = {
         primary: Nord.nord1,
         secondary: Nord.nord4,
         link: Nord.nord10,
+        border: "#000",
       },
     },
   },
