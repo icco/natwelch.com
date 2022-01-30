@@ -1,10 +1,10 @@
-import "style.css";
-
+import Theme from "components/Theme";
 import Head from "next/head";
+import { ThemeProvider } from "theme-ui";
 
-function WWW({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
-    <>
+    <ThemeProvider theme={Theme}>
       <Head>
         <meta name="viewport" content="viewport-fit=cover" />
         <meta
@@ -19,14 +19,14 @@ function WWW({ Component, pageProps }) {
         <link rel="pingback" href="https://webmention.io/natwelch.com/xmlrpc" />
       </Head>
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 
 // Will be called once for every metric that has to be reported.
 export function reportWebVitals(metric) {
   const body = JSON.stringify(metric);
-  const url = "https://reportd.natwelch.com/analytics/natwelch.com";
+  const url = "https://reportd.natwelch.com/analytics/natwelch";
 
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
   if (navigator.sendBeacon) {
@@ -35,5 +35,3 @@ export function reportWebVitals(metric) {
     fetch(url, { body, method: "POST", keepalive: true });
   }
 }
-
-export default WWW;

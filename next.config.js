@@ -35,6 +35,10 @@ module.exports = {
                 "https://icco.auth0.com/",
                 "https://graphql.natwelch.com/graphql",
               ],
+              connectSrc: [
+                "'self'",
+                "https://reportd.natwelch.com/",
+              ],
               styleSrc: [
                 "'self'",
                 "'unsafe-inline'",
@@ -45,7 +49,6 @@ module.exports = {
                 "'self'",
                 "blob:",
                 "data:",
-                "https://a.natwelch.com",
                 "https://icco.imgix.net",
               ],
               scriptSrc: [
@@ -53,7 +56,6 @@ module.exports = {
                 "blob:",
                 "'unsafe-inline'",
                 "'unsafe-eval'",
-                "https://a.natwelch.com/tracker.js",
               ],
               objectSrc: ["'none'"],
               reportUri: "https://reportd.natwelch.com/report/natwelch",

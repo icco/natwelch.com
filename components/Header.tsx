@@ -1,92 +1,183 @@
 import { Logo } from "@icco/react-common";
-import TextHeader from "components/TextHeader";
+import { TextHeaderOne, TextHeaderTwo } from "components/TextHeader";
 import Link from "next/link";
 import React from "react";
 
-class Header extends React.Component<{ noLogo?: boolean; navtext?: string }> {
-  render() {
-    let prefix = <></>;
-    let nav = <></>;
-    let head = (
-      <>
-        <header className="pv0 ph3 ph4-m ph5-l oh pos-rel mt5">
-          <div className="dt wi-100">
-            <div className="dtc wi-50 v-mid">
-              <Logo
-                size={200}
-                className="v-mid mh0-ns dib-ns center ph0 logo"
-              />
-              <div className="dib v-mid pa0 pa3-ns">
-                <h1 className="mb2 tracked tl-ns tc w-100">Nat Welch</h1>
-                <h2 className="fw2 mt0 tracked tl-ns tc w-100">
-                  Software Reconnaissance Engineer
-                </h2>
-              </div>
-            </div>
-          </div>
-        </header>
-      </>
-    );
+const links = [
+  ["About", "/wiki/about"],
+  ["Wiki", "/wiki"],
+  ["Resume", "https://resume.natwelch.com"],
+];
 
-    if (this.props.noLogo) {
-      head = <></>;
-      nav = (
-        <div className="flex-grow flex-wrap pv3 ph3-ns pl0 pr0 ml6 ml0-ns flex items-center">
-          <Link href="/about">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">About</a>
+export function SmallHeader() {
+  return (
+    <header
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        variant: "styles.header",
+        pb: 3,
+        a: {
+          color: "text",
+          cursor: "pointer",
+          textDecoration: "none",
+          ":link,:any-link,:visited": { color: "text" },
+          ":focus,:active,:hover": {
+            color: "link",
+          },
+        },
+      }}
+    >
+      <Link href="/">
+        <a>
+          <Logo
+            size={50}
+            sx={{
+              verticalAlign: "middle",
+              py: 0,
+              my: [null, 1],
+              display: "inline-block",
+              textAlign: "center",
+              stroke: "text",
+            }}
+            className="logo"
+          />
+        </a>
+      </Link>
+      <div sx={{ mx: "auto" }} />
+
+      {links.map(([name, link]) => {
+        return (
+          <Link key={name} href={link} passHref>
+            <a
+              sx={{
+                variant: "styles.navlink",
+                p: 2,
+              }}
+            >
+              {name}
+            </a>
           </Link>
+        );
+      })}
+    </header>
+  );
+}
 
-          <Link href="/mentoring">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Mentoring</a>
-          </Link>
+export function SmallHeaderWithText({ navtext }) {
+  return (
+    <header
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        variant: "styles.header",
+        pb: 2,
+      }}
+    >
+      <Link href="/">
+        <a>
+          <Logo
+            size={50}
+            sx={{
+              verticalAlign: "middle",
+              py: 0,
+              my: [null, 1],
+              display: "inline-block",
+              textAlign: "center",
+              stroke: "text",
+            }}
+            className="logo"
+          />
+        </a>
+      </Link>
+      <div sx={{ mx: "auto" }} />
+      <TextHeaderOne sx={{ mr: 4 }}>{navtext}</TextHeaderOne>
+    </header>
+  );
+}
 
-          <Link href="/projects">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Projects</a>
-          </Link>
-
-          <Link href="/support">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Support</a>
-          </Link>
-
-          <Link href="/writing">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Writing</a>
-          </Link>
-
-          <Link href="/talks">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Talks</a>
-          </Link>
-
-          <Link href="https://resume.natwelch.com">
-            <a className="f6 dib mr3 mv1 mv0-ns mr4-ns">Resume</a>
-          </Link>
-        </div>
-      );
-      prefix = (
-        <Link href="/">
-          <a className="link dark-gray dim">
-            <Logo size={50} className="v-mid mh0-ns dib-ns center ph0 logo" />
-          </a>
-        </Link>
-      );
-    }
-
-    if (this.props.navtext) {
-      nav = (
-        <>
-          <TextHeader className="mr4">{this.props.navtext}</TextHeader>
-        </>
-      );
-    }
-
-    return (
-      <div>
-        <nav className="flex justify-between ttc">
-          <div className="flex items-center pa3">{prefix}</div>
-          {nav}
-        </nav>
-        {head}
+export function LargeHeader() {
+  return (
+    <header
+      sx={{
+        display: "flex",
+        width: "100%",
+        flexDirection: "column",
+        alignItems: "center",
+        py: 0,
+        px: [3, 4, 5],
+        mt: 5,
+        textAlign: "center",
+      }}
+    >
+      <div
+        sx={{
+          width: "200px",
+          verticalAlign: "middle",
+        }}
+      >
+        <Logo
+          size={200}
+          sx={{
+            py: 0,
+            my: [null, 1],
+            stroke: "text",
+          }}
+        />
       </div>
-    );
+      <div
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: "column",
+          flexGrow: 1,
+          m: "1.5em",
+        }}
+      >
+        <TextHeaderOne sx={{ mt: 0, mb: "0.75em" }}>Nat Welch</TextHeaderOne>
+        <TextHeaderTwo sx={{ my: "0.75em" }}>
+          Software Reconnaissance Engineer
+        </TextHeaderTwo>
+        <div sx={{ mt: "0.75em", mb: 0 }}>
+          {links.map(([name, link]) => {
+            return (
+              <Link key={name} href={link} passHref>
+                <TextHeaderTwo sx={{ display: "inline-block", my: 0 }}>
+                  <a
+                    sx={{
+                      variant: "styles.navlink",
+                      px: 2,
+                      my: 0,
+                    }}
+                  >
+                    {name}
+                  </a>
+                </TextHeaderTwo>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export enum Size {
+  Small = "small",
+  Medium = "medium",
+  Large = "large",
+}
+
+class Header extends React.Component<{ size: Size; navtext?: string }> {
+  render() {
+    switch (this.props.size) {
+      case Size.Large:
+        return <LargeHeader />;
+      case Size.Medium:
+        return <SmallHeaderWithText navtext={this.props.navtext} />;
+      case Size.Small:
+        return <SmallHeader />;
+    }
   }
 }
 

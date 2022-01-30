@@ -1,16 +1,29 @@
-const Social = (params) => {
-  const link_class = "link " + params.linkClassName;
-
+const Social = () => {
   return (
-    <nav className={params.className + " flex flex-wrap ttc"}>
-      <a
-        className={link_class + " h2 w2"}
-        href="https://github.com/icco"
-        title="GitHub"
-        rel="me"
-      >
+    <nav
+      sx={{
+        display: "flex",
+        a: {
+          color: "link",
+          textDecoration: "none",
+          ":link,:any-link,:visited": { color: "link" },
+          ":focus,:active,:hover": {
+            color: "secondary",
+            textDecoration: "underline",
+          },
+          mx: "10px",
+        },
+        svg: {
+          fill: "currentColor",
+          height: "32px",
+          width: "32px",
+        },
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <a href="https://github.com/icco" title="GitHub" rel="me">
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -23,13 +36,11 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         href="https://instagram.com/probablynatwelch"
         title="Instagram"
         rel="me"
       >
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -41,14 +52,8 @@ const Social = (params) => {
         </svg>
       </a>
 
-      <a
-        className={link_class + " h2 w2"}
-        href="https://linkedin.com/in/natwelch"
-        title="LinkedIn"
-        rel="me"
-      >
+      <a href="https://linkedin.com/in/natwelch" title="LinkedIn" rel="me">
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -64,13 +69,11 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         href="https://www.goodreads.com/author/show/18143346.Nat_Welch"
         title="Goodreads"
         rel="me"
       >
         <svg
-          fill="currentColor"
           fillRule="evenodd"
           clipRule="evenodd"
           strokeLinejoin="round"
@@ -83,14 +86,8 @@ const Social = (params) => {
         </svg>
       </a>
 
-      <a
-        className={link_class + " h2 w2"}
-        href="https://twitter.com/icco"
-        title="Twitter"
-        rel="me"
-      >
+      <a href="https://twitter.com/icco" title="Twitter" rel="me">
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fillRule="evenodd"
@@ -106,7 +103,6 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         title="Webring"
         href="https://webring.xxiivv.com/#random"
         target="_blank"
@@ -115,10 +111,8 @@ const Social = (params) => {
         {/* Source is at https://webring.xxiivv.com/icon.black.svg */}
         <svg
           clipRule="evenodd"
-          fill="currentColor"
           fillRule="evenodd"
           height="32"
-          stroke="currentColor"
           strokeLinejoin="round"
           strokeMiterlimit="1.414"
           viewBox="0 0 236 212"
@@ -133,7 +127,6 @@ const Social = (params) => {
       </a>
 
       <a
-        className={link_class + " h2 w2"}
         title="Mastodon / merveilles.town"
         href="https://merveilles.town/@icco"
         target="_blank"
@@ -142,10 +135,8 @@ const Social = (params) => {
         {/* Source is at https://somni.us/assets/images/merveilles-to-edge-white.svg */}
         <svg
           clipRule="evenodd"
-          fill="currentColor"
           fillRule="evenodd"
           height="32"
-          stroke="currentColor"
           strokeLinejoin="round"
           strokeMiterlimit="1.414"
           viewBox="0 0 310 310"

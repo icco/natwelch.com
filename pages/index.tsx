@@ -1,64 +1,51 @@
-import App from "components/App";
-import Header from "components/Header";
+import Header, { Size } from "components/Header";
 import Social from "components/Social";
 import Head from "next/head";
-import Link from "next/link";
-
-const h2_class = "link dim gray fw2 f2 f3-ns dib ma3";
-const link_class = "link";
 
 const Index = () => (
-  <App>
+  <main
+    sx={{
+      maxWidth: 768,
+      mx: [0, "auto"],
+      width: "100%",
+      flex: "1 1 auto",
+
+      a: {
+        cursor: "pointer",
+        color: "link",
+        textDecoration: "none",
+        ":link,:any-link,:visited": { color: "link" },
+        ":focus,:active,:hover": {
+          color: "secondary",
+          textDecoration: "underline",
+        },
+      },
+    }}
+  >
     <Head>
       <title>Nat Welch</title>
     </Head>
 
-    <div className="pb3 mw8 center mt5 mt0-ns">
-      <Header />
-      <nav className="flex flex-wrap items-center justify-center ttc">
-        <Link href="/about" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>About</a>
-          </h2>
-        </Link>
-        <Link href="/mentoring" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Mentoring</a>
-          </h2>
-        </Link>
-        <Link href="/projects" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Projects</a>
-          </h2>
-        </Link>
-        <Link href="/support" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Support</a>
-          </h2>
-        </Link>
-        <Link href="/writing" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Writing</a>
-          </h2>
-        </Link>
-        <Link href="/talks" passHref>
-          <h2 className={h2_class}>
-            <a className={link_class}>Talks</a>
-          </h2>
-        </Link>
-        <h2 className={h2_class}>
-          <a className={link_class} href="https://resume.natwelch.com">
-            Resume
-          </a>
-        </h2>
-      </nav>
+    <div
+      sx={{
+        alignContent: "center",
+        pb: 3,
+        mt: [5, 0],
+      }}
+    >
+      <Header size={Size.Large} />
 
-      <Social
-        className="items-center justify-center mt5 w4 w-100-ns center"
-        linkClassName="ma3 gray"
-      />
+      <div
+        sx={{
+          px: [3, 4, 5],
+          py: 0,
+          mt: 0,
+        }}
+      >
+        <Social />
+      </div>
     </div>
-  </App>
+  </main>
 );
 
 export default Index;
