@@ -1,3 +1,7 @@
+import { isObject } from "lodash";
+import Link from "next/link";
+import React from "react";
+
 const UnorderedList = (params) => {
   return (
     <ul
@@ -40,4 +44,35 @@ const ListItem = (params) => {
   );
 };
 
-export { ListItem, OrderedList, UnorderedList };
+const Tree = ({ items }) => {
+  return (
+    <UnorderedList key={`ul`}>
+      {Object.keys(items).map((k) => {
+        const value = items[k];
+        if (!isObject(value)) {
+          return <React.Fragment key={`${k}-empty`}></React.Fragment>;
+        }
+
+        let li = <></>;
+        if ("title" in value && "path" in value) {
+          li = (
+            <ListItem key={value.path}>
+              <Link href={`/wiki/${value.path}`}>
+                <a>{value.title}</a>
+              </Link>
+            </ListItem>
+          );
+        }
+
+        return (
+          <React.Fragment key={`${k}-root`}>
+            {li}
+            <Tree key={`${k}-tree`} items={value}></Tree>
+          </React.Fragment>
+        );
+      })}
+    </UnorderedList>
+  );
+};
+
+export { ListItem, OrderedList, Tree, UnorderedList };
