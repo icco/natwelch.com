@@ -21,12 +21,6 @@ const Privacy = () => (
       Data is stored on a database hosted in the US on Google Cloud Platform. We
       also utilize Google Analytics on some sites and Auth0 on others.
     </p>
-
-    <TextHeader level="2">Tab Archive</TextHeader>
-    <p>
-      For Tab Archive&apos;s privacy policy, please see{" "}
-      <a href="https://tab-archive.app">tab-archive.app</a>.
-    </p>
   </Layout>
 );
 

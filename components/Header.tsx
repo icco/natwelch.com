@@ -48,7 +48,7 @@ export function SmallHeader() {
 
       {links.map(([name, link]) => {
         return (
-          <Link key={name} href={link}>
+          <Link key={name} href={link} passHref>
             <a
               sx={{
                 variant: "styles.navlink",

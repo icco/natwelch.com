@@ -1,4 +1,6 @@
 import { DateTime } from "luxon";
+import Link from "next/link";
+import { Paragraph } from "theme-ui";
 
 export default function Footer() {
   return (
@@ -7,12 +9,31 @@ export default function Footer() {
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
-        p: 2,
+        p: 0,
+        mt: 5,
+        mb: 1,
         variant: "styles.footer",
+
+        a: {
+          color: "link",
+          textDecoration: "none",
+          ":link,:any-link,:visited": { color: "link" },
+          ":focus,:active,:hover": {
+            color: "secondary",
+            textDecoration: "underline",
+          },
+        },
       }}
     >
+      <Paragraph as="small" sx={{ p: 0 }}>
+        <Link href={"/privacy"}>
+          <a>Privacy</a>
+        </Link>
+      </Paragraph>
       <div sx={{ mx: "auto" }} />
-      <div sx={{ p: 2 }}>&copy; Nat Welch {DateTime.now().year}</div>
+      <Paragraph as="small" sx={{ p: 0 }}>
+        &copy; Nat Welch {DateTime.now().year}
+      </Paragraph>
     </footer>
   );
 }
