@@ -1,4 +1,4 @@
-import { isObject } from "lodash";
+import { isString } from "lodash";
 import Link from "next/link";
 import React from "react";
 
@@ -49,7 +49,7 @@ const Tree = ({ items }) => {
     <UnorderedList key={`ul`}>
       {Object.keys(items).map((k) => {
         const value = items[k];
-        if (!isObject(value)) {
+        if (isString(value)) {
           return <React.Fragment key={`${k}-empty`}></React.Fragment>;
         }
 
