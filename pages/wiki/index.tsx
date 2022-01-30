@@ -1,3 +1,4 @@
+import TableTree from "@atlaskit/table-tree";
 import Layout from "components/Layout";
 import { TextHeaderOne } from "components/TextHeader";
 import fs from "fs";
@@ -7,6 +8,13 @@ import Head from "next/head";
 import Link from "next/link";
 
 function Wiki({ paths, pathData }) {
+  const treeItems = paths.map((path) => {
+    return {
+      id: path,
+      content: pathData[path],
+      children: [],
+    };
+  });
   return (
     <Layout>
       <Head>
@@ -14,6 +22,8 @@ function Wiki({ paths, pathData }) {
       </Head>
 
       <TextHeaderOne>Wiki</TextHeaderOne>
+
+      <TableTree items={treeItems} />
 
       <ul>
         {paths.map((element: string) => {
