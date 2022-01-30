@@ -8,12 +8,11 @@ import TextHeader, {
 } from "components/TextHeader";
 import fs from "fs";
 import matter from "gray-matter";
-import { getPaths, POSTS_PATH } from "lib/mdx";
+import { getPaths, slugToFilePath } from "lib/mdx";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import path from "path";
 import slug from "rehype-slug";
 import { remarkDefinitionList } from "remark-definition-list";
 import gfm from "remark-gfm";
@@ -53,8 +52,7 @@ export default function PostPage({ source, frontMatter }) {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const postFilePath = `${path.join(POSTS_PATH, ...params.slug)}.mdx`;
-
+  const postFilePath = slugToFilePath(params.slug.join("/"));
   if (!fs.existsSync(postFilePath)) {
     return { notFound: true };
   }

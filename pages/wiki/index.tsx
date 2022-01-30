@@ -1,10 +1,12 @@
 import Layout from "components/Layout";
 import { TextHeaderOne } from "components/TextHeader";
-import { getPaths } from "lib/mdx";
+import fs from "fs";
+import matter from "gray-matter";
+import { getPaths, slugToFilePath } from "lib/mdx";
 import Head from "next/head";
 import Link from "next/link";
 
-function Wiki({ paths }) {
+function Wiki({ paths, pathData }) {
   return (
     <Layout>
       <Head>
@@ -19,7 +21,7 @@ function Wiki({ paths }) {
             <li key={element}>
               <Link href={`/wiki/${element}`}>
                 <a sx={{ textTransform: "capitalize", cursor: "pointer" }}>
-                  {element.replaceAll("-", " ")}
+                  {pathData[element].title ?? element}
                 </a>
               </Link>
             </li>
@@ -29,12 +31,23 @@ function Wiki({ paths }) {
     </Layout>
   );
 }
+
 export const getStaticProps = async () => {
   const paths = await getPaths();
+  const pathData = paths.reduce((prev, current) => {
+    const postFilePath = slugToFilePath(current);
+    const source = fs.readFileSync(postFilePath);
+    const { data } = matter(source);
+    return {
+      ...prev,
+      [current]: data,
+    };
+  }, {});
 
   return {
     props: {
       paths,
+      pathData,
     },
   };
 };
