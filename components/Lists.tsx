@@ -77,8 +77,9 @@ const Tree = ({ items }) => {
 };
 
 // Inspo: https://github.com/alphardex/aqua.css/blob/master/src/breadcrumb.scss
-const Breadcrumbs = ({ path }) => {
-  const pieces = `wiki/${path}`.split("/");
+const Breadcrumbs = (params) => {
+  const path = params.path ?? ""
+  const pieces = `wiki/${path}`.split("/").filter((piece) => { return !!piece });
   return (
     <div sx={{}}>
       <UnorderedList
@@ -87,6 +88,8 @@ const Breadcrumbs = ({ path }) => {
           margin: 0,
           padding: 0,
           listStyleType: "none",
+          alignItems: "center",
+          justifyContent: "right",
         }}
       >
         {pieces.map((piece: string, index: number) => {
@@ -94,15 +97,14 @@ const Breadcrumbs = ({ path }) => {
             <ListItem
               key={piece}
               sx={{
-                "&:not(:first-child)": {
                   paddingLeft: ".5rem",
+                  margin: 0,
 
                   "&::before": {
                     content: '"/"',
                     paddingRight: ".5rem",
                     color: "text",
                   },
-                },
 
                 "&:not(:last-child)": {
                   a: {
@@ -123,22 +125,6 @@ const Breadcrumbs = ({ path }) => {
                     position: "relative",
                     textDecoration: "none",
                     cursor: "pointer",
-
-                    "&::before": {
-                      position: "absolute",
-                      content: '""',
-                      bottom: 0,
-                      left: 0,
-                      width: "100%",
-                      height: 0.25,
-                      background: "currentColor",
-                      transform: "scaleX(0)",
-                      transition: "0.3s",
-                    },
-
-                    "&:hover::before": {
-                      transform: "scaleX(1)",
-                    },
                   }}
                 >
                   {piece}
