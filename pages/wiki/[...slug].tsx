@@ -1,6 +1,11 @@
 import Blockquote from "components/Blockquote";
 import Layout from "components/Layout";
-import { ListItem, OrderedList, UnorderedList } from "components/Lists";
+import {
+  Breadcrumbs,
+  ListItem,
+  OrderedList,
+  UnorderedList,
+} from "components/Lists";
 import TextHeader, {
   TextHeaderOne,
   TextHeaderThree,
@@ -46,6 +51,7 @@ export default function PostPage({ source, frontMatter }) {
       <Head>
         <title>Nat Welch | {frontMatter.title}</title>
       </Head>
+      <Breadcrumbs path={frontMatter.path} />
       <MDXRemote {...source} components={components} />
     </Layout>
   );
