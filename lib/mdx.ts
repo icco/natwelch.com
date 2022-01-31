@@ -7,7 +7,7 @@ import path from "path";
 // POSTS_PATH is useful when you want to get the path to a specific file
 export const POSTS_PATH = path.join(process.cwd(), "wiki/");
 
-export async function getPaths() {
+export async function getPaths(): Promise<string[]> {
   const paths: string[] = [];
   await walk(
     POSTS_PATH,
@@ -40,9 +40,13 @@ export function slugToFilePath(slug: string): string {
   return `${path.join(POSTS_PATH, slug)}.mdx`;
 }
 
-export async function buildTree() {
+export async function buildTree(filter?: (value: string) => boolean) {
   let tree = {};
-  const paths = await getPaths();
+  let paths = await getPaths();
+  if (filter) {
+    paths = paths.filter(filter);
+  }
+
   paths.forEach((path) => {
     tree = merge(tree, buildTreeInt(path, path));
   });

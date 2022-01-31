@@ -1,3 +1,4 @@
+import { buildTree } from "lib/mdx";
 import { isString } from "lodash";
 import Link from "next/link";
 import React from "react";
@@ -75,4 +76,16 @@ const Tree = ({ items }) => {
   );
 };
 
-export { ListItem, OrderedList, Tree, UnorderedList };
+const WikiTree = async ({ root }) => {
+  if (!isString(root) || root == "" || !root.startsWith("/")) {
+    throw new Error("root must be a path starting with /");
+  }
+
+  const data = await buildTree((path) => {
+    return path.startsWith(root.replace("/", ""));
+  });
+
+  return <Tree items={data}></Tree>;
+};
+
+export { ListItem, OrderedList, Tree, UnorderedList, WikiTree };
