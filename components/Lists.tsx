@@ -78,7 +78,7 @@ const Tree = ({ items }) => {
 
 // Inspo: https://github.com/alphardex/aqua.css/blob/master/src/breadcrumb.scss
 const Breadcrumbs = ({ path }) => {
-  const pieces = path.split("/");
+  const pieces = `wiki/${path}`.split("/");
   return (
     <div sx={{}}>
       <UnorderedList
@@ -88,32 +88,16 @@ const Breadcrumbs = ({ path }) => {
           padding: 0,
           listStyleType: "none",
 
-          a: {
-            position: "relative",
-            textDecoration: "none",
-
-            "&::before": {
-              position: "absolute",
-              content: "",
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              height: "unit(0.25)",
-              background: "currentColor",
-              transform: "scaleX(0)",
-              transition: "0.3s",
-            },
-
-            "&:hover::before": {
-              transform: "scaleX(1)",
-            },
-          },
-
+        }}
+      >
+        {pieces.map((piece: string, index: number) => {
+          return (
+            <ListItem key={piece} sx={{
           "&:not(:first-child)": {
             paddingLeft: "unit(2.25)",
 
             "&::before": {
-              content: "/",
+              content: '"/"',
               paddingRight: "unit(2.25)",
               color: "text",
             },
@@ -130,13 +114,28 @@ const Breadcrumbs = ({ path }) => {
               color: "primary",
             },
           },
-        }}
-      >
-        {pieces.map((piece: string, index: number) => {
-          return (
-            <ListItem key={piece}>
-              <Link href={`/wiki/${pieces.slice(0, index + 1).join("/")}`}>
-                <a>{piece}</a>
+            }}>
+              <Link href={`/${pieces.slice(0, index + 1).join("/")}`}>
+                <a sx={{
+            position: "relative",
+            textDecoration: "none",
+
+            "&::before": {
+              position: "absolute",
+              content: '""',
+              bottom: 0,
+              left: 0,
+              width: "100%",
+              height: "unit(0.25)",
+              background: "currentColor",
+              transform: "scaleX(0)",
+              transition: "0.3s",
+            },
+
+            "&:hover::before": {
+              transform: "scaleX(1)",
+            },
+                }}>{piece}</a>
               </Link>
             </ListItem>
           );
