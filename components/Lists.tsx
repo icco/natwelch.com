@@ -1,5 +1,6 @@
 import { isString } from "lodash";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { Divider } from "theme-ui";
 
@@ -77,9 +78,13 @@ const Tree = ({ items }) => {
 };
 
 // Inspo: https://github.com/alphardex/aqua.css/blob/master/src/breadcrumb.scss
-const Breadcrumbs = (params) => {
-  const path = params.path ?? ""
-  const pieces = `wiki/${path}`.split("/").filter((piece) => { return !!piece });
+const Breadcrumbs = () => {
+  const router = useRouter();
+  const path = router.asPath;
+
+  const pieces = path.split("/").filter((piece) => {
+    return !!piece;
+  });
   return (
     <div sx={{}}>
       <UnorderedList
@@ -97,14 +102,14 @@ const Breadcrumbs = (params) => {
             <ListItem
               key={piece}
               sx={{
-                  paddingLeft: ".5rem",
-                  margin: 0,
+                paddingLeft: ".5rem",
+                margin: 0,
 
-                  "&::before": {
-                    content: '"/"',
-                    paddingRight: ".5rem",
-                    color: "text",
-                  },
+                "&::before": {
+                  content: '"/"',
+                  paddingRight: ".5rem",
+                  color: "text",
+                },
 
                 "&:not(:last-child)": {
                   a: {

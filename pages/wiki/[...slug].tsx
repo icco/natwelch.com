@@ -51,7 +51,6 @@ export default function PostPage({ source, frontMatter }) {
       <Head>
         <title>Nat Welch | {frontMatter.title}</title>
       </Head>
-      <Breadcrumbs path={frontMatter.path} />
       <MDXRemote {...source} components={components} />
     </Layout>
   );

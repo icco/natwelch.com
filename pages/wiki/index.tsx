@@ -1,5 +1,5 @@
 import Layout from "components/Layout";
-import { Tree, Breadcrumbs } from "components/Lists";
+import { Tree } from "components/Lists";
 import { TextHeaderOne } from "components/TextHeader";
 import { buildTree } from "lib/mdx";
 import Head from "next/head";
@@ -10,8 +10,6 @@ function Wiki({ pathData }) {
       <Head>
         <title>Nat Welch | Wiki</title>
       </Head>
-
-      <Breadcrumbs />
 
       <TextHeaderOne>Wiki</TextHeaderOne>
 
