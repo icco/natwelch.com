@@ -76,6 +76,7 @@ const Tree = ({ items }) => {
   );
 };
 
+// Inspo: https://codepen.io/alphardex/pen/WNvLvgX
 const Breadcrumbs = ({ path }) => {
   const pieces = path.split("/");
   return (
