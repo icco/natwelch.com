@@ -1,7 +1,6 @@
 import Blockquote from "components/Blockquote";
 import Layout from "components/Layout";
 import {
-  Breadcrumbs,
   ListItem,
   OrderedList,
   UnorderedList,
