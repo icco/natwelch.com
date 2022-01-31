@@ -92,7 +92,7 @@ const Breadcrumbs = ({ path }) => {
         {pieces.map((piece: string, index: number) => {
           return (
             <ListItem key={piece}>
-              <Link href={`/wiki/${pieces.slice(0, index).join("/")}`}>
+              <Link href={`/wiki/${pieces.slice(0, index + 1).join("/")}`}>
                 <a>{piece}</a>
               </Link>
             </ListItem>
