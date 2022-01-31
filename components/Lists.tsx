@@ -87,61 +87,67 @@ const Breadcrumbs = ({ path }) => {
           margin: 0,
           padding: 0,
           listStyleType: "none",
-
         }}
       >
         {pieces.map((piece: string, index: number) => {
           return (
-            <ListItem key={piece} sx={{
-          "&:not(:first-child)": {
-            paddingLeft: "unit(2.25)",
+            <ListItem
+              key={piece}
+              sx={{
+                "&:not(:first-child)": {
+                  paddingLeft: ".5rem",
 
-            "&::before": {
-              content: '"/"',
-              paddingRight: "unit(2.25)",
-              color: "text",
-            },
-          },
+                  "&::before": {
+                    content: '"/"',
+                    paddingRight: ".5rem",
+                    color: "text",
+                  },
+                },
 
-          "&:not(:last-child)": {
-            a: {
-              color: "secondary",
-            },
-          },
+                "&:not(:last-child)": {
+                  a: {
+                    color: "link",
+                  },
+                },
 
-          "&:last-child": {
-            a: {
-              color: "primary",
-            },
-          },
-            }}>
+                "&:last-child": {
+                  a: {
+                    color: "secondary",
+                  },
+                },
+              }}
+            >
               <Link href={`/${pieces.slice(0, index + 1).join("/")}`}>
-                <a sx={{
-            position: "relative",
-            textDecoration: "none",
+                <a
+                  sx={{
+                    position: "relative",
+                    textDecoration: "none",
+                    cursor: "pointer",
 
-            "&::before": {
-              position: "absolute",
-              content: '""',
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              height: "unit(0.25)",
-              background: "currentColor",
-              transform: "scaleX(0)",
-              transition: "0.3s",
-            },
+                    "&::before": {
+                      position: "absolute",
+                      content: '""',
+                      bottom: 0,
+                      left: 0,
+                      width: "100%",
+                      height: 0.25,
+                      background: "currentColor",
+                      transform: "scaleX(0)",
+                      transition: "0.3s",
+                    },
 
-            "&:hover::before": {
-              transform: "scaleX(1)",
-            },
-                }}>{piece}</a>
+                    "&:hover::before": {
+                      transform: "scaleX(1)",
+                    },
+                  }}
+                >
+                  {piece}
+                </a>
               </Link>
             </ListItem>
           );
         })}
       </UnorderedList>
-      <Divider />
     </div>
   );
 };
