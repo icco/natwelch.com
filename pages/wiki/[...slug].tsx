@@ -1,6 +1,11 @@
 import Blockquote from "components/Blockquote";
 import Layout from "components/Layout";
-import { ListItem, OrderedList, UnorderedList } from "components/Lists";
+import {
+  ListItem,
+  OrderedList,
+  UnorderedList,
+  WikiTree,
+} from "components/Lists";
 import TextHeader, {
   TextHeaderOne,
   TextHeaderThree,
@@ -29,15 +34,16 @@ const components = {
   Head,
   Social: dynamic(() => import("components/Social")),
   TextHeader,
+  WikiTree,
+  blockquote: Blockquote,
   h1: TextHeaderOne,
   h2: TextHeaderTwo,
   h3: TextHeaderThree,
-  blockquote: Blockquote,
-  p: Paragraph,
   hr: Divider,
-  ul: UnorderedList,
-  ol: OrderedList,
   li: ListItem,
+  ol: OrderedList,
+  p: Paragraph,
+  ul: UnorderedList,
 };
 
 export default function PostPage({ source, frontMatter }) {
