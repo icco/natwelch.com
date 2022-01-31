@@ -14,6 +14,9 @@ module.exports = {
     PORT: port,
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
+  eslint: {
+    dirs: ['pages', 'lib', 'components', 'wiki'],
+  },
   async redirects() {
     return [
       {

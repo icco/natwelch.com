@@ -1,10 +1,10 @@
 import Layout from "components/Layout";
+import { Tree } from "components/Lists";
 import { TextHeaderOne } from "components/TextHeader";
-import { getPaths } from "lib/mdx";
+import { buildTree } from "lib/mdx";
 import Head from "next/head";
-import Link from "next/link";
 
-function Wiki({ paths }) {
+function Wiki({ pathData }) {
   return (
     <Layout>
       <Head>
@@ -13,28 +13,17 @@ function Wiki({ paths }) {
 
       <TextHeaderOne>Wiki</TextHeaderOne>
 
-      <ul>
-        {paths.map((element: string) => {
-          return (
-            <li key={element}>
-              <Link href={`/wiki/${element}`}>
-                <a sx={{ textTransform: "capitalize", cursor: "pointer" }}>
-                  {element.replaceAll("-", " ")}
-                </a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <Tree key="root" items={pathData}></Tree>
     </Layout>
   );
 }
+
 export const getStaticProps = async () => {
-  const paths = await getPaths();
+  const pathData = await buildTree();
 
   return {
     props: {
-      paths,
+      pathData,
     },
   };
 };
