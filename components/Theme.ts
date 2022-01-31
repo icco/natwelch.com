@@ -17,7 +17,7 @@ const root = {
     primary: Nord.nord1,
     secondary: Nord.nord4,
     link: Nord.nord9,
-    border: Nord.nord3,
+    border: Nord.nord4,
     modes: {
       print: {
         background: "#fff",
