@@ -3,6 +3,8 @@ import { TextHeaderOne, TextHeaderTwo } from "components/TextHeader";
 import Link from "next/link";
 import React from "react";
 
+import { Breadcrumbs } from "./Lists";
+
 const links = [
   ["About", "/wiki/about"],
   ["Wiki", "/wiki"],
@@ -13,53 +15,59 @@ export function SmallHeader() {
   return (
     <header
       sx={{
-        display: "flex",
-        alignItems: "center",
-        variant: "styles.header",
         pb: 3,
-        a: {
-          color: "text",
-          cursor: "pointer",
-          textDecoration: "none",
-          ":link,:any-link,:visited": { color: "text" },
-          ":focus,:active,:hover": {
-            color: "link",
-          },
-        },
+        variant: "styles.header",
       }}
     >
-      <Link href="/">
-        <a>
-          <Logo
-            size={50}
-            sx={{
-              verticalAlign: "middle",
-              py: 0,
-              my: [null, 1],
-              display: "inline-block",
-              textAlign: "center",
-              stroke: "text",
-            }}
-            className="logo"
-          />
-        </a>
-      </Link>
-      <div sx={{ mx: "auto" }} />
-
-      {links.map(([name, link]) => {
-        return (
-          <Link key={name} href={link} passHref>
-            <a
+      <div
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          a: {
+            color: "text",
+            cursor: "pointer",
+            textDecoration: "none",
+            ":link,:any-link,:visited": { color: "text" },
+            ":focus,:active,:hover": {
+              color: "link",
+            },
+          },
+        }}
+      >
+        <Link href="/">
+          <a>
+            <Logo
+              size={50}
               sx={{
-                variant: "styles.navlink",
-                p: 2,
+                verticalAlign: "middle",
+                py: 0,
+                my: [null, 1],
+                display: "inline-block",
+                textAlign: "center",
+                stroke: "text",
               }}
-            >
-              {name}
-            </a>
-          </Link>
-        );
-      })}
+              className="logo"
+            />
+          </a>
+        </Link>
+        <div sx={{ mx: "auto" }} />
+
+        {links.map(([name, link]) => {
+          return (
+            <Link key={name} href={link} passHref>
+              <a
+                sx={{
+                  variant: "styles.navlink",
+                  p: 2,
+                }}
+              >
+                {name}
+              </a>
+            </Link>
+          );
+        })}
+      </div>
+      <Breadcrumbs />
     </header>
   );
 }

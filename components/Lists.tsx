@@ -1,5 +1,6 @@
 import { isString } from "lodash";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 const UnorderedList = (params) => {
@@ -75,4 +76,70 @@ const Tree = ({ items }) => {
   );
 };
 
-export { ListItem, OrderedList, Tree, UnorderedList };
+// Inspo: https://github.com/alphardex/aqua.css/blob/master/src/breadcrumb.scss
+const Breadcrumbs = () => {
+  const router = useRouter();
+  const path = router.asPath;
+
+  const pieces = path.split("/").filter((piece) => {
+    return !!piece;
+  });
+  return (
+    <div sx={{}}>
+      <UnorderedList
+        sx={{
+          display: "flex",
+          margin: 0,
+          padding: 0,
+          listStyleType: "none",
+          alignItems: "center",
+          justifyContent: "right",
+        }}
+      >
+        {pieces.map((piece: string, index: number) => {
+          return (
+            <ListItem
+              key={piece}
+              sx={{
+                paddingLeft: ".5rem",
+                margin: 0,
+
+                "&::before": {
+                  content: '"/"',
+                  paddingRight: ".5rem",
+                  color: "text",
+                },
+
+                "&:not(:last-child)": {
+                  a: {
+                    color: "link",
+                  },
+                },
+
+                "&:last-child": {
+                  a: {
+                    color: "secondary",
+                  },
+                },
+              }}
+            >
+              <Link href={`/${pieces.slice(0, index + 1).join("/")}`}>
+                <a
+                  sx={{
+                    position: "relative",
+                    textDecoration: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  {piece}
+                </a>
+              </Link>
+            </ListItem>
+          );
+        })}
+      </UnorderedList>
+    </div>
+  );
+};
+
+export { Breadcrumbs, ListItem, OrderedList, Tree, UnorderedList };

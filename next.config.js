@@ -36,11 +36,11 @@ module.exports = {
               defaultSrc: [
                 "'self'",
                 "https://icco.auth0.com/",
-                "https://graphql.natwelch.com/graphql",
+                "https://*.natwelch.com/",
               ],
               connectSrc: [
                 "'self'",
-                "https://reportd.natwelch.com/",
+                "https://*.natwelch.com/",
               ],
               styleSrc: [
                 "'self'",
