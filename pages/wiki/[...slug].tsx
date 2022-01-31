@@ -1,10 +1,6 @@
 import Blockquote from "components/Blockquote";
 import Layout from "components/Layout";
-import {
-  ListItem,
-  OrderedList,
-  UnorderedList,
-} from "components/Lists";
+import { ListItem, OrderedList, UnorderedList } from "components/Lists";
 import TextHeader, {
   TextHeaderOne,
   TextHeaderThree,
