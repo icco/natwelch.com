@@ -85,8 +85,8 @@ const Breadcrumbs = () => {
     return !!piece;
   });
   return (
-    <div sx={{}}>
-      <UnorderedList
+    <nav sx={{}}>
+      <OrderedList
         sx={{
           display: "flex",
           margin: 0,
@@ -94,6 +94,7 @@ const Breadcrumbs = () => {
           listStyleType: "none",
           alignItems: "center",
           justifyContent: "right",
+          flexWrap: "wrap",
         }}
       >
         {pieces.map((piece: string, index: number) => {
@@ -137,8 +138,8 @@ const Breadcrumbs = () => {
             </ListItem>
           );
         })}
-      </UnorderedList>
-    </div>
+      </OrderedList>
+    </nav>
   );
 };
 

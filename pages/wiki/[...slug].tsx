@@ -1,6 +1,8 @@
 import Blockquote from "components/Blockquote";
+import { Divider } from "components/Divider";
 import Layout from "components/Layout";
 import { ListItem, OrderedList, UnorderedList } from "components/Lists";
+import { Paragraph } from "components/Paragraph";
 import TextHeader, {
   TextHeaderOne,
   TextHeaderThree,
@@ -16,7 +18,6 @@ import { serialize } from "next-mdx-remote/serialize";
 import slug from "rehype-slug";
 import { remarkDefinitionList } from "remark-definition-list";
 import gfm from "remark-gfm";
-import { Divider, Paragraph } from "theme-ui";
 
 // Custom components/renderers to pass to MDX. Since the MDX files aren't
 // loaded by webpack, they have no knowledge of how to handle import
