@@ -5,12 +5,6 @@ import React from "react";
 
 import { Breadcrumbs } from "./Lists";
 
-const links = [
-  ["About", "/wiki/about"],
-  ["Wiki", "/wiki"],
-  ["Resume", "https://resume.natwelch.com"],
-];
-
 export function SmallHeader() {
   return (
     <header
@@ -51,23 +45,10 @@ export function SmallHeader() {
           </a>
         </Link>
         <div sx={{ mx: "auto" }} />
-
-        {links.map(([name, link]) => {
-          return (
-            <Link key={name} href={link} passHref>
-              <a
-                sx={{
-                  variant: "styles.navlink",
-                  p: 2,
-                }}
-              >
-                {name}
-              </a>
-            </Link>
-          );
-        })}
+        <div sx={{ width: "3em" }}>
+          <Breadcrumbs />
+        </div>
       </div>
-      <Breadcrumbs />
     </header>
   );
 }
@@ -105,6 +86,11 @@ export function SmallHeaderWithText({ navtext }) {
 }
 
 export function LargeHeader() {
+  const links = [
+    ["Wiki", "/wiki"],
+    ["Resume", "https://resume.natwelch.com"],
+  ];
+
   return (
     <header
       sx={{

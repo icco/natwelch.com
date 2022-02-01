@@ -85,8 +85,8 @@ const Breadcrumbs = () => {
     return !!piece;
   });
   return (
-    <div sx={{}}>
-      <UnorderedList
+    <nav sx={{}}>
+      <OrderedList
         sx={{
           display: "flex",
           margin: 0,
@@ -137,8 +137,8 @@ const Breadcrumbs = () => {
             </ListItem>
           );
         })}
-      </UnorderedList>
-    </div>
+      </OrderedList>
+    </nav>
   );
 };
 
