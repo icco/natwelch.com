@@ -45,9 +45,7 @@ export function SmallHeader() {
           </a>
         </Link>
         <div sx={{ mx: "auto" }} />
-        <div sx={{ width: "3em" }}>
-          <Breadcrumbs />
-        </div>
+        <Breadcrumbs />
       </div>
     </header>
   );

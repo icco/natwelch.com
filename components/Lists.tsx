@@ -94,6 +94,7 @@ const Breadcrumbs = () => {
           listStyleType: "none",
           alignItems: "center",
           justifyContent: "right",
+          flexWrap: "wrap",
         }}
       >
         {pieces.map((piece: string, index: number) => {
