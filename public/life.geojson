@@ -265,7 +265,7 @@
       "properties": {
         "marker-symbol": "building",
         "marker-color": "2F8DB2",
-        "Address": "362 15th Street, Brooklyn, NY"
+        "Address": "362 15th Street, Brooklyn, NY 11215"
       },
       "geometry": {
         "type": "Point",
