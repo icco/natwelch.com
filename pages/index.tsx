@@ -53,12 +53,12 @@ const Index = ({ post }) => (
 );
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getLatestBlogPost()
+  const post = await getLatestBlogPost();
   return {
     props: {
       post,
-    }
-  }
-}
+    },
+  };
+};
 
 export default Index;

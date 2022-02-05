@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const BlogPost = (params) => {
-  const { post } = params
+  const { post } = params;
   return (
     <div sx={{}}>
       <Link passHref href={post.uri}>
@@ -9,6 +9,6 @@ const BlogPost = (params) => {
       </Link>
     </div>
   );
-}
+};
 
-export { BlogPost }
+export { BlogPost };

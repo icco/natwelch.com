@@ -1,8 +1,8 @@
-import { createClient } from 'urql'
+import { createClient } from "urql";
 
 export const client = createClient({
-  url: 'https://graphql.natwelch.com/graphql',
-})
+  url: "https://graphql.natwelch.com/graphql",
+});
 
 const latestPostQuery = `
   query latestPostQuery {
@@ -12,10 +12,12 @@ const latestPostQuery = `
       title
     }
   }
-`
+`;
 
 export const getLatestBlogPost = async () => {
-  const { data: { posts } } = await client.query(latestPostQuery).toPromise()
+  const {
+    data: { posts },
+  } = await client.query(latestPostQuery).toPromise();
 
-  return posts[0]
-}
+  return posts[0];
+};
