@@ -1,12 +1,12 @@
-import { createClient } from "urql";
+import { createClient, gql } from "urql";
 
 export const client = createClient({
   url: "https://graphql.natwelch.com/graphql",
 });
 
-const latestPostQuery = `
+const latestPostQuery = gql`
   query latestPostQuery {
-    posts(input: { limit: 1}) {
+    posts(input: { limit: 1 }) {
       uri
       title
     }
