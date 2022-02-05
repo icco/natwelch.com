@@ -17,7 +17,7 @@ const BlogPost = (params) => {
         </Link>
       </div>
       <div sx={{ mx: "auto" }}></div>
-    </div >
+    </div>
   );
 };
 
