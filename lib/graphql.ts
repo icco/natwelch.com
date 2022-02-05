@@ -7,7 +7,6 @@ export const client = createClient({
 const latestPostQuery = `
   query latestPostQuery {
     posts(input: { limit: 1}) {
-      id
       uri
       title
     }

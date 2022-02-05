@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Paragraph } from "theme-ui";
 
 const BlogPost = (params) => {
   const { post } = params;
@@ -11,10 +12,21 @@ const BlogPost = (params) => {
       }}
     >
       <div sx={{ mx: "auto" }}></div>
-      <div>
-        <Link passHref href={post.uri}>
-          <a>{post.title}</a>
-        </Link>
+      <div
+        sx={{
+          borderRadius: "1em",
+          textAlign: "center",
+          backgroundColor: "muted",
+          py: "1em",
+          px: "3em",
+        }}
+      >
+        <Paragraph>Latest blog post</Paragraph>
+        <Paragraph>
+          <Link passHref href={post.uri}>
+            <a>{post.title}</a>
+          </Link>
+        </Paragraph>
       </div>
       <div sx={{ mx: "auto" }}></div>
     </div>
