@@ -1,8 +1,10 @@
+import { BlogPost } from "components/BlogPost";
 import Header, { Size } from "components/Header";
 import Social from "components/Social";
+import { getLatestBlogPost } from "lib/graphql";
 import Head from "next/head";
 
-const Index = () => (
+const Index = ({ post }) => (
   <main
     sx={{
       maxWidth: 768,
@@ -45,7 +47,18 @@ const Index = () => (
         <Social />
       </div>
     </div>
+
+    <BlogPost post={post} />
   </main>
 );
+
+export const getStaticProps = async ({ params }) => {
+  const post = await getLatestBlogPost()
+  return {
+    props: {
+      post,
+    }
+  }
+}
 
 export default Index;
