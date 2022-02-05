@@ -10,10 +10,14 @@ const BlogPost = (params) => {
         alignContent: "center",
       }}
     >
-      <Link passHref href={post.uri}>
-        <a>{post.title}</a>
-      </Link>
-    </div>
+      <div sx={{ mx: "auto" }}></div>
+      <div>
+        <Link passHref href={post.uri}>
+          <a>{post.title}</a>
+        </Link>
+      </div>
+      <div sx={{ mx: "auto" }}></div>
+    </div >
   );
 };
 
