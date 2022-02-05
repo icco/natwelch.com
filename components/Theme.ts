@@ -14,6 +14,7 @@ const root = {
   colors: {
     text: Nord.nord6,
     background: Nord.nord0,
+    muted: Nord.nord1,
     primary: Nord.nord1,
     secondary: Nord.nord4,
     link: Nord.nord9,
