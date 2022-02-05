@@ -52,7 +52,7 @@ const Index = ({ post }) => (
   </main>
 );
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async () => {
   const post = await getLatestBlogPost();
   return {
     props: {
