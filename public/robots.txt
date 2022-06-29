@@ -7,4 +7,3 @@ Host: https://natwelch.com
 
 # Sitemaps
 Sitemap: https://natwelch.com/sitemap.xml
-Sitemap: https://natwelch.com/sitemap-0.xml
