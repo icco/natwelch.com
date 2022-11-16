@@ -3,7 +3,8 @@ import { Divider } from "components/Divider";
 import Layout from "components/Layout";
 import { ListItem, OrderedList, UnorderedList } from "components/Lists";
 import { Paragraph } from "components/Paragraph";
-import TextHeader, {
+import {
+  TextHeader,
   TextHeaderOne,
   TextHeaderThree,
   TextHeaderTwo,

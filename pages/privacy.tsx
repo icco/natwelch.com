@@ -1,5 +1,5 @@
 import Layout from "components/Layout";
-import TextHeader from "components/TextHeader";
+import { TextHeader } from "components/TextHeader";
 import Head from "next/head";
 
 const Privacy = () => (
