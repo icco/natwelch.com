@@ -58,9 +58,7 @@ const Tree = ({ items }) => {
         if ("title" in value && "path" in value) {
           li = (
             <ListItem key={value.path}>
-              <Link href={`/wiki/${value.path}`}>
-                {value.title}
-              </Link>
+              <Link href={`/wiki/${value.path}`}>{value.title}</Link>
             </ListItem>
           );
         }
@@ -130,10 +128,9 @@ const Breadcrumbs = () => {
                   position: "relative",
                   textDecoration: "none",
                   cursor: "pointer",
-                }}>
-
+                }}
+              >
                 {piece}
-
               </Link>
             </ListItem>
           );

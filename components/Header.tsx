@@ -29,7 +29,6 @@ export function SmallHeader() {
         }}
       >
         <Link href="/">
-
           <Logo
             size={50}
             sx={{
@@ -42,7 +41,6 @@ export function SmallHeader() {
             }}
             className="logo"
           />
-
         </Link>
         <div sx={{ mx: "auto" }} />
         <Breadcrumbs />
@@ -62,7 +60,6 @@ export function SmallHeaderWithText({ navtext }) {
       }}
     >
       <Link href="/">
-
         <Logo
           size={50}
           sx={{
@@ -75,7 +72,6 @@ export function SmallHeaderWithText({ navtext }) {
           }}
           className="logo"
         />
-
       </Link>
       <div sx={{ mx: "auto" }} />
       <TextHeaderOne sx={{ mr: 4 }}>{navtext}</TextHeaderOne>

@@ -26,9 +26,7 @@ export default function Footer() {
       }}
     >
       <Paragraph as="small" sx={{ p: 0 }}>
-        <Link href={"/privacy"}>
-          Privacy
-        </Link>
+        <Link href={"/privacy"}>Privacy</Link>
       </Paragraph>
       <div sx={{ mx: "auto" }} />
       <Paragraph as="small" sx={{ p: 0 }}>
