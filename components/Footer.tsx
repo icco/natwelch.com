@@ -9,7 +9,7 @@ export default function Footer() {
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
-        p: 0,
+        p: 3,
         mt: 5,
         mb: 1,
         variant: "styles.footer",

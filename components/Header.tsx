@@ -9,7 +9,7 @@ export function SmallHeader() {
   return (
     <header
       sx={{
-        pb: 3,
+        p: [3, 4],
         variant: "styles.header",
       }}
     >
@@ -58,7 +58,7 @@ export function SmallHeaderWithText({ navtext }) {
         display: "flex",
         alignItems: "center",
         variant: "styles.header",
-        pb: 2,
+        p: 2,
       }}
     >
       <Link href="/">
