@@ -59,7 +59,7 @@ const Tree = ({ items }) => {
           li = (
             <ListItem key={value.path}>
               <Link href={`/wiki/${value.path}`}>
-                <a>{value.title}</a>
+                {value.title}
               </Link>
             </ListItem>
           );
@@ -124,16 +124,16 @@ const Breadcrumbs = () => {
                 },
               }}
             >
-              <Link href={`/${pieces.slice(0, index + 1).join("/")}`}>
-                <a
-                  sx={{
-                    position: "relative",
-                    textDecoration: "none",
-                    cursor: "pointer",
-                  }}
-                >
-                  {piece}
-                </a>
+              <Link
+                href={`/${pieces.slice(0, index + 1).join("/")}`}
+                sx={{
+                  position: "relative",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                }}>
+
+                {piece}
+
               </Link>
             </ListItem>
           );

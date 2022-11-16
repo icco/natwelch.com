@@ -29,20 +29,20 @@ export function SmallHeader() {
         }}
       >
         <Link href="/">
-          <a>
-            <Logo
-              size={50}
-              sx={{
-                verticalAlign: "middle",
-                py: 0,
-                my: [null, 1],
-                display: "inline-block",
-                textAlign: "center",
-                stroke: "text",
-              }}
-              className="logo"
-            />
-          </a>
+
+          <Logo
+            size={50}
+            sx={{
+              verticalAlign: "middle",
+              py: 0,
+              my: [null, 1],
+              display: "inline-block",
+              textAlign: "center",
+              stroke: "text",
+            }}
+            className="logo"
+          />
+
         </Link>
         <div sx={{ mx: "auto" }} />
         <Breadcrumbs />
@@ -62,20 +62,20 @@ export function SmallHeaderWithText({ navtext }) {
       }}
     >
       <Link href="/">
-        <a>
-          <Logo
-            size={50}
-            sx={{
-              verticalAlign: "middle",
-              py: 0,
-              my: [null, 1],
-              display: "inline-block",
-              textAlign: "center",
-              stroke: "text",
-            }}
-            className="logo"
-          />
-        </a>
+
+        <Logo
+          size={50}
+          sx={{
+            verticalAlign: "middle",
+            py: 0,
+            my: [null, 1],
+            display: "inline-block",
+            textAlign: "center",
+            stroke: "text",
+          }}
+          className="logo"
+        />
+
       </Link>
       <div sx={{ mx: "auto" }} />
       <TextHeaderOne sx={{ mr: 4 }}>{navtext}</TextHeaderOne>
@@ -133,7 +133,7 @@ export function LargeHeader() {
         <div sx={{ mt: "0.75em", mb: 0 }}>
           {links.map(([name, link]) => {
             return (
-              <Link key={name} href={link} passHref>
+              <Link key={name} href={link} passHref legacyBehavior>
                 <TextHeaderTwo sx={{ display: "inline-block", my: 0 }}>
                   <a
                     sx={{
