@@ -16,7 +16,7 @@ const latestPostQuery = gql`
 export const getLatestBlogPost = async () => {
   const {
     data: { posts },
-  } = await client.query(latestPostQuery).toPromise();
+  } = await client.query(latestPostQuery, {}).toPromise();
 
   return posts[0];
 };
