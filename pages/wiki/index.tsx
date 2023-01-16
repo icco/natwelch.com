@@ -9,6 +9,7 @@ function Wiki({ pathData }) {
     <Layout>
       <Head>
         <title>Nat Welch | Wiki</title>
+        <meta property="og:title" content="Nat Welch | Wiki" key="title" />
       </Head>
 
       <TextHeaderOne>Wiki</TextHeaderOne>

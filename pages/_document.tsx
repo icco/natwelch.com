@@ -5,7 +5,7 @@ export default class WritingDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
+          <meta charSet="utf-8" key="charset" />
         </Head>
         <body>
           <Main />

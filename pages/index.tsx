@@ -26,6 +26,7 @@ const Index = ({ post }) => (
   >
     <Head>
       <title>Nat Welch</title>
+      <meta property="og:title" content="Nat Welch" key="title" />
     </Head>
 
     <div
