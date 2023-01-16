@@ -13,6 +13,8 @@ function Wiki({ pathData }) {
 
       <TextHeaderOne>Wiki</TextHeaderOne>
 
+      <p>This is a constantly growing wiki of things I am working on and thinking about.</p>
+
       <Tree key="root" items={pathData}></Tree>
     </Layout>
   );
