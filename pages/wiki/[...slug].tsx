@@ -47,7 +47,11 @@ export default function PostPage({ source, frontMatter }) {
     <Layout>
       <Head>
         <title>Nat Welch | {frontMatter.title}</title>
-        <meta property="og:title" content="Nat Welch | {frontMatter.title}" key="title" />
+        <meta
+          property="og:title"
+          content="Nat Welch | {frontMatter.title}"
+          key="title"
+        />
       </Head>
       <MDXRemote {...source} components={components} />
     </Layout>
