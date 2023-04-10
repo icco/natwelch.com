@@ -20,7 +20,7 @@
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "@icco/react-common": "^2022.12.27-1",
+    "@icco/react-common": "^2023.3.18-2",
     "@mdx-js/react": "^2.1.5",
     "@root/walk": "^1.1.0",
     "@theme-ui/typography": "^0.15.4",
@@ -44,7 +44,7 @@
     "typography": "^0.16.21",
     "typography-theme-fairy-gates": "^0.16.19",
     "unified": "^10.1.1",
-    "urql": "^3.0.0"
+    "urql": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -58,7 +58,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-mdx": "^2.0.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "get-graphql-schema": "^2.1.2",
     "prettier": "^2.3.2",
     "typescript": "^4.0.0",
