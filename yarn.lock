@@ -982,12 +982,20 @@
     "@typescript-eslint/types" "5.57.1"
     eslint-visitor-keys "^3.3.0"
 
-"@urql/core@^4.0.0":
+"@urql/core@>=4.0.0", "@urql/core@^4.0.0":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@urql/core/-/core-4.0.4.tgz#033fbaae7a98fd5a27bd706e74872e7f8af34887"
   integrity sha512-r1rB/VMVpCnfnMTTzCAs+HY+UqOHUgpZ+GimLtU4DCTP3C78DK+m4qr36M7KKleggrKgcpcC1TE8eFEVcKzfSQ==
   dependencies:
     "@0no-co/graphql.web" "^1.0.0"
+    wonka "^6.3.0"
+
+"@urql/exchange-persisted@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@urql/exchange-persisted/-/exchange-persisted-3.0.0.tgz#a88a55c25a96b861284b41c7b4dfec9ab6241efd"
+  integrity sha512-v0iZsw4Wn+oHTClwZ4512wcuwVh4K3eVMVCBXWUkNf3myRUlcgslPa4i9cq7OHIFYLcXU3fkTWFpcCBJYIKIOg==
+  dependencies:
+    "@urql/core" ">=4.0.0"
     wonka "^6.3.0"
 
 "@webassemblyjs/ast@1.11.1":

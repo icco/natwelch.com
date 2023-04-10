@@ -1,7 +1,15 @@
-import { createClient, gql } from "urql";
+import { cacheExchange, createClient, fetchExchange, gql } from "urql";
+import { persistedExchange } from '@urql/exchange-persisted';
 
 export const client = createClient({
   url: "https://graphql.natwelch.com/graphql",
+  exchanges: [
+    cacheExchange,
+    persistedExchange({
+      preferGetForPersistedQueries: true,
+    }),
+    fetchExchange,
+  ],
 });
 
 const latestPostQuery = gql`
