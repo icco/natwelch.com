@@ -33,7 +33,7 @@
     "next": "^13.0.0",
     "next-mdx-remote": "^4.0.0",
     "next-secure-headers": "^2.1.0",
-    "next-sitemap": "^3.0.0",
+    "next-sitemap": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
