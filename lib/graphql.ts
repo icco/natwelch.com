@@ -1,5 +1,5 @@
+import { persistedExchange } from "@urql/exchange-persisted";
 import { cacheExchange, createClient, fetchExchange, gql } from "urql";
-import { persistedExchange } from '@urql/exchange-persisted';
 
 export const client = createClient({
   url: "https://graphql.natwelch.com/graphql",
