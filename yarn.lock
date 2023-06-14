@@ -927,7 +927,14 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react@>=16", "@types/react@^18.0.0":
+"@types/react-dom@^18.0.4":
+  version "18.2.5"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.5.tgz#5c5f13548bda23cd98f50ca4a59107238bfe18f3"
+  integrity sha512-sRQsOS/sCLnpQhR4DSKGTtWFE3FZjpQa86KPVbhUqdYMRZ9FEFcfAytKhR/vUG2rH1oFbOOej6cuD7MFSobDRQ==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@>=16", "@types/react@^18.2.12":
   version "18.2.12"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.12.tgz#95d584338610b78bb9ba0415e3180fb03debdf97"
   integrity sha512-ndmBMLCgn38v3SntMeoJaIrO6tGHYKMEBohCUmw8HoLLQdRMOIGXfeYaBTLe2lsFaSB3MOK1VXscYFnmLtTSmw==
@@ -1060,10 +1067,10 @@
     "@0no-co/graphql.web" "^1.0.1"
     wonka "^6.3.2"
 
-"@urql/exchange-persisted@^3.0.0":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@urql/exchange-persisted/-/exchange-persisted-3.0.1.tgz#042a74b2a98a70439d2fdffdf6ec6580a0f97e35"
-  integrity sha512-KDELDmqNe7Z4nbOgF9oE2w3FwkBBfgaORAGZ/3o5jdOeoszpXNfSPRiwUnFyExXMw4rXqyHfDKg5nzvNB7w4Tw==
+"@urql/exchange-persisted@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@urql/exchange-persisted/-/exchange-persisted-4.0.0.tgz#30eaafe6da786843b7e6873939fa81ff2987f95a"
+  integrity sha512-6+HExpfyH2VYZbaTp1BOkshyGfKr2zkYWsgEy25kx/flgNC0DdzqykAF1j5nubZ+skb8WCco0LQfwWTP1MtTsA==
   dependencies:
     "@urql/core" ">=4.0.0"
     wonka "^6.3.2"

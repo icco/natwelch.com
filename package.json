@@ -25,7 +25,7 @@
     "@root/walk": "^1.1.0",
     "@theme-ui/mdx": "^0.15.7",
     "@theme-ui/typography": "^0.15.4",
-    "@urql/exchange-persisted": "^3.0.0",
+    "@urql/exchange-persisted": "^4.0.0",
     "graphql": "^16.3.0",
     "gray-matter": "^4.0.3",
     "isomorphic-unfetch": "^4.0.0",
@@ -52,7 +52,8 @@
     "@babel/core": "^7.0.0",
     "@types/lodash": "^4.14.178",
     "@types/luxon": "^3.0.0",
-    "@types/react": "^18.0.0",
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.0.4",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "eslint": "^8.0.0",
@@ -66,6 +67,7 @@
     "typescript": "^5.0.0",
     "webpack": "^5.10.0"
   },
+  "resolutions": {},
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,
