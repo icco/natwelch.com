@@ -473,7 +473,7 @@
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
-"@mdx-js/react@^2.1.5", "@mdx-js/react@^2.2.1":
+"@mdx-js/react@^2.2.1", "@mdx-js/react@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.3.0.tgz#4208bd6d70f0d0831def28ef28c26149b03180b3"
   integrity sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==
@@ -759,6 +759,14 @@
   version "0.15.7"
   resolved "https://registry.yarnpkg.com/@theme-ui/global/-/global-0.15.7.tgz#9f65bcca07d6f924612042b2bf6745c9fe4749ff"
   integrity sha512-kyaJPTzDzGY4UXiVCffsHfDFpl1xgeoJNvS9FEkKrO0clrY/wvhuYGH5guFlKImjvu7OjQY7ST/duSxkSWt9nw==
+  dependencies:
+    "@theme-ui/core" "^0.15.7"
+    "@theme-ui/css" "^0.15.7"
+
+"@theme-ui/mdx@^0.15.7":
+  version "0.15.7"
+  resolved "https://registry.yarnpkg.com/@theme-ui/mdx/-/mdx-0.15.7.tgz#518ba9c422f92d6325619b83a6908a068d48ab80"
+  integrity sha512-VAJMWvAmfR7bSLi/Z7Ncf8P5DaPGbY0x2RnUsiH18HctOKUX7FqiHnqrKO0+3a1ZHhhXJ6YjXbFGAYK8/lF/lw==
   dependencies:
     "@theme-ui/core" "^0.15.7"
     "@theme-ui/css" "^0.15.7"
@@ -4698,6 +4706,7 @@ streamsearch@^1.1.0:
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
