@@ -1,6 +1,5 @@
 import Link from "next/link";
-
-import { Paragraph } from "./Paragraph";
+import { Paragraph } from "theme-ui";
 
 const BlogPost = (params) => {
   const { post } = params;
