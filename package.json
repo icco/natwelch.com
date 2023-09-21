@@ -27,7 +27,7 @@
     "@theme-ui/mdx": "^0.15.7",
     "@theme-ui/typography": "^0.15.4",
     "@urql/exchange-persisted": "^4.0.0",
-    "graphql": "^16.3.0",
+    "graphql": "^16.8.1",
     "gray-matter": "^4.0.3",
     "isomorphic-unfetch": "^4.0.0",
     "lodash": "^4.17.21",
