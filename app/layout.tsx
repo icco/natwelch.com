@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Theme from "components/Theme";
-import Head from "next/head";
 import { ThemeProvider } from "theme-ui";
 
 export default function App({ Component, pageProps }) {
@@ -25,13 +24,15 @@ export function reportWebVitals(metric) {
 }
 
 export const metadata: Metadata = {
-  title: 'Home',
-         viewport: {
-           "viewport-fit": "cover",
-           "initial-scale": 1.0,
-           "width": "device-width",
-         },
-webmention: "https://webmention.io/natwelch.com/webmention",
-            pingback: "https://webmention.io/natwelch.com/xmlrpc",
-            charset: "utf-8",
+  title: "Nat Welch",
+  viewport: {
+    viewportFit: "cover",
+    initialScale: 1.0,
+    width: "device-width",
+  },
+  other: {
+    webmention: "https://webmention.io/natwelch.com/webmention",
+    pingback: "https://webmention.io/natwelch.com/xmlrpc",
+    charset: "utf-8",
+  },
 }
