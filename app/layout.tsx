@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Theme from "components/Theme";
 import Head from "next/head";
 import { ThemeProvider } from "theme-ui";
@@ -5,19 +6,6 @@ import { ThemeProvider } from "theme-ui";
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={Theme}>
-      <Head>
-        <meta name="viewport" content="viewport-fit=cover" />
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width"
-          key="viewport"
-        />
-        <link
-          rel="webmention"
-          href="https://webmention.io/natwelch.com/webmention"
-        />
-        <link rel="pingback" href="https://webmention.io/natwelch.com/xmlrpc" />
-      </Head>
       <Component {...pageProps} />
     </ThemeProvider>
   );
@@ -34,4 +22,16 @@ export function reportWebVitals(metric) {
   } else {
     fetch(url, { body, method: "POST", keepalive: true });
   }
+}
+
+export const metadata: Metadata = {
+  title: 'Home',
+         viewport: {
+           "viewport-fit": "cover",
+           "initial-scale": 1.0,
+           "width": "device-width",
+         },
+webmention: "https://webmention.io/natwelch.com/webmention",
+            pingback: "https://webmention.io/natwelch.com/xmlrpc",
+            charset: "utf-8",
 }
