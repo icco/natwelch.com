@@ -9,6 +9,11 @@ export default class Age extends React.Component {
     );
     const now = DateTime.now();
     const diff = now.diff(birth, "years", { conversionAccuracy: "longterm" });
-    return <time dateTime={birth.toISO()}>{diff.toHuman()} ago</time>;
+    if (birth && now && diff) {
+      const birthString = birth.toISO() ?? "";
+      return <time dateTime={birthString}>{diff.toHuman()} ago</time>;
+    }
+
+    return <></>;
   }
 }
