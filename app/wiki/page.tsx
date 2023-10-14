@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { allPages, Page } from 'contentlayer/generated'
+import { Metadata } from 'next'
 
 function PageCard(page: Page) {
   return (
@@ -12,6 +13,10 @@ function PageCard(page: Page) {
       <div className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: page.body.html }} />
     </div>
   )
+}
+
+export const metadata: Metadata = {
+  title: "Nat Welch | Wiki",
 }
 
 export default function Home() {

@@ -5,7 +5,7 @@ export const generateStaticParams = async () => allPages.map((page) => ({ slug: 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const page = allPages.find((page) => page._raw.flattenedPath === params.slug)
   if (!page) throw new Error(`page not found for slug: ${params.slug}`)
-  return { title: page.title }
+  return { title: `Nat Welch | ${page.title}` }
 }
 
 const PageLayout = ({ params }: { params: { slug: string } }) => {

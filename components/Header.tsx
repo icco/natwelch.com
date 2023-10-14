@@ -57,8 +57,8 @@ export enum Size {
   Large = "large",
 }
 
-export function Header() {
-  switch (this.props.size) {
+export function Header({ size }: { size: Size; }) {
+  switch (size) {
     case Size.Large:
       return <LargeHeader />;
     case Size.Medium:
