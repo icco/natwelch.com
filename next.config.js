@@ -1,6 +1,10 @@
 const { createSecureHeaders } = require("next-secure-headers");
+const { withContentlayer } = require('next-contentlayer')
+
 const port = process.env.PORT || 8080;
-module.exports = {
+
+/** @type {import('next').NextConfig} */
+module.exports = withContentlayer({
   swcMinify: true,
   poweredByHeader: false,
   reactStrictMode: true,
@@ -71,4 +75,4 @@ module.exports = {
       },
     ];
   },
-};
+});
