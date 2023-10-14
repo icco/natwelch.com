@@ -23,7 +23,7 @@ const BlogPost = (params) => {
       >
         <Paragraph>Latest blog post</Paragraph>
         <Paragraph>
-          <Link passHref href={post.uri}>
+          <Link passHref href={post.uri} legacyBehavior>
             {post.title}
           </Link>
         </Paragraph>

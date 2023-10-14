@@ -28,7 +28,7 @@ export function SmallHeader() {
           },
         }}
       >
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <Logo
             size={50}
             sx={{
@@ -59,7 +59,7 @@ export function SmallHeaderWithText({ navtext }) {
         p: 2,
       }}
     >
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <Logo
           size={50}
           sx={{
