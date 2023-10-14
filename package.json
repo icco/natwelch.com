@@ -18,7 +18,6 @@
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
   "dependencies": {
-    "@icco/react-common": "^2023.3.18-2",
     "@mdx-js/react": "^2.3.0",
     "@next/env": "^13.4.5",
     "@root/walk": "^1.1.0",

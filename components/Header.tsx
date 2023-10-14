@@ -1,4 +1,3 @@
-import { Logo } from "@icco/react-common";
 import Link from "next/link";
 import React from "react";
 
@@ -8,9 +7,7 @@ export function SmallHeader() {
   return (
     <header>
       <div>
-        <Link href="/">
-          TBD
-        </Link>
+        <Link href="/">TBD</Link>
         <div />
         <Breadcrumbs />
       </div>
@@ -21,9 +18,7 @@ export function SmallHeader() {
 export function SmallHeaderWithText({ navtext }) {
   return (
     <header>
-      <Link href="/">
-        TBD
-      </Link>
+      <Link href="/">TBD</Link>
       <div />
       <h1>{navtext}</h1>
     </header>
@@ -38,16 +33,7 @@ export function LargeHeader() {
 
   return (
     <header>
-      <div>
-        <Logo
-          size={200}
-          sx={{
-            py: 0,
-            my: [null, 1],
-            stroke: "text",
-          }}
-        />
-      </div>
+      <div>TBD</div>
       <div>
         <h1>Nat Welch</h1>
         <h2>Software Reconnaissance Engineer</h2>
