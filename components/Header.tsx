@@ -57,16 +57,14 @@ export enum Size {
   Large = "large",
 }
 
-class Header extends React.Component<{ size: Size; navtext?: string }> {
-  render() {
-    switch (this.props.size) {
-      case Size.Large:
-        return <LargeHeader />;
-      case Size.Medium:
-        return <SmallHeaderWithText navtext={this.props.navtext} />;
-      case Size.Small:
-        return <SmallHeader />;
-    }
+export function Header() {
+  switch (this.props.size) {
+    case Size.Large:
+      return <LargeHeader />;
+    case Size.Medium:
+      return <SmallHeaderWithText navtext={this.props.navtext} />;
+    case Size.Small:
+      return <SmallHeader />;
   }
 }
 
