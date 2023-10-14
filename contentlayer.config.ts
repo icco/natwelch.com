@@ -7,7 +7,7 @@ export const Page = defineDocumentType(() => ({
     title: { type: 'string', required: true },
   },
   computedFields: {
-    url: { type: 'string', resolve: (post) => `/wiki/${page._raw.flattenedPath}` },
+    url: { type: 'string', resolve: (page) => `/wiki/${page._raw.flattenedPath}` },
   },
 }))
 
