@@ -1,12 +1,8 @@
 import { Metadata } from 'next'
-import Theme from "components/Theme";
-import { ThemeProvider } from "theme-ui";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={Theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <Component {...pageProps} />
   );
 }
 

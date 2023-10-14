@@ -3,17 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const UnorderedList = (params) => {
-  return (
-    <ul
-      sx={{
-        boxSizing: "border-box",
-        my: "1rem",
-        pl: "2rem",
-        pr: 0,
-      }}
-      {...params}
-    ></ul>
-  );
+  return <ul {...params}></ul>;
 };
 
 const OrderedList = (params) => {
@@ -81,7 +71,7 @@ const Breadcrumbs = () => {
     return !!piece;
   });
   return (
-    <nav sx={{}}>
+    <nav>
       <OrderedList
         sx={{
           display: "flex",
@@ -120,15 +110,7 @@ const Breadcrumbs = () => {
                 },
               }}
             >
-              <Link
-                href={`/${pieces.slice(0, index + 1).join("/")}`}
-                sx={{
-                  position: "relative",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                }}
-                legacyBehavior
-              >
+              <Link href={`/${pieces.slice(0, index + 1).join("/")}`}>
                 {piece}
               </Link>
             </ListItem>

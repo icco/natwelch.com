@@ -12,7 +12,6 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "jsxImportSource": "theme-ui",
     "lib": [
       "dom",
       "dom.iterable",
