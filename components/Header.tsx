@@ -8,19 +8,8 @@ export function SmallHeader() {
   return (
     <header>
       <div>
-        <Link href="/" legacyBehavior>
-          <Logo
-            size={50}
-            sx={{
-              verticalAlign: "middle",
-              py: 0,
-              my: [null, 1],
-              display: "inline-block",
-              textAlign: "center",
-              stroke: "text",
-            }}
-            className="logo"
-          />
+        <Link href="/">
+          TBD
         </Link>
         <div />
         <Breadcrumbs />
@@ -32,19 +21,8 @@ export function SmallHeader() {
 export function SmallHeaderWithText({ navtext }) {
   return (
     <header>
-      <Link href="/" legacyBehavior>
-        <Logo
-          size={50}
-          sx={{
-            verticalAlign: "middle",
-            py: 0,
-            my: [null, 1],
-            display: "inline-block",
-            textAlign: "center",
-            stroke: "text",
-          }}
-          className="logo"
-        />
+      <Link href="/">
+        TBD
       </Link>
       <div />
       <h1>{navtext}</h1>
