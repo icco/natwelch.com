@@ -7,7 +7,7 @@ export default async function Page() {
   const post = await getLatestBlogPost()
 
   return (
-    < main
+    <main
       sx={{
         maxWidth: 768,
         mx: [0, "auto"],
@@ -48,6 +48,6 @@ export default async function Page() {
       </div>
 
       <BlogPost post={post} />
-    </main >
+    </main>
   )
 }
