@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { compareDesc, format, parseISO } from 'date-fns'
 import { allPages, Page } from 'contentlayer/generated'
 
 function PageCard(page: Page) {
@@ -10,16 +9,13 @@ function PageCard(page: Page) {
           {page.title}
         </Link>
       </h2>
-      <time dateTime={page.date} className="mb-2 block text-xs text-gray-600">
-        {format(parseISO(page.date), 'LLLL d, yyyy')}
-      </time>
       <div className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: page.body.html }} />
     </div>
   )
 }
 
 export default function Home() {
-  const pages = allPages.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+  const pages = allPages
 
   return (
     <div className="mx-auto max-w-xl py-8">

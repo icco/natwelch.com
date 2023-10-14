@@ -1,17 +1,10 @@
 import { cacheExchange, createClient, fetchExchange, gql } from "@urql/core";
-import { persistedExchange } from "@urql/exchange-persisted";
 import { registerUrql } from "@urql/next/rsc";
 
 const makeClient = () => {
   return createClient({
     url: "https://graphql.natwelch.com/graphql",
-    exchanges: [
-      cacheExchange,
-      persistedExchange({
-        preferGetForPersistedQueries: true,
-      }),
-      fetchExchange,
-    ],
+    exchanges: [cacheExchange, fetchExchange],
   });
 };
 
