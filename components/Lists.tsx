@@ -1,7 +1,6 @@
 import { isString } from "lodash";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 const UnorderedList = (params) => {
   return (
@@ -51,25 +50,23 @@ const Tree = ({ items }) => {
       {Object.keys(items).map((k) => {
         const value = items[k];
         if (isString(value)) {
-          return <React.Fragment key={`${k}-empty`}></React.Fragment>;
+          return <span key={`${k}-empty`}></span>;
         }
 
         let li = <></>;
         if ("title" in value && "path" in value) {
           li = (
             <ListItem key={value.path}>
-              <Link href={`/wiki/${value.path}`} legacyBehavior>
-                {value.title}
-              </Link>
+              <Link href={`/wiki/${value.path}`}> {value.title} </Link>
             </ListItem>
           );
         }
 
         return (
-          <React.Fragment key={`${k}-root`}>
+          <span key={`${k}-root`}>
             {li}
             <Tree key={`${k}-tree`} items={value}></Tree>
-          </React.Fragment>
+          </span>
         );
       })}
     </UnorderedList>
@@ -78,8 +75,7 @@ const Tree = ({ items }) => {
 
 // Inspo: https://github.com/alphardex/aqua.css/blob/master/src/breadcrumb.scss
 const Breadcrumbs = () => {
-  const router = useRouter();
-  const path = router.asPath;
+  const path = usePathname();
 
   const pieces = path.split("/").filter((piece) => {
     return !!piece;
