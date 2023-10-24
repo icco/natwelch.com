@@ -57,7 +57,7 @@ export enum Size {
   Large = "large",
 }
 
-export function Header({ size }: { size: Size; }) {
+export function Header({ size }: { size: Size }) {
   switch (size) {
     case Size.Large:
       return <LargeHeader />;
