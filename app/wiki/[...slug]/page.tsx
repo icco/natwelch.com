@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 import Age from "components/Age";
+import Social from "components/Social";
 
 import { allPages } from "contentlayer/generated";
 
@@ -27,6 +28,7 @@ export const generateMetadata = ({
 const mdxComponents: MDXComponents = {
   a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
   Age: () => <Age />,
+  Social: () => <Social />,
 };
 
 const Page = ({ params }: { params: { slug: string[] } }) => {
