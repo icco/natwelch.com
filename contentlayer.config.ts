@@ -1,5 +1,4 @@
-import { DocumentGen } from 'contentlayer/core'
-import { LocalDocument, defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 
 export const Page = defineDocumentType(() => ({
   name: 'Page',
@@ -23,3 +22,8 @@ export const Page = defineDocumentType(() => ({
     },
   },
 }))
+
+export default makeSource({
+  contentDirPath: 'wiki',
+  documentTypes: [Page],
+})
