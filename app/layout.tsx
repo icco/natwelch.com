@@ -1,8 +1,5 @@
 import { Metadata } from "next";
 
-import Footer from "components/Footer";
-import Header from "components/Header";
-
 // Will be called once for every metric that has to be reported.
 export function reportWebVitals(metric) {
   const body = JSON.stringify(metric);
