@@ -8,7 +8,7 @@ import Age from "components/Age";
 import { allPages } from "contentlayer/generated";
 
 export const generateStaticParams = async () =>
-  allPages.map((page) => ({ slug: page.url.split("/") }));
+  allPages.map((page) => ({ slug: page.pathSegments }));
 
 export const generateMetadata = ({
   params,
@@ -18,7 +18,9 @@ export const generateMetadata = ({
   const page = allPages.find(
     (page) => page._raw.flattenedPath === params.slug.join("/")
   );
-  if (!page) throw new Error(`page not found for slug: ${params.slug}`);
+
+  if (!page) notFound();
+
   return { title: `Nat Welch | ${page.title}` };
 };
 
@@ -27,8 +29,11 @@ const mdxComponents: MDXComponents = {
   Age: () => <Age />,
 };
 
-const PageLayout = ({ params }: { params: { slug: string[] } }) => {
-  const page = allPages.find((page) => page.url === params.slug.join("/"));
+const Page = ({ params }: { params: { slug: string[] } }) => {
+  const page = allPages.find(
+    (page) => page._raw.flattenedPath === params.slug.join("/")
+  );
+
   if (!page) notFound();
 
   const MDXContent = useMDXComponent(page.body.code);
@@ -42,4 +47,4 @@ const PageLayout = ({ params }: { params: { slug: string[] } }) => {
   );
 };
 
-export default PageLayout;
+export default Page;

@@ -11,14 +11,12 @@ export const Page = defineDocumentType(() => ({
     url: {
       type: 'string',
       resolve: (doc) => {
-        return doc._raw.flattenedPath
+        return '/wiki/' + doc._raw.flattenedPath
       },
     },
     pathSegments: {
       type: 'json',
-      resolve: (doc) =>
-        doc._raw.flattenedPath
-          .split('/')
+      resolve: (doc) => ('/wiki/' + doc._raw.flattenedPath).split('/')
     },
   },
 }))
