@@ -8,7 +8,7 @@ import Age from "components/Age";
 import { allPages } from "contentlayer/generated";
 
 export const generateStaticParams = async () =>
-  allPages.map((page) => ({ slug: page.pathSegments }));
+  allPages.map((page) => ({ slug: page._raw.flattenedPath.split("/") }));
 
 export const generateMetadata = ({
   params,
