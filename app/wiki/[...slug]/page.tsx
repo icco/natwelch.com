@@ -11,7 +11,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 }
 
 const PageLayout = ({ params }: { params: { slug: string } }) => {
-  const page = allPages.find((page) => page._raw.flattenedPath === params.slug)
+  const page = allPages.find((page) => page.url === params.slug)
   if (!page) notFound()
 
   const MDXContent = useMDXComponent(page.body.code)
