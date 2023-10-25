@@ -31,7 +31,11 @@
             "^"
           ],
           [
-            "^components(/.*|$)', '^lib(/.*|$)"
+            "^components(/.*|$)",
+            "^lib(/.*|$)"
+          ],
+          [
+            "contentlayer/generated"
           ],
           [
             "^\\."

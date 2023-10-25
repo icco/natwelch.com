@@ -1,6 +1,7 @@
-import Footer from 'components/Footer';
-import Header from 'components/Header';
-import { Metadata } from 'next'
+import { Metadata } from "next";
+
+import Footer from "components/Footer";
+import Header from "components/Header";
 
 // Will be called once for every metric that has to be reported.
 export function reportWebVitals(metric) {
@@ -27,10 +28,8 @@ export const metadata: Metadata = {
     pingback: "https://webmention.io/natwelch.com/xmlrpc",
     charset: "utf-8",
   },
-}
+};
 
 export default function Layout({ children }) {
-  return (
-    <main>{children}</main>
-  )
+  return <main>{children}</main>;
 }
