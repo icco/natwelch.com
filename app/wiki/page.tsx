@@ -10,7 +10,6 @@ function PageCard(page: Page) {
           {page.title}
         </Link>
       </h2>
-      <div className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: page.body.html }} />
     </div>
   )
 }
