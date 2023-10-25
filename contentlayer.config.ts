@@ -1,4 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from "rehype-slug"
+import remarkDefinitionList from 'remark-definition-list'
 
 export const Page = defineDocumentType(() => ({
   name: 'Page',
@@ -24,4 +27,8 @@ export const Page = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'wiki',
   documentTypes: [Page],
+  mdx: {
+    remarkPlugins: [remarkGfm, remarkDefinitionList],
+    rehypePlugins: [rehypeSlug],
+  },
 })
