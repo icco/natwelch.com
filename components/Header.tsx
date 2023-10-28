@@ -1,16 +1,23 @@
 import Link from "next/link";
 import React from "react";
 
+import Logo from "../components/Logo";
 import { Breadcrumbs } from "./Lists";
 
 export function SmallHeader() {
   return (
     <header>
-      <div>
-        <Link href="/">TBD</Link>
-        <div />
-        <Breadcrumbs />
-      </div>
+      <nav className="flex py-8">
+        <div className="flex-none">
+          <Link href="/" className="">
+            <Logo size={50} className="px-8 logo" style={{ stroke: "#333" }} />
+          </Link>
+        </div>
+        <div className="flex-grow"></div>
+        <div className="flex-none">
+          <Breadcrumbs />
+        </div>
+      </nav>
     </header>
   );
 }
