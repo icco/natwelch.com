@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import { BlogPost } from "components/BlogPost";
-import Header, { Size } from "components/Header";
+import { Header, Size } from "components/Header";
 import Social from "components/Social";
 import { getLatestBlogPost } from "lib/graphql";
 

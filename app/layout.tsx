@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import Footer from "../components/Footer";
-import Header, { Size } from "../components/Header";
+import { Header, Size } from "../components/Header";
 
 const font = Roboto({
   weight: "400",
