@@ -74,5 +74,3 @@ export function Header({ size }: { size: Size }) {
       return <SmallHeader />;
   }
 }
-
-export default Header;
