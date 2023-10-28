@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-import Logo from "../components/Logo";
-import { Breadcrumbs } from "./Lists";
+import Logo from "./Logo";
+import { Breadcrumbs } from "./Breadcrumbs";
 
 export function SmallHeader() {
   return (
