@@ -1,6 +1,15 @@
-import "./global.css";
+import "./globals.css"
 
-import { Metadata } from "next";
+import type { Metadata } from "next"
+import { Roboto } from "next/font/google"
+
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+
+const font = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+})
 
 // Will be called once for every metric that has to be reported.
 export function reportWebVitals(metric) {
@@ -29,6 +38,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Layout({ children }) {
-  return <main>{children}</main>;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={font.className}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  )
 }
