@@ -13,16 +13,14 @@ export default async function Page() {
   const post = await getLatestBlogPost();
 
   return (
-    <main>
-      <div>
-        <Header size={Size.Large} />
+    <>
+      <Header size={Size.Large} />
 
-        <div>
-          <Social />
-        </div>
+      <div>
+        <Social />
       </div>
 
       <BlogPost post={post} />
-    </main>
+    </>
   );
 }
