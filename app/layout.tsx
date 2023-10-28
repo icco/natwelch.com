@@ -1,3 +1,5 @@
+import "./global.css";
+
 import { Metadata } from "next";
 
 // Will be called once for every metric that has to be reported.
