@@ -1,0 +1,13 @@
+li.breadcrumbs &::before {
+  content: '"/"';
+  padding-right: ".5rem";
+  color: "text";
+}
+
+li.breadcrumbs &:not(:last-child) a {
+  color: "link";
+}
+
+li.breadcrumbs &:last-child a {
+  color: "secondary",
+}

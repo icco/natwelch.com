@@ -9,9 +9,7 @@ export default function DashboardLayout({
   return (
     <>
       <Header size={Size.Small} />
-      <main className="mx-auto max-w-xl py-8">
-        {children}
-      </main>
+      <main className="mx-auto max-w-xl py-8">{children}</main>
       <Footer />
     </>
   );
