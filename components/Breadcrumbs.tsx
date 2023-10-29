@@ -13,24 +13,14 @@ export const Breadcrumbs = () => {
   return (
     <nav>
       <ol
-        sx={{
-          display: "flex",
-          margin: 0,
-          padding: 0,
-          listStyleType: "none",
-          alignItems: "center",
-          justifyContent: "right",
-          flexWrap: "wrap",
-        }}
+        className="flex flex-wrap justify-end list-none m-0 p-0"
       >
         {pieces.map((piece: string, index: number) => {
           return (
             <li
               key={piece}
-              sx={{
-                paddingLeft: ".5rem",
-                margin: 0,
-
+              className="m-0 pl-1"
+              style={{
                 "&::before": {
                   content: '"/"',
                   paddingRight: ".5rem",

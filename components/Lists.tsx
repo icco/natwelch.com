@@ -17,7 +17,7 @@ function Tree({ items }: { items: string | Record<string, Page> }) {
         }
 
         return (
-          <span key={`${k}-root`}>
+          <span key={`${k}-root-${uniqueId()}`}>
             <li className="" style={{}} key={value.url}>
               <Link href={value.url}>{value.title}</Link>
             </li>
