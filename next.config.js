@@ -2,6 +2,8 @@ const { createSecureHeaders } = require("next-secure-headers");
 const { withContentlayer } = require('next-contentlayer')
 
 const port = process.env.PORT || "8080";
+const hostname = process.env.HOSTNAME || `localhost`
+const domain = process.env.DOMAIN || `http://${hostname}:${port}`
 
 /** @type {import('next').NextConfig} */
 module.exports = withContentlayer({
@@ -25,13 +27,37 @@ module.exports = withContentlayer({
     return [
       {
         source: "/about",
-        destination: "https://natwelch.com/",
+        destination: "https://natwelch.com/wiki/about",
+        permanent: true,
+      },
+      {
+        source: "/privacy",
+        destination: "https://natwelch.com/wiki/privacy-policy",
         permanent: true,
       },
     ];
   },
   async headers() {
     return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "NEL",
+            value: JSON.stringify({ report_to: "default", max_age: 2592000 }),
+          },
+          {
+            key: "Report-To",
+            value: JSON.stringify({
+              group: "default",
+              max_age: 10886400,
+              endpoints: [
+                { url: `https://reportd.natwelch.com/report/natwelch` },
+              ],
+            }),
+          },
+        ],
+      },
       {
         source: "/(.*)",
         headers: createSecureHeaders({
