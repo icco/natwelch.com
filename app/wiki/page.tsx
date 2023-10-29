@@ -6,7 +6,7 @@ import { Tree } from "components/Lists";
 import { allPages } from "contentlayer/generated";
 
 function getPaths(): string[] {
-  const paths: string[] = allPages.map((page) => page.url);
+  const paths: string[] = allPages.map((page) => page.path);
   return paths.sort();
 }
 
@@ -26,7 +26,7 @@ function buildTree(filter?: (value: string) => boolean) {
 
 function buildTreeInt(path: string, fullPath: string) {
   if (!path.includes("/")) {
-    const data = allPages.find((page) => page.url === fullPath);
+    const data = allPages.find((page) => page.path === fullPath);
     if (!data) {
       throw new Error(`Could not find page for ${path}`);
     }
@@ -46,8 +46,11 @@ export default function Home() {
   const tree = buildTree();
 
   return (
-    <div className="mx-auto max-w-xl py-8">
-      <Tree items={tree} />
-    </div>
+    <section className="prose lg:prose-xl">
+      <h1 className="">Wiki</h1>
+      <div className="mx-auto max-w-xl py-8">
+        <Tree items={tree} />
+      </div>
+    </section>
   );
 }

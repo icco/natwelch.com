@@ -21,6 +21,12 @@ export const Page = defineDocumentType(() => ({
       type: 'json',
       resolve: (doc) => ('/wiki/' + doc._raw.flattenedPath).split('/')
     },
+    path: {
+      type: 'string',
+      resolve: (doc) => {
+        return doc._raw.flattenedPath
+      },
+    },
   },
 }))
 

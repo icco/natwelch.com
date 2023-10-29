@@ -41,12 +41,10 @@ const Page = ({ params }: { params: { slug: string[] } }) => {
   const MDXContent = useMDXComponent(page.body.code);
 
   return (
-    <div className="mx-auto max-w-xl py-8">
-      <article className="prose lg:prose-xl">
-        <h1>{page.title}</h1>
-        <MDXContent components={mdxComponents} />
-      </article>
-    </div>
+    <article className="prose lg:prose-xl">
+      <h1>{page.title}</h1>
+      <MDXContent components={mdxComponents} />
+    </article>
   );
 };
 
