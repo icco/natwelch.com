@@ -15,10 +15,7 @@ export const Breadcrumbs = () => {
       <ol className="flex items-center space-x-1 md:space-x-3">
         {pieces.map((piece: string, index: number) => {
           return (
-            <li
-              key={piece}
-              className="breadcrumbs"
-            >
+            <li key={piece} className="breadcrumbs">
               <Link href={`/${pieces.slice(0, index + 1).join("/")}`}>
                 {piece}
               </Link>
