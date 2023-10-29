@@ -1,18 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-li.breadcrumbs &::before {
-  content: '"/"';
-  padding-right: ".5rem";
-  color: "text";
-  vertical-align: middle;
-}
-
-li.breadcrumbs &:not(:last-child) a {
-  color: "link";
-}
-
-li.breadcrumbs &:last-child a {
-  color: "secondary";
-}
