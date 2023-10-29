@@ -1,7 +1,7 @@
-import "./rc.css"
+import "./rc.css";
 
-import { format } from "date-fns"
-import Link from "next/link"
+import { format } from "date-fns";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -10,16 +10,32 @@ const Footer = () => {
         <nav className="flex flex-wrap justify-center space-x-6">
           <div className="my-2 rc-scout" data-scout-rendered="true">
             <p className="text-muted text-sm rc-scout__text">
-              <i className="rc-scout__logo" /> Want to become a better programmer? <Link className="rc-scout__link" href="https://www.recurse.com/scout/click?t=1a20cf01214e4c5923ab6ebd6c0f8f18" >Join the Recurse Center!</Link>
+              <i className="rc-scout__logo" /> Want to become a better
+              programmer?{" "}
+              <Link
+                className="rc-scout__link"
+                href="https://www.recurse.com/scout/click?t=1a20cf01214e4c5923ab6ebd6c0f8f18"
+              >
+                Join the Recurse Center!
+              </Link>
             </p>
           </div>
         </nav>
         <p className="text-sm text-center md:text-right">
-          &copy; 2011 - {format(new Date(), "yyyy")} Nat Welch. All rights reserved. <Link className="blue" href="https://github.com/icco/writing">Source code</Link>. <Link className="blue" href="https://natwelch.com/privacy">Privacy</Link>.
+          &copy; 2011 - {format(new Date(), "yyyy")} Nat Welch. All rights
+          reserved.{" "}
+          <Link className="blue" href="https://github.com/icco/writing">
+            Source code
+          </Link>
+          .{" "}
+          <Link className="blue" href="https://natwelch.com/privacy">
+            Privacy
+          </Link>
+          .
         </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
