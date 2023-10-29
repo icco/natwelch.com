@@ -1,21 +1,41 @@
+import { merge } from "lodash";
 import { Metadata } from "next";
-import Link from "next/link";
 
-import { allPages, Page } from "contentlayer/generated";
+import { Tree } from "components/Lists";
 
-function PageCard(page: Page) {
-  return (
-    <div className="mb-8">
-      <h2 className="mb-1 text-xl">
-        <Link
-          href={page.url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
-        >
-          {page.title}
-        </Link>
-      </h2>
-    </div>
-  );
+import { allPages } from "contentlayer/generated";
+
+function getPaths(): string[] {
+  const paths: string[] = allPages.map((page) => page.url);
+  return paths.sort();
+}
+
+function buildTree(filter?: (value: string) => boolean) {
+  let tree = {};
+  let paths = getPaths();
+  if (filter) {
+    paths = paths.filter(filter);
+  }
+
+  paths.forEach((path) => {
+    tree = merge(tree, buildTreeInt(path, path));
+  });
+
+  return tree;
+}
+
+function buildTreeInt(path: string, fullPath: string) {
+  if (!path.includes("/")) {
+    const data = allPages.find((page) => page.url === fullPath);
+    if (!data) {
+      throw new Error(`Could not find page for ${path}`);
+    }
+
+    return { [path]: data };
+  }
+
+  const pieces = path.split("/");
+  return { [pieces[0]]: buildTreeInt(pieces.slice(1).join("/"), fullPath) };
 }
 
 export const metadata: Metadata = {
@@ -23,16 +43,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const pages = allPages;
+  const tree = buildTree();
 
   return (
     <div className="mx-auto max-w-xl py-8">
-      <h1 className="mb-8 text-center text-2xl font-black">
-        Next.js + Contentlayer Example
-      </h1>
-      {pages.map((page, idx) => (
-        <PageCard key={idx} {...page} />
-      ))}
+      <Tree items={tree} />
     </div>
   );
 }

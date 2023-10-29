@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ListItem, OrderedList } from "./Lists";
-
 // Inspo: https://github.com/alphardex/aqua.css/blob/master/src/breadcrumb.scss
 export const Breadcrumbs = () => {
   const path = usePathname();
@@ -14,7 +12,7 @@ export const Breadcrumbs = () => {
   });
   return (
     <nav>
-      <OrderedList
+      <ol
         sx={{
           display: "flex",
           margin: 0,
@@ -27,7 +25,7 @@ export const Breadcrumbs = () => {
       >
         {pieces.map((piece: string, index: number) => {
           return (
-            <ListItem
+            <li
               key={piece}
               sx={{
                 paddingLeft: ".5rem",
@@ -55,10 +53,10 @@ export const Breadcrumbs = () => {
               <Link href={`/${pieces.slice(0, index + 1).join("/")}`}>
                 {piece}
               </Link>
-            </ListItem>
+            </li>
           );
         })}
-      </OrderedList>
+      </ol>
     </nav>
   );
 };

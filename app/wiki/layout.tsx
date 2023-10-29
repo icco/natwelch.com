@@ -1,10 +1,10 @@
-import Footer from "components/Footer"
-import { Header, Size } from "components/Header"
+import Footer from "components/Footer";
+import { Header, Size } from "components/Header";
 
 export default function DashboardLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
@@ -12,5 +12,5 @@ export default function DashboardLayout({
       <main>{children}</main>
       <Footer />
     </>
-  )
+  );
 }
