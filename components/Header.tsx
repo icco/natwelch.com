@@ -14,7 +14,7 @@ export function SmallHeader() {
           </Link>
         </div>
         <div className="flex-grow"></div>
-        <div className="flex-none">
+        <div className="mr-8 content-center">
           <Breadcrumbs />
         </div>
       </nav>
