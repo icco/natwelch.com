@@ -12,9 +12,7 @@ const BlogPost = (params: { post: Parser.Item | null }) => {
       <div>
         <p>Latest blog post</p>
         <p>
-          <Link href={post.link || "#"}>
-            {post.title}
-          </Link>
+          <Link href={post.link || "#"}>{post.title}</Link>
         </p>
       </div>
     </div>
