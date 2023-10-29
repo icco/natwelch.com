@@ -13,7 +13,7 @@ export default async function Page() {
   const post = await getLatestBlogPost();
 
   return (
-    <>
+    <main>
       <Header size={Size.Large} />
 
       <div>
@@ -21,6 +21,6 @@ export default async function Page() {
       </div>
 
       <BlogPost post={post} />
-    </>
+    </main>
   );
 }

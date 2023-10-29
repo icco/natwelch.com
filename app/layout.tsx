@@ -46,9 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Header size={Size.Small} />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

@@ -40,7 +40,9 @@ export function LargeHeader() {
 
   return (
     <header>
-      <div><Logo size={200} /></div>
+      <div>
+        <Logo size={200} />
+      </div>
       <div>
         <h1>Nat Welch</h1>
         <h2>Software Reconnaissance Engineer</h2>

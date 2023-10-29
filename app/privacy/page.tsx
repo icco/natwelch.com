@@ -1,3 +1,5 @@
+import Footer from "components/Footer";
+import { Header, Size } from "components/Header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,20 +8,19 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   return (
-    <>
-      <h1>Privacy Policy</h1>
-      <p>
-        If you visit any subdomain of natwelch.com, I will store your IP
-        address, visit time, and pages visited. If you login or create an
-        account with natwelch.com or its subdomains, we will store your email
-        address. We reserve the right to keep this data indefinitely. Please
-        email nat@natwelch.com if you would like your information removed.
-      </p>
+    <main>
+      <Header size={Size.Small} />
 
-      <p>
-        Data is stored on a database hosted in the US on Google Cloud Platform.
-        We also utilize Google Analytics on some sites and Auth0 on others.
-      </p>
-    </>
+      <article className="prose lg:prose-xl">
+        <h1>Privacy Policy</h1>
+        <p>
+        </p>
+
+        <p>
+        </p>
+      </article>
+
+      <Footer />
+    </main>
   );
 }
