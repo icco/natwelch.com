@@ -14,8 +14,14 @@ export const Breadcrumbs = () => {
     <ol className="flex flex-wrap justify-end m-0 p-1 content-center">
       {pieces.map((piece: string, index: number) => {
         return (
-          <li key={piece} className="before:content-['/'] pr-2 text-muted last:text-link ">
-            <Link className="text-inherit" href={`/${pieces.slice(0, index + 1).join("/")}`}>
+          <li
+            key={piece}
+            className="before:content-['/'] pr-2 text-muted last:text-link "
+          >
+            <Link
+              className="text-inherit"
+              href={`/${pieces.slice(0, index + 1).join("/")}`}
+            >
               {piece}
             </Link>
           </li>
