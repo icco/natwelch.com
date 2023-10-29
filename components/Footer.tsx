@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <p>
-        <Link href={"/privacy"}>Privacy</Link>
+        <Link href={"/wiki/privacy-policy"}>Privacy</Link>
       </p>
       <div />
       <p>&copy; Nat Welch {DateTime.now().year}</p>
