@@ -1,15 +1,14 @@
-import { DateTime } from "luxon";
+import { formatDistance, formatISO9075 } from "date-fns";
+import { zonedTimeToUtc } from "date-fns-tz";
 
 export default function Age() {
-  const birth = DateTime.fromObject(
-    { year: 1988, month: 2, day: 22, hour: 17 },
-    { zone: "America/Los_Angeles" }
-  );
-  const now = DateTime.now();
-  const diff = now.diff(birth, "years", { conversionAccuracy: "longterm" });
+  const birth = zonedTimeToUtc("1988-02-22 17:30:00.000", "America/Los_Angeles");
+  const now = new Date();
+
+  const diff = formatDistance(birth, now, { addSuffix: true });
   if (birth && now && diff) {
-    const birthString = birth.toISO() ?? "";
-    return <time dateTime={birthString}>{diff.toHuman()} ago</time>;
+    const birthString = formatISO9075(birth)
+    return <time dateTime={birthString}>{diff}</time>;
   }
 
   return <></>;
