@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 
 const font = Roboto({
@@ -24,16 +24,17 @@ const font = Roboto({
 
 export const metadata: Metadata = {
   title: "Nat Welch",
-  viewport: {
-    viewportFit: "cover",
-    initialScale: 1.0,
-    width: "device-width",
-  },
   other: {
     webmention: "https://webmention.io/natwelch.com/webmention",
     pingback: "https://webmention.io/natwelch.com/xmlrpc",
     charset: "utf-8",
   },
+};
+
+export const viewport: Viewport = {
+  viewportFit: "cover",
+  initialScale: 1.0,
+  width: "device-width",
 };
 
 export default function RootLayout({
