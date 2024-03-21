@@ -1,80 +1,33 @@
-import { Logo } from "@icco/react-common";
-import { TextHeaderOne, TextHeaderTwo } from "components/TextHeader";
 import Link from "next/link";
 import React from "react";
 
-import { Breadcrumbs } from "./Lists";
+import { Breadcrumbs } from "./Breadcrumbs";
+import Logo from "./Logo";
 
 export function SmallHeader() {
   return (
-    <header
-      sx={{
-        p: [3, 4],
-        variant: "styles.header",
-      }}
-    >
-      <div
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          a: {
-            color: "text",
-            cursor: "pointer",
-            textDecoration: "none",
-            ":link,:any-link,:visited": { color: "text" },
-            ":focus,:active,:hover": {
-              color: "link",
-            },
-          },
-        }}
-      >
-        <Link href="/">
-          <Logo
-            size={50}
-            sx={{
-              verticalAlign: "middle",
-              py: 0,
-              my: [null, 1],
-              display: "inline-block",
-              textAlign: "center",
-              stroke: "text",
-            }}
-            className="logo"
-          />
-        </Link>
-        <div sx={{ mx: "auto" }} />
-        <Breadcrumbs />
-      </div>
+    <header>
+      <nav className="flex py-8">
+        <div className="flex-none">
+          <Link href="/" className="">
+            <Logo size={50} className="px-8 logo" style={{ stroke: "#333" }} />
+          </Link>
+        </div>
+        <div className="flex-grow"></div>
+        <div className="mr-8 content-center">
+          <Breadcrumbs />
+        </div>
+      </nav>
     </header>
   );
 }
 
 export function SmallHeaderWithText({ navtext }) {
   return (
-    <header
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        variant: "styles.header",
-        p: 2,
-      }}
-    >
-      <Link href="/">
-        <Logo
-          size={50}
-          sx={{
-            verticalAlign: "middle",
-            py: 0,
-            my: [null, 1],
-            display: "inline-block",
-            textAlign: "center",
-            stroke: "text",
-          }}
-          className="logo"
-        />
-      </Link>
-      <div sx={{ mx: "auto" }} />
-      <TextHeaderOne sx={{ mr: 4 }}>{navtext}</TextHeaderOne>
+    <header>
+      <Link href="/">TBD</Link>
+      <div />
+      <h1>{navtext}</h1>
     </header>
   );
 }
@@ -86,62 +39,19 @@ export function LargeHeader() {
   ];
 
   return (
-    <header
-      sx={{
-        display: "flex",
-        width: "100%",
-        flexDirection: "column",
-        alignItems: "center",
-        py: 0,
-        px: [3, 4, 5],
-        mt: 5,
-        textAlign: "center",
-      }}
-    >
-      <div
-        sx={{
-          width: "200px",
-          verticalAlign: "middle",
-        }}
-      >
-        <Logo
-          size={200}
-          sx={{
-            py: 0,
-            my: [null, 1],
-            stroke: "text",
-          }}
-        />
+    <header>
+      <div>
+        <Logo size={200} />
       </div>
-      <div
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          flexDirection: "column",
-          flexGrow: 1,
-          m: "1.5em",
-        }}
-      >
-        <TextHeaderOne sx={{ mt: 0, mb: "0.75em" }}>Nat Welch</TextHeaderOne>
-        <TextHeaderTwo sx={{ my: "0.75em" }}>
-          Software Reconnaissance Engineer
-        </TextHeaderTwo>
-        <div sx={{ mt: "0.75em", mb: 0 }}>
+      <div>
+        <h1>Nat Welch</h1>
+        <h2>Software Reconnaissance Engineer</h2>
+        <div>
           {links.map(([name, link]) => {
             return (
-              <Link key={name} href={link} passHref legacyBehavior>
-                <TextHeaderTwo sx={{ display: "inline-block", my: 0 }}>
-                  <a
-                    sx={{
-                      variant: "styles.navlink",
-                      px: 2,
-                      my: 0,
-                    }}
-                  >
-                    {name}
-                  </a>
-                </TextHeaderTwo>
-              </Link>
+              <h2 key={name}>
+                <Link href={link}>{name}</Link>
+              </h2>
             );
           })}
         </div>
@@ -156,17 +66,13 @@ export enum Size {
   Large = "large",
 }
 
-class Header extends React.Component<{ size: Size; navtext?: string }> {
-  render() {
-    switch (this.props.size) {
-      case Size.Large:
-        return <LargeHeader />;
-      case Size.Medium:
-        return <SmallHeaderWithText navtext={this.props.navtext} />;
-      case Size.Small:
-        return <SmallHeader />;
-    }
+export function Header({ size }: { size: Size }) {
+  switch (size) {
+    case Size.Large:
+      return <LargeHeader />;
+    case Size.Medium:
+      return <SmallHeaderWithText navtext={this.props.navtext} />;
+    case Size.Small:
+      return <SmallHeader />;
   }
 }
-
-export default Header;

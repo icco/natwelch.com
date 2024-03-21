@@ -6,4 +6,5 @@ ls/cache/*
 node_modules
 .next
 yarn-error.log
+.contentlayer
 .env
