@@ -48,18 +48,7 @@ const Index = ({ post }) => (
         <Social />
       </div>
     </div>
-
-    <BlogPost post={post} />
   </main>
 );
-
-export const getStaticProps = async () => {
-  const post = await getLatestBlogPost();
-  return {
-    props: {
-      post,
-    },
-  };
-};
 
 export default Index;
