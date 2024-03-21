@@ -21,7 +21,12 @@ module.exports = {
     return [
       {
         source: "/about",
-        destination: "https://natwelch.com/",
+        destination: "https://natwelch.com/wiki/about",
+        permanent: true,
+      },
+      {
+        source: "/resume",
+        destination: "https://resume.natwelch.com/",
         permanent: true,
       },
     ];
