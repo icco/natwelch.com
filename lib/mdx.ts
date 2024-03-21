@@ -30,6 +30,8 @@ export async function getPaths(): Promise<string[]> {
           .replace(POSTS_PATH, "");
         paths.push(filename);
       }
+
+      return true;
     }
   );
 

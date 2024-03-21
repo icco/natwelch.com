@@ -1,10 +1,8 @@
-import { BlogPost } from "components/BlogPost";
 import Header, { Size } from "components/Header";
 import Social from "components/Social";
-import { getLatestBlogPost } from "lib/graphql";
 import Head from "next/head";
 
-const Index = ({ post }) => (
+const Index = () => (
   <main
     sx={{
       maxWidth: 768,
