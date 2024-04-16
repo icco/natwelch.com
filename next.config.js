@@ -1,5 +1,5 @@
 const { createSecureHeaders } = require("next-secure-headers");
-const { withContentlayer } = require('next-contentlayer')
+const { withContentlayer } = require('next-contentlayer2')
 
 const port = process.env.PORT || "8080";
 const hostname = process.env.HOSTNAME || `localhost`

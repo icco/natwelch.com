@@ -1,7 +1,7 @@
 import { MDXComponents } from "mdx/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import Age from "components/Age";
 import Social from "components/Social";
