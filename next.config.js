@@ -35,6 +35,11 @@ module.exports = withContentlayer({
         destination: "https://natwelch.com/wiki/privacy-policy",
         permanent: true,
       },
+      {
+        source: "/resume",
+        destination: "https://resume.natwelch.com/",
+        permanent: true,
+      },
     ];
   },
   async headers() {
