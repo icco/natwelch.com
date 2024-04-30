@@ -1,16 +1,14 @@
-import { persistedExchange } from "@urql/exchange-persisted";
-import { cacheExchange, createClient, fetchExchange, gql } from "urql";
+import { cacheExchange, createClient, fetchExchange, gql } from "@urql/core";
+import { registerUrql } from "@urql/next/rsc";
 
-export const client = createClient({
-  url: "https://graphql.natwelch.com/graphql",
-  exchanges: [
-    cacheExchange,
-    persistedExchange({
-      preferGetForPersistedQueries: true,
-    }),
-    fetchExchange,
-  ],
-});
+const makeClient = () => {
+  return createClient({
+    url: "https://graphql.natwelch.com/graphql",
+    exchanges: [cacheExchange, fetchExchange],
+  });
+};
+
+const { getClient } = registerUrql(makeClient);
 
 const latestPostQuery = gql`
   query latestPostQuery {
@@ -22,6 +20,7 @@ const latestPostQuery = gql`
 `;
 
 export const getLatestBlogPost = async () => {
+  const client = getClient();
   const {
     data: { posts },
   } = await client.query(latestPostQuery, {}).toPromise();

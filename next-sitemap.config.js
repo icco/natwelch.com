@@ -1,4 +1,7 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://natwelch.com',
+  autoLastmod: false,
+  siteUrl: process.env.DOMAIN || "https://natwelch.com",
   generateRobotsTxt: true,
+  changefreq: "monthly",
 }
