@@ -43,7 +43,7 @@
     "remark-definition-list": "^1.0.0",
     "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",
-    "theme-ui": "^0.15.0",
+    "theme-ui": "^0.16.2",
     "typography": "^0.16.21",
     "typography-theme-fairy-gates": "^0.16.19",
     "unified": "^10.1.1",
