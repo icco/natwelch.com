@@ -22,7 +22,7 @@
     "@emotion/styled": "^11.6.0",
     "@icco/react-common": "^2023.3.18-2",
     "@mdx-js/react": "^2.3.0",
-    "@next/env": "^13.4.5",
+    "@next/env": "^14.2.5",
     "@root/walk": "^1.1.0",
     "@theme-ui/mdx": "^0.15.7",
     "@theme-ui/typography": "^0.15.4",
