@@ -1,19 +1,18 @@
 version: 2
-registries:
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: npm
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: weekly
     registries:
       - npm-npmjs
     versioning-strategy: increase
     open-pull-requests-limit: 10
-  - package-ecosystem: "docker"
-    directory: "/"
+  - package-ecosystem: docker
+    directory: /
     open-pull-requests-limit: 10
     schedule:
-      interval: "weekly"
+      interval: weekly
   - package-ecosystem: github-actions
     directory: /
     schedule:
