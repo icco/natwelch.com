@@ -1,3 +1,6 @@
+// @ts-check
+
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { createSecureHeaders } = require("next-secure-headers");
 const { withContentlayer } = require("next-contentlayer2");
 
@@ -6,19 +9,19 @@ const hostname = process.env.HOSTNAME || `localhost`;
 const domain = process.env.DOMAIN || `http://${hostname}:${port}`;
 
 /** @type {import('next').NextConfig} */
-module.exports = withContentlayer({
-  swcMinify: true,
+const nextConfig = {
+  output: "standalone",
   poweredByHeader: false,
-  reactStrictMode: true,
   trailingSlash: false,
   productionBrowserSourceMaps: true,
+  swcMinify: true,
+  reactStrictMode: true,
   env: {
-    DOMAIN: process.env.DOMAIN || `http://localhost:${port}`,
+    DOMAIN: domain,
     PORT: port,
-    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
   eslint: {
-    dirs: ["src"],
+    dirs: ["src", "."],
   },
   async redirects() {
     return [
@@ -111,4 +114,9 @@ module.exports = withContentlayer({
       },
     ];
   },
-});
+  experimental: {
+    mdxRs: true,
+  },
+};
+
+module.exports = withContentlayer(nextConfig);
