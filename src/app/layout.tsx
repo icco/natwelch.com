@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Roboto, Roboto_Mono, Roboto_Slab } from "next/font/google";
 
-import Footer from "@/components/Footer";
 import { Header, Size } from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -55,7 +54,6 @@ export default function RootLayout({
         <ThemeProvider defaultTheme="system" enableSystem>
           <Header size={Size.Small} />
           <main>{children}</main>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

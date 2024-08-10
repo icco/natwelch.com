@@ -16,8 +16,10 @@ export function SmallHeader() {
         </div>
         <div className="flex-grow"></div>
         <div className="mr-8 content-center">
-          <ThemeToggle />
           <Breadcrumbs />
+        </div>
+        <div className="mr-8 content-center">
+          <ThemeToggle />
         </div>
       </nav>
     </header>
