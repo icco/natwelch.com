@@ -3,7 +3,11 @@ import Link from "next/link";
 
 import { Page } from "contentlayer/generated";
 
-function Tree({ items }: { items: string | Record<string, Page> }) {
+function Tree({
+  items,
+}: {
+  items: string | Record<string, Page>;
+}): JSX.Element {
   if (isString(items)) {
     return <>{items}</>;
   }
@@ -12,9 +16,6 @@ function Tree({ items }: { items: string | Record<string, Page> }) {
     <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
       {Object.keys(items).map((k) => {
         const value = items[k];
-        if (isString(value)) {
-          return <></>;
-        }
 
         if (!value.url) {
           return <></>;
