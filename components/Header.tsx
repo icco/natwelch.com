@@ -22,16 +22,6 @@ export function SmallHeader() {
   );
 }
 
-export function SmallHeaderWithText({ navtext }) {
-  return (
-    <header>
-      <Link href="/">TBD</Link>
-      <div />
-      <h1>{navtext}</h1>
-    </header>
-  );
-}
-
 export function LargeHeader() {
   const links = [
     ["Wiki", "/wiki"],
@@ -41,7 +31,7 @@ export function LargeHeader() {
   return (
     <header>
       <div>
-        <Logo size={200} />
+        <Logo size={200} className="px-8 logo" style={{ stroke: "#333" }} />
       </div>
       <div>
         <h1>Nat Welch</h1>
@@ -70,9 +60,9 @@ export function Header({ size }: { size: Size }) {
   switch (size) {
     case Size.Large:
       return <LargeHeader />;
-    case Size.Medium:
-      return <SmallHeaderWithText navtext={this.props.navtext} />;
     case Size.Small:
       return <SmallHeader />;
+    default:
+      return <></>;
   }
 }
