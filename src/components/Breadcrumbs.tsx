@@ -11,7 +11,7 @@ export const Breadcrumbs = () => {
     return !!piece;
   });
   return (
-    <ol className="flex flex-wrap justify-end m-0 p-1 content-center">
+    <ol className="flex flex-wrap justify-end m-0 px-1 content-center">
       {pieces.map((piece: string, index: number) => {
         return (
           <li

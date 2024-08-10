@@ -1,7 +1,7 @@
 import { merge } from "lodash";
 import { Metadata } from "next";
 
-import { Tree } from "components/Lists";
+import { Tree } from "@/components/Lists";
 
 import { allPages } from "contentlayer/generated";
 

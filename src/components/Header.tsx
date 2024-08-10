@@ -3,6 +3,7 @@ import React from "react";
 
 import { Breadcrumbs } from "./Breadcrumbs";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 export function SmallHeader() {
   return (
@@ -10,12 +11,15 @@ export function SmallHeader() {
       <nav className="flex py-8">
         <div className="flex-none">
           <Link href="/" className="">
-            <Logo size={50} className="px-8 logo" style={{ stroke: "#333" }} />
+            <Logo size={50} className="px-8 logo stroke-current" />
           </Link>
         </div>
         <div className="flex-grow"></div>
         <div className="mr-8 content-center">
           <Breadcrumbs />
+        </div>
+        <div className="mr-8 content-center">
+          <ThemeToggle />
         </div>
       </nav>
     </header>
@@ -31,12 +35,11 @@ export function LargeHeader() {
 
   return (
     <header className="mt-[12vh]">
-      <Logo
-        size={200}
-        className="m-0 p-0 logo flex flex-row itens-center justify-center"
-        style={{ stroke: "#333" }}
-      />
       <div className="flex flex-col items-center justify-center">
+        <Logo
+          size={200}
+          className="m-0 p-0 logo flex flex-row items-center justify-center stroke-current"
+        />
         <h1 className="flex-row text-4xl font-bold mt-6">Nat Welch</h1>
         <h2 className="flex-row text-2xl font-bold mt-4">
           Software Reconnaissance Engineer
@@ -44,11 +47,11 @@ export function LargeHeader() {
         <div className="flex flex-row justify-center items-center mt-6 text-xl">
           {links.map(([name, link]) => {
             return (
-              <h2 key={name}>
-                <Link className="px-4 hover:text-link" href={link}>
+              <div key={name}>
+                <Link className="px-4 text-xl" href={link}>
                   {name}
                 </Link>
-              </h2>
+              </div>
             );
           })}
         </div>

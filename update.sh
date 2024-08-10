@@ -10,7 +10,7 @@ git add package* yarn.lock
 git diff --quiet --staged || git commit -m 'chore(deps): yarn upgrade'
 
 yarn run lint 
-git add lib app components wiki
+git add src
 git diff --quiet --staged || git commit -m 'chore: lint'
 
 yarn run build

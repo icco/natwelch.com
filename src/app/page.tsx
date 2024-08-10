@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
-import { BlogPost } from "components/BlogPost";
-import { Header, Size } from "components/Header";
-import Social from "components/Social";
-import { getLatestBlogPost } from "lib/rss";
+import { BlogPost } from "@/components/BlogPost";
+import { Header, Size } from "@/components/Header";
+import Social from "@/components/Social";
+import { getLatestBlogPost } from "@/lib/rss";
 
 export const metadata: Metadata = {
   title: "Nat Welch",
