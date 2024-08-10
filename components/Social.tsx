@@ -1,12 +1,12 @@
 const Social = () => {
-  const style = "mx-2 text-link text-hover-secondary";
+  const style = "mx-2 hover:text-link";
   return (
     <nav className="flex items-center justify-center">
       <a
         href="https://github.com/icco"
         title="GitHub"
         rel="me"
-        className="mx-2 text-link"
+        className={style}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

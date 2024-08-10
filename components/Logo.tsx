@@ -40,6 +40,7 @@ function buildSVG(size: number): React.JSX.Element {
       width={size}
       height={size}
       id="logo"
+      className="block"
     >
       {paths}
     </svg>

@@ -13,14 +13,16 @@ export default async function Page() {
   const post = await getLatestBlogPost();
 
   return (
-    <main>
+    <main className="flex flex-col items-center justify-center">
       <Header size={Size.Large} />
 
-      <div>
+      <div className="mt-8">
         <Social />
       </div>
 
-      <BlogPost post={post} />
+      <div className="mt-8">
+        <BlogPost post={post} />
+      </div>
     </main>
   );
 }

@@ -26,21 +26,28 @@ export function LargeHeader() {
   const links = [
     ["Wiki", "/wiki"],
     ["Resume", "https://resume.natwelch.com"],
+    ["Blog", "https://writing.natwelch.com"],
   ];
 
   return (
-    <header>
-      <div>
-        <Logo size={200} className="px-8 logo" style={{ stroke: "#333" }} />
-      </div>
-      <div>
-        <h1>Nat Welch</h1>
-        <h2>Software Reconnaissance Engineer</h2>
-        <div>
+    <header className="mt-[12vh]">
+      <Logo
+        size={200}
+        className="m-0 p-0 logo flex flex-row itens-center justify-center"
+        style={{ stroke: "#333" }}
+      />
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="flex-row text-4xl font-bold mt-6">Nat Welch</h1>
+        <h2 className="flex-row text-2xl font-bold mt-4">
+          Software Reconnaissance Engineer
+        </h2>
+        <div className="flex flex-row justify-center items-center mt-6 text-xl">
           {links.map(([name, link]) => {
             return (
               <h2 key={name}>
-                <Link href={link}>{name}</Link>
+                <Link className="px-4 hover:text-link" href={link}>
+                  {name}
+                </Link>
               </h2>
             );
           })}
