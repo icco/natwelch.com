@@ -1,20 +1,7 @@
 const Social = () => {
+  const style = "mx-2 text-link text-hover-secondary";
   return (
-    <nav
-      className="flex items-center justify-center"
-    // sx={{
-    //   a: {
-    //     color: "link",
-    //     textDecoration: "none",
-    //     ":link,:any-link,:visited": { color: "link" },
-    //     ":focus,:active,:hover": {
-    //       color: "secondary",
-    //       textDecoration: "underline",
-    //     },
-    //     mx: "10px",
-    //   },
-    // }}
-    >
+    <nav className="flex items-center justify-center">
       <a
         href="https://github.com/icco"
         title="GitHub"
@@ -40,7 +27,7 @@ const Social = () => {
         href="https://instagram.com/probablynatwelch"
         title="Instagram"
         rel="me"
-        className="mx-2 text-link"
+        className={style}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +48,7 @@ const Social = () => {
         href="https://linkedin.com/in/natwelch"
         title="LinkedIn"
         rel="me"
-        className="mx-2 text-link"
+        className={style}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +72,7 @@ const Social = () => {
         href="https://www.goodreads.com/author/show/18143346.Nat_Welch"
         title="Goodreads"
         rel="me"
-        className="mx-2 text-link"
+        className={style}
       >
         <svg
           fillRule="evenodd"
@@ -108,7 +95,7 @@ const Social = () => {
         href="https://webring.xxiivv.com/#random"
         target="_blank"
         rel="me noreferrer"
-        className="mx-2 text-link"
+        className={style}
       >
         {/* Source is at https://webring.xxiivv.com/icon.black.svg */}
         <svg
@@ -134,7 +121,7 @@ const Social = () => {
         href="https://merveilles.town/@icco"
         target="_blank"
         rel="me noreferrer"
-        className="mx-2 text-link"
+        className={style}
       >
         {/* Source is at https://somni.us/assets/images/merveilles-to-edge-white.svg */}
         <svg
