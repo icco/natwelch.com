@@ -1,6 +1,27 @@
 const Social = () => {
   return (
-    <nav>
+    <nav
+      sx={{
+        display: "flex",
+        a: {
+          color: "link",
+          textDecoration: "none",
+          ":link,:any-link,:visited": { color: "link" },
+          ":focus,:active,:hover": {
+            color: "secondary",
+            textDecoration: "underline",
+          },
+          mx: "10px",
+        },
+        svg: {
+          fill: "currentColor",
+          height: "32px",
+          width: "32px",
+        },
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <a href="https://github.com/icco" title="GitHub" rel="me">
         <svg
           xmlns="http://www.w3.org/2000/svg"
