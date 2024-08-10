@@ -18,7 +18,7 @@ module.exports = withContentlayer({
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
   eslint: {
-    dirs: ["app", "lib", "components", "wiki"],
+    dirs: ["src"],
   },
   async redirects() {
     return [
