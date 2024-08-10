@@ -11,11 +11,7 @@ export function SmallHeader() {
       <nav className="flex py-8">
         <div className="flex-none">
           <Link href="/" className="">
-            <Logo
-              size={50}
-              className="px-8 logo stroke-current"
-              style={{ stroke: "#333" }}
-            />
+            <Logo size={50} className="px-8 logo stroke-current" />
           </Link>
         </div>
         <div className="flex-grow"></div>
@@ -39,8 +35,7 @@ export function LargeHeader() {
     <header className="mt-[12vh]">
       <Logo
         size={200}
-        className="m-0 p-0 logo flex flex-row itens-center justify-center"
-        style={{ stroke: "#333" }}
+        className="m-0 p-0 logo flex flex-row itens-center justify-center stroke-current"
       />
       <div className="flex flex-col items-center justify-center">
         <h1 className="flex-row text-4xl font-bold mt-6">Nat Welch</h1>
