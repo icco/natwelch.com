@@ -1,40 +1,32 @@
 import "./globals.css";
 
-import type { Metadata, Viewport } from "next";
-import { Roboto } from "next/font/google";
+import type { Metadata } from "next";
+import { Roboto, Roboto_Mono, Roboto_Slab } from "next/font/google";
 
-const font = Roboto({
+import Footer from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
+
+const roboto = Roboto({
   weight: "400",
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
-// TODO: Not currently supported by app router.
-// Will be called once for every metric that has to be reported.
-//export function reportWebVitals(metric) {
-//  const body = JSON.stringify(metric);
-//  const url = "https://reportd.natwelch.com/analytics/natwelch";
-//
-//  // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-//  if (navigator.sendBeacon) {
-//    navigator.sendBeacon(url, body);
-//  } else {
-//    fetch(url, { body, method: "POST", keepalive: true });
-//  }
-//}
+const robotoSlab = Roboto_Slab({
+  variable: "--font-roboto-slab",
+  subsets: ["latin"],
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Nat Welch",
-  other: {
-    webmention: "https://webmention.io/natwelch.com/webmention",
-    pingback: "https://webmention.io/natwelch.com/xmlrpc",
-    charset: "utf-8",
-  },
-};
-
-export const viewport: Viewport = {
-  viewportFit: "cover",
-  initialScale: 1.0,
-  width: "device-width",
+  title: "Nat? Nat. Nat!",
+  description: "The personal blog of Nat Welch",
 };
 
 export default function RootLayout({
@@ -43,8 +35,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${roboto.variable} ${robotoSlab.variable} ${robotoMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body>
+        <ThemeProvider defaultTheme="system" enableSystem>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
