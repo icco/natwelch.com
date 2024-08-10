@@ -35,11 +35,11 @@ export function LargeHeader() {
 
   return (
     <header className="mt-[12vh]">
-      <Logo
-        size={200}
-        className="m-0 p-0 logo flex flex-row items-center justify-center stroke-current"
-      />
       <div className="flex flex-col items-center justify-center">
+        <Logo
+          size={200}
+          className="m-0 p-0 logo flex flex-row items-center justify-center stroke-current"
+        />
         <h1 className="flex-row text-4xl font-bold mt-6">Nat Welch</h1>
         <h2 className="flex-row text-2xl font-bold mt-4">
           Software Reconnaissance Engineer
