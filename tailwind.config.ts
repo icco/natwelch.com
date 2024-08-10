@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   future: {},
@@ -38,5 +38,5 @@ const config: Config = {
     ],
     logs: false,
   },
-}
-export default config
+};
+export default config;

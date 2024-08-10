@@ -3,13 +3,9 @@ import Link from "next/link";
 
 import { Page } from "contentlayer/generated";
 
-function Tree({ items }: { items: string | Record<string, Page> | Page }) {
+function Tree({ items }: { items: string | Record<string, Page> }) {
   if (isString(items)) {
     return <>{items}</>;
-  }
-
-  if (items instanceof Page) {
-    return Page;
   }
 
   return (
