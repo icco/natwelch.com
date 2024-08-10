@@ -1,9 +1,0 @@
-<script>
-  var context = new AudioContext();
-  var oscillator = context.createOscillator();
-  oscillator.type = 0; // -> sine 
-  oscillator.type = 'square';
-  oscillator.frequency.value = 3000; 
-  oscillator.connect(context.destination);
-  oscillator.start();
-</script>
