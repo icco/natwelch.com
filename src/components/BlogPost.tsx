@@ -9,12 +9,12 @@ const BlogPost = (params: { post: Parser.Item | null }) => {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center rounded-lg p-3 bg-accent">
+      <div className="flex flex-col items-center justify-center rounded-lg p-3 bg-accent prose">
         <div className="flex-row">
-          <p className="pb-3">Latest blog post</p>
+          <h4 className="m-0">Latest blog post</h4>
         </div>
         <div className="flex-row">
-          <Link className="hover:text-link p-3" href={post.link || "#"}>
+          <Link className="" href={post.link || "#"}>
             {post.title}
           </Link>
         </div>

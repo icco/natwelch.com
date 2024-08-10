@@ -47,11 +47,11 @@ export function LargeHeader() {
         <div className="flex flex-row justify-center items-center mt-6 text-xl">
           {links.map(([name, link]) => {
             return (
-              <h2 key={name}>
-                <Link className="px-4 hover:text-link" href={link}>
+              <div key={name}>
+                <Link className="px-4 text-xl" href={link}>
                   {name}
                 </Link>
-              </h2>
+              </div>
             );
           })}
         </div>
