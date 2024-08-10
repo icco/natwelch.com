@@ -3,7 +3,15 @@ import Link from "next/link";
 
 import { Page } from "contentlayer/generated";
 
-function Tree({ items }: { items: string | Record<string, Page> }) {
+function Tree({ items }: { items: string | Record<string, Page> | Page }) {
+  if (isString(items)) {
+    return <>{items}</>;
+  }
+
+  if (items instanceof Page) {
+    return Page;
+  }
+
   return (
     <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
       {Object.keys(items).map((k) => {
