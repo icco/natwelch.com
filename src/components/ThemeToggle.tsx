@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
-import { useTheme } from "next-themes"
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { useTheme } from "next-themes";
 
 function ThemeToggle() {
-  const { resolvedTheme, theme, setTheme } = useTheme()
+  const { resolvedTheme, theme, setTheme } = useTheme();
 
-  let isDark = resolvedTheme === "dark"
+  let isDark = resolvedTheme === "dark";
 
   const onChange = () => {
-    setTheme(isDark ? "light" : "dark")
-    isDark = theme === "dark"
-  }
+    setTheme(isDark ? "light" : "dark");
+    isDark = theme === "dark";
+  };
 
   return (
     <>
@@ -30,7 +30,7 @@ function ThemeToggle() {
         <MoonIcon className="swap-on w-4 h-4" />
       </label>
     </>
-  )
+  );
 }
 
-export default ThemeToggle
+export default ThemeToggle;
