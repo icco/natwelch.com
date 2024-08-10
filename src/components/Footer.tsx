@@ -27,7 +27,7 @@ const Footer = () => {
           </Link>
           <Link
             className="blue ms-2"
-            href="https://github.com/icco/writing"
+            href="https://github.com/icco/natwelch.com"
             title="Source Code"
           >
             <CodeBracketIcon className="inline-block w-4 h-4" />
