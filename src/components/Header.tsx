@@ -34,7 +34,7 @@ export function LargeHeader() {
   ];
 
   return (
-    <header className="mt-[12vh]">
+    <header>
       <div className="flex flex-col items-center justify-center">
         <Logo
           size={200}
