@@ -3,14 +3,16 @@ import { Metadata } from "next";
 
 import { Tree } from "@/components/Lists";
 
-import { allPages } from "contentlayer/generated";
+import { allPages, Page } from "contentlayer/generated";
 
 function getPaths(): string[] {
   const paths: string[] = allPages.map((page) => page.path);
   return paths.sort();
 }
 
-function buildTree(filter?: (value: string) => boolean) {
+function buildTree(
+  filter?: (value: string) => boolean
+): Record<string, Page> | string {
   let tree = {};
   let paths = getPaths();
   if (filter) {
@@ -24,7 +26,10 @@ function buildTree(filter?: (value: string) => boolean) {
   return tree;
 }
 
-function buildTreeInt(path: string, fullPath: string) {
+function buildTreeInt(
+  path: string,
+  fullPath: string
+): Record<string, Page> | string {
   if (!path.includes("/")) {
     const data = allPages.find((page) => page.path === fullPath);
     if (!data) {
@@ -35,7 +40,9 @@ function buildTreeInt(path: string, fullPath: string) {
   }
 
   const pieces = path.split("/");
-  return { [pieces[0]]: buildTreeInt(pieces.slice(1).join("/"), fullPath) };
+  return {
+    [pieces[0]]: buildTreeInt(pieces.slice(1).join("/"), fullPath),
+  } as unknown as Record<string, Page> | string;
 }
 
 export const metadata: Metadata = {
