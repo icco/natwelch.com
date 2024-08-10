@@ -3,6 +3,7 @@ import React from "react";
 
 import { Breadcrumbs } from "./Breadcrumbs";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 export function SmallHeader() {
   return (
@@ -10,11 +11,16 @@ export function SmallHeader() {
       <nav className="flex py-8">
         <div className="flex-none">
           <Link href="/" className="">
-            <Logo size={50} className="px-8 logo" style={{ stroke: "#333" }} />
+            <Logo
+              size={50}
+              className="px-8 logo stroke-current"
+              style={{ stroke: "#333" }}
+            />
           </Link>
         </div>
         <div className="flex-grow"></div>
         <div className="mr-8 content-center">
+          <ThemeToggle />
           <Breadcrumbs />
         </div>
       </nav>
