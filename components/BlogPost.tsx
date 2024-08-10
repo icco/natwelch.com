@@ -1,34 +1,24 @@
 import Link from "next/link";
-import { Paragraph } from "theme-ui";
+import Parser from "rss-parser";
 
-const BlogPost = (params) => {
+const BlogPost = (params: { post: Parser.Item | null }) => {
   const { post } = params;
+  if (!post) {
+    return <></>;
+  }
+
   return (
-    <div
-      sx={{
-        m: "2em",
-        display: "flex",
-        alignContent: "center",
-      }}
-    >
-      <div sx={{ mx: "auto" }}></div>
-      <div
-        sx={{
-          borderRadius: "1em",
-          textAlign: "center",
-          backgroundColor: "muted",
-          py: "1em",
-          px: "3em",
-        }}
-      >
-        <Paragraph>Latest blog post</Paragraph>
-        <Paragraph>
-          <Link passHref href={post.uri}>
+    <div>
+      <div className="flex flex-col items-center justify-center rounded-lg p-3 bg-accent">
+        <div className="flex-row">
+          <p className="pb-3">Latest blog post</p>
+        </div>
+        <div className="flex-row">
+          <Link className="hover:text-link p-3" href={post.link || "#"}>
             {post.title}
           </Link>
-        </Paragraph>
+        </div>
       </div>
-      <div sx={{ mx: "auto" }}></div>
     </div>
   );
 };

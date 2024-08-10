@@ -1,143 +1,32 @@
-import { isString } from "lodash";
+import { isString, uniqueId } from "lodash";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
 
-const UnorderedList = (params) => {
-  return (
-    <ul
-      sx={{
-        boxSizing: "border-box",
-        my: "1rem",
-        pl: "2rem",
-        pr: 0,
-      }}
-      {...params}
-    ></ul>
-  );
-};
+import { Page } from "contentlayer/generated";
 
-const OrderedList = (params) => {
+function Tree({ items }: { items: string | Record<string, Page> }) {
   return (
-    <ol
-      sx={{
-        boxSizing: "border-box",
-        my: "1rem",
-        pl: "2rem",
-        pr: 0,
-      }}
-      {...params}
-    ></ol>
-  );
-};
-
-const ListItem = (params) => {
-  return (
-    <li
-      sx={{
-        my: "0.5rem",
-        "::marker": {
-          color: "border",
-        },
-      }}
-      {...params}
-    ></li>
-  );
-};
-
-const Tree = ({ items }) => {
-  return (
-    <UnorderedList key={`ul`}>
+    <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
       {Object.keys(items).map((k) => {
         const value = items[k];
         if (isString(value)) {
-          return <React.Fragment key={`${k}-empty`}></React.Fragment>;
+          return <></>;
         }
 
-        let li = <></>;
-        if ("title" in value && "path" in value) {
-          li = (
-            <ListItem key={value.path}>
-              <Link href={`/wiki/${value.path}`}>{value.title}</Link>
-            </ListItem>
-          );
+        if (!value.url) {
+          return <></>;
         }
 
         return (
-          <React.Fragment key={`${k}-root`}>
-            {li}
+          <span key={`${k}-root-${uniqueId()}`}>
+            <li className="" style={{}} key={value.url}>
+              <Link href={value.url}>{value.title}</Link>
+            </li>
             <Tree key={`${k}-tree`} items={value}></Tree>
-          </React.Fragment>
+          </span>
         );
       })}
-    </UnorderedList>
+    </ul>
   );
-};
+}
 
-// Inspo: https://github.com/alphardex/aqua.css/blob/master/src/breadcrumb.scss
-const Breadcrumbs = () => {
-  const router = useRouter();
-  const path = router.asPath;
-
-  const pieces = path.split("/").filter((piece) => {
-    return !!piece;
-  });
-  return (
-    <nav sx={{}}>
-      <OrderedList
-        sx={{
-          display: "flex",
-          margin: 0,
-          padding: 0,
-          listStyleType: "none",
-          alignItems: "center",
-          justifyContent: "right",
-          flexWrap: "wrap",
-        }}
-      >
-        {pieces.map((piece: string, index: number) => {
-          return (
-            <ListItem
-              key={piece}
-              sx={{
-                paddingLeft: ".5rem",
-                margin: 0,
-
-                "&::before": {
-                  content: '"/"',
-                  paddingRight: ".5rem",
-                  color: "text",
-                },
-
-                "&:not(:last-child)": {
-                  a: {
-                    color: "link",
-                  },
-                },
-
-                "&:last-child": {
-                  a: {
-                    color: "secondary",
-                  },
-                },
-              }}
-            >
-              <Link
-                href={`/${pieces.slice(0, index + 1).join("/")}`}
-                sx={{
-                  position: "relative",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                }}
-              >
-                {piece}
-              </Link>
-            </ListItem>
-          );
-        })}
-      </OrderedList>
-    </nav>
-  );
-};
-
-export { Breadcrumbs, ListItem, OrderedList, Tree, UnorderedList };
+export { Tree };
