@@ -13,7 +13,7 @@ export default async function Page() {
   const post = await getLatestBlogPost();
 
   return (
-    <main className="flex flex-col items-center justify-center my-[14vh]">
+    <div className="flex flex-col items-center justify-center my-[14vh]">
       <Header size={Size.Large} />
 
       <div className="mt-8">
@@ -23,6 +23,6 @@ export default async function Page() {
       <div className="mt-8">
         <BlogPost post={post} />
       </div>
-    </main>
+    </div>
   );
 }
