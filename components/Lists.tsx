@@ -5,7 +5,7 @@ import { Page } from "contentlayer/generated";
 
 function Tree({ items }: { items: string | Record<string, Page> }) {
   return (
-    <ul key={`ul-${uniqueId()}`} className="ms-8 list-none">
+    <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
       {Object.keys(items).map((k) => {
         const value = items[k];
         if (isString(value)) {
