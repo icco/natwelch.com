@@ -1,9 +1,9 @@
 const { createSecureHeaders } = require("next-secure-headers");
-const { withContentlayer } = require('next-contentlayer2')
+const { withContentlayer } = require("next-contentlayer2");
 
 const port = process.env.PORT || "8080";
-const hostname = process.env.HOSTNAME || `localhost`
-const domain = process.env.DOMAIN || `http://${hostname}:${port}`
+const hostname = process.env.HOSTNAME || `localhost`;
+const domain = process.env.DOMAIN || `http://${hostname}:${port}`;
 
 /** @type {import('next').NextConfig} */
 module.exports = withContentlayer({
@@ -13,15 +13,12 @@ module.exports = withContentlayer({
   trailingSlash: false,
   productionBrowserSourceMaps: true,
   env: {
-    GRAPHQL_ORIGIN: process.env.GRAPHQL_ORIGIN || "https://graphql.natwelch.com/graphql",
-    AUTH0_CLIENT_ID: "MwFD0COlI4F4AWvOZThe1psOIletecnL",
-    AUTH0_DOMAIN: "icco.auth0.com",
     DOMAIN: process.env.DOMAIN || `http://localhost:${port}`,
     PORT: port,
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
   eslint: {
-    dirs: ['app', 'lib', 'components', 'wiki'],
+    dirs: ["app", "lib", "components", "wiki"],
   },
   async redirects() {
     return [
