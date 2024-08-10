@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Roboto, Roboto_Mono, Roboto_Slab } from "next/font/google";
 
 import Footer from "@/components/Footer";
@@ -27,6 +27,17 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "Nat? Nat. Nat!",
   description: "The personal blog of Nat Welch",
+  other: {
+    webmention: "https://webmention.io/natwelch.com/webmention",
+    pingback: "https://webmention.io/natwelch.com/xmlrpc",
+    charset: "utf-8",
+  },
+};
+
+export const viewport: Viewport = {
+  viewportFit: "cover",
+  initialScale: 1.0,
+  width: "device-width",
 };
 
 export default function RootLayout({
