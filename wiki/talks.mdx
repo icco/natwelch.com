@@ -4,9 +4,9 @@ title: Talks
 
 ---
 
-I have given a variety of talks. Here are some that I am particularly
-proud of.
+I have given a variety of talks. Here is an incomplete list of public ones I have given.
 
+-   Sumologic Illuminate 2022 - SLO Monitoring w/ Sumologic
 -   Google Cloud Next 2019 San Francisco - Prometheus and SLO Alerting
 -   SRECon 2019 Americas - [Intro to GraphQL](https://www.usenix.org/conference/srecon19americas/presentation/welch)
 -   StrangeLoop 2017 - [Practical Applications of the Dickerson Pyramid](https://writing.natwelch.com/post/673)
