@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: `**/*.mdx?`,
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
