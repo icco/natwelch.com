@@ -4,7 +4,7 @@ title: Code Projects
 
 ---
 
-I post photos with varying consistency on [Flickr](https://www.flickr.com/photos/icco/) & [Instagram](https://www.instagram.com/probablynatwelch/). I try to be randomly clever on [Twitter](https://twitter.com/icco). I publish code on [Github](https://github.com/icco).
+I publish code on [Github](https://github.com/icco).
 
 Below are some of my favorite projects that I have or am working on. This list does not include any projects which are not open source. See the [wiki root](/wiki) for a list of all projects in the wiki.
 
