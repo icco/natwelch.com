@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HeaderImage({
   src,
   alt,
@@ -7,10 +9,12 @@ export default function HeaderImage({
 }) {
   return (
     <div className="flex justify-center">
-      <img
-        src="/images/nat.jpg"
-        alt="Nat Welch"
-        className="h-24 w-24 rounded-full"
+      <Image
+        src={src}
+        alt={alt}
+        width={1600}
+        height={900}
+        className="rounded-full"
       />
     </div>
   );

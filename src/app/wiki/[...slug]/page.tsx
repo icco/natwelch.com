@@ -4,10 +4,10 @@ import { notFound } from "next/navigation";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import Age from "@/components/Age";
+import HeaderImage from "@/components/HeaderImage";
 import Social from "@/components/Social";
 
 import { allPages } from "contentlayer/generated";
-import HeaderImage from "@/components/HeaderImage";
 
 export const generateStaticParams = async () =>
   allPages.map((page) => ({ slug: page._raw.flattenedPath.split("/") }));
