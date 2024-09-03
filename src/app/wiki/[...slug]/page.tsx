@@ -1,3 +1,4 @@
+import { isString } from "lodash";
 import { MDXComponents } from "mdx/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -43,17 +44,22 @@ const Page = ({ params }: { params: { slug: string[] } }) => {
 
   const MDXContent = useMDXComponent(page.body.code);
 
+  const childrenTree = buildTree(getPaths(allPages), allPages, (value) =>
+    value.startsWith(page.path)
+  );
+  const hasChildren = isString(childrenTree);
+
   return (
     <article className="prose lg:prose-xl">
       <h1>{page.title}</h1>
       <MDXContent components={mdxComponents} />
-      <div className="divider"></div>
-      <h3>{page.title} Subpages</h3>
-      <Tree
-        items={buildTree(getPaths(allPages), allPages, (value) =>
-          value.startsWith(`wiki/${page._id}`)
-        )}
-      />
+      {hasChildren && (
+        <>
+          <div className="divider"></div>
+          <h3>{page.title} Subpages</h3>
+          <Tree items={childrenTree} />
+        </>
+      )}
     </article>
   );
 };
