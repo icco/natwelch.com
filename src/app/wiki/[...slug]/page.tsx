@@ -5,6 +5,7 @@ import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import Age from "@/components/Age";
 import HeaderImage from "@/components/HeaderImage";
+import { buildTree, getPaths, Tree } from "@/components/Lists";
 import Social from "@/components/Social";
 
 import { allPages } from "contentlayer/generated";
@@ -46,6 +47,13 @@ const Page = ({ params }: { params: { slug: string[] } }) => {
     <article className="prose lg:prose-xl">
       <h1>{page.title}</h1>
       <MDXContent components={mdxComponents} />
+      <div className="divider"></div>
+      <h3>{page.title} Subpages</h3>
+      <Tree
+        items={buildTree(getPaths(allPages), allPages, (value) =>
+          value.startsWith(`wiki/${page._id}`)
+        )}
+      />
     </article>
   );
 };
