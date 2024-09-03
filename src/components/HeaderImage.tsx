@@ -14,7 +14,7 @@ export default function HeaderImage({
         alt={alt}
         width={1600}
         height={900}
-        className="rounded-full"
+        className="grow w-screen"
       />
     </div>
   );

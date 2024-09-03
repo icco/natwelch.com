@@ -23,6 +23,11 @@ const nextConfig = {
   eslint: {
     dirs: ["src", "."],
   },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
   async redirects() {
     return [
       {
@@ -113,6 +118,16 @@ const nextConfig = {
         }),
       },
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "icco.imgix.net",
+        port: "",
+        pathname: "/photos/**",
+      },
+    ],
   },
   experimental: {
     mdxRs: true,
