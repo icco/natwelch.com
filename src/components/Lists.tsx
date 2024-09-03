@@ -51,11 +51,11 @@ function Tree({ items }: { items: string | Record<string, Page> }) {
       {Object.keys(items).map((k) => {
         const value = items[k];
         if (isString(value)) {
-          return <></>;
+          return <span key={uniqueId()}></span>;
         }
 
         if (!value.url) {
-          return <></>;
+          return <span key={uniqueId()}></span>;
         }
 
         return (
