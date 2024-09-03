@@ -7,6 +7,7 @@ import Age from "@/components/Age";
 import Social from "@/components/Social";
 
 import { allPages } from "contentlayer/generated";
+import HeaderImage from "@/components/HeaderImage";
 
 export const generateStaticParams = async () =>
   allPages.map((page) => ({ slug: page._raw.flattenedPath.split("/") }));
@@ -29,6 +30,7 @@ const mdxComponents: MDXComponents = {
   a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
   Age: () => <Age />,
   Social: () => <Social />,
+  HeaderImage: ({ src, alt }) => <HeaderImage src={src} alt={alt} />,
 };
 
 const Page = ({ params }: { params: { slug: string[] } }) => {
