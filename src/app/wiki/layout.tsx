@@ -7,7 +7,7 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <main className="px-4 mx-auto max-w-xl py-8">{children}</main>
+      <main className="px-4 mx-auto max-w-2xl py-4">{children}</main>
       <Footer />
     </>
   );
