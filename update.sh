@@ -2,7 +2,7 @@
 
 set -ex
 
-rm -rf package-lock.json dist node_modules .next .contentlayer
+rm -rf package-lock.json dist .next .contentlayer
 
 yarn 
 yarn upgrade 
