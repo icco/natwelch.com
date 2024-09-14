@@ -5,6 +5,7 @@ import { Roboto, Roboto_Mono, Roboto_Slab } from "next/font/google";
 
 import { Header, Size } from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { WebVitals } from "@/components/WebVitals";
 
 const roboto = Roboto({
   weight: "400",
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider defaultTheme="system" enableSystem>
           <Header size={Size.Small} />
+          <WebVitals />
           <main>{children}</main>
         </ThemeProvider>
       </body>
