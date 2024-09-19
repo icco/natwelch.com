@@ -1,15 +1,14 @@
-import { DateTime } from "luxon";
+import { TZDate } from "@date-fns/tz";
+import { differenceInCalendarYears, formatISO } from "date-fns";
 
 export default function Age() {
-  const birth = DateTime.fromObject(
-    { year: 1988, month: 2, day: 22, hour: 17 },
-    { zone: "America/Los_Angeles" }
-  );
-  const now = DateTime.now();
-  const diff = now.diff(birth, "years", { conversionAccuracy: "longterm" });
+  const birth = new TZDate(1988, 2, 22, 17, "America/Los_Angeles");
+
+  const now = Date.now();
+  const diff = differenceInCalendarYears(now, birth);
   if (birth && now && diff) {
-    const birthString = birth.toISO() ?? "";
-    return <time dateTime={birthString}>{diff.toHuman()} ago</time>;
+    const birthString = formatISO(birth);
+    return <time dateTime={birthString}>{diff} ago</time>;
   }
 
   return <></>;
