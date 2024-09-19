@@ -15,7 +15,7 @@ const Footer = () => {
       <footer className="footer items-center p-4">
         <aside className="items-center grid-flow-col">
           <p>
-            &copy; 2011 - {format(new TZDate("America/New_York"), "yyyy")} Nat
+            &copy; 2011 - {format(TZDate.tz("America/New_York"), "yyyy")} Nat
             Welch. All rights reserved.
           </p>
         </aside>
