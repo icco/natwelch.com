@@ -14,4 +14,6 @@ export function WebVitals() {
       fetch(url, { body, method: "POST", keepalive: true });
     }
   });
+
+  return <></>;
 }
