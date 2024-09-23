@@ -265,10 +265,10 @@
   resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-4.0.43.tgz#9bd42559ebb41cc5a7fb7cfeea5f231c20977dca"
   integrity sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==
 
-"@date-fns/tz@^1.0.2":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@date-fns/tz/-/tz-1.1.0.tgz#fd77782ff898683c9bea59033d0a67052d72a0d8"
-  integrity sha512-ebywM7KeJY5cm13Aq037FmjjghyOAMxccqQn0BIpHkvdAZe+gb7V18Sz2usKECguMcSrvy49TR1gR7Y9naGseQ==
+"@date-fns/tz@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@date-fns/tz/-/tz-1.1.1.tgz#3431211c2f5d43049b44201ce598baab03bb111e"
+  integrity sha512-q6heoR1X13DVTGUfb5MncqAVf5cG4VQakdcvSRrKV2Mcdh4xksTLtWzVuhHwb5rYx75DNHhq/XE/VcEj7wVE8w==
 
 "@effect-ts/core@^0.60.5":
   version "0.60.5"

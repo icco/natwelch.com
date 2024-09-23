@@ -18,7 +18,7 @@
   "author": "Nat Welch <nat@natwelch.com>",
   "homepage": "https://natwelch.com",
   "dependencies": {
-    "@date-fns/tz": "^1.0.2",
+    "@date-fns/tz": "^1.1.1",
     "@heroicons/react": "^2.0.18",
     "@mdx-js/react": "^3.0.0",
     "@next/env": "^14.0.0",
