@@ -1735,9 +1735,9 @@ camelcase-css@^2.0.1:
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
 caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001646, caniuse-lite@^1.0.30001663:
-  version "1.0.30001666"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001666.tgz#112d77e80f1762f62a1b71ba92164e0cb3f3dd13"
-  integrity sha512-gD14ICmoV5ZZM1OdzPWmpx+q4GyefaK06zi8hmfHV5xe4/2nOQX3+Dw5o+fSqOws2xVwL9j+anOPFwHzdEdV4g==
+  version "1.0.30001667"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001667.tgz#99fc5ea0d9c6e96897a104a8352604378377f949"
+  integrity sha512-7LTwJjcRkzKFmtqGsibMeuXmvFDfZq/nzIjnmgCGzKKRVzjD72selLDK1oPF/Oxzmt4fNcPvTDvGqSDG4tCALw==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -1967,9 +1967,9 @@ culori@^3:
   integrity sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==
 
 daisyui@^4.7.3:
-  version "4.12.11"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-4.12.11.tgz#97fb34be18a355b88beb6c49088f306a2d851f2b"
-  integrity sha512-D9OJTlnU1ATiDsKkw5/TB0997Hm73zu9SFeUTthDtKd06OEJQlOLoYrGXlP2YhHZDW4VAcQnmhEphTgPFUYqSw==
+  version "4.12.12"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-4.12.12.tgz#32d492e7992861433a7de835c2538ae5afcdb448"
+  integrity sha512-xmCZ4piuWOjhNyB0VDKczB5vKFCipTA7UxaZNOzCz6cT8kvWgv5BDtUo+Hk9gOFufByOlfuBdzLpfhY5GsebTQ==
   dependencies:
     css-selector-tokenizer "^0.8"
     culori "^3"
