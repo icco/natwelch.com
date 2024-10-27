@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@next/codemod": "^15.0.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/lodash": "^4.14.178",
     "@types/mdx": "^2.0.2",
@@ -54,6 +55,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "autoprefixer": "^10.4.16",
+    "dlx": "^0.2.1",
     "eslint": "^8.0.0",
     "eslint-config-next": "15.0.1",
     "eslint-config-prettier": "^9.0.0",
