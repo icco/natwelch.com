@@ -9,6 +9,7 @@
     "lint": "next lint --fix",
     "build": "next build",
     "postbuild": "next-sitemap",
+    "upgrade": "@next/codemod upgrade latest",
     "start": "next start -p $PORT"
   },
   "repository": {
