@@ -14,7 +14,6 @@ const nextConfig = {
   poweredByHeader: false,
   trailingSlash: false,
   productionBrowserSourceMaps: true,
-  swcMinify: true,
   reactStrictMode: true,
   env: {
     DOMAIN: domain,
