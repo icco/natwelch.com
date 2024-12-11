@@ -618,7 +618,7 @@
   dependencies:
     "@types/mdx" "^2.0.0"
 
-"@next/env@14.2.20", "@next/env@^14.0.0":
+"@next/env@14.2.20":
   version "14.2.20"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-14.2.20.tgz#0be2cc955f4eb837516e7d7382284cd5bc1d5a02"
   integrity sha512-JfDpuOCB0UBKlEgEy/H6qcBSzHimn/YWjUHzKl1jMeUO+QVRdzmTTl8gFJaNO87c8DXmVKhFCtwxQ9acqB3+Pw==
@@ -627,6 +627,11 @@
   version "13.5.7"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.5.7.tgz#5006f4460a7fa598a03e1c2aa4e59e45c71082d3"
   integrity sha512-uVuRqoj28Ys/AI/5gVEgRAISd0KWI0HRjOO1CTpNgmX3ZsHb5mdn14Y59yk0IxizXdo7ZjsI2S7qbWnO+GNBcA==
+
+"@next/env@^15.0.4":
+  version "15.0.4"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-15.0.4.tgz#97da0fe3bae2f2b2968c4c925d7936660f5b3836"
+  integrity sha512-WNRvtgnRVDD4oM8gbUcRc27IAhaL4eXQ/2ovGbgLnPGUvdyDr8UdXP4Q/IBDdAdojnD2eScryIDirv0YUCjUVw==
 
 "@next/eslint-plugin-next@14.2.20":
   version "14.2.20"
