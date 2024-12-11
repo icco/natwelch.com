@@ -1143,14 +1143,14 @@
   integrity sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==
 
 "@types/react-dom@^18.0.4":
-  version "18.3.3"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.3.3.tgz#3654138d0da1b0c7916f6ed0dc1cc2b576d47650"
-  integrity sha512-uTYkxTLkYp41nq/ULXyXMtkNT1vu5fXJoqad6uTNCOGat5t9cLgF4vMNLBXsTOXpdOI44XzKPY1M5RRm0bQHuw==
+  version "18.3.4"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.3.4.tgz#25119d84a654b3894b49eded7c4b68f2ca9a0f6d"
+  integrity sha512-HMqjZ3RJxmfoOn3sVc0T0fO6qSrLDnUQYB+azHKdBBz1eOt0Sq4wUu2Sf1/Dt18gqhECg0fZ33tkh/6YdwrSCw==
 
 "@types/react@^18.2.12":
-  version "18.3.14"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.14.tgz#7ce43bbca0e15e1c4f67ad33ea3f83d75aa6756b"
-  integrity sha512-NzahNKvjNhVjuPBQ+2G7WlxstQ+47kXZNHlUvFakDViuIEfGY926GqhMueQFZ7woG+sPiQKlF36XfrIUVSUfFg==
+  version "18.3.15"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.15.tgz#14674f041072c2b17062ae2edb0eb95a45787f98"
+  integrity sha512-XQzbwkCwrsabawgWsvDDwsDTRuH1sf6Uj1fnFYoG03ZXfT54/aBvlylKR9ix70pXAtTn8dFzj358zVcZN4m83w==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -4683,9 +4683,9 @@ node-fetch@^3.2.0:
     formdata-polyfill "^4.0.10"
 
 node-releases@^2.0.18:
-  version "2.0.18"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.18.tgz#f010e8d35e2fe8d6b2944f03f70213ecedc4ca3f"
-  integrity sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.19.tgz#9e445a52950951ec4d177d843af370b411caf314"
+  integrity sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==
 
 nopt@^7.2.1:
   version "7.2.1"
@@ -6518,9 +6518,9 @@ yocto-queue@^0.1.0:
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
 zod@^3.22.4:
-  version "3.23.8"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
-  integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==
+  version "3.24.0"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.24.0.tgz#babb32313f7c5f4a99812feee806d186b4f76bde"
+  integrity sha512-Hz+wiY8yD0VLA2k/+nsg2Abez674dDGTai33SwNvMPuf9uIrBC9eFgIMQxBBbHFxVXi8W+5nX9DcAh9YNSQm/w==
 
 zwitch@^2.0.0, zwitch@^2.0.4:
   version "2.0.4"
