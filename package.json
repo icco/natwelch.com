@@ -21,7 +21,7 @@
     "@date-fns/tz": "^1.0.2",
     "@heroicons/react": "^2.0.18",
     "@mdx-js/react": "^3.0.0",
-    "@next/env": "^14.0.0",
+    "@next/env": "^15.1.0",
     "@root/walk": "^1.1.0",
     "contentlayer2": "^0.5.0",
     "daisyui": "^4.7.3",
