@@ -1,3 +1,6 @@
+// @ts-check
+
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
 const { createSecureHeaders } = require("next-secure-headers");
 const { withContentlayer } = require("next-contentlayer2");
 
@@ -6,19 +9,23 @@ const hostname = process.env.HOSTNAME || `localhost`;
 const domain = process.env.DOMAIN || `http://${hostname}:${port}`;
 
 /** @type {import('next').NextConfig} */
-module.exports = withContentlayer({
-  swcMinify: true,
+const nextConfig = {
+  output: "standalone",
   poweredByHeader: false,
-  reactStrictMode: true,
   trailingSlash: false,
   productionBrowserSourceMaps: true,
+  reactStrictMode: true,
   env: {
-    DOMAIN: process.env.DOMAIN || `http://localhost:${port}`,
+    DOMAIN: domain,
     PORT: port,
-    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
   eslint: {
-    dirs: ["app", "lib", "components", "wiki"],
+    dirs: ["src", "."],
+  },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
   },
   async redirects() {
     return [
@@ -58,6 +65,10 @@ module.exports = withContentlayer({
               ],
             }),
           },
+          {
+            key: "Reporting-Endpoints",
+            value: 'default="https://reportd.natwelch.com/reporting/natwelch"',
+          },
         ],
       },
       {
@@ -70,6 +81,7 @@ module.exports = withContentlayer({
               // connect-src https://graphql.natwelch.com/graphql
               connectSrc: [
                 "https://*.natwelch.com",
+                "https://natwelch.com",
                 domain,
                 domain.replace(/^https?/, "ws"),
               ],
@@ -82,6 +94,7 @@ module.exports = withContentlayer({
                 "https://icco.imgix.net",
                 "https://storage.googleapis.com",
                 "https://*.natwelch.com",
+                "https://natwelch.com",
               ],
               // script-src 'self' 'unsafe-inline'
               scriptSrc: [
@@ -103,7 +116,7 @@ module.exports = withContentlayer({
               reportURI: "https://reportd.natwelch.com/report/natwelch",
               reportTo: "default",
             },
-            reportOnly: true,
+            reportOnly: false,
           },
           referrerPolicy: "strict-origin-when-cross-origin",
           expectCT: true,
@@ -111,4 +124,19 @@ module.exports = withContentlayer({
       },
     ];
   },
-});
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "icco.imgix.net",
+        port: "",
+        pathname: "/photos/**",
+      },
+    ],
+  },
+  experimental: {
+    mdxRs: true,
+  },
+};
+
+module.exports = withContentlayer(nextConfig);
