@@ -65,6 +65,10 @@ const nextConfig = {
               ],
             }),
           },
+          {
+            key: "Reporting-Endpoints",
+            value: 'default="https://reportd.natwelch.com/reporting/natwelch"',
+          },
         ],
       },
       {
@@ -77,6 +81,7 @@ const nextConfig = {
               // connect-src https://graphql.natwelch.com/graphql
               connectSrc: [
                 "https://*.natwelch.com",
+                "https://natwelch.com",
                 domain,
                 domain.replace(/^https?/, "ws"),
               ],
@@ -89,6 +94,7 @@ const nextConfig = {
                 "https://icco.imgix.net",
                 "https://storage.googleapis.com",
                 "https://*.natwelch.com",
+                "https://natwelch.com",
               ],
               // script-src 'self' 'unsafe-inline'
               scriptSrc: [
@@ -110,7 +116,7 @@ const nextConfig = {
               reportURI: "https://reportd.natwelch.com/report/natwelch",
               reportTo: "default",
             },
-            reportOnly: true,
+            reportOnly: false,
           },
           referrerPolicy: "strict-origin-when-cross-origin",
           expectCT: true,
