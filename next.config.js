@@ -85,6 +85,7 @@ const nextConfig = {
                 domain,
                 domain.replace(/^https?/, "ws"),
               ],
+              mediaSrc: ["'self'", "https://*.natwelch.com", domain],
               // font-src 'self' https://fonts.gstatic.com
               fontSrc: ["'self'", "https://fonts.gstatic.com"],
               // img-src 'self' data: https://icco.imgix.net https://storage.googleapis.com
