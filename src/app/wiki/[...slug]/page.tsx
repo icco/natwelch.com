@@ -64,7 +64,7 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
           </>
         )}
       </article>
-      <Footer edit={page.path} />
+      <Footer edit={page.path + ".md"} />
     </>
   );
 };
