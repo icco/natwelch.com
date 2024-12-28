@@ -48,11 +48,9 @@
     "eslint:recommended",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
-    "plugin:mdx/recommended",
+    "plugin:markdown/recommended-legacy",
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "settings": {
-    "mdx/code-blocks": true
-  }
+  "settings": {}
 }
