@@ -6,6 +6,7 @@ import { useMDXComponent } from "next-contentlayer2/hooks";
 import { use } from "react";
 
 import Age from "@/components/Age";
+import Footer from "@/components/Footer";
 import HeaderImage from "@/components/HeaderImage";
 import { buildTree, getPaths, Tree } from "@/components/Lists";
 import Social from "@/components/Social";
@@ -51,17 +52,20 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
   const hasChildren = isString(childrenTree);
 
   return (
-    <article className="prose lg:prose-xl">
-      <h1>{page.title}</h1>
-      <MDXContent components={mdxComponents} />
-      {hasChildren && (
-        <>
-          <div className="divider"></div>
-          <h3>{page.title} Subpages</h3>
-          <Tree items={childrenTree} />
-        </>
-      )}
-    </article>
+    <>
+      <article className="prose lg:prose-xl">
+        <h1>{page.title}</h1>
+        <MDXContent components={mdxComponents} />
+        {hasChildren && (
+          <>
+            <div className="divider"></div>
+            <h3>{page.title} Subpages</h3>
+            <Tree items={childrenTree} />
+          </>
+        )}
+      </article>
+      <Footer edit={page.path} />
+    </>
   );
 };
 
