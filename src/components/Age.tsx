@@ -8,7 +8,7 @@ export default function Age() {
   const diff = differenceInCalendarYears(now, birth);
   if (birth && now && diff) {
     const birthString = formatISO(birth);
-    return <time dateTime={birthString}>{diff} ago</time>;
+    return <time dateTime={birthString}>{diff} years ago</time>;
   }
 
   return <></>;
