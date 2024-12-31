@@ -69,6 +69,23 @@ const Social = () => {
       </a>
 
       <a
+        href="https://letterboxd.com/icco/"
+        title="Letterboxd"
+        rel="me"
+        className={style}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          height={32}
+          width={32}
+          fill="currentColor"
+        >
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22.667C6.397 22.667 1.733 18 1.733 12S6.397 1.333 12 1.333 22.667 6.397 22.667 12 18 22.667 12 22.667zm-1.333-18.667h2.667v12h-2.667z" />
+        </svg>
+      </a>
+
+      <a
         href="https://www.goodreads.com/author/show/18143346.Nat_Welch"
         title="Goodreads"
         rel="me"
