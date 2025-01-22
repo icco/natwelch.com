@@ -2943,9 +2943,9 @@ get-symbol-description@^1.1.0:
     get-intrinsic "^1.2.6"
 
 get-tsconfig@^4.7.5:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.9.0.tgz#704ae2ce2a94935921675dd19c05508b713a405d"
-  integrity sha512-52n24W52sIueosRe0XZ8Ex5Yle+WbhfCKnV/gWXpbVR8FXNTfqdKEKUSypKso66VRHTvvcQxL44UTZbJRlCTnw==
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.10.0.tgz#403a682b373a823612475a4c2928c7326fc0f6bb"
+  integrity sha512-kGzZ3LWWQcGIAmg6iWvXn0ei6WDtV26wzHRMwDSzmAbcXrTEXxHy6IehI6/4eT6VRKyMP1eF1VqwrVUmE/LR7A==
   dependencies:
     resolve-pkg-maps "^1.0.0"
 
@@ -5871,9 +5871,9 @@ ts-interface-checker@^0.1.9:
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
 ts-pattern@^5.0.6:
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/ts-pattern/-/ts-pattern-5.6.1.tgz#9ca46f181dc0cc365dcb93dd920eec2fce839832"
-  integrity sha512-k126YkAs7sZFGTIr6rEdEbxOkqj4cEKAfhwpJMQcwt2M1SuwSD4PM2ClfeUuIlLwEMtVotiZhOsqXNNWqAMWKA==
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/ts-pattern/-/ts-pattern-5.6.2.tgz#aad9b4fe3c3f485dfad46e472e1203b688cc9bb4"
+  integrity sha512-d4IxJUXROL5NCa3amvMg6VQW2HVtZYmUTPfvVtO7zJWGYLJ+mry9v2OmYm+z67aniQoQ8/yFNadiEwtNS9qQiw==
 
 tsconfig-paths@^3.15.0:
   version "3.15.0"
