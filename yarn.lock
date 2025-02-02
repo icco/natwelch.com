@@ -705,7 +705,7 @@
   resolved "https://registry.yarnpkg.com/@js-sdsl/ordered-map/-/ordered-map-4.4.2.tgz#9299f82874bab9e4c7f9c48d865becbfe8d6907c"
   integrity sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==
 
-"@js-temporal/polyfill@^0.4.4":
+"@js-temporal/polyfill@^0.4.0", "@js-temporal/polyfill@^0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@js-temporal/polyfill/-/polyfill-0.4.4.tgz#4c26b4a1a68c19155808363f520204712cfc2558"
   integrity sha512-2X6bvghJ/JAoZO52lbgyAPFj8uCflhTo2g7nkFzEQdXd/D8rEeD4HtmTEpmtGCva260fcd66YNXBOYdnmHqSOg==
@@ -2693,10 +2693,11 @@ estree-util-to-js@^2.0.0:
     source-map "^0.7.0"
 
 estree-util-value-to-estree@^3.0.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/estree-util-value-to-estree/-/estree-util-value-to-estree-3.2.1.tgz#f8083e56f51efb4889794490730c036ba6167ee6"
-  integrity sha512-Vt2UOjyPbNQQgT5eJh+K5aATti0OjCIAGc9SgMdOFYbohuifsWclR74l0iZTJwePMgWYdX1hlVS+dedH9XV8kw==
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/estree-util-value-to-estree/-/estree-util-value-to-estree-3.3.1.tgz#5b7e61794d1d10b075541f09e63d8d0e32fce88f"
+  integrity sha512-fL5vv7eGyWFq0LJ4MMXMarRLkHsknJky6Azq1qu27gU0lLSxb0V4YvukBX37Waw9nEb4wieuSz4Qubny0OEkng==
   dependencies:
+    "@js-temporal/polyfill" "^0.4.0"
     "@types/estree" "^1.0.0"
 
 estree-util-visit@^2.0.0:
@@ -5862,9 +5863,9 @@ trough@^2.0.0:
   integrity sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw==
 
 ts-api-utils@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.0.0.tgz#b9d7d5f7ec9f736f4d0f09758b8607979044a900"
-  integrity sha512-xCt/TOAc+EOHS1XPnijD3/yzpH6qg2xppZO1YDqGoVsNXfQfzHpOdNuXwrwOU8u4ITXJyDCTyt8w5g1sZv9ynQ==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.0.1.tgz#660729385b625b939aaa58054f45c058f33f10cd"
+  integrity sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==
 
 ts-dedent@^2.2.0:
   version "2.2.0"
