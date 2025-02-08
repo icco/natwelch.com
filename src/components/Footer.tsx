@@ -1,5 +1,3 @@
-import "./rc.css";
-
 import { TZDate } from "@date-fns/tz";
 import {
   CodeBracketIcon,
