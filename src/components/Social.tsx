@@ -1,5 +1,5 @@
 const Social = () => {
-  const style = "mx-2 hover:text-link";
+  const style = "mx-2 hover:text-link"
   return (
     <nav className="flex items-center justify-center">
       <a
@@ -186,7 +186,7 @@ const Social = () => {
         </svg>
       </a>
     </nav>
-  );
-};
+  )
+}
 
-export default Social;
+export default Social

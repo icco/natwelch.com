@@ -1,15 +1,15 @@
-import Link from "next/link";
-import Parser from "rss-parser";
+import Link from "next/link"
+import Parser from "rss-parser"
 
 const BlogPost = (params: { post: Parser.Item | null }) => {
-  const { post } = params;
+  const { post } = params
   if (!post) {
-    return <></>;
+    return <></>
   }
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center rounded-lg p-3 bg-accent prose">
+      <div className="bg-accent prose flex flex-col items-center justify-center rounded-lg p-3">
         <div className="flex-row">
           <h4 className="m-0">Latest blog post</h4>
         </div>
@@ -20,7 +20,7 @@ const BlogPost = (params: { post: Parser.Item | null }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export { BlogPost };
+export { BlogPost }

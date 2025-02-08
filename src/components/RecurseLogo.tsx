@@ -27,5 +27,5 @@ export const RecurseLogo: React.FC<{ className?: string }> = ({
       <rect x="8" y="13" width="1" height="1" fill="#fff"></rect>
       <rect x="9" y="12" width="1" height="1" fill="#fff"></rect>
     </svg>
-  );
-};
+  )
+}
