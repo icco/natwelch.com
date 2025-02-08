@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next lint --fix && next dev -p 8080",
+    "clean": "rm -rf node_modules .next .contentlayer",
     "lint": "next lint --fix",
     "build": "next build",
     "postbuild": "next-sitemap",
@@ -63,6 +64,7 @@
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.2.2",
     "webpack": "^5.10.0"
@@ -70,7 +72,10 @@
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,
-    "semi": true,
+    "semi": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
     "singleQuote": false
   }
 }
