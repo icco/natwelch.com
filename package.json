@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/lodash": "^4.14.178",
     "@types/mdx": "^2.0.2",
@@ -53,7 +54,6 @@
     "@types/react-dom": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "autoprefixer": "^10.4.16",
     "dlx": "^0.2.1",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.1",
@@ -63,7 +63,7 @@
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.0",
-    "tailwindcss": "^3.3.5",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5.2.2",
     "webpack": "^5.10.0"
   },

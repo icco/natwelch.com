@@ -14,7 +14,7 @@ export function SmallHeader() {
             <Logo size={50} className="px-8 logo stroke-current" />
           </Link>
         </div>
-        <div className="flex-grow"></div>
+        <div className="grow"></div>
         <div className="mr-8 content-center">
           <Breadcrumbs />
         </div>
