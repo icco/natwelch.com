@@ -1,9 +1,9 @@
-import Link from "next/link";
-import React from "react";
+import Link from "next/link"
+import React from "react"
 
-import { Breadcrumbs } from "./Breadcrumbs";
-import Logo from "./Logo";
-import ThemeToggle from "./ThemeToggle";
+import { Breadcrumbs } from "./Breadcrumbs"
+import Logo from "./Logo"
+import ThemeToggle from "./ThemeToggle"
 
 export function SmallHeader() {
   return (
@@ -11,10 +11,10 @@ export function SmallHeader() {
       <nav className="flex py-8">
         <div className="flex-none">
           <Link href="/" className="">
-            <Logo size={50} className="px-8 logo stroke-current" />
+            <Logo size={50} className="logo stroke-current px-8" />
           </Link>
         </div>
-        <div className="flex-grow"></div>
+        <div className="grow"></div>
         <div className="mr-8 content-center">
           <Breadcrumbs />
         </div>
@@ -23,7 +23,7 @@ export function SmallHeader() {
         </div>
       </nav>
     </header>
-  );
+  )
 }
 
 export function LargeHeader() {
@@ -31,20 +31,20 @@ export function LargeHeader() {
     ["Wiki", "/wiki"],
     ["Resume", "https://resume.natwelch.com"],
     ["Blog", "https://writing.natwelch.com"],
-  ];
+  ]
 
   return (
     <header>
       <div className="flex flex-col items-center justify-center">
         <Logo
           size={200}
-          className="m-0 p-0 logo flex flex-row items-center justify-center stroke-current"
+          className="logo m-0 flex flex-row items-center justify-center stroke-current p-0"
         />
-        <h1 className="flex-row text-4xl font-bold mt-6">Nat Welch</h1>
-        <h2 className="flex-row text-2xl font-bold mt-4">
+        <h1 className="mt-6 flex-row text-4xl font-bold">Nat Welch</h1>
+        <h2 className="mt-4 flex-row text-2xl font-bold">
           Software Reconnaissance Engineer
         </h2>
-        <div className="flex flex-row justify-center items-center mt-6 text-xl">
+        <div className="mt-6 flex flex-row items-center justify-center text-xl">
           {links.map(([name, link]) => {
             return (
               <div key={name}>
@@ -52,12 +52,12 @@ export function LargeHeader() {
                   {name}
                 </Link>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </header>
-  );
+  )
 }
 
 export enum Size {
@@ -69,10 +69,10 @@ export enum Size {
 export function Header({ size }: { size: Size }) {
   switch (size) {
     case Size.Large:
-      return <LargeHeader />;
+      return <LargeHeader />
     case Size.Small:
-      return <SmallHeader />;
+      return <SmallHeader />
     default:
-      return <></>;
+      return <></>
   }
 }

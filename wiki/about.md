@@ -1,7 +1,5 @@
 ---
-
 title: About
-
 ---
 
 ## Nat Welch
@@ -17,13 +15,13 @@ side projects.
 
 I have some core beliefs that are the basis for most things that I do.
 
->   Sharing information is the most important action in human society.
+> Sharing information is the most important action in human society.
 
->   I love automating things and building software tools to make maintaining the internet easier.
+> I love automating things and building software tools to make maintaining the internet easier.
 
->   Nature is beautiful and must be preserved.
+> Nature is beautiful and must be preserved.
 
->   Humans are inherently good and hilarious, and communicating with them well is important.
+> Humans are inherently good and hilarious, and communicating with them well is important.
 
 You can read a more in-depth write-up of these beliefs on my blog: [Nat Welch Manifesto](https://writing.natwelch.com/post/703)
 
@@ -39,13 +37,13 @@ right before I leave. I then do not update them. As such, they are very
 out of date. That being said, I enjoy looking at them and sharing with
 friends who are traveling.
 
--   [London](https://writing.natwelch.com/post/526)
--   [SF](https://writing.natwelch.com/post/522)
--   [Seattle](https://foursquare.com/icco/list/places-i-love-in-seattle)
--   [San Luis Obispo](https://foursquare.com/icco/list/my-favorite-foods-in-slo)
+- [London](https://writing.natwelch.com/post/526)
+- [SF](https://writing.natwelch.com/post/522)
+- [Seattle](https://foursquare.com/icco/list/places-i-love-in-seattle)
+- [San Luis Obispo](https://foursquare.com/icco/list/my-favorite-foods-in-slo)
 
 ## Speaker Bio
 
-Nat Welch is a Site Reliability Engineer based in Beacon, NY, where he lives with his partner and their cat. He is the author of two books: "Real World SRE" from Packt and "Reliable Webservers with Go" from Newline. He has been professionally building and running software on the internet since 2005, and loves making tools and promoting conversation online.  He currently works for [Laurel](https://laurel.ai) as a Principal Engineer on the Infrastructure team. In the past, he has worked for Punchd, First Look Media, Hillary for America, iFixit, Google, and others.
+Nat Welch is a Site Reliability Engineer based in Beacon, NY, where he lives with his partner and their cat. He is the author of two books: "Real World SRE" from Packt and "Reliable Webservers with Go" from Newline. He has been professionally building and running software on the internet since 2005, and loves making tools and promoting conversation online. He currently works for [Laurel](https://laurel.ai) as a Principal Engineer on the Infrastructure team. In the past, he has worked for Punchd, First Look Media, Hillary for America, iFixit, Google, and others.
 
 In his free time, Nat enjoys contributing to open source projects, writing, reading, fishing, listening to music and wandering through cities and countrysides.

@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from "next/image"
 
 export default function HeaderImage({
   src,
   alt,
 }: {
-  src: string;
-  alt: string;
+  src: string
+  alt: string
 }) {
   return (
     <div className="flex justify-center">
@@ -14,8 +14,8 @@ export default function HeaderImage({
         alt={alt}
         width={1600}
         height={900}
-        className="grow w-screen"
+        className="w-screen grow"
       />
     </div>
-  );
+  )
 }

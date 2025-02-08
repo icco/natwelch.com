@@ -1,16 +1,16 @@
-import { Metadata } from "next";
+import { Metadata } from "next"
 
-import Footer from "@/components/Footer";
-import { buildTree, getPaths, Tree } from "@/components/Lists";
+import Footer from "@/components/Footer"
+import { buildTree, getPaths, Tree } from "@/components/Lists"
 
-import { allPages } from "contentlayer/generated";
+import { allPages } from "contentlayer/generated"
 
 export const metadata: Metadata = {
   title: "Nat Welch | Wiki",
-};
+}
 
 export default function Home() {
-  const tree = buildTree(getPaths(allPages), allPages);
+  const tree = buildTree(getPaths(allPages), allPages)
 
   return (
     <>
@@ -22,5 +22,5 @@ export default function Home() {
       </section>
       <Footer />
     </>
-  );
+  )
 }

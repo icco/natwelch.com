@@ -1,7 +1,7 @@
-import { defineDocumentType, makeSource } from "contentlayer2/source-files";
-import rehypeSlug from "rehype-slug";
-import remarkDefinitionList from "remark-definition-list";
-import remarkGfm from "remark-gfm";
+import { defineDocumentType, makeSource } from "contentlayer2/source-files"
+import rehypeSlug from "rehype-slug"
+import remarkDefinitionList from "remark-definition-list"
+import remarkGfm from "remark-gfm"
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
@@ -14,7 +14,7 @@ export const Page = defineDocumentType(() => ({
     url: {
       type: "string",
       resolve: (doc) => {
-        return "/wiki/" + doc._raw.flattenedPath;
+        return "/wiki/" + doc._raw.flattenedPath
       },
     },
     pathSegments: {
@@ -24,11 +24,11 @@ export const Page = defineDocumentType(() => ({
     path: {
       type: "string",
       resolve: (doc) => {
-        return doc._raw.flattenedPath;
+        return doc._raw.flattenedPath
       },
     },
   },
-}));
+}))
 
 export default makeSource({
   contentDirPath: "wiki",
@@ -37,4 +37,4 @@ export default makeSource({
     remarkPlugins: [remarkGfm, remarkDefinitionList],
     rehypePlugins: [rehypeSlug],
   },
-});
+})
