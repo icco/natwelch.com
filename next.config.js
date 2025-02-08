@@ -1,12 +1,12 @@
 // @ts-check
 
 /* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
-const { createSecureHeaders } = require("next-secure-headers");
-const { withContentlayer } = require("next-contentlayer2");
+const { createSecureHeaders } = require("next-secure-headers")
+const { withContentlayer } = require("next-contentlayer2")
 
-const port = process.env.PORT || "8080";
-const hostname = process.env.HOSTNAME || `localhost`;
-const domain = process.env.DOMAIN || `http://${hostname}:${port}`;
+const port = process.env.PORT || "8080"
+const hostname = process.env.HOSTNAME || `localhost`
+const domain = process.env.DOMAIN || `http://${hostname}:${port}`
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -44,7 +44,7 @@ const nextConfig = {
         destination: "https://resume.natwelch.com/",
         permanent: true,
       },
-    ];
+    ]
   },
   async headers() {
     return [
@@ -123,7 +123,7 @@ const nextConfig = {
           expectCT: true,
         }),
       },
-    ];
+    ]
   },
   images: {
     remotePatterns: [
@@ -138,6 +138,6 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-};
+}
 
-module.exports = withContentlayer(nextConfig);
+module.exports = withContentlayer(nextConfig)
