@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { format } from "date-fns";
 import Link from "next/link";
+import { RecurseLogo } from "./RecurseLogo";
 
 const Footer = ({ edit }: { edit?: string }) => {
   return (
@@ -33,7 +34,7 @@ const Footer = ({ edit }: { edit?: string }) => {
             href="https://www.recurse.com/scout/click?t=1a20cf01214e4c5923ab6ebd6c0f8f18"
             title="Want to become a better programmer? Join the Recurse Center!"
           >
-            <i className="rc-scout__logo" />
+            <RecurseLogo className="inline-block w-4 h-4" />
           </Link>
           <Link
             className="blue ms-2"
