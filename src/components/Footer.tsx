@@ -6,13 +6,14 @@ import {
 } from "@heroicons/react/24/outline";
 import { format } from "date-fns";
 import Link from "next/link";
+
 import { RecurseLogo } from "./RecurseLogo";
 
 const Footer = ({ edit }: { edit?: string }) => {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="divider" />
-      <footer className="footer items-center p-4">
+      <footer className="footer sm:footer-horizontal items-center p-4">
         <aside className="items-center grid-flow-col">
           <p>
             &copy; 2011 - {format(TZDate.tz("America/New_York"), "yyyy")} Nat
