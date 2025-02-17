@@ -52,7 +52,7 @@
     "@types/lodash": "^4.14.178",
     "@types/mdx": "^2.0.2",
     "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
+    "@types/react-dom": "^19.0.4",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "dlx": "^0.2.1",
