@@ -57,19 +57,21 @@ const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
       </div>
 
       <div className="footer sm:footer-horizontal text-base-content p-4">
-        <nav>
-          <h6 className="footer-title">RC Webring</h6>
-          <RecurseRing />
-        </nav>
-        <nav>
-          <h6 className="footer-title">
-            <XXIIVVLogo className="inline-block h-4 w-4 vertical-align-middle" size={12} /> Webring
-          </h6>
-          <XXIIVVRing />
-        </nav>
-        <nav className="gap-4 md:justify-self-end">
+        <nav className="gap-4">
           <h6 className="footer-title">Social</h6>
           <Social includeWebring={false} size={24} />
+        </nav>
+        <nav className="gap-4 md:justify-self-end">
+          <h6 className="footer-title">
+            <RecurseLogo className="inline-block h-4 w-4 align-text-bottom" size={12} /> Webring
+          </h6>
+          <RecurseRing />
+        </nav>
+        <nav className="gap-4 md:justify-self-end">
+          <h6 className="footer-title">
+            <XXIIVVLogo className="inline-block h-4 w-4 align-text-bottom" size={12} /> Webring
+          </h6>
+          <XXIIVVRing />
         </nav>
       </div>
     </footer>
