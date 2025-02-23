@@ -6,8 +6,8 @@ export function SRE(): string {
   const [sre, setSRE] = useState<string>("")
 
   useEffect(() => {
-    const s = ["Software", "Site"]
-    const r = ["Reconnaissance", "Research", "Reporting", "Reliability"]
+    const s = ["Software", "Site", "Security", "Server", "Service"]
+    const r = ["Reconnaissance", "Research", "Reporting", "Reliability", "Response", "Reboot"]
     const e = ["Engineer", "Expert", "Explorer", "Evangelist"]
 
     setSRE(
