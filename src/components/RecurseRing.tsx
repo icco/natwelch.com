@@ -3,7 +3,6 @@ import {
   ArrowRightCircleIcon,
   QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline"
-import { useEffect, useState } from "react"
 
 export type RingSite = {
   website_id: number
