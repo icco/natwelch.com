@@ -26,16 +26,15 @@ const fetchSites = async (): Promise<{
     // Parse the HTML to extract site links using jsdom
     const dom = new JSDOM(html)
     const doc = dom.window.document
-    const sites = Array.from(doc.querySelectorAll("body > ul > li > a")).map(
-      (link) => ({
-        website_uuid: String(
-          Array.from(doc.querySelectorAll("body > ul > li > a")).indexOf(link)
-        ),
-        url: (link as HTMLAnchorElement).href,
-      })
+    const sites = Array.from(doc.querySelectorAll("body > ol > li")).map(
+      (li: Element) => {
+        const a = li.getElementsByTagName("a")[0]
+        return {
+          website_uuid: li.id,
+          url: a.href,
+        }
+      }
     )
-
-    console.log(sites)
 
     // Find current site index (using your UUID)
     const currentUUID = "105"
@@ -64,6 +63,7 @@ const fetchSites = async (): Promise<{
 
   return null
 }
+
 export const XXIIVVRing: React.FC = async () => {
   const ring = await fetchSites()
 
