@@ -35,6 +35,8 @@ const fetchSites = async (): Promise<{
       })
     )
 
+    console.log(sites)
+
     // Find current site index (using your UUID)
     const currentUUID = "105"
     const currentIndex = sites.findIndex(
@@ -70,7 +72,7 @@ export const XXIIVVRing: React.FC = async () => {
       <a
         id="rc-ring-prev"
         className="link link-hover"
-        href={ring ? ring.prev : "https://ring.recurse.com/prev?id=45"}
+        href={ring ? ring.prev : "https://webring.xxiivv.com/"}
       >
         <span className="flex items-center gap-2">
           <ArrowLeftCircleIcon className="h-4 w-4" /> Previous Site
@@ -79,7 +81,7 @@ export const XXIIVVRing: React.FC = async () => {
       <a
         id="rc-ring-rand"
         className="link link-hover"
-        href={ring ? ring.rand : "https://ring.recurse.com/rand"}
+        href={ring ? ring.rand : "https://lieu.cblgh.org/random"}
       >
         <span className="flex items-center gap-2">
           <QuestionMarkCircleIcon className="h-4 w-4" /> Random Site
@@ -88,7 +90,7 @@ export const XXIIVVRing: React.FC = async () => {
       <a
         id="rc-ring-next"
         className="link link-hover"
-        href={ring ? ring.next : "https://ring.recurse.com/next?id=45"}
+        href={ring ? ring.next : "https://webring.xxiivv.com/"}
       >
         <span className="flex items-center gap-2">
           <ArrowRightCircleIcon className="h-4 w-4" /> Next Site
