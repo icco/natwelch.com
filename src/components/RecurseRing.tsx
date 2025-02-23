@@ -1,10 +1,6 @@
-// <script src="https://raw.githack.com/Qwuke/recurse-ring/main/static/ring.js" type="text/javascript"></script>
-// <div><a id="rc-ring-prev" href="https://ring.recurse.com/prev?id=45">Prev</a></div>
-// <div><a id="rc-ring-home" data-rc-uuid="b3e98b33-7464-4211-ba0b-5cc38ebb03e9" href="https://ring.recurse.com/">The Recurse Webring</a></div>
-// <div><a id="rc-ring-rand" href="https://ring.recurse.com/rand">Random</a></div>
-// <div><a id="rc-ring-next" href="https://ring.recurse.com/next?id=45">Next</a></div>
+"use client";
 
-import { ArrowLeftCircleIcon, ArrowPathIcon, ArrowRightCircleIcon } from "@heroicons/react/24/outline"
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline"
 import { useEffect, useState } from "react"
 
 export type RingSite = {
@@ -81,7 +77,7 @@ export const RecurseRing: React.FC<{ className?: string }> = ({
           id="rc-ring-rand"
           href={ring ? ring.rand : "https://ring.recurse.com/rand"}
         >
-          <ArrowPathIcon className="h-4 w-4" />
+          <QuestionMarkCircleIcon className="h-4 w-4" />
         </a>
       </div>
       <div>
