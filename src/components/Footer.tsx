@@ -10,8 +10,8 @@ import Link from "next/link"
 import { RecurseLogo } from "./RecurseLogo"
 import { RecurseRing } from "./RecurseRing"
 import { Social } from "./Social"
-import { XXIIVVRing } from "./XXIIVVRing"
 import { XXIIVVLogo } from "./XXIIVVLogo"
+import { XXIIVVRing } from "./XXIIVVRing"
 
 const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
   return (
@@ -63,13 +63,21 @@ const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
         </nav>
         <nav className="gap-4 md:justify-self-end">
           <h6 className="footer-title">
-            <RecurseLogo className="inline-block h-4 w-4 align-text-bottom" size={12} /> Webring
+            <RecurseLogo
+              className="inline-block h-4 w-4 align-text-bottom"
+              size={12}
+            />{" "}
+            Webring
           </h6>
           <RecurseRing />
         </nav>
         <nav className="gap-4 md:justify-self-end">
           <h6 className="footer-title">
-            <XXIIVVLogo className="inline-block h-4 w-4 align-text-bottom" size={12} /> Webring
+            <XXIIVVLogo
+              className="inline-block h-4 w-4 align-text-bottom"
+              size={12}
+            />{" "}
+            Webring
           </h6>
           <XXIIVVRing />
         </nav>
