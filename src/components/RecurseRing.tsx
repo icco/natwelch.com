@@ -1,6 +1,10 @@
-"use client";
+"use client"
 
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline"
+import {
+  ArrowLeftCircleIcon,
+  ArrowRightCircleIcon,
+  QuestionMarkCircleIcon,
+} from "@heroicons/react/24/outline"
 import { useEffect, useState } from "react"
 
 export type RingSite = {
@@ -27,7 +31,7 @@ export const RecurseRing: React.FC<{ className?: string }> = ({
         const response = await fetch(
           "https://raw.githack.com/Qwuke/recurse-ring/main/sites.json"
         )
-        const sites = await response.json() as RingSite[]
+        const sites = await response.json()
 
         // Find current site index (using your UUID)
         const currentUUID = "b3e98b33-7464-4211-ba0b-5cc38ebb03e9"
@@ -61,15 +65,6 @@ export const RecurseRing: React.FC<{ className?: string }> = ({
           href={ring ? ring.prev : "https://ring.recurse.com/prev?id=45"}
         >
           <ArrowLeftCircleIcon className="h-4 w-4" />
-        </a>
-      </div>
-      <div>
-        <a
-          id="rc-ring-home"
-          data-rc-uuid="b3e98b33-7464-4211-ba0b-5cc38ebb03e9"
-          href="https://ring.recurse.com/"
-        >
-          The Recurse Webring
         </a>
       </div>
       <div>
