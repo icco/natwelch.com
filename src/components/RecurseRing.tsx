@@ -43,21 +43,19 @@ export const RecurseRing: React.FC<{ className?: string }> = ({
     fetchSites();
   }, []);
 
-  if (!ring) return null;
-
   return (
     <div className={className}>
       <div>
-        <a id="rc-ring-prev" href={ring.prev}>Prev</a>
+        <a id="rc-ring-prev" href={ring ? ring.prev : 'https://ring.recurse.com/prev?id=45'}>Prev</a>
       </div>
       <div>
         <a id="rc-ring-home" data-rc-uuid="b3e98b33-7464-4211-ba0b-5cc38ebb03e9" href="https://ring.recurse.com/">The Recurse Webring</a>
       </div>
       <div>
-        <a id="rc-ring-rand" href={ring.rand}>Random</a>
+        <a id="rc-ring-rand" href={ring ? ring.rand : 'https://ring.recurse.com/rand'}>Random</a>
       </div>
       <div>
-        <a id="rc-ring-next" href={ring.next}>Next</a>
+        <a id="rc-ring-next" href={ring ? ring.next : 'https://ring.recurse.com/next?id=45'}>Next</a>
       </div>
     </div>
   );
