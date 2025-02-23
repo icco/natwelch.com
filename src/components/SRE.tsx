@@ -24,7 +24,7 @@ export function SRE(): string {
         e[Math.floor(Math.random() * e.length)],
       ].join(" ")
     )
-  }, []) // Empty dependency array means this runs once on mount
+  }, [])
 
   return sre
 }
