@@ -4,6 +4,7 @@ import React from "react"
 import { Breadcrumbs } from "./Breadcrumbs"
 import Logo from "./Logo"
 import ThemeToggle from "./ThemeToggle"
+import { SRE } from "./SRE"
 
 export function SmallHeader() {
   return (
@@ -42,7 +43,7 @@ export function LargeHeader() {
         />
         <h1 className="mt-6 flex-row text-4xl font-bold">Nat Welch</h1>
         <h2 className="mt-4 flex-row text-2xl font-bold">
-          Software Reconnaissance Engineer
+          {SRE()}
         </h2>
         <div className="mt-6 flex flex-row items-center justify-center text-xl">
           {links.map(([name, link]) => {
