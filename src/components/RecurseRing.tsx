@@ -7,6 +7,15 @@
 import { ArrowLeftCircleIcon, ArrowPathIcon, ArrowRightCircleIcon } from "@heroicons/react/24/outline"
 import { useEffect, useState } from "react"
 
+export type RingSite = {
+  website_id: number
+  website_uuid: string
+  recurse_id: number
+  website_name: string
+  is_anonymous: boolean
+  url: string
+}
+
 export const RecurseRing: React.FC<{ className?: string }> = ({
   className,
 }) => {
@@ -22,12 +31,12 @@ export const RecurseRing: React.FC<{ className?: string }> = ({
         const response = await fetch(
           "https://raw.githack.com/Qwuke/recurse-ring/main/sites.json"
         )
-        const sites = await response.json()
+        const sites = await response.json() as RingSite[]
 
         // Find current site index (using your UUID)
         const currentUUID = "b3e98b33-7464-4211-ba0b-5cc38ebb03e9"
         const currentIndex = sites.findIndex(
-          (site: any) => site.website_uuid === currentUUID
+          (site: RingSite) => site.website_uuid === currentUUID
         )
 
         if (currentIndex !== -1) {
