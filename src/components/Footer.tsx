@@ -11,6 +11,7 @@ import { RecurseLogo } from "./RecurseLogo"
 import { RecurseRing } from "./RecurseRing"
 import { Social } from "./Social"
 import { XXIIVVRing } from "./XXIIVVRing"
+import { XXIIVVLogo } from "./XXIIVVLogo"
 
 const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
   return (
@@ -61,7 +62,9 @@ const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
           <RecurseRing />
         </nav>
         <nav>
-          <h6 className="footer-title">XXIIVV Webring</h6>
+          <h6 className="footer-title">
+            <XXIIVVLogo className="inline-block h-4 w-4 vertical-align-middle" size={12} /> Webring
+          </h6>
           <XXIIVVRing />
         </nav>
         <nav className="gap-4 md:justify-self-end">
