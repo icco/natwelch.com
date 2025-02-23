@@ -1,13 +1,23 @@
 "use client"
 
-export function SRE(): string {
-  const s = ["Software", "Site"]
-  const r = ["Reconnaissance", "Research", "Reporting", "Reliability"]
-  const e = ["Engineer", "Expert", "Explorer", "Evangelist"]
+import { useEffect, useState } from "react"
 
-  return [
-    s[Math.floor(Math.random() * s.length)],
-    r[Math.floor(Math.random() * r.length)],
-    e[Math.floor(Math.random() * e.length)],
-  ].join(" ")
+export function SRE(): string {
+  const [sre, setSRE] = useState<string>("")
+
+  useEffect(() => {
+    const s = ["Software", "Site"]
+    const r = ["Reconnaissance", "Research", "Reporting", "Reliability"]
+    const e = ["Engineer", "Expert", "Explorer", "Evangelist"]
+
+    setSRE(
+      [
+        s[Math.floor(Math.random() * s.length)],
+        r[Math.floor(Math.random() * r.length)],
+        e[Math.floor(Math.random() * e.length)],
+      ].join(" ")
+    )
+  }, []) // Empty dependency array means this runs once on mount
+
+  return sre
 }
