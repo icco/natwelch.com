@@ -82,7 +82,6 @@ const nextConfig = {
               connectSrc: [
                 "https://*.natwelch.com",
                 "https://natwelch.com",
-                "https://raw.githack.com",
                 domain,
                 domain.replace(/^https?/, "ws"),
               ],

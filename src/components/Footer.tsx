@@ -9,21 +9,19 @@ import Link from "next/link"
 
 import { RecurseLogo } from "./RecurseLogo"
 import { RecurseRing } from "./RecurseRing"
+import Social from "./Social"
 
 const Footer = ({ edit }: { edit?: string }) => {
   return (
-    <div className="mx-auto max-w-5xl">
+    <footer className="mx-auto max-w-5xl">
       <div className="divider" />
-      <footer className="footer sm:footer-horizontal items-center p-4">
+      <div className="footer sm:footer-horizontal items-center p-4">
         <aside className="grid-flow-col items-center">
           <p>
             &copy; 2011 - {format(TZDate.tz("America/New_York"), "yyyy")} Nat
             Welch. All rights reserved.
           </p>
         </aside>
-        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-          <RecurseRing />
-        </nav>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           {edit && (
             <Link
@@ -54,8 +52,23 @@ const Footer = ({ edit }: { edit?: string }) => {
             <DocumentCheckIcon className="inline-block h-4 w-4" />
           </Link>
         </nav>
-      </footer>
-    </div>
+      </div>
+
+      <div className="footer sm:footer-horizontal text-base-content p-4">
+        <nav>
+          <h6 className="footer-title">RC Webring</h6>
+          <RecurseRing />
+        </nav>
+        <nav>
+          <h6 className="footer-title">XVIII Webring</h6>
+          <RecurseRing />
+        </nav>
+        <nav className="gap-4 md:justify-self-end">
+          <h6 className="footer-title">Social</h6>
+          <Social includeWebring={false} size={24} />
+        </nav>
+      </div>
+    </footer>
   )
 }
 
