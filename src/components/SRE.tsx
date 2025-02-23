@@ -10,7 +10,7 @@ export function SRE(): string {
     const r = [
       "Reconnaissance",
       "Research",
-      "Reporting",
+      "Report",
       "Reliability",
       "Response",
       "Reboot",
