@@ -21,12 +21,12 @@ const fetchSites = async (): Promise<{
 } | null> => {
   try {
     const response = await fetch(
-      "https://raw.githack.com/Qwuke/recurse-ring/main/sites.json"
+      "https://webring.xxiivv.com/"
     )
     const sites = await response.json()
 
     // Find current site index (using your UUID)
-    const currentUUID = "b3e98b33-7464-4211-ba0b-5cc38ebb03e9"
+    const currentUUID = "105"
     const currentIndex = sites.findIndex(
       (site: RingSite) => site.website_uuid === currentUUID
     )
@@ -52,7 +52,7 @@ const fetchSites = async (): Promise<{
 
   return null
 }
-export const RecurseRing: React.FC = async () => {
+export const XXIIVVRing: React.FC = async () => {
   const ring = await fetchSites()
 
   return (

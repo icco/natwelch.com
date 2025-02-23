@@ -1,4 +1,4 @@
-const Social = ({ size = 32, includeWebring = true }: { size?: number, includeWebring?: boolean }) => {
+export const Social = ({ size = 32, includeWebring = true }: { size?: number, includeWebring?: boolean }) => {
   const style = "mx-2 hover:text-link"
   return (
     <nav className="flex items-center justify-center">
@@ -190,5 +190,3 @@ const Social = ({ size = 32, includeWebring = true }: { size?: number, includeWe
     </nav>
   )
 }
-
-export default Social

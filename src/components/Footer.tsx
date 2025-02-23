@@ -9,7 +9,8 @@ import Link from "next/link"
 
 import { RecurseLogo } from "./RecurseLogo"
 import { RecurseRing } from "./RecurseRing"
-import Social from "./Social"
+import { XXIIVVRing } from "./XXIIVVRing"
+import { Social } from "./Social"
 
 const Footer = ({ edit }: { edit?: string }) => {
   return (
@@ -60,8 +61,8 @@ const Footer = ({ edit }: { edit?: string }) => {
           <RecurseRing />
         </nav>
         <nav>
-          <h6 className="footer-title">XVIII Webring</h6>
-          <RecurseRing />
+          <h6 className="footer-title">XXIIVV Webring</h6>
+          <XXIIVVRing />
         </nav>
         <nav className="gap-4 md:justify-self-end">
           <h6 className="footer-title">Social</h6>
