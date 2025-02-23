@@ -7,7 +7,14 @@ export function SRE(): string {
 
   useEffect(() => {
     const s = ["Software", "Site", "Security", "Server", "Service"]
-    const r = ["Reconnaissance", "Research", "Reporting", "Reliability", "Response", "Reboot"]
+    const r = [
+      "Reconnaissance",
+      "Research",
+      "Reporting",
+      "Reliability",
+      "Response",
+      "Reboot",
+    ]
     const e = ["Engineer", "Expert", "Explorer", "Evangelist"]
 
     setSRE(
