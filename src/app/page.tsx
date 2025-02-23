@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import { unstable_cache } from "next/cache"
 
 import { BlogPost } from "@/components/BlogPost"
+import Footer from "@/components/Footer"
 import { Header, Size } from "@/components/Header"
-import Social from "@/components/Social"
 import { getLatestBlogPost } from "@/lib/rss"
 
 export const metadata: Metadata = {
@@ -22,16 +22,16 @@ export default async function Page() {
   const post = await getLatest()
 
   return (
-    <div className="my-[14vh] flex flex-col items-center justify-center">
-      <Header size={Size.Large} />
+    <>
+      <div className="my-[14vh] flex flex-col items-center justify-center">
+        <Header size={Size.Large} />
 
-      <div className="mt-8">
-        <Social />
+        <div className="mt-8">
+          <BlogPost post={post} />
+        </div>
       </div>
 
-      <div className="mt-8">
-        <BlogPost post={post} />
-      </div>
-    </div>
+      <Footer />
+    </>
   )
 }

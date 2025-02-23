@@ -1,12 +1,17 @@
-export const RecurseLogo: React.FC<{ className?: string }> = ({
-  className,
-}) => {
+export const RecurseLogo: React.FC<{
+  className?: string
+  size?: number
+}> = ({ className, size = 12 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 12 15"
       className={className}
+      height={size}
+      width={size}
+      fill="currentColor"
     >
+      <title>Recurse Center</title>
       <rect x="0" y="0" width="12" height="10" fill="#000"></rect>
       <rect x="1" y="1" width="10" height="8" fill="#fff"></rect>
       <rect x="2" y="2" width="8" height="6" fill="#000"></rect>
