@@ -9,12 +9,12 @@ import Link from "next/link"
 
 import { RecurseLogo } from "./RecurseLogo"
 import { RecurseRing } from "./RecurseRing"
-import { XXIIVVRing } from "./XXIIVVRing"
 import { Social } from "./Social"
+import { XXIIVVRing } from "./XXIIVVRing"
 
-const Footer = ({ edit }: { edit?: string }) => {
+const Footer = ({ edit, marginTop = 14 }: { edit?: string, marginTop?: number }) => {
   return (
-    <footer className="mx-auto max-w-5xl">
+    <footer className={`mx-auto max-w-2xl ${marginTop ? `mt-[${marginTop}vh]` : ""}`}>
       <div className="divider" />
       <div className="footer sm:footer-horizontal items-center p-4">
         <aside className="grid-flow-col items-center">

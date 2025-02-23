@@ -26,10 +26,14 @@ const fetchSites = async (): Promise<{
     // Parse the HTML to extract site links using jsdom
     const dom = new JSDOM(html)
     const doc = dom.window.document
-    const sites = Array.from(doc.querySelectorAll("body > ul > li > a")).map((link) => ({
-      website_uuid: String(Array.from(doc.querySelectorAll("body > ul > li > a")).indexOf(link)),
-      url: (link as HTMLAnchorElement).href,
-    }))
+    const sites = Array.from(doc.querySelectorAll("body > ul > li > a")).map(
+      (link) => ({
+        website_uuid: String(
+          Array.from(doc.querySelectorAll("body > ul > li > a")).indexOf(link)
+        ),
+        url: (link as HTMLAnchorElement).href,
+      })
+    )
 
     // Find current site index (using your UUID)
     const currentUUID = "105"
