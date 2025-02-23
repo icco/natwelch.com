@@ -8,6 +8,7 @@ import { format } from "date-fns"
 import Link from "next/link"
 
 import { RecurseLogo } from "./RecurseLogo"
+import { RecurseRing } from "./RecurseRing"
 
 const Footer = ({ edit }: { edit?: string }) => {
   return (
@@ -20,6 +21,9 @@ const Footer = ({ edit }: { edit?: string }) => {
             Welch. All rights reserved.
           </p>
         </aside>
+        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+          <RecurseRing />
+        </nav>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           {edit && (
             <Link
