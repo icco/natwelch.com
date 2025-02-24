@@ -9,7 +9,7 @@ import Age from "@/components/Age"
 import Footer from "@/components/Footer"
 import HeaderImage from "@/components/HeaderImage"
 import { buildTree, getPaths, Tree } from "@/components/Lists"
-import Social from "@/components/Social"
+import { Social } from "@/components/Social"
 
 import { allPages } from "contentlayer/generated"
 

@@ -8,12 +8,16 @@ import { format } from "date-fns"
 import Link from "next/link"
 
 import { RecurseLogo } from "./RecurseLogo"
+import { RecurseRing } from "./RecurseRing"
+import { Social } from "./Social"
+import { XXIIVVLogo } from "./XXIIVVLogo"
+import { XXIIVVRing } from "./XXIIVVRing"
 
-const Footer = ({ edit }: { edit?: string }) => {
+const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
   return (
-    <div className="mx-auto max-w-5xl">
+    <footer className="mx-auto max-w-2xl pt-[14vh]">
       <div className="divider" />
-      <footer className="footer sm:footer-horizontal items-center p-4">
+      <div className="footer sm:footer-horizontal items-center p-4">
         <aside className="grid-flow-col items-center">
           <p>
             &copy; 2011 - {format(TZDate.tz("America/New_York"), "yyyy")} Nat
@@ -50,8 +54,35 @@ const Footer = ({ edit }: { edit?: string }) => {
             <DocumentCheckIcon className="inline-block h-4 w-4" />
           </Link>
         </nav>
-      </footer>
-    </div>
+      </div>
+
+      <div className="footer sm:footer-horizontal text-base-content p-4">
+        <nav className="gap-4">
+          <h6 className="footer-title">Social</h6>
+          <Social includeWebring={false} size={24} />
+        </nav>
+        <nav className="gap-4 md:justify-self-end">
+          <h6 className="footer-title">
+            <RecurseLogo
+              className="inline-block h-4 w-4 align-text-bottom"
+              size={12}
+            />{" "}
+            Webring
+          </h6>
+          <RecurseRing />
+        </nav>
+        <nav className="gap-4 md:justify-self-end">
+          <h6 className="footer-title">
+            <XXIIVVLogo
+              className="inline-block h-4 w-4 align-text-bottom"
+              size={12}
+            />{" "}
+            Webring
+          </h6>
+          <XXIIVVRing />
+        </nav>
+      </div>
+    </footer>
   )
 }
 
