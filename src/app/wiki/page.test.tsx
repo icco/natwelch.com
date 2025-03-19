@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react"
+
 import { allPages } from "contentlayer/generated"
+
 import Home from "./page"
 
 describe("Wiki Page", () => {
@@ -31,4 +33,4 @@ describe("Wiki Page", () => {
     expect(links[0]).toHaveTextContent("Test Page 1")
     expect(links[1]).toHaveTextContent("Test Page 2")
   })
-}) 
+})

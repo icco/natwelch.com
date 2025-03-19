@@ -1,5 +1,7 @@
 import "@testing-library/jest-dom"
-import { TextEncoder, TextDecoder } from "util"
+
+import { TextDecoder, TextEncoder } from "util"
+
 import React from "react"
 
 // Polyfill TextEncoder/TextDecoder for jsdom
@@ -33,7 +35,13 @@ jest.mock("next/navigation", () => ({
 
 // Mock next/link
 jest.mock("next/link", () => {
-  return function Link({ children, href }: { children: React.ReactNode; href: string }) {
+  return function Link({
+    children,
+    href,
+  }: {
+    children: React.ReactNode
+    href: string
+  }) {
     return React.createElement("a", { href }, children)
   }
 })
@@ -65,4 +73,4 @@ jest.mock("contentlayer/generated", () => ({
       body: { raw: "Test content 2" },
     },
   ],
-})) 
+}))

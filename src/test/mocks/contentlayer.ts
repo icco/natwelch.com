@@ -17,4 +17,4 @@ export const allPages = [
     url: "/wiki/nested/test2",
     body: { raw: "Test content 2" },
   },
-] 
+]
