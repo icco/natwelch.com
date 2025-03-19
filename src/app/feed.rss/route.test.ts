@@ -1,7 +1,9 @@
 // Add type imports for Jest
 import { jest } from "@jest/globals"
-import { GET } from "./route"
+
 import * as rss from "@/lib/rss"
+
+import { GET } from "./route"
 
 interface FeedItem {
   title: string
