@@ -16,10 +16,10 @@ interface FeedItem {
 
 // Mock the fetchFeed function
 jest.mock("@/lib/rss", () => ({
-  fetchFeed: jest.fn(),
+  fetchFeed: jest.fn().mockResolvedValue([]),
 }))
 
-const mockedFetchFeed = fetchFeed as unknown as jest.Mock
+const mockedFetchFeed = fetchFeed as jest.MockedFunction<typeof fetchFeed>
 
 describe("RSS Feed Route", () => {
   beforeEach(() => {
@@ -48,7 +48,7 @@ describe("RSS Feed Route", () => {
       },
     ]
 
-    mockedFetchFeed.mockResolvedValue(mockFeedData)
+    mockedFetchFeed.mockResolvedValueOnce(mockFeedData)
 
     // Call the route handler
     const response = await GET()
@@ -71,7 +71,7 @@ describe("RSS Feed Route", () => {
 
   it("should handle empty feed data", async () => {
     // Mock the fetchFeed function to return empty data
-    mockedFetchFeed.mockResolvedValue([])
+    mockedFetchFeed.mockResolvedValueOnce([])
 
     // Call the route handler
     const response = await GET()
