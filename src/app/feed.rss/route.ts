@@ -74,4 +74,4 @@ export async function GET() {
       "Content-Type": "application/xml; charset=utf-8",
     },
   })
-} 
+}
