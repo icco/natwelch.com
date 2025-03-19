@@ -2,9 +2,9 @@ import Parser from "rss-parser"
 
 const parser = new Parser({
   customFields: {
-    feed: ['language', 'copyright'],
-    item: ['content:encoded', 'dc:creator', 'dc:date']
-  }
+    feed: ["language", "copyright"],
+    item: ["content:encoded", "dc:creator", "dc:date"],
+  },
 })
 
 export async function fetchFeed(url: string): Promise<Parser.Item[]> {
