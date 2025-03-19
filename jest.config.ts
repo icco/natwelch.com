@@ -12,7 +12,11 @@ const config: Config = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    "^contentlayer/generated$": "<rootDir>/src/test/mocks/contentlayer.ts",
   },
+  transformIgnorePatterns: [
+    "/node_modules/(?!next|@next|contentlayer)",
+  ],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
