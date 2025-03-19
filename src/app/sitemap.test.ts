@@ -1,5 +1,5 @@
-import { allPages } from "contentlayer/generated"
 import type { Page } from "contentlayer/generated"
+import { allPages } from "contentlayer/generated"
 
 import sitemap from "./sitemap"
 
@@ -67,7 +67,7 @@ describe("Sitemap Generation", () => {
 
   it("should handle empty wiki pages", () => {
     // Mock empty wiki pages
-    ; (allPages as Page[]).length = 0
+    ;(allPages as Page[]).length = 0
 
     const sitemapData = sitemap()
 
