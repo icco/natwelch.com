@@ -1,7 +1,5 @@
 import { render, screen } from "@testing-library/react"
 
-import { allPages } from "contentlayer/generated"
-
 import Home from "./page"
 
 describe("Wiki Page", () => {

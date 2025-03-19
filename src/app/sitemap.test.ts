@@ -65,7 +65,7 @@ describe("Sitemap Generation", () => {
 
   it("should handle empty wiki pages", async () => {
     // Mock empty pages
-    ;(allPages as any) = []
+    ; (allPages as Array<{ title: string; flattenedPath: string }>) = []
 
     const sitemapData = await sitemap()
 

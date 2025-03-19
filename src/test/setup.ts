@@ -6,14 +6,14 @@ import React from "react"
 
 // Polyfill TextEncoder/TextDecoder for jsdom
 global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder as any
+global.TextDecoder = TextDecoder as typeof TextDecoder
 
 // Mock Request and Response globals
 global.Request = class Request {
   constructor() {
     return {}
   }
-} as any
+} as unknown as typeof Request
 
 global.Response = class Response {
   constructor(body?: BodyInit | null, init?: ResponseInit) {
@@ -22,7 +22,7 @@ global.Response = class Response {
       headers: new Map(Object.entries(init?.headers || {})),
     }
   }
-} as any
+} as unknown as typeof Response
 
 // Mock next/navigation
 jest.mock("next/navigation", () => ({
@@ -48,7 +48,7 @@ jest.mock("next/link", () => {
 
 // Mock next/cache
 jest.mock("next/cache", () => ({
-  unstable_cache: (fn: Function) => fn,
+  unstable_cache: (fn: (...args: unknown[]) => unknown) => fn,
 }))
 
 // Mock contentlayer/generated
