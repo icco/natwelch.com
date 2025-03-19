@@ -61,6 +61,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@types/rss": "^0.0.32",
+    "@types/vivus": "^0.4.7",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "dlx": "^0.2.1",
