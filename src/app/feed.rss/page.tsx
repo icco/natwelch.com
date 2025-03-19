@@ -1,33 +1,64 @@
 import { RSS } from 'rss'
+import Parser from 'rss-parser'
+
+const parser = new Parser()
+
+// Define the RSS feeds to merge
+const FEEDS = [
+  'https://writing.natwelch.com/feed.rss',
+  // Add more feed URLs here as needed
+]
 
 export async function GET() {
-
   const feed = new RSS({
-    title: 'Dave Gray Teaches Code',
-    description: "Dave Gray's Blog",
-    generator: 'RSS for Node and Next.js',
-    feed_url: 'https://www.davegray.codes/feed.xml',
-    site_url: 'https://www.davegray.codes/',
-    managingEditor: 'dave@davegray.codes (Dave Gray)',
-    webMaster: 'dave@davegray.codes (Dave Gray)',
-    copyright: `Copyright ${new Date().getFullYear().toString()}, Dave Gray`,
-    language: 'en-US',
-    pubDate: new Date().toUTCString(),
-    ttl: 60,
-  });
+    title: "Nat Welch's Combined Feed",
+    description: "A combined feed of Nat Welch's content",
+    site_url: "https://natwelch.com",
+    feed_url: "https://natwelch.com/feed.rss",
+    language: "en",
+    pubDate: new Date(),
+    copyright: `All rights reserved ${new Date().getFullYear()} Nat Welch`,
+  })
 
-  const allPosts = await getPostsMeta()
+  // Fetch and merge all feeds
+  const feedPromises = FEEDS.map(async (url) => {
+    try {
+      const feed = await parser.parseURL(url)
+      return feed.items || []
+    } catch (error) {
+      console.error(`Error fetching feed ${url}:`, error)
+      return []
+    }
+  })
 
-  if (allPosts) {
-    allPosts.map((post) => {
+  const allItems = (await Promise.all(feedPromises)).flat()
+
+  // Sort items by date and add to feed
+  allItems
+    .sort((a, b) => {
+      const dateA = a.isoDate ? new Date(a.isoDate) : new Date(0)
+      const dateB = b.isoDate ? new Date(b.isoDate) : new Date(0)
+      return dateB.getTime() - dateA.getTime()
+    })
+    .forEach((item) => {
       feed.item({
-      });
-    });
-  }
+        title: item.title || '',
+        description: item.content || item.contentSnippet || '',
+        url: item.link || '',
+        date: item.isoDate ? new Date(item.isoDate) : new Date(),
+        guid: item.guid || item.link || '',
+        categories: item.categories || [],
+        custom_elements: [
+          { 'content:encoded': item.content || '' },
+          { 'dc:creator': item.creator || 'Nat Welch' },
+          { 'dc:date': item.isoDate || new Date().toISOString() },
+        ],
+      })
+    })
 
   return new Response(feed.xml({ indent: true }), {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
     },
-  });
+  })
 }
