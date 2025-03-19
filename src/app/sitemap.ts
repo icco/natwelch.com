@@ -1,15 +1,12 @@
 import type { MetadataRoute } from "next"
+
 import { allPages } from "contentlayer/generated"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://natwelch.com"
 
   // Static routes
-  const staticRoutes = [
-    "",
-    "/feed.rss",
-    "/wiki",
-  ].map((route) => ({
+  const staticRoutes = ["", "/feed.rss", "/wiki"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "daily" as const,
