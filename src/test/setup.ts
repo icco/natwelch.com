@@ -14,8 +14,11 @@ global.Request = class Request {
 } as any
 
 global.Response = class Response {
-  constructor() {
-    return {}
+  constructor(body?: BodyInit | null, init?: ResponseInit) {
+    return {
+      text: async () => body?.toString() || "",
+      headers: new Map(Object.entries(init?.headers || {})),
+    }
   }
 } as any
 

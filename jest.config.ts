@@ -13,6 +13,7 @@ const config: Config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
     "^contentlayer/generated$": "<rootDir>/src/test/mocks/contentlayer.ts",
+    "^contentlayer2/client$": "<rootDir>/src/test/mocks/contentlayer.ts",
   },
   transformIgnorePatterns: [
     "/node_modules/(?!next|@next|contentlayer|contentlayer2)",
@@ -20,6 +21,7 @@ const config: Config = {
   transform: {
     "^.+\\.(t|j)sx?$": "@swc/jest",
   },
+  extensionsToTreatAsEsm: [".ts", ".tsx", ".mjs"],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
