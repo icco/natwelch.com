@@ -1,17 +1,8 @@
 // Add type imports for Jest
 import { jest } from "@jest/globals"
-
+import type Parser from "rss-parser"
 import { GET } from "./route"
 import { fetchFeed } from "@/lib/rss"
-
-interface FeedItem {
-  title: string
-  content: string
-  link: string
-  isoDate: string
-  guid: string
-  creator: string
-}
 
 // Mock the rss module
 jest.mock("@/lib/rss", () => ({
@@ -26,7 +17,7 @@ describe("RSS Feed Route", () => {
 
   it("should return a valid RSS feed", async () => {
     // Mock the fetchFeed function to return test data
-    const mockFeedData: FeedItem[] = [
+    const mockFeedData: Parser.Item[] = [
       {
         title: "Test Post 1",
         content: "Test content 1",
@@ -45,8 +36,9 @@ describe("RSS Feed Route", () => {
       },
     ]
 
-      // Set up mock return value
-      (fetchFeed as jest.Mock).mockResolvedValue(mockFeedData)
+    // Set up mock return value
+    const mockedFetchFeed = fetchFeed as jest.MockedFunction<typeof fetchFeed>
+    mockedFetchFeed.mockResolvedValue(mockFeedData)
 
     // Call the route handler
     const response = await GET()
@@ -69,7 +61,8 @@ describe("RSS Feed Route", () => {
 
   it("should handle empty feed data", async () => {
     // Mock the fetchFeed function to return empty data
-    (fetchFeed as jest.Mock).mockResolvedValue([])
+    const mockedFetchFeed = fetchFeed as jest.MockedFunction<typeof fetchFeed>
+    mockedFetchFeed.mockResolvedValue([])
 
     // Call the route handler
     const response = await GET()
