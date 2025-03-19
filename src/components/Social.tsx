@@ -136,7 +136,7 @@ export const Social = ({
       </a>
 
       <a
-        href="https://natwelch.com/feed.rss"
+        href="/feed.rss"
         title="RSS Feed"
         rel="me"
         className={style}

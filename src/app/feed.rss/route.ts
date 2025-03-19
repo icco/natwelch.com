@@ -1,5 +1,5 @@
 import { unstable_cache } from "next/cache"
-import { RSS } from "rss"
+import RSS from "rss"
 import Parser from "rss-parser"
 
 const parser = new Parser()
@@ -9,6 +9,7 @@ const FEEDS = [
   "https://merveilles.town/@icco.rss",
   "https://pixelfed.social/users/icco.atom",
   "https://letterboxd.com/icco/rss/",
+  "https://www.youtube.com/feeds/videos.xml?channel_id=UCh4CJdC3mXyimvshLxNuFDg",
 ]
 
 // Cache the feed fetching for 1 hour
