@@ -28,7 +28,7 @@ const getCachedFeeds = unstable_cache(
   },
   ["rss-feeds"],
   {
-    revalidate: 3600, // Cache for 1 hour
+    revalidate: 3600,
     tags: ["rss-feeds"],
   }
 )
