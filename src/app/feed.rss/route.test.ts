@@ -1,8 +1,6 @@
 // Add type imports for Jest
 import { jest } from "@jest/globals"
 
-import * as rss from "@/lib/rss"
-
 import { GET } from "./route"
 
 interface FeedItem {
@@ -13,6 +11,11 @@ interface FeedItem {
   guid: string
   creator: string
 }
+
+// Mock the rss module
+jest.mock("@/lib/rss", () => ({
+  fetchFeed: jest.fn(),
+}))
 
 describe("RSS Feed Route", () => {
   beforeEach(() => {
@@ -41,7 +44,8 @@ describe("RSS Feed Route", () => {
       },
     ]
 
-    jest.spyOn(rss, "fetchFeed").mockResolvedValue(mockFeedData)
+    const { fetchFeed } = require("@/lib/rss")
+    fetchFeed.mockResolvedValue(mockFeedData)
 
     // Call the route handler
     const response = await GET()
@@ -64,7 +68,8 @@ describe("RSS Feed Route", () => {
 
   it("should handle empty feed data", async () => {
     // Mock the fetchFeed function to return empty data
-    jest.spyOn(rss, "fetchFeed").mockResolvedValue([])
+    const { fetchFeed } = require("@/lib/rss")
+    fetchFeed.mockResolvedValue([])
 
     // Call the route handler
     const response = await GET()
