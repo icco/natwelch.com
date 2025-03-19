@@ -1,6 +1,5 @@
-import type { Page } from "contentlayer/generated"
+import { MetadataRoute } from "next"
 import { allPages } from "contentlayer/generated"
-
 import sitemap from "./sitemap"
 
 // Mock the contentlayer generated data
@@ -23,7 +22,7 @@ jest.mock("contentlayer/generated", () => ({
 
 describe("Sitemap Generation", () => {
   it("should generate a valid sitemap with all routes", () => {
-    const sitemapData = sitemap()
+    const sitemapData = sitemap() as MetadataRoute.Sitemap
 
     // Check static routes
     expect(sitemapData).toContainEqual(
@@ -33,6 +32,7 @@ describe("Sitemap Generation", () => {
         changeFrequency: "daily",
       })
     )
+
     expect(sitemapData).toContainEqual(
       expect.objectContaining({
         url: "https://natwelch.com/feed.rss",
@@ -40,6 +40,7 @@ describe("Sitemap Generation", () => {
         changeFrequency: "daily",
       })
     )
+
     expect(sitemapData).toContainEqual(
       expect.objectContaining({
         url: "https://natwelch.com/wiki",
@@ -51,14 +52,15 @@ describe("Sitemap Generation", () => {
     // Check dynamic wiki routes
     expect(sitemapData).toContainEqual(
       expect.objectContaining({
-        url: "https://natwelch.com/wiki/test-page-1",
+        url: "https://natwelch.com/wiki/test1",
         priority: 0.7,
         changeFrequency: "weekly",
       })
     )
+
     expect(sitemapData).toContainEqual(
       expect.objectContaining({
-        url: "https://natwelch.com/wiki/test-page-2",
+        url: "https://natwelch.com/wiki/nested/test2",
         priority: 0.7,
         changeFrequency: "weekly",
       })
@@ -67,7 +69,7 @@ describe("Sitemap Generation", () => {
 
   it("should handle empty wiki pages", () => {
     // Mock empty wiki pages
-    ;(allPages as Page[]).length = 0
+    ; (allPages as Page[]).length = 0
 
     const sitemapData = sitemap()
 
