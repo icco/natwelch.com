@@ -1,5 +1,6 @@
 import { unstable_cache } from "next/cache"
 import RSS from "rss"
+
 import { fetchFeed } from "@/lib/rss"
 
 const FEEDS = [
@@ -13,7 +14,7 @@ const FEEDS = [
 // Cache the feed fetching for 1 hour
 const getCachedFeeds = unstable_cache(
   async () => {
-    const feedPromises = FEEDS.map(url => fetchFeed(url))
+    const feedPromises = FEEDS.map((url) => fetchFeed(url))
     return (await Promise.all(feedPromises)).flat()
   },
   ["rss-feeds"],
