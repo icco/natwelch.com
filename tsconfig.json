@@ -33,7 +33,6 @@
     },
     "baseUrl": ".",
     "types": [
-      "jest",
       "node"
     ]
   },
