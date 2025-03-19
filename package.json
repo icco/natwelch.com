@@ -59,6 +59,7 @@
     "@types/mdx": "^2.0.2",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "@types/rss": "^0.0.32",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "dlx": "^0.2.1",
