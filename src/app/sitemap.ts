@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-import { allPages } from "contentlayer/generated"
+import { allPages } from "../../.contentlayer/generated"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://natwelch.com"
