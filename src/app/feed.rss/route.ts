@@ -37,7 +37,8 @@ const getCachedFeeds = unstable_cache(
 export async function GET() {
   const feed = new RSS({
     title: "Nat Welch's Combined Feed",
-    description: "A combined feed of Nat Welch's content from around the internet.",
+    description:
+      "A combined feed of Nat Welch's content from around the internet.",
     site_url: "https://natwelch.com",
     feed_url: "https://natwelch.com/feed.rss",
     language: "en",

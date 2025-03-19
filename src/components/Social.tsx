@@ -135,12 +135,7 @@ export const Social = ({
         </svg>
       </a>
 
-      <a
-        href="/feed.rss"
-        title="RSS Feed"
-        rel="me"
-        className={style}
-      >
+      <a href="/feed.rss" title="RSS Feed" rel="me" className={style}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
