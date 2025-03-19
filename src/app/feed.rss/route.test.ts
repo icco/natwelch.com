@@ -1,8 +1,6 @@
 // Add type imports for Jest
 import { jest } from "@jest/globals"
 
-import { fetchFeed } from "@/lib/rss"
-
 import { GET } from "./route"
 
 interface FeedItem {
@@ -15,7 +13,7 @@ interface FeedItem {
 }
 
 // Mock the fetchFeed function
-const mockFetchFeed = jest.fn().mockResolvedValue([]) as unknown as jest.Mock<Promise<FeedItem[]>, []>
+const mockFetchFeed = jest.fn().mockResolvedValue([]) as jest.Mock
 jest.mock("@/lib/rss", () => ({
   fetchFeed: mockFetchFeed,
 }))
