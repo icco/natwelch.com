@@ -35,6 +35,11 @@ jest.mock("next/link", () => {
   }
 })
 
+// Mock next/cache
+jest.mock("next/cache", () => ({
+  unstable_cache: (fn: Function) => fn,
+}))
+
 // Mock contentlayer/generated
 jest.mock("contentlayer/generated", () => ({
   allPages: require("./mocks/contentlayer").allPages,

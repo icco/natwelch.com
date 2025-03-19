@@ -49,6 +49,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@swc/core": "^1.11.11",
+    "@swc/jest": "^0.2.37",
     "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/dom": "^10.0.0",
