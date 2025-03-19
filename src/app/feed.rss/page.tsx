@@ -1,13 +1,37 @@
 import { RSS } from 'rss'
 import Parser from 'rss-parser'
+import { unstable_cache } from 'next/cache'
 
 const parser = new Parser()
 
-// Define the RSS feeds to merge
 const FEEDS = [
   'https://writing.natwelch.com/feed.rss',
-  // Add more feed URLs here as needed
+  'https://merveilles.town/@icco.rss',
+  'https://pixelfed.social/users/icco.atom',
+  'https://letterboxd.com/icco/rss/',
 ]
+
+// Cache the feed fetching for 1 hour
+const getCachedFeeds = unstable_cache(
+  async () => {
+    const feedPromises = FEEDS.map(async (url) => {
+      try {
+        const feed = await parser.parseURL(url)
+        return feed.items || []
+      } catch (error) {
+        console.error(`Error fetching feed ${url}:`, error)
+        return []
+      }
+    })
+
+    return (await Promise.all(feedPromises)).flat()
+  },
+  ['rss-feeds'],
+  {
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['rss-feeds'],
+  }
+)
 
 export async function GET() {
   const feed = new RSS({
@@ -20,18 +44,7 @@ export async function GET() {
     copyright: `All rights reserved ${new Date().getFullYear()} Nat Welch`,
   })
 
-  // Fetch and merge all feeds
-  const feedPromises = FEEDS.map(async (url) => {
-    try {
-      const feed = await parser.parseURL(url)
-      return feed.items || []
-    } catch (error) {
-      console.error(`Error fetching feed ${url}:`, error)
-      return []
-    }
-  })
-
-  const allItems = (await Promise.all(feedPromises)).flat()
+  const allItems = await getCachedFeeds()
 
   // Sort items by date and add to feed
   allItems
