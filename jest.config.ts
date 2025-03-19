@@ -12,6 +12,7 @@ const config: Config = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    "^contentlayer/generated$": "<rootDir>/src/test/mocks/contentlayer.ts",
   },
   transformIgnorePatterns: [
     "/node_modules/(?!next|@next|contentlayer|contentlayer2)",
