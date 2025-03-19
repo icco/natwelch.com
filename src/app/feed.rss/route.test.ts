@@ -19,6 +19,8 @@ jest.mock("@/lib/rss", () => ({
   fetchFeed: jest.fn(),
 }))
 
+const mockedFetchFeed = fetchFeed as unknown as jest.Mock
+
 describe("RSS Feed Route", () => {
   beforeEach(() => {
     // Reset all mocks before each test
@@ -46,7 +48,6 @@ describe("RSS Feed Route", () => {
       },
     ]
 
-    const mockedFetchFeed = fetchFeed as jest.MockedFunction<typeof fetchFeed>
     mockedFetchFeed.mockResolvedValue(mockFeedData)
 
     // Call the route handler
@@ -70,7 +71,6 @@ describe("RSS Feed Route", () => {
 
   it("should handle empty feed data", async () => {
     // Mock the fetchFeed function to return empty data
-    const mockedFetchFeed = fetchFeed as jest.MockedFunction<typeof fetchFeed>
     mockedFetchFeed.mockResolvedValue([])
 
     // Call the route handler
