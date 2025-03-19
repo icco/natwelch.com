@@ -2,6 +2,7 @@
 import { jest } from "@jest/globals"
 
 import { GET } from "./route"
+import { fetchFeed } from "@/lib/rss"
 
 interface FeedItem {
   title: string
@@ -44,8 +45,8 @@ describe("RSS Feed Route", () => {
       },
     ]
 
-    const { fetchFeed } = require("@/lib/rss")
-    fetchFeed.mockResolvedValue(mockFeedData)
+      // Set up mock return value
+      (fetchFeed as jest.Mock).mockResolvedValue(mockFeedData)
 
     // Call the route handler
     const response = await GET()
@@ -68,8 +69,7 @@ describe("RSS Feed Route", () => {
 
   it("should handle empty feed data", async () => {
     // Mock the fetchFeed function to return empty data
-    const { fetchFeed } = require("@/lib/rss")
-    fetchFeed.mockResolvedValue([])
+    (fetchFeed as jest.Mock).mockResolvedValue([])
 
     // Call the route handler
     const response = await GET()
