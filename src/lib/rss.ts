@@ -1,14 +1,25 @@
 import Parser from "rss-parser"
 
-export async function getLatestBlogPost(): Promise<Parser.Item | null> {
-  const parser = new Parser()
-  const feed = await parser.parseURL("https://writing.natwelch.com/feed.rss")
+const parser = new Parser()
 
-  if (!feed.items || feed.items.length === 0) {
+export async function fetchFeed(url: string): Promise<Parser.Item[]> {
+  try {
+    const feed = await parser.parseURL(url)
+    return feed.items || []
+  } catch (error) {
+    console.error(`Error fetching feed ${url}:`, error)
+    return []
+  }
+}
+
+export async function getLatestBlogPost(): Promise<Parser.Item | null> {
+  const items = await fetchFeed("https://writing.natwelch.com/feed.rss")
+
+  if (items.length === 0) {
     return null
   }
 
-  const latest = feed.items.sort((a, b) => {
+  const latest = items.sort((a, b) => {
     if (!a.isoDate || !b.isoDate) {
       return 0
     }
@@ -16,9 +27,5 @@ export async function getLatestBlogPost(): Promise<Parser.Item | null> {
     return a.isoDate > b.isoDate ? -1 : 1
   })[0]
 
-  if (!latest) {
-    return null
-  }
-
-  return latest
+  return latest || null
 }

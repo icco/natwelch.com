@@ -1,29 +1,19 @@
 import { unstable_cache } from "next/cache"
 import RSS from "rss"
-import Parser from "rss-parser"
+import { fetchFeed } from "@/lib/rss"
+
+const FEEDS = [
+  "https://writing.natwelch.com/feed.rss",
+  "https://merveilles.town/@icco.rss",
+  "https://pixelfed.social/users/icco.atom",
+  "https://letterboxd.com/icco/rss/",
+  "https://www.youtube.com/feeds/videos.xml?channel_id=UCh4CJdC3mXyimvshLxNuFDg",
+]
 
 // Cache the feed fetching for 1 hour
 const getCachedFeeds = unstable_cache(
   async () => {
-    const parser = new Parser()
-
-    const FEEDS = [
-      "https://writing.natwelch.com/feed.rss",
-      "https://merveilles.town/@icco.rss",
-      "https://pixelfed.social/users/icco.atom",
-      "https://letterboxd.com/icco/rss/",
-      "https://www.youtube.com/feeds/videos.xml?channel_id=UCh4CJdC3mXyimvshLxNuFDg",
-    ]
-    const feedPromises = FEEDS.map(async (url) => {
-      try {
-        const feed = await parser.parseURL(url)
-        return feed.items || []
-      } catch (error) {
-        console.error(`Error fetching feed ${url}:`, error)
-        return []
-      }
-    })
-
+    const feedPromises = FEEDS.map(url => fetchFeed(url))
     return (await Promise.all(feedPromises)).flat()
   },
   ["rss-feeds"],
