@@ -1,7 +1,4 @@
 import { jest } from "@jest/globals"
-import { MetadataRoute } from "next"
-
-import { allPages } from "contentlayer/generated"
 
 import sitemap from "./sitemap"
 
@@ -65,7 +62,8 @@ describe("Sitemap Generation", () => {
 
   it("should handle empty wiki pages", async () => {
     // Mock empty pages
-    ; (allPages as Array<{ title: string; flattenedPath: string }>) = []
+    const mockAllPages = jest.requireMock("contentlayer/generated").allPages as Array<{ title: string; flattenedPath: string }>
+    mockAllPages.length = 0
 
     const sitemapData = await sitemap()
 
