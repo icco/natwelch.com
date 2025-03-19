@@ -46,8 +46,8 @@ export function buildTreeInt(
 }
 
 function Tree({ items }: { items: string | Record<string, Page> }) {
-  if (typeof items === 'string') {
-    return null;
+  if (typeof items === "string") {
+    return null
   }
 
   return (
@@ -69,7 +69,7 @@ function Tree({ items }: { items: string | Record<string, Page> }) {
                 {value.title}
               </Link>
             </li>
-            {typeof value === 'object' && '_id' in value && (
+            {typeof value === "object" && "_id" in value && (
               <Tree key={`${k}-tree-${uniqueId()}`} items={{ [k]: value }} />
             )}
           </span>
