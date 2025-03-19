@@ -1,25 +1,29 @@
-import { MetadataRoute } from "next"
+import type { Page } from "contentlayer/generated"
 import { allPages } from "contentlayer/generated"
-import sitemap from "./sitemap"
-import { jest } from "@jest/globals"
 
-// Mock the contentlayer data
+import sitemap from "./sitemap"
+
+// Mock the contentlayer generated data
 jest.mock("contentlayer/generated", () => ({
   allPages: [
     {
+      _raw: {
+        flattenedPath: "test-page-1",
+      },
       title: "Test Page 1",
-      flattenedPath: "test1",
     },
     {
+      _raw: {
+        flattenedPath: "test-page-2",
+      },
       title: "Test Page 2",
-      flattenedPath: "test2",
     },
-  ],
+  ] as Page[],
 }))
 
 describe("Sitemap Generation", () => {
-  it("should generate a valid sitemap with all routes", async () => {
-    const sitemapData = await sitemap()
+  it("should generate a valid sitemap with all routes", () => {
+    const sitemapData = sitemap()
 
     // Check static routes
     expect(sitemapData).toContainEqual(
@@ -47,27 +51,27 @@ describe("Sitemap Generation", () => {
     // Check dynamic wiki routes
     expect(sitemapData).toContainEqual(
       expect.objectContaining({
-        url: "https://natwelch.com/wiki/test1",
+        url: "https://natwelch.com/wiki/test-page-1",
         priority: 0.7,
         changeFrequency: "weekly",
       })
     )
     expect(sitemapData).toContainEqual(
       expect.objectContaining({
-        url: "https://natwelch.com/wiki/test2",
+        url: "https://natwelch.com/wiki/test-page-2",
         priority: 0.7,
         changeFrequency: "weekly",
       })
     )
   })
 
-  it("should handle empty wiki pages", async () => {
-    // Mock empty pages
-    ; (allPages as any) = []
+  it("should handle empty wiki pages", () => {
+    // Mock empty wiki pages
+    ;(allPages as Page[]).length = 0
 
-    const sitemapData = await sitemap()
+    const sitemapData = sitemap()
 
-    // Check static routes are still present
+    // Check that static routes are still present
     expect(sitemapData).toContainEqual(
       expect.objectContaining({
         url: "https://natwelch.com",
@@ -90,11 +94,9 @@ describe("Sitemap Generation", () => {
       })
     )
 
-    // Check no dynamic wiki routes
-    expect(sitemapData).not.toContainEqual(
-      expect.objectContaining({
-        url: expect.stringContaining("https://natwelch.com/wiki/"),
-      })
-    )
+    // Check that no wiki routes are present
+    expect(
+      sitemapData.filter((item) => item.url.includes("/wiki/"))
+    ).toHaveLength(0)
   })
 })
