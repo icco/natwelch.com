@@ -1,14 +1,14 @@
-import { RSS } from 'rss'
-import Parser from 'rss-parser'
-import { unstable_cache } from 'next/cache'
+import { unstable_cache } from "next/cache"
+import { RSS } from "rss"
+import Parser from "rss-parser"
 
 const parser = new Parser()
 
 const FEEDS = [
-  'https://writing.natwelch.com/feed.rss',
-  'https://merveilles.town/@icco.rss',
-  'https://pixelfed.social/users/icco.atom',
-  'https://letterboxd.com/icco/rss/',
+  "https://writing.natwelch.com/feed.rss",
+  "https://merveilles.town/@icco.rss",
+  "https://pixelfed.social/users/icco.atom",
+  "https://letterboxd.com/icco/rss/",
 ]
 
 // Cache the feed fetching for 1 hour
@@ -26,10 +26,10 @@ const getCachedFeeds = unstable_cache(
 
     return (await Promise.all(feedPromises)).flat()
   },
-  ['rss-feeds'],
+  ["rss-feeds"],
   {
     revalidate: 3600, // Cache for 1 hour
-    tags: ['rss-feeds'],
+    tags: ["rss-feeds"],
   }
 )
 
@@ -55,23 +55,23 @@ export async function GET() {
     })
     .forEach((item) => {
       feed.item({
-        title: item.title || '',
-        description: item.content || item.contentSnippet || '',
-        url: item.link || '',
+        title: item.title || "",
+        description: item.content || item.contentSnippet || "",
+        url: item.link || "",
         date: item.isoDate ? new Date(item.isoDate) : new Date(),
-        guid: item.guid || item.link || '',
+        guid: item.guid || item.link || "",
         categories: item.categories || [],
         custom_elements: [
-          { 'content:encoded': item.content || '' },
-          { 'dc:creator': item.creator || 'Nat Welch' },
-          { 'dc:date': item.isoDate || new Date().toISOString() },
+          { "content:encoded": item.content || "" },
+          { "dc:creator": item.creator || "Nat Welch" },
+          { "dc:date": item.isoDate || new Date().toISOString() },
         ],
       })
     })
 
   return new Response(feed.xml({ indent: true }), {
     headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
+      "Content-Type": "application/xml; charset=utf-8",
     },
   })
 }
