@@ -1,3 +1,4 @@
+import { RSS } from 'rss'
 
 export async function GET() {
 
@@ -20,12 +21,6 @@ export async function GET() {
   if (allPosts) {
     allPosts.map((post) => {
       feed.item({
-        title: post.title,
-        description: post.description,
-        url: `https://www.davegray.codes/posts/${post.id}`,
-        categories: post.tags || [],
-        author: "Dave Gray",
-        date: post.date,
       });
     });
   }
