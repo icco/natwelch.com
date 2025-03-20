@@ -34,7 +34,7 @@ export function LargeHeader() {
   ]
 
   return (
-    <header>
+    <header data-testid="header">
       <div className="flex flex-col items-center justify-center">
         <Logo
           size={200}
