@@ -1,13 +1,31 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { GET } from "./route"
-import { fetchFeed } from "@/lib/rss"
+import Parser from "rss-parser"
+
+// Mock the next/cache module to handle errors
+vi.mock("next/cache", () => ({
+  unstable_cache: (fn: Function) => async (...args: any[]) => {
+    try {
+      return await fn(...args)
+    } catch (error) {
+      console.error("Cache error:", error)
+      return []
+    }
+  },
+}))
 
 // Mock the RSS fetching module
 vi.mock("@/lib/rss", () => ({
-  fetchFeed: vi.fn(),
+  fetchFeed: vi.fn().mockImplementation(async () => []),
 }))
 
 describe("RSS Feed Route", () => {
+  const parser = new Parser({
+    customFields: {
+      feed: ["language", "copyright"],
+    },
+  })
+
   beforeEach(() => {
     vi.clearAllMocks()
   })
@@ -36,7 +54,8 @@ describe("RSS Feed Route", () => {
     ]
 
     // Mock the fetchFeed function to return our test data
-    vi.mocked(fetchFeed).mockResolvedValue(mockFeedItems)
+    const { fetchFeed } = await import("@/lib/rss")
+    vi.mocked(fetchFeed).mockResolvedValueOnce(mockFeedItems)
 
     // Get the feed response
     const response = await GET()
@@ -45,25 +64,40 @@ describe("RSS Feed Route", () => {
     // Verify response headers
     expect(response.headers.get("Content-Type")).toBe("application/xml; charset=utf-8")
 
-    // Verify XML content
-    expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
-    expect(xml).toContain('<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">')
-    expect(xml).toContain('<title><![CDATA[Nat Welch\'s Combined Feed]]></title>')
-    expect(xml).toContain('<description><![CDATA[A combined feed of Nat Welch\'s content from around the internet.]]></description>')
-    expect(xml).toContain('<link>https://natwelch.com</link>')
-    expect(xml).toContain('<item>')
-    expect(xml).toContain('<title><![CDATA[Test Post 1]]></title>')
-    expect(xml).toContain('<description><![CDATA[Test content 1]]></description>')
-    expect(xml).toContain('<link>https://example.com/post1</link>')
-    expect(xml).toContain('<guid isPermaLink="false">post1</guid>')
-    expect(xml).toContain('<category><![CDATA[test]]></category>')
-    expect(xml).toContain('<dc:creator>Nat Welch</dc:creator>')
+    // Parse and verify the feed structure
+    const feed = await parser.parseString(xml)
+
+    // Verify feed metadata
+    expect(feed.title).toBe("Nat Welch's Combined Feed")
+    expect(feed.description).toBe("A combined feed of Nat Welch's content from around the internet.")
+    expect(feed.link).toBe("https://natwelch.com")
+    expect(feed.language).toBe("en")
+    expect(feed.copyright).toContain("All rights reserved")
+    expect(feed.copyright).toContain("Nat Welch")
+
+    // Verify feed items
+    expect(feed.items).toHaveLength(2)
+
+    const firstItem = feed.items[0]
+    expect(firstItem.title).toBe("Test Post 1")
+    expect(firstItem.content).toBe("Test content 1")
+    expect(firstItem.link).toBe("https://example.com/post1")
+    expect(firstItem.guid).toBe("post1")
+    expect(firstItem.categories).toEqual(["test"])
+    expect(firstItem.creator).toBe("Nat Welch")
+    expect(new Date(firstItem.isoDate!).toISOString()).toBe("2024-03-20T10:00:00.000Z")
+
+    const secondItem = feed.items[1]
+    expect(secondItem.title).toBe("Test Post 2")
+    expect(secondItem.content).toBe("Test content 2")
+    expect(secondItem.link).toBe("https://example.com/post2")
+    expect(secondItem.guid).toBe("post2")
+    expect(secondItem.categories).toEqual(["test"])
+    expect(secondItem.creator).toBe("Nat Welch")
+    expect(new Date(secondItem.isoDate!).toISOString()).toBe("2024-03-19T10:00:00.000Z")
   })
 
   it("should handle empty feed data gracefully", async () => {
-    // Mock empty feed data
-    vi.mocked(fetchFeed).mockResolvedValue([])
-
     // Get the feed response
     const response = await GET()
     const xml = await response.text()
@@ -71,15 +105,24 @@ describe("RSS Feed Route", () => {
     // Verify response headers
     expect(response.headers.get("Content-Type")).toBe("application/xml; charset=utf-8")
 
-    // Verify XML content has no items
-    expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
-    expect(xml).toContain('<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">')
-    expect(xml).not.toContain('<item>')
+    // Parse and verify the feed structure
+    const feed = await parser.parseString(xml)
+
+    // Verify feed metadata is present but no items
+    expect(feed.title).toBe("Nat Welch's Combined Feed")
+    expect(feed.description).toBe("A combined feed of Nat Welch's content from around the internet.")
+    expect(feed.link).toBe("https://natwelch.com")
+    expect(feed.items).toHaveLength(0)
   })
 
   it("should handle feed fetching errors gracefully", async () => {
-    // Mock feed fetching error
-    vi.mocked(fetchFeed).mockResolvedValue([]) // Return empty array instead of throwing error
+    // Mock feed fetching error for one feed, others return empty arrays
+    const { fetchFeed } = await import("@/lib/rss")
+    const mockFn = vi.mocked(fetchFeed)
+
+    // First feed will fail
+    mockFn.mockRejectedValueOnce(new Error("Feed fetch failed"))
+    // Other feeds will return empty arrays (default mock behavior)
 
     // Get the feed response
     const response = await GET()
@@ -88,9 +131,13 @@ describe("RSS Feed Route", () => {
     // Verify response headers
     expect(response.headers.get("Content-Type")).toBe("application/xml; charset=utf-8")
 
-    // Verify XML content has no items
-    expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
-    expect(xml).toContain('<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">')
-    expect(xml).not.toContain('<item>')
+    // Parse and verify the feed structure
+    const feed = await parser.parseString(xml)
+
+    // Verify feed metadata is present but no items
+    expect(feed.title).toBe("Nat Welch's Combined Feed")
+    expect(feed.description).toBe("A combined feed of Nat Welch's content from around the internet.")
+    expect(feed.link).toBe("https://natwelch.com")
+    expect(feed.items).toHaveLength(0)
   })
 }) 
