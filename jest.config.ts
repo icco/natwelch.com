@@ -10,6 +10,10 @@ const config: Config = {
   collectCoverage: true,
   coverageDirectory: "coverage",
   coverageProvider: "v8",
+  moduleNameMapper: {
+    '^@/src/(.*)$': '<rootDir>/src/$1',
+    "contentlayer/generated": '<rootDir>/.contentlayer/generated',
+  },
 };
 
 const createJestConfig = nextJest({
