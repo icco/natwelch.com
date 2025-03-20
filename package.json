@@ -54,6 +54,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
     "@types/lodash": "^4.14.178",
     "@types/mdx": "^2.0.2",
     "@types/node": "^22.13.10",

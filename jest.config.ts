@@ -14,6 +14,7 @@ const config: Config = {
     "^@/src/(.*)$": "<rootDir>/src/$1",
     "contentlayer/generated": "<rootDir>/.contentlayer/generated",
   },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 }
 
 const createJestConfig = nextJest({
