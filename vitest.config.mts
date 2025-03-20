@@ -9,10 +9,15 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
+    setupFiles: ["./src/test/setup.ts"],
   },
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
+      "contentlayer/generated": resolve(
+        __dirname,
+        "./src/app/__mocks__/contentlayer/generated.ts"
+      ),
     },
   },
 })
