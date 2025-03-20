@@ -23,4 +23,4 @@ export const allPages = [
     pathSegments: ["/wiki", "another-page"],
     path: "another-page",
   },
-]
+] 

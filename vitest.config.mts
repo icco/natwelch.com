@@ -14,10 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
-      "contentlayer/generated": resolve(
-        __dirname,
-        "./src/app/__mocks__/contentlayer/generated.ts"
-      ),
+      "contentlayer/generated": resolve(__dirname, "./src/test/mocks/contentlayer.ts"),
     },
   },
 })
