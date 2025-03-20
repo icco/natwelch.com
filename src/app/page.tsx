@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "Nat Welch",
 }
 
+export const revalidate = 60
+
 const getLatest = unstable_cache(
   async () => {
     return await getLatestBlogPost()
