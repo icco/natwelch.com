@@ -46,19 +46,30 @@ export async function GET() {
       return dateB.getTime() - dateA.getTime()
     })
     .forEach((item) => {
-      feed.item({
-        title: item.title || "",
-        description: item.content || item.contentSnippet || "",
-        url: item.link || "",
-        date: item.isoDate ? new Date(item.isoDate) : new Date(),
-        guid: item.guid || item.link || "",
-        categories: item.categories || [],
-        custom_elements: [
-          { "content:encoded": item.content || "" },
-          { "dc:creator": item.creator || "Nat Welch" },
-          { "dc:date": item.isoDate || new Date().toISOString() },
-        ],
-      })
+      const title = item.title || ""
+      const description = item.content || item.contentSnippet || ""
+      const url = item.link || ""
+      const guid = item.guid || url
+      const categories = item.categories || []
+      const creator = item.creator || "Nat Welch"
+      let date = new Date()
+      if (item.isoDate) {
+        date = new Date(item.isoDate)
+      }
+      if (item.pubDate) {
+        date = new Date(item.pubDate)
+      }
+
+      const feedItem: RSS.ItemOptions = {
+        title,
+        description,
+        url,
+        date,
+        guid,
+        categories,
+        custom_elements: [{ "dc:creator": creator }],
+      }
+      feed.item(feedItem)
     })
 
   return new Response(feed.xml({ indent: true }), {
