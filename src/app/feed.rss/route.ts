@@ -9,6 +9,7 @@ const FEEDS = [
   "https://pixelfed.social/users/icco.atom",
   "https://letterboxd.com/icco/rss/",
   "https://www.youtube.com/feeds/videos.xml?channel_id=UCh4CJdC3mXyimvshLxNuFDg",
+  "https://bsky.app/profile/did:plc:ehpputef3zvp2z5wrgwyl37u/rss",
 ]
 
 // Cache the feed fetching for 1 hour
