@@ -13,18 +13,24 @@ const FEEDS = [
   "https://rss.app/feeds/QjpTuzy5bMYp7eEt.xml", // Instagram
 ]
 
-// Cache the feed fetching for 1 hour
-const getCachedFeeds = unstable_cache(
-  async () => {
-    const feedPromises = FEEDS.map((url) => fetchFeed(url))
-    return (await Promise.all(feedPromises)).flat()
-  },
-  ["rss-feeds"],
-  {
-    revalidate: 3600,
-    tags: ["rss-feeds"],
-  }
-)
+// Cache each feed individually for 1 hour
+const getCachedFeed = (url: string) =>
+  unstable_cache(
+    async () => {
+      return fetchFeed(url)
+    },
+    [`rss-feed-${url}`],
+    {
+      revalidate: 3600,
+      tags: [`rss-feed-${url}`],
+    }
+  )
+
+// Get all cached feeds
+const getAllCachedFeeds = async () => {
+  const feedPromises = FEEDS.map((url) => getCachedFeed(url)())
+  return (await Promise.all(feedPromises)).flat()
+}
 
 export async function GET() {
   const feed = new RSS({
@@ -38,7 +44,7 @@ export async function GET() {
     copyright: `All rights reserved ${new Date().getFullYear()} Nat Welch`,
   })
 
-  const allItems = await getCachedFeeds()
+  const allItems = await getAllCachedFeeds()
 
   // Sort items by date and add to feed
   allItems
