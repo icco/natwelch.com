@@ -3,6 +3,8 @@ import RSS from "rss"
 
 import { fetchFeed } from "@/lib/rss"
 
+export const revalidate = 60
+
 const FEEDS = [
   "https://writing.natwelch.com/feed.rss",
   "https://merveilles.town/@icco.rss",
@@ -83,6 +85,9 @@ export async function GET() {
   return new Response(feed.xml({ indent: true }), {
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
     },
+    status: 200,
   })
 }
