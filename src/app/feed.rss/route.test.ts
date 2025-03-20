@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { GET } from "./route"
 import { newParser } from "@/lib/rss"
+import type * as RSSModule from "@/lib/rss"
 
 // Mock the next/cache module to handle errors
 vi.mock("next/cache", () => ({
@@ -15,9 +16,13 @@ vi.mock("next/cache", () => ({
 }))
 
 // Mock the RSS fetching module
-vi.mock("@/lib/rss", () => ({
-  fetchFeed: vi.fn().mockImplementation(async () => []),
-}))
+vi.mock("@/lib/rss", async (importOriginal) => {
+  const actual = await importOriginal() as typeof RSSModule
+  return {
+    ...actual,
+    fetchFeed: vi.fn().mockImplementation(async () => []),
+  }
+})
 
 describe("RSS Feed Route", () => {
   const parser = newParser()
