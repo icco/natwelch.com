@@ -13,7 +13,8 @@ const parser = newParser()
 export async function fetchFeed(url: string): Promise<Parser.Item[]> {
   try {
     const feed = await parser.parseURL(url)
-    return feed.items || []
+    const items = feed.items || []
+    return items.slice(0, 25)
   } catch (error) {
     console.error(`Error fetching feed ${url}:`, error)
     return []
