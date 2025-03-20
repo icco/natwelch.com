@@ -1,23 +1,27 @@
-import { describe, it, expect, vi, beforeEach } from "vitest"
-import { GET } from "./route"
-import { newParser } from "@/lib/rss"
+import { beforeEach, describe, expect, it, vi } from "vitest"
+
 import type * as RSSModule from "@/lib/rss"
+import { newParser } from "@/lib/rss"
+
+import { GET } from "./route"
 
 // Mock the next/cache module to handle errors
 vi.mock("next/cache", () => ({
-  unstable_cache: (fn: Function) => async (...args: any[]) => {
-    try {
-      return await fn(...args)
-    } catch (error) {
-      console.error("Cache error:", error)
-      return []
-    }
-  },
+  unstable_cache:
+    (fn: Function) =>
+    async (...args: any[]) => {
+      try {
+        return await fn(...args)
+      } catch (error) {
+        console.error("Cache error:", error)
+        return []
+      }
+    },
 }))
 
 // Mock the RSS fetching module
 vi.mock("@/lib/rss", async (importOriginal) => {
-  const actual = await importOriginal() as typeof RSSModule
+  const actual = (await importOriginal()) as typeof RSSModule
   return {
     ...actual,
     fetchFeed: vi.fn().mockImplementation(async () => []),
@@ -63,14 +67,18 @@ describe("RSS Feed Route", () => {
     const xml = await response.text()
 
     // Verify response headers
-    expect(response.headers.get("Content-Type")).toBe("application/xml; charset=utf-8")
+    expect(response.headers.get("Content-Type")).toBe(
+      "application/xml; charset=utf-8"
+    )
 
     // Parse and verify the feed structure
     const feed = await parser.parseString(xml)
 
     // Verify feed metadata
     expect(feed.title).toBe("Nat Welch's Combined Feed")
-    expect(feed.description).toBe("A combined feed of Nat Welch's content from around the internet.")
+    expect(feed.description).toBe(
+      "A combined feed of Nat Welch's content from around the internet."
+    )
     expect(feed.link).toBe("https://natwelch.com")
     expect(feed.language).toBe("en")
     expect(feed.copyright).toContain("All rights reserved")
@@ -86,7 +94,9 @@ describe("RSS Feed Route", () => {
     expect(firstItem.guid).toBe("post1")
     expect(firstItem.categories).toEqual(["test"])
     expect(firstItem.creator).toBe("Nat Welch")
-    expect(new Date(firstItem.isoDate!).toISOString()).toBe("2024-03-20T10:00:00.000Z")
+    expect(new Date(firstItem.isoDate!).toISOString()).toBe(
+      "2024-03-20T10:00:00.000Z"
+    )
 
     const secondItem = feed.items[1]
     expect(secondItem.title).toBe("Test Post 2")
@@ -95,7 +105,9 @@ describe("RSS Feed Route", () => {
     expect(secondItem.guid).toBe("post2")
     expect(secondItem.categories).toEqual(["test"])
     expect(secondItem.creator).toBe("Nat Welch")
-    expect(new Date(secondItem.isoDate!).toISOString()).toBe("2024-03-19T10:00:00.000Z")
+    expect(new Date(secondItem.isoDate!).toISOString()).toBe(
+      "2024-03-19T10:00:00.000Z"
+    )
   })
 
   it("should handle empty feed data gracefully", async () => {
@@ -104,14 +116,18 @@ describe("RSS Feed Route", () => {
     const xml = await response.text()
 
     // Verify response headers
-    expect(response.headers.get("Content-Type")).toBe("application/xml; charset=utf-8")
+    expect(response.headers.get("Content-Type")).toBe(
+      "application/xml; charset=utf-8"
+    )
 
     // Parse and verify the feed structure
     const feed = await parser.parseString(xml)
 
     // Verify feed metadata is present but no items
     expect(feed.title).toBe("Nat Welch's Combined Feed")
-    expect(feed.description).toBe("A combined feed of Nat Welch's content from around the internet.")
+    expect(feed.description).toBe(
+      "A combined feed of Nat Welch's content from around the internet."
+    )
     expect(feed.link).toBe("https://natwelch.com")
     expect(feed.items).toHaveLength(0)
   })
@@ -130,15 +146,19 @@ describe("RSS Feed Route", () => {
     const xml = await response.text()
 
     // Verify response headers
-    expect(response.headers.get("Content-Type")).toBe("application/xml; charset=utf-8")
+    expect(response.headers.get("Content-Type")).toBe(
+      "application/xml; charset=utf-8"
+    )
 
     // Parse and verify the feed structure
     const feed = await parser.parseString(xml)
 
     // Verify feed metadata is present but no items
     expect(feed.title).toBe("Nat Welch's Combined Feed")
-    expect(feed.description).toBe("A combined feed of Nat Welch's content from around the internet.")
+    expect(feed.description).toBe(
+      "A combined feed of Nat Welch's content from around the internet."
+    )
     expect(feed.link).toBe("https://natwelch.com")
     expect(feed.items).toHaveLength(0)
   })
-}) 
+})
