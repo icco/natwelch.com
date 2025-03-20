@@ -7,6 +7,11 @@ vi.mock("next/cache", () => ({
   unstable_cache: (fn: () => Promise<any>) => fn
 }))
 
+// Mock the Logo component
+vi.mock("@/components/Logo", () => ({
+  default: () => <div data-testid="logo">Logo</div>
+}))
+
 vi.mock("@/lib/rss", () => ({
   getLatestBlogPost: vi.fn().mockResolvedValue({
     title: "Test Post",
