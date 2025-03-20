@@ -8,8 +8,8 @@ import { GET } from "./route"
 // Mock the next/cache module to handle errors
 vi.mock("next/cache", () => ({
   unstable_cache:
-    (fn: Function) =>
-    async (...args: any[]) => {
+    (fn: (...args: unknown[]) => Promise<unknown>) =>
+    async (...args: unknown[]) => {
       try {
         return await fn(...args)
       } catch (error) {
