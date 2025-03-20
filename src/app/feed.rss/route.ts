@@ -10,6 +10,7 @@ const FEEDS = [
   "https://letterboxd.com/icco/rss/",
   "https://www.youtube.com/feeds/videos.xml?channel_id=UCh4CJdC3mXyimvshLxNuFDg",
   "https://bsky.app/profile/did:plc:ehpputef3zvp2z5wrgwyl37u/rss",
+  "https://rss.app/feeds/QjpTuzy5bMYp7eEt.xml", // Instagram
 ]
 
 // Cache the feed fetching for 1 hour
