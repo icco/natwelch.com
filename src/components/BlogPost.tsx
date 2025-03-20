@@ -1,7 +1,7 @@
 import Link from "next/link"
-import Parser from "rss-parser"
+import { Item } from "rss-parser"
 
-const BlogPost = (params: { post: Parser.Item | null }) => {
+const BlogPost = (params: { post: Item | null }) => {
   const { post } = params
   if (!post) {
     return <></>

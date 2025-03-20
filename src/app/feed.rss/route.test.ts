@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { GET } from "./route"
-import Parser from "rss-parser"
+import { newParser } from "@/lib/rss"
 
 // Mock the next/cache module to handle errors
 vi.mock("next/cache", () => ({
@@ -20,11 +20,7 @@ vi.mock("@/lib/rss", () => ({
 }))
 
 describe("RSS Feed Route", () => {
-  const parser = new Parser({
-    customFields: {
-      feed: ["language", "copyright"],
-    },
-  })
+  const parser = newParser()
 
   beforeEach(() => {
     vi.clearAllMocks()
