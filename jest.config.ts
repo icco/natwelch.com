@@ -10,11 +10,12 @@ const config: Config = {
   collectCoverage: true,
   coverageDirectory: "coverage",
   coverageProvider: "v8",
+  testEnvironment: "jsdom",
   moduleNameMapper: {
     "^@/src/(.*)$": "<rootDir>/src/$1",
     "contentlayer/generated": "<rootDir>/.contentlayer/generated",
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 }
 
 const createJestConfig = nextJest({
