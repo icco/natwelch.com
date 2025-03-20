@@ -10,7 +10,7 @@
     "lint": "next lint --fix",
     "build": "next build",
     "start": "next start -p $PORT",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
