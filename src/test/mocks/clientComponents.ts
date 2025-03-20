@@ -1,26 +1,28 @@
-import { vi } from 'vitest'
+import { NextWebVitalsMetric } from "next/app"
+import { vi } from "vitest"
 
 // Mock next/navigation
 export const mockUsePathname = vi.fn()
-vi.mock('next/navigation', () => ({
+vi.mock("next/navigation", () => ({
   usePathname: () => mockUsePathname(),
 }))
 
 // Mock next-themes
 export const mockUseTheme = vi.fn()
-vi.mock('next-themes', () => ({
+vi.mock("next-themes", () => ({
   useTheme: () => mockUseTheme(),
 }))
 
 // Mock next/web-vitals
 export const mockUseReportWebVitals = vi.fn()
-vi.mock('next/web-vitals', () => ({
-  useReportWebVitals: (callback: any) => mockUseReportWebVitals(callback),
+vi.mock("next/web-vitals", () => ({
+  useReportWebVitals: (callback: (metric: NextWebVitalsMetric) => void) =>
+    mockUseReportWebVitals(callback),
 }))
 
 // Mock Vivus
 export const mockVivus = vi.fn()
-vi.mock('vivus', () => ({
+vi.mock("vivus", () => ({
   default: vi.fn().mockImplementation(() => ({
     play: vi.fn(),
     stop: vi.fn(),
@@ -30,7 +32,7 @@ vi.mock('vivus', () => ({
 
 // Mock navigator.sendBeacon
 export const mockSendBeacon = vi.fn()
-Object.defineProperty(navigator, 'sendBeacon', {
+Object.defineProperty(navigator, "sendBeacon", {
   value: mockSendBeacon,
   writable: true,
 })
@@ -47,4 +49,4 @@ export const resetMocks = () => {
   mockVivus.mockReset()
   mockSendBeacon.mockReset()
   mockFetch.mockReset()
-} 
+}
