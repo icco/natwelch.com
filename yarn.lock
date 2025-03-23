@@ -3907,6 +3907,11 @@ import-fresh@^3.2.1:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
 
+improved-relative-time@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/improved-relative-time/-/improved-relative-time-1.1.1.tgz#6f1de9ab73fd1e0df93fb66aa79c0f44f3d4fbcf"
+  integrity sha512-K4ra23vr+U4hGHDEtRx5WKfMQwHaMfkadF8rMrcf0KAXrRXQjaGLw0siy35ooimM+WIqVgNDMNBLD9CQ3YhLcg==
+
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
