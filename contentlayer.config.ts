@@ -30,9 +30,9 @@ export const Page = defineDocumentType(() => ({
       },
     },
     modifiedAt: {
-      type: "date",
+      type: "string",
       resolve: (doc) => {
-        return new Date(fs.statSync("wiki/" + doc._raw.sourceFilePath).mtime)
+        return new Date(fs.statSync("wiki/" + doc._raw.sourceFilePath).mtime).toISOString()
       },
     },
   },

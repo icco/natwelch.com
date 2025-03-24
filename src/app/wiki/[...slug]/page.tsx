@@ -1,3 +1,4 @@
+import { formatTime } from "improved-relative-time"
 import { isString } from "lodash"
 import { MDXComponents } from "mdx/types"
 import Link from "next/link"
@@ -51,13 +52,16 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
   )
   const hasChildren = isString(childrenTree)
 
+  const modifiedAt = formatTime(new Date(page.modifiedAt), "Computer", {
+    level: "verbose",
+  })
+
   return (
     <>
       <article className="prose lg:prose-xl">
         <h1>{page.title}</h1>
-        <p>
-          Last updated: {page.modifiedAt}
-        </p>
+        <p>Last updated: {modifiedAt}</p>
+
         <MDXContent components={mdxComponents} />
         {hasChildren && (
           <>
