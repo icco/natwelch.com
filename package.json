@@ -44,12 +44,10 @@
     "rss": "^1.2.2",
     "rss-parser": "^3.13.0",
     "unified": "^11.0.0",
-    "vite": "^6.2.2",
     "vivus": "^0.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@swc/core": "^1.11.11",
     "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/jsdom": "^21.1.7",
@@ -62,7 +60,6 @@
     "@types/vivus": "^0.4.7",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "@vitejs/plugin-react": "^4.3.4",
     "dlx": "^0.2.1",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.1",
@@ -76,7 +73,6 @@
     "tailwindcss": "^4.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2",
-    "vite-tsconfig-paths": "^5.1.4",
     "webpack": "^5.10.0"
   },
   "prettier": {
