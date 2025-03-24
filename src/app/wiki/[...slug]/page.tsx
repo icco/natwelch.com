@@ -56,8 +56,7 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
       <article className="prose lg:prose-xl">
         <h1>{page.title}</h1>
         <p>
-          Last updated: {page.modifiedAt.toLocaleDateString()}
-          Created: {page.createdAt.toLocaleDateString()}
+          Last updated: {page.modifiedAt}
         </p>
         <MDXContent components={mdxComponents} />
         {hasChildren && (

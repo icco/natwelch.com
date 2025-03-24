@@ -35,12 +35,6 @@ export const Page = defineDocumentType(() => ({
         return new Date(fs.statSync("wiki/" + doc._raw.sourceFilePath).mtime)
       },
     },
-    createdAt: {
-      type: "date",
-      resolve: (doc) => {
-        return new Date(fs.statSync("wiki/" + doc._raw.sourceFilePath).ctime)
-      },
-    },
   },
 }))
 
