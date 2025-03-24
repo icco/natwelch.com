@@ -1,13 +1,17 @@
-import { isString, merge, uniqueId } from "lodash"
+import { merge, uniqueId } from "lodash"
 import Link from "next/link"
 
 import { Page } from "contentlayer/generated"
+
+interface TreeBranch {
+  [key: string]: Page | TreeBranch
+}
 
 export function buildTree(
   paths: string[],
   allPages: Page[],
   filter?: (value: string) => boolean
-): Record<string, Page> | string {
+): TreeBranch {
   let tree = {}
   if (filter) {
     paths = paths.filter(filter)
@@ -25,11 +29,11 @@ export function getPaths(allPages: Page[]): string[] {
   return paths.sort()
 }
 
-export function buildTreeInt(
+function buildTreeInt(
   allPages: Page[],
   path: string,
   fullPath: string
-): Record<string, Page> | string {
+): TreeBranch {
   if (!path.includes("/")) {
     const data = allPages.find((page) => page.path === fullPath)
     if (!data) {
@@ -40,26 +44,24 @@ export function buildTreeInt(
   }
 
   const pieces = path.split("/")
-  return {
-    [pieces[0]]: buildTreeInt(allPages, pieces.slice(1).join("/"), fullPath),
-  } as unknown as Record<string, Page> | string
+  const subTree = buildTreeInt(allPages, pieces.slice(1).join("/"), fullPath)
+  return { [pieces[0]]: subTree }
 }
 
-function Tree({ items }: { items: string | Record<string, Page> }) {
-  if (isString(items)) {
-    return items
-  }
+function isPage(value: Page | TreeBranch): value is Page {
+  return "url" in value && "title" in value
+}
 
+function Tree({ items }: { items: TreeBranch }) {
   return (
-    <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
-      {Object.keys(items).map((k) => {
-        const value = items[k]
-        if (isString(value)) {
-          return <span key={uniqueId()}></span>
-        }
-
-        if (!value.url) {
-          return <span key={uniqueId()}></span>
+    <ul className="menu">
+      {Object.entries(items).map(([k, value]) => {
+        if (!isPage(value)) {
+          return (
+            <span key={`${k}-tree-${uniqueId()}`}>
+              <Tree items={value} />
+            </span>
+          )
         }
 
         return (
@@ -69,7 +71,6 @@ function Tree({ items }: { items: string | Record<string, Page> }) {
                 {value.title}
               </Link>
             </li>
-            <Tree key={`${k}-tree-${uniqueId()}`} items={value}></Tree>
           </span>
         )
       })}
