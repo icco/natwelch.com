@@ -58,7 +58,11 @@ function MDXContentWrapper({
   }
 }
 
-export default function Page({ params }: { params: Promise<{ slug: string[] }> }) {
+export default function Page({
+  params,
+}: {
+  params: Promise<{ slug: string[] }>
+}) {
   const resolvedParams = use(params)
   const slugPath = resolvedParams.slug.join("/")
   const page = allPages.find((page) => page._raw.flattenedPath === slugPath)
