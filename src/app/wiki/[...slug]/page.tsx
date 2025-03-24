@@ -22,8 +22,9 @@ export const generateMetadata = async ({
 }: {
   params: { slug: string[] }
 }): Promise<Metadata> => {
+  const slugPath = params.slug.join("/")
   const page = allPages.find(
-    (page) => page._raw.flattenedPath === params.slug.join("/")
+    (page) => page._raw.flattenedPath === slugPath
   )
 
   if (!page) notFound()
@@ -58,9 +59,14 @@ function MDXContentWrapper({
   }
 }
 
-export default function Page({ params }: { params: { slug: string[] } }) {
+export default async function Page({
+  params,
+}: {
+  params: { slug: string[] }
+}) {
+  const slugPath = params.slug.join("/")
   const page = allPages.find(
-    (page) => page._raw.flattenedPath === params.slug.join("/")
+    (page) => page._raw.flattenedPath === slugPath
   )
 
   if (!page) notFound()
