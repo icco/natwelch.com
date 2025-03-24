@@ -1,8 +1,9 @@
+import fs from "fs"
+
 import { defineDocumentType, makeSource } from "contentlayer2/source-files"
 import rehypeSlug from "rehype-slug"
 import remarkDefinitionList from "remark-definition-list"
 import remarkGfm from "remark-gfm"
-import fs from "fs"
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
@@ -31,13 +32,13 @@ export const Page = defineDocumentType(() => ({
     modifiedAt: {
       type: "date",
       resolve: (doc) => {
-        return new Date(fs.statSync(doc._raw.sourceFilePath).mtime)
+        return new Date(fs.statSync("wiki/" + doc._raw.sourceFilePath).mtime)
       },
     },
     createdAt: {
       type: "date",
       resolve: (doc) => {
-        return new Date(fs.statSync(doc._raw.sourceFilePath).ctime)
+        return new Date(fs.statSync("wiki/" + doc._raw.sourceFilePath).ctime)
       },
     },
   },
