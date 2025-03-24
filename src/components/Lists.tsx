@@ -65,7 +65,7 @@ function Tree({ items }: { items: TreeNode }) {
           return <span key={uniqueId()}></span>
         }
 
-        if ('url' in value) {
+        if ("url" in value) {
           return (
             <span key={`${k}-root-${uniqueId()}`}>
               <li className="" style={{}} key={value.url}>
@@ -73,7 +73,10 @@ function Tree({ items }: { items: TreeNode }) {
                   {value.title}
                 </Link>
               </li>
-              <Tree key={`${k}-tree-${uniqueId()}`} items={value as TreeNode}></Tree>
+              <Tree
+                key={`${k}-tree-${uniqueId()}`}
+                items={value as TreeNode}
+              ></Tree>
             </span>
           )
         }

@@ -37,6 +37,26 @@ const mdxComponents: MDXComponents = {
   HeaderImage: ({ src, alt }) => <HeaderImage src={src} alt={alt} />,
 }
 
+function MDXContentWrapper({
+  code,
+  components,
+}: {
+  code: string
+  components: MDXComponents
+}) {
+  try {
+    const MDXContent = useMDXComponent(code)
+    return <MDXContent components={components} />
+  } catch (error) {
+    console.error("Error rendering MDX content:", error)
+    return (
+      <div className="alert alert-error">
+        <p>Error rendering page content. Please try refreshing the page.</p>
+      </div>
+    )
+  }
+}
+
 const Page = (props: { params: Promise<{ slug: string[] }> }) => {
   const params = use(props.params)
   const page = allPages.find(
@@ -44,8 +64,6 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
   )
 
   if (!page) notFound()
-
-  const MDXContent = useMDXComponent(page.body.code)
 
   const childrenTree = buildTree(getPaths(allPages), allPages, (value) =>
     value.startsWith(page.path)
@@ -62,7 +80,7 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
         <h1>{page.title}</h1>
         <p>Last updated: {modifiedAt}</p>
 
-        <MDXContent components={mdxComponents} />
+        <MDXContentWrapper code={page.body.code} components={mdxComponents} />
         {hasChildren && (
           <>
             <div className="divider"></div>
