@@ -20,12 +20,9 @@
   "dependencies": {
     "@date-fns/tz": "^1.0.2",
     "@heroicons/react": "^2.0.18",
-    "@next/env": "^15.0.1",
-    "@root/walk": "^1.1.0",
     "contentlayer2": "^0.5.0",
     "daisyui": "^5.0.0-beta.7",
     "date-fns": "^4.1.0",
-    "gray-matter": "^4.0.3",
     "improved-relative-time": "^1.1.1",
     "isomorphic-unfetch": "^4.0.0",
     "jsdom": "^26.0.0",
@@ -46,7 +43,6 @@
     "vivus": "^0.4.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
     "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/jsdom": "^21.1.7",
@@ -59,7 +55,6 @@
     "@types/vivus": "^0.4.7",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "dlx": "^0.2.1",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.1",
     "eslint-config-prettier": "^10.0.1",
@@ -70,8 +65,7 @@
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5.2.2",
-    "webpack": "^5.10.0"
+    "typescript": "^5.2.2"
   },
   "prettier": {
     "trailingComma": "es5",
