@@ -8,7 +8,7 @@ const BlogPost = (params: { post: Item | null }) => {
   }
 
   return (
-    <div data-testid="blog-post">
+    <div>
       <div className="bg-accent not-prose flex flex-col items-center justify-center rounded-lg p-3">
         <div className="flex-row">
           <h4 className="m-0 font-bold">Latest blog post</h4>
