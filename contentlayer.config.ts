@@ -1,3 +1,5 @@
+import fs from "fs"
+
 import { defineDocumentType, makeSource } from "contentlayer2/source-files"
 import rehypeSlug from "rehype-slug"
 import remarkDefinitionList from "remark-definition-list"
@@ -25,6 +27,14 @@ export const Page = defineDocumentType(() => ({
       type: "string",
       resolve: (doc) => {
         return doc._raw.flattenedPath
+      },
+    },
+    modifiedAt: {
+      type: "string",
+      resolve: (doc) => {
+        return new Date(
+          fs.statSync("wiki/" + doc._raw.sourceFilePath).mtime
+        ).toISOString()
       },
     },
   },
