@@ -46,6 +46,10 @@ export function buildTreeInt(
 }
 
 function Tree({ items }: { items: string | Record<string, Page> }) {
+  if (isString(items)) {
+    return items
+  }
+
   return (
     <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
       {Object.keys(items).map((k) => {
@@ -65,7 +69,9 @@ function Tree({ items }: { items: string | Record<string, Page> }) {
                 {value.title}
               </Link>
             </li>
-            <Tree key={`${k}-tree-${uniqueId()}`} items={value}></Tree>
+            {typeof value === "object" && !("url" in value) && (
+              <Tree key={`${k}-tree-${uniqueId()}`} items={value} />
+            )}
           </span>
         )
       })}
