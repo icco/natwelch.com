@@ -1,10 +1,10 @@
-import { merge, uniqueId } from "lodash"
+import { isString, merge, uniqueId } from "lodash"
 import Link from "next/link"
 
 import { Page } from "contentlayer/generated"
 
 interface TreeBranch {
-  [key: string]: Page | TreeBranch
+  [key: string]: Page | TreeBranch | string
 }
 
 export function buildTree(
@@ -48,17 +48,26 @@ function buildTreeInt(
   return { [pieces[0]]: subTree }
 }
 
-function isPage(value: Page | TreeBranch): value is Page {
-  return "url" in value && "title" in value
+function isPage(value: Page | TreeBranch | string): value is Page {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "url" in value &&
+    "title" in value
+  )
 }
 
 function Tree({ items }: { items: TreeBranch }) {
   return (
-    <ul className="menu">
+    <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
       {Object.entries(items).map(([k, value]) => {
+        if (isString(value)) {
+          return <span key={uniqueId()}></span>
+        }
+
         if (!isPage(value)) {
           return (
-            <span key={`${k}-tree-${uniqueId()}`}>
+            <span key={uniqueId()}>
               <Tree items={value} />
             </span>
           )
@@ -71,6 +80,7 @@ function Tree({ items }: { items: TreeBranch }) {
                 {value.title}
               </Link>
             </li>
+            <Tree key={`${k}-tree-${uniqueId()}`} items={value} />
           </span>
         )
       })}
