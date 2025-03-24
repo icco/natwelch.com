@@ -5,6 +5,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { useMDXComponent } from "next-contentlayer2/hooks"
+import { use } from "react"
 
 import Age from "@/components/Age"
 import Footer from "@/components/Footer"
@@ -57,8 +58,9 @@ function MDXContentWrapper({
   }
 }
 
-export default async function Page({ params }: { params: { slug: string[] } }) {
-  const slugPath = params.slug.join("/")
+export default function Page({ params }: { params: Promise<{ slug: string[] }> }) {
+  const resolvedParams = use(params)
+  const slugPath = resolvedParams.slug.join("/")
   const page = allPages.find((page) => page._raw.flattenedPath === slugPath)
 
   if (!page) notFound()
