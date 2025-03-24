@@ -1,1 +1,1 @@
-declare module 'improved-relative-time';
+declare module "improved-relative-time"
