@@ -69,9 +69,7 @@ function Tree({ items }: { items: string | Record<string, Page> }) {
                 {value.title}
               </Link>
             </li>
-            {typeof value === "object" && !("url" in value) && (
-              <Tree key={`${k}-tree-${uniqueId()}`} items={value} />
-            )}
+            <Tree key={`${k}-tree-${uniqueId()}`} items={value}></Tree>
           </span>
         )
       })}
