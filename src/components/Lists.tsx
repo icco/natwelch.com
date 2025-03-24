@@ -3,11 +3,13 @@ import Link from "next/link"
 
 import { Page } from "contentlayer/generated"
 
+type TreeNode = string | { [key: string]: TreeNode | Page }
+
 export function buildTree(
   paths: string[],
   allPages: Page[],
   filter?: (value: string) => boolean
-): Record<string, Page> | string {
+): TreeNode {
   let tree = {}
   if (filter) {
     paths = paths.filter(filter)
@@ -29,49 +31,54 @@ export function buildTreeInt(
   allPages: Page[],
   path: string,
   fullPath: string
-): Record<string, Page> | string {
+): TreeNode {
   if (!path.includes("/")) {
     const data = allPages.find((page) => page.path === fullPath)
     if (!data) {
-      throw new Error(`Could not find page for ${path}`)
+      console.warn(`Could not find page for ${path}`)
+      return path
     }
 
     return { [path]: data }
   }
 
   const pieces = path.split("/")
-  return {
-    [pieces[0]]: buildTreeInt(allPages, pieces.slice(1).join("/"), fullPath),
-  } as unknown as Record<string, Page> | string
+  try {
+    return {
+      [pieces[0]]: buildTreeInt(allPages, pieces.slice(1).join("/"), fullPath),
+    }
+  } catch (error) {
+    console.warn(`Error building tree for ${path}:`, error)
+    return path
+  }
 }
 
-function Tree({ items }: { items: string | Record<string, Page> }) {
+function Tree({ items }: { items: TreeNode }) {
   if (isString(items)) {
     return items
   }
 
   return (
     <ul key={`ul-${uniqueId()}`} className="ms-4 list-none">
-      {Object.keys(items).map((k) => {
-        const value = items[k]
+      {Object.entries(items).map(([k, value]) => {
         if (isString(value)) {
           return <span key={uniqueId()}></span>
         }
 
-        if (!value.url) {
-          return <span key={uniqueId()}></span>
+        if ('url' in value) {
+          return (
+            <span key={`${k}-root-${uniqueId()}`}>
+              <li className="" style={{}} key={value.url}>
+                <Link key={uniqueId()} href={value.url}>
+                  {value.title}
+                </Link>
+              </li>
+              <Tree key={`${k}-tree-${uniqueId()}`} items={value as TreeNode}></Tree>
+            </span>
+          )
         }
 
-        return (
-          <span key={`${k}-root-${uniqueId()}`}>
-            <li className="" style={{}} key={value.url}>
-              <Link key={uniqueId()} href={value.url}>
-                {value.title}
-              </Link>
-            </li>
-            <Tree key={`${k}-tree-${uniqueId()}`} items={value}></Tree>
-          </span>
-        )
+        return <Tree key={uniqueId()} items={value} />
       })}
     </ul>
   )
