@@ -1,8 +1,7 @@
-"use client"
-
 import { formatTime } from "improved-relative-time"
 import { isString } from "lodash"
 import { MDXComponents } from "mdx/types"
+import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { useMDXComponent } from "next-contentlayer2/hooks"
@@ -14,6 +13,23 @@ import { buildTree, getPaths, Tree } from "@/components/Lists"
 import { Social } from "@/components/Social"
 
 import { allPages } from "contentlayer/generated"
+
+export const generateStaticParams = async () =>
+  allPages.map((page) => ({ slug: page._raw.flattenedPath.split("/") }))
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string[] }
+}): Promise<Metadata> => {
+  const page = allPages.find(
+    (page) => page._raw.flattenedPath === params.slug.join("/")
+  )
+
+  if (!page) notFound()
+
+  return { title: `Nat Welch | ${page.title}` }
+}
 
 const mdxComponents: MDXComponents = {
   a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
@@ -77,6 +93,3 @@ export default function Page({ params }: { params: { slug: string[] } }) {
     </>
   )
 }
-
-// Move metadata and static params to a separate server component
-export { generateMetadata, generateStaticParams } from "./serverProps"
