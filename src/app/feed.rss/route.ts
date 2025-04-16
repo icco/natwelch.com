@@ -13,6 +13,7 @@ const FEEDS = [
   "https://www.youtube.com/feeds/videos.xml?channel_id=UCh4CJdC3mXyimvshLxNuFDg",
   "https://bsky.app/profile/did:plc:ehpputef3zvp2z5wrgwyl37u/rss",
   "https://rss.app/feeds/QjpTuzy5bMYp7eEt.xml", // Instagram
+  "https://www.goodreads.com/user/updates_rss/12680?v=as",
 ]
 
 // Cache each feed individually for 1 hour
