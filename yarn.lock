@@ -1822,9 +1822,9 @@ csstype@^3.0.2:
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
 
 daisyui@^5.0.0:
-  version "5.0.28"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.28.tgz#0cc3d0003d1b536d30c3ab1a25d70f92cd9b91f7"
-  integrity sha512-H082p8Lg3c7Se9wTbjfSOOhfUbp3BnOM2+cdr3OeY5G1Ll7GYLXB9NWLHgitkTsB1pQKwHRYYchqN2YG0VVShg==
+  version "5.0.29"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.29.tgz#14d40d206002fd935f1b5680887e6adfa601c81b"
+  integrity sha512-/iO8+wHDgsLrxO8qP7kJPTdOqxB/WA0z1BBC4hWpmRLtcL91FfXg6qkXvZAS2ZKVpvK6Z3HXLkkQs9AglBPuIA==
 
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
