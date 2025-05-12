@@ -1,5 +1,4 @@
 import { unstable_cache } from "next/cache"
-import RSS from "rss"
 
 import { fetchFeed } from "@/lib/rss"
 
@@ -52,23 +51,28 @@ export async function GET() {
   // Sort items by date and add to feed
   allItems
     .sort((a, b) => {
-      const dateA = a.isoDate ? new Date(a.isoDate) : new Date(0)
-      const dateB = b.isoDate ? new Date(b.isoDate) : new Date(0)
-      return dateB.getTime() - dateA.getTime()
+      const aDate = a.published ?? a.updated ?? null
+      const bDate = b.published ?? b.updated ?? null
+
+      if (!aDate || !bDate) {
+        return 0
+      }
+
+      return aDate > bDate ? -1 : 1
     })
     .forEach((item) => {
       const title = item.title || ""
-      const description = item.content || item.contentSnippet || ""
-      const url = item.link || ""
-      const guid = item.guid || url
-      const categories = item.categories || []
-      const creator = item.creator || "Nat Welch"
+      const description = item.content || item.description || ""
+      const url = item.url || ""
+      const guid = item.id || url
+      const categories = item.categories.map((c) => c.label || "").filter((c) => !!c) || []
+      const creator = item.authors.map((a) => a.name).filter((c) => !!c).join(", ") || "Nat Welch"
       let date = new Date()
-      if (item.isoDate) {
-        date = new Date(item.isoDate)
+      if (item.published) {
+        date = new Date(item.published)
       }
-      if (item.pubDate) {
-        date = new Date(item.pubDate)
+      if (item.updated) {
+        date = new Date(item.updated)
       }
 
       const feedItem: RSS.ItemOptions = {
