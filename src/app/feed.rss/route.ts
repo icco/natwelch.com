@@ -1,4 +1,5 @@
 import { unstable_cache } from "next/cache"
+import { Feed } from "feed"
 
 import { fetchFeed } from "@/lib/rss"
 
@@ -35,14 +36,19 @@ const getAllCachedFeeds = async () => {
 }
 
 export async function GET() {
-  const feed = new RSS({
+  const feed = new Feed({
     title: "Nat Welch's Combined Feed",
     description:
       "A combined feed of Nat Welch's content from around the internet.",
-    site_url: "https://natwelch.com",
-    feed_url: "https://natwelch.com/feed.rss",
+    id: "https://natwelch.com",
+    link: "https://natwelch.com",
+    favicon: "https://writing.natwelch.com/favicon.ico",
     language: "en",
-    pubDate: new Date(),
+    author: {
+      name: "Nat Welch",
+      email: "nat@natwelch.com",
+      link: "https://natwelch.com",
+    },
     copyright: `All rights reserved ${new Date().getFullYear()} Nat Welch`,
   })
 
@@ -75,19 +81,26 @@ export async function GET() {
         date = new Date(item.updated)
       }
 
-      const feedItem: RSS.ItemOptions = {
+      feed.addItem({
+        id: guid,
         title,
-        description,
-        url,
+        link: url,
         date,
-        guid,
-        categories,
-        custom_elements: [{ "dc:creator": creator }],
-      }
-      feed.item(feedItem)
+        category: categories.map((c) => ({ name: c, term: c })),
+        author: [
+          {
+            name: creator,
+            email: "nat@natwelch.com",
+            link: "https://natwelch.com",
+          },
+        ],
+        description,
+        content: description,
+      })
+
     })
 
-  return new Response(feed.xml({ indent: true }), {
+  return new Response(feed.rss2(), {
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
       "Access-Control-Allow-Origin": "*",
