@@ -1,7 +1,7 @@
+import { FeedItem } from "@rowanmanning/feed-parser/lib/feed/item/base"
 import Link from "next/link"
-import { Item } from "rss-parser"
 
-const BlogPost = (params: { post: Item | null }) => {
+const BlogPost = (params: { post: FeedItem | null }) => {
   const { post } = params
   if (!post) {
     return <></>
@@ -14,7 +14,7 @@ const BlogPost = (params: { post: Item | null }) => {
           <h4 className="m-0 font-bold">Latest blog post</h4>
         </div>
         <div className="flex-row">
-          <Link className="" href={post.link || "#"}>
+          <Link className="" href={post.url || "#"}>
             {post.title}
           </Link>
         </div>
