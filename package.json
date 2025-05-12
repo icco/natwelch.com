@@ -20,6 +20,7 @@
   "dependencies": {
     "@date-fns/tz": "^1.0.2",
     "@heroicons/react": "^2.0.18",
+    "@rowanmanning/feed-parser": "^2.0.2",
     "contentlayer2": "^0.5.0",
     "daisyui": "^5.0.0",
     "date-fns": "^4.1.0",
@@ -36,7 +37,6 @@
     "remark-definition-list": "^2.0.0",
     "remark-gfm": "^4.0.0",
     "rss": "^1.2.2",
-    "rss-parser": "^3.13.0",
     "vivus": "^0.4.6"
   },
   "devDependencies": {
