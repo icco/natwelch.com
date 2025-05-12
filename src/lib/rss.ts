@@ -1,12 +1,11 @@
-import { parseFeed } from '@rowanmanning/feed-parser';
-import { FeedItem } from '@rowanmanning/feed-parser/lib/feed/item/base';
-
+import { parseFeed } from "@rowanmanning/feed-parser"
+import { FeedItem } from "@rowanmanning/feed-parser/lib/feed/item/base"
 
 export async function fetchFeed(url: string): Promise<FeedItem[]> {
   try {
-    const response = await fetch(url);
-    const feedText = await response.text();
-    const feed = await parseFeed(feedText);
+    const response = await fetch(url)
+    const feedText = await response.text()
+    const feed = await parseFeed(feedText)
     const items = feed.items || []
     return items.slice(0, 25)
   } catch (error) {

@@ -1,5 +1,5 @@
-import { unstable_cache } from "next/cache"
 import { Feed } from "feed"
+import { unstable_cache } from "next/cache"
 
 import { fetchFeed } from "@/lib/rss"
 
@@ -71,8 +71,13 @@ export async function GET() {
       const description = item.content || item.description || ""
       const url = item.url || ""
       const guid = item.id || url
-      const categories = item.categories.map((c) => c.label || "").filter((c) => !!c) || []
-      const creator = item.authors.map((a) => a.name).filter((c) => !!c).join(", ") || "Nat Welch"
+      const categories =
+        item.categories.map((c) => c.label || "").filter((c) => !!c) || []
+      const creator =
+        item.authors
+          .map((a) => a.name)
+          .filter((c) => !!c)
+          .join(", ") || "Nat Welch"
       let date = new Date()
       if (item.published) {
         date = new Date(item.published)
@@ -97,7 +102,6 @@ export async function GET() {
         description,
         content: description,
       })
-
     })
 
   return new Response(feed.rss2(), {
