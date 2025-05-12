@@ -67,16 +67,10 @@ export async function GET() {
     })
     .forEach((item) => {
       const title = item.title || ""
-      const description = item.content || item.description || ""
       const url = item.url || ""
       const guid = item.id || url
       const categories =
         item.categories.map((c) => c.label || "").filter((c) => !!c) || []
-      const creator =
-        item.authors
-          .map((a) => a.name)
-          .filter((c) => !!c)
-          .join(", ") || "Nat Welch"
       let date = new Date()
       if (item.published) {
         date = new Date(item.published)
@@ -91,15 +85,9 @@ export async function GET() {
         link: url,
         date,
         category: categories.map((c) => ({ name: c, term: c })),
-        author: [
-          {
-            name: creator,
-            email: "nat@natwelch.com",
-            link: "https://natwelch.com",
-          },
-        ],
-        description,
-        content: description,
+        author: item.authors.map((a) => ({ name: a.name || "" })),
+        description: item.description || "",
+        content: item.content || "",
       })
     })
 
