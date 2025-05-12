@@ -1,5 +1,5 @@
+import { Feed } from "feed"
 import { unstable_cache } from "next/cache"
-import RSS from "rss"
 
 import { fetchFeed } from "@/lib/rss"
 
@@ -12,7 +12,6 @@ const FEEDS = [
   "https://letterboxd.com/icco/rss/",
   "https://www.youtube.com/feeds/videos.xml?channel_id=UCh4CJdC3mXyimvshLxNuFDg",
   "https://bsky.app/profile/did:plc:ehpputef3zvp2z5wrgwyl37u/rss",
-  "https://rss.app/feeds/QjpTuzy5bMYp7eEt.xml", // Instagram
   "https://www.goodreads.com/user/updates_rss/12680?v=as",
 ]
 
@@ -36,14 +35,19 @@ const getAllCachedFeeds = async () => {
 }
 
 export async function GET() {
-  const feed = new RSS({
+  const feed = new Feed({
     title: "Nat Welch's Combined Feed",
     description:
       "A combined feed of Nat Welch's content from around the internet.",
-    site_url: "https://natwelch.com",
-    feed_url: "https://natwelch.com/feed.rss",
+    id: "https://natwelch.com",
+    link: "https://natwelch.com",
+    favicon: "https://writing.natwelch.com/favicon.ico",
     language: "en",
-    pubDate: new Date(),
+    author: {
+      name: "Nat Welch",
+      email: "nat@natwelch.com",
+      link: "https://natwelch.com",
+    },
     copyright: `All rights reserved ${new Date().getFullYear()} Nat Welch`,
   })
 
@@ -52,38 +56,42 @@ export async function GET() {
   // Sort items by date and add to feed
   allItems
     .sort((a, b) => {
-      const dateA = a.isoDate ? new Date(a.isoDate) : new Date(0)
-      const dateB = b.isoDate ? new Date(b.isoDate) : new Date(0)
-      return dateB.getTime() - dateA.getTime()
+      const aDate = a.published ?? a.updated ?? null
+      const bDate = b.published ?? b.updated ?? null
+
+      if (!aDate || !bDate) {
+        return 0
+      }
+
+      return aDate > bDate ? -1 : 1
     })
     .forEach((item) => {
       const title = item.title || ""
-      const description = item.content || item.contentSnippet || ""
-      const url = item.link || ""
-      const guid = item.guid || url
-      const categories = item.categories || []
-      const creator = item.creator || "Nat Welch"
+      const url = item.url || ""
+      const guid = item.id || url
+      const categories =
+        item.categories.map((c) => c.label || "").filter((c) => !!c) || []
       let date = new Date()
-      if (item.isoDate) {
-        date = new Date(item.isoDate)
+      if (item.published) {
+        date = new Date(item.published)
       }
-      if (item.pubDate) {
-        date = new Date(item.pubDate)
+      if (item.updated) {
+        date = new Date(item.updated)
       }
 
-      const feedItem: RSS.ItemOptions = {
+      feed.addItem({
+        id: guid,
         title,
-        description,
-        url,
+        link: url,
         date,
-        guid,
-        categories,
-        custom_elements: [{ "dc:creator": creator }],
-      }
-      feed.item(feedItem)
+        category: categories.map((c) => ({ name: c, term: c })),
+        author: item.authors.map((a) => ({ name: a.name || "" })),
+        description: item.description || "",
+        content: item.content || "",
+      })
     })
 
-  return new Response(feed.xml({ indent: true }), {
+  return new Response(feed.rss2(), {
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
       "Access-Control-Allow-Origin": "*",

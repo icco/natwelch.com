@@ -1,18 +1,11 @@
-import Parser from "rss-parser"
+import { parseFeed } from "@rowanmanning/feed-parser"
+import { FeedItem } from "@rowanmanning/feed-parser/lib/feed/item/base"
 
-export function newParser(): Parser {
-  return new Parser({
-    customFields: {
-      feed: ["language", "copyright"],
-    },
-  })
-}
-
-const parser = newParser()
-
-export async function fetchFeed(url: string): Promise<Parser.Item[]> {
+export async function fetchFeed(url: string): Promise<FeedItem[]> {
   try {
-    const feed = await parser.parseURL(url)
+    const response = await fetch(url)
+    const feedText = await response.text()
+    const feed = await parseFeed(feedText)
     const items = feed.items || []
     return items.slice(0, 25)
   } catch (error) {
@@ -21,7 +14,7 @@ export async function fetchFeed(url: string): Promise<Parser.Item[]> {
   }
 }
 
-export async function getLatestBlogPost(): Promise<Parser.Item | null> {
+export async function getLatestBlogPost(): Promise<FeedItem | null> {
   const items = await fetchFeed("https://writing.natwelch.com/feed.rss")
 
   if (items.length === 0) {
@@ -29,11 +22,14 @@ export async function getLatestBlogPost(): Promise<Parser.Item | null> {
   }
 
   const latest = items.sort((a, b) => {
-    if (!a.isoDate || !b.isoDate) {
+    const aDate = a.published ?? a.updated ?? null
+    const bDate = b.published ?? b.updated ?? null
+
+    if (!aDate || !bDate) {
       return 0
     }
 
-    return a.isoDate > b.isoDate ? -1 : 1
+    return aDate > bDate ? -1 : 1
   })[0]
 
   return latest || null
