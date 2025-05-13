@@ -47,3 +47,9 @@ friends who are traveling.
 Nat Welch is a Site Reliability Engineer based in Beacon, NY, where he lives with his partner and their cat. He is the author of two books: "Real World SRE" from Packt and "Reliable Webservers with Go" from Newline. He has been professionally building and running software on the internet since 2005, and loves making tools and promoting conversation online. He currently works for [Laurel](https://laurel.ai) as a Principal Engineer on the Infrastructure team. In the past, he has worked for Punchd, First Look Media, Hillary for America, iFixit, Google, and others.
 
 In his free time, Nat enjoys contributing to open source projects, writing, reading, fishing, listening to music and wandering through cities and countrysides.
+
+### Slightly more professional Speaker Bio
+
+Engineering Manager, Infrastructure + Security @ Laurel
+
+Infrastructure leader with over 20 years of experience building, growing and maintaining secure and reliable systems.  Author of “Reliable Web Servers in Go” and “Real-World SRE”.
