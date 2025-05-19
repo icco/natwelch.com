@@ -5489,9 +5489,9 @@ ts-dedent@^2.2.0:
   integrity sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==
 
 ts-pattern@^5.0.6:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/ts-pattern/-/ts-pattern-5.7.0.tgz#280abc5f31d3e20609ceacc3dffdbb041e3b2c10"
-  integrity sha512-0/FvIG4g3kNkYgbNwBBW5pZBkfpeYQnH+2AA3xmjkCAit/DSDPKmgwC3fKof4oYUq6gupClVOJlFl+939VRBMg==
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/ts-pattern/-/ts-pattern-5.7.1.tgz#d675888a86949923e464c13c35d97c5a4f778c43"
+  integrity sha512-EGs8PguQqAAUIcQfK4E9xdXxB6s2GK4sJfT/vcc9V1ELIvC4LH/zXu2t/5fajtv6oiRCxdv7BgtVK3vWgROxag==
 
 tsconfig-paths@^3.15.0:
   version "3.15.0"
