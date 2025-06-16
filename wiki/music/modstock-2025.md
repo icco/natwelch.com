@@ -1,4 +1,6 @@
-# Modstock 2025
+---
+title: Modstock 2025
+---
 
 A performance at Modstock 2025. A gathering of musicians in Woodstock, NY on July 12, 2025.
 
