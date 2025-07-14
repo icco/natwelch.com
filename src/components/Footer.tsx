@@ -20,7 +20,7 @@ const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
       <div className="footer sm:footer-horizontal items-center p-4">
         <aside className="grid-flow-col items-center">
           <p>
-            &copy; 2011 - {format(TZDate.tz("America/New_York"), "yyyy")} Nat
+            &copy; 2006 - {format(TZDate.tz("America/New_York"), "yyyy")} Nat
             Welch. All rights reserved.
           </p>
         </aside>
