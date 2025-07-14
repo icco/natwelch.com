@@ -14,4 +14,6 @@ Live Show:
 
 Practice:
 
- 1. <audio controls src="/wiki/music/250615_0004.mp3" ></audio>
+ 1. <audio controls src="/wiki/music/250615_0004.mp3"></audio>
+ 1. <audio controls src="/wiki/music/250708_0005.mp3"></audio>
+ 1. <audio controls src="/wiki/music/250712_0006.mp3"></audio>
