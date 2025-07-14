@@ -25,8 +25,8 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Nat? Nat. Nat!",
-  description: "The personal blog of Nat Welch",
+  title: "Nat Welch dot com",
+  description: "The personal website of Nat Welch",
   other: {
     webmention: "https://webmention.io/natwelch.com/webmention",
     pingback: "https://webmention.io/natwelch.com/xmlrpc",
