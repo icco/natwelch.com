@@ -2,9 +2,15 @@
 title: Modstock 2025
 ---
 
-![Modstock 2025 Poster](/wiki/music/Modstock_Alt.jpg)
+![Modstock 2025 Poster](https://icco.imgix.net/photos/2025/0MAH43D1QTD9G.jpg?w=600)
 
 A performance at Modstock 2025. A gathering of musicians in Woodstock, NY on July 12, 2025.
+
+![Nat Welch at Modstock 2025](https://icco.imgix.net/photos/2025/0MAH3Y45FTFBF.heic?w=600)
+
+Live Show:
+
+1. <audio controls src="/wiki/music/subalpinedrift-modstock-2025.mp3" ></audio>
 
 Practice:
 
