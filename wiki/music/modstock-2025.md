@@ -6,7 +6,7 @@ title: Modstock 2025
 
 A performance at Modstock 2025. A gathering of musicians in Woodstock, NY on July 12, 2025.
 
-![Nat Welch at Modstock 2025](https://icco.imgix.net/photos/2025/0MAH3Y45FTFBF.heic?w=600)
+[![Nat Welch at Modstock 2025](https://icco.imgix.net/photos/2025/0MAH3Y45FTFBF.heic?w=1200)](https://icco.imgix.net/photos/2025/0MAH3Y45FTFBF.heic)
 
 Live Show:
 
