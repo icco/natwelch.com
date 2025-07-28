@@ -1921,9 +1921,9 @@ csstype@^3.0.2:
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
 
 daisyui@^5.0.0:
-  version "5.0.47"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.47.tgz#87c2cd7593ae694e2d06741e141c7b3e9f5fe73f"
-  integrity sha512-RuYjjVKpodDoOYAHIvG6qC3BeRxhlyj4JCO+6aV0VzK+i3RWD7cmICh0m5+Xfr5938mV0Mk7FUOQ00msz8H8dw==
+  version "5.0.48"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.48.tgz#d3d861f5eeafbb36bd57dcb11061aab13f6f263c"
+  integrity sha512-t2nvzKENuhbjkKmxhIoDgV/nzAnNLbswK9MBlOMnEO6hxfgNLlt7jVrHYWw6ts492JdQ0Mmf6iX3aO/u+1zXAw==
 
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
@@ -3965,9 +3965,9 @@ mdx-bundler@^10.1.1:
     vfile "^6.0.1"
 
 memfs@^4.8.2:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/memfs/-/memfs-4.20.0.tgz#39877348ebb98abfd52e47094968bc5029ce570a"
-  integrity sha512-VKta4Y+0CPo0NvYMOE7vvhaNe4K5WTP077G1S4PS0h0joX0f15NosPT6y48rOpKLCh48nnlgY/TdRPwiKCIIkg==
+  version "4.23.0"
+  resolved "https://registry.yarnpkg.com/memfs/-/memfs-4.23.0.tgz#1a80f324a8e499825e147b0b382371cf257ed06e"
+  integrity sha512-SucHN2lcWf0jrnw+jP6FoVW6l/zGJiXfNMdApZzG0x/0mAIMdwAeR5mjfsCH5U3BoqpUEtqzz+dSQSO0H/eqxg==
   dependencies:
     "@jsonjoy.com/json-pack" "^1.0.3"
     "@jsonjoy.com/util" "^1.3.0"
