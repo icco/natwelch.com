@@ -22,7 +22,7 @@
     "@heroicons/react": "^2.0.18",
     "@rowanmanning/feed-parser": "^2.0.2",
     "contentlayer2": "^0.5.0",
-    "daisyui": "^5.0.0",
+    "daisyui": "^5.0.54",
     "date-fns": "^4.1.0",
     "feed": "^5.0.0",
     "improved-relative-time": "^1.1.1",
