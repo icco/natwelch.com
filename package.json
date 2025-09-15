@@ -50,7 +50,7 @@
     "@types/rss": "^0.0.32",
     "@types/vivus": "^0.4.7",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/parser": "^8.43.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.1",
     "eslint-config-prettier": "^10.0.1",
