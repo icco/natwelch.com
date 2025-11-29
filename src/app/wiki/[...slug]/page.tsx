@@ -55,6 +55,7 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
     <>
       <article className="prose lg:prose-xl">
         <h1>{page.title}</h1>
+        {/* eslint-disable-next-line react-hooks/static-components */}
         <MDXContent components={mdxComponents} />
         {hasChildren && (
           <>
