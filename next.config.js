@@ -19,9 +19,6 @@ const nextConfig = {
     DOMAIN: domain,
     PORT: port,
   },
-  eslint: {
-    dirs: ["src", "."],
-  },
   logging: {
     fetches: {
       fullUrl: true,
@@ -138,6 +135,7 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  turbopack: {},
 }
 
 module.exports = withContentlayer(nextConfig)
