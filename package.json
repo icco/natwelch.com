@@ -8,6 +8,8 @@
     "dev": "eslint --fix . && next dev -p 8080",
     "clean": "rm -rf node_modules .next .contentlayer",
     "lint": "eslint --fix .",
+    "contentlayer": "contentlayer2 build",
+    "prebuild": "contentlayer2 build",
     "build": "next build",
     "start": "next start -p $PORT"
   },
