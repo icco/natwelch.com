@@ -1,6 +1,6 @@
 // @ts-check
 
-/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-require-imports */
 const { createSecureHeaders } = require("next-secure-headers")
 const { withContentlayer } = require("next-contentlayer2")
 
@@ -18,9 +18,6 @@ const nextConfig = {
   env: {
     DOMAIN: domain,
     PORT: port,
-  },
-  eslint: {
-    dirs: ["src", "."],
   },
   logging: {
     fetches: {
@@ -138,6 +135,7 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  turbopack: {},
 }
 
 module.exports = withContentlayer(nextConfig)
