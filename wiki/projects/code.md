@@ -1,5 +1,5 @@
 ---
-title: code.natwelch.com
+title: code
 ---
 
 [code](https://github.com/icco/code.natwelch.com) is my scraper and dashboard for tracking Git contributions over time. Instead of relying on GitHub's native contribution graph, this builds a custom analytics interface that aggregates my software development activity across projects. A separate scraper collects contribution data, then the dashboard serves it up with visualizations. It's a way to see coding patterns and productivity trends beyond what GitHub surfaces by default.
