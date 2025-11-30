@@ -2,4 +2,6 @@
 title: Inspiration
 ---
 
-[Inspiration](https://mood.natwelch.com/) is a somewhat defunct project to generate a dynamic mood board based off of my personal interests. It still works but most of the datasources are no longer generating fresh content.
+[Inspiration](https://mood.natwelch.com/) is a dynamic mood board that pulls together visual content based on my personal interests. It aggregates images and references from various data sources into one curated space—a centralized spot for collecting creative inspiration like photos, designs, whatever catches your eye.
+
+The project is somewhat defunct these days since most of the data sources stopped generating fresh content. It still runs, but the automatic updates that made it interesting have dried up. The code lives at [icco/inspiration](https://github.com/icco/inspiration). For now it's a snapshot of what a personal inspiration aggregator could be—functional but frozen in time.
