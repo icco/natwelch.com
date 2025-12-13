@@ -1,5 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc"
 import js from "@eslint/js"
+import markdown from "@eslint/markdown"
 import tsParser from "@typescript-eslint/parser"
 import nextCoreWebVitals from "eslint-config-next/core-web-vitals"
 import simpleImportSort from "eslint-plugin-simple-import-sort"
@@ -18,12 +19,30 @@ const config = [
   {
     ignores: [".contentlayer/**", ".next/**", "node_modules/**"],
   },
-  ...compat.extends("eslint:recommended"),
-  ...nextCoreWebVitals,
-  ...compat.extends("plugin:@typescript-eslint/recommended"),
-  ...compat.extends("plugin:markdown/recommended-legacy"),
-  ...compat.extends("plugin:prettier/recommended"),
+  // Markdown files - use @eslint/markdown processor
+  ...markdown.configs.processor,
+  // JS/TS files - apply all other rules
   {
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
+  },
+  ...compat.extends("eslint:recommended").map((config) => ({
+    ...config,
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
+  })),
+  ...nextCoreWebVitals.map((config) => ({
+    ...config,
+    files: config.files || ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  })),
+  ...compat.extends("plugin:@typescript-eslint/recommended").map((config) => ({
+    ...config,
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
+  })),
+  ...compat.extends("plugin:prettier/recommended").map((config) => ({
+    ...config,
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
+  })),
+  {
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
     plugins: {
       "simple-import-sort": simpleImportSort,
     },
