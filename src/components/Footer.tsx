@@ -75,7 +75,10 @@ const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
         </nav>
         <nav className="gap-4 md:justify-self-end">
           <h6 className="footer-title">
-            <Link href="https://webring.xxiivv.com/" className="hover:underline">
+            <Link
+              href="https://webring.xxiivv.com/"
+              className="hover:underline"
+            >
               <XXIIVVLogo
                 className="inline-block h-4 w-4 align-text-bottom"
                 size={12}
