@@ -591,9 +591,9 @@
     levn "^0.4.1"
 
 "@exodus/bytes@^1.6.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@exodus/bytes/-/bytes-1.8.0.tgz#8382835f71db8377cf634a4ef5a71806e86ba9c7"
-  integrity sha512-8JPn18Bcp8Uo1T82gR8lh2guEOa5KKU/IEKvvdp0sgmi7coPBWf1Doi1EXsGZb2ehc8ym/StJCjffYV+ne7sXQ==
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@exodus/bytes/-/bytes-1.9.0.tgz#1644554c4103d956bf90196ae961ced85f99c972"
+  integrity sha512-lagqsvnk09NKogQaN/XrtlWeUF8SRhT12odMvbTIIaVObqzwAogL6jhR4DAp0gPuKoM1AOVrKUshJpRdpMFrww==
 
 "@fal-works/esbuild-plugin-global-externals@^2.1.2":
   version "2.1.2"
@@ -1966,9 +1966,9 @@ camel-case@^4.1.2:
     tslib "^2.0.3"
 
 caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001759:
-  version "1.0.30001764"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001764.tgz#03206c56469f236103b90f9ae10bcb8b9e1f6005"
-  integrity sha512-9JGuzl2M+vPL+pz70gtMF9sHdMFbY9FJaQBi186cHKH3pSzDvzoUJUPV6fqiKIMyXbud9ZLg4F3Yza1vJ1+93g==
+  version "1.0.30001765"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001765.tgz#4a78d8a797fd4124ebaab2043df942eb091648ee"
+  integrity sha512-LWcNtSyZrakjECqmpP4qdg0MMGdN368D7X8XvvAqOcqMv0RxnlqVKZl2V6/mBR68oYMxOZPLw/gO7DuisMHUvQ==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -4171,9 +4171,9 @@ mdx-bundler@^10.1.1:
     vfile "^6.0.1"
 
 memfs@^4.8.2:
-  version "4.53.0"
-  resolved "https://registry.yarnpkg.com/memfs/-/memfs-4.53.0.tgz#93eb74dd4f748a9140756bf270a24d2e622f31f2"
-  integrity sha512-TKFRsKjJA30iAc9ZeGH/77v5nLcNUD0GBOL/tAj4O63RPIKNxGDZ54ZyuQM4KjEKEj7gfer/Ta1xAzB+HrEnrA==
+  version "4.54.0"
+  resolved "https://registry.yarnpkg.com/memfs/-/memfs-4.54.0.tgz#fd4b04a3a9b268e94fb8cff2e0ac0f83b673e150"
+  integrity sha512-wiJ9YYUj2bVcpdJgIv6y1KrStknSdNhfM4+4+ttt0cHHMxVLZ3aOBoER8krt9lGY5HkR2ustUXiihhNPeNxXaQ==
   dependencies:
     "@jsonjoy.com/json-pack" "^1.11.0"
     "@jsonjoy.com/util" "^1.9.0"
