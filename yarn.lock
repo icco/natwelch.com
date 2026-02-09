@@ -591,9 +591,9 @@
     levn "^0.4.1"
 
 "@exodus/bytes@^1.11.0", "@exodus/bytes@^1.6.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@exodus/bytes/-/bytes-1.11.0.tgz#e0fd4f7940997f3a1c09db4bbeb600ec0f633643"
-  integrity sha512-wO3vd8nsEHdumsXrjGO/v4p6irbg7hy9kvIeR6i2AwylZSk4HJdWgL0FNaVquW1+AweJcdvU1IEpuIWk/WaPnA==
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@exodus/bytes/-/bytes-1.12.0.tgz#c7a268cf9c14d44e14959e08824467f496c5f10a"
+  integrity sha512-BuCOHA/EJdPN0qQ5MdgAiJSt9fYDHbghlgrj33gRdy/Yp1/FMCDhU6vJfcKrLC0TPWGSrfH3vYXBQWmFHxlddw==
 
 "@fal-works/esbuild-plugin-global-externals@^2.1.2":
   version "2.1.2"
@@ -2956,11 +2956,11 @@ fast-levenshtein@^2.0.6:
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
 
 fast-xml-parser@^5.0.8:
-  version "5.3.4"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-5.3.4.tgz#06f39aafffdbc97bef0321e626c7ddd06a043ecf"
-  integrity sha512-EFd6afGmXlCx8H8WTZHhAoDaWaGyuIBoZJ2mknrNxug+aZKjkp0a0dlars9Izl+jF+7Gu1/5f/2h68cQpe0IiA==
+  version "5.3.5"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-5.3.5.tgz#3e914cb852e636923cb555deaa356f7366e18b49"
+  integrity sha512-JeaA2Vm9ffQKp9VjvfzObuMCjUYAp5WDYhRYL5LrBPY/jUDlUtOvDfot0vKSkB9tuX885BDHjtw4fZadD95wnA==
   dependencies:
-    strnum "^2.1.0"
+    strnum "^2.1.2"
 
 fastq@^1.6.0:
   version "1.20.1"
@@ -5669,7 +5669,7 @@ strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-strnum@^2.1.0:
+strnum@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/strnum/-/strnum-2.1.2.tgz#a5e00ba66ab25f9cafa3726b567ce7a49170937a"
   integrity sha512-l63NF9y/cLROq/yqKXSLtcMeeyOfnSQlfMSlzFt/K73oIaD8DGaQWd7Z34X9GPiKqP5rbSh84Hl4bOlLcjiSrQ==
@@ -5742,17 +5742,17 @@ tinyglobby@^0.2.13, tinyglobby@^0.2.15:
     fdir "^6.5.0"
     picomatch "^4.0.3"
 
-tldts-core@^7.0.22:
-  version "7.0.22"
-  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-7.0.22.tgz#c446174555a1f38c166740934e5809a092b1d4c8"
-  integrity sha512-KgbTDC5wzlL6j/x6np6wCnDSMUq4kucHNm00KXPbfNzmllCmtmvtykJHfmgdHntwIeupW04y8s1N/43S1PkQDw==
+tldts-core@^7.0.23:
+  version "7.0.23"
+  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-7.0.23.tgz#47bf18282a44641304a399d247703413b5d3e309"
+  integrity sha512-0g9vrtDQLrNIiCj22HSe9d4mLVG3g5ph5DZ8zCKBr4OtrspmNB6ss7hVyzArAeE88ceZocIEGkyW1Ime7fxPtQ==
 
 tldts@^7.0.5:
-  version "7.0.22"
-  resolved "https://registry.yarnpkg.com/tldts/-/tldts-7.0.22.tgz#1ace3cf67ee9ca197636da1b410dff8ba837d84f"
-  integrity sha512-nqpKFC53CgopKPjT6Wfb6tpIcZXHcI6G37hesvikhx0EmUGPkZrujRyAjgnmp1SHNgpQfKVanZ+KfpANFt2Hxw==
+  version "7.0.23"
+  resolved "https://registry.yarnpkg.com/tldts/-/tldts-7.0.23.tgz#444f0f0720fa777839a23ea665e04f61ee57217a"
+  integrity sha512-ASdhgQIBSay0R/eXggAkQ53G4nTJqTXqC2kbaBbdDwM7SkjyZyO0OaaN1/FH7U/yCeqOHDwFO5j8+Os/IS1dXw==
   dependencies:
-    tldts-core "^7.0.22"
+    tldts-core "^7.0.23"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
