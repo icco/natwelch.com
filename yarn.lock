@@ -275,9 +275,9 @@
   integrity sha512-NmXRccUJMk2AWA5A7e5a//3bCIMyOu2hAtdRYrhPPHjDxINuCwX1w6rnIZ4xjLcp0ayv6h8Pc3X0eJUGiAAXHQ==
 
 "@csstools/css-calc@^3.0.0":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@csstools/css-calc/-/css-calc-3.0.1.tgz#a8c1301c91b249d5ea445f90f3f8b03b2b7eb87f"
-  integrity sha512-bsDKIP6f4ta2DO9t+rAbSSwv4EMESXy5ZIvzQl1afmD6Z1XHkVu9ijcG9QR/qSgQS1dVa+RaQ/MfQ7FIB/Dn1Q==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@csstools/css-calc/-/css-calc-3.1.0.tgz#1ed9fc7a67f453dad2470fb695d5c00d29412eb3"
+  integrity sha512-JWouqB5za07FUA2iXZWq4gPXNGWXjRwlfwEXNr7cSsGr7OKgzhDVwkJjlsrbqSyFmDGSi1Rt7zs8ln87jX9yRg==
 
 "@csstools/css-color-parser@^4.0.1":
   version "4.0.1"
@@ -591,9 +591,9 @@
     levn "^0.4.1"
 
 "@exodus/bytes@^1.11.0", "@exodus/bytes@^1.6.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@exodus/bytes/-/bytes-1.13.0.tgz#0164f26e542b606ab25dd29671ba2c9697426abe"
-  integrity sha512-VnfL2lS43Z9F8li1faMH9hDZwqfrF5JvOePmrF8oESfo0ijaujnT81zYtienQRpoFa+FJbq0E5rrnMWEW73gOw==
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@exodus/bytes/-/bytes-1.14.0.tgz#d6bbe4449e0762d65fca2543abd6ca1532de9cf9"
+  integrity sha512-YiY1OmY6Qhkvmly8vZiD8wZRpW/npGZNg+0Sk8mstxirRHCg6lolHt5tSODCfuNPE/fBsAqRwDJE417x7jDDHA==
 
 "@fal-works/esbuild-plugin-global-externals@^2.1.2":
   version "2.1.2"
