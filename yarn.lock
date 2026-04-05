@@ -8,9 +8,9 @@
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
 "@asamuzakjp/css-color@^5.0.1":
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/@asamuzakjp/css-color/-/css-color-5.1.4.tgz#c28af4a5df6437e7005cae39e494c0af71ef292c"
-  integrity sha512-503MoTEmPSyEJ7zQ+5vlkwPtkyxDhbDwR9ajk/jpPGrCLiUFHzgEG4iViUPKdGlZPRT1mWSPSbDL2qkOoLU4vg==
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/@asamuzakjp/css-color/-/css-color-5.1.5.tgz#78fca40e43bd517f3e1ed1301287f9202b9895c5"
+  integrity sha512-8cMAA1bE66Mb/tfmkhcfJLjEPgyT7SSy6lW6id5XL113ai1ky76d/1L27sGnXCMsLfq66DInAU3OzuahB4lu9Q==
   dependencies:
     "@csstools/css-calc" "^3.1.1"
     "@csstools/css-color-parser" "^4.0.2"
@@ -19,9 +19,9 @@
     lru-cache "^11.2.7"
 
 "@asamuzakjp/dom-selector@^7.0.3":
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/@asamuzakjp/dom-selector/-/dom-selector-7.0.5.tgz#dbdd244d326d1352030bcdf7d2cc82b7b5c878c4"
-  integrity sha512-7vyrLx4ck24AhfXUSa+aPlL9rw3yw8U0or/TG2yxCutt5CxMnycucf3/DVBsxRqny74l6WNZ/PQ5SD3Moa0lAQ==
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@asamuzakjp/dom-selector/-/dom-selector-7.0.6.tgz#9f5f0b0a7e6ea3dfa881aa2ec7ee80bce8d85af7"
+  integrity sha512-Tgmk6EQM0nc9xvp7sEHRVavbknhb/vGKht+04yAT3t5KQwZ02CSobCtcFgaHH04ZrjD1BhEKNA8tRhzFV20gkA==
   dependencies:
     "@asamuzakjp/nwsapi" "^2.3.9"
     bidi-js "^1.0.3"
@@ -2097,9 +2097,9 @@ camel-case@^4.1.2:
     tslib "^2.0.3"
 
 caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001782:
-  version "1.0.30001784"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001784.tgz#bdf9733a0813ccfb5ab4d02f2127e62ee4c6b718"
-  integrity sha512-WU346nBTklUV9YfUl60fqRbU5ZqyXlqvo1SgigE1OAXK5bFL8LL9q1K7aap3N739l4BvNqnkm3YrGHiY9sfUQw==
+  version "1.0.30001785"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001785.tgz#31f8e3ec1059430d2a7b04fff44c27672c4482df"
+  integrity sha512-blhOL/WNR+Km1RI/LCVAvA73xplXA7ZbjzI4YkMK9pa6T/P3F2GxjNpEkyw5repTw9IvkyrjyHpwjnhZ5FOvYQ==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -5798,17 +5798,17 @@ tinyglobby@^0.2.13, tinyglobby@^0.2.15:
     fdir "^6.5.0"
     picomatch "^4.0.3"
 
-tldts-core@^7.0.27:
-  version "7.0.27"
-  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-7.0.27.tgz#4be95bd03b318f2232ea4c1554c4ae9980c77f69"
-  integrity sha512-YQ7uPjgWUibIK6DW5lrKujGwUKhLevU4hcGbP5O6TcIUb+oTjJYJVWPS4nZsIHrEEEG6myk/oqAJUEQmpZrHsg==
+tldts-core@^7.0.28:
+  version "7.0.28"
+  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-7.0.28.tgz#28c256edae2ed177b2a8338a51caf81d41580ecf"
+  integrity sha512-7W5Efjhsc3chVdFhqtaU0KtK32J37Zcr9RKtID54nG+tIpcY79CQK/veYPODxtD/LJ4Lue66jvrQzIX2Z2/pUQ==
 
 tldts@^7.0.5:
-  version "7.0.27"
-  resolved "https://registry.yarnpkg.com/tldts/-/tldts-7.0.27.tgz#43c3fc6123eb07a3e12ae1868a9f2d1a5889028c"
-  integrity sha512-I4FZcVFcqCRuT0ph6dCDpPuO4Xgzvh+spkcTr1gK7peIvxWauoloVO0vuy1FQnijT63ss6AsHB6+OIM4aXHbPg==
+  version "7.0.28"
+  resolved "https://registry.yarnpkg.com/tldts/-/tldts-7.0.28.tgz#5a5bb26ef3f70008d88c6e53ff58cd59ed8d4c68"
+  integrity sha512-+Zg3vWhRUv8B1maGSTFdev9mjoo8Etn2Ayfs4cnjlD3CsGkxXX4QyW3j2WJ0wdjYcYmy7Lx2RDsZMhgCWafKIw==
   dependencies:
-    tldts-core "^7.0.27"
+    tldts-core "^7.0.28"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
