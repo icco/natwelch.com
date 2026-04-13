@@ -1,4 +1,4 @@
-import { Social } from "@icco/react-common"
+import { Social } from "@icco/react-common/Social"
 import { isString } from "lodash"
 import { MDXComponents } from "mdx/types"
 import Link from "next/link"
