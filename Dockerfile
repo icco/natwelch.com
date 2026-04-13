@@ -5,10 +5,10 @@ FROM base AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc ./
-ARG NPM_TOKEN
-RUN echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> .npmrc && \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc .yarnrc ./
+RUN --mount=type=secret,id=npm_token \
+  echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/npm_token)" >> .npmrc && \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile --ignore-engines; \
   elif [ -f package-lock.json ]; then npm ci; \
   elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
   else echo "Lockfile not found." && exit 1; \
