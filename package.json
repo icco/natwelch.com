@@ -22,7 +22,7 @@
   "dependencies": {
     "@date-fns/tz": "^1.0.2",
     "@heroicons/react": "^2.0.18",
-    "@icco/react-common": "file:../react-common",
+    "@icco/react-common": "*",
     "@rowanmanning/feed-parser": "^2.0.2",
     "contentlayer2": "^0.5.0",
     "daisyui": "^5.1.14",
