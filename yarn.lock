@@ -656,8 +656,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.3.tgz#c2b9d2e374ee62c586d3adbea87199b1d7a7a6ba"
   integrity sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==
 
-"@icco/react-common@file:../react-common":
-  version "2026.3.17-1"
+"@icco/react-common@*":
+  version "2026.413.1"
+  resolved "https://npm.pkg.github.com/download/@icco/react-common/2026.413.1/5d852d942ad591f6bed1b74a51391d3aa162e69c#5d852d942ad591f6bed1b74a51391d3aa162e69c"
+  integrity sha512-JWzcZQs7Dr3RZ9d7RLNl40140svQZmpRX+fyjOrbjzYj4MGpkMXnQouOzwsPsJxHxLzsqIaXpP78q4jSy2mQRA==
   dependencies:
     vivus "^0.4.6"
 
