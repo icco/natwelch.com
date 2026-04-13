@@ -14,7 +14,7 @@ import Link from "next/link"
 
 const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
   return (
-    <footer className="mx-auto max-w-2xl pt-[14vh] pb-[8vh]">
+    <footer className="mx-auto max-w-5xl pt-[14vh] pb-[8vh]">
       <div className="divider" />
       <div className="footer sm:footer-horizontal items-center p-4">
         <aside className="grid-flow-col items-center">

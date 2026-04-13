@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <section className="prose lg:prose-xl">
         <h1 className="">Wiki</h1>
-        <div className="mx-auto max-w-xl py-8">
+        <div className="mx-auto max-w-5xl py-8">
           <Tree items={tree} />
         </div>
       </section>
