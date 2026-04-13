@@ -1,6 +1,7 @@
 import "./globals.css"
 
-import { ThemeProvider, WebVitals } from "@icco/react-common"
+import { ThemeProvider } from "@icco/react-common/ThemeProvider"
+import { WebVitals } from "@icco/react-common/WebVitals"
 import type { Metadata, Viewport } from "next"
 import { Roboto, Roboto_Mono, Roboto_Slab } from "next/font/google"
 

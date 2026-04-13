@@ -1,4 +1,5 @@
-import { Logo, ThemeToggle } from "@icco/react-common"
+import Logo from "@icco/react-common/Logo"
+import ThemeToggle from "@icco/react-common/ThemeToggle"
 import Link from "next/link"
 
 import { Breadcrumbs } from "./Breadcrumbs"
