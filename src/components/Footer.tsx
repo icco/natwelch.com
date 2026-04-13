@@ -4,14 +4,15 @@ import {
   DocumentCheckIcon,
   PencilIcon,
 } from "@heroicons/react/24/outline"
+import {
+  RecurseLogo,
+  RecurseRing,
+  Social,
+  XXIIVVLogo,
+  XXIIVVRing,
+} from "@icco/react-common"
 import { format } from "date-fns"
 import Link from "next/link"
-
-import { RecurseLogo } from "./RecurseLogo"
-import { RecurseRing } from "./RecurseRing"
-import { Social } from "./Social"
-import { XXIIVVLogo } from "./XXIIVVLogo"
-import { XXIIVVRing } from "./XXIIVVRing"
 
 const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
   return (

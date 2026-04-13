@@ -1,9 +1,8 @@
+import { Logo, ThemeToggle } from "@icco/react-common"
 import Link from "next/link"
 
 import { Breadcrumbs } from "./Breadcrumbs"
-import Logo from "./Logo"
 import { SRE } from "./SRE"
-import ThemeToggle from "./ThemeToggle"
 
 export function SmallHeader() {
   return (
