@@ -4,9 +4,6 @@ import {
   DocumentCheckIcon,
   PencilIcon,
 } from "@heroicons/react/24/outline"
-import { format } from "date-fns"
-import Link from "next/link"
-
 import {
   RecurseLogo,
   RecurseRing,
@@ -14,6 +11,8 @@ import {
   XXIIVVLogo,
   XXIIVVRing,
 } from "@icco/react-common"
+import { format } from "date-fns"
+import Link from "next/link"
 
 const Footer = ({ edit }: { edit?: string; marginTop?: number }) => {
   return (

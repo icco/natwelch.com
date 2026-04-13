@@ -1,10 +1,10 @@
 import "./globals.css"
 
+import { ThemeProvider, WebVitals } from "@icco/react-common"
 import type { Metadata, Viewport } from "next"
 import { Roboto, Roboto_Mono, Roboto_Slab } from "next/font/google"
 
 import { Header, Size } from "@/components/Header"
-import { ThemeProvider, WebVitals } from "@icco/react-common"
 
 const roboto = Roboto({
   weight: "400",

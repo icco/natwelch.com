@@ -1,3 +1,4 @@
+import { Social } from "@icco/react-common"
 import { isString } from "lodash"
 import { MDXComponents } from "mdx/types"
 import Link from "next/link"
@@ -9,7 +10,6 @@ import Age from "@/components/Age"
 import Footer from "@/components/Footer"
 import HeaderImage from "@/components/HeaderImage"
 import { buildTree, getPaths, Tree } from "@/components/Lists"
-import { Social } from "@icco/react-common"
 
 import { allPages } from "contentlayer/generated"
 
