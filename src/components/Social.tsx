@@ -95,6 +95,26 @@ export const Social = ({
       </a>
 
       <a
+        href="https://subalpinedrift.bandcamp.com/follow_me"
+        title="Bandcamp"
+        rel="me"
+        className={style}
+      >
+        {/* https://github.com/simple-icons/simple-icons/blob/develop/icons/bandcamp.svg */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          height={size}
+          width={size}
+          role="img"
+        >
+          <title>Bandcamp</title>
+          <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z" />
+        </svg>
+      </a>
+
+      <a
         href="https://www.goodreads.com/author/show/18143346.Nat_Welch"
         title="Goodreads"
         rel="me"
