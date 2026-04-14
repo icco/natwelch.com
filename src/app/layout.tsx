@@ -25,6 +25,7 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://natwelch.com"),
   title: "Nat Welch dot com",
   description: "The personal website of Nat Welch",
   other: {

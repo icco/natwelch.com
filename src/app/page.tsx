@@ -8,6 +8,9 @@ import { getLatestBlogPost } from "@/lib/rss"
 
 export const metadata: Metadata = {
   title: "Nat Welch",
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export const revalidate = 60

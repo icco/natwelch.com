@@ -26,7 +26,12 @@ export const generateMetadata = async (props: {
 
   if (!page) notFound()
 
-  return { title: `Nat Welch | ${page.title}` }
+  return {
+    title: `Nat Welch | ${page.title}`,
+    alternates: {
+      canonical: `/wiki/${params.slug.join("/")}`,
+    },
+  }
 }
 
 const mdxComponents: MDXComponents = {

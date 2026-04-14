@@ -7,6 +7,9 @@ import { allPages } from "contentlayer/generated"
 
 export const metadata: Metadata = {
   title: "Nat Welch | Wiki",
+  alternates: {
+    canonical: "/wiki",
+  },
 }
 
 export default function Home() {
