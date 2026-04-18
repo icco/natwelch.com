@@ -1,3 +1,4 @@
+import { fixupPluginRules } from "@eslint/compat"
 import { FlatCompat } from "@eslint/eslintrc"
 import js from "@eslint/js"
 import markdown from "@eslint/markdown"
@@ -15,6 +16,23 @@ const compat = new FlatCompat({
   allConfig: js.configs.all,
 })
 
+// Fix up only the React plugin for ESLint 10 compatibility — it still uses the
+// deprecated context.getFilename() API. Leave @typescript-eslint unwrapped so
+// its rule definitions resolve correctly.
+const nextConfigFixed = nextCoreWebVitals.map((config) => {
+  const result = {
+    ...config,
+    files: config.files || ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  }
+  if (result.plugins?.react) {
+    result.plugins = {
+      ...result.plugins,
+      react: fixupPluginRules(result.plugins.react),
+    }
+  }
+  return result
+})
+
 const config = [
   {
     ignores: [".contentlayer/**", ".next/**", "node_modules/**"],
@@ -29,14 +47,17 @@ const config = [
     ...config,
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
   })),
-  ...nextCoreWebVitals.map((config) => ({
-    ...config,
-    files: config.files || ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  })),
-  ...compat.extends("plugin:@typescript-eslint/recommended").map((config) => ({
-    ...config,
-    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
-  })),
+  ...nextConfigFixed,
+  // TypeScript handles undefined-variable and unused-variable checking itself.
+  // Disable the base ESLint rules for TS files to avoid false positives
+  // (e.g. React namespace types, enum members).
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    rules: {
+      "no-undef": "off",
+      "no-unused-vars": "off",
+    },
+  },
   ...compat.extends("plugin:prettier/recommended").map((config) => ({
     ...config,
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],

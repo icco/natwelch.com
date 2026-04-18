@@ -1,29 +1,12 @@
 import Logo from "@icco/react-common/Logo"
-import ThemeToggle from "@icco/react-common/ThemeToggle"
+import { SiteHeader } from "@icco/react-common/SiteHeader"
 import Link from "next/link"
 
 import { Breadcrumbs } from "./Breadcrumbs"
 import { SRE } from "./SRE"
 
 export function SmallHeader() {
-  return (
-    <header>
-      <nav className="flex py-8">
-        <div className="flex-none">
-          <Link href="/" className="">
-            <Logo size={50} className="logo stroke-current px-8" />
-          </Link>
-        </div>
-        <div className="grow"></div>
-        <div className="mr-8 content-center">
-          <Breadcrumbs />
-        </div>
-        <div className="mr-8 content-center">
-          <ThemeToggle />
-        </div>
-      </nav>
-    </header>
-  )
+  return <SiteHeader extraContent={<Breadcrumbs />} />
 }
 
 export function LargeHeader() {
