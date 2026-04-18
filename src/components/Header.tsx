@@ -1,21 +1,8 @@
-"use client"
-
 import Logo from "@icco/react-common/Logo"
-import { SiteHeader } from "@icco/react-common/SiteHeader"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 
+import { SmallHeader } from "./SmallHeader"
 import { SRE } from "./SRE"
-
-export function SmallHeader() {
-  const path = usePathname()
-  const pieces = path.split("/").filter(Boolean)
-  const links = pieces.map((piece, index) => ({
-    name: piece,
-    href: `/${pieces.slice(0, index + 1).join("/")}`,
-  }))
-  return <SiteHeader links={links} />
-}
 
 export function LargeHeader() {
   const links = [
