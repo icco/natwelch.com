@@ -1,6 +1,5 @@
 // @ts-check
 
-/* eslint-disable @typescript-eslint/no-require-imports */
 const { createSecureHeaders } = require("next-secure-headers")
 const { withContentlayer } = require("next-contentlayer2")
 
