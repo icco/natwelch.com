@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source "../../node_modules/@icco/react-common/dist/lib/{Logo,ThemeProvider,ThemeToggle,WebVitals,RecurseLogo,Social,XXIIVVLogo,XXIIVVRing,RecurseRing}.js";
+@source "../../node_modules/@icco/react-common/dist/lib/{Logo,ThemeProvider,ThemeToggle,WebVitals,RecurseLogo,Social,XXIIVVLogo,XXIIVVRing,RecurseRing,SiteHeader,Footer}.js";
 
 @plugin "daisyui" {
   themes:
