@@ -4,8 +4,8 @@ set -ex
 
 rm -rf package-lock.json dist .next .contentlayer
 
-yarn 
-yarn upgrade 
+yarn --ignore-engines
+yarn --ignore-engines upgrade 
 git add package* yarn.lock
 git diff --quiet --staged || git commit -m 'chore(deps): yarn upgrade'
 
