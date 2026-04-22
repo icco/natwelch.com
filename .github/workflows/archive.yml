@@ -1,0 +1,35 @@
+name: Archive pages
+on:
+  schedule:
+    - cron: 12 */6 * * *
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  get_pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code.
+        uses: actions/checkout@v6
+      - name: Retrieve all pages
+        run: |
+          PAGES=$(./all-pages.sh)
+          echo "pages=$PAGES" >> $GITHUB_OUTPUT
+        id: pages
+    outputs:
+      pages: ${{ steps.pages.outputs.pages }}
+  archive:
+    needs: get_pages
+    if: needs.get_pages.outputs.pages != '[]'
+    strategy:
+      fail-fast: false
+      matrix:
+        url: ${{ fromJson(needs.get_pages.outputs.pages) }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: JamieMagee/wayback@v2
+        with:
+          url: ${{ matrix.url }}
+          saveErrors: false
+          saveOutlinks: true
+          saveScreenshot: true
