@@ -11,4 +11,4 @@ BASE="https://natwelch.com"
     slug="${slug%.md}"
     echo "$BASE/wiki/$slug"
   done
-} | jq -R . | jq -s .
+} | jq -Rsc 'split("\n") | map(select(length > 0))'
