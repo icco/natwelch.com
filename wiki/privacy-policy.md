@@ -7,3 +7,5 @@ If you visit any subdomain of natwelch.com, I will store your IP address, visit 
 Data is stored on a database hosted in the US.
 
 We also utilize Google Analytics on some sites and Auth0 on others.
+
+See also the [Terms of Service](https://natwelch.com/wiki/terms-of-service).
