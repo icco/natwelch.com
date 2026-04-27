@@ -1,5 +1,5 @@
 ---
-title: Code Projects
+title: Projects
 ---
 
 I publish code on [Github](https://github.com/icco).
