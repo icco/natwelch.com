@@ -7,6 +7,7 @@ import { useMDXComponent } from "next-contentlayer2/hooks"
 import { use } from "react"
 
 import Age from "@/components/Age"
+import ChildrenList from "@/components/ChildrenList"
 import Footer from "@/components/Footer"
 import HeaderImage from "@/components/HeaderImage"
 import { buildTree, getPaths, Tree } from "@/components/Lists"
@@ -34,13 +35,6 @@ export const generateMetadata = async (props: {
   }
 }
 
-const mdxComponents: MDXComponents = {
-  a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
-  Age: () => <Age />,
-  Social: () => <Social />,
-  HeaderImage: ({ src, alt }) => <HeaderImage src={src} alt={alt} />,
-}
-
 const Page = (props: { params: Promise<{ slug: string[] }> }) => {
   const params = use(props.params)
   const page = allPages.find(
@@ -50,6 +44,16 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
   if (!page) notFound()
 
   const MDXContent = useMDXComponent(page.body.code)
+
+  const mdxComponents: MDXComponents = {
+    a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
+    Age: () => <Age />,
+    Social: () => <Social />,
+    HeaderImage: ({ src, alt }) => <HeaderImage src={src} alt={alt} />,
+    ChildrenList: ({ path }: { path?: string }) => (
+      <ChildrenList path={path ?? page.path} />
+    ),
+  }
 
   const childrenTree = buildTree(getPaths(allPages), allPages, (value) =>
     value.startsWith(page.path)
