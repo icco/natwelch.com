@@ -664,11 +664,12 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.3.tgz#c2b9d2e374ee62c586d3adbea87199b1d7a7a6ba"
   integrity sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==
 
-"@icco/react-common@*":
-  version "2026.423.1"
-  resolved "https://npm.pkg.github.com/download/@icco/react-common/2026.423.1/4c569a8ea269dc5ea03e664dd26c89a519bb15e5#4c569a8ea269dc5ea03e664dd26c89a519bb15e5"
-  integrity sha512-8yZ+7vpYBxtyDbY+chZJ6IP8SSfXbI0JuNvHHjpeOOP34DCGSJ5naKI2EnTjmZpi2iIHEBH1Qc1jKpuF5Ct5ew==
+"@icco/react-common@^2026.427.2":
+  version "2026.427.2"
+  resolved "https://npm.pkg.github.com/download/@icco/react-common/2026.427.2/bc60677c42a27008f22b42596b7b8971caf08d00#bc60677c42a27008f22b42596b7b8971caf08d00"
+  integrity sha512-DdHo3ESOzVweuEAHi5HVfyp0AR7PdA9BB0lZb6fZCsGhu3HtflmQmhZ5FzA0jHnGF1QD0Hlz4MgJi+156zQD9g==
   dependencies:
+    "@wrksz/themes" "^0.9.0"
     vivus "^0.4.6"
 
 "@img/colour@^1.0.0":
@@ -1824,6 +1825,11 @@
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.11.1.tgz#538b1e103bf8d9864e7b85cc96fa8d6fb6c40777"
   integrity sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==
+
+"@wrksz/themes@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wrksz/themes/-/themes-0.9.0.tgz#4a0d09d024663e55a9d74a3f4b9245bc7889e78a"
+  integrity sha512-z0gOEbzP+95CJ79LfGnEnem21a+faweUEhsbNNEElUo6sBin6Wi5ASLqo4FmoVrPISUElG7c0IY33fXqXvhJSw==
 
 acorn-jsx@^5.0.0, acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -4815,11 +4821,6 @@ next-secure-headers@^2.1.0:
   resolved "https://registry.yarnpkg.com/next-secure-headers/-/next-secure-headers-2.2.0.tgz#d4eb1b00a424f811c1455d1288990a4aad3026af"
   integrity sha512-C7OfZ9JdSJyYMz2ZBMI/WwNbt0qNjlFWX9afUp8nEUzbz6ez3JbeopdyxSZJZJAzVLIAfyk6n73rFpd4e22jRg==
 
-next-themes@^0.4.5:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.4.6.tgz#8d7e92d03b8fea6582892a50a928c9b23502e8b6"
-  integrity sha512-pZvgD5L0IEvX5/9GWyHMf3m8BKiVQwsCMHfoFosXtXBMnaS0ZnIJ9ST4b4NqLVKDEm8QBxoNNGNaBv2JNF6XNA==
-
 next@^16.0.5:
   version "16.2.4"
   resolved "https://registry.yarnpkg.com/next/-/next-16.2.4.tgz#b1f708a283052e8ccb86ef16001d69e558e6ef5f"
@@ -5097,9 +5098,9 @@ prettier-linter-helpers@^1.0.1:
     fast-diff "^1.1.2"
 
 prettier-plugin-tailwindcss@^0.7.0:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.7.3.tgz#b1aaf0da66c3f7d9c3bee69c81e717e3a0e88217"
-  integrity sha512-lckXaWWdo2ZVXoMoUO3WIBiz9hVY+YBEh1gYyMFfrWP9WZW/wpFXQKizHx7WrFQFMkcG0bGShdpp531X1n+qpg==
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.7.4.tgz#eadd3f9d2e4bfba2994b22f80dda25804a608a9a"
+  integrity sha512-UKii4RjY05SNt/WQi6/NcOn/LsT0/ILLXsxygjbRg5/YZelsSu5jTqorYHPDGq4nZy5q5hpCu+XdGZ1xaJEQgw==
 
 prettier@^3.6.0:
   version "3.8.3"
