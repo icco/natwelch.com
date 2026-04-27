@@ -36,6 +36,9 @@ RUN \
 
 # Production image, copy all the files and run next
 FROM base AS runner
+
+LABEL org.opencontainers.image.source=https://github.com/icco/natwelch.com
+LABEL org.opencontainers.image.description="Nat's personal site."
 WORKDIR /app
 
 ENV NODE_ENV=production
