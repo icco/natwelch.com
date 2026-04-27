@@ -1,7 +1,7 @@
 ---
-title: resume
+title: Resume
 ---
 
-[resume.natwelch.com](https://resume.natwelch.com) is my resume as a website. The source lives at [icco/resume](https://github.com/icco/resume) and is written in plain HTML and CSS.
+You can see my full resume at [resume.natwelch.com](https://resume.natwelch.com), and another version on my [LinkedIn](https://www.linkedin.com/in/natwelch/).
 
-The repo has an unusually large number of stars and forks for a personal resume—this is because years ago I wrote a blog post about [maintaining a resume in Markdown](https://writing.natwelch.com/post/497) that made the Hacker News front page. People forked it as a template. Since then I've rewritten it in plain HTML, but the stars remain. See also the [resume wiki page](/wiki/resume) for more context.
+One weird thing is [my resume on Github](https://github.com/icco/resume) has a ton of stars and forks. This is because years ago, back in the early days of [Hacker News](https://news.ycombinator.com/), I submitted a blog post which talked about [maintaining your resume in Markdown](https://writing.natwelch.com/post/497). Hilariously, since then, I've rewritten my resume in plain HTML.
