@@ -12,16 +12,18 @@ Wiki content (like this page) is written in Markdown and processed by [Contentla
 
 Styling is done with [Tailwind CSS](https://tailwindcss.com/) and [DaisyUI](https://daisyui.com/) for component theming, plus the Tailwind Typography plugin for prose. The site supports light and dark mode via [next-themes](https://github.com/pacocoursey/next-themes).
 
-## Hosting & Deployment
+I build a bunch of personal sites for entertainment and/or utility. Most either use something like the above stack or use Go and Chi as their setup.
+
+### Hosting & Deployment
 
 The site runs in a [Docker](https://www.docker.com/) container using Next.js standalone output. Images are built and published to the GitHub Container Registry via [GitHub Actions](https://github.com/features/actions) on every push to `main`.
 
-Dependencies are automatically updated daily by a scheduled GitHub Actions workflow.
+Almost every site I maintain now runs on premise on my Home Lab.
 
-## Content
+### Content
 
-The blog feed on the homepage is pulled from [writing.natwelch.com](https://writing.natwelch.com) via RSS. Photos are served through [imgix](https://imgix.com/) for optimization and resizing. The site also supports [Webmentions](https://webmention.io/).
+The blog feed on the homepage is pulled from [writing](/wiki/projects/writing) via RSS. Photos are served through [imgix](https://imgix.com/) for optimization and resizing. They are uploaded by [Photos](/wiki/projects/photos). The site also supports [Webmentions](https://webmention.io/).
 
-## Source
+## Personal
 
-The source code is available on [GitHub](https://github.com/icco/natwelch.com).
+TODO add info about development setup.
