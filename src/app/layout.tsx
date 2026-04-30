@@ -53,7 +53,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        <ThemeProvider defaultTheme="system" enableSystem>
+        <ThemeProvider>
           <Header size={Size.Small} />
           <WebVitals analyticsPath="/analytics/natwelch" />
           <main>{children}</main>
