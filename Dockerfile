@@ -1,4 +1,4 @@
-FROM node:25-slim AS base
+FROM node:26-slim AS base
 
 # Install dependencies only when needed
 FROM base AS deps
