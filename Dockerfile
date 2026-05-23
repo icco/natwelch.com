@@ -1,4 +1,6 @@
 FROM node:26-slim AS base
+# corepack is not bundled in node:26-slim; install it so pnpm is available
+RUN npm install -g corepack
 
 # Install dependencies only when needed
 FROM base AS deps
