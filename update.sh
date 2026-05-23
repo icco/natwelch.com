@@ -4,16 +4,16 @@ set -ex
 
 rm -rf package-lock.json dist .next .contentlayer
 
-yarn --ignore-engines
-yarn --ignore-engines upgrade 
-git add package* yarn.lock
-git diff --quiet --staged || git commit -m 'chore(deps): yarn upgrade'
+pnpm install
+pnpm update
+git add package* pnpm-lock.yaml
+git diff --quiet --staged || git commit -m 'chore(deps): pnpm upgrade'
 
-yarn run lint 
+pnpm run lint
 git add src
 git diff --quiet --staged || git commit -m 'chore: lint'
 
-yarn run build
+pnpm run build
 
 git add public
 git diff --quiet --staged || git commit -m 'chore: update build artifacts'

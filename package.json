@@ -4,6 +4,10 @@
   "description": "Nat's personal site.",
   "license": "MIT",
   "private": true,
+  "packageManager": "pnpm@11.2.2",
+  "engines": {
+    "node": ">=26"
+  },
   "scripts": {
     "dev": "eslint --fix . && next dev -p 8080",
     "clean": "rm -rf node_modules .next .contentlayer",
