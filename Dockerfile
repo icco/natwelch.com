@@ -1,11 +1,13 @@
-FROM node:25-slim AS base
+FROM node:26-slim AS base
+# corepack is not bundled in node:26-slim; install it so pnpm is available
+RUN npm install -g corepack
 
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc .yarnrc ./
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* pnpm-workspace.yaml* .npmrc ./
 RUN --mount=type=secret,id=npm_token \
   echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/npm_token)" >> .npmrc && \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile --ignore-engines; \
