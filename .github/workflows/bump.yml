@@ -12,7 +12,7 @@ jobs:
       - name: Install zsh
         run: sudo apt-get update; sudo apt-get install zsh
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
           registry-url: https://npm.pkg.github.com
