@@ -18,9 +18,9 @@ Use pnpm:
 
 ## Architecture & Layout
 
-- `src/app/` or `pages/` — Route handlers and pages.
-- `components/` — React UI components.
-- `content/` — Markdown and MDX content sources processed by Contentlayer2.
+- `src/app/` — Route handlers and pages.
+- `src/components/` — React UI components.
+- `wiki/` — Markdown and MDX content sources processed by Contentlayer2.
 - `contentlayer.config.ts` — Content schema and metadata definitions.
 
 ## Conventions
