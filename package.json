@@ -49,7 +49,7 @@
     "@eslint/markdown": "^8.0.3",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
-    "@types/lodash": "^4.17.24",
+    "@types/lodash": "^4.17.25",
     "@types/mdx": "^2.0.14",
     "@types/node": "^26.5.1",
     "@types/react": "^19.2.17",
