@@ -15,8 +15,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.7)
       '@icco/react-common':
-        specifier: ^2026.10720.3
-        version: 2026.10720.3(@heroicons/react@2.2.0(react@19.2.7))(jsdom@29.1.1)(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
+        specifier: ^2026.10919.1
+        version: 2026.10919.1(@heroicons/react@2.2.0(react@19.2.7))(jsdom@29.1.1)(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
       '@rowanmanning/feed-parser':
         specifier: ^2.1.5
         version: 2.1.5
@@ -557,8 +557,8 @@ packages:
     resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@exodus/bytes@1.15.1':
-    resolution: {integrity: sha512-S6mL0yNB/Abt9Ei4tq8gDhcczc4S3+vQ4ra7vxnAf+YHC02srtqxKKZghx2Dq6p0e66THKwR6r8N6P95wEty7Q==}
+  '@exodus/bytes@1.15.2':
+    resolution: {integrity: sha512-ctkytT+9TXtv6uiVj6Y7IjKh1+PdBGAD34xd0PpQ/qF+R7O/hoEQbZmN89OaCEaZn5I1A9+ZoPxD03unuFhyhQ==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
     peerDependencies:
       '@noble/hashes': ^1.8.0 || ^2.0.0
@@ -603,8 +603,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@icco/react-common@2026.10720.3':
-    resolution: {integrity: sha512-j0yBE8CNphtiEHxJ1v9XnPedFcMFCzFzCkkpngNBz55XLN9O4DUZZYR4JPMWGcL17XMHelpjFDkmXntICx/0MA==, tarball: https://npm.pkg.github.com/download/@icco/react-common/2026.10720.3/17a7368a72fb62dc7cf8bfd8116f9f0c28c036d2}
+  '@icco/react-common@2026.10919.1':
+    resolution: {integrity: sha512-lHyKFxNn/uSSfEsBN9cBI2eh6JQFpX8RvxoQc0rTK48ZEl/I0Xk4nvp0dhH+WA/A4PVHj2Ua8dKo9hCIeusGXA==, tarball: https://npm.pkg.github.com/download/@icco/react-common/2026.10919.1/ff4159a2cf5a9773e0903c98e89da6b220656b9c}
     peerDependencies:
       '@heroicons/react': ^2.0.0
       jsdom: '>=20.0.0'
@@ -1468,8 +1468,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@wrksz/themes@1.0.0':
-    resolution: {integrity: sha512-UZ1mvFe9xXvxPCK/aXKVYbJCtI4gxM9J4orvDEZLdpk/9tvcbH2U8ZU3h5R1Pwjjjf4Q3um0wK4o+wqj3Vv40Q==}
+  '@wrksz/themes@1.2.0':
+    resolution: {integrity: sha512-jAyeKHnhvouLTsNCbTZXXX45gCYIJ3eLAFgktIdYHRotGz4ufhs8PMQd3baiZO0EPIXyf0vzPlasbuOfM5J5Gg==}
     peerDependencies:
       next: '>=16.0.0'
       react: ^18.0.0 || ^19.0.0
@@ -2673,8 +2673,8 @@ packages:
   lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
 
-  lru-cache@11.5.2:
-    resolution: {integrity: sha512-4pfM1Ff0x50o0tQwb5ucw/RzNyD0/YJME6IVcStalZuMWxdt3sR3huStTtxz4PUmvZfRguvDejasvQ2kifR11g==}
+  lru-cache@11.5.3:
+    resolution: {integrity: sha512-U4N8FgzmWxc8k1VH8Kr6lQg18U7Fjvby6wXHVRX/ZZ7IwWbRMgrRbP0Wrb5q5NVinryp4SQampHKdvtecItxUg==}
     engines: {node: 20 || >=22}
 
   lru-cache@5.1.1:
@@ -4188,7 +4188,7 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@exodus/bytes@1.15.1': {}
+  '@exodus/bytes@1.15.2': {}
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2': {}
 
@@ -4224,10 +4224,10 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@icco/react-common@2026.10720.3(@heroicons/react@2.2.0(react@19.2.7))(jsdom@29.1.1)(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)':
+  '@icco/react-common@2026.10919.1(@heroicons/react@2.2.0(react@19.2.7))(jsdom@29.1.1)(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)':
     dependencies:
       '@heroicons/react': 2.2.0(react@19.2.7)
-      '@wrksz/themes': 1.0.0(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
+      '@wrksz/themes': 1.2.0(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
       jsdom: 29.1.1
       next: 16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react: 19.2.7
@@ -5006,7 +5006,7 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.12.2':
     optional: true
 
-  '@wrksz/themes@1.0.0(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)':
+  '@wrksz/themes@1.2.0(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)':
     dependencies:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
@@ -6155,7 +6155,7 @@ snapshots:
 
   html-encoding-sniffer@6.0.0:
     dependencies:
-      '@exodus/bytes': 1.15.1
+      '@exodus/bytes': 1.15.2
     transitivePeerDependencies:
       - '@noble/hashes'
 
@@ -6363,13 +6363,13 @@ snapshots:
       '@asamuzakjp/dom-selector': 7.1.1
       '@bramus/specificity': 2.4.2
       '@csstools/css-syntax-patches-for-csstree': 1.1.14(css-tree@3.2.1)
-      '@exodus/bytes': 1.15.1
+      '@exodus/bytes': 1.15.2
       css-tree: 3.2.1
       data-urls: 7.0.0
       decimal.js: 10.6.0
       html-encoding-sniffer: 6.0.0
       is-potential-custom-element-name: 1.0.1
-      lru-cache: 11.5.2
+      lru-cache: 11.5.3
       parse5: 8.0.1
       saxes: 6.0.0
       symbol-tree: 3.2.4
@@ -6494,7 +6494,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  lru-cache@11.5.2: {}
+  lru-cache@11.5.3: {}
 
   lru-cache@5.1.1:
     dependencies:
@@ -7951,7 +7951,7 @@ snapshots:
 
   whatwg-url@16.0.1:
     dependencies:
-      '@exodus/bytes': 1.15.1
+      '@exodus/bytes': 1.15.2
       tr46: 6.0.0
       webidl-conversions: 8.0.1
     transitivePeerDependencies:
