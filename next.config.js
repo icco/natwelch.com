@@ -88,7 +88,7 @@ const nextConfig = {
               imgSrc: [
                 "'self'",
                 "data:",
-                "https://icco.imgix.net",
+                "https://images.natwelch.com",
                 "https://storage.googleapis.com",
                 "https://*.natwelch.com",
                 "https://natwelch.com",
@@ -122,10 +122,12 @@ const nextConfig = {
     ]
   },
   images: {
+    loader: "custom",
+    loaderFile: "./src/lib/imageLoader.ts",
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "icco.imgix.net",
+        hostname: "images.natwelch.com",
         port: "",
         pathname: "/photos/**",
       },
