@@ -2,7 +2,7 @@
 title: Music
 ---
 
-<HeaderImage src="https://icco.imgix.net/photos/2024/0H5NJ8THPTA49.jpg" alt="A eurorack modular synthesizer" />
+<HeaderImage src="https://images.natwelch.com/photos/2024/0H5NJ8THPTA49.jpg" alt="A eurorack modular synthesizer" />
 
 I make electronic music in my free time as a hobby. I've tried lots of different systems for making music (Ableton, Livecoding, Op-1, Volcas, etc) in the past, but currently my system of choice which is really resonating with me is a combination of [Monome Norns Shield](https://monome.org/docs/norns/shield/) and [Eurorack](https://en.wikipedia.org/wiki/Eurorack).
 
