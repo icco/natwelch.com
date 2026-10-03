@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -31,7 +31,6 @@
         "./.contentlayer/generated"
       ]
     },
-    "baseUrl": ".",
     "types": [
       "node"
     ]
