@@ -1,4 +1,5 @@
 import { Feed } from "feed"
+import { unstable_cache } from "next/cache"
 
 import { fetchFeed } from "@/lib/rss"
 
@@ -14,8 +15,22 @@ const FEEDS = [
   "https://www.goodreads.com/user/updates_rss/12680?v=as",
 ]
 
+// Cache each feed individually for 1 hour
+const getCachedFeed = (url: string) =>
+  unstable_cache(
+    async () => {
+      return fetchFeed(url)
+    },
+    [`rss-feed-${url}`],
+    {
+      revalidate: 3600,
+      tags: [`rss-feed-${url}`],
+    }
+  )
+
+// Get all cached feeds
 const getAllCachedFeeds = async () => {
-  const feedPromises = FEEDS.map((url) => fetchFeed(url))
+  const feedPromises = FEEDS.map((url) => getCachedFeed(url)())
   return (await Promise.all(feedPromises)).flat()
 }
 

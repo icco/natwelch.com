@@ -3,7 +3,7 @@ import type { FeedItem } from "@rowanmanning/feed-parser/lib/feed/item/base"
 
 export async function fetchFeed(url: string): Promise<FeedItem[]> {
   try {
-    const response = await fetch(url, { next: { revalidate: 3600 } })
+    const response = await fetch(url)
     if (!response.ok) {
       console.warn(`Feed unavailable ${url}: HTTP ${response.status}`)
       return []
