@@ -1,15 +1,19 @@
 import { parseFeed } from "@rowanmanning/feed-parser"
-import { FeedItem } from "@rowanmanning/feed-parser/lib/feed/item/base"
+import type { FeedItem } from "@rowanmanning/feed-parser/lib/feed/item/base"
 
 export async function fetchFeed(url: string): Promise<FeedItem[]> {
   try {
     const response = await fetch(url)
+    if (!response.ok) {
+      console.warn(`Feed unavailable ${url}: HTTP ${response.status}`)
+      return []
+    }
     const feedText = await response.text()
     const feed = await parseFeed(feedText)
     const items = feed.items || []
     return items.slice(0, 25)
   } catch (error) {
-    console.error(`Error fetching feed ${url}:`, error)
+    console.warn(`Feed unavailable ${url}:`, error)
     return []
   }
 }
