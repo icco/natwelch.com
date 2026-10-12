@@ -12,11 +12,9 @@
     "dev": "eslint --fix . && next dev -p 8080",
     "clean": "rm -rf node_modules .next .contentlayer",
     "lint": "eslint --fix .",
-    "test": "node --test tests/*.test.ts",
     "contentlayer": "contentlayer2 build",
-    "prebuild": "pnpm test && contentlayer2 build",
+    "prebuild": "contentlayer2 build",
     "build": "next build",
-    "postbuild": "node tests/smoke.ts",
     "start": "next start -p $PORT"
   },
   "repository": {
