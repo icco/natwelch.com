@@ -10,3 +10,4 @@ yarn-error.log
 .env
 coverage
 tsconfig.tsbuildinfo
+next-env.d.ts
