@@ -1,7 +1,7 @@
 import { Feed } from "feed"
 import { unstable_cache } from "next/cache"
 
-import { fetchFeed } from "@/lib/rss"
+import { fetchFeed, itemBody, itemSummary, itemTitle } from "@/lib/rss"
 
 export const revalidate = 60
 
@@ -66,7 +66,7 @@ export async function GET() {
       return aDate > bDate ? -1 : 1
     })
     .forEach((item) => {
-      const title = item.title || ""
+      const title = itemTitle(item)
       const url = item.url || ""
       const guid = item.id || url
       const categories =
@@ -86,8 +86,8 @@ export async function GET() {
         date,
         category: categories.map((c) => ({ name: c, term: c })),
         author: item.authors.map((a) => ({ name: a.name || "" })),
-        description: item.description || "",
-        content: item.content || "",
+        description: itemSummary(item),
+        content: itemBody(item),
       })
     })
 
