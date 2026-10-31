@@ -20,7 +20,7 @@ export async function fetchFeed(url: string): Promise<FeedItem[]> {
 
 function escapeHtml(s: string): string {
   return s
-    .replace(/&/g, "&amp;")
+    .replace(/&(?!(amp|lt|gt|quot|#39);)/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
