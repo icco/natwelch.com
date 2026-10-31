@@ -4,14 +4,13 @@ title: About
 
 ## Nat Welch
 
-Hi there! I am Nat. I was born in the San Francisco Bay Area, <Age />. I currently live in Beacon, NY with my wife Melissa and our cat Beasley. During the day I work as the Lead Cloud Platform Engineer for [Laurel](https://laurel.ai/).
+Hi there! I am Nat. I was born in the San Francisco Bay Area, <Age />. I currently live in Cambridge, England with my wife Melissa. During the day I work as the engineering manager of Infrastructure at [Laurel](https://laurel.ai/).
 
 You can see [my resume](https://resume.natwelch.com/) for my in-depth work history.
 
 See my [Privacy Policy](https://natwelch.com/wiki/privacy-policy) for what data I keep when you visit this site and others I maintain.
 
-See [Projects](https://natwelch.com/wiki/projects) for a list of my current
-side projects.
+See [Projects](https://natwelch.com/wiki/projects) for a list of my current side projects.
 
 I have some core beliefs that are the basis for most things that I do.
 
