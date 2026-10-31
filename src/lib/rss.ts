@@ -50,7 +50,16 @@ export function itemBody(item: FeedItem): string {
     if (m.image) images.add(m.image)
     if (m.type === "image" && m.url) images.add(m.url)
   }
-  const missing = [...images].filter((src) => !body.includes(src))
+
+  // Extract all src attribute values from existing <img> tags in body
+  const existingSrcs = new Set<string>()
+  const imgRegex = /<img[^>]+src=["']([^"']+)["']/gi
+  let match
+  while ((match = imgRegex.exec(body)) !== null) {
+    existingSrcs.add(stripHtml(match[1]))
+  }
+
+  const missing = [...images].filter((src) => !existingSrcs.has(src))
   if (missing.length > 0) {
     const imgs = missing
       .map((src) => {
