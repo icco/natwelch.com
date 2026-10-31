@@ -53,10 +53,10 @@ export function itemBody(item: FeedItem): string {
 
   // Extract all src attribute values from existing <img> tags in body
   const existingSrcs = new Set<string>()
-  const imgRegex = /<img[^>]+src=["']([^"']+)["']/gi
+  const imgRegex = /<img\s+(?:[^>]*?\s+)?src\s*=\s*(["'])([^"']+)\1/gi
   let match
   while ((match = imgRegex.exec(body)) !== null) {
-    existingSrcs.add(stripHtml(match[1]))
+    existingSrcs.add(match[2])
   }
 
   const missing = [...images].filter((src) => !existingSrcs.has(src))
