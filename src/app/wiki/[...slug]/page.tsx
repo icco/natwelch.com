@@ -1,10 +1,11 @@
 import { Social } from "@icco/react-common/Social"
+import { runSync } from "@mdx-js/mdx"
 import { isString } from "lodash"
 import { MDXComponents } from "mdx/types"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { useMDXComponent } from "next-contentlayer2/hooks"
 import { use } from "react"
+import * as runtime from "react/jsx-runtime"
 
 import Age from "@/components/Age"
 import ChildrenList from "@/components/ChildrenList"
@@ -12,7 +13,7 @@ import Footer from "@/components/Footer"
 import HeaderImage from "@/components/HeaderImage"
 import { buildTree, getPaths, Tree } from "@/components/Lists"
 
-import { allPages } from "contentlayer/generated"
+import { allPages } from "content-collections"
 
 export const generateStaticParams = async () =>
   allPages.map((page) => ({ slug: page._raw.flattenedPath.split("/") }))
@@ -43,7 +44,7 @@ const Page = (props: { params: Promise<{ slug: string[] }> }) => {
 
   if (!page) notFound()
 
-  const MDXContent = useMDXComponent(page.body.code)
+  const { default: MDXContent } = runSync(page.body.code, runtime)
 
   const mdxComponents: MDXComponents = {
     a: ({ href, children }) => <Link href={href as string}>{children}</Link>,

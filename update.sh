@@ -2,7 +2,7 @@
 
 set -ex
 
-rm -rf package-lock.json dist .next .contentlayer
+rm -rf package-lock.json dist .next .content-collections
 
 pnpm install
 pnpm update
