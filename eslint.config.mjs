@@ -94,7 +94,7 @@ const config = [
             ["^@?\\w"],
             ["^"],
             ["^components(/.*|$)", "^lib(/.*|$)"],
-            ["content-collections"],
+            ["^content-collections$"],
             ["^\\."],
           ],
         },
