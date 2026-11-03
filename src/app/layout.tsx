@@ -29,8 +29,6 @@ export const metadata: Metadata = {
   title: "Nat Welch dot com",
   description: "The personal website of Nat Welch",
   other: {
-    webmention: "https://webmention.io/natwelch.com/webmention",
-    pingback: "https://webmention.io/natwelch.com/xmlrpc",
     charset: "utf-8",
   },
 }
@@ -52,6 +50,16 @@ export default function RootLayout({
       className={`${roboto.variable} ${robotoSlab.variable} ${robotoMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link
+          rel="webmention"
+          href="https://webmention.io/writing.natwelch.com/webmention"
+        />
+        <link
+          rel="pingback"
+          href="https://webmention.io/writing.natwelch.com/xmlrpc"
+        />
+      </head>
       <body>
         <ThemeProvider>
           <Header size={Size.Small} />
