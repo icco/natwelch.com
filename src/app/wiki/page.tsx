@@ -3,7 +3,7 @@ import { Metadata } from "next"
 import Footer from "@/components/Footer"
 import { buildTree, getPaths, Tree } from "@/components/Lists"
 
-import { allPages } from "contentlayer/generated"
+import { allPages } from "content-collections"
 
 export const metadata: Metadata = {
   title: "Nat Welch | Wiki",

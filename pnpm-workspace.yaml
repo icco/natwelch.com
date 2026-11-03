@@ -1,9 +1,8 @@
 allowBuilds:
-  contentlayer2: true
   esbuild: true
   protobufjs: true
   sharp: true
   unrs-resolver: true
 minimumReleaseAgeExclude:
   - date-fns@4.4.0
-  - "@icco/react-common"
+  - '@icco/react-common'

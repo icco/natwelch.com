@@ -35,7 +35,7 @@ const nextConfigFixed = nextCoreWebVitals.map((config) => {
 
 const config = [
   {
-    ignores: [".contentlayer/**", ".next/**", "node_modules/**"],
+    ignores: [".content-collections/**", ".next/**", "node_modules/**"],
   },
   // Markdown files - use @eslint/markdown processor
   ...markdown.configs.processor,
@@ -94,7 +94,7 @@ const config = [
             ["^@?\\w"],
             ["^"],
             ["^components(/.*|$)", "^lib(/.*|$)"],
-            ["contentlayer/generated"],
+            ["content-collections"],
             ["^\\."],
           ],
         },

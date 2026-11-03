@@ -1,7 +1,7 @@
 import { isString, merge, uniqueId } from "lodash"
 import Link from "next/link"
 
-import { Page } from "contentlayer/generated"
+import { Page } from "content-collections"
 
 interface TreeBranch {
   [key: string]: Page | TreeBranch | string

@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { allPages } from "contentlayer/generated"
+import { allPages } from "content-collections"
 
 interface ChildrenListProps {
   /**
