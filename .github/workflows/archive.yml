@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code.
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Retrieve all pages
         run: |
           PAGES=$(./all-pages.sh)
@@ -27,7 +27,7 @@ jobs:
         url: ${{ fromJson(needs.get_pages.outputs.pages) }}
     runs-on: ubuntu-latest
     steps:
-      - uses: JamieMagee/wayback@v2
+      - uses: JamieMagee/wayback@e561c5018fb0e62988fddd732fb88345a3faa608 # v2.2.0
         with:
           url: ${{ matrix.url }}
           saveErrors: false
