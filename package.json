@@ -54,8 +54,8 @@
     "@tailwindcss/typography": "^0.5.20",
     "@types/lodash": "^4.17.27",
     "@types/mdx": "^2.0.14",
-    "@types/node": "^26.6.7",
-    "@types/react": "^19.3.1",
+    "@types/node": "^26.6.10",
+    "@types/react": "^19.3.3",
     "@typescript-eslint/eslint-plugin": "^8.74.0",
     "@typescript-eslint/parser": "^8.74.0",
     "@vitejs/plugin-react": "^6.3.0",
@@ -71,7 +71,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.5",
     "typescript": "^6.0.3",
-    "vitest": "^5.1.1"
+    "vitest": "^5.1.2"
   },
   "prettier": {
     "trailingComma": "es5",
