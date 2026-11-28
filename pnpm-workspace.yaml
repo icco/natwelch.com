@@ -4,6 +4,4 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
 minimumReleaseAgeExclude:
-  - date-fns@4.4.0
-  - '@icco/react-common'
   - '@icco/*'
